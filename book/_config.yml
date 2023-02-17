@@ -1,12 +1,12 @@
 #######################################################################################
 # A default configuration that will be loaded for all jupyter books
-# See the documentation for help and more options: 
+# See the documentation for help and more options:
 # https://jupyterbook.org/customize/config.html
 
 #######################################################################################
 # Book settings
 title                       : "Climatematch Academy: Computational Climate Science"  # The title of the book. Will be placed in the left navbar.
-author                      : Neuromatch  # The author of the book
+author                      : Climatematch  # The author of the book
 copyright                   : ""  # Copyright year to be placed in the footer
 logo                        : tutorials/static/nma-logo-square-4xp.png  # A path to the book logo
 only_build_toc_files        : true
@@ -70,6 +70,6 @@ launch_buttons:
   colab_url                 : "" # The URL of Google Colab (https://colab.research.google.com)
 
 repository:
-  url                       : https://github.com/NeuromatchAcademy/course-climatematch  # The URL to your book's repository
+  url                       : https://github.com/ClimatematchAcademy/course-content  # The URL to your book's repository
   path_to_book              : book  # A path to your book's folder, relative to the repository root.
   branch                    : main  # Which branch of the repository should be used when creating links
