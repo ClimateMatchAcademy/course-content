@@ -1,8 +1,8 @@
 - day: W1D1
-  category: Wesley test
+  category: Intro to Modeling
   intro: https://www.youtube.com/watch?v=KxldhMR5PxA
   intro_bilibili: https://www.bilibili.com/video/BV1HT4y1E7U4/
-  name: Wesley test
+  name: Climate System Overview
   outro: https://www.youtube.com/watch?v=KZQXfQL1SH4
   outro_bilibili: https://www.bilibili.com/video/BV1vv411i7SG/
   playlist: https://www.youtube.com/playlist?list=PLkBQOLLbi18ObAiSOZ42YBwOQIKNvspeI
@@ -23,4 +23,4 @@
     title: TA
   - link: https://mfr.ca-1.osf.io/render?url=https://osf.io/jdumz/?direct%26mode=render%26action=download%26mode=render
     title: DaySummary
-  tutorials: 0
+  tutorials: 9
