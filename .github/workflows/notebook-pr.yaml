@@ -14,6 +14,9 @@ env:
 jobs:
 
   process-notebooks:
+    defaults:
+    run:
+      shell: bash -l {0}
 
     runs-on: ubuntu-latest
     steps:
@@ -30,15 +33,19 @@ jobs:
           readonly local msg=$(git log -1 --pretty=format:"%s")
           echo "COMMIT_MESSAGE=$msg" >> $GITHUB_ENV
 
-      - name: Set up Python
+      - name: Set up Python (conda)
         if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"
         uses: conda-incubator/setup-miniconda@v2
         with:
           auto-activate-base: true
           auto-update-conda: true
           python-version: 3.7
+          mamba-version: "*"
+          channels: conda-forge,defaults
+          channel-priority: true
+          environment-file: environment.yml
+
       - name: Conda info
-        shell: bash -el {0}
         run: conda info
 
       - name: Install CI tools
