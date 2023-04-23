@@ -1,5 +1,5 @@
 name: notebook-pr
-on: 
+on:
   pull_request:
     branches: main
     paths: '**/*.ipynb'
@@ -30,13 +30,19 @@ jobs:
 
       - name: Set up Python
         if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"
-        uses: actions/setup-python@v2
+      - uses: conda-incubator/setup-miniconda@v2
         with:
+          auto-activate-base: true
+          auto-update-conda: true
           python-version: 3.7
+      - name: Conda info
+        shell: bash -el {0}
+        run: conda info
 
       - name: Install CI tools
         if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"
         run: |
+          which python
           BRANCH=`python -c 'import os, re; m = re.search(r"nmaci:([\w-]+)", os.environ["COMMIT_MESSAGE"]); print("main" if m is None else m.group(1))'`
           wget https://github.com/NeuromatchAcademy/nmaci/archive/refs/heads/$BRANCH.tar.gz
           tar -xzf $BRANCH.tar.gz
