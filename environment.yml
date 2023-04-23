@@ -1,2 +1,114 @@
-cartopy
-python=3.7
+name: pangeo
+channels:
+ - conda-forge
+ - nodefaults
+dependencies:
+ - adlfs
+ - argopy
+ - awscli
+ - boto3
+ - bottleneck
+ - cartopy
+ - cfgrib
+ - ciso
+ - dask-ml
+ - datashader
+ - descartes
+ - earthdata
+ - eofs
+ - erddapy
+ - esmpy
+ - fastjmd95
+ - flox
+ - fsspec
+ - gcm_filters
+ - gcsfs
+ - gh
+ - geocube
+ # - geogif
+ - geopandas
+ - geopy
+ - geoviews-core
+ - git-lfs
+ - gsw
+ - h5netcdf
+ - h5py
+ - holoviews
+ - hvplot
+ - intake
+ - intake-esm
+ - intake-geopandas
+ - intake-stac
+ - intake-xarray
+ - ipykernel>=6.21.2
+ - ipyleaflet
+ - ipytree
+ - ipywidgets
+ - jupyter-panel-proxy
+ - jupyter-resource-usage
+ - kerchunk
+ - lxml
+ - lz4
+ - matplotlib-base
+ - metpy
+ - nb_conda_kernels
+ - nbstripout
+ - nc-time-axis
+ - netcdf4
+ - numcodecs
+ - numpy
+ - odc-stac
+ - pandas
+ - panel
+ - parcels
+ - param
+ - pop-tools
+ - pyarrow
+ - pycamhd
+ - pydap
+ - pygeos
+ - pystac
+ - pystac-client
+ - python-blosc
+ - python-gist
+ - python-graphviz
+ - rasterio
+ - rechunker
+ - rio-cogeo
+ - rioxarray
+# - rise
+ - s3fs
+ - satpy
+ - scikit-image
+ - scikit-learn
+ - scipy
+ - seaborn
+ - sparse
+ - snakeviz
+ - stackstac
+ - tiledb-py
+ - timezonefinder
+ - xarray
+ - xarrayutils
+ - xarray-datatree
+ - xarray_leaflet
+ - xarray-spatial
+ - xbatcher
+ - xcape
+ - xclim
+ # - xcube>=0.9.1
+ - xesmf
+ - xgcm
+ - xhistogram
+ - xmip
+ - xmitgcm
+ - xpublish
+ - xrft
+ - xskillscore
+ - zarr
+ - gh-scoped-creds
+ - jupyterlab-git
+ # Note: Enable after https://github.com/conda-incubator/conda-lock/pull/295
+ # Uncomment and remove separate requirements.txt file
+ #- pip:
+ #  - jupyterlab-s3-browser>=0.12
