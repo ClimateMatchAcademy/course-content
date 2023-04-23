@@ -14,11 +14,12 @@ env:
 jobs:
 
   process-notebooks:
-    defaults:
-    run:
-      shell: bash -l {0}
-
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash -l {0}
+
     steps:
 
       - name: Checkout
