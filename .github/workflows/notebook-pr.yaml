@@ -32,7 +32,7 @@ jobs:
 
       - name: Set up Python
         if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"
-      - uses: conda-incubator/setup-miniconda@v2
+        uses: conda-incubator/setup-miniconda@v2
         with:
           auto-activate-base: true
           auto-update-conda: true
