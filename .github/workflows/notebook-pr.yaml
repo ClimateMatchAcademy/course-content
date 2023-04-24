@@ -40,12 +40,10 @@ jobs:
         with:
           auto-update-conda: true
           python-version: 3.7
-          mamba-version: "*"
-          channels: conda-forge,defaults
-          channel-priority: true
-          auto-activate-base: false
-          activate-environment: pangeo
-          environment-file: conda-lock.yml
+          environment-file: environment.yml
+      - name: Install dependencies
+        run: |
+          mamba install --quiet --yes --file environment-lock.yml
 
       - name: Conda info
         run: conda info
