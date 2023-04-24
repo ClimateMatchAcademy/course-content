@@ -41,10 +41,9 @@ jobs:
           auto-update-conda: true
           python-version: 3.9
           activate-environment: pangeo
-          environment-file: environment.yml
       - name: Install dependencies
         run: |
-          conda-lock install conda-lock.yml
+          conda-lock install -n pangeo conda-lock.yml
 
       - name: Conda info
         run: |
