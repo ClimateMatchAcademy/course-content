@@ -43,7 +43,7 @@ jobs:
           environment-file: environment.yml
       - name: Install dependencies
         run: |
-          mamba install --quiet --yes --file environment-lock.yml
+          mamba install --quiet --yes --file conda-lock.yml
 
       - name: Conda info
         run: conda info
