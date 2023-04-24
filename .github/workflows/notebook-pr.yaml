@@ -43,7 +43,7 @@ jobs:
           environment-file: environment.yml
       - name: Install dependencies
         run: |
-          conda-lock install -n pangeo --file conda-lock.yml
+          conda-lock install -n pangeo conda-lock.yml
 
       - name: Conda info
         run: conda info
