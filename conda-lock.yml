@@ -11,7 +11,6 @@
 # To re-solve the entire environment, e.g. after changing a version constraint in the source file:
 #     conda-lock -f /home/runner/work/pangeo-docker-images/pangeo-docker-images/pangeo-notebook/environment.yml -f /home/runner/work/pangeo-docker-images/pangeo-docker-images/base-notebook/environment.yml --lockfile conda-lock.yml
 metadata:
-  name: pangeo
   channels:
   - url: conda-forge
     used_env_vars: []
