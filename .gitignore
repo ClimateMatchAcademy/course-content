@@ -1,1 +1,5 @@
 book/_build/
+*.nc
+.ipynb_checkpoints/
+pages2k_data
+pages2k_data.unzip/
