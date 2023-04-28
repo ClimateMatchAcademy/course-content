@@ -33,6 +33,21 @@
     title: Climate System Overview (W1D1)
   part: Fundamentals
 - chapters:
+  - file: tutorials/W1D4_Paleoclimate/chapter_title.md
+    sections:
+    - file: tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial1.ipynb
+    - file: tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial2.ipynb
+    - file: tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial3.ipynb
+    - file: tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial4.ipynb
+    - file: tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial5.ipynb
+    - file: tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial6.ipynb
+    - file: tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial7.ipynb
+    - file: tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial8.ipynb
+    - file: tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial9.ipynb
+    - file: tutorials/W1D4_Paleoclimate/further_reading.md
+    title: Paleoclimate (W1D4)
+  part: Climate Data
+- chapters:
   - file: projects/README.md
     title: Introduction
   - file: projects/docs/project_guidance.md
