@@ -33,6 +33,18 @@
     title: Climate System Overview (W1D1)
   part: Fundamentals
 - chapters:
+  - file: tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/chapter_title.md
+    sections:
+    - file: tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.ipynb
+    - file: tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.ipynb
+    - file: tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial3.ipynb
+    - file: tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial4.ipynb
+    - file: tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial5.ipynb
+    - file: tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial6.ipynb
+    - file: tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial7.ipynb
+    - file: tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial8.ipynb
+    - file: tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/further_reading.md
+    title: Remote Sensing Land Ocean and Atmosphere (W1D3)
   - file: tutorials/W1D4_Paleoclimate/chapter_title.md
     sections:
     - file: tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial1.ipynb

@@ -6,10 +6,10 @@
 #   category: Climate Data
 #   name: State of the Climate (Ocean and Atmosphere Reanalysis)
 #   tutorials: 7
-# - day: W1D3
-#   category: Climate Data
-#   name: Remote Sensing Land, Ocean and Atmosphere
-#   tutorials: 8
+- day: W1D3
+  category: Climate Data
+  name: Remote Sensing Land Ocean and Atmosphere
+  tutorials: 8
 - day: W1D4
   category: Climate Data
   name: Paleoclimate

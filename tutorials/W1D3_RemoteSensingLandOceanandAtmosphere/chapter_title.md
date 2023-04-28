@@ -1,1 +1,1 @@
-# Remote Sensing Land, Ocean and Atmosphere
+# Remote Sensing Land Ocean and Atmosphere
