@@ -1,5 +1,7 @@
 book/_build/
 *.nc
+*.csv
+.DS_Store
 .ipynb_checkpoints/
 pages2k_data
 pages2k_data.unzip/

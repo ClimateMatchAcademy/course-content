@@ -18,11 +18,20 @@
 - chapters:
   - file: prereqs/ComputationalNeuroscience.md
 - chapters:
-  - file: tutorials/W1D1_Wesleytest/chapter_title.md
+  - file: tutorials/W1D1_ClimateSystemOverview/chapter_title.md
     sections:
-    - file: tutorials/W1D1_Wesleytest/further_reading.md
-    title: Wesley test (W1D1)
-  part: Wesley test
+    - file: tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.ipynb
+    - file: tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial2.ipynb
+    - file: tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial3.ipynb
+    - file: tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial4.ipynb
+    - file: tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial5.ipynb
+    - file: tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial6.ipynb
+    - file: tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial7.ipynb
+    - file: tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial8.ipynb
+    - file: tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial9.ipynb
+    - file: tutorials/W1D1_ClimateSystemOverview/further_reading.md
+    title: Climate System Overview (W1D1)
+  part: Fundamentals
 - chapters:
   - file: projects/README.md
     title: Introduction
