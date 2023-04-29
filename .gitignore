@@ -5,3 +5,6 @@ book/_build/
 .ipynb_checkpoints/
 pages2k_data
 pages2k_data.unzip/
+*.pyc
+**/.DS_Store
+tutorials/.DS_Store
