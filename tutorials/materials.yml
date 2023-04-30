@@ -2,10 +2,10 @@
   category: Fundamentals
   name: Climate System Overview
   tutorials: 9
-# - day: W1D2
-#   category: Climate Data
-#   name: State of the Climate (Ocean and Atmosphere Reanalysis)
-#   tutorials: 7
+- day: W1D2
+  category: Climate Data
+  name: State of the Climate Ocean and Atmosphere Reanalysis
+  tutorials: 6
 - day: W1D3
   category: Climate Data
   name: Remote Sensing Land Ocean and Atmosphere
