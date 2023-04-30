@@ -8,6 +8,7 @@
 
 ## W1D1 - Climate System Overview
 
+[YouTube Playlist](https://youtube.com/playlist?list=PLkBQOLLbi18MFnOD0I4M_OmlkG6ENQao3)
 |   | Run | Run | View |
 | - | --- | --- | ---- |
 | Tutorial 1 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.ipynb) | [![Open In kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.ipynb?flush_cache=true) |
@@ -28,6 +29,7 @@
 
 ## W1D2 - Stateofthe Climate Oceanand Atmosphere Reanalysis
 
+[YouTube Playlist](https://youtube.com/playlist?list=PLkBQOLLbi18MtuSiOkabOmG-KdhOM_Xi_)
 |   | Run | Run | View |
 | - | --- | --- | ---- |
 | Tutorial 1 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial1.ipynb) | [![Open In kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial1.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial1.ipynb?flush_cache=true) |
@@ -45,6 +47,7 @@
 
 ## W1D3 - Remote Sensing Land Oceanand Atmosphere
 
+[YouTube Playlist](https://youtube.com/playlist?list=PLkBQOLLbi18NwBOdx0d59O34HmG8yrGp7)
 |   | Run | Run | View |
 | - | --- | --- | ---- |
 | Tutorial 1 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.ipynb) | [![Open In kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.ipynb?flush_cache=true) |
@@ -64,6 +67,7 @@
 
 ## W1D4 - Paleoclimate
 
+[YouTube Playlist](https://youtube.com/playlist?list=PLkBQOLLbi18M30SfesAh0AHGKIIYbjQhl)
 |   | Run | Run | View |
 | - | --- | --- | ---- |
 | Tutorial 1 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial1.ipynb) | [![Open In kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial1.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial1.ipynb?flush_cache=true) |
@@ -84,6 +88,7 @@
 
 ## W1D5 - Climate Modeling
 
+[YouTube Playlist](https://youtube.com/playlist?list=PLkBQOLLbi18OQtfBlfe_Py6AubwL8FAs1)
 |   | Run | Run | View |
 | - | --- | --- | ---- |
 | Tutorial 1 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial1.ipynb) | [![Open In kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial1.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial1.ipynb?flush_cache=true) |
@@ -101,6 +106,7 @@
 
 ## W2D1 - Future Climate- I P C C I Physical Basis
 
+[YouTube Playlist](https://youtube.com/playlist?list=PLkBQOLLbi18MwKJBshzMRNZSwYEIIJaVc)
 |   | Run | Run | View |
 | - | --- | --- | ---- |
 | Tutorial 1 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial1.ipynb) | [![Open In kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial1.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial1.ipynb?flush_cache=true) |
@@ -118,6 +124,7 @@
 
 ## W2D2 - Good Research Practices
 
+[YouTube Playlist](https://youtube.com/playlist?list=PLkBQOLLbi18MoOWPdzGj8t0Yxm-IC1nvN)
 |   | Run | Run | View |
 | - | --- | --- | ---- |
 | Tutorial 1 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial1.ipynb) | [![Open In kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial1.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial1.ipynb?flush_cache=true) |
@@ -137,6 +144,7 @@
 
 ## W2D3 - Future Climate- I P C C I I& I I I Socio- Economic Basis
 
+[YouTube Playlist](https://youtube.com/playlist?list=PLkBQOLLbi18Mrt88BY4gRsMXPURDEwGjS)
 |   | Run | Run | View |
 | - | --- | --- | ---- |
 | Tutorial 1 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W2D3_FutureClimate-IPCCII&IIISocio-EconomicBasis/student/W2D3_Tutorial1.ipynb) | [![Open In kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W2D3_FutureClimate-IPCCII&IIISocio-EconomicBasis/student/W2D3_Tutorial1.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W2D3_FutureClimate-IPCCII&IIISocio-EconomicBasis/student/W2D3_Tutorial1.ipynb?flush_cache=true) |
@@ -152,6 +160,7 @@
 
 ## W2D4 - Climate Response- Extremes& Variability
 
+[YouTube Playlist](https://youtube.com/playlist?list=PLkBQOLLbi18NxPWEE9T5KxomLaslXXD2E)
 |   | Run | Run | View |
 | - | --- | --- | ---- |
 | Tutorial 1 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W2D4_ClimateResponse-Extremes&Variability/student/W2D4_Tutorial1.ipynb) | [![Open In kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W2D4_ClimateResponse-Extremes&Variability/student/W2D4_Tutorial1.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W2D4_ClimateResponse-Extremes&Variability/student/W2D4_Tutorial1.ipynb?flush_cache=true) |
@@ -171,6 +180,7 @@
 
 ## W2D5 - Climate Response- Adaptation Impact
 
+[YouTube Playlist](https://youtube.com/playlist?list=PLkBQOLLbi18PTzOU6g-giQCy3OVYqZL8r)
 |   | Run | Run | View |
 | - | --- | --- | ---- |
 | Tutorial 1 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial1.ipynb) | [![Open In kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial1.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial1.ipynb?flush_cache=true) |
