@@ -82,6 +82,14 @@
     - file: tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial6.ipynb
     - file: tutorials/W1D5_ClimateModeling/further_reading.md
     title: Climate Modeling (W1D5)
+  - file: tutorials/W2D3_FutureClimate-IPCCII&IIISocio-EconomicBasis/chapter_title.md
+    sections:
+    - file: tutorials/W2D3_FutureClimate-IPCCII&IIISocio-EconomicBasis/student/W2D3_Tutorial1.ipynb
+    - file: tutorials/W2D3_FutureClimate-IPCCII&IIISocio-EconomicBasis/student/W2D3_Tutorial2.ipynb
+    - file: tutorials/W2D3_FutureClimate-IPCCII&IIISocio-EconomicBasis/student/W2D3_Tutorial3.ipynb
+    - file: tutorials/W2D3_FutureClimate-IPCCII&IIISocio-EconomicBasis/student/W2D3_Tutorial4.ipynb
+    - file: tutorials/W2D3_FutureClimate-IPCCII&IIISocio-EconomicBasis/further_reading.md
+    title: Future Climate - IPCC II & III Socio-Economic Basis (W2D3)
   part: Climate Future
 - chapters:
   - file: tutorials/W2D5_ClimateResponse-AdaptationImpact/chapter_title.md

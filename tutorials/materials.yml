@@ -26,10 +26,10 @@
   category: Fundamentals
   name: Good Research Practices
   tutorials: 8
-# - day: W2D3
-#   category: Climate Future
-#   name: Future Climate - IPCC II & III (Socio-Economic Basis)
-#   tutorials: 0
+- day: W2D3
+  category: Climate Future
+  name: Future Climate - IPCC II & III Socio-Economic Basis
+  tutorials: 4
 # - day: W2D4
 #   category: Climate Response
 #   name: Climate Response - Extremes & Variability

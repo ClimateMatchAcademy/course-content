@@ -112,6 +112,7 @@ dependencies:
  - texttable
  - openpyxl
  - pyworld3
+ - nltk
  # Note: Enable after https://github.com/conda-incubator/conda-lock/pull/295
  # Uncomment and remove separate requirements.txt file
  #- pip:
