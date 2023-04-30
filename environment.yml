@@ -110,6 +110,7 @@ dependencies:
  - jupyterlab-git
  - pybind11 # needed for SDFC
  - texttable
+ - openpyxl
  # Note: Enable after https://github.com/conda-incubator/conda-lock/pull/295
  # Uncomment and remove separate requirements.txt file
  #- pip:

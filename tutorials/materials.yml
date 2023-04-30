@@ -14,10 +14,10 @@
   category: Climate Data
   name: Paleoclimate
   tutorials: 9
-# - day: W1D5
-#   category: Climate Future
-#   name: Climate Modeling
-#   tutorials: 6
+- day: W1D5
+  category: Climate Future
+  name: Climate Modeling
+  tutorials: 6
 # - day: W2D1
 #   category: Climate Future
 #   name: Future Climate - IPCC I (Physical Basis)
