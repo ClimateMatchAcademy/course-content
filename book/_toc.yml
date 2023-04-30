@@ -45,6 +45,16 @@
     title: Good Research Practices (W2D2)
   part: Fundamentals
 - chapters:
+  - file: tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/chapter_title.md
+    sections:
+    - file: tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial1.ipynb
+    - file: tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial2.ipynb
+    - file: tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial3.ipynb
+    - file: tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial4.ipynb
+    - file: tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial5.ipynb
+    - file: tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial6.ipynb
+    - file: tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/further_reading.md
+    title: State of the Climate Ocean and Atmosphere Reanalysis (W1D2)
   - file: tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/chapter_title.md
     sections:
     - file: tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.ipynb
