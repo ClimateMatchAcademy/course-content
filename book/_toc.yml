@@ -31,6 +31,18 @@
     - file: tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial9.ipynb
     - file: tutorials/W1D1_ClimateSystemOverview/further_reading.md
     title: Climate System Overview (W1D1)
+  - file: tutorials/W2D2_GoodResearchPractices/chapter_title.md
+    sections:
+    - file: tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial1.ipynb
+    - file: tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial2.ipynb
+    - file: tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial3.ipynb
+    - file: tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial4.ipynb
+    - file: tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial5.ipynb
+    - file: tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial6.ipynb
+    - file: tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial7.ipynb
+    - file: tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial8.ipynb
+    - file: tutorials/W2D2_GoodResearchPractices/further_reading.md
+    title: Good Research Practices (W2D2)
   part: Fundamentals
 - chapters:
   - file: tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/chapter_title.md
@@ -59,6 +71,18 @@
     - file: tutorials/W1D4_Paleoclimate/further_reading.md
     title: Paleoclimate (W1D4)
   part: Climate Data
+- chapters:
+  - file: tutorials/W1D5_ClimateModeling/chapter_title.md
+    sections:
+    - file: tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial1.ipynb
+    - file: tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial2.ipynb
+    - file: tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial3.ipynb
+    - file: tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial4.ipynb
+    - file: tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial5.ipynb
+    - file: tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial6.ipynb
+    - file: tutorials/W1D5_ClimateModeling/further_reading.md
+    title: Climate Modeling (W1D5)
+  part: Climate Future
 - chapters:
   - file: tutorials/W2D5_ClimateResponse-AdaptationImpact/chapter_title.md
     sections:
