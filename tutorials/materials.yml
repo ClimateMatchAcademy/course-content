@@ -18,10 +18,10 @@
   category: Climate Future
   name: Climate Modeling
   tutorials: 6
-# - day: W2D1
-#   category: Climate Future
-#   name: Future Climate - IPCC I (Physical Basis)
-#   tutorials: 0
+- day: W2D1
+  category: Climate Future
+  name: Future Climate - IPCC I Physical Basis
+  tutorials: 6
 - day: W2D2
   category: Fundamentals
   name: Good Research Practices
