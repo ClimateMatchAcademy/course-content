@@ -1249,12 +1249,14 @@ md"""
 
 Various regulations arising from well-established public health concerns (mostly regarding air quality) have been successful at significantly reducing over the last decades the amount of aerosols we emit when burning fossil fuels (e.g. sulfur emissions from freight shipping underwent a legislated reduction by 80% in 2020; sulfate is the strongest forcing aerosol). 
 
-Over the year or so that it takes the typical aerosol particle to fall out of the atmosphere, they reflect sunlight to space and have an effective negative contribution to radiative forcing. The IPCC estimates at least 0.5 degs of warming has been masked by sulfur alone. The effective warming effects of their removal are typically absent from assessments of how aerosols affect public health. 
+Over the year or so that it takes the typical aerosol particle to fall out of the atmosphere, they reflect sunlight to space and have an effective negative contribution to radiative forcing. The IPCC estimates at least 0.5 degs of warming has been masked by sulfur alone. The effective warming effects of reducing aerosol emissions are typically absent from assessments of how aerosols affect public health. 
 
 Estimation uncertainty of aerosol forcing is relatively large but the current best estimates are -1.5 $$W/m^2$$, with sulfate alone contributing about -0.5 $$W/m^2$$. 
-More recent analysis is pointing to aersol reductions a driving increases in warming rates in the next decades([Hansen et al. 2022](https://arxiv.org/ftp/arxiv/papers/2212/2212.04474.pdf)).
+More recent analysis is pointing to aerosol reductions as what will drive increases in warming rates in the next decades ([Hansen et al. 2022](https://arxiv.org/ftp/arxiv/papers/2212/2212.04474.pdf)).
 
-Let's use MARGO to simulate how we manage (purposefully or not) our aerosol emissions using a baseline ignorant of the associated warming of thier reduction. Our control is a reduction knob of the total aersol forcing budget of 1.5 $$W/m^2$$. Let's assume we've eliminated sulfur so our control is at 1/3 (a socalled _termination shock_).
+Let's use MARGO to simulate how we manage (purposefully or not) our aerosol emissions using a baseline (uncontrolled) scenario in which we are ignorant of the associated warming of thier reduction and do not apply any of the other controls (mitiation, removal, or adaptation). Our control is a reduction knob of the total aersol forcing budget of 1.5 $$W/m^2$$ normalized from 0 (no reduction) to 1 (full reduction). Consistent with the large sulfur reductions in recent years, let's assume we've eliminated sulfur so our initial control is a pulse up to 1/3 (a socalled _termination shock_).
+
+What the effects on global temperature of continuing to reduction our aerosol emissions?
 """
 
 # ╔═╡ 4e1524e9-27d2-45a7-9ebd-21e6e369c4a7
@@ -1414,7 +1416,7 @@ end
 
 		
 	plotclicktracker2(
-		plot_controls(controls_x; title="Control reduction of aerosols (total 1.5 W/m2)"),
+		plot_controls(controls_x; title="Controlled reduction of aerosols (1=full reduction of 1.5 W/m2)"),
 		initial_x
 	)
 end
@@ -1984,7 +1986,7 @@ end
 # ╟─2dacd4cd-68bd-4c31-857e-d8cab04b5180
 # ╟─5e5fc687-32be-4308-b3e5-499e25013afe
 # ╟─eda48867-7998-400b-98c9-fcd7ef762dc7
-# ╠═331c45b7-b5f2-4a78-b180-5b918d1806ee
+# ╟─331c45b7-b5f2-4a78-b180-5b918d1806ee
 # ╟─f3c9ee51-f43a-45ca-b604-7e09f28bdbd2
 # ╟─14f314b1-663d-4415-adc1-bc46869b5ee9
 # ╟─0c00a7da-fa98-4253-9770-9a88bb02b849
@@ -1997,11 +1999,11 @@ end
 # ╟─6533c123-34fe-4c0d-9ecc-7fef11379253
 # ╟─50d24c91-61ae-4544-98fa-5749bafe3d41
 # ╟─ec325089-8418-4fed-ac0e-e8ae21b433ab
-# ╠═ff2b1c0a-e419-4f41-aa3b-d017642ffc13
-# ╠═e846c6e2-aa63-40db-8592-c9563bbbdd40
+# ╟─ff2b1c0a-e419-4f41-aa3b-d017642ffc13
+# ╟─e846c6e2-aa63-40db-8592-c9563bbbdd40
 # ╟─76411fcd-a8bb-422e-b063-8a460c522fe4
-# ╠═02851ee9-8050-4821-b3c9-1f65c9b8135b
-# ╠═e810a90f-f964-4d7d-acdb-fc3a159dc12e
+# ╟─02851ee9-8050-4821-b3c9-1f65c9b8135b
+# ╟─e810a90f-f964-4d7d-acdb-fc3a159dc12e
 # ╟─30218715-6469-4a0f-bf90-f3243219e7b5
 # ╟─8433cb38-915a-46c1-b3db-8e7905351c1b
 # ╟─3e26d311-6abc-4b2c-ada4-f8a3171d9f75
@@ -2011,11 +2013,11 @@ end
 # ╟─11d62228-476c-4616-9e7d-de6c05a6a53d
 # ╟─a3422533-2b78-4bc2-92bd-737da3c8982d
 # ╟─4c7fccc5-450c-4903-96a6-ce36ff60d280
-# ╠═aac86adf-465f-464f-b258-406c2e55b82f
+# ╟─aac86adf-465f-464f-b258-406c2e55b82f
 # ╟─9d603716-3069-4032-9416-cd8ab2e272c6
 # ╟─a751fb75-952e-41d4-a8b5-aba512c10e55
 # ╟─bb66d347-99be-4a95-8ba8-57dc9d33384b
-# ╠═b2d65726-df99-4710-9d03-9f6838036c87
+# ╟─b2d65726-df99-4710-9d03-9f6838036c87
 # ╟─70173466-c9b5-4227-8fba-6256fc1ecace
 # ╟─6bcb9b9e-e0ab-45d3-b9b9-3d7282f89df6
 # ╟─a0a1bb20-ec9b-446d-a36a-272840b8d35c
@@ -2024,12 +2026,12 @@ end
 # ╟─7a435e46-4f36-4037-a9a6-d296b20bf6ac
 # ╟─a83e47fa-4b48-4bbc-b210-382d1cf19f55
 # ╟─242f3109-244b-4884-a0e9-6ea8950ca47e
-# ╟─38ff6efc-ccf1-4ca3-8437-152784a98a9e
+# ╠═38ff6efc-ccf1-4ca3-8437-152784a98a9e
 # ╠═51037451-0fea-4021-8824-56911970b97b
-# ╠═373cba19-511e-483e-8bfe-14bbb92d5a21
-# ╟─690d1a4e-533f-4a0a-a6c9-c2799191e8aa
+# ╟─373cba19-511e-483e-8bfe-14bbb92d5a21
+# ╠═690d1a4e-533f-4a0a-a6c9-c2799191e8aa
 # ╟─37c056fc-a3e9-47ad-89d5-72e6a36a243d
-# ╠═5a80d968-2664-4b4f-89d1-845279e419ee
+# ╟─5a80d968-2664-4b4f-89d1-845279e419ee
 # ╟─4e1524e9-27d2-45a7-9ebd-21e6e369c4a7
 # ╟─1c8d2d00-b7d9-11eb-35c4-47f2a2aa1593
 # ╟─d5ab2398-2904-4b44-a855-e4729996bc0d
