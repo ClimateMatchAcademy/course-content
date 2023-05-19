@@ -50,7 +50,7 @@ jobs:
           path: /usr/share/miniconda3/envs/climatematch
           # This should create a key that looks like 'linux-64-conda-environment.yml-[HASH]-DATE'
           # Logic inspired by https://dev.to/epassaro/caching-anaconda-environments-on-github-actions-2d08
-          key: ${{ format('linux-64-conda-{0}-{1}-{2}', inputs.environment_file, hashFiles(format('{0}', inputs.environment_file)), env.DATE )}}
+          key: ${{ format('linux-64-conda-{0}-{1}-{2}', environment.yml, hashFiles(format('{0}', environment.yml), env.DATE )}}
         id: cache
 
       - name: Update environment
@@ -89,7 +89,7 @@ jobs:
         run: |
           branch=${{ github.event.pull_request.head.ref }}
           # nbs=`python ci/select_notebooks.py ${{ steps.changes.outputs.files }}`
-          nbs=`tutorial/W1D1_ClimateSystemOverview/W1D1_Tutorial1.ipynb`
+          nbs=`tutorials/W1D1_ClimateSystemOverview/W1D1_Tutorial1.ipynb`
           if ${{ contains(env.COMMIT_MESSAGE, 'ci:check') }}; then
             execflag="--check-execution";
           else
