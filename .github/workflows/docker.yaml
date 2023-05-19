@@ -6,13 +6,11 @@ on:
     paths:
       - .github/workflows/docker.yaml
       - Dockerfile
-      - Dockerfile.ci
       - environment.yml
   pull_request:
     paths:
       - .github/workflows/docker.yaml
       - Dockerfile
-      - Dockerfile.ci
       - environment.yml
 
 jobs:
@@ -40,12 +38,3 @@ jobs:
           push: true
           file: Dockerfile
           tags: wesleyban/climatematch-notebook:latest
-      -
-        name: Build and push ci
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-          platforms: linux/amd64
-          push: true
-          file: Dockerfile.ci
-          tags: wesleyban/climatematch-course-content-ci:latest
