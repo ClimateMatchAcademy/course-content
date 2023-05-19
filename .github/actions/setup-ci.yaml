@@ -1,0 +1,63 @@
+name: setup NMA Scripts
+
+jobs:
+  setup:
+  runs-on: ubuntu-latest
+  steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+          ref: ${{ github.head_ref }}
+
+      - name: Get commit message
+        run: |
+          readonly local msg=$(git log -1 --pretty=format:"%s")
+          echo "COMMIT_MESSAGE=$msg" >> $GITHUB_ENV
+
+      - name: Set up Python (conda)
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          miniforge-variant: Mambaforge
+          miniforge-version: latest
+          activate-environment: climatematch
+          use-mamba: true
+
+      - name: Set cache date
+        run: echo "DATE=$(date +'%Y%m%d')" >> $GITHUB_ENV
+
+      - uses: actions/cache@v2
+        with:
+          path: /usr/share/miniconda3/envs/climatematch
+          # This should create a key that looks like 'linux-64-conda-environment.yml-[HASH]-DATE'
+          # Logic inspired by https://dev.to/epassaro/caching-anaconda-environments-on-github-actions-2d08
+          key: ${{ format('linux-64-conda-environment.yml-{0}-{1}', hashFiles('environment.yml'), env.DATE )}}
+        id: cache
+
+      - name: Update environment
+        if: ${{!contains(env.COMMIT_MESSAGE, 'skip ci') && steps.cache.outputs.cache-hit != 'true'}}
+        run: mamba env update -n climatematch -f environment.yml
+
+    - name: Install CI tools
+      run: |
+        BRANCH=`python -c 'import os, re; m = re.search(r"nmaci:([\w-]+)", os.environ["COMMIT_MESSAGE"]); print("main" if m is None else m.group(1))'`
+        wget https://github.com/NeuromatchAcademy/nmaci/archive/refs/heads/$BRANCH.tar.gz
+        tar -xzf $BRANCH.tar.gz
+        pip install -r nmaci-$BRANCH/requirements.txt
+        mv nmaci-$BRANCH/scripts/ ci/
+        rm -r nmaci-$BRANCH
+        rm -r $BRANCH.tar.gz
+        echo ci/ >> .gitignore
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+        pip install jupyter-book==0.10.2 ghp-import
+
+    - name: Install XKCD fonts
+      run: |
+        sudo apt-get update -yq
+        sudo sh -c "echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections"
+        sudo apt-get install msttcorefonts -qq
+        rm -f $HOME/.matplotlib/fontList.cache
