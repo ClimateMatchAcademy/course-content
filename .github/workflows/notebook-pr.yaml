@@ -1,5 +1,6 @@
 name: notebook-pr
-on: 
+on:
+  workflow_dispatch:
   pull_request:
     branches: main
     paths: '**/*.ipynb'
@@ -17,7 +18,7 @@ jobs:
     steps:
 
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           persist-credentials: false
           fetch-depth: 0
@@ -28,11 +29,18 @@ jobs:
           readonly local msg=$(git log -1 --pretty=format:"%s")
           echo "COMMIT_MESSAGE=$msg" >> $GITHUB_ENV
 
-      - name: Set up Python
+      - name: Set up Python (conda)
         if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"
-        uses: actions/setup-python@v2
+        uses: conda-incubator/setup-miniconda@v2
         with:
-          python-version: 3.7
+          miniforge-variant: Mambaforge
+          miniforge-version: latest
+          activate-environment: climatematch
+          use-mamba: true
+
+      - name: Update environment
+        if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"
+        run: mamba env update -n climatematch -f environment.yml
 
       - name: Install CI tools
         if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"

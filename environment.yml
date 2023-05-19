@@ -1,4 +1,4 @@
-name: pangeo
+name: climatematch
 channels:
  - conda-forge
  - nodefaults
