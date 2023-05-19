@@ -29,9 +29,9 @@ jobs:
           ref: ${{ github.head_ref }}
 
       - name: Get commit message
-          run: |
-            readonly local msg=$(git log -1 --pretty=format:"%s")
-            echo "COMMIT_MESSAGE=$msg" >> $GITHUB_ENV
+        run: |
+          readonly local msg=$(git log -1 --pretty=format:"%s")
+          echo "COMMIT_MESSAGE=$msg" >> $GITHUB_ENV
   
       - name: Set up Python (conda)
         uses: conda-incubator/setup-miniconda@v2
