@@ -3,7 +3,11 @@ on:
   workflow_dispatch:
   pull_request:
     branches: main
-    paths: '**/*.ipynb'
+    paths:
+      - '**/*.ipynb'
+      - .github/workflows/notebook-pr.yaml
+      - 'environment.yml'
+      - '**/requirements.txt'
 
 env:
   NB_KERNEL: python
