@@ -1,13 +1,16 @@
 name: ci
 
 on:
+  workflow-dispatch:
   push:
     paths:
+      - .github/workflows/docker.yaml
       - Dockerfile
       - Dockerfile.ci
       - environment.yml
   pull_request:
     paths:
+      - .github/workflows/docker.yaml
       - Dockerfile
       - Dockerfile.ci
       - environment.yml
