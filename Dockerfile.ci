@@ -1,0 +1,7 @@
+FROM climatematch/climatematch-notebook
+
+WORKDIR /home/joyvam
+RUN wget https://github.com/NeuromatchAcademy/nmaci/archive/refs/heads/main.tar.gz && \
+    tar -xzf main.tar.gz; rm -rf main.tar.gz && \
+    pip install -r nmaci-main/requirements.txt && \
+    pip install jupyter-book==0.10.2
