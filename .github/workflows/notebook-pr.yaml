@@ -88,14 +88,8 @@ jobs:
         id: process_notebooks
         run: |
           branch=${{ github.event.pull_request.head.ref }}
-          # nbs=`python ci/select_notebooks.py ${{ steps.changes.outputs.files }}`
-          nbs="tutorials/W1D1_ClimateSystemOverview/W1D1_Tutorial1.ipynb"
-          if ${{ contains(env.COMMIT_MESSAGE, 'ci:check') }}; then
-            execflag="--check-execution";
-          else
-            execflag="--execute";
-          fi
-          python ci/process_notebooks.py $nbs $execflag
+          nbs="tutorials/*/*.ipynb"
+          python ci/process_notebooks.py $nbs
           python ci/verify_exercises.py $nbs --c "$COMMIT_MESSAGE"
           python ci/make_pr_comment.py $nbs --branch $branch --o comment.txt
 
