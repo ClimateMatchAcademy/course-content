@@ -6,6 +6,7 @@ on:
     paths:
       - '**/*.ipynb'
       - .github/workflows/notebook-pr.yaml
+      - .github/actions/setup-ci.yaml
       - 'environment.yml'
       - '**/requirements.txt'
 
