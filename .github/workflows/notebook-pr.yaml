@@ -20,8 +20,6 @@ jobs:
   process-notebooks:
 
     runs-on: ubuntu-latest
-    container:
-      image: wesleyban/climatematch-notebook
     steps:
       - name: Setup
         uses: ./.github/actions/setup-ci.yaml
