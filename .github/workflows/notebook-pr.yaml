@@ -104,13 +104,13 @@ jobs:
         with:
           path: comment.txt
 
-      - name: Update READMEs
-        if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"
+      # - name: Update READMEs
+      #   if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"
         # run: python ci/generate_tutorial_readmes.py
 
-      - name: Remove unreferenced derivatives
-        if: "!contains(env.COMMIT_MESSAGE, 'skip ci') && success()"
-        run: |
+      # - name: Remove unreferenced derivatives
+      #   if: "!contains(env.COMMIT_MESSAGE, 'skip ci') && success()"
+      #   run: |
           # python ci/find_unreferenced_content.py > to_remove.txt
           # if [ -s to_remove.txt ]; then git rm --pathspec-from-file=to_remove.txt; fi
 
