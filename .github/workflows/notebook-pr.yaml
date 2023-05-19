@@ -21,7 +21,14 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      - name: Setup
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+          ref: ${{ github.head_ref }}
+
+      - name: Setup NMA Scripts
         uses: ./.github/actions/setup-ci.yaml
 
       - name: Get changed files
