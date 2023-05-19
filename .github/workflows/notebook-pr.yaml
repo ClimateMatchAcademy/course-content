@@ -1,8 +1,13 @@
 name: notebook-pr
-on: 
+on:
+  workflow_dispatch:
   pull_request:
     branches: main
-    paths: '**/*.ipynb'
+    paths:
+      - '**/*.ipynb'
+      - .github/workflows/notebook-pr.yaml
+      - 'environment.yml'
+      - '**/requirements.txt'
 
 env:
   NB_KERNEL: python
@@ -14,6 +19,8 @@ jobs:
   process-notebooks:
 
     runs-on: ubuntu-latest
+    container:
+      image: wesleyban/climatematch-notebook
     steps:
       - name: Setup
         uses: ./.github/actions/setup-ci.yaml
@@ -30,13 +37,8 @@ jobs:
         id: process_notebooks
         run: |
           branch=${{ github.event.pull_request.head.ref }}
-          nbs=`python ci/select_notebooks.py ${{ steps.changes.outputs.files }}`
-          if ${{ contains(env.COMMIT_MESSAGE, 'ci:check') }}; then
-            execflag="--check-execution";
-          else
-            execflag="--execute";
-          fi
-          python ci/process_notebooks.py $nbs $execflag
+          nbs="tutorials/*/*.ipynb"
+          python ci/process_notebooks.py $nbs
           python ci/verify_exercises.py $nbs --c "$COMMIT_MESSAGE"
           python ci/make_pr_comment.py $nbs --branch $branch --o comment.txt
 
