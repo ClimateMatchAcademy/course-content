@@ -1,7 +1,7 @@
 name: ci
 
 on:
-  workflow-dispatch:
+  workflow_dispatch:
   push:
     paths:
       - .github/workflows/docker.yaml
