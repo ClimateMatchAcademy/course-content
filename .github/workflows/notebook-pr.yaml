@@ -29,7 +29,7 @@ jobs:
           ref: ${{ github.head_ref }}
 
       - name: Setup NMA Scripts
-        uses: ./.github/actions/setup-ci.yaml
+        uses: .github/actions/setup-ci.yaml
 
       - name: Get changed files
         if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"
