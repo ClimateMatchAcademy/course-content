@@ -26,6 +26,11 @@ runs:
         key: ${{ format('linux-64-conda-environment.yml-{0}', hashFiles('environment.yml') )}}
       id: cache
 
+    - name: Get commit message
+      run: |
+        readonly local msg=$(git log -1 --pretty=format:"%s")
+        echo "COMMIT_MESSAGE=$msg" >> $GITHUB_ENV
+
     - name: Download NMACI
       run: |
         BRANCH=`python -c 'import os, re; m = re.search(r"nmaci:([\w-]+)", os.environ["COMMIT_MESSAGE"]); print("main" if m is None else m.group(1))'`
