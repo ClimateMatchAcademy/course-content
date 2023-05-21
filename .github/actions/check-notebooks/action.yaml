@@ -5,6 +5,10 @@ inputs:
     description: 'notebooks to execute'
     required: true
     type: string
+  exec_flag:
+    description: 'flag for execution'
+    required: true
+    type: string
 
 runs:
   using: composite
@@ -31,7 +35,7 @@ runs:
     - name: Process notebooks
       id: process_notebooks
       run: |
-        python ci/process_notebooks.py ${{ inputs.nbs }}
+        python ci/process_notebooks.py ${{ inputs.nbs }} ${{ inputs.exec_flag}}
       shell: bash -l {0}
 
     - name: verify exercices

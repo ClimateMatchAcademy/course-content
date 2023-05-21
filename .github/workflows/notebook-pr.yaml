@@ -47,4 +47,5 @@ jobs:
         uses: ./.github/actions/check-notebooks
         with:
           nbs: 'tutorials/*/*.ipynb'
+          exec_flag: '--check-execution'
 
