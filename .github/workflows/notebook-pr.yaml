@@ -44,7 +44,7 @@ jobs:
 
       - name: Run Notebooks
         if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"
-        uses: ./.github/actions/check-notebooks.yaml
+        uses: ./.github/actions/check-notebooks
         with:
           nbs: 'tutorials/*/*.ipynb'
 
