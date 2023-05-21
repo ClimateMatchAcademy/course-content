@@ -34,6 +34,7 @@ jobs:
           run_all: 'false'
           # exec_flag: '--check-execution'
           exec_flag: '--execute'
+          exercice-continue-on-error: 'true'
 
       # - name: Add PR comment
       #   uses: machine-learning-apps/pr-comment@1.0.0
