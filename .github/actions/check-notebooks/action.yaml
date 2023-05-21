@@ -28,10 +28,21 @@ runs:
     - name: Process notebooks
       id: process_notebooks
       run: |
-        branch=${{ github.event.pull_request.head.ref }}
         python ci/process_notebooks.py ${{ inputs.nbs }}
-        # python ci/verify_exercises.py ${{ inputs.nbs }} --c "$COMMIT_MESSAGE"
-        # python ci/make_pr_comment.py ${{ inputs.nbs }} --branch $branch --o comment.txt
+      shell: bash -l {0}
+
+    - name: verify exercices
+      continue-on-error: true
+      id: verify_exercices
+      run: |
+        python ci/verify_exercises.py ${{ inputs.nbs }} --c "$COMMIT_MESSAGE"
+      shell: bash -l {0}
+
+    - name: make PR comment notebooks
+      id: pr_comment
+      run: |
+        branch=${{ github.event.pull_request.head.ref }}
+        python ci/make_pr_comment.py ${{ inputs.nbs }} --branch $branch --o comment.txt
       shell: bash -l {0}
 
     # - name: Add PR comment
