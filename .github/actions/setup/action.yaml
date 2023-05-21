@@ -39,7 +39,7 @@ runs:
       shell: bash -l {0}
 
     - name: Update environment
-      if: ${{steps.cache.outputs.cache-hit != 'true' || inputs.force_env_update == "true"}}
+      if: ${{steps.cache.outputs.cache-hit != 'true' || inputs.force_env_update == 'true'}}
       run: |
         mamba env update -n climatematch -f environment.yml
         pip install -r ci/requirements.txt
