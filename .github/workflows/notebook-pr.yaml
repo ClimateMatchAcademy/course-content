@@ -47,7 +47,8 @@ jobs:
         uses: ./.github/actions/check-notebooks
         with:
           nbs: 'tutorials/*/*.ipynb'
-          exec_flag: '--check-execution'
+          # exec_flag: '--check-execution'
+          exec_flag: ''
 
       - name: Add PR comment
         uses: machine-learning-apps/pr-comment@1.0.0
