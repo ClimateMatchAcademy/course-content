@@ -34,7 +34,7 @@ runs:
         python ci/process_notebooks.py ${{ inputs.nbs }}
         # python ci/verify_exercises.py ${{ inputs.nbs }} --c "$COMMIT_MESSAGE"
         # python ci/make_pr_comment.py ${{ inputs.nbs }} --branch $branch --o comment.txt
-      shell: bash
+      shell: bash -l {0}
 
     # - name: Add PR comment
     #   uses: machine-learning-apps/pr-comment@1.0.0

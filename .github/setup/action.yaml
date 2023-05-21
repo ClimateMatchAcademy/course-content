@@ -30,7 +30,7 @@ runs:
         rm -r nmaci-$BRANCH
         rm -r $BRANCH.tar.gz
         echo ci/ >> .gitignore
-      shell: bash
+      shell: bash -l {0}
 
     - name: Update environment
       if: ${{steps.cache.outputs.cache-hit != 'true'}}
@@ -39,4 +39,4 @@ runs:
         pip install -r ci/requirements.txt
         # pip install -r requirements.txt
         pip install jupyter-book==0.10.2 ghp-import
-      shell: bash
+      shell: bash -l {0}
