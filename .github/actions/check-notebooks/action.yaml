@@ -7,7 +7,7 @@ inputs:
     type: string
 
 runs:
-using: composite
+  using: composite
   steps:
     - name: Set up Python (conda)
       uses: conda-incubator/setup-miniconda@v2
