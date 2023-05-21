@@ -54,6 +54,7 @@ jobs:
         shell: bash -l {0}
   
       - name: Commit post-processed files
+        continue-on-error: true
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
