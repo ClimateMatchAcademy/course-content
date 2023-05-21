@@ -49,3 +49,37 @@ jobs:
           nbs: 'tutorials/*/*.ipynb'
           exec_flag: '--check-execution'
 
+      - name: Add PR comment
+        uses: machine-learning-apps/pr-comment@1.0.0
+        env:
+          GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
+        with:
+          path: comment.txt
+  
+      - name: Update READMEs
+        run: python ci/generate_tutorial_readmes.py
+        shell: bash -l {0}
+  
+      - name: Remove unreferenced derivatives
+        run: |
+          python ci/find_unreferenced_content.py > to_remove.txt
+          if [ -s to_remove.txt ]; then git rm --pathspec-from-file=to_remove.txt; fi
+        shell: bash -l {0}
+  
+      - name: Commit post-processed files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add '**/*.ipynb'
+          git add '**/static/*.png'
+          git add '**/solutions/*.py'
+          git add '**/README.md'
+          git diff-index --quiet HEAD || git commit -m "Process tutorial notebooks"
+        shell: bash -l {0}
+  
+      - name: Push post-processed files
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.head_ref }}
+
