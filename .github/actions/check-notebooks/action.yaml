@@ -60,6 +60,7 @@ runs:
     - name: Process notebooks
       id: process_notebooks
       run: |
+        which python
         branch=${{ github.event.pull_request.head.ref }}
         python ci/process_notebooks.py ${{ inputs.nbs }}
         # python ci/verify_exercises.py ${{ inputs.nbs }} --c "$COMMIT_MESSAGE"
