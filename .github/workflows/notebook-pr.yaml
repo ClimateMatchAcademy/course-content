@@ -31,9 +31,9 @@ jobs:
       - name: Run Notebooks
         uses: ./.github/actions/check-notebooks
         with:
-          run_all: 'true'
+          run_all: 'false'
           # exec_flag: '--check-execution'
-          exec_flag: ''
+          exec_flag: '--execute'
 
       # - name: Add PR comment
       #   uses: machine-learning-apps/pr-comment@1.0.0
