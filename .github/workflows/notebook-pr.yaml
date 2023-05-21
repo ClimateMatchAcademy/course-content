@@ -28,25 +28,10 @@ jobs:
           fetch-depth: 0
           ref: ${{ github.head_ref }}
 
-      - name: Get commit message
-        run: |
-          readonly local msg=$(git log -1 --pretty=format:"%s")
-          echo "COMMIT_MESSAGE=$msg" >> $GITHUB_ENV
-          ls /home/runner/work/course-content/course-content/.github/
-          ls /home/runner/work/course-content/course-content/.github/actions
-
-      - name: Get changed files
-        if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"
-        id: changes
-        uses: trilom/file-changes-action@v1.2.4
-        with:
-          output: " "
-
       - name: Run Notebooks
-        if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"
         uses: ./.github/actions/check-notebooks
         with:
-          nbs: 'tutorials/*/*.ipynb'
+          run_all: 'true'
           # exec_flag: '--check-execution'
           exec_flag: ''
 
