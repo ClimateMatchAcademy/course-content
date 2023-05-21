@@ -50,12 +50,12 @@ jobs:
           # exec_flag: '--check-execution'
           exec_flag: ''
 
-      - name: Add PR comment
-        uses: machine-learning-apps/pr-comment@1.0.0
-        env:
-          GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
-        with:
-          path: comment.txt
+      # - name: Add PR comment
+      #   uses: machine-learning-apps/pr-comment@1.0.0
+      #   env:
+      #     GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
+      #   with:
+      #     path: comment.txt
   
       - name: Update READMEs
         run: python ci/generate_tutorial_readmes.py
