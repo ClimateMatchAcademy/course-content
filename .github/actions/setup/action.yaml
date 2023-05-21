@@ -1,5 +1,11 @@
 name: Setup
 description: 'setup the environment'
+inputs:
+  force_env_update:
+    description: "force update CI environment"
+    required: false
+    default: 'false'
+    type: string
 
 runs:
   using: composite
@@ -33,7 +39,7 @@ runs:
       shell: bash -l {0}
 
     - name: Update environment
-      if: ${{steps.cache.outputs.cache-hit != 'true'}}
+      if: ${{steps.cache.outputs.cache-hit != 'true' || inputs.force_env_update == "true"}}
       run: |
         mamba env update -n climatematch -f environment.yml
         pip install -r ci/requirements.txt

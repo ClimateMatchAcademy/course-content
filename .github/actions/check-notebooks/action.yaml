@@ -35,7 +35,6 @@ runs:
       continue-on-error: true
       id: verify_exercices
       run: |
-        pip install fuzzywuzzy
         python ci/verify_exercises.py ${{ inputs.nbs }} --c "$COMMIT_MESSAGE"
       shell: bash -l {0}
 
