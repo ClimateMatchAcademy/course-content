@@ -49,7 +49,7 @@ jobs:
           path: /usr/share/miniconda3/envs/climatematch
           # This should create a key that looks like 'linux-64-conda-environment.yml-[HASH]-DATE'
           # Logic inspired by https://dev.to/epassaro/caching-anaconda-environments-on-github-actions-2d08
-          key: ${{ format('linux-64-conda-environment.yml-{0}-{1}', hashFiles('environment.yml'), env.DATE )}}
+          key: ${{ format('linux-64-conda-environment.yml-{0}', hashFiles('environment.yml') )}}
         id: cache
 
       - name: Update environment
@@ -69,15 +69,15 @@ jobs:
   
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          # pip install -r requirements.txt
           pip install jupyter-book==0.10.2 ghp-import
   
-      - name: Install XKCD fonts
-        run: |
-          sudo apt-get update -yq
-          sudo sh -c "echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections"
-          sudo apt-get install msttcorefonts -qq
-          rm -f $HOME/.matplotlib/fontList.cache
+      # - name: Install XKCD fonts
+      #   run: |
+      #     sudo apt-get update -yq
+      #     sudo sh -c "echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections"
+      #     sudo apt-get install msttcorefonts -qq
+      #     rm -f $HOME/.matplotlib/fontList.cache
 
       - name: Get changed files
         if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"
