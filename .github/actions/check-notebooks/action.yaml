@@ -58,19 +58,19 @@ runs:
     - name: Process notebooks
       id: process_notebooks
       run: |
-        python ci/process_notebooks.py ${{ env.nbs }} ${{ inputs.exec_flag}}
+        python ci/process_notebooks.py ${{ env.NBS }} ${{ inputs.exec_flag}}
       shell: bash -l {0}
 
     - name: verify exercices
       continue-on-error: true
       id: verify_exercices
       run: |
-        python ci/verify_exercises.py ${{ env.nbs }} --c "$COMMIT_MESSAGE"
+        python ci/verify_exercises.py ${{ env.NBS }} --c "$COMMIT_MESSAGE"
       shell: bash -l {0}
 
     - name: make PR comment notebooks
       id: pr_comment
       run: |
         branch=${{ github.event.pull_request.head.ref }}
-        python ci/make_pr_comment.py ${{ env.nbs }} --branch $branch --o comment.txt
+        python ci/make_pr_comment.py ${{ env.NBS }} --branch $branch --o comment.txt
       shell: bash -l {0}
