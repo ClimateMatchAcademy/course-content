@@ -30,6 +30,7 @@ runs:
       run: |
         readonly local msg=$(git log -1 --pretty=format:"%s")
         echo "COMMIT_MESSAGE=$msg" >> $GITHUB_ENV
+      shell: bash -l {0}
 
     - name: Download NMACI
       run: |
