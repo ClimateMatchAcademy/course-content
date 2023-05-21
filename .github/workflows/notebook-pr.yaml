@@ -32,6 +32,8 @@ jobs:
         run: |
           readonly local msg=$(git log -1 --pretty=format:"%s")
           echo "COMMIT_MESSAGE=$msg" >> $GITHUB_ENV
+          ls /home/runner/work/course-content/course-content/.github/
+          ls /home/runner/work/course-content/course-content/.github/actions
 
       - name: Get changed files
         if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"
