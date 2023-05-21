@@ -52,33 +52,33 @@ runs:
         python ci/make_pr_comment.py ${{ inputs.nbs }} --branch $branch --o comment.txt
       shell: bash -l {0}
 
-    # - name: Add PR comment
-    #   uses: machine-learning-apps/pr-comment@1.0.0
-    #   env:
-    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    #   with:
-    #     path: comment.txt
+    - name: Add PR comment
+      uses: machine-learning-apps/pr-comment@1.0.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        path: comment.txt
 
-    # - name: Update READMEs
-      # run: python ci/generate_tutorial_readmes.py
+    - name: Update READMEs
+      run: python ci/generate_tutorial_readmes.py
 
-    # - name: Remove unreferenced derivatives
-    #   run: |
-        # python ci/find_unreferenced_content.py > to_remove.txt
-        # if [ -s to_remove.txt ]; then git rm --pathspec-from-file=to_remove.txt; fi
+    - name: Remove unreferenced derivatives
+      run: |
+        python ci/find_unreferenced_content.py > to_remove.txt
+        if [ -s to_remove.txt ]; then git rm --pathspec-from-file=to_remove.txt; fi
 
-    # - name: Commit post-processed files
-    #   run: |
-    #     git config --local user.email "action@github.com"
-    #     git config --local user.name "GitHub Action"
-    #     git add '**/*.ipynb'
-    #     git add '**/static/*.png'
-    #     git add '**/solutions/*.py'
-    #     git add '**/README.md'
-    #     git diff-index --quiet HEAD || git commit -m "Process tutorial notebooks"
+    - name: Commit post-processed files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add '**/*.ipynb'
+        git add '**/static/*.png'
+        git add '**/solutions/*.py'
+        git add '**/README.md'
+        git diff-index --quiet HEAD || git commit -m "Process tutorial notebooks"
 
-    # - name: Push post-processed files
-    #   uses: ad-m/github-push-action@v0.6.0
-    #   with:
-    #     github_token: ${{ secrets.GITHUB_TOKEN }}
-    #     branch: ${{ github.head_ref }}
+    - name: Push post-processed files
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.head_ref }}
