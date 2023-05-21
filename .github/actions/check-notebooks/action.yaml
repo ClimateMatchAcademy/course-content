@@ -19,6 +19,7 @@ runs:
 
     - name: Set cache date
       run: echo "DATE=$(date +'%Y%m%d')" >> $GITHUB_ENV
+      shell: bash
 
     - uses: actions/cache@v2
       with:
@@ -38,6 +39,7 @@ runs:
         rm -r nmaci-$BRANCH
         rm -r $BRANCH.tar.gz
         echo ci/ >> .gitignore
+      shell: bash
 
     - name: Update environment
       if: ${{steps.cache.outputs.cache-hit != 'true'}}
@@ -46,6 +48,7 @@ runs:
         pip install -r ci/requirements.txt
         # pip install -r requirements.txt
         pip install jupyter-book==0.10.2 ghp-import
+      shell: bash
 
     # - name: Install XKCD fonts
     #   run: |
@@ -61,6 +64,7 @@ runs:
         python ci/process_notebooks.py ${{ inputs.nbs }}
         # python ci/verify_exercises.py ${{ inputs.nbs }} --c "$COMMIT_MESSAGE"
         # python ci/make_pr_comment.py ${{ inputs.nbs }} --branch $branch --o comment.txt
+      shell: bash
 
     # - name: Add PR comment
     #   uses: machine-learning-apps/pr-comment@1.0.0
