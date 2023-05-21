@@ -62,14 +62,14 @@ runs:
 
     - name: Process notebooks
       id: process_notebooks
-      if: ${{! env.NBS != '' }}
+      if: ${{ env.NBS != '' }}
       run: |
         python ci/process_notebooks.py ${{ env.NBS }} ${{ inputs.exec_flag}}
       shell: bash -l {0}
 
     - name: verify exercices
       continue-on-error: ${{ inputs.exercice-continue-on-error }}
-      if: ${{! env.NBS != '' }}
+      if: ${{ env.NBS != '' }}
       id: verify_exercices
       run: |
         python ci/verify_exercises.py ${{ env.NBS }} --c "$COMMIT_MESSAGE"
@@ -77,7 +77,7 @@ runs:
 
     - name: make PR comment notebooks
       id: pr_comment
-      if: ${{! env.NBS != '' }}
+      if: ${{ env.NBS != '' }}
       run: |
         branch=${{ github.event.pull_request.head.ref }}
         python ci/make_pr_comment.py ${{ env.NBS }} --branch $branch --o comment.txt
