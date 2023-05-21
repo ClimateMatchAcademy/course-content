@@ -23,7 +23,7 @@ runs:
     - name: Setup
       uses: ./.github/actions/setup
       with:
-        force_env_update: 'true'
+        force_env_update: 'false'
 
     # - name: Install XKCD fonts
     #   run: |
