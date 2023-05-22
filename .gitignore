@@ -8,3 +8,4 @@ pages2k_data.unzip/
 *.pyc
 **/.DS_Store
 tutorials/.DS_Store
+ci/
