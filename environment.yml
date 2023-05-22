@@ -92,7 +92,7 @@ dependencies:
  - xarray_leaflet
  - xarray-spatial
  - xbatcher
- - xcape
+# - xcape
  - xclim
  - xesmf
  - xgcm
