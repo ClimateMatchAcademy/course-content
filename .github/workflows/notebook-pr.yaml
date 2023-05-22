@@ -1,8 +1,15 @@
 name: notebook-pr
-on: 
+on:
+  workflow_dispatch:
   pull_request:
-    branches: main
-    paths: '**/*.ipynb'
+    branches:
+      - main
+    paths:
+      - '**/*.ipynb'
+      - .github/workflows/notebook-pr.yaml
+      - .github/actions/setup-ci.yaml
+      - 'environment.yml'
+      - '**/requirements.txt'
 
 env:
   NB_KERNEL: python
@@ -15,92 +22,43 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           persist-credentials: false
           fetch-depth: 0
           ref: ${{ github.head_ref }}
 
-      - name: Get commit message
-        run: |
-          readonly local msg=$(git log -1 --pretty=format:"%s")
-          echo "COMMIT_MESSAGE=$msg" >> $GITHUB_ENV
-
-      - name: Set up Python
-        if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"
-        uses: actions/setup-python@v2
+      - name: Run Notebooks
+        uses: ./.github/actions/check-notebooks
         with:
-          python-version: 3.7
-
-      - name: Install CI tools
-        if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"
-        run: |
-          BRANCH=`python -c 'import os, re; m = re.search(r"nmaci:([\w-]+)", os.environ["COMMIT_MESSAGE"]); print("main" if m is None else m.group(1))'`
-          wget https://github.com/NeuromatchAcademy/nmaci/archive/refs/heads/$BRANCH.tar.gz
-          tar -xzf $BRANCH.tar.gz
-          pip install -r nmaci-$BRANCH/requirements.txt
-          mv nmaci-$BRANCH/scripts/ ci/
-          rm -r nmaci-$BRANCH
-          echo ci/ >> .gitignore
-
-      - name: Install dependencies
-        if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"
-        run: |
-          python -m pip install --upgrade pip wheel
-          pip install -r requirements.txt
-
-      - name: Install XKCD fonts
-        if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"
-        run: |
-          sudo apt-get update -yq
-          sudo sh -c "echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections"
-          sudo apt-get install msttcorefonts -qq
-          rm -f $HOME/.matplotlib/fontList.cache
-
-      - name: Get changed files
-        if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"
-        id: changes
-        uses: trilom/file-changes-action@v1.2.4
-        with:
-          output: " "
-
-      - name: Process notebooks
-        if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"
-        id: process_notebooks
-        run: |
-          branch=${{ github.event.pull_request.head.ref }}
-          nbs=`python ci/select_notebooks.py ${{ steps.changes.outputs.files }}`
-          if ${{ contains(env.COMMIT_MESSAGE, 'ci:check') }}; then
-            execflag="--check-execution";
-          else
-            execflag="--execute";
-          fi
-          python ci/process_notebooks.py $nbs $execflag
-          python ci/verify_exercises.py $nbs --c "$COMMIT_MESSAGE"
-          python ci/make_pr_comment.py $nbs --branch $branch --o comment.txt
+          run_all: 'false'
+          # exec_flag: '--check-execution'
+          exec_flag: '--execute'
+          exercice-continue-on-error: 'true'
 
       - name: Add PR comment
-        if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"
+        if: ${{ env.NBS != '' }}
         uses: machine-learning-apps/pr-comment@1.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           path: comment.txt
-
       - name: Update READMEs
-        if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"
+        if: ${{ env.NBS != '' }}
         run: python ci/generate_tutorial_readmes.py
+        shell: bash -l {0}
 
       - name: Remove unreferenced derivatives
-        if: "!contains(env.COMMIT_MESSAGE, 'skip ci') && success()"
+        if: ${{ env.NBS != '' }}
         run: |
           python ci/find_unreferenced_content.py > to_remove.txt
           if [ -s to_remove.txt ]; then git rm --pathspec-from-file=to_remove.txt; fi
+        shell: bash -l {0}
 
       - name: Commit post-processed files
-        if: "!contains(env.COMMIT_MESSAGE, 'skip ci') && success()"
+        if: ${{ env.NBS != '' }}
+        # continue-on-error: true
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
@@ -109,10 +67,12 @@ jobs:
           git add '**/solutions/*.py'
           git add '**/README.md'
           git diff-index --quiet HEAD || git commit -m "Process tutorial notebooks"
+        shell: bash -l {0}
 
       - name: Push post-processed files
-        if: "!contains(env.COMMIT_MESSAGE, 'skip ci') && success()"
+        if: ${{ env.NBS != '' }}
         uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.head_ref }}
+

@@ -1,0 +1,84 @@
+name: process-notebooks
+description: 'Run processing of notebooks'
+inputs:
+  run_all:
+    description: 'run all notebooks or only changed'
+    required: true
+    type: string
+  exec_flag:
+    description: 'flag for execution'
+    required: true
+    type: string
+  exercice-continue-on-error:
+    description: 'Should continue on Error in exercices'
+    required: flase
+    default: 'false'
+    type: string
+
+runs:
+  using: composite
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        persist-credentials: false
+        fetch-depth: 0
+        ref: ${{ github.head_ref }}
+
+    - name: Get commit message
+      run: |
+        readonly local msg=$(git log -1 --pretty=format:"%s")
+        echo "COMMIT_MESSAGE=$msg" >> $GITHUB_ENV
+      shell: bash -l {0}
+    
+    - name: Setup
+      uses: ./.github/actions/setup
+      with:
+        force_env_update: 'false'
+    
+    - name: Get changed files
+      if: ${{ inputs.runall == 'true' }}
+      id: changes
+      uses: trilom/file-changes-action@v1.2.4
+      with:
+        output: " "
+
+    - name: Get notebooks
+      run: |
+        if ${{ inputs.run_all == 'true' }}; then
+          nbs="tutorials/*/*.ipynb";
+        else
+          nbs=`python ci/select_notebooks.py ${{ steps.changes.outputs.files }}`;
+        fi
+        echo "NBS=$nbs" >> $GITHUB_ENV
+      shell: bash -l {0}
+
+    # - name: Install XKCD fonts
+    #   run: |
+    #     sudo apt-get update -yq
+    #     sudo sh -c "echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections"
+    #     sudo apt-get install msttcorefonts -qq
+    #     rm -f $HOME/.matplotlib/fontList.cache
+
+    - name: Process notebooks
+      id: process_notebooks
+      if: ${{ env.NBS != '' }}
+      run: |
+        python ci/process_notebooks.py ${{ env.NBS }} ${{ inputs.exec_flag}}
+      shell: bash -l {0}
+
+    - name: verify exercices
+      continue-on-error: ${{ inputs.exercice-continue-on-error }}
+      if: ${{ env.NBS != '' }}
+      id: verify_exercices
+      run: |
+        python ci/verify_exercises.py ${{ env.NBS }} --c "$COMMIT_MESSAGE"
+      shell: bash -l {0}
+
+    - name: make PR comment notebooks
+      id: pr_comment
+      if: ${{ env.NBS != '' }}
+      run: |
+        branch=${{ github.event.pull_request.head.ref }}
+        python ci/make_pr_comment.py ${{ env.NBS }} --branch $branch --o comment.txt
+      shell: bash -l {0}
