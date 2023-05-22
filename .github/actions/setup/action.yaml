@@ -1,0 +1,54 @@
+name: Setup
+description: 'setup the environment'
+inputs:
+  force_env_update:
+    description: "force update CI environment"
+    required: false
+    default: 'false'
+    type: string
+
+runs:
+  using: composite
+  steps:
+    - name: Set up Python (conda)
+      uses: conda-incubator/setup-miniconda@v2
+      with:
+        miniforge-variant: Mambaforge
+        miniforge-version: latest
+        activate-environment: climatematch
+        use-mamba: true
+
+    - uses: actions/cache@v3
+      with:
+        path: /usr/share/miniconda3/envs/climatematch
+        # This should create a key that looks like 'linux-64-conda-environment.yml-[HASH]'
+        # Logic inspired by https://dev.to/epassaro/caching-anaconda-environments-on-github-actions-2d08
+        key: ${{ format('linux-64-conda-environment.yml-{0}', hashFiles('environment.yml') )}}
+      id: cache
+
+    - name: Get commit message
+      run: |
+        readonly local msg=$(git log -1 --pretty=format:"%s")
+        echo "COMMIT_MESSAGE=$msg" >> $GITHUB_ENV
+      shell: bash -l {0}
+
+    - name: Download NMACI
+      run: |
+        BRANCH=`python -c 'import os, re; m = re.search(r"nmaci:([\w-]+)", os.environ["COMMIT_MESSAGE"]); print("main" if m is None else m.group(1))'`
+        wget https://github.com/NeuromatchAcademy/nmaci/archive/refs/heads/$BRANCH.tar.gz
+        tar -xzf $BRANCH.tar.gz
+        mv nmaci-$BRANCH/scripts/ ci/
+        mv nmaci-$BRANCH/requirements.txt ci/requirements.txt
+        rm -r nmaci-$BRANCH
+        rm -r $BRANCH.tar.gz
+        echo ci/ >> .gitignore
+      shell: bash -l {0}
+
+    - name: Update environment
+      if: ${{steps.cache.outputs.cache-hit != 'true' || inputs.force_env_update == 'true'}}
+      run: |
+        mamba env update -n climatematch -f environment.yml
+        pip install -r ci/requirements.txt
+        # pip install -r requirements.txt
+        pip install jupyter-book==0.10.2 ghp-import
+      shell: bash -l {0}

@@ -1,0 +1,13 @@
+name: Manual CI update
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  update-env:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Force Update environment
+          uses: ./.github/actions/setup
+          with:
+            force_env_update: 'true'
