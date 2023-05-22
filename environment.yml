@@ -1,4 +1,4 @@
-name: pangeo
+name: climatematch
 channels:
  - conda-forge
  - nodefaults
@@ -25,7 +25,6 @@ dependencies:
  - gcsfs
  - gh
  - geocube
- # - geogif
  - geopandas
  - geopy
  - geoviews-core
@@ -76,7 +75,6 @@ dependencies:
  - rechunker
  - rio-cogeo
  - rioxarray
-# - rise
  - s3fs
  - satpy
  - scikit-image
@@ -94,9 +92,8 @@ dependencies:
  - xarray_leaflet
  - xarray-spatial
  - xbatcher
- - xcape
+# - xcape
  - xclim
- # - xcube>=0.9.1
  - xesmf
  - xgcm
  - xhistogram
