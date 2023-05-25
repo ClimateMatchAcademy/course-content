@@ -1,0 +1,57 @@
+name: notebook-nightly
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+env:
+  NB_KERNEL: python
+  NMA_REPO: course-content
+  NMA_MAIN_BRANCH: main
+
+jobs:
+
+  process-notebooks:
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+          ref: ${{ github.head_ref }}
+
+      - name: Run Notebooks
+        uses: ./.github/actions/check-notebooks
+        with:
+          run_all: 'true'
+          exec_flag: '--execute'
+  
+    #   - name: Update READMEs
+    #     run: python ci/generate_tutorial_readmes.py
+    #     shell: bash -l {0}
+  
+    #   - name: Remove unreferenced derivatives
+    #     run: |
+    #       python ci/find_unreferenced_content.py > to_remove.txt
+    #       if [ -s to_remove.txt ]; then git rm --pathspec-from-file=to_remove.txt; fi
+    #     shell: bash -l {0}
+  
+    #   - name: Commit post-processed files
+    #     run: |
+    #       git config --local user.email "action@github.com"
+    #       git config --local user.name "GitHub Action"
+    #       git add '**/*.ipynb'
+    #       git add '**/static/*.png'
+    #       git add '**/solutions/*.py'
+    #       git add '**/README.md'
+    #       git diff-index --quiet HEAD || git commit -m "Process tutorial notebooks"
+    #     shell: bash -l {0}
+  
+    #   - name: Push post-processed files
+    #     uses: ad-m/github-push-action@v0.6.0
+    #     with:
+    #       github_token: ${{ secrets.GITHUB_TOKEN }}
+    #       branch: ${{ github.head_ref }}
+

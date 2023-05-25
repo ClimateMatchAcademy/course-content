@@ -25,4 +25,3 @@ def evaluate_model_performance(trained_model, X_test, y_test):
 # Evaluate the performance of the trained model on the test set
 ## Uncomment the code below to test your function
 test_recall, test_precision = evaluate_model_performance(trained_model, X_test, y_test)
-
