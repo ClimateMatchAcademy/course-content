@@ -92,7 +92,7 @@ dependencies:
  - xarray_leaflet
  - xarray-spatial
  - xbatcher
- - xcape
+# - xcape
  - xclim
  - xesmf
  - xgcm
@@ -111,6 +111,12 @@ dependencies:
  - pyworld3
  - nltk
  - ecco_v4_py
+ - cmocean
+ - ipykernel
+ - boto3
+ - pooch
+ - climlab
+
  # Note: Enable after https://github.com/conda-incubator/conda-lock/pull/295
  # Uncomment and remove separate requirements.txt file
  #- pip:

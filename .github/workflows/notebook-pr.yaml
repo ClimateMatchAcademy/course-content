@@ -44,7 +44,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           path: comment.txt
-
       - name: Update READMEs
         if: ${{ env.NBS != '' }}
         run: python ci/generate_tutorial_readmes.py
