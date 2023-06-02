@@ -68,6 +68,7 @@ dependencies:
  - pygeos
  - pystac
  - pystac-client
+ - pythia-datasets
  - python-blosc
  - python-gist
  - python-graphviz
