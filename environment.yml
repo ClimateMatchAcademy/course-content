@@ -116,6 +116,9 @@ dependencies:
  - boto3
  - pooch
  - climlab
+ - pip
+ - pip:
+   - pyleoclim
 
  # Note: Enable after https://github.com/conda-incubator/conda-lock/pull/295
  # Uncomment and remove separate requirements.txt file
