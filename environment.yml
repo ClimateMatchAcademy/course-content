@@ -96,6 +96,7 @@ dependencies:
 # - xcape
  - xclim
  - xesmf
+ - esmpy
  - xgcm
  - xhistogram
  - xmip
@@ -122,7 +123,7 @@ dependencies:
  - pip:
    - pyleoclim
    - "mystatsfunctions @ https://github.com/njleach/mystatsfunctions/archive/main.zip"
-   - "SDFC @ https://github.com/yrobink/SDFC/archive/master.zip"
+#   - "SDFC @ https://github.com/yrobink/SDFC/archive/master.zip" # this is not working
 
  # Note: Enable after https://github.com/conda-incubator/conda-lock/pull/295
  # Uncomment and remove separate requirements.txt file
