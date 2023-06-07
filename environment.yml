@@ -1,4 +1,4 @@
-name: climatematch_test2
+name: climatematch
 channels:
  - conda-forge
  - nodefaults
@@ -121,8 +121,8 @@ dependencies:
  - pip
  - pip:
    - pyleoclim
-   - "--editable=git+https://github.com/yrobink/SDFC/archive/master.zip#subdirectory=python\n"
-   - "--editable=git+https://github.com/njleach/mystatsfunctions/archive/master.zip\n"
+   - "mystatsfunctions @ https://github.com/njleach/mystatsfunctions/archive/main.zip"
+#   - "SDFC @ git+https://github.com/yrobink/SDFC.git"
 
  # Note: Enable after https://github.com/conda-incubator/conda-lock/pull/295
  # Uncomment and remove separate requirements.txt file
