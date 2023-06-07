@@ -28,6 +28,7 @@ dependencies:
  - geopandas
  - geopy
  - geoviews-core
+ - git
  - git-lfs
  - gsw
  - h5netcdf
@@ -120,7 +121,8 @@ dependencies:
  - pip
  - pip:
    - pyleoclim
-	
+   - "--editable=git+https://github.com/yrobink/SDFC/archive/master.zip#subdirectory=python\n",
+   - "--editable=git+https://github.com/njleach/mystatsfunctions/archive/master.zip\n",	
 
  # Note: Enable after https://github.com/conda-incubator/conda-lock/pull/295
  # Uncomment and remove separate requirements.txt file
