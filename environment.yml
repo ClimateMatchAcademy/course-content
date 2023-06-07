@@ -122,7 +122,7 @@ dependencies:
  - pip:
    - pyleoclim
    - "mystatsfunctions @ https://github.com/njleach/mystatsfunctions/archive/main.zip"
-#   - "SDFC @ git+https://github.com/yrobink/SDFC.git"
+   - "SDFC @ https://github.com/yrobink/SDFC/archive/master.zip"
 
  # Note: Enable after https://github.com/conda-incubator/conda-lock/pull/295
  # Uncomment and remove separate requirements.txt file
