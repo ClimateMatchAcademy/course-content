@@ -17,7 +17,6 @@ dependencies:
  - earthdata
  - eofs
  - erddapy
- - esmpy
  - fastjmd95
  - flox
  - fsspec
