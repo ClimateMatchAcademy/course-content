@@ -95,6 +95,7 @@ dependencies:
  - xbatcher
 # - xcape
  - xclim
+ - esmf
  - xesmf
  - esmpy
  - xgcm
