@@ -73,7 +73,7 @@ dependencies:
  - python-blosc
  - python-gist
  - python-graphviz
- - pyworld3
+ - pyworld3 # needed for W2D3
  - rasterio
  - rechunker
  - rio-cogeo
