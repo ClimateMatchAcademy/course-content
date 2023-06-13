@@ -1,11 +1,13 @@
 book/_build/
 *.nc
 *.csv
+.DS_Store
 .ipynb_checkpoints/
 pages2k_data
 pages2k_data.unzip/
 *.pyc
-*.DS_Store
+**/.DS_Store
+tutorials/.DS_Store
 ci/
-tutorials/W1D4_Paleoclimate/euro2k_data
-*.lpd
+tutorials/.DS_Store
+tutorials/.DS_Store
