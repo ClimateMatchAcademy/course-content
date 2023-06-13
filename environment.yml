@@ -73,6 +73,7 @@ dependencies:
  - python-blosc
  - python-gist
  - python-graphviz
+ - pyworld3
  - rasterio
  - rechunker
  - rio-cogeo
