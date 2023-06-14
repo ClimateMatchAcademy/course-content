@@ -11,13 +11,13 @@ dependencies:
  - cartopy
  - cfgrib
  - ciso
+ - climlab
  - dask-ml
  - datashader
  - descartes
  - earthdata
  - eofs
  - erddapy
- - esmpy
  - fastjmd95
  - flox
  - fsspec
@@ -28,6 +28,7 @@ dependencies:
  - geopandas
  - geopy
  - geoviews-core
+ - git
  - git-lfs
  - gsw
  - h5netcdf
@@ -68,9 +69,11 @@ dependencies:
  - pygeos
  - pystac
  - pystac-client
+ - pythia-datasets
  - python-blosc
  - python-gist
  - python-graphviz
+ - pyworld3 # needed for W2D3
  - rasterio
  - rechunker
  - rio-cogeo
@@ -94,7 +97,9 @@ dependencies:
  - xbatcher
 # - xcape
  - xclim
+ - esmf
  - xesmf
+ - esmpy
  - xgcm
  - xhistogram
  - xmip
@@ -109,8 +114,21 @@ dependencies:
  - texttable
  - openpyxl
  - pyworld3
+ - wordcloud 
  - nltk
  - ecco_v4_py
+ - cmocean
+ - ipykernel
+ - boto3
+ - pooch
+ - eigen # needed for SDFC
+ - pip
+ - pip:
+   - pyleoclim
+   - afinn
+   - "mystatsfunctions @ https://github.com/njleach/mystatsfunctions/archive/main.zip"
+#   - "SDFC @ https://github.com/yrobink/SDFC/archive/master.zip" # this is not working
+   -  https://github.com/mptouzel/PyDICE/archive/master.zip # for W2D3 Tutorial 2 
  # Note: Enable after https://github.com/conda-incubator/conda-lock/pull/295
  # Uncomment and remove separate requirements.txt file
  #- pip:
