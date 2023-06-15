@@ -2,4 +2,4 @@
 
 ----
 
-See the [Daily Guide to Projects](./docs/project_guidance.md).
+See the [Daily Guide for Projects](./docs/project_guidance.md).
