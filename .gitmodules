@@ -1,0 +1,3 @@
+[submodule "tutorials/pythia"]
+	path = tutorials/pythia
+	url = https://github.com/ProjectPythia/pythia-foundations
