@@ -141,11 +141,8 @@
 - chapters:
   - file: projects/README.md
     title: Introduction
-  - file: projects/docs/datasets_overview.md
-    sections: []
-  - file: projects/docs/project_templates.md
-  - file: projects/docs/continuing_your_project_after_the_course.md
   - file: projects/docs/project_guidance.md
+  - file: projects/docs/datasets_overview.md
     sections:
     - file: projects/project-notebooks/Sea level rise.ipynb
     - file: projects/project-notebooks/Regional precipitation variability.ipynb
@@ -154,4 +151,5 @@
     - file: projects/project-notebooks/Ocean acidification.ipynb
     - file: projects/project-notebooks/ENSO impact on precipitation and temperature.ipynb
     - file: projects/project-notebooks/Heatwaves.ipynb
+  - file: projects/docs/continuing_your_project_after_the_course.md
   part: Project Booklet
