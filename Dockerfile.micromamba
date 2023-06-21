@@ -1,0 +1,5 @@
+FROM mambaorg/micromamba:latest
+
+COPY --chown=$MAMBA_USER:$MAMBA_USER environment.yml /tmp/
+RUN micromamba install -y -n base -f /tmp/environment.yml
+RUN micromamba clean --all --yes
