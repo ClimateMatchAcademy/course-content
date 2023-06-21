@@ -13,7 +13,7 @@ By working together with 4-6 peers from your pod, you will learn to
 - put concepts into practice,
 - connect physical climate phenomena to socio-economic impacts.
 
-Everything you need to know about projects -- from the daily schedule and tasks to useful tips and resources -- can be found in the  **[Daily Guide for Projects](./docs/daily_guide_for_projects.md)**.
+Everything you need to know about projects -- from the daily schedule and tasks to useful tips and resources -- can be found in the  **[Daily Guide for Projects](./docs/project_guidance.md)**.
 
 We are also providing a range of **[project materials](./docs/dataset_overview.md)** to help you get started.
 
