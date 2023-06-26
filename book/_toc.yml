@@ -144,37 +144,12 @@
   - file: projects/docs/project_guidance.md
   - file: projects/docs/datasets_overview.md
     sections:
-    - file: projects/docs/neurons.md
-      sections:
-      - file: projects/neurons/README.md
-        title: Guide
-      - file: projects/neurons/neurons_videos.ipynb
-    - file: projects/docs/fMRI.md
-      sections:
-      - file: projects/fMRI/README.md
-        title: Guide
-      - file: projects/fMRI/fMRI_videos.ipynb
-    - file: projects/docs/ECoG.md
-      sections:
-      - file: projects/ECoG/README.md
-        title: Guide
-      - file: projects/ECoG/ECoG_videos.ipynb
-    - file: projects/docs/behavior.md
-      sections:
-      - file: projects/behavior/README.md
-        title: Guide
-      - file: projects/behavior/behavior_videos.ipynb
-    - file: projects/docs/theory.md
-      sections:
-      - file: projects/theory/README.md
-        title: Guide
-      - file: projects/theory/theory_videos.ipynb
-  - file: projects/docs/project_templates.md
-  - file: projects/docs/project_2020_highlights.md
-    sections:
-    - file: projects/docs/projects_2020/neurons.md
-    - file: projects/docs/projects_2020/theory.md
-    - file: projects/docs/projects_2020/behavior.md
-    - file: projects/docs/projects_2020/fMRI.md
-    - file: projects/docs/projects_2020/eeg.md
+    - file: projects/project-notebooks/Sea level rise.ipynb
+    - file: projects/project-notebooks/Regional precipitation variability.ipynb
+    - file: projects/project-notebooks/Surface albedo and land use.ipynb
+    - file: projects/project-notebooks/Wildfires and burnt areas.ipynb
+    - file: projects/project-notebooks/Ocean acidification.ipynb
+    - file: projects/project-notebooks/ENSO impact on precipitation and temperature.ipynb
+    - file: projects/project-notebooks/Heatwaves.ipynb
+  - file: projects/docs/continuing_your_project_after_the_course.md
   part: Project Booklet
