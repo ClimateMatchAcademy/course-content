@@ -34,7 +34,7 @@ Tutorials, Projects and Professional Development activities will take place betw
    </td>
   </tr>
   <tr>
-   <td bgcolor="#3F538A" align="center" >Curriculum
+   <td  rowspan="2" bgcolor="#3F538A" align="center" >Curriculum
 <p>
 (5 hours)
    </td>
@@ -49,9 +49,7 @@ Tutorials, Projects and Professional Development activities will take place betw
    <td bgcolor="#B0C7DC" align="center" ><strong><font color="black" > Climate Modeling </font></strong>
    </td>
   </tr>
-  <tr>
-   <td bgcolor="#3F538A" >
-   </td>
+  <tr></tr>
    <td bgcolor="#E99668"  align="center" ><img tutorials/static/icon_W1D1.png >
    </td>
    <td bgcolor="#F5C690"  align="center" ><img tutorials/static/icon_W1D2.png >
