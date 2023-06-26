@@ -13,6 +13,7 @@ The course will begin with Opening Ceremonies on Sunday, July 9th
 
 Tutorials, Projects and Professional Development activities will take place between July 17th and July 28th, 2023.
 
+## Course Schedule for Timezones 2 & 5
 
 <table>
   <tr>
@@ -196,7 +197,7 @@ Tutorials, Projects and Professional Development activities will take place betw
   </tr>
 </table>
 
-
+## Course Schedule for Timezones 1, 3 & 4
 
 <table>
   <tr>
