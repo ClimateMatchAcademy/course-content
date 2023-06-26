@@ -458,7 +458,7 @@ All days (except W1D1 and W2D2) will follow this schedule for course time:
 </table>
 
 
-* : Note that the synchronous coursework session starts at 0:00 with the first pod discussion.
+*Note that the synchronous coursework session starts at 0:00 with the first pod discussion.
 
 W1D1: The synchronous coursework session starts at -0:30 with 30 minutes for pod introductions. Students should watch the keynote lecture beforehand.
 
@@ -574,7 +574,7 @@ A series of professional development events (viewing and discussing four Impact 
 </table>
 
 
-* Note that these events take place after the normal coursework time for slots 1/3/4.
+*Note that these events take place after the normal coursework time for slots 1/3/4.
 
 Course feedback survey: We will have a course completion survey for both students and teaching assistants. The link will be shared on discord. Please fill it out during this time!
 
