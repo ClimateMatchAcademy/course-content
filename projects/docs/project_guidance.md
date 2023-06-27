@@ -64,7 +64,7 @@ _Tuesday, 18th July (PM) for groups in timezone slots 2 and 5_
 
 _Wednesday, 19th July (AM) for groups in timezone slots 1, 3, and 4_
 
->**Professional Development:** Watch the interview about [Climate Justice](https://climatematchacademy.github.io/professional_development/climate_justice.html) and use the provided prompts to discuss the topic within your project group for 15 minutes As agreed during introductions on W1D1, one project group in the pod should do this during the first 30 minutes of the project block, while the other should leave this for the last 30 minutes of the block. Also as decided on W1D1, two students should practice their leadership skills by leading the discussion from the front and from behind.
+>**Professional Development:** Watch the interview about [Climate Justice](https://climatematchacademy.github.io/professional_development/impact_talks.html#climate-justice) and use the provided prompts to discuss the topic within your project group for 15 minutes As agreed during introductions on W1D1, one project group in the pod should do this during the first 30 minutes of the project block, while the other should leave this for the last 30 minutes of the block. Also as decided on W1D1, two students should practice their leadership skills by leading the discussion from the front and from behind.
 
 The remaining 2.5 hours are time to get your hands dirty! Explore one of the provided climate datasets by working through the **_GREEN_** questions of your project template. Use the **data loading notebook** to get started and try to understand what is being done and why. Parts of this code might be reusable or adaptable later. Be on the lookout for interesting hypotheses and remember to work as a team! Ask for help, assist others, and discuss your findings throughout the day.
 
@@ -79,7 +79,7 @@ _Wednesday, 19th July (PM) for groups in timezone slots 2 and 5_
 
 _Thursday, 20th July (AM) for groups in timezone slots 1, 3, and 4_
 
->**Professional Development:** Watch the interview about, [Equity in Climate Science](https://climatematchacademy.github.io/professional_development/climate_equity.html) and use the provided prompts to discuss the topic within your project group for 15 minutes. As agreed during introductions on W1D1, one project group in the pod should do this during the first 30 minutes of the project block, while the other should leave this for the last 30 minutes of the block. Also as decided on W1D1, two students should practice their leadership skills by leading the discussion from the front and from behind.
+>**Professional Development:** Watch the interview about, [Equity in Climate and Climate Science](https://climatematchacademy.github.io/professional_development/impact_talks.html#equity-in-climate-and-climate-science) and use the provided prompts to discuss the topic within your project group for 15 minutes. As agreed during introductions on W1D1, one project group in the pod should do this during the first 30 minutes of the project block, while the other should leave this for the last 30 minutes of the block. Also as decided on W1D1, two students should practice their leadership skills by leading the discussion from the front and from behind.
 
 >**Professional Development:** On any two days between now and the end of the course, your project group will be visited by mentors. In 1-hour meetings, they will share their professional path in a climate-related field, offer personalized career advice, and provide a networking opportunity. Your pod’s Teaching Assistant can tell you the exact times of these meetings. Make sure to familiarize yourself with the suggested meeting structure and tips for getting the most out of these meetings [here](https://climatematchacademy.github.io/professional_development/mentors.html).
 
@@ -140,7 +140,7 @@ _Monday, 24th July (PM) for groups in timezone slots 2 and 5_
 
 _Tuesday, 25th July (AM) for groups in timezone slots 1, 3, and 4_
 
->**Professional Development:** Watch the interview about [Open Climate Science](https://climatematchacademy.github.io/professional_development/open_climate_science.html) and use the provided prompts to discuss the topic within your project group for 15 minutes. As agreed during introductions on W1D1, one project group in the pod should do this during the first 30 minutes of the project block, while the other should leave this for the last 30 minutes of the block. Also as decided on W1D1, two students should practice their leadership skills by leading the discussion from the front and from behind.
+>**Professional Development:** Watch the interview about [Open Climate Science](https://climatematchacademy.github.io/professional_development/impact_talks.html#open_climate_science) and use the provided prompts to discuss the topic within your project group for 15 minutes. As agreed during introductions on W1D1, one project group in the pod should do this during the first 30 minutes of the project block, while the other should leave this for the last 30 minutes of the block. Also as decided on W1D1, two students should practice their leadership skills by leading the discussion from the front and from behind.
 
 
 Continue working on your project!
@@ -187,7 +187,7 @@ _Wednesday, 26th July (PM) for groups in timezone slots 2 and 5_
 
 _Thursday, 27th July (AM) for groups in timezone slots 1, 3, and 4_
 
->**Professional Development:** Watch the interview about [Climate Science Psychology & Communication](https://climatematchacademy.github.io/professional_development/climate_psychology.html) and use the provided prompts to discuss the topic within your project group for 15 minutes. As agreed during introductions on W1D1, one project group in the pod should do this during the first 30 minutes of the project block, while the other should leave this for the last 30 minutes of the block. Also as decided on W1D1, two students should practice their leadership skills by leading the discussion from the front and from behind.
+>**Professional Development:** Watch the interview about [Psychology of the climate crisis and climate science communication](https://climatematchacademy.github.io/professional_development/impact_talks.html#psychology-of-the-climate-crisis-and-climate-science-communication) and use the provided prompts to discuss the topic within your project group for 15 minutes. As agreed during introductions on W1D1, one project group in the pod should do this during the first 30 minutes of the project block, while the other should leave this for the last 30 minutes of the block. Also as decided on W1D1, two students should practice their leadership skills by leading the discussion from the front and from behind.
 
 Continue working on your project and start thinking about your conclusions. 
 
