@@ -21,6 +21,8 @@ dependencies:
  - fastjmd95
  - flox
  - fsspec
+ - gcc
+ - gxx
  - gcm_filters
  - gcsfs
  - gh
