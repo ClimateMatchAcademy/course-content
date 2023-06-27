@@ -47,9 +47,7 @@ runs:
     - name: Update environment
       if: ${{steps.cache.outputs.cache-hit != 'true' || inputs.force_env_update == 'true'}}
       run: |
-        pwd
-        ls -l
-        mamba install -n climatematch -f environment.yml
+        mamba install -n climatematch --file environment.yml
         mamba install -r ci/requirements.txt
         # pip install -r ci/requirements.txt
         # pip install -r requirements.txt
