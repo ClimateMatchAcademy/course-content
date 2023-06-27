@@ -48,9 +48,7 @@ runs:
       if: ${{steps.cache.outputs.cache-hit != 'true' || inputs.force_env_update == 'true'}}
       run: |
         mamba env update -n climatematch -f environment.yml
-        mamba install -r ci/requirements.txt
-        # pip install -r ci/requirements.txt
+        pip install -r ci/requirements.txt
         # pip install -r requirements.txt
-        # pip install jupyter-book==0.10.2 ghp-import
-        mamba install jupyter-book==0.10.2 ghp-import
+        pip install jupyter-book==0.10.2 ghp-import
       shell: bash -l {0}
