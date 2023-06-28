@@ -11,7 +11,7 @@ inputs:
     type: string
   exercice-continue-on-error:
     description: 'Should continue on Error in exercices'
-    required: flase
+    required: false
     default: 'false'
     type: string
 
