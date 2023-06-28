@@ -1,0 +1,1325 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Calculating ENSO with Xarray — Climatematch Academy: Computational Climate Science</title>
+<!-- Loaded before other Sphinx assets -->
+<link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
+<link href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css" rel="stylesheet"/>
+<link as="font" crossorigin="" href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
+<link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/styles/sphinx-book-theme.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/togglebutton.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/copybutton.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/mystnb.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/sphinx-thebe.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/custom.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" rel="stylesheet" type="text/css"/>
+<!-- Pre-loaded scripts that we'll load fully later -->
+<link as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf" rel="preload"/>
+<script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+<script src="../../../_static/jquery.js"></script>
+<script src="../../../_static/underscore.js"></script>
+<script src="../../../_static/doctools.js"></script>
+<script src="../../../_static/togglebutton.js"></script>
+<script src="../../../_static/clipboard.min.js"></script>
+<script src="../../../_static/copybutton.js"></script>
+<script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+<script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+<script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+<script async="async" src="../../../_static/sphinx-thebe.js"></script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+<link href="../../../genindex.html" rel="index" title="Index">
+<link href="../../../search.html" rel="search" title="Search"/>
+<link href="W1D2_Tutorial2.html" rel="next" title="Tutorial 2: A lot of weather makes climate - exploring the ERA5 Reanalysis"/>
+<link href="../chapter_title.html" rel="prev" title="State of the Climate Ocean and Atmosphere Reanalysis"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="None" name="docsearch:language"/>
+<!-- Google Analytics -->
+</link></link></link></link></link></link></head>
+<body data-offset="60" data-spy="scroll" data-target="#bd-toc-nav">
+<!-- Checkboxes to toggle the left sidebar -->
+<input aria-label="Toggle navigation sidebar" class="sidebar-toggle" id="__navigation" name="__navigation" type="checkbox"/>
+<label class="overlay overlay-navbar" for="__navigation">
+<div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input aria-label="Toggle in-page Table of Contents" class="sidebar-toggle" id="__page-toc" name="__page-toc" type="checkbox"/>
+<label class="overlay overlay-pagetoc" for="__page-toc">
+<div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+<div class="container-fluid" id="banner"></div>
+<div class="container-xl">
+<div class="row">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+<div class="bd-sidebar__content">
+<div class="bd-sidebar__top"><div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+<h1 class="site-logo" id="site-title">Climatematch Academy: Computational Climate Science</h1>
+</a>
+</div><form action="../../../search.html" class="bd-search d-flex align-items-center" method="get">
+<i class="icon fas fa-search"></i>
+<input aria-label="Search this book..." autocomplete="off" class="form-control" id="search-input" name="q" placeholder="Search this book..." type="search"/>
+</form><nav aria-label="Main" class="bd-links" id="bd-docs-nav">
+<div class="bd-toc-item active">
+<ul class="nav bd-sidenav bd-sidenav__home-link">
+<li class="toctree-l1">
+<a class="reference internal" href="../../intro.html">
+                    Introduction
+                </a>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../TechnicalHelp/tech_intro.html">
+   Technical Help
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox">
+<label for="toctree-checkbox-1">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2 has-children">
+<a class="reference internal" href="../../TechnicalHelp/Jupyterbook.html">
+     Using jupyterbook
+    </a>
+<input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox">
+<label for="toctree-checkbox-2">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l3">
+<a class="reference internal" href="../../TechnicalHelp/Tutorial_colab.html">
+       Using Google Colab
+      </a>
+</li>
+<li class="toctree-l3">
+<a class="reference internal" href="../../TechnicalHelp/Tutorial_kaggle.html">
+       Using Kaggle
+      </a>
+</li>
+</ul>
+</input></li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../TechnicalHelp/Discord.html">
+     Using discord
+    </a>
+</li>
+</ul>
+</input></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1">
+<a class="reference internal" href="../../TechnicalHelp/Links_Policy.html">
+   Quick links and policies
+  </a>
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
+  Fundamentals
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/chapter_title.html">
+   Climate System Overview (W1D1)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox">
+<label for="toctree-checkbox-3">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.html">
+<strong>
+      Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial2.html">
+<strong>
+      Tutorial 2: Selection, Interpolation and Slicing
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial3.html">
+<strong>
+      Tutorial 3: Opening and Plotting netCDF Data
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial4.html">
+<strong>
+      Tutorial 4: Arithmetic and Aggregation Methods
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial5.html">
+<strong>
+      Tutorial 5: Xarray Data Analysis and Climatology
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial6.html">
+<strong>
+      Tutorial 6: Compute and Plot Temperature Anomalies
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial7.html">
+<strong>
+      Tutorial 7: Other Computational Tools in Xarray
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial8.html">
+<strong>
+      Tutorial 8: Masking with One Condition
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial9.html">
+<strong>
+      Tutorial 9: Masking with Multiple Conditions
+     </strong>
+</a>
+</li>
+</ul>
+</input></li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/chapter_title.html">
+   Good Research Practices (W2D2)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+<label for="toctree-checkbox-4">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial1.html">
+<strong>
+      Tutorial 1: Finding a Phenomenon and Asking a Question About It
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial2.html">
+<strong>
+      Tutorial 2: Doing a Literature Review
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial3.html">
+<strong>
+      Tutorial 3: Identifying the Basic Ingredients
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial4.html">
+<strong>
+      Tutorial 4: Formulating a Hypothesis
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial5.html">
+<strong>
+      Tutorial 5: Drafting the Analysis
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial6.html">
+<strong>
+      Tutorial 6: Implementing the Analysis
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial7.html">
+<strong>
+      Tutorial 7: Interpreting the Results
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial8.html">
+<strong>
+      Tutorial 8: Communicating Your Conclusions
+     </strong>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
+  Climate Data
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children">
+<a class="reference internal" href="../chapter_title.html">
+   State of the Climate Ocean and Atmosphere Reanalysis (W1D2)
+  </a>
+<input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+<label for="toctree-checkbox-5">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul class="current">
+<li class="toctree-l2 current active">
+<a class="current reference internal" href="#">
+     Calculating ENSO with Xarray
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="W1D2_Tutorial2.html">
+     Tutorial 2: A lot of weather makes climate - exploring the ERA5 Reanalysis
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="W1D2_Tutorial3.html">
+     Tutorial 3: Atmospheric wind driven circulation
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="W1D2_Tutorial4.html">
+     Tutorial 4: Ocean wind driven circulation
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="W1D2_Tutorial5.html">
+     Tutorial 5: Thermohaline circulation
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="W1D2_Tutorial6.html">
+     Tutorial 6: Ocean heat content
+    </a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/chapter_title.html">
+   Remote Sensing Land Ocean and Atmosphere (W1D3)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+<label for="toctree-checkbox-6">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.html">
+     Video 1: What is Remote Sensing
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial3.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial4.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial5.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial6.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial7.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial8.html">
+     Figure settings
+    </a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W1D4_Paleoclimate/chapter_title.html">
+   Paleoclimate (W1D4)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+<label for="toctree-checkbox-7">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial1.html">
+<strong>
+      Tutorial 1: Paleoclimate Proxies
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial2.html">
+<strong>
+      Tutorial 2: Reconstructing Past Changes in Ocean Climate
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial3.html">
+<strong>
+      Tutorial 3: Reconstructing Past Changes in Terrestrial Climate
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial4.html">
+<strong>
+      Tutorial 4: Reconstructing Past Changes in Atmospheric Climate
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial5.html">
+<strong>
+      Tutorial 5: Paleoclimate Data Analysis Tools
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial6.html">
+<strong>
+      Tutorial 6: Spectral Analysis of Paleoclimate Data
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial7.html">
+<strong>
+      Tutorial 7: Assessing Climate Forcings
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial8.html">
+<strong>
+      Tutorial 8: Paleoclimate Models
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial9.html">
+<strong>
+      Tutorial 9: Paleoclimate Reanalysis Products
+     </strong>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
+  Climate Future
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W1D5_ClimateModeling/chapter_title.html">
+   Climate Modeling (W1D5)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+<label for="toctree-checkbox-8">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial1.html">
+     Setup
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial2.html">
+     Setup
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial3.html">
+     Setup
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial4.html">
+     Setup
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial5.html">
+<strong>
+      Tutorial 5: Radiative Equilibrium
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial6.html">
+<strong>
+      Tutorial 6: Radiative Convective Equilibrium
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial7.html">
+<strong>
+      Tutorial 7: Introduction to Earth System Models
+     </strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/chapter_title.html">
+   Future Climate - IPCC I Physical Basis (W2D1)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+<label for="toctree-checkbox-9">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial1.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial2.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial3.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial4.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial5.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial6.html">
+     Figure settings
+    </a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/chapter_title.html">
+   Future Climate - IPCC II &amp; III Socio-Economic Basis (W2D3)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+<label for="toctree-checkbox-10">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial1.html">
+     Tutorial 1 - Limits to growth in World3: A toy world model of diminishing non-renewable resources
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial2.html">
+     Tutorial 2 - A first look at integrated assessment models
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial4.html">
+     Tutorial 4 - Text analysis of COP tweets
+    </a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
+  Climate Response
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/chapter_title.html">
+   Climate Response - Adaptation Impact (W2D5)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+<label for="toctree-checkbox-11">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial1.html">
+<strong>
+      Tutorial 1: Linear and Logistic Regression
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.html">
+     Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.html">
+     Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial4.html">
+     Tutorial 9:  Exploring other applications
+    </a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
+  Project Booklet
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1">
+<a class="reference internal" href="../../../projects/README.html">
+   Introduction
+  </a>
+</li>
+<li class="toctree-l1">
+<a class="reference internal" href="../../../projects/docs/continuing_your_project_after_the_course.html">
+   Climatematch Impact Scholars program
+  </a>
+</li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../../projects/docs/project_guidance.html">
+   Daily guide for projects
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+<label for="toctree-checkbox-12">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.html">
+<strong>
+      The impact of ENSO on precipitation and temperature
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Ocean_acidification.html">
+<strong>
+      Ocean acidification
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Wildfires_and_burnt_areas.html">
+<strong>
+      Monitoring and mapping wildfires using satellite data
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Regional_precipitation_variability.html">
+<strong>
+      Regional precipitation variability and extreme events
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
+<strong>
+      Heatwaves: Assessing the dynamic interactions of the atmosphere and land
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Surface_albedo_and_land_use.html">
+<strong>
+      Change in Earth’s albedo and its dependence on land cover changes in the past 20 years
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Sea_level_rise.html">
+<strong>
+      Sea level rise
+     </strong>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+<div class="bd-sidebar__bottom">
+<!-- To handle the deprecated key -->
+<div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+</div>
+</div>
+<div id="rtd-footer-container"></div>
+</div>
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+<div class="header-article row sticky-top noprint">
+<div class="col py-1 d-flex header-article-main">
+<div class="header-article__left">
+<label class="headerbtn" data-placement="right" data-toggle="tooltip" for="__navigation" title="Toggle navigation">
+<span class="headerbtn__icon-container">
+<i class="fas fa-bars"></i>
+</span>
+</label>
+</div>
+<div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+<button aria-label="Launch interactive content" class="headerbtn menu-dropdown__trigger">
+<i class="fas fa-rocket"></i>
+</button>
+<div class="menu-dropdown__content">
+<ul>
+</ul>
+</div>
+</div>
+<button class="headerbtn" data-placement="bottom" data-toggle="tooltip" onclick="toggleFullScreen()" title="Fullscreen mode">
+<span class="headerbtn__icon-container">
+<i class="fas fa-expand"></i>
+</span>
+</button>
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+<button aria-label="Source repositories" class="headerbtn menu-dropdown__trigger">
+<i class="fab fa-github"></i>
+</button>
+<div class="menu-dropdown__content">
+<ul>
+<li>
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://github.com/ClimatematchAcademy/course-content" title="Source repository">
+<span class="headerbtn__icon-container">
+<i class="fab fa-github"></i>
+</span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+</li>
+<li>
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://github.com/ClimatematchAcademy/course-content/issues/new?title=Issue%20on%20page%20%2Ftutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial1.html&amp;body=Your%20issue%20content%20here." title="Open an issue">
+<span class="headerbtn__icon-container">
+<i class="fas fa-lightbulb"></i>
+</span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="menu-dropdown menu-dropdown-download-buttons">
+<button aria-label="Download this page" class="headerbtn menu-dropdown__trigger">
+<i class="fas fa-download"></i>
+</button>
+<div class="menu-dropdown__content">
+<ul>
+<li>
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="../../../_sources/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial1.ipynb" title="Download source file">
+<span class="headerbtn__icon-container">
+<i class="fas fa-file"></i>
+</span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+</li>
+<li>
+<button class="headerbtn" data-placement="left" data-toggle="tooltip" onclick="printPdf(this)" title="Print to PDF">
+<span class="headerbtn__icon-container">
+<i class="fas fa-file-pdf"></i>
+</span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+</li>
+</ul>
+</div>
+</div>
+<label class="headerbtn headerbtn-page-toc" for="__page-toc">
+<span class="headerbtn__icon-container">
+<i class="fas fa-list"></i>
+</span>
+</label>
+</div>
+</div>
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+<div class="tocsection onthispage pt-5 pb-3">
+<i class="fas fa-list"></i> Contents
+    </div>
+<nav aria-label="Page" id="bd-toc-nav">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#overview">
+   Overview
+  </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#prerequisites">
+   Prerequisites
+  </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tropical-pacific-climate-processes">
+   Tropical Pacific Climate Processes
+  </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#ocean-atmosphere-interactions-during-el-nino-and-la-nina">
+   Ocean-Atmosphere Interactions during El Niño and La Niña
+  </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#imports">
+   Imports
+  </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#the-nino-3-4-index">
+   The Niño 3.4 Index
+  </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#select-the-nino-3-4-region">
+   Select the Niño 3.4 region
+  </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#compute-the-anomalies">
+   Compute the anomalies
+  </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#visualize-the-computed-nino-3-4-index">
+   Visualize the computed Niño 3.4 index
+  </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#resources-and-references">
+   Resources and References
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="article row">
+<div class="col pl-md-3 pl-lg-5 content-container">
+<!-- Table of contents that is only displayed when printing the page -->
+<div class="onlyprint" id="jb-print-docs-body">
+<h1>Calculating ENSO with Xarray</h1>
+<!-- Table of contents -->
+<div id="print-main-content">
+<div id="jb-print-toc">
+<div>
+<h2> Contents </h2>
+</div>
+<nav aria-label="Page">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#overview">
+   Overview
+  </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#prerequisites">
+   Prerequisites
+  </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tropical-pacific-climate-processes">
+   Tropical Pacific Climate Processes
+  </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#ocean-atmosphere-interactions-during-el-nino-and-la-nina">
+   Ocean-Atmosphere Interactions during El Niño and La Niña
+  </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#imports">
+   Imports
+  </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#the-nino-3-4-index">
+   The Niño 3.4 Index
+  </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#select-the-nino-3-4-region">
+   Select the Niño 3.4 region
+  </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#compute-the-anomalies">
+   Compute the anomalies
+  </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#visualize-the-computed-nino-3-4-index">
+   Visualize the computed Niño 3.4 index
+  </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#resources-and-references">
+   Resources and References
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<main id="main-content" role="main">
+<div>
+<div class="section" id="calculating-enso-with-xarray">
+<h1>Calculating ENSO with Xarray<a class="headerlink" href="#calculating-enso-with-xarray" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils"/>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>In this notebook (adapted from Project Pythia), we will:</p>
+<ol class="simple">
+<li><p>Load SST data from the CESM2 model</p></li>
+<li><p>Mask data using <code class="docutils literal notranslate"><span class="pre">.where()</span></code></p></li>
+<li><p>Compute climatologies and anomalies using <code class="docutils literal notranslate"><span class="pre">.groupby()</span></code></p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">.rolling()</span></code> to compute moving average</p></li>
+<li><p>Compute, normalize, and plot the Niño 3.4 Index</p></li>
+</ol>
+</div>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Concepts</p></th>
+<th class="head"><p>Importance</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="xref myst">Introduction to Xarray</span></p></td>
+<td><p>Necessary</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">Computation and Masking</span></p></td>
+<td><p>Necessary</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p><strong>Time to learn</strong>: 20 minutes</p></li>
+</ul>
+<p>##Introduction to El Niño Southern Oscillation (ENSO)
+During many of the tutorials yesterday, we practiced using Xarray packages to plot and interpret monthly global sea surface temperature (SST) data from the Community Earth System Model v2 (CESM2). With this data, we:</p>
+<ul class="simple">
+<li><p>Applied arithmetic and aggregation methods</p></li>
+<li><p>Explored climatology</p></li>
+<li><p>Computed climate anaomalies running averages</p></li>
+<li><p>Masked data with one and multiple conditions</p></li>
+</ul>
+<p>During the final tutorial yesterday, we learned how to mask data using multiple conditions. In particular, we used <code class="docutils literal notranslate"><span class="pre">.where()</span></code> to isolate SST data between 5ºN-5ºS and 190ºW-240ºW. This geographic region, known as the Niño 3.4 region, is in the tropical Pacific Ocean and is commonly used as a metric for determining the phase of the El Niño-Southern Oscillation (ENSO). ENSO is a recurring climate pattern involving changes in SST in the central and eastern tropical Pacific Ocean, which two alternating phases:</p>
+<ul class="simple">
+<li><p><strong>El Niño:</strong> the phase of ENSO characterized by warmer than average SSTs in the central and eastern tropical Pacific Ocean, weakened east to west equatorial winds and increased rainfall in the eastern tropical Pacific.</p></li>
+<li><p><strong>La Niña:</strong> the phase of ENSO is characterized by cooler than average SSTs in the central and eastern tropical Pacific Ocean, stronger east to west equatorial winds and decreased rainfall in the eastern tropical Pacific.</p></li>
+</ul>
+</div>
+<div class="section" id="tropical-pacific-climate-processes">
+<h2>Tropical Pacific Climate Processes<a class="headerlink" href="#tropical-pacific-climate-processes" title="Permalink to this headline">¶</a></h2>
+<p>To better understand the climate system processes that result in El Nino and La Nina events, let’s first consider typical climate conditions in the tropical Pacific Ocean. Recall from W1D1, <strong>trade winds</strong> are winds that blow east to west just north and south of the equator (these are sometimes referred to as “easterly” winds since the winds are originating from the east and blowing toward the west). And as we discussed yesterday, the reason that the trade winds blow from east to west is related to Earth’s rotation, which causes the winds in the Northern Hemisphere to curve to the right and winds in the Southern Hemisphere curves to the left. This is known as the <strong>Coriolis effect</strong>.</p>
+<p>If Earth’s rotation affects air movement, do you think it also influences surface ocean water movement? It does! As trade winds blow across the tropical Pacific Ocean, they move water because of friction at the ocean surface. But because of the Coriolis effect, surface water moves to the right of the wind direction in the Northern Hemisphere and to the left of the wind direction in the Southern Hemisphere. However, the speed and direction of water movement changes with depth. Ocean surface water moves at an angle to the wind, and the water under the surface water moves at a slightly larger angle, and the water below that turns at an even larger angle. The average direction of all this turning water is about a right angle from the wind direction. This average is known as <strong>Ekman transport</strong>. Since this process is driven by the trade winds, the strength of this ocean water transport varies in response to changes in the the srength of the trade winds.</p>
+</div>
+<div class="section" id="ocean-atmosphere-interactions-during-el-nino-and-la-nina">
+<h2>Ocean-Atmosphere Interactions during El Niño and La Niña<a class="headerlink" href="#ocean-atmosphere-interactions-during-el-nino-and-la-nina" title="Permalink to this headline">¶</a></h2>
+<p>So, how does all of this relate to El Niño and La Niña? Changes in the strength of Pacific Ocean trade winds and the resulting impact on Ekman transport create variations in the tropical Pacific Ocean SST, which further results in changes to atmospheric circulation patterns and rainfall.</p>
+<p>During an El Niño event, <em><strong>easterly trade winds are weaker</strong></em>. As a result, less warm surface water is  transported to the west via Ekman transport, which causes a build-up of warm surface water in the eastern equatorial Pacific. This creates warmer than avrage SSTs in the eastern equatorial Pacific Ocean. The atmosphere responds to this warming with increased rising air motion and above-average rainfall in the eastern Pacific. In contrast, during a La Niña event, <em><strong>easterly trade winds are stronger</strong></em>. As a result, more warm surface water is transported to the west via Ekman transport, and cool water from deeper in the ocean rises up in the eastern Pacific during a process known as upwelling. This creates cooler than avrage SSTs in the eastern equatorial Pacific Ocean. This cooling decreases rising air movement in the eastern Pacific, resulting in drier than average cdonsitions.</p>
+<p>In this tutorial, we’ll examine SST temperature to further explore variations in the climate system that occur during El Nino and La Nina events. Specifically, we will plot and interpet CESM2 SST data from the Niño 3.4 region.</p>
+<div class="cell tag_colab docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># #&lt;Yosmely Bermúdez&gt; comments</span>
+<span class="c1"># #Install the dependencies</span>
+<span class="c1"># !pip install pythia_datasets</span>
+<span class="c1"># !pip install cartopy</span>
+<span class="c1"># !pip install xarray</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="imports">
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">from</span> <span class="nn">pythia_datasets</span> <span class="kn">import</span> <span class="n">DATASETS</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-nino-3-4-index">
+<h2>The Niño 3.4 Index<a class="headerlink" href="#the-nino-3-4-index" title="Permalink to this headline">¶</a></h2>
+<p>In this notebook, we are going to combine several topics we’ve covered so far to compute the <a class="reference external" href="https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni">Niño 3.4 Index</a> for the CESM2 submission for the <a class="reference external" href="https://esgf-node.llnl.gov/projects/cmip6/">CMIP6 project</a>.</p>
+<blockquote>
+<div><p>Niño 3.4 (5N-5S, 170W-120W): The Niño 3.4 anomalies may be thought of as representing the average equatorial SSTs across the Pacific from about the dateline to the South American coast. The Niño 3.4 index typically uses a 5-month running mean, and El Niño or La Niña events are defined when the Niño 3.4 SSTs exceed +/- 0.4C for a period of six months or more.</p>
+</div></blockquote>
+<blockquote>
+<div><p>Nino X Index computation: (a) Compute area averaged total SST from Niño X region; (b) Compute monthly climatology (e.g., 1950-1979) for area averaged total SST from Niño X region, and subtract climatology from area averaged total SST time series to obtain anomalies; (c) Smooth the anomalies with a 5-month running mean; (d) Normalize the smoothed values by its standard deviation over the climatological period.</p>
+</div></blockquote>
+<p><img alt="" src="https://www.ncdc.noaa.gov/monitoring-content/teleconnections/nino-regions.gif"/></p>
+<p>At the end of this notebook, you should be able to produce a plot that looks similar to this <a class="reference external" href="https://climatedataguide.ucar.edu/sites/default/files/styles/extra_large/public/2022-03/indices_oni_2_2_lg.png">Oceanic Niño Index plot</a>:</p>
+<p><img alt="ONI index plot from NCAR Climate Data Guide" src="https://climatedataguide.ucar.edu/sites/default/files/styles/extra_large/public/2022-03/indices_oni_2_2_lg.png"/></p>
+<p>Open the SST and areacello datasets, and use Xarray’s <code class="docutils literal notranslate"><span class="pre">merge</span></code> method to combine them into a single dataset:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">filepath</span> <span class="o">=</span> <span class="n">DATASETS</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s1">'CESM2_sst_data.nc'</span><span class="p">)</span>
+<span class="c1"># &lt;Yosmely Bermúdez&gt; comments</span>
+<span class="c1"># decode_times=False fix up the time variable "manually".</span>
+<span class="c1"># You can use xr.decode_cf() or simply assign a new pandas time index to your time variable.</span>
+<span class="c1"># Is better assign a new pandas time index because after you need a groupby with month and this is the solution.</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span><span class="n">decode_times</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">'time'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">'time'</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="n">filepath2</span> <span class="o">=</span> <span class="n">DATASETS</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s1">'CESM2_grid_variables.nc'</span><span class="p">)</span>
+<span class="n">areacello</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">filepath2</span><span class="p">)</span><span class="o">.</span><span class="n">areacello</span>
+
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">merge</span><span class="p">([</span><span class="n">data</span><span class="p">,</span> <span class="n">areacello</span><span class="p">])</span>
+<span class="n">ds</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_colab docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># # Sloane Garelick comments</span>
+<span class="c1"># # When I ran this cell it caused the rest of the notebook to crash. I think maybe we should remove this cell?</span>
+
+<span class="c1"># # &lt;Yosmely Bermúdez&gt; comments</span>
+<span class="c1">#    # You have to be careful with shapely as it has problems with cartopy, so you have to install other dependencies</span>
+<span class="c1"># !apt-get install libproj-dev proj-data proj-bin</span>
+<span class="c1"># !apt-get install libgeos-dev</span>
+<span class="c1"># !pip install cython</span>
+<span class="c1"># !apt-get -qq install python-cartopy python3-cartopy</span>
+<span class="c1"># !pip uninstall -y shapely    # cartopy and shapely aren't friends (early 2020)</span>
+<span class="c1"># !pip install shapely --no-binary shapely</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sloane Garelick comments</span>
+<span class="c1"># When I ran this cell it caused the rest of the notebook to crash. I think maybe we should remove this cell?</span>
+
+
+<span class="c1"># &lt;Yosmely Bermúdez&gt; comments</span>
+   <span class="c1">#This library is needed to be able to graph with cartopy</span>
+<span class="kn">import</span> <span class="nn">cartopy.io.shapereader</span> <span class="k">as</span> <span class="nn">shapereader</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Visualize the first time slice to make sure the data looks as expected:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">Robinson</span><span class="p">(</span><span class="n">central_longitude</span><span class="o">=</span><span class="mi">180</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">()</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">tos</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">vmin</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">'coolwarm'</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="select-the-nino-3-4-region">
+<h2>Select the Niño 3.4 region<a class="headerlink" href="#select-the-nino-3-4-region" title="Permalink to this headline">¶</a></h2>
+<p>There are a couple ways to select the Niño 3.4 region:</p>
+<ol class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">sel()</span></code> or <code class="docutils literal notranslate"><span class="pre">isel()</span></code></p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">where()</span></code> and select all values within the bounds of interest</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tos_nino34</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">lon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">190</span><span class="p">,</span> <span class="mi">240</span><span class="p">))</span>
+<span class="n">tos_nino34</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The other option for selecting our region of interest is to use</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tos_nino34</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
+    <span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">lat</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">lat</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">5</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">lon</span> <span class="o">&gt;</span> <span class="mi">190</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">lon</span> <span class="o">&lt;</span> <span class="mi">240</span><span class="p">),</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+<span class="n">tos_nino34</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s plot the selected region to make sure we are doing the right thing.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">Robinson</span><span class="p">(</span><span class="n">central_longitude</span><span class="o">=</span><span class="mi">180</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">()</span>
+<span class="n">tos_nino34</span><span class="o">.</span><span class="n">tos</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">vmin</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">'coolwarm'</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_extent</span><span class="p">((</span><span class="mi">120</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="compute-the-anomalies">
+<h2>Compute the anomalies<a class="headerlink" href="#compute-the-anomalies" title="Permalink to this headline">¶</a></h2>
+<p>We first group by month and subtract the mean SST at each point in the Niño 3.4 region. We then compute the weighted average over the region to obtain the anomalies:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gb</span> <span class="o">=</span> <span class="n">tos_nino34</span><span class="o">.</span><span class="n">tos</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'time.month'</span><span class="p">)</span>
+<span class="n">tos_nino34_anom</span> <span class="o">=</span> <span class="n">gb</span> <span class="o">-</span> <span class="n">gb</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">'time'</span><span class="p">)</span>
+<span class="n">index_nino34</span> <span class="o">=</span> <span class="n">tos_nino34_anom</span><span class="o">.</span><span class="n">weighted</span><span class="p">(</span><span class="n">tos_nino34</span><span class="o">.</span><span class="n">areacello</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s1">'lat'</span><span class="p">,</span> <span class="s1">'lon'</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, smooth the anomalies with a 5-month running mean:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">index_nino34_rolling_mean</span> <span class="o">=</span> <span class="n">index_nino34</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">index_nino34</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">index_nino34_rolling_mean</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">'anomaly'</span><span class="p">,</span> <span class="s1">'5-month running mean anomaly'</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'SST anomaly over the Niño 3.4 region'</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>#<strong>Sloane’s ideas of climate content to add:</strong></p>
+<p>Looking at the time series of SST anomaly over the Nino 3.4 region, consider the following questions:</p>
+<ol class="simple">
+<li><p>If the SST anomaly is greater that zero, would that be an El Nino event or a La Nina event?</p></li>
+<li><p>Based on this data, how frequently do El Nino and La Nina events occur?</p></li>
+</ol>
+<p>Compute the standard deviation of the SST in the Nino 3.4 region, over the entire time period of the data array:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">std_dev</span> <span class="o">=</span> <span class="n">tos_nino34</span><span class="o">.</span><span class="n">tos</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="n">std_dev</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then we’ll normalize the values by dividing the rolling mean by the standard deviation of the SST in the Niño 3.4 region:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">normalized_index_nino34_rolling_mean</span> <span class="o">=</span> <span class="n">index_nino34_rolling_mean</span> <span class="o">/</span> <span class="n">std_dev</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualize-the-computed-nino-3-4-index">
+<h2>Visualize the computed Niño 3.4 index<a class="headerlink" href="#visualize-the-computed-nino-3-4-index" title="Permalink to this headline">¶</a></h2>
+<p>We will highlight values in excess of <span class="math notranslate nohighlight">\(\pm\)</span>0.5, roughly corresponding to El Niño (warm) and La Niña (cold) events.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span>
+    <span class="n">normalized_index_nino34_rolling_mean</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
+    <span class="n">normalized_index_nino34_rolling_mean</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
+        <span class="n">normalized_index_nino34_rolling_mean</span> <span class="o">&gt;=</span> <span class="mf">0.4</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
+    <span class="mf">0.4</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span>
+    <span class="n">normalized_index_nino34_rolling_mean</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
+    <span class="n">normalized_index_nino34_rolling_mean</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
+        <span class="n">normalized_index_nino34_rolling_mean</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mf">0.4</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
+    <span class="o">-</span><span class="mf">0.4</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s1">'blue'</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">normalized_index_nino34_rolling_mean</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'black'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'dotted'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'dotted'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Niño 3.4 Index'</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>#<strong>Sloane’s ideas of climate content to add:</strong></p>
+<p>Now that we’ve normalized the data and highlighted SST anomalies that correspond to El Niño (warm) and La Niña (cold) events, consider the following questions:</p>
+<ol class="simple">
+<li><p>When were the strongest El Nino and La Nina events over this time period?</p></li>
+<li><p>Considering the ocean-atmosphere interactions that cause El Nino and La Nina events, can you hypothesize potential reasons one El Nino or La Nina event may be stronger than others?</p></li>
+</ol>
+</div>
+<hr class="docutils"/>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>We have applied a variety of Xarray’s selection, grouping, and statistical functions to compute and visualize an important climate index.</p>
+</div>
+<div class="section" id="resources-and-references">
+<h2>Resources and References<a class="headerlink" href="#resources-and-references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni">Niño 3.4 index</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.fill_between.html">Matplotlib’s <code class="docutils literal notranslate"><span class="pre">fill_between</span></code> method</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.axhline.html">Matplotlib’s <code class="docutils literal notranslate"><span class="pre">axhline</span></code> method</a> (see also its analogous <code class="docutils literal notranslate"><span class="pre">axvline</span></code> method)</p></li>
+</ul>
+</div>
+</div>
+<script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "pangeo"
+        },
+        kernelOptions: {
+            kernelName: "pangeo",
+            path: "./tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student"
+        },
+        predefinedOutput: true
+    }
+    </script>
+<script>kernelName = 'pangeo'</script>
+</div>
+</main>
+<footer class="footer-article noprint">
+<!-- Previous / next buttons -->
+<div class="prev-next-area">
+<a class="left-prev" href="../chapter_title.html" id="prev-link" title="previous page">
+<i class="fas fa-angle-left"></i>
+<div class="prev-next-info">
+<p class="prev-next-subtitle">previous</p>
+<p class="prev-next-title">State of the Climate Ocean and Atmosphere Reanalysis</p>
+</div>
+</a>
+<a class="right-next" href="W1D2_Tutorial2.html" id="next-link" title="next page">
+<div class="prev-next-info">
+<p class="prev-next-subtitle">next</p>
+<p class="prev-next-title">Tutorial 2: A lot of weather makes climate - exploring the ERA5 Reanalysis</p>
+</div>
+<i class="fas fa-angle-right"></i>
+</a>
+</div>
+</footer>
+</div>
+</div>
+<div class="footer-content row">
+<footer class="col footer"><p>
+  
+    By Climatematch<br/>
+<div class="extra_footer">
+<div>
+<a href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png"/></a>
+<a href="https://opensource.org/licenses/BSD-3-Clause"><img src="https://camo.githubusercontent.com/9b9ea65d95c9ef878afa1987df65731d47681336/68747470733a2f2f696d672e736869656c64732e696f2f707970692f6c2f736561626f726e2e737667"/></a>
+The contents of this repository are shared under the <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+Software elements are additionally licensed under the <a href="https://opensource.org/licenses/BSD-3-Clause">BSD (3-Clause) License</a>.
+</div>
+</div>
+</p>
+</footer>
+</div>
+</div>
+</div>
+</div>
+<!-- Scripts loaded after <body> so the DOM is not blocked -->
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+</body>
+</html>

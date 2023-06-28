@@ -1,0 +1,1351 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Setup — Climatematch Academy: Computational Climate Science</title>
+<!-- Loaded before other Sphinx assets -->
+<link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
+<link href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css" rel="stylesheet"/>
+<link as="font" crossorigin="" href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
+<link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/styles/sphinx-book-theme.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/togglebutton.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/copybutton.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/mystnb.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/sphinx-thebe.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/custom.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" rel="stylesheet" type="text/css"/>
+<!-- Pre-loaded scripts that we'll load fully later -->
+<link as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf" rel="preload"/>
+<script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+<script src="../../../_static/jquery.js"></script>
+<script src="../../../_static/underscore.js"></script>
+<script src="../../../_static/doctools.js"></script>
+<script src="../../../_static/togglebutton.js"></script>
+<script src="../../../_static/clipboard.min.js"></script>
+<script src="../../../_static/copybutton.js"></script>
+<script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+<script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+<script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+<script async="async" src="../../../_static/sphinx-thebe.js"></script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+<link href="../../../genindex.html" rel="index" title="Index">
+<link href="../../../search.html" rel="search" title="Search"/>
+<link href="W1D5_Tutorial4.html" rel="next" title="Setup"/>
+<link href="W1D5_Tutorial2.html" rel="prev" title="Setup"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="None" name="docsearch:language"/>
+<!-- Google Analytics -->
+</link></link></link></link></link></link></head>
+<body data-offset="60" data-spy="scroll" data-target="#bd-toc-nav">
+<!-- Checkboxes to toggle the left sidebar -->
+<input aria-label="Toggle navigation sidebar" class="sidebar-toggle" id="__navigation" name="__navigation" type="checkbox"/>
+<label class="overlay overlay-navbar" for="__navigation">
+<div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input aria-label="Toggle in-page Table of Contents" class="sidebar-toggle" id="__page-toc" name="__page-toc" type="checkbox"/>
+<label class="overlay overlay-pagetoc" for="__page-toc">
+<div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+<div class="container-fluid" id="banner"></div>
+<div class="container-xl">
+<div class="row">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+<div class="bd-sidebar__content">
+<div class="bd-sidebar__top"><div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+<h1 class="site-logo" id="site-title">Climatematch Academy: Computational Climate Science</h1>
+</a>
+</div><form action="../../../search.html" class="bd-search d-flex align-items-center" method="get">
+<i class="icon fas fa-search"></i>
+<input aria-label="Search this book..." autocomplete="off" class="form-control" id="search-input" name="q" placeholder="Search this book..." type="search"/>
+</form><nav aria-label="Main" class="bd-links" id="bd-docs-nav">
+<div class="bd-toc-item active">
+<ul class="nav bd-sidenav bd-sidenav__home-link">
+<li class="toctree-l1">
+<a class="reference internal" href="../../intro.html">
+                    Introduction
+                </a>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../TechnicalHelp/tech_intro.html">
+   Technical Help
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox">
+<label for="toctree-checkbox-1">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2 has-children">
+<a class="reference internal" href="../../TechnicalHelp/Jupyterbook.html">
+     Using jupyterbook
+    </a>
+<input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox">
+<label for="toctree-checkbox-2">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l3">
+<a class="reference internal" href="../../TechnicalHelp/Tutorial_colab.html">
+       Using Google Colab
+      </a>
+</li>
+<li class="toctree-l3">
+<a class="reference internal" href="../../TechnicalHelp/Tutorial_kaggle.html">
+       Using Kaggle
+      </a>
+</li>
+</ul>
+</input></li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../TechnicalHelp/Discord.html">
+     Using discord
+    </a>
+</li>
+</ul>
+</input></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1">
+<a class="reference internal" href="../../TechnicalHelp/Links_Policy.html">
+   Quick links and policies
+  </a>
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
+  Fundamentals
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/chapter_title.html">
+   Climate System Overview (W1D1)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox">
+<label for="toctree-checkbox-3">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.html">
+<strong>
+      Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial2.html">
+<strong>
+      Tutorial 2: Selection, Interpolation and Slicing
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial3.html">
+<strong>
+      Tutorial 3: Opening and Plotting netCDF Data
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial4.html">
+<strong>
+      Tutorial 4: Arithmetic and Aggregation Methods
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial5.html">
+<strong>
+      Tutorial 5: Xarray Data Analysis and Climatology
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial6.html">
+<strong>
+      Tutorial 6: Compute and Plot Temperature Anomalies
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial7.html">
+<strong>
+      Tutorial 7: Other Computational Tools in Xarray
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial8.html">
+<strong>
+      Tutorial 8: Masking with One Condition
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial9.html">
+<strong>
+      Tutorial 9: Masking with Multiple Conditions
+     </strong>
+</a>
+</li>
+</ul>
+</input></li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/chapter_title.html">
+   Good Research Practices (W2D2)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+<label for="toctree-checkbox-4">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial1.html">
+<strong>
+      Tutorial 1: Finding a Phenomenon and Asking a Question About It
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial2.html">
+<strong>
+      Tutorial 2: Doing a Literature Review
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial3.html">
+<strong>
+      Tutorial 3: Identifying the Basic Ingredients
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial4.html">
+<strong>
+      Tutorial 4: Formulating a Hypothesis
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial5.html">
+<strong>
+      Tutorial 5: Drafting the Analysis
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial6.html">
+<strong>
+      Tutorial 6: Implementing the Analysis
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial7.html">
+<strong>
+      Tutorial 7: Interpreting the Results
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial8.html">
+<strong>
+      Tutorial 8: Communicating Your Conclusions
+     </strong>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
+  Climate Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/chapter_title.html">
+   State of the Climate Ocean and Atmosphere Reanalysis (W1D2)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+<label for="toctree-checkbox-5">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial1.html">
+     Calculating ENSO with Xarray
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial2.html">
+     Tutorial 2: A lot of weather makes climate - exploring the ERA5 Reanalysis
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial3.html">
+     Tutorial 3: Atmospheric wind driven circulation
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial4.html">
+     Tutorial 4: Ocean wind driven circulation
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial5.html">
+     Tutorial 5: Thermohaline circulation
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial6.html">
+     Tutorial 6: Ocean heat content
+    </a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/chapter_title.html">
+   Remote Sensing Land Ocean and Atmosphere (W1D3)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+<label for="toctree-checkbox-6">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.html">
+     Video 1: What is Remote Sensing
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial3.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial4.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial5.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial6.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial7.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial8.html">
+     Figure settings
+    </a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W1D4_Paleoclimate/chapter_title.html">
+   Paleoclimate (W1D4)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+<label for="toctree-checkbox-7">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial1.html">
+<strong>
+      Tutorial 1: Paleoclimate Proxies
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial2.html">
+<strong>
+      Tutorial 2: Reconstructing Past Changes in Ocean Climate
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial3.html">
+<strong>
+      Tutorial 3: Reconstructing Past Changes in Terrestrial Climate
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial4.html">
+<strong>
+      Tutorial 4: Reconstructing Past Changes in Atmospheric Climate
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial5.html">
+<strong>
+      Tutorial 5: Paleoclimate Data Analysis Tools
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial6.html">
+<strong>
+      Tutorial 6: Spectral Analysis of Paleoclimate Data
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial7.html">
+<strong>
+      Tutorial 7: Assessing Climate Forcings
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial8.html">
+<strong>
+      Tutorial 8: Paleoclimate Models
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial9.html">
+<strong>
+      Tutorial 9: Paleoclimate Reanalysis Products
+     </strong>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
+  Climate Future
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children">
+<a class="reference internal" href="../chapter_title.html">
+   Climate Modeling (W1D5)
+  </a>
+<input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+<label for="toctree-checkbox-8">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul class="current">
+<li class="toctree-l2">
+<a class="reference internal" href="W1D5_Tutorial1.html">
+     Setup
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="W1D5_Tutorial2.html">
+     Setup
+    </a>
+</li>
+<li class="toctree-l2 current active">
+<a class="current reference internal" href="#">
+     Setup
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="W1D5_Tutorial4.html">
+     Setup
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="W1D5_Tutorial5.html">
+<strong>
+      Tutorial 5: Radiative Equilibrium
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="W1D5_Tutorial6.html">
+<strong>
+      Tutorial 6: Radiative Convective Equilibrium
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="W1D5_Tutorial7.html">
+<strong>
+      Tutorial 7: Introduction to Earth System Models
+     </strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/chapter_title.html">
+   Future Climate - IPCC I Physical Basis (W2D1)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+<label for="toctree-checkbox-9">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial1.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial2.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial3.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial4.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial5.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial6.html">
+     Figure settings
+    </a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/chapter_title.html">
+   Future Climate - IPCC II &amp; III Socio-Economic Basis (W2D3)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+<label for="toctree-checkbox-10">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial1.html">
+     Tutorial 1 - Limits to growth in World3: A toy world model of diminishing non-renewable resources
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial2.html">
+     Tutorial 2 - A first look at integrated assessment models
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial4.html">
+     Tutorial 4 - Text analysis of COP tweets
+    </a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
+  Climate Response
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/chapter_title.html">
+   Climate Response - Adaptation Impact (W2D5)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+<label for="toctree-checkbox-11">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial1.html">
+<strong>
+      Tutorial 1: Linear and Logistic Regression
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.html">
+     Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.html">
+     Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial4.html">
+     Tutorial 9:  Exploring other applications
+    </a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
+  Project Booklet
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1">
+<a class="reference internal" href="../../../projects/README.html">
+   Introduction
+  </a>
+</li>
+<li class="toctree-l1">
+<a class="reference internal" href="../../../projects/docs/continuing_your_project_after_the_course.html">
+   Climatematch Impact Scholars program
+  </a>
+</li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../../projects/docs/project_guidance.html">
+   Daily guide for projects
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+<label for="toctree-checkbox-12">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.html">
+<strong>
+      The impact of ENSO on precipitation and temperature
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Ocean_acidification.html">
+<strong>
+      Ocean acidification
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Wildfires_and_burnt_areas.html">
+<strong>
+      Monitoring and mapping wildfires using satellite data
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Regional_precipitation_variability.html">
+<strong>
+      Regional precipitation variability and extreme events
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
+<strong>
+      Heatwaves: Assessing the dynamic interactions of the atmosphere and land
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Surface_albedo_and_land_use.html">
+<strong>
+      Change in Earth’s albedo and its dependence on land cover changes in the past 20 years
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Sea_level_rise.html">
+<strong>
+      Sea level rise
+     </strong>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+<div class="bd-sidebar__bottom">
+<!-- To handle the deprecated key -->
+<div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+</div>
+</div>
+<div id="rtd-footer-container"></div>
+</div>
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+<div class="header-article row sticky-top noprint">
+<div class="col py-1 d-flex header-article-main">
+<div class="header-article__left">
+<label class="headerbtn" data-placement="right" data-toggle="tooltip" for="__navigation" title="Toggle navigation">
+<span class="headerbtn__icon-container">
+<i class="fas fa-bars"></i>
+</span>
+</label>
+</div>
+<div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+<button aria-label="Launch interactive content" class="headerbtn menu-dropdown__trigger">
+<i class="fas fa-rocket"></i>
+</button>
+<div class="menu-dropdown__content">
+<ul>
+</ul>
+</div>
+</div>
+<button class="headerbtn" data-placement="bottom" data-toggle="tooltip" onclick="toggleFullScreen()" title="Fullscreen mode">
+<span class="headerbtn__icon-container">
+<i class="fas fa-expand"></i>
+</span>
+</button>
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+<button aria-label="Source repositories" class="headerbtn menu-dropdown__trigger">
+<i class="fab fa-github"></i>
+</button>
+<div class="menu-dropdown__content">
+<ul>
+<li>
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://github.com/ClimatematchAcademy/course-content" title="Source repository">
+<span class="headerbtn__icon-container">
+<i class="fab fa-github"></i>
+</span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+</li>
+<li>
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://github.com/ClimatematchAcademy/course-content/issues/new?title=Issue%20on%20page%20%2Ftutorials/W1D5_ClimateModeling/student/W1D5_Tutorial3.html&amp;body=Your%20issue%20content%20here." title="Open an issue">
+<span class="headerbtn__icon-container">
+<i class="fas fa-lightbulb"></i>
+</span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="menu-dropdown menu-dropdown-download-buttons">
+<button aria-label="Download this page" class="headerbtn menu-dropdown__trigger">
+<i class="fas fa-download"></i>
+</button>
+<div class="menu-dropdown__content">
+<ul>
+<li>
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="../../../_sources/tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial3.ipynb" title="Download source file">
+<span class="headerbtn__icon-container">
+<i class="fas fa-file"></i>
+</span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+</li>
+<li>
+<button class="headerbtn" data-placement="left" data-toggle="tooltip" onclick="printPdf(this)" title="Print to PDF">
+<span class="headerbtn__icon-container">
+<i class="fas fa-file-pdf"></i>
+</span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+</li>
+</ul>
+</div>
+</div>
+<label class="headerbtn headerbtn-page-toc" for="__page-toc">
+<span class="headerbtn__icon-container">
+<i class="fas fa-list"></i>
+</span>
+</label>
+</div>
+</div>
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+<div class="tocsection onthispage pt-5 pb-3">
+<i class="fas fa-list"></i> Contents
+    </div>
+<nav aria-label="Page" id="bd-toc-nav">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#">
+   Setup
+  </a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#package-imports">
+     Package Imports
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#figure-settings">
+     Figure Settings
+    </a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-heat-capacity">
+   Section 1 : Heat Capacity
+  </a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions">
+     Questions
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#coding-exercises">
+     Coding Exercises
+    </a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-add-time-dependency-to-the-model">
+   Section 2 : Add Time Dependency to the Model
+  </a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#id1">
+     Questions
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#id2">
+     Coding Exercises
+    </a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-3-revisiting-the-climate-change-scenario-from-tutorial-2">
+   Section 3 : Revisiting the Climate Change Scenario from Tutorial 2
+  </a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#id3">
+     Questions
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#id4">
+     Coding Exercises
+    </a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="article row">
+<div class="col pl-md-3 pl-lg-5 content-container">
+<!-- Table of contents that is only displayed when printing the page -->
+<div class="onlyprint" id="jb-print-docs-body">
+<h1>Setup</h1>
+<!-- Table of contents -->
+<div id="print-main-content">
+<div id="jb-print-toc">
+<div>
+<h2> Contents </h2>
+</div>
+<nav aria-label="Page">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#">
+   Setup
+  </a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#package-imports">
+     Package Imports
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#figure-settings">
+     Figure Settings
+    </a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-heat-capacity">
+   Section 1 : Heat Capacity
+  </a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions">
+     Questions
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#coding-exercises">
+     Coding Exercises
+    </a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-add-time-dependency-to-the-model">
+   Section 2 : Add Time Dependency to the Model
+  </a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#id1">
+     Questions
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#id2">
+     Coding Exercises
+    </a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-3-revisiting-the-climate-change-scenario-from-tutorial-2">
+   Section 3 : Revisiting the Climate Change Scenario from Tutorial 2
+  </a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#id3">
+     Questions
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#id4">
+     Coding Exercises
+    </a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<main id="main-content" role="main">
+<div>
+<p>#<strong>Tutorial # 3 : A Zero-Dimensional Energy Balance Model</strong></p>
+<p><strong>Week 1, Day 5, Climate Modeling</strong></p>
+<p><strong>Content creators:</strong> Jenna Pearson, Brodie Pearson, and Abigail Bodner</p>
+<p><strong>Content reviewers:</strong> Draco Xu</p>
+<p><strong>Content editors:</strong> TBD</p>
+<p><strong>Production editors:</strong> TBD</p>
+<p><strong>Our 2023 Sponsors:</strong> TBD</p>
+<p>#<strong>Tutorial Objectives</strong></p>
+<p>In this tutorial students will learn about the heat capacity of the atmosphere and oceans, how this related to temperature changes over time, and set up their first climate model.</p>
+<p>By the end of this tutorial students will be able to:</p>
+<ul class="simple">
+<li><p>Calculate the heat capacity of the ocean and atmospehre.</p></li>
+<li><p>Create and run a time-dependent model of the change in global mean surfact temperture.</p></li>
+<li><p>Describe the influence of transmissivity and albedo on the equilibrium temperature from this model.</p></li>
+</ul>
+<div class="section" id="setup">
+<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="package-imports">
+<h2>Package Imports<a class="headerlink" href="#package-imports" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>                     <span class="c1"># used to manipulate data and open datasets</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>                      <span class="c1"># used for algeba and array operations</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>         <span class="c1"># used for plotting</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="figure-settings">
+<h2>Figure Settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>       <span class="c1"># interactive display</span>
+<span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = 'retina'
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">"https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/cma.mplstyle"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="section-1-heat-capacity">
+<h1>Section 1 : Heat Capacity<a class="headerlink" href="#section-1-heat-capacity" title="Permalink to this headline">¶</a></h1>
+<p>One of the crucial things missing from the simple model we have looked at so far is it’s ability to change with time. As the composition of the atmosphere (among other things) changes with time, in response, so does the energy balance and global mean surface temperature.</p>
+<p>We can represent the change in temperature over time as the net heat input or loss from radiation (<span class="math notranslate nohighlight">\(ASR-OLR\)</span>) multiplied by the heat capacity of the Earth system.</p>
+<p>The heat capacity of a medium is it’s ability to increase in temperture given an input of heat. Not all components of the Earth system (for example land, ocean, atmosphere) have the same heat capacity.</p>
+<p>Mathematically the rate of change of global mean surface temperature (<span class="math notranslate nohighlight">\(T\)</span>) over time is given as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-3d5f4a5f-adad-4abe-80c7-4f4452bab064">
+<span class="eqno">(10)<a class="headerlink" href="#equation-3d5f4a5f-adad-4abe-80c7-4f4452bab064" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\text{rate of change of }T = \frac{1}{\text{heat capacity}}\cdot (\text{energy flux in - energy flux out}) = \frac{1}{C} \cdot ASR - OLR
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> is the heat capacity of the Earth system. Note here that when <span class="math notranslate nohighlight">\(ASR &gt; OLR\)</span>, then the system is gaining heat. Conversly when <span class="math notranslate nohighlight">\(ASR &lt; OLR\)</span>, then the system is losing heat over time.</p>
+<p>To calculate the heat capacity for the Earth system, we will assume the it is a combination of atmophere and ocean only, that is <span class="math notranslate nohighlight">\(C = C_{oc} + C_{atmo}\)</span>.</p>
+<p>Generally, the heat capacity of a medium is the specific heat of that medium times the total mass.</p>
+<p>For the atmosphere we have <span class="math notranslate nohighlight">\(C_{atm} = c_{atm} \cdot \frac{W_{atm}}{g} \)</span> where <span class="math notranslate nohighlight">\(c_{atm}\)</span> is the specific heat of the atmosphere, <span class="math notranslate nohighlight">\(W_{atm}\)</span> is the weight of a column of air, and <span class="math notranslate nohighlight">\(g\)</span> is the acceleration due to gravity.</p>
+<p>For the ocean we have <span class="math notranslate nohighlight">\(C_{oc} = c_{oc} \cdot \rho_{oc} \cdot d_{oc}\)</span> where <span class="math notranslate nohighlight">\(c_{oc}\)</span> is the specific heat of the ocean, <span class="math notranslate nohighlight">\(\rho_{oc}\)</span> is the density of seawater, and <span class="math notranslate nohighlight">\(d_{oc}\)</span> is a representive depth of the ocean.</p>
+<p>We will use this definition to find the heat capactities of the atmosphere and ocean.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># heat capacity of the ocean</span>
+<span class="n">c_oc</span> <span class="o">=</span> <span class="mi">3850</span>                       <span class="c1">#  specific heat of seawater in J/kg/K</span>
+<span class="n">rho_oc</span> <span class="o">=</span> <span class="mi">1025</span>                     <span class="c1">#  average density of seawater in kg/m3</span>
+<span class="n">d_oc</span> <span class="o">=</span> <span class="mi">70</span>                         <span class="c1">#  depth of water in m (here representative of the mized layer)</span>
+<span class="n">C_oc</span> <span class="o">=</span> <span class="n">c_oc</span> <span class="o">*</span> <span class="n">rho_oc</span> <span class="o">*</span> <span class="n">d_oc</span>       <span class="c1">#  heat capacity of the ocean</span>
+
+<span class="c1"># heat capacity of the atmosphere</span>
+<span class="n">c_atm</span> <span class="o">=</span> <span class="mi">1004</span>                       <span class="c1">#  specific heat of the atmosphere at constant pressure in J/kg/K</span>
+<span class="n">W_atm</span> <span class="o">=</span> <span class="mi">100000</span>                     <span class="c1">#  weight (pressure) of atmospheric column in Pa</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>                           <span class="c1">#  acceleration due to gravity in m/s^2</span>
+<span class="n">C_atm</span> <span class="o">=</span> <span class="n">c_atm</span> <span class="o">*</span> <span class="p">(</span><span class="n">W_atm</span> <span class="o">/</span> <span class="n">g</span><span class="p">)</span>        <span class="c1">#  heat capacity of the atmosphere</span>
+
+<span class="c1"># total heat capacity</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">C_oc</span> <span class="o">+</span> <span class="n">C_atm</span>
+
+<span class="c1">#print results.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Ocean Heat Capactiy:      '</span><span class="p">,</span> <span class="n">C_oc</span><span class="p">,</span><span class="s1">' J m^-2K^-2'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Atmosphere Heat Capacity: '</span><span class="p">,</span> <span class="n">C_atm</span><span class="p">,</span><span class="s1">'   J m^-2K^-2'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Total Heat Capactiy:      '</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span><span class="s1">' J m^-2K^-2'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="questions">
+<h2>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Does the ocean or atmosphere have a higher heat capacity?</p></li>
+<li><p>For an equivalent heat input, will the ocean or atmosphere warm more?</p></li>
+<li><p>What do you think this means for warming of the climate system?</p></li>
+</ol>
+</div>
+<div class="section" id="coding-exercises">
+<h2>Coding Exercises<a class="headerlink" href="#coding-exercises" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Calculate the depth of the ocean needed for the ocean to have the same heat capacity at the atmosphere.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># heat capacity of the atmosphere</span>
+<span class="n">c_atm</span> <span class="o">=</span> <span class="mi">1004</span>                       <span class="c1">#  specific heat of the atmosphere at constant pressure in J/kg/K</span>
+<span class="n">W_atm</span> <span class="o">=</span> <span class="mi">100000</span>                     <span class="c1">#  weight (pressure) of atmospheric column in Pa</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>                           <span class="c1">#  height of atmosphere in m (representative of )</span>
+<span class="n">C_atm</span> <span class="o">=</span> <span class="n">c_atm</span> <span class="o">*</span> <span class="p">(</span><span class="n">W_atm</span> <span class="o">/</span> <span class="n">g</span><span class="p">)</span>        <span class="c1">#  heat capacity of the atmosphere</span>
+
+<span class="c1"># find the depth of the ocean for equivalent atmospheric heat capacity</span>
+<span class="n">c_oc</span> <span class="o">=</span> <span class="mi">3850</span>                       <span class="c1">#  specific heat of seawater in J/kg/K</span>
+<span class="n">rho_oc</span> <span class="o">=</span> <span class="mi">1025</span>                     <span class="c1">#  average density of seawater in kg/m3</span>
+
+<span class="n">d_oc</span>  <span class="o">=</span> <span class="o">...</span>
+<span class="n">d_oc</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial3_Solution_2dfdf179.py"><em>Click for solution</em></a></p>
+</div>
+</div>
+<div class="section" id="section-2-add-time-dependency-to-the-model">
+<h1>Section 2 : Add Time Dependency to the Model<a class="headerlink" href="#section-2-add-time-dependency-to-the-model" title="Permalink to this headline">¶</a></h1>
+<p>Knowing the heat capacity, and the descriptions of <span class="math notranslate nohighlight">\(OLR\)</span> and <span class="math notranslate nohighlight">\(ASR\)</span> from previous tutorials, we can write the equation</p>
+<div class="amsmath math notranslate nohighlight" id="equation-90a3c96c-187c-4525-afa2-da526bab29ea">
+<span class="eqno">(11)<a class="headerlink" href="#equation-90a3c96c-187c-4525-afa2-da526bab29ea" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\text{rate of change }T = \frac{\text{change in }T}{\text{change in time}}=\frac{dT}{dt}= \frac{1}{C}(ASR - OLR)
+\end{align}\]</div>
+<p>Numerically, we can use this equation to compute the global mean surface temprature after a small interval of time by adding on the amount of energy gained or lost multiplied by the time interval itself.</p>
+<p>The particular method of numerically defining the time and temperature intervals (changes) is called <strong>discretization</strong>, and the way we have chosen to do this is called the <strong>Euler method</strong>.The exact details of this method are beyond the scope of this tutorial, and we will use the method without further elaboration.</p>
+<p>The Euler method assumes we can use <span class="math notranslate nohighlight">\(\text{change in }T = T_{n+1} - T_{n}\)</span> and <span class="math notranslate nohighlight">\(\text{change in t} = t_{n+1} - t_{n}\)</span> where <span class="math notranslate nohighlight">\(t\)</span> is time. Thus, if we know the time interval and the current temperature (<span class="math notranslate nohighlight">\(T_n\)</span>), we can predict the temperature at the end of our time interval, (<span class="math notranslate nohighlight">\(T_{n+1}\)</span>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define albedo</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2941</span> <span class="c1"># unitless number between 0 and 1 (calculated previously from observations in tutorial 2)</span>
+
+<span class="c1"># define transmissivity (calculated previously from observations in tutorial 1)</span>
+<span class="n">tau</span> <span class="o">=</span> <span class="mf">0.6127</span> <span class="c1"># unitless number between 0 and 1</span>
+
+<span class="c1"># create a function to find the new tempeature based on the previous using Euler's method.</span>
+<span class="k">def</span> <span class="nf">step_forward</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">tau</span><span class="p">):</span>
+
+    <span class="c1"># define the observed insolation based on observations from the IPCC AR6 Figure 7.2</span>
+    <span class="n">Q</span> <span class="o">=</span> <span class="mi">340</span> <span class="c1"># W m^-2</span>
+
+    <span class="c1"># define the Stefan-Boltzmann Constant, noting we are using 'e' for scientific notation</span>
+    <span class="n">sigma</span> <span class="o">=</span> <span class="mf">5.67e-8</span> <span class="c1"># W m^-2 K^-4</span>
+
+    <span class="n">ASR</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">alpha</span><span class="p">)</span><span class="o">*</span><span class="n">Q</span>
+    <span class="n">OLR</span> <span class="o">=</span> <span class="n">tau</span> <span class="o">*</span> <span class="n">sigma</span> <span class="o">*</span> <span class="n">T</span><span class="o">**</span><span class="mi">4</span>
+
+    <span class="n">T_new</span> <span class="o">=</span> <span class="n">T</span> <span class="o">+</span> <span class="n">dt</span> <span class="o">/</span> <span class="n">C</span> <span class="o">*</span> <span class="p">(</span> <span class="n">ASR</span> <span class="o">-</span> <span class="n">OLR</span> <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">T_new</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can now use a loop to apply this function many times over by specifying an initial temperature and a time interval.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the time interval, one year expressed in seconds</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">60.</span> <span class="o">*</span> <span class="mf">60.</span> <span class="o">*</span> <span class="mf">24.</span> <span class="o">*</span> <span class="mf">365.</span>
+
+<span class="c1"># define the number of timesteps (years) to run the model</span>
+<span class="n">numtsteps</span> <span class="o">=</span> <span class="mi">15</span>
+
+<span class="c1"># for converting number of seconds in a year</span>
+<span class="n">sec_2_yr</span> <span class="o">=</span> <span class="mf">3.154e7</span>
+
+<span class="c1"># define empty arrays to store the time series of temperature and the corresponding years</span>
+<span class="n">T_series</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">numtsteps</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">t_series</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">numtsteps</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="c1"># define the intial temperature</span>
+<span class="n">T_series</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">288.</span>
+
+<span class="c1"># run the model</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numtsteps</span><span class="p">):</span>
+    <span class="n">t_series</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span><span class="o">/</span><span class="n">sec_2_yr</span>
+    <span class="n">T_series</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">step_forward</span><span class="p">(</span> <span class="n">T_series</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">tau</span> <span class="o">=</span> <span class="n">tau</span> <span class="p">)</span>
+
+<span class="c1"># display the temeprature time series</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">T_series</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">t_series</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot the results</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_series</span><span class="p">,</span> <span class="n">T_series</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Years'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Global mean temperature (K)'</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Questions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>What impact do you think the time interval (<span class="math notranslate nohighlight">\(dt\)</span>) has on the accuracy of the model results?</p></li>
+<li><p>Do you think a smaller or larger time interval than one year would provide more accurate results?</p></li>
+</ol>
+</div>
+<div class="section" id="id2">
+<h2>Coding Exercises<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Using a for loop, run the model for 200 years with two different three intervals (<span class="math notranslate nohighlight">\(dt\)</span>) of a half year, 1 year and 5 years and plot the results.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># # one year expressed in seconds</span>
+<span class="c1"># one_yr = 60. * 60. * 24. * 365.</span>
+
+<span class="c1"># # legend labels</span>
+<span class="c1"># labels = ['dt = half-year','dt = one year','dt = five years']</span>
+
+<span class="c1"># # define the number of timesteps (years) to run the model</span>
+<span class="c1"># numtsteps = np.array([10,5,1])*3</span>
+
+<span class="c1">#  # for converting number of seconds in a year</span>
+<span class="c1"># sec_2_yr = 3.154e7</span>
+
+<span class="c1"># # loop through each choice of time step</span>
+<span class="c1"># for dd,dt ...</span>
+
+<span class="c1">#   # define empty arrays to store the time series of temperature and the corresponding years</span>
+<span class="c1">#   T_series = np.zeros((numtsteps[dd]+1))</span>
+<span class="c1">#   t_series = np.zeros((numtsteps[dd]+1))</span>
+
+<span class="c1">#   # define the intial temperature</span>
+<span class="c1">#   T_series[0] = 288.</span>
+
+<span class="c1">#   # run the model</span>
+<span class="c1">#   for n in range(numtsteps[dd]):</span>
+<span class="c1">#       t_series[n+1] = (n+1)*dt/sec_2_yr</span>
+<span class="c1">#       T_series[n+1] = step_forward( T_series[n], alpha = alpha, tau = tau )</span>
+
+<span class="c1">#   plt.plot(t_series, T_series, label = labels[dd])</span>
+
+<span class="c1"># plt.xlabel('Years')</span>
+<span class="c1"># plt.ylabel('Global mean temperature (K)');</span>
+<span class="c1"># plt.legend()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial3_Solution_e46a8b27.py"><em>Click for solution</em></a></p>
+</div>
+</div>
+<div class="section" id="section-3-revisiting-the-climate-change-scenario-from-tutorial-2">
+<h1>Section 3 : Revisiting the Climate Change Scenario from Tutorial 2<a class="headerlink" href="#section-3-revisiting-the-climate-change-scenario-from-tutorial-2" title="Permalink to this headline">¶</a></h1>
+<p>In tutorial 2 we looked at how changing the transmissivity (<span class="math notranslate nohighlight">\(\tau\)</span>) affected the equilibrium temperature. Now we can use our time-dependent model to investigate this more fully. Reuse the model, this time setting <span class="math notranslate nohighlight">\(\tau=0.57\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define albedo</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2941</span> <span class="c1"># unitless number between 0 and 1 (calculated previously from observations in tutorial 2)</span>
+
+<span class="c1"># define transmissivity (calculated previously from observations)</span>
+<span class="n">tau</span> <span class="o">=</span> <span class="mf">0.57</span> <span class="c1"># unitless number between 0 and 1</span>
+
+<span class="c1"># define the time interval, one year expressed in seconds</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">60.</span> <span class="o">*</span> <span class="mf">60.</span> <span class="o">*</span> <span class="mf">24.</span> <span class="o">*</span> <span class="mf">365.</span>
+
+<span class="c1"># define the number of timesteps (years) to run the model</span>
+<span class="n">numtsteps</span> <span class="o">=</span> <span class="mi">15</span>
+
+<span class="c1"># for converting number of seconds in a year</span>
+<span class="n">sec_2_yr</span> <span class="o">=</span> <span class="mf">3.154e7</span>
+
+<span class="c1"># define empty arrays to store the time series of temperature and the corresponding years</span>
+<span class="n">T_series</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">numtsteps</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">t_series</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">numtsteps</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="c1"># define the intial temperature</span>
+<span class="n">T_series</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">288.</span>
+
+<span class="c1"># run the model</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numtsteps</span><span class="p">):</span>
+    <span class="n">t_series</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span><span class="o">/</span><span class="n">sec_2_yr</span>
+    <span class="n">T_series</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">step_forward</span><span class="p">(</span> <span class="n">T_series</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">tau</span> <span class="o">=</span> <span class="n">tau</span> <span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_series</span><span class="p">,</span> <span class="n">T_series</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Years'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Global mean temperature (K)'</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>Questions<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>How does the long-term temperature here compare to the value you found from tutorial 2?</p></li>
+</ol>
+</div>
+<div class="section" id="id4">
+<h2>Coding Exercises<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Run the model again keeping the original <span class="math notranslate nohighlight">\(\tau=0.6114\)</span> but now change <span class="math notranslate nohighlight">\(\alpha=0.2\)</span>.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#insert code</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial3_Solution_d6319fd3.py"><em>Click for solution</em></a></p>
+</div>
+</div>
+<script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "pangeo"
+        },
+        kernelOptions: {
+            kernelName: "pangeo",
+            path: "./tutorials/W1D5_ClimateModeling/student"
+        },
+        predefinedOutput: true
+    }
+    </script>
+<script>kernelName = 'pangeo'</script>
+</div>
+</main>
+<footer class="footer-article noprint">
+<!-- Previous / next buttons -->
+<div class="prev-next-area">
+<a class="left-prev" href="W1D5_Tutorial2.html" id="prev-link" title="previous page">
+<i class="fas fa-angle-left"></i>
+<div class="prev-next-info">
+<p class="prev-next-subtitle">previous</p>
+<p class="prev-next-title">Setup</p>
+</div>
+</a>
+<a class="right-next" href="W1D5_Tutorial4.html" id="next-link" title="next page">
+<div class="prev-next-info">
+<p class="prev-next-subtitle">next</p>
+<p class="prev-next-title">Setup</p>
+</div>
+<i class="fas fa-angle-right"></i>
+</a>
+</div>
+</footer>
+</div>
+</div>
+<div class="footer-content row">
+<footer class="col footer"><p>
+  
+    By Climatematch<br/>
+<div class="extra_footer">
+<div>
+<a href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png"/></a>
+<a href="https://opensource.org/licenses/BSD-3-Clause"><img src="https://camo.githubusercontent.com/9b9ea65d95c9ef878afa1987df65731d47681336/68747470733a2f2f696d672e736869656c64732e696f2f707970692f6c2f736561626f726e2e737667"/></a>
+The contents of this repository are shared under the <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+Software elements are additionally licensed under the <a href="https://opensource.org/licenses/BSD-3-Clause">BSD (3-Clause) License</a>.
+</div>
+</div>
+</p>
+</footer>
+</div>
+</div>
+</div>
+</div>
+<!-- Scripts loaded after <body> so the DOM is not blocked -->
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+</body>
+</html>

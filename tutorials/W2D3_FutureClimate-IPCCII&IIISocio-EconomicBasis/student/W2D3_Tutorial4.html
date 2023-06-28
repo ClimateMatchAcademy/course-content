@@ -1,0 +1,1505 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tutorial 4 - Text analysis of COP tweets — Climatematch Academy: Computational Climate Science</title>
+<!-- Loaded before other Sphinx assets -->
+<link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
+<link href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css" rel="stylesheet"/>
+<link as="font" crossorigin="" href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
+<link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/styles/sphinx-book-theme.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/togglebutton.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/copybutton.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/mystnb.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/sphinx-thebe.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/custom.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" rel="stylesheet" type="text/css"/>
+<!-- Pre-loaded scripts that we'll load fully later -->
+<link as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf" rel="preload"/>
+<script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+<script src="../../../_static/jquery.js"></script>
+<script src="../../../_static/underscore.js"></script>
+<script src="../../../_static/doctools.js"></script>
+<script src="../../../_static/togglebutton.js"></script>
+<script src="../../../_static/clipboard.min.js"></script>
+<script src="../../../_static/copybutton.js"></script>
+<script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+<script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+<script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+<script async="async" src="../../../_static/sphinx-thebe.js"></script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+<link href="../../../genindex.html" rel="index" title="Index">
+<link href="../../../search.html" rel="search" title="Search"/>
+<link href="../further_reading.html" rel="next" title="&lt;no title&gt;"/>
+<link href="W2D3_Tutorial3.html" rel="prev" title="&lt;no title&gt;"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="None" name="docsearch:language"/>
+<!-- Google Analytics -->
+</link></link></link></link></link></link></head>
+<body data-offset="60" data-spy="scroll" data-target="#bd-toc-nav">
+<!-- Checkboxes to toggle the left sidebar -->
+<input aria-label="Toggle navigation sidebar" class="sidebar-toggle" id="__navigation" name="__navigation" type="checkbox"/>
+<label class="overlay overlay-navbar" for="__navigation">
+<div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input aria-label="Toggle in-page Table of Contents" class="sidebar-toggle" id="__page-toc" name="__page-toc" type="checkbox"/>
+<label class="overlay overlay-pagetoc" for="__page-toc">
+<div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+<div class="container-fluid" id="banner"></div>
+<div class="container-xl">
+<div class="row">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+<div class="bd-sidebar__content">
+<div class="bd-sidebar__top"><div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+<h1 class="site-logo" id="site-title">Climatematch Academy: Computational Climate Science</h1>
+</a>
+</div><form action="../../../search.html" class="bd-search d-flex align-items-center" method="get">
+<i class="icon fas fa-search"></i>
+<input aria-label="Search this book..." autocomplete="off" class="form-control" id="search-input" name="q" placeholder="Search this book..." type="search"/>
+</form><nav aria-label="Main" class="bd-links" id="bd-docs-nav">
+<div class="bd-toc-item active">
+<ul class="nav bd-sidenav bd-sidenav__home-link">
+<li class="toctree-l1">
+<a class="reference internal" href="../../intro.html">
+                    Introduction
+                </a>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../TechnicalHelp/tech_intro.html">
+   Technical Help
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox">
+<label for="toctree-checkbox-1">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2 has-children">
+<a class="reference internal" href="../../TechnicalHelp/Jupyterbook.html">
+     Using jupyterbook
+    </a>
+<input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox">
+<label for="toctree-checkbox-2">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l3">
+<a class="reference internal" href="../../TechnicalHelp/Tutorial_colab.html">
+       Using Google Colab
+      </a>
+</li>
+<li class="toctree-l3">
+<a class="reference internal" href="../../TechnicalHelp/Tutorial_kaggle.html">
+       Using Kaggle
+      </a>
+</li>
+</ul>
+</input></li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../TechnicalHelp/Discord.html">
+     Using discord
+    </a>
+</li>
+</ul>
+</input></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1">
+<a class="reference internal" href="../../TechnicalHelp/Links_Policy.html">
+   Quick links and policies
+  </a>
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
+  Fundamentals
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/chapter_title.html">
+   Climate System Overview (W1D1)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox">
+<label for="toctree-checkbox-3">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.html">
+<strong>
+      Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial2.html">
+<strong>
+      Tutorial 2: Selection, Interpolation and Slicing
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial3.html">
+<strong>
+      Tutorial 3: Opening and Plotting netCDF Data
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial4.html">
+<strong>
+      Tutorial 4: Arithmetic and Aggregation Methods
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial5.html">
+<strong>
+      Tutorial 5: Xarray Data Analysis and Climatology
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial6.html">
+<strong>
+      Tutorial 6: Compute and Plot Temperature Anomalies
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial7.html">
+<strong>
+      Tutorial 7: Other Computational Tools in Xarray
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial8.html">
+<strong>
+      Tutorial 8: Masking with One Condition
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial9.html">
+<strong>
+      Tutorial 9: Masking with Multiple Conditions
+     </strong>
+</a>
+</li>
+</ul>
+</input></li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/chapter_title.html">
+   Good Research Practices (W2D2)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+<label for="toctree-checkbox-4">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial1.html">
+<strong>
+      Tutorial 1: Finding a Phenomenon and Asking a Question About It
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial2.html">
+<strong>
+      Tutorial 2: Doing a Literature Review
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial3.html">
+<strong>
+      Tutorial 3: Identifying the Basic Ingredients
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial4.html">
+<strong>
+      Tutorial 4: Formulating a Hypothesis
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial5.html">
+<strong>
+      Tutorial 5: Drafting the Analysis
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial6.html">
+<strong>
+      Tutorial 6: Implementing the Analysis
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial7.html">
+<strong>
+      Tutorial 7: Interpreting the Results
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial8.html">
+<strong>
+      Tutorial 8: Communicating Your Conclusions
+     </strong>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
+  Climate Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/chapter_title.html">
+   State of the Climate Ocean and Atmosphere Reanalysis (W1D2)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+<label for="toctree-checkbox-5">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial1.html">
+     Calculating ENSO with Xarray
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial2.html">
+     Tutorial 2: A lot of weather makes climate - exploring the ERA5 Reanalysis
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial3.html">
+     Tutorial 3: Atmospheric wind driven circulation
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial4.html">
+     Tutorial 4: Ocean wind driven circulation
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial5.html">
+     Tutorial 5: Thermohaline circulation
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial6.html">
+     Tutorial 6: Ocean heat content
+    </a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/chapter_title.html">
+   Remote Sensing Land Ocean and Atmosphere (W1D3)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+<label for="toctree-checkbox-6">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.html">
+     Video 1: What is Remote Sensing
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial3.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial4.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial5.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial6.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial7.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial8.html">
+     Figure settings
+    </a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W1D4_Paleoclimate/chapter_title.html">
+   Paleoclimate (W1D4)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+<label for="toctree-checkbox-7">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial1.html">
+<strong>
+      Tutorial 1: Paleoclimate Proxies
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial2.html">
+<strong>
+      Tutorial 2: Reconstructing Past Changes in Ocean Climate
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial3.html">
+<strong>
+      Tutorial 3: Reconstructing Past Changes in Terrestrial Climate
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial4.html">
+<strong>
+      Tutorial 4: Reconstructing Past Changes in Atmospheric Climate
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial5.html">
+<strong>
+      Tutorial 5: Paleoclimate Data Analysis Tools
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial6.html">
+<strong>
+      Tutorial 6: Spectral Analysis of Paleoclimate Data
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial7.html">
+<strong>
+      Tutorial 7: Assessing Climate Forcings
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial8.html">
+<strong>
+      Tutorial 8: Paleoclimate Models
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial9.html">
+<strong>
+      Tutorial 9: Paleoclimate Reanalysis Products
+     </strong>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
+  Climate Future
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W1D5_ClimateModeling/chapter_title.html">
+   Climate Modeling (W1D5)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+<label for="toctree-checkbox-8">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial1.html">
+     Setup
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial2.html">
+     Setup
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial3.html">
+     Setup
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial4.html">
+     Setup
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial5.html">
+<strong>
+      Tutorial 5: Radiative Equilibrium
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial6.html">
+<strong>
+      Tutorial 6: Radiative Convective Equilibrium
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial7.html">
+<strong>
+      Tutorial 7: Introduction to Earth System Models
+     </strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/chapter_title.html">
+   Future Climate - IPCC I Physical Basis (W2D1)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+<label for="toctree-checkbox-9">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial1.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial2.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial3.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial4.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial5.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial6.html">
+     Figure settings
+    </a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children">
+<a class="reference internal" href="../chapter_title.html">
+   Future Climate - IPCC II &amp; III Socio-Economic Basis (W2D3)
+  </a>
+<input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+<label for="toctree-checkbox-10">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul class="current">
+<li class="toctree-l2">
+<a class="reference internal" href="W2D3_Tutorial1.html">
+     Tutorial 1 - Limits to growth in World3: A toy world model of diminishing non-renewable resources
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="W2D3_Tutorial2.html">
+     Tutorial 2 - A first look at integrated assessment models
+    </a>
+</li>
+<li class="toctree-l2 current active">
+<a class="current reference internal" href="#">
+     Tutorial 4 - Text analysis of COP tweets
+    </a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
+  Climate Response
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/chapter_title.html">
+   Climate Response - Adaptation Impact (W2D5)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+<label for="toctree-checkbox-11">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial1.html">
+<strong>
+      Tutorial 1: Linear and Logistic Regression
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.html">
+     Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.html">
+     Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial4.html">
+     Tutorial 9:  Exploring other applications
+    </a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
+  Project Booklet
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1">
+<a class="reference internal" href="../../../projects/README.html">
+   Introduction
+  </a>
+</li>
+<li class="toctree-l1">
+<a class="reference internal" href="../../../projects/docs/continuing_your_project_after_the_course.html">
+   Climatematch Impact Scholars program
+  </a>
+</li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../../projects/docs/project_guidance.html">
+   Daily guide for projects
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+<label for="toctree-checkbox-12">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.html">
+<strong>
+      The impact of ENSO on precipitation and temperature
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Ocean_acidification.html">
+<strong>
+      Ocean acidification
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Wildfires_and_burnt_areas.html">
+<strong>
+      Monitoring and mapping wildfires using satellite data
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Regional_precipitation_variability.html">
+<strong>
+      Regional precipitation variability and extreme events
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
+<strong>
+      Heatwaves: Assessing the dynamic interactions of the atmosphere and land
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Surface_albedo_and_land_use.html">
+<strong>
+      Change in Earth’s albedo and its dependence on land cover changes in the past 20 years
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Sea_level_rise.html">
+<strong>
+      Sea level rise
+     </strong>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+<div class="bd-sidebar__bottom">
+<!-- To handle the deprecated key -->
+<div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+</div>
+</div>
+<div id="rtd-footer-container"></div>
+</div>
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+<div class="header-article row sticky-top noprint">
+<div class="col py-1 d-flex header-article-main">
+<div class="header-article__left">
+<label class="headerbtn" data-placement="right" data-toggle="tooltip" for="__navigation" title="Toggle navigation">
+<span class="headerbtn__icon-container">
+<i class="fas fa-bars"></i>
+</span>
+</label>
+</div>
+<div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+<button aria-label="Launch interactive content" class="headerbtn menu-dropdown__trigger">
+<i class="fas fa-rocket"></i>
+</button>
+<div class="menu-dropdown__content">
+<ul>
+</ul>
+</div>
+</div>
+<button class="headerbtn" data-placement="bottom" data-toggle="tooltip" onclick="toggleFullScreen()" title="Fullscreen mode">
+<span class="headerbtn__icon-container">
+<i class="fas fa-expand"></i>
+</span>
+</button>
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+<button aria-label="Source repositories" class="headerbtn menu-dropdown__trigger">
+<i class="fab fa-github"></i>
+</button>
+<div class="menu-dropdown__content">
+<ul>
+<li>
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://github.com/ClimatematchAcademy/course-content" title="Source repository">
+<span class="headerbtn__icon-container">
+<i class="fab fa-github"></i>
+</span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+</li>
+<li>
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://github.com/ClimatematchAcademy/course-content/issues/new?title=Issue%20on%20page%20%2Ftutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/student/W2D3_Tutorial4.html&amp;body=Your%20issue%20content%20here." title="Open an issue">
+<span class="headerbtn__icon-container">
+<i class="fas fa-lightbulb"></i>
+</span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="menu-dropdown menu-dropdown-download-buttons">
+<button aria-label="Download this page" class="headerbtn menu-dropdown__trigger">
+<i class="fas fa-download"></i>
+</button>
+<div class="menu-dropdown__content">
+<ul>
+<li>
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="../../../_sources/tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/student/W2D3_Tutorial4.ipynb" title="Download source file">
+<span class="headerbtn__icon-container">
+<i class="fas fa-file"></i>
+</span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+</li>
+<li>
+<button class="headerbtn" data-placement="left" data-toggle="tooltip" onclick="printPdf(this)" title="Print to PDF">
+<span class="headerbtn__icon-container">
+<i class="fas fa-file-pdf"></i>
+</span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+</li>
+</ul>
+</div>
+</div>
+<label class="headerbtn headerbtn-page-toc" for="__page-toc">
+<span class="headerbtn__icon-container">
+<i class="fas fa-list"></i>
+</span>
+</label>
+</div>
+</div>
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+<div class="tocsection onthispage pt-5 pb-3">
+<i class="fas fa-list"></i> Contents
+    </div>
+<nav aria-label="Page" id="bd-toc-nav">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#">
+   Tutorial 4 - Text analysis of COP tweets
+  </a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-objectives">
+   Tutorial Objectives
+  </a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-0-data-preprocessing">
+     Section 0: Data preprocessing
+    </a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-load-and-inspect-data">
+   Section 1: load and inspect data
+  </a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-word-set-prevelance">
+     Section 2: Word set prevelance
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-3-sentiment-analysis">
+     Section 3: Sentiment analysis
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-4-word-clouds">
+     Section 4: word clouds
+    </a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="article row">
+<div class="col pl-md-3 pl-lg-5 content-container">
+<!-- Table of contents that is only displayed when printing the page -->
+<div class="onlyprint" id="jb-print-docs-body">
+<h1>Tutorial 4 - Text analysis of COP tweets</h1>
+<!-- Table of contents -->
+<div id="print-main-content">
+<div id="jb-print-toc">
+<div>
+<h2> Contents </h2>
+</div>
+<nav aria-label="Page">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#">
+   Tutorial 4 - Text analysis of COP tweets
+  </a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-objectives">
+   Tutorial Objectives
+  </a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-0-data-preprocessing">
+     Section 0: Data preprocessing
+    </a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-load-and-inspect-data">
+   Section 1: load and inspect data
+  </a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-word-set-prevelance">
+     Section 2: Word set prevelance
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-3-sentiment-analysis">
+     Section 3: Sentiment analysis
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-4-word-clouds">
+     Section 4: word clouds
+    </a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<main id="main-content" role="main">
+<div>
+<div class="section" id="tutorial-4-text-analysis-of-cop-tweets">
+<h1>Tutorial 4 - Text analysis of COP tweets<a class="headerlink" href="#tutorial-4-text-analysis-of-cop-tweets" title="Permalink to this headline">¶</a></h1>
+<p>Week 2, Day 3: IPCC Socio-economic Basis</p>
+<p>By Neuromatch Academy</p>
+<p>Content creators: Maximilian Puelma Touzel</p>
+<p>Content reviewers: Name Surname, Name Surname</p>
+<p>Content editors: Name Surname, Name Surname</p>
+<p>Production editors: Name Surname, Name Surname</p>
+<p>Our 2023 Sponsors</p>
+</div>
+<hr class="docutils"/>
+<div class="section" id="tutorial-objectives">
+<h1>Tutorial Objectives<a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">¶</a></h1>
+<p>Learn to assess public sentiment about climate change and how it is changing by analyzing changes in word use on social media. An auxillary objective is to learn how to load and analyze large amounts of text</p>
+</div>
+<hr class="docutils"/>
+<div class="section" id="setup">
+<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
+<p>Import libraries</p>
+<div class="cell tag_colab docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># !pip install afinn</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">pl</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">from</span> <span class="nn">wordcloud</span> <span class="kn">import</span> <span class="n">WordCloud</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
+<span class="c1">#notebook config</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Math</span>
+<span class="kn">import</span> <span class="nn">glob</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">nltk</span>
+<span class="kn">from</span> <span class="nn">nltk.stem.porter</span> <span class="kn">import</span> <span class="n">PorterStemmer</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">from</span> <span class="nn">mpl_toolkits.axes_grid1.inset_locator</span> <span class="kn">import</span> <span class="n">inset_axes</span>
+<span class="kn">import</span> <span class="nn">urllib3</span>
+<span class="kn">import</span> <span class="nn">urllib.request</span>  <span class="c1"># the lib that handles the url stuff</span>
+<span class="kn">from</span> <span class="nn">afinn</span> <span class="kn">import</span> <span class="n">Afinn</span>
+<span class="kn">import</span> <span class="nn">pooch</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>figure settings</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">"ticks"</span><span class="p">,</span> <span class="p">{</span><span class="s1">'axes.grid'</span> <span class="p">:</span> <span class="kc">False</span><span class="p">})</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s2">"&lt;style&gt;.container { width:100% !important; }&lt;/style&gt;"</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="section-0-data-preprocessing">
+<h2>Section 0: Data preprocessing<a class="headerlink" href="#section-0-data-preprocessing" title="Permalink to this headline">¶</a></h2>
+<p>We have done the following preprocessing steps for you (just read along; no need to run anything in this section):</p>
+<p>Twitter ids of tweets mentioning COPx (x=20-26) used in Falkenberg et al. (2022) were placed by the authors in an osf archive: https://osf.io/nu75j. Download the 7 .csv files (one for each COP) here: https://osf.io/download/pr29x/</p>
+<p>The program <code class="docutils literal notranslate"><span class="pre">twarc2</span></code> interfaces with the Twitter API. It can be used to hydrate the tweets (i.e. download the full tweet and metadata using the provided tweet id). Similar to github you have to open a Twitter API account and set up twarc on your local machine by giving it your account authentication keys. The command to rehyrdate a set of tweets from their ids is simply <code class="docutils literal notranslate"><span class="pre">twarc2</span> <span class="pre">hydrate</span> <span class="pre">source_file.txt</span> <span class="pre">store_file.jsonl</span></code>, where each line of <code class="docutils literal notranslate"><span class="pre">source_file.txt</span></code> is a Twitter id and <code class="docutils literal notranslate"><span class="pre">store_file.jsonl</span></code> is where the hydrated tweets are stored.</p>
+<ul class="simple">
+<li><p>First format the downloaded ids and split them into seperate files (<em>batches</em>) to make hydration calls to the API more time manageable (hours versus days - this is slow because of an API-imposed limit of 100 tweets/min.).</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dir_name='Falkenberg2022_data/'</span>
+<span class="c1"># if not os.path.exists(dir_name):</span>
+<span class="c1">#     os.mkdir(dir_name)</span>
+<span class="c1"># batch_size = int(1e5)</span>
+<span class="c1"># download_pathname=''#~/projects/ClimateMatch/SocioEconDay/Polarization/COP_Twitter_IDs/</span>
+<span class="c1"># for copid in range(20,27):</span>
+<span class="c1">#     df_tweetids=pd.read_csv(download_pathname+'tweet_ids_cop'+str(copid)+'.csv')</span>
+<span class="c1">#     for batch_id,break_id in enumerate(range(0,len(df_tweetids),batch_size)):</span>
+<span class="c1">#         file_name="tweetids_COP"+str(copid)+"_b"+str(batch_id)+".txt"</span>
+<span class="c1">#         df_tweetids.loc[break_id:break_id+batch_size,'id'].to_csv(dir_name+file_name,index=False,header=False)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Make the hydration calls for a COP (this took 4 days to download 50GB of data for COP26).</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># copid=26</span>
+<span class="c1"># filename_list = glob.glob('Falkenberg2022_data/'+"tweetids_COP"+str(copid)+"*")</span>
+<span class="c1"># dir_name='tweet_data/'</span>
+<span class="c1"># if not os.path.exists(dir_name):</span>
+<span class="c1">#     os.mkdir(dir_name)</span>
+<span class="c1"># file_name="tweetids_COP"+str(copid)+"_b"+str(batch_id)+".txt"</span>
+<span class="c1"># for itt,tweet_id_batch_filename in enumerate(filename_list):</span>
+<span class="c1">#     strvars=tweet_id_batch_filename.split('/')[1].split('.')[0].split('_')</span>
+<span class="c1">#     tweet_store_filename = dir_name+'tweets_'+strvars[1]+'_'+strvars[2]+'.json'</span>
+<span class="c1">#     if not os.path.exists(tweet_store_filename):</span>
+<span class="c1">#         st=time.time()</span>
+<span class="c1">#         os.system('twarc2 hydrate '+tweet_id_batch_filename+' '+tweet_store_filename)</span>
+<span class="c1">#         print(str(itt)+' '+str(strvars[2])+" "+str(time.time()-st))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Load data</p></li>
+</ul>
+<p>Inspect and pick a chunk size. Note, by default there are 100 tweets per line in the .json files returned by the API. Given we asked for 1e5 tweets/batch, there should be 1e3 lines in these files.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># copid=26</span>
+<span class="c1"># batch_id = 0</span>
+<span class="c1"># tweet_store_filename = 'tweet_data/tweets_COP'+str(copid)+'_b'+str(batch_id)+'.json'</span>
+<span class="c1"># num_lines = sum(1 for line in open(tweet_store_filename))</span>
+<span class="c1"># num_lines</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we read in the data, iterating over chunks in each batch and only store the needed data in a dataframe (takes 10-20 minutes to run). Let’s look at when the tweets were posted, what language they are in, and the tweet text:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># selected_columns = ['created_at','lang','text']</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># st=time.time()</span>
+<span class="c1"># filename_list = glob.glob('tweet_data/'+"tweets_COP"+str(copid)+"*")</span>
+<span class="c1"># df=[]</span>
+<span class="c1"># for tweet_batch_filename in filename_list[:-1]:</span>
+<span class="c1">#     reader = pd.read_json(tweet_batch_filename, lines=True,chunksize=1)</span>
+<span class="c1"># #     df.append(pd.DataFrame([item[selected_columns] for sublist in reader.data.values.tolist()[:-1] for item in sublist] )[selected_columns])</span>
+<span class="c1">#     dfs=[]</span>
+<span class="c1">#     for chunk in reader:</span>
+<span class="c1">#         if 'data' in chunk.columns:</span>
+<span class="c1">#             dfs.append(pd.DataFrame(list(chunk.data.values)[0])[selected_columns])</span>
+<span class="c1">#     df.append(pd.concat(dfs,ignore_index=True))</span>
+<span class="c1"># #     df.append(pd.DataFrame(list(reader.data)[0])[selected_columns])</span>
+<span class="c1"># df=pd.concat(df,ignore_index=True)</span>
+<span class="c1"># df.created_at=pd.to_datetime(df.created_at)</span>
+<span class="c1"># print(str(len(df))+' tweets took '+str(time.time()-st))</span>
+<span class="c1"># df.head()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>finally store the data in the efficiently compressed feather format</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># df.to_feather('stored_tweets')</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>(run notebook from here)</p>
+</div>
+</div>
+<div class="section" id="section-1-load-and-inspect-data">
+<h1>Section 1: load and inspect data<a class="headerlink" href="#section-1-load-and-inspect-data" title="Permalink to this headline">¶</a></h1>
+<p>Load the preprocessed data</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s2">"https://osf.io/8p52x/download"</span><span class="p">,</span><span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_feather</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="c1">#takes a couple minutes to download</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s check the timing of the tweets relative to the COP26 event to see how the tweets are spread over time.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">total_tweetCounts</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">created_at</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">created_at</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">date</span><span class="p">))</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">'counts'</span><span class="p">)</span>
+<span class="n">total_tweetCounts</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">'created_at'</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">'counts'</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span><span class="n">style</span><span class="o">=</span><span class="s1">'.-'</span><span class="p">)</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span><span class="n">ha</span><span class="o">=</span><span class="s1">'right'</span><span class="p">);</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s1">'log'</span><span class="p">)</span>
+<span class="n">COPdates</span><span class="o">=</span><span class="p">[</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2021</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">31</span><span class="p">),</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2021</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">)]</span> <span class="c1">#shade the duration of the COP26 to guide the eye</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="o">*</span><span class="n">COPdates</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">);</span> <span class="c1">#gray region</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Who is tweeting about this COP? Look at how many tweets were posted in various languages:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">counts</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The stored language name of the tweet is stored as a code name. Pull a language code dictionary from the web and use it to translate the language code to the language name.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">target_url</span><span class="o">=</span><span class="s1">'https://gist.githubusercontent.com/carlopires/1262033/raw/c52ef0f7ce4f58108619508308372edd8d0bd518/gistfile1.txt'</span>
+<span class="n">exec</span><span class="p">(</span><span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">target_url</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+<span class="n">lang_code_dict</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">iso_639_choices</span><span class="p">)</span>
+<span class="n">counts</span><span class="o">=</span><span class="n">counts</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="s1">'index'</span><span class="p">:</span><span class="n">lang_code_dict</span><span class="p">})</span>
+<span class="n">counts</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><em>Exercise</em>: find your native language code in the dictionary and use it to select the COP tweets that were written in your language!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lang_code_dict</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Select tweets of a given language</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">language_code</span> <span class="o">=</span> <span class="s1">'en'</span>
+<span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">lang</span><span class="o">==</span><span class="n">language_code</span><span class="p">,:]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_rows</span><span class="o">=</span><span class="mi">100</span> <span class="c1">#see up to 100 entries</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_colwidth</span><span class="o">=</span><span class="mi">250</span> <span class="c1">#widen how much text is presented of each tweet</span>
+<span class="n">df</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="section-2-word-set-prevelance">
+<h2>Section 2: Word set prevelance<a class="headerlink" href="#section-2-word-set-prevelance" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.nature.com/articles/s41558-022-01533-z">Falkenberg et al.</a> investigated the hypothesis that <em>public sentiment</em> around the COP conferences has increasingly framed them as hypocritical (“political hypocrisy as a topic of cross-ideological appeal”). The authors operationalized hypocrisy language as any tweet containing any of the following words:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected_words</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'hypocrisy'</span><span class="p">,</span> <span class="s1">'hypocrite'</span><span class="p">,</span> <span class="s1">'hypocritical'</span><span class="p">,</span> <span class="s1">'greenwash'</span><span class="p">,</span><span class="s1">'green wash'</span><span class="p">,</span> <span class="s1">'blah'</span><span class="p">]</span> <span class="c1">#the last 3 words don't add much. Greta Thurnberg's 'blah, blah blah' speech on Sept. 28th 2021.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The authors then searched for these words within a distinct dataset across all COP conferences (that they did not make openly accessible; result: https://www.nature.com/articles/s41558-022-01527-x/figures/7). The results show that hypocrisy has been mentioned more.</p>
+<p>How might this matching procedure be limited in its ability to capture this sentiment?</p>
+<p>Here, we will instead focus on their acessible COP26 dataset and assess the nature of comments about specific topics, like political hypocrisy.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selectwords_detector</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">'\b(?:</span><span class="si">{0}</span><span class="s1">)\b'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">'|'</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">selected_words</span><span class="p">)))</span> <span class="c1">#compile for speed!</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'select_talk'</span><span class="p">]</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">selectwords_detector</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">))</span> <span class="c1"># look through whole dataset, flagging tweets with select_talk (computes in under a minute)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s pull these tweets out and look at thier occurence statistics relative to those of the whole dataset computed above</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected_tweets</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df</span><span class="o">.</span><span class="n">select_talk</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),:]</span>
+<span class="n">selected_tweet_counts</span><span class="o">=</span><span class="n">selected_tweets</span><span class="o">.</span><span class="n">created_at</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">selected_tweets</span><span class="o">.</span><span class="n">created_at</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">date</span><span class="p">))</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">'counts'</span><span class="p">)</span>
+<span class="n">selected_tweet_fraction</span><span class="o">=</span><span class="n">selected_tweet_counts</span><span class="o">/</span><span class="n">total_tweetCounts</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected_tweet_fraction</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">'created_at'</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">'counts'</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span><span class="n">style</span><span class="o">=</span><span class="p">[</span><span class="s1">'.-'</span><span class="p">])</span> <span class="c1">#this doesn't</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span><span class="n">ha</span><span class="o">=</span><span class="s1">'right'</span><span class="p">);</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="o">*</span><span class="n">COPdates</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span> <span class="c1">#gray region</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'fraction talking about hypocrisy'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note these are normalized so larger fractions closer to the COP26 dates correspond to significantly more absolute number of tweets.</p>
+<p>Let’s look at what these tweets say. Take 100 randomly sampled.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected_tweets</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><em>Exercise</em>: Pick another topic, propose a list of topic words, and run the same analysis. (Example topic: “renewable technology”)</p>
+</div>
+<div class="section" id="section-3-sentiment-analysis">
+<h2>Section 3: Sentiment analysis<a class="headerlink" href="#section-3-sentiment-analysis" title="Permalink to this headline">¶</a></h2>
+<p>The hypocrisy displayed above seems charged against international organizations central to globalization (e.g. G7). Let’s assess that hypothesis by analyzing the sentiment of the subset of these hypocrisy tweets that mention these institutions.</p>
+<p>(part of the computation flow in what follows was taken from Caren Neal’s tutorial: https://nealcaren.org/lessons/wordlists/)</p>
+<p>We’ll match words in tweets to sentiment scores using a dictionary method. The particular dictionary we will use is compiled in the AFINN package. Let’s initialize it for the language we’ve chosen</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">afinn</span> <span class="o">=</span> <span class="n">Afinn</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="n">language_code</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Load the dictionary</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">afinn_wl_url</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'https://raw.githubusercontent.com'</span>
+                <span class="s1">'/fnielsen/afinn/master/afinn/data/AFINN-111.txt'</span><span class="p">)</span>
+<span class="n">afinn_wl_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">afinn_wl_url</span><span class="p">,</span>
+                          <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># no column names</span>
+                          <span class="n">sep</span><span class="o">=</span><span class="s1">'</span><span class="se">\t</span><span class="s1">'</span><span class="p">,</span>  <span class="c1"># tab sepeated</span>
+                          <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">'term'</span><span class="p">,</span> <span class="s1">'value'</span><span class="p">])</span> <span class="c1">#new column names</span>
+<span class="n">seed</span> <span class="o">=</span> <span class="mi">808</span> <span class="c1"># seed for sample so results are stable</span>
+<span class="n">afinn_wl_df</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="n">seed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>let’s look at the distribution of scores over all words in the dictionary</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">afinn_wl_df</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">()</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'Finn score'</span><span class="p">)</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'dictionary counts'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Before focussing on sentiments about institutions within the hypocrisy tweets, let’s look at the hypocrisy tweets in comparison to non-hypocrisy tweets. This will take some more intensive computation, so let’s only perform it on a 1% subsample of the dataset</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">smalldf</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">smalldf</span><span class="p">[</span><span class="s1">'afinn_score'</span><span class="p">]</span> <span class="o">=</span> <span class="n">smalldf</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">afinn</span><span class="o">.</span><span class="n">score</span><span class="p">)</span> <span class="c1">#intensive computation! We have reduced the data set to frac=0.01 it's size so it takes ~1 min. (the full dataset takes 1hrs 50 min.)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">smalldf</span><span class="p">[</span><span class="s1">'afinn_score'</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The score is a sum over all dictionary words in the tweet. A rough approach to making scores comparable across tweets of different length is convert to a per-word score by normalizing each tweet’s score by its word count (note this is not a per-dictionary word score and so this rough approach introduces a bias dependent on how much of each tweet is formed by dictionary words). Let’s call this normalized score <em>afinn_adjusted</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">word_count</span><span class="p">(</span><span class="n">text_string</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">'''Calculate the number of words in a string'''</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">text_string</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+<span class="n">smalldf</span><span class="p">[</span><span class="s1">'word_count'</span><span class="p">]</span><span class="o">=</span><span class="n">smalldf</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">word_count</span><span class="p">)</span>
+<span class="n">smalldf</span><span class="p">[</span><span class="s1">'afinn_adjusted'</span><span class="p">]</span> <span class="o">=</span> <span class="n">smalldf</span><span class="p">[</span><span class="s1">'afinn_score'</span><span class="p">]</span> <span class="o">/</span> <span class="n">smalldf</span><span class="p">[</span><span class="s1">'word_count'</span><span class="p">]</span> <span class="c1">#note this isn't a percentage</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">smalldf</span><span class="p">[</span><span class="s1">'afinn_adjusted'</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let’s look at the sentiment of tweets with hypocrisy words versus those without those words. We’ll first plot for some other possibly negative words for reference.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">sel_words</span> <span class="ow">in</span> <span class="p">[[</span><span class="s1">'Fossil'</span><span class="p">],[</span><span class="s1">'G7'</span><span class="p">],[</span><span class="s1">'Boris'</span><span class="p">],[</span><span class="s1">'Davos'</span><span class="p">],</span><span class="n">selected_words</span><span class="p">]:</span>
+    <span class="n">sel_name</span> <span class="o">=</span> <span class="n">sel_words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sel_words</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span> <span class="k">else</span> <span class="s1">'select_talk'</span>
+    <span class="n">selectwords_detector</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">'\b(?:</span><span class="si">{0}</span><span class="s1">)\b'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">'|'</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sel_words</span><span class="p">)))</span> <span class="c1">#compile for speed!</span>
+    <span class="n">smalldf</span><span class="p">[</span><span class="n">sel_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">smalldf</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">selectwords_detector</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span> <span class="c1">#flag if tweet has word(s)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>make cumulative distribtion plots of score distributions</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">sel_words</span> <span class="ow">in</span> <span class="p">[[</span><span class="s1">'Fossil'</span><span class="p">],[</span><span class="s1">'G7'</span><span class="p">],[</span><span class="s1">'Boris'</span><span class="p">],[</span><span class="s1">'Davos'</span><span class="p">],</span><span class="n">selected_words</span><span class="p">]:</span>
+    <span class="n">sel_name</span> <span class="o">=</span><span class="n">sel_words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sel_words</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span> <span class="k">else</span> <span class="s1">'select_talk'</span>
+    <span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'adjusted Finn score'</span><span class="p">)</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'probabilty'</span><span class="p">)</span>
+    <span class="n">counts</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">smalldf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">smalldf</span><span class="p">[</span><span class="n">sel_name</span><span class="p">],</span><span class="s1">'afinn_adjusted'</span><span class="p">],</span><span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">101</span><span class="p">),</span><span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">bins</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">counts</span><span class="p">),</span><span class="n">color</span><span class="o">=</span><span class="s1">'C0'</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="n">sel_name</span><span class="o">+</span><span class="s1">' tweets'</span><span class="p">)</span>
+    <span class="n">counts</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">smalldf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">smalldf</span><span class="p">[</span><span class="n">sel_name</span><span class="p">],</span><span class="s1">'afinn_adjusted'</span><span class="p">],</span><span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">101</span><span class="p">),</span><span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">bins</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">counts</span><span class="p">),</span><span class="n">color</span><span class="o">=</span><span class="s1">'C1'</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">'non-'</span><span class="o">+</span><span class="n">sel_name</span><span class="o">+</span><span class="s1">' tweets'</span><span class="p">)</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="mf">0.7</span><span class="p">]</span><span class="o">*</span><span class="mi">3</span><span class="p">,</span><span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'cumulative Finn score distribution for '</span><span class="o">+</span><span class="n">sel_name</span><span class="o">+</span> <span class="s1">' occurence'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Observe that tweets containing the selected <em>hypocrisy</em>-associated words set are scored much more negative than all of these. So what is the content of these selected tweets?</p>
+</div>
+<div class="section" id="section-4-word-clouds">
+<h2>Section 4: word clouds<a class="headerlink" href="#section-4-word-clouds" title="Permalink to this headline">¶</a></h2>
+<p>To analyze word usage, let’s first vectorize the text data. Vectorization here means giving each word in the vocabulary an index and transforming each word sequence in each to its vector representation whose sequence of elements are the sequence of the corresponding word indices (e.g. the response <code class="docutils literal notranslate"><span class="pre">['I','love','icecream']</span></code> maps to something like <code class="docutils literal notranslate"><span class="pre">[34823,5937,79345]</span></code>).</p>
+<p>We’ll use and compare two methods. Let’s write down what they compute by denoting the index, <span class="math notranslate nohighlight">\(d\)</span>, over the <span class="math notranslate nohighlight">\(D\)</span> documents and the index, <span class="math notranslate nohighlight">\(w\)</span>, over the <span class="math notranslate nohighlight">\(W\)</span> words in the vocabulary (the list of all the words found in all the tweets, which we’ll call documents):</p>
+<ul class="simple">
+<li><p>term frequency, <span class="math notranslate nohighlight">\(\mathrm{tf}(w,d)\)</span>. The frequency of a word <span class="math notranslate nohighlight">\(w\)</span> in a document <span class="math notranslate nohighlight">\(d\)</span> is $<span class="math notranslate nohighlight">\(\mathrm{tf}(w,d):=\frac{n(w,d)}{n(d)},\)</span><span class="math notranslate nohighlight">\( where \)</span>n(w,d)<span class="math notranslate nohighlight">\( is the number of times term \)</span>w<span class="math notranslate nohighlight">\( is in document \)</span>d<span class="math notranslate nohighlight">\( and \)</span>n(d)=\sum_{w=1}^W n(w,d)<span class="math notranslate nohighlight">\( is the total number of words in document \)</span>d<span class="math notranslate nohighlight">\(. The term frequency over all the documents is then, \)</span><span class="math notranslate nohighlight">\(\mathrm{tf}(w):=\frac{\sum_{d=1}^D n(d)\mathrm{tf}(w,d)}{N},\)</span><span class="math notranslate nohighlight">\( where the denominator \)</span>N=\sum_{d=1}^D n(d)$ is just the total word count across all documents.</p></li>
+<li><p>term frequency-inverse document frequency, <span class="math notranslate nohighlight">\(\mathrm{Tfidf}(w,d):=\mathrm{tf}(w,d)\mathrm{idf}(w)\)</span>. Here, $<span class="math notranslate nohighlight">\(\mathrm{idf}(w)=\frac{\log(D+1)}{\log(n(w)+1)+1},\)</span><span class="math notranslate nohighlight">\( where \)</span>n(w)<span class="math notranslate nohighlight">\( is the number of documents in which term \)</span>t<span class="math notranslate nohighlight">\( appears, i.e. \)</span>n(w,d)&gt;0<span class="math notranslate nohighlight">\(. Idf is like an inverse document frequency. The `sklearn` package then uses \)</span><span class="math notranslate nohighlight">\(\mathrm{Tfidf}(w)=\frac{1}{D}\sum_{d=1}^D \frac{\mathrm{Tfidf}(w,d)}{||\mathrm{Tfidf}(\cdot,d)||},\)</span><span class="math notranslate nohighlight">\( where \)</span>||\vec{x}||=\sqrt{\sum_{i=1}^Nx^2_i}$ is the Euclidean norm.</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(\mathrm{Tfidf}\)</span> aims to add more discriminability to frequency as a word relevance metric by downweighting words that appear in many documents since these common words are less discriminative.</p>
+<p>Let’s run both these methods and store the vectorized data in a dictionary</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vectypes</span><span class="o">=</span><span class="p">[</span><span class="s1">'counts'</span><span class="p">,</span><span class="s1">'Tfidf'</span><span class="p">]</span>
+<span class="k">def</span> <span class="nf">vectorize</span><span class="p">(</span><span class="n">doc_data</span><span class="p">,</span><span class="n">ngram_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="n">remove_words</span><span class="o">=</span><span class="p">[],</span><span class="n">min_doc_freq</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+
+    <span class="n">vectorized_data_dict</span><span class="o">=</span><span class="p">{}</span>
+    <span class="k">for</span> <span class="n">vectorizer_type</span> <span class="ow">in</span> <span class="n">vectypes</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">vectorizer_type</span><span class="o">==</span><span class="s1">'counts'</span><span class="p">:</span>
+            <span class="n">vectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">(</span><span class="n">stop_words</span><span class="o">=</span><span class="n">remove_words</span><span class="p">,</span><span class="n">min_df</span><span class="o">=</span><span class="n">min_doc_freq</span><span class="p">,</span><span class="n">ngram_range</span><span class="o">=</span><span class="n">ngram_range</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">vectorizer_type</span><span class="o">==</span><span class="s1">'Tfidf'</span><span class="p">:</span>
+            <span class="n">vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">stop_words</span><span class="o">=</span><span class="n">remove_words</span><span class="p">,</span><span class="n">min_df</span><span class="o">=</span><span class="n">min_doc_freq</span><span class="p">,</span><span class="n">ngram_range</span><span class="o">=</span><span class="n">ngram_range</span><span class="p">)</span>
+
+        <span class="n">vectorized_doc_list</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">todense</span><span class="p">()</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+        <span class="n">feature_names</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span> <span class="c1"># or  get_feature_names() depending on scikit learn version</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'vocabulary size:'</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">feature_names</span><span class="p">)))</span>
+        <span class="n">wdf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">vectorized_doc_list</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">feature_names</span><span class="p">)</span>
+        <span class="n">vectorized_data_dict</span><span class="p">[</span><span class="n">vectorizer_type</span><span class="p">]</span><span class="o">=</span><span class="n">wdf</span>
+    <span class="k">return</span> <span class="n">vectorized_data_dict</span><span class="p">,</span><span class="n">feature_names</span>
+
+<span class="k">def</span> <span class="nf">plot_wordcloud_and_freqdist</span><span class="p">(</span><span class="n">wdf</span><span class="p">,</span><span class="n">title_str</span><span class="p">,</span><span class="n">feature_names</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">'''</span>
+<span class="sd">    Plots a word cloud</span>
+<span class="sd">    '''</span>
+    <span class="n">pixel_size</span><span class="o">=</span><span class="mi">600</span>
+    <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">ogrid</span><span class="p">[:</span><span class="n">pixel_size</span><span class="p">,:</span><span class="n">pixel_size</span><span class="p">]</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span><span class="n">pixel_size</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">pixel_size</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">&gt;</span><span class="p">(</span><span class="n">pixel_size</span><span class="o">/</span><span class="mi">2</span><span class="o">-</span><span class="mi">20</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">mask</span><span class="o">=</span><span class="mi">255</span><span class="o">*</span><span class="n">mask</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">wc</span><span class="o">=</span><span class="n">WordCloud</span><span class="p">(</span><span class="n">background_color</span><span class="o">=</span><span class="s2">"rgba(255, 255, 255, 0)"</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">"RGBA"</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">,</span> <span class="n">max_words</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span><span class="c1">#,relative_scaling=1)</span>
+    <span class="n">wordfreqs</span><span class="o">=</span><span class="n">wdf</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">num_show</span><span class="o">=</span><span class="mi">50</span>
+    <span class="n">sorted_ids</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">wordfreqs</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="n">num_show</span><span class="p">),</span><span class="n">height</span><span class="o">=</span><span class="n">wordfreqs</span><span class="p">[</span><span class="n">sorted_ids</span><span class="p">][:</span><span class="n">num_show</span><span class="p">])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">num_show</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">feature_names</span><span class="p">[</span><span class="n">sorted_ids</span><span class="p">][:</span><span class="n">num_show</span><span class="p">],</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span><span class="n">ha</span><span class="o">=</span><span class="s1">'right'</span><span class="p">);</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'total frequency'</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title_str</span><span class="o">+</span><span class="s1">' vectorizer'</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="o">*</span><span class="n">wordfreqs</span><span class="p">[</span><span class="n">sorted_ids</span><span class="p">][</span><span class="nb">int</span><span class="p">(</span><span class="n">num_show</span><span class="o">/</span><span class="mi">2</span><span class="p">)])</span>
+
+    <span class="n">ax_wc</span> <span class="o">=</span> <span class="n">inset_axes</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="s1">'90%'</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="s1">'90%'</span><span class="p">)</span>
+    <span class="n">wc</span><span class="o">.</span><span class="n">generate_from_frequencies</span><span class="p">(</span><span class="n">wordfreqs</span><span class="p">)</span>
+    <span class="n">ax_wc</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wc</span><span class="p">,</span><span class="n">interpolation</span><span class="o">=</span><span class="s1">'bilinear'</span><span class="p">)</span>
+    <span class="n">ax_wc</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">'off'</span><span class="p">)</span>
+
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">'stopwords'</span><span class="p">)</span> <span class="c1">#downloads basic stop words, i.e. words with little semantic value  (e.g. "the"), to be used as words to be removed</span>
+<span class="n">remove_words</span> <span class="o">=</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s2">"english"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Okay so let’s vectorize and look at the wordclouds for single word statistics. Let’s explicitly exclude some words and implicity exclude ones that appear in fewer than some threshold number of documents</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">selected_tweets</span><span class="p">[</span><span class="s1">'text'</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span><span class="o">.</span><span class="n">values</span> <span class="c1">#reduce size since the vectorization computation transforms the corpus into an array of large size (vocabulary size x number of tweets)</span>
+<span class="c1">#let's add some more words that we don't want to track (you can generate this kind of list iteratively by looking at the results and adding to this list):</span>
+<span class="n">remove_words</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">'cop26'</span><span class="p">,</span><span class="s1">'http'</span><span class="p">,</span><span class="s1">'https'</span><span class="p">,</span><span class="s1">'30'</span><span class="p">,</span><span class="s1">'000'</span><span class="p">,</span><span class="s1">'je'</span><span class="p">,</span><span class="s1">'rt'</span><span class="p">,</span><span class="s1">'climate'</span><span class="p">,</span><span class="s1">'limacop20'</span><span class="p">,</span><span class="s1">'un_climatetalks'</span><span class="p">,</span><span class="s1">'climatechange'</span><span class="p">,</span><span class="s1">'via'</span><span class="p">,</span><span class="s1">'ht'</span><span class="p">,</span><span class="s1">'talks'</span><span class="p">,</span><span class="s1">'unfccc'</span><span class="p">,</span><span class="s1">'peru'</span><span class="p">,</span><span class="s1">'peruvian'</span><span class="p">,</span><span class="s1">'lima'</span><span class="p">,</span><span class="s1">'co'</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span><span class="o">+</span><span class="s2">" tweets"</span><span class="p">)</span>
+<span class="n">min_doc_freq</span><span class="o">=</span><span class="mi">5</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ngram_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#start and end number of words</span>
+<span class="n">vectorized_data_dict</span><span class="p">,</span><span class="n">feature_names</span><span class="o">=</span><span class="n">vectorize</span><span class="p">(</span><span class="n">selected_tweets</span><span class="p">,</span><span class="n">ngram_range</span><span class="o">=</span><span class="n">ngram_range</span><span class="p">,</span><span class="n">remove_words</span><span class="o">=</span><span class="n">remove_words</span><span class="p">,</span><span class="n">min_doc_freq</span><span class="o">=</span><span class="n">min_doc_freq</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">vectorizer_type</span> <span class="ow">in</span> <span class="n">vectypes</span><span class="p">:</span>
+    <span class="n">plot_wordcloud_and_freqdist</span><span class="p">(</span><span class="n">vectorized_data_dict</span><span class="p">[</span><span class="n">vectorizer_type</span><span class="p">],</span><span class="n">vectorizer_type</span><span class="p">,</span><span class="n">feature_names</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note in the histograms how the TFidf vectorizer has scaled down the hypocrisy words such that they are less outlyingly prevalent relative to the count vectorizer.</p>
+<p>There are some words here  (e.g. <code class="docutils literal notranslate"><span class="pre">private</span></code> and <code class="docutils literal notranslate"><span class="pre">jet</span></code>) that look like they likely would appear in pairs. Let’s tell the vectorizer to also look for high frequency <em>pairs</em> of words.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ngram_range</span><span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="c1">#start and end number of words</span>
+<span class="n">vectorized_data_dict</span><span class="p">,</span><span class="n">feature_names</span><span class="o">=</span><span class="n">vectorize</span><span class="p">(</span><span class="n">selected_tweets</span><span class="p">,</span><span class="n">ngram_range</span><span class="o">=</span><span class="n">ngram_range</span><span class="p">,</span><span class="n">remove_words</span><span class="o">=</span><span class="n">remove_words</span><span class="p">,</span><span class="n">min_doc_freq</span><span class="o">=</span><span class="n">min_doc_freq</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">vectorizer_type</span> <span class="ow">in</span> <span class="n">vectypes</span><span class="p">:</span>
+    <span class="n">plot_wordcloud_and_freqdist</span><span class="p">(</span><span class="n">vectorized_data_dict</span><span class="p">[</span><span class="n">vectorizer_type</span><span class="p">],</span><span class="n">vectorizer_type</span><span class="p">,</span><span class="n">feature_names</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The hypocrisy words take up so much frequency it is hard to see what the remaining words are. To clear this list a bit more, let’s also remove the hypocrisy words altogether.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">remove_words</span> <span class="o">+=</span> <span class="n">selected_words</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ngram_range</span><span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="c1">#start and end number of words</span>
+<span class="n">vectorized_data_dict</span><span class="p">,</span><span class="n">feature_names</span><span class="o">=</span><span class="n">vectorize</span><span class="p">(</span><span class="n">selected_tweets</span><span class="p">,</span><span class="n">ngram_range</span><span class="o">=</span><span class="n">ngram_range</span><span class="p">,</span><span class="n">remove_words</span><span class="o">=</span><span class="n">remove_words</span><span class="p">,</span><span class="n">min_doc_freq</span><span class="o">=</span><span class="n">min_doc_freq</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">vectorizer_type</span> <span class="ow">in</span> <span class="n">vectypes</span><span class="p">:</span>
+    <span class="n">plot_wordcloud_and_freqdist</span><span class="p">(</span><span class="n">vectorized_data_dict</span><span class="p">[</span><span class="n">vectorizer_type</span><span class="p">],</span><span class="n">vectorizer_type</span><span class="p">,</span><span class="n">feature_names</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Observe terms that we might have expected are associated to hypocrisy, e.g. “flying”. Even when allowing for pairs, the semantics are hard to extract from this analysis that ignores the correlations in usage among multiple words.</p>
+<p>To futher assess statistics, one approach is use a generative model with latent structure.</p>
+<p>Topic models (the <a class="reference external" href="https://www.structuraltopicmodel.com/">structural topic model</a> in particular) are a nice modelling framework to start analyzing those correlations.</p>
+<p>For a modern introduction to text analysis in the social sciences, I recommend the textbook:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Text as Data: A New Framework for Machine Learning and the Social Sciences (2022) by Justin Grimmer, Margaret E. Roberts, and Brandon M. Stewart
+</pre></div>
+</div>
+</div>
+</div>
+<script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "pangeo"
+        },
+        kernelOptions: {
+            kernelName: "pangeo",
+            path: "./tutorials/W2D3_FutureClimate-IPCCII&IIISocio-EconomicBasis/student"
+        },
+        predefinedOutput: true
+    }
+    </script>
+<script>kernelName = 'pangeo'</script>
+</div>
+</main>
+<footer class="footer-article noprint">
+<!-- Previous / next buttons -->
+<div class="prev-next-area">
+<a class="left-prev" href="W2D3_Tutorial3.html" id="prev-link" title="previous page">
+<i class="fas fa-angle-left"></i>
+<div class="prev-next-info">
+<p class="prev-next-subtitle">previous</p>
+<p class="prev-next-title">&lt;no title&gt;</p>
+</div>
+</a>
+<a class="right-next" href="../further_reading.html" id="next-link" title="next page">
+<div class="prev-next-info">
+<p class="prev-next-subtitle">next</p>
+<p class="prev-next-title">&lt;no title&gt;</p>
+</div>
+<i class="fas fa-angle-right"></i>
+</a>
+</div>
+</footer>
+</div>
+</div>
+<div class="footer-content row">
+<footer class="col footer"><p>
+  
+    By Climatematch<br/>
+<div class="extra_footer">
+<div>
+<a href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png"/></a>
+<a href="https://opensource.org/licenses/BSD-3-Clause"><img src="https://camo.githubusercontent.com/9b9ea65d95c9ef878afa1987df65731d47681336/68747470733a2f2f696d672e736869656c64732e696f2f707970692f6c2f736561626f726e2e737667"/></a>
+The contents of this repository are shared under the <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+Software elements are additionally licensed under the <a href="https://opensource.org/licenses/BSD-3-Clause">BSD (3-Clause) License</a>.
+</div>
+</div>
+</p>
+</footer>
+</div>
+</div>
+</div>
+</div>
+<!-- Scripts loaded after <body> so the DOM is not blocked -->
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+</body>
+</html>

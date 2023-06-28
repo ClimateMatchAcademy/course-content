@@ -1,0 +1,3781 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heatwaves: Assessing the dynamic interactions of the atmosphere and land &#8212; Climatematch Academy: Computational Climate Science</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Change in Earth’s albedo and its dependence on land cover changes in the past 20 years" href="Surface_albedo_and_land_use.html" />
+    <link rel="prev" title="Regional precipitation variability and extreme events" href="Regional_precipitation_variability.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Climatematch Academy: Computational Climate Science</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../tutorials/intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../tutorials/TechnicalHelp/tech_intro.html">
+   Technical Help
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../tutorials/TechnicalHelp/Jupyterbook.html">
+     Using jupyterbook
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../tutorials/TechnicalHelp/Tutorial_colab.html">
+       Using Google Colab
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../tutorials/TechnicalHelp/Tutorial_kaggle.html">
+       Using Kaggle
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/TechnicalHelp/Discord.html">
+     Using discord
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../tutorials/TechnicalHelp/Links_Policy.html">
+   Quick links and policies
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Fundamentals
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/chapter_title.html">
+   Climate System Overview (W1D1)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.html">
+     <strong>
+      Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial2.html">
+     <strong>
+      Tutorial 2: Selection, Interpolation and Slicing
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial3.html">
+     <strong>
+      Tutorial 3: Opening and Plotting netCDF Data
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial4.html">
+     <strong>
+      Tutorial 4: Arithmetic and Aggregation Methods
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial5.html">
+     <strong>
+      Tutorial 5: Xarray Data Analysis and Climatology
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial6.html">
+     <strong>
+      Tutorial 6: Compute and Plot Temperature Anomalies
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial7.html">
+     <strong>
+      Tutorial 7: Other Computational Tools in Xarray
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial8.html">
+     <strong>
+      Tutorial 8: Masking with One Condition
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial9.html">
+     <strong>
+      Tutorial 9: Masking with Multiple Conditions
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../tutorials/W2D2_GoodResearchPractices/chapter_title.html">
+   Good Research Practices (W2D2)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial1.html">
+     <strong>
+      Tutorial 1: Finding a Phenomenon and Asking a Question About It
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial2.html">
+     <strong>
+      Tutorial 2: Doing a Literature Review
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial3.html">
+     <strong>
+      Tutorial 3: Identifying the Basic Ingredients
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial4.html">
+     <strong>
+      Tutorial 4: Formulating a Hypothesis
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial5.html">
+     <strong>
+      Tutorial 5: Drafting the Analysis
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial6.html">
+     <strong>
+      Tutorial 6: Implementing the Analysis
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial7.html">
+     <strong>
+      Tutorial 7: Interpreting the Results
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial8.html">
+     <strong>
+      Tutorial 8: Communicating Your Conclusions
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Climate Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/chapter_title.html">
+   State of the Climate Ocean and Atmosphere Reanalysis (W1D2)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial1.html">
+     Calculating ENSO with Xarray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial2.html">
+     Tutorial 2: A lot of weather makes climate - exploring the ERA5 Reanalysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial3.html">
+     Tutorial 3: Atmospheric wind driven circulation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial4.html">
+     Tutorial 4: Ocean wind driven circulation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial5.html">
+     Tutorial 5: Thermohaline circulation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial6.html">
+     Tutorial 6: Ocean heat content
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/chapter_title.html">
+   Remote Sensing Land Ocean and Atmosphere (W1D3)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.html">
+     Video 1: What is Remote Sensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial3.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial4.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial5.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial6.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial7.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial8.html">
+     Figure settings
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/chapter_title.html">
+   Paleoclimate (W1D4)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial1.html">
+     <strong>
+      Tutorial 1: Paleoclimate Proxies
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial2.html">
+     <strong>
+      Tutorial 2: Reconstructing Past Changes in Ocean Climate
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial3.html">
+     <strong>
+      Tutorial 3: Reconstructing Past Changes in Terrestrial Climate
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial4.html">
+     <strong>
+      Tutorial 4: Reconstructing Past Changes in Atmospheric Climate
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial5.html">
+     <strong>
+      Tutorial 5: Paleoclimate Data Analysis Tools
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial6.html">
+     <strong>
+      Tutorial 6: Spectral Analysis of Paleoclimate Data
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial7.html">
+     <strong>
+      Tutorial 7: Assessing Climate Forcings
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial8.html">
+     <strong>
+      Tutorial 8: Paleoclimate Models
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial9.html">
+     <strong>
+      Tutorial 9: Paleoclimate Reanalysis Products
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Climate Future
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/chapter_title.html">
+   Climate Modeling (W1D5)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial1.html">
+     Setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial2.html">
+     Setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial3.html">
+     Setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial4.html">
+     Setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial5.html">
+     <strong>
+      Tutorial 5: Radiative Equilibrium
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial6.html">
+     <strong>
+      Tutorial 6: Radiative Convective Equilibrium
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial7.html">
+     <strong>
+      Tutorial 7: Introduction to Earth System Models
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/chapter_title.html">
+   Future Climate - IPCC I Physical Basis (W2D1)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial1.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial2.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial3.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial4.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial5.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial6.html">
+     Figure settings
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/chapter_title.html">
+   Future Climate - IPCC II &amp; III Socio-Economic Basis (W2D3)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial1.html">
+     Tutorial 1 - Limits to growth in World3: A toy world model of diminishing non-renewable resources
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial2.html">
+     Tutorial 2 - A first look at integrated assessment models
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial4.html">
+     Tutorial 4 - Text analysis of COP tweets
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Climate Response
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/chapter_title.html">
+   Climate Response - Adaptation Impact (W2D5)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial1.html">
+     <strong>
+      Tutorial 1: Linear and Logistic Regression
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.html">
+     Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.html">
+     Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial4.html">
+     Tutorial 9:  Exploring other applications
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Project Booklet
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../docs/continuing_your_project_after_the_course.html">
+   Climatematch Impact Scholars program
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../docs/project_guidance.html">
+   Daily guide for projects
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="ENSO_impact_on_precipitation_and_temperature.html">
+     <strong>
+      The impact of ENSO on precipitation and temperature
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Ocean_acidification.html">
+     <strong>
+      Ocean acidification
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Wildfires_and_burnt_areas.html">
+     <strong>
+      Monitoring and mapping wildfires using satellite data
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Regional_precipitation_variability.html">
+     <strong>
+      Regional precipitation variability and extreme events
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     <strong>
+      Heatwaves: Assessing the dynamic interactions of the atmosphere and land
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Surface_albedo_and_land_use.html">
+     <strong>
+      Change in Earth’s albedo and its dependence on land cover changes in the past 20 years
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Sea_level_rise.html">
+     <strong>
+      Sea level rise
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/ClimatematchAcademy/course-content"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/ClimatematchAcademy/course-content/issues/new?title=Issue%20on%20page%20%2Fprojects/project-notebooks/Heatwaves.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/projects/project-notebooks/Heatwaves.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   <strong>
+    Heatwaves: Assessing the dynamic interactions of the atmosphere and land
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#project-template">
+   <strong>
+    Project template
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-exploration-notebook">
+   <strong>
+    Data exploration notebook
+   </strong>
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#project-setup">
+     <strong>
+      Project setup
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cmip6-near-surface-temperature">
+     <strong>
+      CMIP6: near surface temperature
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cmip6-precipitation-and-soil-moisture-optional">
+       <strong>
+        CMIP6: precipitation and soil moisture (optional)
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#q7-heatwave-detection">
+       <strong>
+        Q7: heatwave detection
+       </strong>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#worlbank-data-cereal-production-and-land-under-cereal-production">
+     <strong>
+      Worlbank data: Cereal production and land under cereal production
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#q9-correlation">
+       <strong>
+        Q9: correlation
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#q12-linear-regression">
+       <strong>
+        Q12: linear regression
+       </strong>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#further-reading">
+   <strong>
+    Further reading
+   </strong>
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Heatwaves: Assessing the dynamic interactions of the atmosphere and land</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   <strong>
+    Heatwaves: Assessing the dynamic interactions of the atmosphere and land
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#project-template">
+   <strong>
+    Project template
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-exploration-notebook">
+   <strong>
+    Data exploration notebook
+   </strong>
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#project-setup">
+     <strong>
+      Project setup
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cmip6-near-surface-temperature">
+     <strong>
+      CMIP6: near surface temperature
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cmip6-precipitation-and-soil-moisture-optional">
+       <strong>
+        CMIP6: precipitation and soil moisture (optional)
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#q7-heatwave-detection">
+       <strong>
+        Q7: heatwave detection
+       </strong>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#worlbank-data-cereal-production-and-land-under-cereal-production">
+     <strong>
+      Worlbank data: Cereal production and land under cereal production
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#q9-correlation">
+       <strong>
+        Q9: correlation
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#q12-linear-regression">
+       <strong>
+        Q12: linear regression
+       </strong>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#further-reading">
+   <strong>
+    Further reading
+   </strong>
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="section" id="heatwaves-assessing-the-dynamic-interactions-of-the-atmosphere-and-land">
+<h1><strong>Heatwaves: Assessing the dynamic interactions of the atmosphere and land</strong><a class="headerlink" href="#heatwaves-assessing-the-dynamic-interactions-of-the-atmosphere-and-land" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<p><strong>Content creators:</strong> Sara Shamekh, Ibukun Joyce Ogwu</p>
+<p><strong>Content reviewers:</strong> Ohad Zivan, Douglas Rao</p>
+<p><strong>Content editors:</strong> Zane Mitrevica, Natalie Steinemann</p>
+<p><strong>Production editors:</strong> TBD</p>
+<p><strong>Our 2023 Sponsors:</strong> TBD</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title #**Project background** </span>
+<span class="c1">#This will be a short video introducing the content creator(s) and motivating the research direction of the template.</span>
+<span class="c1">#The Tech team will add code to format and display the video</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The atmosphere and land are entwined components of the Earth’s system, constantly exchanging energy, mass, and momentum. Their interaction contributes to a variety of physical and biological processes. Understanding of the dynamic interactions between atmosphere and land is crucial for predicting and mitigating the impacts of climate change, such as land-use changes and hazards ranging from droughts, floods, and even fluctuation in agricultural production and products (<a class="reference external" href="https://esd.copernicus.org/articles/13/109/2022/">Jach et. al., 2022</a>; <a class="reference external" href="https://www.researchgate.net/publication/325142745_Economics_of_Soil_Fertility_Management_Practices_in_Nigeria">Ogwu et. al. 2018</a>; <a class="reference external" href="https://journals.ametsoc.org/view/journals/bams/99/6/bams-d-17-0001.1.xml">Dirmeyer et. al. 2016</a>).</p>
+<p>Climate change is also expected to have a significant impact on cereal production around the world. Changes in temperature, precipitation patterns, and extreme weather events can all affect crop yields, as well as the timing and quality of harvests. For example, higher temperatures can lead to reduced yields for crops like wheat and maize, while changes in rainfall patterns can result in droughts or floods that can damage crops or delay planting.</p>
+<p>In order to better understand the relationship between climate change and cereal production, researchers have begun to explore the use of environmental monitoring data, including air temperature and soil moisture, to help identify trends and patterns in crop production. By collecting and analyzing this data over time, it may be possible to develop more accurate models and predictions of how climate change will affect cereal production in different regions of the world.</p>
+<p>However, it is important to note that while environmental monitoring data can provide valuable insights, there are many other factors that can affect cereal production, including soil quality, pests and diseases, and agricultural practices. Therefore, any efforts to correlate cereal production with climate change must take into account a wide range of factors and be based on robust statistical analyses in order to ensure accurate and reliable results.</p>
+<p><strong>In this project</strong>, you will look into how specific climate variables represent and influence our changing climate. You will combine the effect from various climate variables and use it in models for a more comprehensive understanding of different drivers of heatwave to the influence of land-atmosphere interactions. There will also be an opportunity to relate the aforementioned climate variables to trends in cereal production.</p>
+</div>
+<div class="section" id="project-template">
+<h1><strong>Project template</strong><a class="headerlink" href="#project-template" title="Permalink to this headline">¶</a></h1>
+<p align='center'><a href="https://github.com/ClimatematchAcademy/course-content/blob/main/projects/template-images/heatwaves_template_map.svg"><img src="https://github.com/ClimatematchAcademy/course-content/blob/main/projects/template-images/heatwaves_template_map.svg?raw=True" alt="Heatwaves: Assessing the dynamic interactions of the atmosphere and land" vw="100" vh="75" /></a></p></div>
+<div class="section" id="data-exploration-notebook">
+<h1><strong>Data exploration notebook</strong><a class="headerlink" href="#data-exploration-notebook" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="project-setup">
+<h2><strong>Project setup</strong><a class="headerlink" href="#project-setup" title="Permalink to this headline">¶</a></h2>
+<p>Please run the following cells!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!pip install condacolab      
+import condacolab
+condacolab.install()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Collecting condacolab
+  Downloading condacolab-0.1.7-py3-none-any.whl (7.2 kB)
+Installing collected packages: condacolab
+Successfully installed condacolab-0.1.7
+⏬ Downloading https://github.com/conda-forge/miniforge/releases/download/23.1.0-1/Mambaforge-23.1.0-1-Linux-x86_64.sh...
+📦 Installing...
+📌 Adjusting configuration...
+🩹 Patching environment...
+⏲ Done in 0:00:15
+🔁 Restarting kernel...
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!mamba install xarray-datatree intake intake-esm gcsfs xmip aiohttp cartopy nc-time-axis cf_xarray xarrayutils &quot;esmf&lt;=8.3.1&quot; xesmf 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  __    __    __    __
+                 /  \  /  \  /  \  /  \
+                /    \/    \/    \/    \
+███████████████/  /██/  /██/  /██/  /████████████████████████
+              /  / \   / \   / \   / \  \____
+             /  /   \_/   \_/   \_/   \    o \__,
+            / _/                       \_____/  `
+            |/
+        ███╗   ███╗ █████╗ ███╗   ███╗██████╗  █████╗
+        ████╗ ████║██╔══██╗████╗ ████║██╔══██╗██╔══██╗
+        ██╔████╔██║███████║██╔████╔██║██████╔╝███████║
+        ██║╚██╔╝██║██╔══██║██║╚██╔╝██║██╔══██╗██╔══██║
+        ██║ ╚═╝ ██║██║  ██║██║ ╚═╝ ██║██████╔╝██║  ██║
+        ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝
+
+        mamba (1.4.1) supported by @QuantStack
+
+        GitHub:  https://github.com/mamba-org/mamba
+        Twitter: https://twitter.com/QuantStack
+
+█████████████████████████████████████████████████████████████
+
+
+Looking for: [&#39;xarray-datatree&#39;, &#39;intake&#39;, &#39;intake-esm&#39;, &#39;gcsfs&#39;, &#39;xmip&#39;, &#39;aiohttp&#39;, &#39;cartopy&#39;, &#39;nc-time-axis&#39;, &#39;cf_xarray&#39;, &#39;xarrayutils&#39;, &quot;esmf[version=&#39;&lt;=8.3.1&#39;]&quot;, &#39;xesmf&#39;]
+
+?25l[+] 0.0s
+[+] 0.1s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 0.2s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 0.3s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 0.4s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 0.5s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 0.6s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 0.7s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 0.8s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 0.9s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 1.0s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 1.1s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 1.2s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 1.3s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 1.4s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 1.5s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 1.6s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 1.7s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 1.8s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 1.9s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 2.0s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 2.1s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 2.2s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 2.3s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 2.4s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 2.5s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 2.6s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 2.7s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 2.8s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 2.9s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 3.0s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 3.1s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 3.2s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 3.3s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 3.4s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 3.5s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 3.6s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 3.7s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 3.8s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 3.9s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 4.0s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 4.1s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 4.2s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 4.3s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 4.4s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 4.5s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 4.6s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 4.7s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 4.8s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 4.9s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 5.0s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 5.1s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 5.2s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 5.3s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 5.4s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 5.5s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 5.6s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch    ⣾  [+] 5.7s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch   100%[+] 5.8s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch   100%[+] 5.9s
+conda-forge/linux-64  ⣾  
+conda-forge/noarch   100%conda-forge/noarch                                
+[+] 6.0s
+conda-forge/linux-64  ⣾  [+] 6.1s
+conda-forge/linux-64  ⣾  [+] 6.2s
+conda-forge/linux-64  ⣾  [+] 6.3s
+conda-forge/linux-64  ⣾  [+] 6.4s
+conda-forge/linux-64  ⣾  [+] 6.5s
+conda-forge/linux-64  ⣾  [+] 6.6s
+conda-forge/linux-64  ⣾  [+] 6.7s
+conda-forge/linux-64  ⣾  [+] 6.8s
+conda-forge/linux-64  ⣾  [+] 6.9s
+conda-forge/linux-64  ⣾  [+] 7.0s
+conda-forge/linux-64  ⣾  [+] 7.1s
+conda-forge/linux-64  ⣾  [+] 7.2s
+conda-forge/linux-64  ⣾  [+] 7.3s
+conda-forge/linux-64  ⣾  [+] 7.4s
+conda-forge/linux-64  ⣾  [+] 7.5s
+conda-forge/linux-64  ⣾  [+] 7.6s
+conda-forge/linux-64  ⣾  [+] 7.7s
+conda-forge/linux-64  ⣾  [+] 7.8s
+conda-forge/linux-64  ⣾  [+] 7.9s
+conda-forge/linux-64  ⣾  [+] 8.0s
+conda-forge/linux-64  ⣾  [+] 8.1s
+conda-forge/linux-64  ⣾  [+] 8.2s
+conda-forge/linux-64  ⣾  [+] 8.3s
+conda-forge/linux-64  ⣾  [+] 8.4s
+conda-forge/linux-64  ⣾  [+] 8.5s
+conda-forge/linux-64  ⣾  [+] 8.6s
+conda-forge/linux-64  ⣾  [+] 8.7s
+conda-forge/linux-64  ⣾  [+] 8.8s
+conda-forge/linux-64  ⣾  [+] 8.9s
+conda-forge/linux-64  ⣾  [+] 9.0s
+conda-forge/linux-64 100%[+] 9.1s
+conda-forge/linux-64 100%[+] 9.2s
+conda-forge/linux-64 100%[+] 9.3s
+conda-forge/linux-64 100%[+] 9.4s
+conda-forge/linux-64 100%[+] 9.5s
+conda-forge/linux-64 100%[+] 9.6s
+conda-forge/linux-64 100%[+] 9.7s
+conda-forge/linux-64 100%[+] 9.8s
+conda-forge/linux-64 100%[+] 9.9s
+conda-forge/linux-64 100%[+] 10.0s
+conda-forge/linux-64                              
+?25h
+Pinned packages:
+  - python 3.10.*
+  - python 3.10.*
+  - python_abi 3.10.* *cp310*
+  - cudatoolkit 11.8.*
+
+
+Transaction
+
+  Prefix: /usr/local
+
+  Updating specs:
+
+   - xarray-datatree
+   - intake
+   - intake-esm
+   - gcsfs
+   - xmip
+   - aiohttp
+   - cartopy
+   - nc-time-axis
+   - cf_xarray
+   - xarrayutils
+   - esmf[version=&#39;&lt;=8.3.1&#39;]
+   - xesmf
+   - ca-certificates
+   - certifi
+   - openssl
+
+
+  Package                        Version  Build                        Channel                   Size
+───────────────────────────────────────────────────────────────────────────────────────────────────────
+  Install:
+───────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  <span class=" -Color -Color-Green">+ aiohttp                 </span>       3.8.4  py310h1fa729e_0              conda-forge/linux-64     445kB
+  <span class=" -Color -Color-Green">+ aiosignal               </span>       1.3.1  pyhd8ed1ab_0                 conda-forge/noarch        13kB
+  <span class=" -Color -Color-Green">+ appdirs                 </span>       1.4.4  pyh9f0ad1d_0                 conda-forge/noarch        13kB
+  <span class=" -Color -Color-Green">+ arrow-cpp               </span>      11.0.0  ha770c72_14_cpu              conda-forge/linux-64      35kB
+  <span class=" -Color -Color-Green">+ asciitree               </span>       0.3.3  py_2                         conda-forge/noarch         6kB
+  <span class=" -Color -Color-Green">+ astropy                 </span>       5.2.2  py310h0a54255_0              conda-forge/linux-64       8MB
+  <span class=" -Color -Color-Green">+ async-timeout           </span>       4.0.2  pyhd8ed1ab_0                 conda-forge/noarch         9kB
+  <span class=" -Color -Color-Green">+ attrs                   </span>      23.1.0  pyh71513ae_0                 conda-forge/noarch        55kB
+  <span class=" -Color -Color-Green">+ aws-c-auth              </span>      0.6.26  h987a71b_2                   conda-forge/linux-64      95kB
+  <span class=" -Color -Color-Green">+ aws-c-cal               </span>      0.5.21  h48707d8_2                   conda-forge/linux-64      44kB
+  <span class=" -Color -Color-Green">+ aws-c-common            </span>      0.8.14  h0b41bf4_0                   conda-forge/linux-64     200kB
+  <span class=" -Color -Color-Green">+ aws-c-compression       </span>      0.2.16  h03acc5a_5                   conda-forge/linux-64      19kB
+  <span class=" -Color -Color-Green">+ aws-c-event-stream      </span>      0.2.20  h00877a2_4                   conda-forge/linux-64      54kB
+  <span class=" -Color -Color-Green">+ aws-c-http              </span>       0.7.6  hf342b9f_0                   conda-forge/linux-64     192kB
+  <span class=" -Color -Color-Green">+ aws-c-io                </span>     0.13.19  h5b20300_3                   conda-forge/linux-64     144kB
+  <span class=" -Color -Color-Green">+ aws-c-mqtt              </span>       0.8.6  hc4349f7_12                  conda-forge/linux-64     144kB
+  <span class=" -Color -Color-Green">+ aws-c-s3                </span>       0.2.7  h909e904_1                   conda-forge/linux-64      76kB
+  <span class=" -Color -Color-Green">+ aws-c-sdkutils          </span>       0.1.9  h03acc5a_0                   conda-forge/linux-64      53kB
+  <span class=" -Color -Color-Green">+ aws-checksums           </span>      0.1.14  h03acc5a_5                   conda-forge/linux-64      50kB
+  <span class=" -Color -Color-Green">+ aws-crt-cpp             </span>      0.19.8  hf7fbfca_12                  conda-forge/linux-64     318kB
+  <span class=" -Color -Color-Green">+ aws-sdk-cpp             </span>     1.10.57  h17c43bd_8                   conda-forge/linux-64       4MB
+  <span class=" -Color -Color-Green">+ blinker                 </span>       1.6.2  pyhd8ed1ab_0                 conda-forge/noarch        18kB
+  <span class=" -Color -Color-Green">+ bokeh                   </span>       3.1.0  pyhd8ed1ab_0                 conda-forge/noarch         6MB
+  <span class=" -Color -Color-Green">+ brotli                  </span>       1.0.9  h166bdaf_8                   conda-forge/linux-64      19kB
+  <span class=" -Color -Color-Green">+ brotli-bin              </span>       1.0.9  h166bdaf_8                   conda-forge/linux-64      20kB
+  <span class=" -Color -Color-Green">+ cachetools              </span>       5.3.0  pyhd8ed1ab_0                 conda-forge/noarch        14kB
+  <span class=" -Color -Color-Green">+ cartopy                 </span>      0.21.1  py310h7eb24ba_1              conda-forge/linux-64       2MB
+  <span class=" -Color -Color-Green">+ cf_xarray               </span>       0.8.0  pyhd8ed1ab_0                 conda-forge/noarch       185kB
+  <span class=" -Color -Color-Green">+ cftime                  </span>       1.6.2  py310hde88566_1              conda-forge/linux-64     246kB
+  <span class=" -Color -Color-Green">+ click                   </span>       8.1.3  unix_pyhd8ed1ab_2            conda-forge/noarch        76kB
+  <span class=" -Color -Color-Green">+ cloudpickle             </span>       2.2.1  pyhd8ed1ab_0                 conda-forge/noarch        28kB
+  <span class=" -Color -Color-Green">+ contourpy               </span>       1.0.7  py310hdf3cbec_0              conda-forge/linux-64     216kB
+  <span class=" -Color -Color-Green">+ curl                    </span>      7.88.1  hdc1c0ab_1                   conda-forge/linux-64      88kB
+  <span class=" -Color -Color-Green">+ cycler                  </span>      0.11.0  pyhd8ed1ab_0                 conda-forge/noarch        10kB
+  <span class=" -Color -Color-Green">+ cytoolz                 </span>      0.12.0  py310h5764c6d_1              conda-forge/linux-64     398kB
+  <span class=" -Color -Color-Green">+ dask                    </span>    2023.4.1  pyhd8ed1ab_0                 conda-forge/noarch         7kB
+  <span class=" -Color -Color-Green">+ dask-core               </span>    2023.4.1  pyhd8ed1ab_0                 conda-forge/noarch       842kB
+  <span class=" -Color -Color-Green">+ decorator               </span>       5.1.1  pyhd8ed1ab_0                 conda-forge/noarch        12kB
+  <span class=" -Color -Color-Green">+ distributed             </span>    2023.4.1  pyhd8ed1ab_0                 conda-forge/noarch       765kB
+  <span class=" -Color -Color-Green">+ entrypoints             </span>         0.4  pyhd8ed1ab_0                 conda-forge/noarch         9kB
+  <span class=" -Color -Color-Green">+ esmf                    </span>       8.3.1  mpi_mpich_h5a1934d_101       conda-forge/linux-64      29MB
+  <span class=" -Color -Color-Green">+ esmpy                   </span>       8.3.1  mpi_mpich_py310h515c5ea_100  conda-forge/linux-64     180kB
+  <span class=" -Color -Color-Green">+ fasteners               </span>      0.17.3  pyhd8ed1ab_0                 conda-forge/noarch        20kB
+  <span class=" -Color -Color-Green">+ fastprogress            </span>       1.0.3  pyhd8ed1ab_0                 conda-forge/noarch        17kB
+  <span class=" -Color -Color-Green">+ fonttools               </span>      4.39.3  py310h1fa729e_0              conda-forge/linux-64       2MB
+  <span class=" -Color -Color-Green">+ freetype                </span>      2.12.1  hca18f0e_1                   conda-forge/linux-64     626kB
+  <span class=" -Color -Color-Green">+ frozenlist              </span>       1.3.3  py310h5764c6d_0              conda-forge/linux-64      45kB
+  <span class=" -Color -Color-Green">+ fsspec                  </span>    2023.4.0  pyh1a96a4e_0                 conda-forge/noarch       111kB
+  <span class=" -Color -Color-Green">+ gcsfs                   </span>    2023.4.0  pyhd8ed1ab_0                 conda-forge/noarch        30kB
+  <span class=" -Color -Color-Green">+ geos                    </span>      3.11.2  hcb278e6_0                   conda-forge/linux-64       2MB
+  <span class=" -Color -Color-Green">+ gflags                  </span>       2.2.2  he1b5a44_1004                conda-forge/linux-64     117kB
+  <span class=" -Color -Color-Green">+ glog                    </span>       0.6.0  h6f12383_0                   conda-forge/linux-64     114kB
+  <span class=" -Color -Color-Green">+ google-api-core         </span>      2.11.0  pyhd8ed1ab_0                 conda-forge/noarch        77kB
+  <span class=" -Color -Color-Green">+ google-auth             </span>      2.17.3  pyh1a96a4e_0                 conda-forge/noarch        99kB
+  <span class=" -Color -Color-Green">+ google-auth-oauthlib    </span>       1.0.0  pyhd8ed1ab_0                 conda-forge/noarch        21kB
+  <span class=" -Color -Color-Green">+ google-cloud-core       </span>       2.3.2  pyhd8ed1ab_0                 conda-forge/noarch        28kB
+  <span class=" -Color -Color-Green">+ google-cloud-storage    </span>       2.9.0  pyh1a96a4e_0                 conda-forge/noarch        82kB
+  <span class=" -Color -Color-Green">+ google-crc32c           </span>       1.1.2  py310he8fe98e_4              conda-forge/linux-64      25kB
+  <span class=" -Color -Color-Green">+ google-resumable-media  </span>       2.5.0  pyhd8ed1ab_0                 conda-forge/noarch        44kB
+  <span class=" -Color -Color-Green">+ googleapis-common-protos</span>      1.57.1  pyhd8ed1ab_0                 conda-forge/noarch       117kB
+  <span class=" -Color -Color-Green">+ grpcio                  </span>      1.52.1  py310heca2aa9_1              conda-forge/linux-64     753kB
+  <span class=" -Color -Color-Green">+ hdf4                    </span>      4.2.15  h9772cbc_5                   conda-forge/linux-64     974kB
+  <span class=" -Color -Color-Green">+ hdf5                    </span>      1.12.2  mpi_mpich_h5d83325_1         conda-forge/linux-64       3MB
+  <span class=" -Color -Color-Green">+ importlib-metadata      </span>       6.6.0  pyha770c72_0                 conda-forge/noarch        26kB
+  <span class=" -Color -Color-Green">+ importlib_metadata      </span>       6.6.0  hd8ed1ab_0                   conda-forge/noarch         9kB
+  <span class=" -Color -Color-Green">+ intake                  </span>       0.6.8  pyhd8ed1ab_0                 conda-forge/noarch       188kB
+  <span class=" -Color -Color-Green">+ intake-esm              </span>   2023.4.20  pyhd8ed1ab_1                 conda-forge/noarch        31kB
+  <span class=" -Color -Color-Green">+ jinja2                  </span>       3.1.2  pyhd8ed1ab_1                 conda-forge/noarch       101kB
+  <span class=" -Color -Color-Green">+ jpeg                    </span>          9e  h0b41bf4_3                   conda-forge/linux-64     240kB
+  <span class=" -Color -Color-Green">+ kiwisolver              </span>       1.4.4  py310hbf28c38_1              conda-forge/linux-64      77kB
+  <span class=" -Color -Color-Green">+ lcms2                   </span>        2.15  hfd0df8a_0                   conda-forge/linux-64     241kB
+  <span class=" -Color -Color-Green">+ lerc                    </span>       4.0.0  h27087fc_0                   conda-forge/linux-64     282kB
+  <span class=" -Color -Color-Green">+ libabseil               </span>  20230125.0  cxx17_hcb278e6_1             conda-forge/linux-64       1MB
+  <span class=" -Color -Color-Green">+ libaec                  </span>       1.0.6  hcb278e6_1                   conda-forge/linux-64      34kB
+  <span class=" -Color -Color-Green">+ libarrow                </span>      11.0.0  h93537a5_14_cpu              conda-forge/linux-64      27MB
+  <span class=" -Color -Color-Green">+ libblas                 </span>       3.9.0  16_linux64_openblas          conda-forge/linux-64      13kB
+  <span class=" -Color -Color-Green">+ libbrotlicommon         </span>       1.0.9  h166bdaf_8                   conda-forge/linux-64      67kB
+  <span class=" -Color -Color-Green">+ libbrotlidec            </span>       1.0.9  h166bdaf_8                   conda-forge/linux-64      34kB
+  <span class=" -Color -Color-Green">+ libbrotlienc            </span>       1.0.9  h166bdaf_8                   conda-forge/linux-64     295kB
+  <span class=" -Color -Color-Green">+ libcblas                </span>       3.9.0  16_linux64_openblas          conda-forge/linux-64      13kB
+  <span class=" -Color -Color-Green">+ libcrc32c               </span>       1.1.2  h9c3ff4c_0                   conda-forge/linux-64      20kB
+  <span class=" -Color -Color-Green">+ libdeflate              </span>        1.17  h0b41bf4_0                   conda-forge/linux-64      65kB
+  <span class=" -Color -Color-Green">+ libevent                </span>      2.1.12  h3358134_0                   conda-forge/linux-64     428kB
+  <span class=" -Color -Color-Green">+ libgfortran-ng          </span>      12.2.0  h69a702a_19                  conda-forge/linux-64      23kB
+  <span class=" -Color -Color-Green">+ libgfortran5            </span>      12.2.0  h337968e_19                  conda-forge/linux-64       2MB
+  <span class=" -Color -Color-Green">+ libgoogle-cloud         </span>       2.8.0  h0bc5f78_1                   conda-forge/linux-64      38MB
+  <span class=" -Color -Color-Green">+ libgrpc                 </span>      1.52.1  hcf146ea_1                   conda-forge/linux-64       6MB
+  <span class=" -Color -Color-Green">+ liblapack               </span>       3.9.0  16_linux64_openblas          conda-forge/linux-64      13kB
+  <span class=" -Color -Color-Green">+ libllvm11               </span>      11.1.0  he0ac6c6_5                   conda-forge/linux-64      30MB
+  <span class=" -Color -Color-Green">+ libnetcdf               </span>       4.8.1  mpi_mpich_hcd871d9_6         conda-forge/linux-64       2MB
+  <span class=" -Color -Color-Green">+ libnuma                 </span>      2.0.16  h0b41bf4_1                   conda-forge/linux-64      41kB
+  <span class=" -Color -Color-Green">+ libopenblas             </span>      0.3.21  pthreads_h78a6416_3          conda-forge/linux-64      11MB
+  <span class=" -Color -Color-Green">+ libpng                  </span>      1.6.39  h753d276_0                   conda-forge/linux-64     283kB
+  <span class=" -Color -Color-Green">+ libprotobuf             </span>     3.21.12  h3eb15da_0                   conda-forge/linux-64       2MB
+  <span class=" -Color -Color-Green">+ libthrift               </span>      0.18.1  h8fd135c_1                   conda-forge/linux-64       4MB
+  <span class=" -Color -Color-Green">+ libtiff                 </span>       4.5.0  h6adf6a1_2                   conda-forge/linux-64     407kB
+  <span class=" -Color -Color-Green">+ libutf8proc             </span>       2.8.0  h166bdaf_0                   conda-forge/linux-64     101kB
+  <span class=" -Color -Color-Green">+ libwebp-base            </span>       1.3.0  h0b41bf4_0                   conda-forge/linux-64     357kB
+  <span class=" -Color -Color-Green">+ libxcb                  </span>        1.13  h7f98852_1004                conda-forge/linux-64     400kB
+  <span class=" -Color -Color-Green">+ libzip                  </span>       1.9.2  hc929e4a_1                   conda-forge/linux-64      99kB
+  <span class=" -Color -Color-Green">+ llvmlite                </span>      0.39.1  py310h58363a5_1              conda-forge/linux-64       3MB
+  <span class=" -Color -Color-Green">+ locket                  </span>       1.0.0  pyhd8ed1ab_0                 conda-forge/noarch         8kB
+  <span class=" -Color -Color-Green">+ lz4                     </span>       4.3.2  py310h0cfdcf0_0              conda-forge/linux-64      37kB
+  <span class=" -Color -Color-Green">+ markupsafe              </span>       2.1.2  py310h1fa729e_0              conda-forge/linux-64      23kB
+  <span class=" -Color -Color-Green">+ matplotlib-base         </span>       3.7.1  py310he60537e_0              conda-forge/linux-64       7MB
+  <span class=" -Color -Color-Green">+ mpi                     </span>         1.0  mpich                        conda-forge/linux-64       4kB
+  <span class=" -Color -Color-Green">+ mpi4py                  </span>       3.1.4  py310h37cc914_0              conda-forge/linux-64     631kB
+  <span class=" -Color -Color-Green">+ mpich                   </span>       4.0.3  h846660c_100                 conda-forge/linux-64       6MB
+  <span class=" -Color -Color-Green">+ msgpack-python          </span>       1.0.5  py310hdf3cbec_0              conda-forge/linux-64      85kB
+  <span class=" -Color -Color-Green">+ multidict               </span>       6.0.4  py310h1fa729e_0              conda-forge/linux-64      53kB
+  <span class=" -Color -Color-Green">+ munkres                 </span>       1.1.4  pyh9f0ad1d_0                 conda-forge/noarch        12kB
+  <span class=" -Color -Color-Green">+ nc-time-axis            </span>       1.4.1  pyhd8ed1ab_0                 conda-forge/noarch        19kB
+  <span class=" -Color -Color-Green">+ netcdf-fortran          </span>       4.6.0  mpi_mpich_h1e13492_2         conda-forge/linux-64     598kB
+  <span class=" -Color -Color-Green">+ netcdf4                 </span>       1.6.2  nompi_py310h55e1e36_100      conda-forge/linux-64     490kB
+  <span class=" -Color -Color-Green">+ numba                   </span>      0.56.4  py310h0e39c9b_1              conda-forge/linux-64       4MB
+  <span class=" -Color -Color-Green">+ numcodecs               </span>      0.11.0  py310heca2aa9_1              conda-forge/linux-64     671kB
+  <span class=" -Color -Color-Green">+ numpy                   </span>      1.23.5  py310h53a5b5f_0              conda-forge/linux-64       6MB
+  <span class=" -Color -Color-Green">+ oauthlib                </span>       3.2.2  pyhd8ed1ab_0                 conda-forge/noarch        92kB
+  <span class=" -Color -Color-Green">+ openjpeg                </span>       2.5.0  hfec8fc6_2                   conda-forge/linux-64     352kB
+  <span class=" -Color -Color-Green">+ orc                     </span>       1.8.3  hfdbbad2_0                   conda-forge/linux-64     909kB
+  <span class=" -Color -Color-Green">+ packaging               </span>        23.1  pyhd8ed1ab_0                 conda-forge/noarch        46kB
+  <span class=" -Color -Color-Green">+ pandas                  </span>       2.0.1  py310h7cbd5c2_0              conda-forge/linux-64      12MB
+  <span class=" -Color -Color-Green">+ parallelio              </span>       2.5.9  mpi_mpich_h50e6f33_101       conda-forge/linux-64     357kB
+  <span class=" -Color -Color-Green">+ parquet-cpp             </span>       1.5.1  2                            conda-forge/noarch         3kB
+  <span class=" -Color -Color-Green">+ partd                   </span>       1.4.0  pyhd8ed1ab_0                 conda-forge/noarch        20kB
+  <span class=" -Color -Color-Green">+ pillow                  </span>       9.4.0  py310h023d228_1              conda-forge/linux-64      46MB
+  <span class=" -Color -Color-Green">+ pint                    </span>        0.21  pyhd8ed1ab_0                 conda-forge/noarch       224kB
+  <span class=" -Color -Color-Green">+ pint-xarray             </span>         0.3  pyhd8ed1ab_0                 conda-forge/noarch        33kB
+  <span class=" -Color -Color-Green">+ platformdirs            </span>       3.5.0  pyhd8ed1ab_0                 conda-forge/noarch        19kB
+  <span class=" -Color -Color-Green">+ pooch                   </span>       1.7.0  pyha770c72_3                 conda-forge/noarch        51kB
+  <span class=" -Color -Color-Green">+ proj                    </span>       9.2.0  h8ffa02c_0                   conda-forge/linux-64       3MB
+  <span class=" -Color -Color-Green">+ protobuf                </span>     4.21.12  py310heca2aa9_0              conda-forge/linux-64     324kB
+  <span class=" -Color -Color-Green">+ psutil                  </span>       5.9.5  py310h1fa729e_0              conda-forge/linux-64     362kB
+  <span class=" -Color -Color-Green">+ pthread-stubs           </span>         0.4  h36c2ea0_1001                conda-forge/linux-64       6kB
+  <span class=" -Color -Color-Green">+ pyarrow                 </span>      11.0.0  py310h633f555_14_cpu         conda-forge/linux-64       4MB
+  <span class=" -Color -Color-Green">+ pyasn1                  </span>       0.4.8  py_0                         conda-forge/noarch        54kB
+  <span class=" -Color -Color-Green">+ pyasn1-modules          </span>       0.2.7  py_0                         conda-forge/noarch        61kB
+  <span class=" -Color -Color-Green">+ pydantic                </span>      1.10.7  py310h1fa729e_0              conda-forge/linux-64       2MB
+  <span class=" -Color -Color-Green">+ pyerfa                  </span>     2.0.0.3  py310h0a54255_0              conda-forge/linux-64     355kB
+  <span class=" -Color -Color-Green">+ pyjwt                   </span>       2.6.0  pyhd8ed1ab_0                 conda-forge/noarch        21kB
+  <span class=" -Color -Color-Green">+ pyparsing               </span>       3.0.9  pyhd8ed1ab_0                 conda-forge/noarch        81kB
+  <span class=" -Color -Color-Green">+ pyproj                  </span>       3.5.0  py310hb814896_1              conda-forge/linux-64     448kB
+  <span class=" -Color -Color-Green">+ pyshp                   </span>       2.3.1  pyhd8ed1ab_0                 conda-forge/noarch       964kB
+  <span class=" -Color -Color-Green">+ python-dateutil         </span>       2.8.2  pyhd8ed1ab_0                 conda-forge/noarch       246kB
+  <span class=" -Color -Color-Green">+ python-tzdata           </span>      2023.3  pyhd8ed1ab_0                 conda-forge/noarch       143kB
+  <span class=" -Color -Color-Green">+ pytz                    </span>      2023.3  pyhd8ed1ab_0                 conda-forge/noarch       187kB
+  <span class=" -Color -Color-Green">+ pyu2f                   </span>       0.1.5  pyhd8ed1ab_0                 conda-forge/noarch        32kB
+  <span class=" -Color -Color-Green">+ pyyaml                  </span>         6.0  py310h5764c6d_5              conda-forge/linux-64     176kB
+  <span class=" -Color -Color-Green">+ re2                     </span>  2023.02.02  hcb278e6_0                   conda-forge/linux-64     201kB
+  <span class=" -Color -Color-Green">+ requests-oauthlib       </span>       1.3.1  pyhd8ed1ab_0                 conda-forge/noarch        22kB
+  <span class=" -Color -Color-Green">+ rsa                     </span>         4.9  pyhd8ed1ab_0                 conda-forge/noarch        30kB
+  <span class=" -Color -Color-Green">+ s2n                     </span>      1.3.41  h3358134_0                   conda-forge/linux-64     362kB
+  <span class=" -Color -Color-Green">+ scipy                   </span>      1.10.1  py310h8deb116_0              conda-forge/linux-64      25MB
+  <span class=" -Color -Color-Green">+ shapely                 </span>       2.0.1  py310h056c13c_1              conda-forge/linux-64     423kB
+  <span class=" -Color -Color-Green">+ six                     </span>      1.16.0  pyh6c4a22f_0                 conda-forge/noarch        14kB
+  <span class=" -Color -Color-Green">+ snappy                  </span>      1.1.10  h9fff704_0                   conda-forge/linux-64      39kB
+  <span class=" -Color -Color-Green">+ sortedcontainers        </span>       2.4.0  pyhd8ed1ab_0                 conda-forge/noarch        26kB
+  <span class=" -Color -Color-Green">+ sparse                  </span>      0.14.0  pyhd8ed1ab_0                 conda-forge/noarch        66kB
+  <span class=" -Color -Color-Green">+ sqlite                  </span>      3.40.0  h4ff8645_0                   conda-forge/linux-64     820kB
+  <span class=" -Color -Color-Green">+ tblib                   </span>       1.7.0  pyhd8ed1ab_0                 conda-forge/noarch        15kB
+  <span class=" -Color -Color-Green">+ tornado                 </span>         6.3  py310h1fa729e_0              conda-forge/linux-64     639kB
+  <span class=" -Color -Color-Green">+ typing-extensions       </span>       4.5.0  hd8ed1ab_0                   conda-forge/noarch        10kB
+  <span class=" -Color -Color-Green">+ typing_extensions       </span>       4.5.0  pyha770c72_0                 conda-forge/noarch        31kB
+  <span class=" -Color -Color-Green">+ ucx                     </span>      1.14.0  h3484d09_2                   conda-forge/linux-64      12MB
+  <span class=" -Color -Color-Green">+ unicodedata2            </span>      15.0.0  py310h5764c6d_0              conda-forge/linux-64     512kB
+  <span class=" -Color -Color-Green">+ xarray                  </span>    2023.4.2  pyhd8ed1ab_0                 conda-forge/noarch       664kB
+  <span class=" -Color -Color-Green">+ xarray-datatree         </span>      0.0.12  pyhd8ed1ab_0                 conda-forge/noarch        55kB
+  <span class=" -Color -Color-Green">+ xarrayutils             </span>       1.1.1  pyhd8ed1ab_0                 conda-forge/noarch        54kB
+  <span class=" -Color -Color-Green">+ xesmf                   </span>       0.7.1  pyhd8ed1ab_0                 conda-forge/noarch        41kB
+  <span class=" -Color -Color-Green">+ xmip                    </span>       0.7.1  pyhd8ed1ab_0                 conda-forge/noarch        54kB
+  <span class=" -Color -Color-Green">+ xorg-libxau             </span>       1.0.9  h7f98852_0                   conda-forge/linux-64      13kB
+  <span class=" -Color -Color-Green">+ xorg-libxdmcp           </span>       1.1.3  h7f98852_0                   conda-forge/linux-64      19kB
+  <span class=" -Color -Color-Green">+ xyzservices             </span>    2023.2.0  pyhd8ed1ab_0                 conda-forge/noarch        36kB
+  <span class=" -Color -Color-Green">+ yaml                    </span>       0.2.5  h7f98852_2                   conda-forge/linux-64      89kB
+  <span class=" -Color -Color-Green">+ yarl                    </span>       1.9.1  py310h2372a71_0              conda-forge/linux-64      97kB
+  <span class=" -Color -Color-Green">+ zarr                    </span>      2.14.2  pyhd8ed1ab_0                 conda-forge/noarch       156kB
+  <span class=" -Color -Color-Green">+ zict                    </span>       3.0.0  pyhd8ed1ab_0                 conda-forge/noarch        36kB
+  <span class=" -Color -Color-Green">+ zipp                    </span>      3.15.0  pyhd8ed1ab_0                 conda-forge/noarch        17kB
+  <span class=" -Color -Color-Green">+ zlib                    </span>      1.2.13  h166bdaf_4                   conda-forge/linux-64      94kB
+
+  Change:
+───────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  <span class=" -Color -Color-Red">- openssl                 </span>       3.1.0  h0b41bf4_0                   conda-forge                   
+  <span class=" -Color -Color-Green">+ openssl                 </span>       3.1.0  hd590300_3                   conda-forge/linux-64       3MB
+
+  Downgrade:
+───────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  <span class=" -Color -Color-Red">- charset-normalizer      </span>       3.1.0  pyhd8ed1ab_0                 conda-forge                   
+  <span class=" -Color -Color-Green">+ charset-normalizer      </span>       2.1.1  pyhd8ed1ab_0                 conda-forge/noarch        36kB
+
+  Summary:
+
+  Install: 179 packages
+  Change: 1 packages
+  Downgrade: 1 packages
+
+  Total download: 334MB
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+?25l[+] 0.0s
+Downloading        0%
+Extracting         0%[+] 0.1s
+Downloading  (5)   0%
+Extracting         0%[+] 0.2s
+Downloading  (5)   0%
+Extracting         0%locket                                               8.2kB @  37.3kB/s  0.2s
+fsspec                                             111.5kB @ 473.9kB/s  0.2s
+charset-normalizer                                  36.5kB @ 138.8kB/s  0.3s
+packaging                                           46.1kB @ 175.4kB/s  0.3s
+decorator                                           12.1kB @  45.4kB/s  0.0s
+tblib                                               15.4kB @  56.5kB/s  0.0s
+fastprogress                                        17.1kB @  59.5kB/s  0.3s
+six                                                 14.3kB @  48.0kB/s  0.0s
+[+] 0.3s
+Downloading  (5)   1%
+Extracting   (7)  ⣾  pyparsing                                           81.3kB @ 254.2kB/s  0.1s
+pint                                               224.0kB @ 689.0kB/s  0.1s
+attrs                                               55.2kB @ 167.9kB/s  0.1s
+pyasn1                                              54.3kB @ 161.9kB/s  0.0s
+partd                                               20.5kB @  59.5kB/s  0.0s
+rsa                                                 29.9kB @  83.6kB/s  0.0s
+pyu2f                                               31.9kB @  86.1kB/s  0.1s
+pooch                                               50.9kB @ 134.6kB/s  0.0s
+platformdirs                                        18.6kB @  47.9kB/s  0.1s
+[+] 0.4s
+Downloading  (5)   1%
+Extracting  (17)  ⣾  libutf8proc                                        101.1kB @ 233.0kB/s  0.1s
+snappy                                              38.9kB @  88.8kB/s  0.1s
+cytoolz                                            397.8kB @ 894.9kB/s  0.1s
+mpi                                                  4.2kB @   9.3kB/s  0.1s
+lerc                                               281.8kB @ 567.1kB/s  0.1s
+[+] 0.5s
+Downloading  (5)   1%
+Extracting  (21)  ⣾  markupsafe                                          23.4kB @  46.0kB/s  0.1s
+libpng                                             282.6kB @ 551.3kB/s  0.1s
+unicodedata2                                       512.2kB @ 949.0kB/s  0.1s
+xorg-libxdmcp                                       19.1kB @  34.6kB/s  0.0s
+yaml                                                89.1kB @ 160.2kB/s  0.1s
+libaec                                              34.4kB @  60.6kB/s  0.1s
+libabseil                                            1.2MB @   2.1MB/s  0.1s
+libzip                                              99.4kB @ 169.1kB/s  0.0s
+[+] 0.6s
+Downloading  (5)   2%
+Extracting  (29)  ⣾  freetype                                           625.7kB @ 997.4kB/s  0.1s
+libbrotlidec                                        34.2kB @  53.7kB/s  0.1s
+libevent                                           428.3kB @ 638.0kB/s  0.1s
+google-crc32c                                       24.9kB @  36.1kB/s  0.1s
+[+] 0.7s
+Downloading  (5)   2%
+Extracting  (33)  ⣾  aws-c-cal                                           43.7kB @  59.8kB/s  0.1s
+llvmlite                                             2.6MB @   3.5MB/s  0.1s
+[+] 0.8s
+Downloading  (5)   3%
+Extracting  (36)  ⣾  proj                                                 2.9MB @   3.7MB/s  0.1s
+grpcio                                             753.0kB @ 871.5kB/s  0.1s
+aws-c-io                                           143.9kB @ 164.9kB/s  0.1s
+[+] 0.9s
+Downloading  (5)   5%
+Extracting  (39)  ⣾  brotli                                              18.9kB @  20.4kB/s  0.1s
+libcblas                                            12.8kB @  13.8kB/s  0.1s
+libgrpc                                              5.6MB @   6.0MB/s  0.4s
+libthrift                                            3.6MB @   3.8MB/s  0.3s
+mpi4py                                             631.1kB @ 666.7kB/s  0.1s
+[+] 1.0s
+Downloading  (5)   7%
+Extracting  (44)  ⣾  fonttools                                            2.1MB @   2.1MB/s  0.1s
+aws-c-auth                                          94.7kB @  90.0kB/s  0.1s
+parallelio                                         356.6kB @ 337.6kB/s  0.1s
+netcdf-fortran                                     598.1kB @ 565.3kB/s  0.1s
+aws-c-s3                                            76.2kB @  70.9kB/s  0.1s
+[+] 1.1s
+Downloading  (5)   8%
+Extracting  (49)  ⣾  netcdf4                                            490.3kB @ 434.5kB/s  0.1s
+googleapis-common-protos                           117.1kB @ 103.1kB/s  0.1s
+[+] 1.2s
+Downloading  (5)   9%
+Extracting  (49)  ⣾  zarr                                               155.6kB @ 127.9kB/s  0.1s
+aws-sdk-cpp                                          4.2MB @   3.4MB/s  0.2s
+xarray                                             664.4kB @ 532.2kB/s  0.1s
+[+] 1.3s
+Downloading  (5)  10%
+Extracting  (52)  ⣾  distributed                                        765.1kB @ 578.8kB/s  0.1s
+cf_xarray                                          185.2kB @ 139.2kB/s  0.1s
+aiohttp                                            444.7kB @ 324.2kB/s  0.1s
+[+] 1.4s
+Downloading  (5)  12%
+Extracting  (55)  ⣾  dask                                                 7.4kB @   5.3kB/s  0.1s
+[+] 1.5s
+Downloading  (5)  13%
+Extracting  (56)  ⣾  xarrayutils                                         54.4kB @  36.2kB/s  0.2s
+intake-esm                                          31.1kB @  20.4kB/s  0.2s
+asciitree                                            6.2kB @   4.0kB/s  0.2s
+entrypoints                                          9.2kB @   5.9kB/s  0.1s
+sortedcontainers                                    26.3kB @  16.7kB/s  0.1s
+typing_extensions                                   31.3kB @  19.7kB/s  0.1s
+[+] 1.6s
+Downloading  (5)  16%
+Extracting  (62)  ⣾  pytz                                               186.5kB @ 116.1kB/s  0.1s
+blinker                                             18.2kB @  11.1kB/s  0.1s
+typing-extensions                                    9.7kB @   5.8kB/s  0.1s
+[+] 1.7s
+Downloading  (5)  18%
+Extracting  (65)  ⣾  fasteners                                           20.0kB @  11.6kB/s  0.2s
+importlib_metadata                                   9.4kB @   5.4kB/s  0.1s
+geos                                                 1.5MB @ 874.5kB/s  0.1s
+[+] 1.8s
+Downloading  (5)  21%
+Extracting  (68)  ⣾  msgpack-python                                      84.8kB @  46.8kB/s  0.1s
+psutil                                             362.3kB @ 199.8kB/s  0.1s
+tornado                                            638.9kB @ 345.7kB/s  0.1s
+[+] 1.9s
+Downloading  (5)  25%
+Extracting  (71)  ⣾  jpeg                                               240.4kB @ 125.6kB/s  0.1s
+libwebp-base                                       356.8kB @ 186.3kB/s  0.1s
+libbrotlicommon                                     67.2kB @  35.1kB/s  0.1s
+libarrow                                            27.1MB @  13.7MB/s  0.9s
+sqlite                                             820.2kB @ 414.6kB/s  0.1s
+pthread-stubs                                        5.6kB @   2.8kB/s  0.1s
+xorg-libxau                                         13.4kB @   6.8kB/s  0.1s
+esmf                                                28.7MB @  14.4MB/s  1.0s
+[+] 2.0s
+Downloading  (5)  28%
+Extracting  (79)  ⣾  libgfortran-ng                                      22.9kB @  11.3kB/s  0.0s
+libtiff                                            406.7kB @ 200.7kB/s  0.0s
+glog                                               114.3kB @  56.2kB/s  0.1s
+hdf4                                               973.8kB @ 476.4kB/s  0.1s
+pyyaml                                             176.3kB @  86.1kB/s  0.1s
+lcms2                                              240.8kB @ 115.5kB/s  0.1s
+[+] 2.1s
+Downloading  (5)  29%
+Extracting  (85)  ⣾  cftime                                             245.5kB @ 114.6kB/s  0.1s
+aws-c-event-stream                                  53.8kB @  25.0kB/s  0.1s
+[+] 2.2s
+Downloading  (5)  29%
+Extracting  (86)  ⣾  [+] 2.3s
+Downloading  (5)  30%
+Extracting  (85)  ⣾  aws-c-http                                         192.3kB @  84.8kB/s  0.2s
+numba                                                4.0MB @   1.7MB/s  0.2s
+aws-crt-cpp                                        318.0kB @ 135.4kB/s  0.2s
+[+] 2.4s
+Downloading  (5)  32%
+Extracting  (88)  ⣾  esmpy                                              180.0kB @  74.2kB/s  0.1s
+jinja2                                             101.4kB @  41.6kB/s  0.1s
+[+] 2.5s
+Downloading  (5)  33%
+Extracting  (90)  ⣾  arrow-cpp                                           35.4kB @  14.1kB/s  0.2s
+sparse                                              65.7kB @  25.6kB/s  0.1s
+nc-time-axis                                        18.6kB @   7.2kB/s  0.1s
+[+] 2.6s
+Downloading  (5)  34%
+Extracting  (93)  ⣾  [+] 2.7s
+Downloading  (5)  35%
+Extracting  (93)  ⣾  xmip                                                53.8kB @  19.8kB/s  0.2s
+google-api-core                                     77.2kB @  28.4kB/s  0.2s
+google-auth-oauthlib                                21.0kB @   7.7kB/s  0.2s
+[+] 2.8s
+Downloading  (5)  36%
+Extracting  (96)  ⣾  zipp                                                17.2kB @   6.1kB/s  0.1s
+gcsfs                                               29.7kB @  10.4kB/s  0.1s
+cloudpickle                                         27.9kB @   9.8kB/s  0.1s
+cachetools                                          14.3kB @   5.0kB/s  0.0s
+[+] 2.9s
+Downloading  (5)   40%
+Extracting  (100)  ⣾  python-dateutil                                    246.0kB @  84.1kB/s  0.1s
+pyasn1-modules                                      61.3kB @  20.7kB/s  0.1s
+[+] 3.0s
+Downloading  (7)   41%
+Extracting  (102)  ⣾  lz4                                                 36.9kB @  12.4kB/s  0.1s
+zlib                                                94.1kB @  31.6kB/s  0.1s
+kiwisolver                                          77.4kB @  25.6kB/s  0.0s
+curl                                                88.1kB @  28.6kB/s  0.1s
+libgfortran5                                         1.8MB @ 595.6kB/s  0.1s
+[+] 3.1s
+Downloading  (6)   44%
+Extracting  (105)  ⣾  aws-c-common                                       199.9kB @  64.6kB/s  0.1s
+yarl                                                96.7kB @  30.7kB/s  0.1s
+libgoogle-cloud                                     37.9MB @  12.0MB/s  1.1s
+[+] 3.2s
+Downloading  (5)   47%
+Extracting  (110)  ⣾  orc                                                908.5kB @ 283.6kB/s  0.1s
+brotli-bin                                          20.1kB @   6.3kB/s  0.0s
+aws-c-sdkutils                                      53.5kB @  16.5kB/s  0.1s
+liblapack                                           12.8kB @   3.9kB/s  0.1s
+[+] 3.3s
+Downloading  (5)   47%
+Extracting  (114)  ⣾  contourpy                                          215.7kB @  65.4kB/s  0.1s
+aws-c-mqtt                                         143.9kB @  42.9kB/s  0.1s
+cartopy                                              1.6MB @ 474.5kB/s  0.1s
+[+] 3.4s
+Downloading  (5)   49%
+Extracting  (117)  ⣾  shapely                                            422.6kB @ 123.6kB/s  0.1s
+[+] 3.5s
+Downloading  (5)   50%
+Extracting  (116)  ⣾  pint-xarray                                         33.4kB @   9.5kB/s  0.2s
+dask-core                                          841.9kB @ 237.3kB/s  0.2s
+google-cloud-core                                   28.3kB @   7.9kB/s  0.1s
+[+] 3.6s
+Downloading  (6)   52%
+Extracting  (118)  ⣾  click                                               76.0kB @  21.1kB/s  0.0s
+cycler                                              10.3kB @   2.8kB/s  0.0s
+python-tzdata                                      143.1kB @  39.1kB/s  0.1s
+pyarrow                                              4.0MB @   1.1MB/s  0.3s
+[+] 3.7s
+Downloading  (6)   54%
+Extracting  (122)  ⣾  oauthlib                                            91.9kB @  24.9kB/s  0.2s
+[+] 3.8s
+Downloading  (5)   54%
+Extracting  (124)  ⣾  re2                                                201.5kB @  52.8kB/s  0.2s
+libcrc32c                                           20.4kB @   5.3kB/s  0.2s
+openssl                                              2.7MB @ 691.5kB/s  0.2s
+[+] 3.9s
+Downloading  (5)   56%
+Extracting  (127)  ⣾  libbrotlienc                                       295.2kB @  75.4kB/s  0.1s
+[+] 4.0s
+Downloading  (5)   59%
+Extracting  (128)  ⣾  libnuma                                             41.1kB @  10.3kB/s  0.2s
+mpich                                                6.3MB @   1.6MB/s  0.9s
+libblas                                             12.9kB @   3.2kB/s  0.1s
+[+] 4.1s
+Downloading  (5)   61%
+Extracting  (130)  ⣾  [+] 4.2s
+Downloading  (5)   64%
+Extracting  (131)  ⣾  numcodecs                                          670.6kB @ 156.0kB/s  0.2s
+[+] 4.3s
+Downloading  (5)   65%
+Extracting  (131)  ⣾  hdf5                                                 3.4MB @ 798.5kB/s  0.4s
+[+] 4.4s
+Downloading  (5)   68%
+Extracting  (133)  ⣾  google-resumable-media                              43.8kB @   9.8kB/s  0.1s
+[+] 4.5s
+Downloading  (5)   71%
+Extracting  (134)  ⣾  pillow                                              46.5MB @  10.4MB/s  2.5s
+libopenblas                                         10.6MB @   2.3MB/s  0.6s
+matplotlib-base                                      6.8MB @   1.5MB/s  0.2s
+[+] 4.6s
+Downloading  (5)   73%
+Extracting  (136)  ⣾  xarray-datatree                                     55.2kB @  12.0kB/s  0.2s
+intake                                             188.1kB @  40.6kB/s  0.1s
+xyzservices                                         35.7kB @   7.7kB/s  0.1s
+pyjwt                                               21.4kB @   4.6kB/s  0.1s
+[+] 4.7s
+Downloading  (5)   74%
+Extracting  (140)  ⣾  libdeflate                                          65.0kB @  13.9kB/s  0.1s
+requests-oauthlib                                   22.2kB @   4.7kB/s  0.1s
+gflags                                             116.5kB @  24.5kB/s  0.1s
+libprotobuf                                          2.2MB @ 463.0kB/s  0.1s
+[+] 4.8s
+Downloading  (5)   76%
+Extracting  (144)  ⣾  aws-checksums                                       50.2kB @  10.3kB/s  0.2s
+pyproj                                             447.6kB @  92.0kB/s  0.1s
+aiosignal                                           12.7kB @   2.6kB/s  0.1s
+libllvm11                                           30.2MB @   6.2MB/s  1.0s
+[+] 4.9s
+Downloading  (5)   78%
+Extracting  (147)  ⣾  frozenlist                                          45.3kB @   9.2kB/s  0.0s
+libnetcdf                                            1.6MB @ 315.4kB/s  0.2s
+google-auth                                         99.4kB @  20.1kB/s  0.1s
+google-cloud-storage                                82.3kB @  16.6kB/s  0.1s
+libxcb                                             399.9kB @  80.2kB/s  0.1s
+xesmf                                               40.6kB @   8.1kB/s  0.1s
+[+] 5.0s
+Downloading  (5)   79%
+Extracting  (151)  ⣾  [+] 5.1s
+Downloading  (6)   80%
+Extracting  (153)  ⣾  appdirs                                             12.8kB @   2.5kB/s  0.1s
+s2n                                                362.1kB @  71.3kB/s  0.2s
+async-timeout                                        9.3kB @   1.8kB/s  0.1s
+[+] 5.2s
+Downloading  (5)   84%
+Extracting  (156)  ⣾  protobuf                                           323.5kB @  62.5kB/s  0.1s
+bokeh                                                5.6MB @   1.1MB/s  0.2s
+numpy                                                5.8MB @   1.1MB/s  0.3s
+[+] 5.3s
+Downloading  (6)   86%
+Extracting  (158)  ⣾  zict                                                36.3kB @   6.9kB/s  0.1s
+pydantic                                             2.1MB @ 400.4kB/s  0.3s
+pandas                                              12.2MB @   2.3MB/s  0.4s
+multidict                                           52.8kB @   9.8kB/s  0.1s
+aws-c-compression                                   18.9kB @   3.5kB/s  0.1s
+[+] 5.4s
+Downloading  (5)   88%
+Extracting  (163)  ⣾  parquet-cpp                                          3.1kB @ 576.0 B/s  0.0s
+importlib-metadata                                  25.8kB @   4.8kB/s  0.0s
+munkres                                             12.5kB @   2.3kB/s  0.1s
+[+] 5.5s
+Downloading  (5)   90%
+Extracting  (167)  ⣾  pyshp                                              964.1kB @ 175.0kB/s  0.1s
+openjpeg                                           352.0kB @  63.4kB/s  0.1s
+[+] 5.6s
+Downloading  (4)   92%
+Extracting  (168)  ⣾  ucx                                                 11.6MB @   2.1MB/s  0.2s
+pyerfa                                             354.9kB @  63.2kB/s  0.2s
+[+] 5.7s
+Downloading  (2)   96%
+Extracting  (170)  ⣾  [+] 5.8s
+Downloading  (2)   98%
+Extracting  (170)  ⣾  [+] 5.9s
+Downloading  (2)   99%
+Extracting  (170)  ⣾  scipy                                               24.7MB @   4.2MB/s  0.7s
+astropy                                              7.9MB @   1.3MB/s  0.6s
+[+] 6.0s
+Downloading       100%
+Extracting  (172)  ⣾  [+] 6.1s
+Downloading       100%
+Extracting  (171)  ⣾  [+] 6.2s
+Downloading       100%
+Extracting  (171)  ⣾  [+] 6.3s
+Downloading       100%
+Extracting  (171)  ⣾  [+] 6.4s
+Downloading       100%
+Extracting  (170)  ⣾  [+] 6.5s
+Downloading       100%
+Extracting  (170)  ⣾  [+] 6.6s
+Downloading       100%
+Extracting  (169)  ⣾  [+] 6.7s
+Downloading       100%
+Extracting  (168)  ⣾  [+] 6.8s
+Downloading       100%
+Extracting  (168)  ⣾  [+] 6.9s
+Downloading       100%
+Extracting  (168)  ⣾  [+] 7.0s
+Downloading       100%
+Extracting  (168)  ⣾  [+] 7.1s
+Downloading       100%
+Extracting  (167)  ⣾  [+] 7.2s
+Downloading       100%
+Extracting  (167)  ⣾  [+] 7.3s
+Downloading       100%
+Extracting  (167)  ⣾  [+] 7.4s
+Downloading       100%
+Extracting  (166)  ⣾  [+] 7.5s
+Downloading       100%
+Extracting  (166)  ⣾  [+] 7.6s
+Downloading       100%
+Extracting  (166)  ⣾  [+] 7.7s
+Downloading       100%
+Extracting  (166)  ⣾  [+] 7.8s
+Downloading       100%
+Extracting  (166)  ⣾  [+] 7.9s
+Downloading       100%
+Extracting  (165)  ⣾  [+] 8.0s
+Downloading       100%
+Extracting  (164)  ⣾  [+] 8.1s
+Downloading       100%
+Extracting  (164)  ⣾  [+] 8.2s
+Downloading       100%
+Extracting  (164)  ⣾  [+] 8.3s
+Downloading       100%
+Extracting  (163)  ⣾  [+] 8.4s
+Downloading       100%
+Extracting  (163)  ⣾  [+] 8.5s
+Downloading       100%
+Extracting  (162)  ⣾  [+] 8.6s
+Downloading       100%
+Extracting  (162)  ⣾  [+] 8.7s
+Downloading       100%
+Extracting  (162)  ⣾  [+] 8.8s
+Downloading       100%
+Extracting  (162)  ⣾  [+] 8.9s
+Downloading       100%
+Extracting  (162)  ⣾  [+] 9.0s
+Downloading       100%
+Extracting  (162)  ⣾  [+] 9.1s
+Downloading       100%
+Extracting  (161)  ⣾  [+] 9.2s
+Downloading       100%
+Extracting  (161)  ⣾  [+] 9.3s
+Downloading       100%
+Extracting  (160)  ⣾  [+] 9.4s
+Downloading       100%
+Extracting  (160)  ⣾  [+] 9.5s
+Downloading       100%
+Extracting  (159)  ⣾  [+] 9.6s
+Downloading       100%
+Extracting  (159)  ⣾  [+] 9.7s
+Downloading       100%
+Extracting  (158)  ⣾  [+] 9.8s
+Downloading       100%
+Extracting  (158)  ⣾  [+] 9.9s
+Downloading       100%
+Extracting  (157)  ⣾  [+] 10.0s
+Downloading       100%
+Extracting  (157)  ⣾  [+] 10.1s
+Downloading       100%
+Extracting  (156)  ⣾  [+] 10.2s
+Downloading       100%
+Extracting  (156)  ⣾  [+] 10.3s
+Downloading       100%
+Extracting  (156)  ⣾  [+] 10.4s
+Downloading       100%
+Extracting  (156)  ⣾  [+] 10.5s
+Downloading       100%
+Extracting  (155)  ⣾  [+] 10.6s
+Downloading       100%
+Extracting  (155)  ⣾  [+] 10.7s
+Downloading       100%
+Extracting  (154)  ⣾  [+] 10.8s
+Downloading       100%
+Extracting  (154)  ⣾  [+] 10.9s
+Downloading       100%
+Extracting  (153)  ⣾  [+] 11.0s
+Downloading       100%
+Extracting  (153)  ⣾  [+] 11.1s
+Downloading       100%
+Extracting  (152)  ⣾  [+] 11.2s
+Downloading       100%
+Extracting  (151)  ⣾  [+] 11.3s
+Downloading       100%
+Extracting  (151)  ⣾  [+] 11.4s
+Downloading       100%
+Extracting  (151)  ⣾  [+] 11.5s
+Downloading       100%
+Extracting  (150)  ⣾  [+] 11.6s
+Downloading       100%
+Extracting  (149)  ⣾  [+] 11.7s
+Downloading       100%
+Extracting  (149)  ⣾  [+] 11.8s
+Downloading       100%
+Extracting  (149)  ⣾  [+] 11.9s
+Downloading       100%
+Extracting  (148)  ⣾  [+] 12.0s
+Downloading       100%
+Extracting  (147)  ⣾  [+] 12.1s
+Downloading       100%
+Extracting  (147)  ⣾  [+] 12.2s
+Downloading       100%
+Extracting  (147)  ⣾  [+] 12.3s
+Downloading       100%
+Extracting  (147)  ⣾  [+] 12.4s
+Downloading       100%
+Extracting  (146)  ⣾  [+] 12.5s
+Downloading       100%
+Extracting  (145)  ⣾  [+] 12.6s
+Downloading       100%
+Extracting  (145)  ⣾  [+] 12.7s
+Downloading       100%
+Extracting  (145)  ⣾  [+] 12.8s
+Downloading       100%
+Extracting  (144)  ⣾  [+] 12.9s
+Downloading       100%
+Extracting  (144)  ⣾  [+] 13.0s
+Downloading       100%
+Extracting  (144)  ⣾  [+] 13.1s
+Downloading       100%
+Extracting  (144)  ⣾  [+] 13.2s
+Downloading       100%
+Extracting  (144)  ⣾  [+] 13.3s
+Downloading       100%
+Extracting  (143)  ⣾  [+] 13.4s
+Downloading       100%
+Extracting  (143)  ⣾  [+] 13.5s
+Downloading       100%
+Extracting  (143)  ⣾  [+] 13.6s
+Downloading       100%
+Extracting  (143)  ⣾  [+] 13.7s
+Downloading       100%
+Extracting  (143)  ⣾  [+] 13.8s
+Downloading       100%
+Extracting  (141)  ⣾  [+] 13.9s
+Downloading       100%
+Extracting  (141)  ⣾  [+] 14.0s
+Downloading       100%
+Extracting  (141)  ⣾  [+] 14.1s
+Downloading       100%
+Extracting  (140)  ⣾  [+] 14.2s
+Downloading       100%
+Extracting  (139)  ⣾  [+] 14.3s
+Downloading       100%
+Extracting  (139)  ⣾  [+] 14.4s
+Downloading       100%
+Extracting  (139)  ⣾  [+] 14.5s
+Downloading       100%
+Extracting  (138)  ⣾  [+] 14.6s
+Downloading       100%
+Extracting  (138)  ⣾  [+] 14.7s
+Downloading       100%
+Extracting  (138)  ⣾  [+] 14.8s
+Downloading       100%
+Extracting  (138)  ⣾  [+] 14.9s
+Downloading       100%
+Extracting  (138)  ⣾  [+] 15.0s
+Downloading       100%
+Extracting  (137)  ⣾  [+] 15.1s
+Downloading       100%
+Extracting  (137)  ⣾  [+] 15.2s
+Downloading       100%
+Extracting  (137)  ⣾  [+] 15.3s
+Downloading       100%
+Extracting  (137)  ⣾  [+] 15.4s
+Downloading       100%
+Extracting  (137)  ⣾  [+] 15.5s
+Downloading       100%
+Extracting  (136)  ⣾  [+] 15.6s
+Downloading       100%
+Extracting  (136)  ⣾  [+] 15.7s
+Downloading       100%
+Extracting  (136)  ⣾  [+] 15.8s
+Downloading       100%
+Extracting  (136)  ⣾  [+] 15.9s
+Downloading       100%
+Extracting  (136)  ⣾  [+] 16.0s
+Downloading       100%
+Extracting  (136)  ⣾  [+] 16.1s
+Downloading       100%
+Extracting  (136)  ⣾  [+] 16.2s
+Downloading       100%
+Extracting  (136)  ⣾  [+] 16.3s
+Downloading       100%
+Extracting  (136)  ⣾  [+] 16.4s
+Downloading       100%
+Extracting  (136)  ⣾  [+] 16.5s
+Downloading       100%
+Extracting  (136)  ⣾  [+] 16.6s
+Downloading       100%
+Extracting  (135)  ⣾  [+] 16.7s
+Downloading       100%
+Extracting  (135)  ⣾  [+] 16.8s
+Downloading       100%
+Extracting  (135)  ⣾  [+] 16.9s
+Downloading       100%
+Extracting  (135)  ⣾  [+] 17.0s
+Downloading       100%
+Extracting  (134)  ⣾  [+] 17.1s
+Downloading       100%
+Extracting  (134)  ⣾  [+] 17.2s
+Downloading       100%
+Extracting  (134)  ⣾  [+] 17.3s
+Downloading       100%
+Extracting  (134)  ⣾  [+] 17.4s
+Downloading       100%
+Extracting  (134)  ⣾  [+] 17.5s
+Downloading       100%
+Extracting  (133)  ⣾  [+] 17.6s
+Downloading       100%
+Extracting  (133)  ⣾  [+] 17.7s
+Downloading       100%
+Extracting  (133)  ⣾  [+] 17.8s
+Downloading       100%
+Extracting  (132)  ⣾  [+] 17.9s
+Downloading       100%
+Extracting  (132)  ⣾  [+] 18.0s
+Downloading       100%
+Extracting  (131)  ⣾  [+] 18.1s
+Downloading       100%
+Extracting  (131)  ⣾  [+] 18.2s
+Downloading       100%
+Extracting  (131)  ⣾  [+] 18.3s
+Downloading       100%
+Extracting  (131)  ⣾  [+] 18.4s
+Downloading       100%
+Extracting  (131)  ⣾  [+] 18.5s
+Downloading       100%
+Extracting  (131)  ⣾  [+] 18.6s
+Downloading       100%
+Extracting  (131)  ⣾  [+] 18.7s
+Downloading       100%
+Extracting  (130)  ⣾  [+] 18.8s
+Downloading       100%
+Extracting  (130)  ⣾  [+] 18.9s
+Downloading       100%
+Extracting  (129)  ⣾  [+] 19.0s
+Downloading       100%
+Extracting  (129)  ⣾  [+] 19.1s
+Downloading       100%
+Extracting  (129)  ⣾  [+] 19.2s
+Downloading       100%
+Extracting  (129)  ⣾  [+] 19.3s
+Downloading       100%
+Extracting  (128)  ⣾  [+] 19.4s
+Downloading       100%
+Extracting  (128)  ⣾  [+] 19.5s
+Downloading       100%
+Extracting  (128)  ⣾  [+] 19.6s
+Downloading       100%
+Extracting  (128)  ⣾  [+] 19.7s
+Downloading       100%
+Extracting  (127)  ⣾  [+] 19.8s
+Downloading       100%
+Extracting  (127)  ⣾  [+] 19.9s
+Downloading       100%
+Extracting  (127)  ⣾  [+] 20.0s
+Downloading       100%
+Extracting  (126)  ⣾  [+] 20.1s
+Downloading       100%
+Extracting  (126)  ⣾  [+] 20.2s
+Downloading       100%
+Extracting  (126)  ⣾  [+] 20.3s
+Downloading       100%
+Extracting  (125)  ⣾  [+] 20.4s
+Downloading       100%
+Extracting  (125)  ⣾  [+] 20.5s
+Downloading       100%
+Extracting  (125)  ⣾  [+] 20.6s
+Downloading       100%
+Extracting  (125)  ⣾  [+] 20.7s
+Downloading       100%
+Extracting  (125)  ⣾  [+] 20.8s
+Downloading       100%
+Extracting  (124)  ⣾  [+] 20.9s
+Downloading       100%
+Extracting  (124)  ⣾  [+] 21.0s
+Downloading       100%
+Extracting  (124)  ⣾  [+] 21.1s
+Downloading       100%
+Extracting  (124)  ⣾  [+] 21.2s
+Downloading       100%
+Extracting  (124)  ⣾  [+] 21.3s
+Downloading       100%
+Extracting  (124)  ⣾  [+] 21.4s
+Downloading       100%
+Extracting  (124)  ⣾  [+] 21.5s
+Downloading       100%
+Extracting  (123)  ⣾  [+] 21.6s
+Downloading       100%
+Extracting  (123)  ⣾  [+] 21.7s
+Downloading       100%
+Extracting  (123)  ⣾  [+] 21.8s
+Downloading       100%
+Extracting  (123)  ⣾  [+] 21.9s
+Downloading       100%
+Extracting  (123)  ⣾  [+] 22.0s
+Downloading       100%
+Extracting  (123)  ⣾  [+] 22.1s
+Downloading       100%
+Extracting  (123)  ⣾  [+] 22.2s
+Downloading       100%
+Extracting  (122)  ⣾  [+] 22.3s
+Downloading       100%
+Extracting  (122)  ⣾  [+] 22.4s
+Downloading       100%
+Extracting  (122)  ⣾  [+] 22.5s
+Downloading       100%
+Extracting  (122)  ⣾  [+] 22.6s
+Downloading       100%
+Extracting  (122)  ⣾  [+] 22.7s
+Downloading       100%
+Extracting  (122)  ⣾  [+] 22.8s
+Downloading       100%
+Extracting  (122)  ⣾  [+] 22.9s
+Downloading       100%
+Extracting  (121)  ⣾  [+] 23.0s
+Downloading       100%
+Extracting  (121)  ⣾  [+] 23.1s
+Downloading       100%
+Extracting  (121)  ⣾  [+] 23.2s
+Downloading       100%
+Extracting  (121)  ⣾  [+] 23.3s
+Downloading       100%
+Extracting  (121)  ⣾  [+] 23.4s
+Downloading       100%
+Extracting  (121)  ⣾  [+] 23.5s
+Downloading       100%
+Extracting  (120)  ⣾  [+] 23.6s
+Downloading       100%
+Extracting  (120)  ⣾  [+] 23.7s
+Downloading       100%
+Extracting  (120)  ⣾  [+] 23.8s
+Downloading       100%
+Extracting  (120)  ⣾  [+] 23.9s
+Downloading       100%
+Extracting  (120)  ⣾  [+] 24.0s
+Downloading       100%
+Extracting  (119)  ⣾  [+] 24.1s
+Downloading       100%
+Extracting  (119)  ⣾  [+] 24.2s
+Downloading       100%
+Extracting  (119)  ⣾  [+] 24.3s
+Downloading       100%
+Extracting  (118)  ⣾  [+] 24.4s
+Downloading       100%
+Extracting  (118)  ⣾  [+] 24.5s
+Downloading       100%
+Extracting  (118)  ⣾  [+] 24.6s
+Downloading       100%
+Extracting  (118)  ⣾  [+] 24.7s
+Downloading       100%
+Extracting  (117)  ⣾  [+] 24.8s
+Downloading       100%
+Extracting  (117)  ⣾  [+] 24.9s
+Downloading       100%
+Extracting  (117)  ⣾  [+] 25.0s
+Downloading       100%
+Extracting  (117)  ⣾  [+] 25.1s
+Downloading       100%
+Extracting  (117)  ⣾  [+] 25.2s
+Downloading       100%
+Extracting  (117)  ⣾  [+] 25.3s
+Downloading       100%
+Extracting  (117)  ⣾  [+] 25.4s
+Downloading       100%
+Extracting  (116)  ⣾  [+] 25.5s
+Downloading       100%
+Extracting  (116)  ⣾  [+] 25.6s
+Downloading       100%
+Extracting  (116)  ⣾  [+] 25.7s
+Downloading       100%
+Extracting  (116)  ⣾  [+] 25.8s
+Downloading       100%
+Extracting  (116)  ⣾  [+] 25.9s
+Downloading       100%
+Extracting  (116)  ⣾  [+] 26.0s
+Downloading       100%
+Extracting  (115)  ⣾  [+] 26.1s
+Downloading       100%
+Extracting  (115)  ⣾  [+] 26.2s
+Downloading       100%
+Extracting  (115)  ⣾  [+] 26.3s
+Downloading       100%
+Extracting  (115)  ⣾  [+] 26.4s
+Downloading       100%
+Extracting  (115)  ⣾  [+] 26.5s
+Downloading       100%
+Extracting  (115)  ⣾  [+] 26.6s
+Downloading       100%
+Extracting  (114)  ⣾  [+] 26.7s
+Downloading       100%
+Extracting  (114)  ⣾  [+] 26.8s
+Downloading       100%
+Extracting  (113)  ⣾  [+] 26.9s
+Downloading       100%
+Extracting  (113)  ⣾  [+] 27.0s
+Downloading       100%
+Extracting  (113)  ⣾  [+] 27.1s
+Downloading       100%
+Extracting  (113)  ⣾  [+] 27.2s
+Downloading       100%
+Extracting  (113)  ⣾  [+] 27.3s
+Downloading       100%
+Extracting  (113)  ⣾  [+] 27.4s
+Downloading       100%
+Extracting  (113)  ⣾  [+] 27.5s
+Downloading       100%
+Extracting  (112)  ⣾  [+] 27.6s
+Downloading       100%
+Extracting  (112)  ⣾  [+] 27.7s
+Downloading       100%
+Extracting  (112)  ⣾  [+] 27.8s
+Downloading       100%
+Extracting  (112)  ⣾  [+] 27.9s
+Downloading       100%
+Extracting  (111)  ⣾  [+] 28.0s
+Downloading       100%
+Extracting  (111)  ⣾  [+] 28.1s
+Downloading       100%
+Extracting  (111)  ⣾  [+] 28.2s
+Downloading       100%
+Extracting  (110)  ⣾  [+] 28.3s
+Downloading       100%
+Extracting  (110)  ⣾  [+] 28.4s
+Downloading       100%
+Extracting  (110)  ⣾  [+] 28.5s
+Downloading       100%
+Extracting  (109)  ⣾  [+] 28.6s
+Downloading       100%
+Extracting  (109)  ⣾  [+] 28.7s
+Downloading       100%
+Extracting  (108)  ⣾  [+] 28.8s
+Downloading       100%
+Extracting  (108)  ⣾  [+] 28.9s
+Downloading       100%
+Extracting  (108)  ⣾  [+] 29.0s
+Downloading       100%
+Extracting  (108)  ⣾  [+] 29.1s
+Downloading       100%
+Extracting  (107)  ⣾  [+] 29.2s
+Downloading       100%
+Extracting  (106)  ⣾  [+] 29.3s
+Downloading       100%
+Extracting  (106)  ⣾  [+] 29.4s
+Downloading       100%
+Extracting  (106)  ⣾  [+] 29.5s
+Downloading       100%
+Extracting  (105)  ⣾  [+] 29.6s
+Downloading       100%
+Extracting  (105)  ⣾  [+] 29.7s
+Downloading       100%
+Extracting  (104)  ⣾  [+] 29.8s
+Downloading       100%
+Extracting  (103)  ⣾  [+] 29.9s
+Downloading       100%
+Extracting  (103)  ⣾  [+] 30.0s
+Downloading       100%
+Extracting  (103)  ⣾  [+] 30.1s
+Downloading       100%
+Extracting  (102)  ⣾  [+] 30.2s
+Downloading       100%
+Extracting  (101)  ⣾  [+] 30.3s
+Downloading       100%
+Extracting  (101)  ⣾  [+] 30.4s
+Downloading       100%
+Extracting  (101)  ⣾  [+] 30.5s
+Downloading       100%
+Extracting  (100)  ⣾  [+] 30.6s
+Downloading      100%
+Extracting  (99)  ⣾  [+] 30.7s
+Downloading      100%
+Extracting  (99)  ⣾  [+] 30.8s
+Downloading      100%
+Extracting  (99)  ⣾  [+] 30.9s
+Downloading      100%
+Extracting  (98)  ⣾  [+] 31.0s
+Downloading      100%
+Extracting  (97)  ⣾  [+] 31.1s
+Downloading      100%
+Extracting  (97)  ⣾  [+] 31.2s
+Downloading      100%
+Extracting  (97)  ⣾  [+] 31.3s
+Downloading      100%
+Extracting  (96)  ⣾  [+] 31.4s
+Downloading      100%
+Extracting  (96)  ⣾  [+] 31.5s
+Downloading      100%
+Extracting  (96)  ⣾  [+] 31.6s
+Downloading      100%
+Extracting  (95)  ⣾  [+] 31.7s
+Downloading      100%
+Extracting  (95)  ⣾  [+] 31.8s
+Downloading      100%
+Extracting  (94)  ⣾  [+] 31.9s
+Downloading      100%
+Extracting  (94)  ⣾  [+] 32.0s
+Downloading      100%
+Extracting  (94)  ⣾  [+] 32.1s
+Downloading      100%
+Extracting  (93)  ⣾  [+] 32.2s
+Downloading      100%
+Extracting  (92)  ⣾  [+] 32.3s
+Downloading      100%
+Extracting  (92)  ⣾  [+] 32.4s
+Downloading      100%
+Extracting  (92)  ⣾  [+] 32.5s
+Downloading      100%
+Extracting  (91)  ⣾  [+] 32.6s
+Downloading      100%
+Extracting  (90)  ⣾  [+] 32.7s
+Downloading      100%
+Extracting  (90)  ⣾  [+] 32.8s
+Downloading      100%
+Extracting  (90)  ⣾  [+] 32.9s
+Downloading      100%
+Extracting  (89)  ⣾  [+] 33.0s
+Downloading      100%
+Extracting  (89)  ⣾  [+] 33.1s
+Downloading      100%
+Extracting  (89)  ⣾  [+] 33.2s
+Downloading      100%
+Extracting  (89)  ⣾  [+] 33.3s
+Downloading      100%
+Extracting  (88)  ⣾  [+] 33.4s
+Downloading      100%
+Extracting  (88)  ⣾  [+] 33.5s
+Downloading      100%
+Extracting  (88)  ⣾  [+] 33.6s
+Downloading      100%
+Extracting  (88)  ⣾  [+] 33.7s
+Downloading      100%
+Extracting  (87)  ⣾  [+] 33.8s
+Downloading      100%
+Extracting  (86)  ⣾  [+] 33.9s
+Downloading      100%
+Extracting  (86)  ⣾  [+] 34.0s
+Downloading      100%
+Extracting  (86)  ⣾  [+] 34.1s
+Downloading      100%
+Extracting  (86)  ⣾  [+] 34.2s
+Downloading      100%
+Extracting  (84)  ⣾  [+] 34.3s
+Downloading      100%
+Extracting  (84)  ⣾  [+] 34.4s
+Downloading      100%
+Extracting  (84)  ⣾  [+] 34.5s
+Downloading      100%
+Extracting  (84)  ⣾  [+] 34.6s
+Downloading      100%
+Extracting  (83)  ⣾  [+] 34.7s
+Downloading      100%
+Extracting  (82)  ⣾  [+] 34.8s
+Downloading      100%
+Extracting  (82)  ⣾  [+] 34.9s
+Downloading      100%
+Extracting  (82)  ⣾  [+] 35.0s
+Downloading      100%
+Extracting  (81)  ⣾  [+] 35.1s
+Downloading      100%
+Extracting  (80)  ⣾  [+] 35.2s
+Downloading      100%
+Extracting  (80)  ⣾  [+] 35.3s
+Downloading      100%
+Extracting  (80)  ⣾  [+] 35.4s
+Downloading      100%
+Extracting  (79)  ⣾  [+] 35.5s
+Downloading      100%
+Extracting  (78)  ⣾  [+] 35.6s
+Downloading      100%
+Extracting  (78)  ⣾  [+] 35.7s
+Downloading      100%
+Extracting  (78)  ⣾  [+] 35.8s
+Downloading      100%
+Extracting  (77)  ⣾  [+] 35.9s
+Downloading      100%
+Extracting  (76)  ⣾  [+] 36.0s
+Downloading      100%
+Extracting  (76)  ⣾  [+] 36.1s
+Downloading      100%
+Extracting  (76)  ⣾  [+] 36.2s
+Downloading      100%
+Extracting  (75)  ⣾  [+] 36.3s
+Downloading      100%
+Extracting  (75)  ⣾  [+] 36.4s
+Downloading      100%
+Extracting  (74)  ⣾  [+] 36.5s
+Downloading      100%
+Extracting  (74)  ⣾  [+] 36.6s
+Downloading      100%
+Extracting  (74)  ⣾  [+] 36.7s
+Downloading      100%
+Extracting  (73)  ⣾  [+] 36.8s
+Downloading      100%
+Extracting  (73)  ⣾  [+] 36.9s
+Downloading      100%
+Extracting  (72)  ⣾  [+] 37.0s
+Downloading      100%
+Extracting  (72)  ⣾  [+] 37.1s
+Downloading      100%
+Extracting  (71)  ⣾  [+] 37.2s
+Downloading      100%
+Extracting  (71)  ⣾  [+] 37.3s
+Downloading      100%
+Extracting  (71)  ⣾  [+] 37.4s
+Downloading      100%
+Extracting  (71)  ⣾  [+] 37.5s
+Downloading      100%
+Extracting  (70)  ⣾  [+] 37.6s
+Downloading      100%
+Extracting  (70)  ⣾  [+] 37.7s
+Downloading      100%
+Extracting  (70)  ⣾  [+] 37.8s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 37.9s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 38.0s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 38.1s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 38.2s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 38.3s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 38.4s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 38.5s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 38.6s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 38.7s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 38.8s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 38.9s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 39.0s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 39.1s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 39.2s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 39.3s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 39.4s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 39.5s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 39.6s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 39.7s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 39.8s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 39.9s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 40.0s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 40.1s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 40.2s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 40.3s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 40.4s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 40.5s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 40.6s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 40.7s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 40.8s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 40.9s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 41.0s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 41.1s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 41.2s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 41.3s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 41.4s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 41.5s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 41.6s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 41.7s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 41.8s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 41.9s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 42.0s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 42.1s
+Downloading      100%
+Extracting  (69)  ⣾  [+] 42.2s
+Downloading      100%
+Extracting  (68)  ⣾  [+] 42.3s
+Downloading      100%
+Extracting  (68)  ⣾  [+] 42.4s
+Downloading      100%
+Extracting  (68)  ⣾  [+] 42.5s
+Downloading      100%
+Extracting  (68)  ⣾  [+] 42.6s
+Downloading      100%
+Extracting  (68)  ⣾  [+] 42.7s
+Downloading      100%
+Extracting  (68)  ⣾  [+] 42.8s
+Downloading      100%
+Extracting  (68)  ⣾  [+] 42.9s
+Downloading      100%
+Extracting  (68)  ⣾  [+] 43.0s
+Downloading      100%
+Extracting  (68)  ⣾  [+] 43.1s
+Downloading      100%
+Extracting  (68)  ⣾  [+] 43.2s
+Downloading      100%
+Extracting  (68)  ⣾  [+] 43.3s
+Downloading      100%
+Extracting  (68)  ⣾  [+] 43.4s
+Downloading      100%
+Extracting  (68)  ⣾  [+] 43.5s
+Downloading      100%
+Extracting  (68)  ⣾  [+] 43.6s
+Downloading      100%
+Extracting  (67)  ⣾  [+] 43.7s
+Downloading      100%
+Extracting  (67)  ⣾  [+] 43.8s
+Downloading      100%
+Extracting  (67)  ⣾  [+] 43.9s
+Downloading      100%
+Extracting  (67)  ⣾  [+] 44.0s
+Downloading      100%
+Extracting  (67)  ⣾  [+] 44.1s
+Downloading      100%
+Extracting  (67)  ⣾  [+] 44.2s
+Downloading      100%
+Extracting  (66)  ⣾  [+] 44.3s
+Downloading      100%
+Extracting  (66)  ⣾  [+] 44.4s
+Downloading      100%
+Extracting  (66)  ⣾  [+] 44.5s
+Downloading      100%
+Extracting  (66)  ⣾  [+] 44.6s
+Downloading      100%
+Extracting  (66)  ⣾  [+] 44.7s
+Downloading      100%
+Extracting  (66)  ⣾  [+] 44.8s
+Downloading      100%
+Extracting  (66)  ⣾  [+] 44.9s
+Downloading      100%
+Extracting  (65)  ⣾  [+] 45.0s
+Downloading      100%
+Extracting  (65)  ⣾  [+] 45.1s
+Downloading      100%
+Extracting  (65)  ⣾  [+] 45.2s
+Downloading      100%
+Extracting  (65)  ⣾  [+] 45.3s
+Downloading      100%
+Extracting  (65)  ⣾  [+] 45.4s
+Downloading      100%
+Extracting  (65)  ⣾  [+] 45.5s
+Downloading      100%
+Extracting  (65)  ⣾  [+] 45.6s
+Downloading      100%
+Extracting  (65)  ⣾  [+] 45.7s
+Downloading      100%
+Extracting  (65)  ⣾  [+] 45.8s
+Downloading      100%
+Extracting  (64)  ⣾  [+] 45.9s
+Downloading      100%
+Extracting  (64)  ⣾  [+] 46.0s
+Downloading      100%
+Extracting  (64)  ⣾  [+] 46.1s
+Downloading      100%
+Extracting  (64)  ⣾  [+] 46.2s
+Downloading      100%
+Extracting  (64)  ⣾  [+] 46.3s
+Downloading      100%
+Extracting  (64)  ⣾  [+] 46.4s
+Downloading      100%
+Extracting  (64)  ⣾  [+] 46.5s
+Downloading      100%
+Extracting  (63)  ⣾  [+] 46.6s
+Downloading      100%
+Extracting  (63)  ⣾  [+] 46.7s
+Downloading      100%
+Extracting  (63)  ⣾  [+] 46.8s
+Downloading      100%
+Extracting  (63)  ⣾  [+] 46.9s
+Downloading      100%
+Extracting  (63)  ⣾  [+] 47.0s
+Downloading      100%
+Extracting  (63)  ⣾  [+] 47.1s
+Downloading      100%
+Extracting  (63)  ⣾  [+] 47.2s
+Downloading      100%
+Extracting  (63)  ⣾  [+] 47.3s
+Downloading      100%
+Extracting  (63)  ⣾  [+] 47.4s
+Downloading      100%
+Extracting  (63)  ⣾  [+] 47.5s
+Downloading      100%
+Extracting  (63)  ⣾  [+] 47.6s
+Downloading      100%
+Extracting  (63)  ⣾  [+] 47.7s
+Downloading      100%
+Extracting  (62)  ⣾  [+] 47.8s
+Downloading      100%
+Extracting  (62)  ⣾  [+] 47.9s
+Downloading      100%
+Extracting  (62)  ⣾  [+] 48.0s
+Downloading      100%
+Extracting  (62)  ⣾  [+] 48.1s
+Downloading      100%
+Extracting  (62)  ⣾  [+] 48.2s
+Downloading      100%
+Extracting  (62)  ⣾  [+] 48.3s
+Downloading      100%
+Extracting  (61)  ⣾  [+] 48.4s
+Downloading      100%
+Extracting  (61)  ⣾  [+] 48.5s
+Downloading      100%
+Extracting  (61)  ⣾  [+] 48.6s
+Downloading      100%
+Extracting  (61)  ⣾  [+] 48.7s
+Downloading      100%
+Extracting  (61)  ⣾  [+] 48.8s
+Downloading      100%
+Extracting  (60)  ⣾  [+] 48.9s
+Downloading      100%
+Extracting  (60)  ⣾  [+] 49.0s
+Downloading      100%
+Extracting  (60)  ⣾  [+] 49.1s
+Downloading      100%
+Extracting  (60)  ⣾  [+] 49.2s
+Downloading      100%
+Extracting  (60)  ⣾  [+] 49.3s
+Downloading      100%
+Extracting  (60)  ⣾  [+] 49.4s
+Downloading      100%
+Extracting  (60)  ⣾  [+] 49.5s
+Downloading      100%
+Extracting  (59)  ⣾  [+] 49.6s
+Downloading      100%
+Extracting  (59)  ⣾  [+] 49.7s
+Downloading      100%
+Extracting  (59)  ⣾  [+] 49.8s
+Downloading      100%
+Extracting  (59)  ⣾  [+] 49.9s
+Downloading      100%
+Extracting  (59)  ⣾  [+] 50.0s
+Downloading      100%
+Extracting  (59)  ⣾  [+] 50.1s
+Downloading      100%
+Extracting  (59)  ⣾  [+] 50.2s
+Downloading      100%
+Extracting  (59)  ⣾  [+] 50.3s
+Downloading      100%
+Extracting  (58)  ⣾  [+] 50.4s
+Downloading      100%
+Extracting  (57)  ⣾  [+] 50.5s
+Downloading      100%
+Extracting  (57)  ⣾  [+] 50.6s
+Downloading      100%
+Extracting  (57)  ⣾  [+] 50.7s
+Downloading      100%
+Extracting  (57)  ⣾  [+] 50.8s
+Downloading      100%
+Extracting  (57)  ⣾  [+] 50.9s
+Downloading      100%
+Extracting  (56)  ⣾  [+] 51.0s
+Downloading      100%
+Extracting  (56)  ⣾  [+] 51.1s
+Downloading      100%
+Extracting  (56)  ⣾  [+] 51.2s
+Downloading      100%
+Extracting  (56)  ⣾  [+] 51.3s
+Downloading      100%
+Extracting  (55)  ⣾  [+] 51.4s
+Downloading      100%
+Extracting  (55)  ⣾  [+] 51.5s
+Downloading      100%
+Extracting  (54)  ⣾  [+] 51.6s
+Downloading      100%
+Extracting  (54)  ⣾  [+] 51.7s
+Downloading      100%
+Extracting  (54)  ⣾  [+] 51.8s
+Downloading      100%
+Extracting  (54)  ⣾  [+] 51.9s
+Downloading      100%
+Extracting  (54)  ⣾  [+] 52.0s
+Downloading      100%
+Extracting  (53)  ⣾  [+] 52.1s
+Downloading      100%
+Extracting  (52)  ⣾  [+] 52.2s
+Downloading      100%
+Extracting  (52)  ⣾  [+] 52.3s
+Downloading      100%
+Extracting  (52)  ⣾  [+] 52.4s
+Downloading      100%
+Extracting  (52)  ⣾  [+] 52.5s
+Downloading      100%
+Extracting  (52)  ⣾  [+] 52.6s
+Downloading      100%
+Extracting  (52)  ⣾  [+] 52.7s
+Downloading      100%
+Extracting  (51)  ⣾  [+] 52.8s
+Downloading      100%
+Extracting  (50)  ⣾  [+] 52.9s
+Downloading      100%
+Extracting  (50)  ⣾  [+] 53.0s
+Downloading      100%
+Extracting  (50)  ⣾  [+] 53.1s
+Downloading      100%
+Extracting  (50)  ⣾  [+] 53.2s
+Downloading      100%
+Extracting  (49)  ⣾  [+] 53.3s
+Downloading      100%
+Extracting  (49)  ⣾  [+] 53.4s
+Downloading      100%
+Extracting  (49)  ⣾  [+] 53.5s
+Downloading      100%
+Extracting  (49)  ⣾  [+] 53.6s
+Downloading      100%
+Extracting  (48)  ⣾  [+] 53.7s
+Downloading      100%
+Extracting  (47)  ⣾  [+] 53.8s
+Downloading      100%
+Extracting  (47)  ⣾  [+] 53.9s
+Downloading      100%
+Extracting  (47)  ⣾  [+] 54.0s
+Downloading      100%
+Extracting  (46)  ⣾  [+] 54.1s
+Downloading      100%
+Extracting  (45)  ⣾  [+] 54.2s
+Downloading      100%
+Extracting  (45)  ⣾  [+] 54.3s
+Downloading      100%
+Extracting  (45)  ⣾  [+] 54.4s
+Downloading      100%
+Extracting  (44)  ⣾  [+] 54.5s
+Downloading      100%
+Extracting  (43)  ⣾  [+] 54.6s
+Downloading      100%
+Extracting  (43)  ⣾  [+] 54.7s
+Downloading      100%
+Extracting  (43)  ⣾  [+] 54.8s
+Downloading      100%
+Extracting  (42)  ⣾  [+] 54.9s
+Downloading      100%
+Extracting  (41)  ⣾  [+] 55.0s
+Downloading      100%
+Extracting  (41)  ⣾  [+] 55.1s
+Downloading      100%
+Extracting  (41)  ⣾  [+] 55.2s
+Downloading      100%
+Extracting  (40)  ⣾  [+] 55.3s
+Downloading      100%
+Extracting  (40)  ⣾  [+] 55.4s
+Downloading      100%
+Extracting  (39)  ⣾  [+] 55.5s
+Downloading      100%
+Extracting  (39)  ⣾  [+] 55.6s
+Downloading      100%
+Extracting  (39)  ⣾  [+] 55.7s
+Downloading      100%
+Extracting  (39)  ⣾  [+] 55.8s
+Downloading      100%
+Extracting  (38)  ⣾  [+] 55.9s
+Downloading      100%
+Extracting  (38)  ⣾  [+] 56.0s
+Downloading      100%
+Extracting  (38)  ⣾  [+] 56.1s
+Downloading      100%
+Extracting  (38)  ⣾  [+] 56.2s
+Downloading      100%
+Extracting  (38)  ⣾  [+] 56.3s
+Downloading      100%
+Extracting  (38)  ⣾  [+] 56.4s
+Downloading      100%
+Extracting  (38)  ⣾  [+] 56.5s
+Downloading      100%
+Extracting  (38)  ⣾  [+] 56.6s
+Downloading      100%
+Extracting  (37)  ⣾  [+] 56.7s
+Downloading      100%
+Extracting  (37)  ⣾  [+] 56.8s
+Downloading      100%
+Extracting  (37)  ⣾  [+] 56.9s
+Downloading      100%
+Extracting  (36)  ⣾  [+] 57.0s
+Downloading      100%
+Extracting  (36)  ⣾  [+] 57.1s
+Downloading      100%
+Extracting  (36)  ⣾  [+] 57.2s
+Downloading      100%
+Extracting  (36)  ⣾  [+] 57.3s
+Downloading      100%
+Extracting  (36)  ⣾  [+] 57.4s
+Downloading      100%
+Extracting  (35)  ⣾  [+] 57.5s
+Downloading      100%
+Extracting  (35)  ⣾  [+] 57.6s
+Downloading      100%
+Extracting  (35)  ⣾  [+] 57.7s
+Downloading      100%
+Extracting  (34)  ⣾  [+] 57.8s
+Downloading      100%
+Extracting  (34)  ⣾  [+] 57.9s
+Downloading      100%
+Extracting  (34)  ⣾  [+] 58.0s
+Downloading      100%
+Extracting  (34)  ⣾  [+] 58.1s
+Downloading      100%
+Extracting  (33)  ⣾  [+] 58.2s
+Downloading      100%
+Extracting  (33)  ⣾  [+] 58.3s
+Downloading      100%
+Extracting  (33)  ⣾  [+] 58.4s
+Downloading      100%
+Extracting  (32)  ⣾  [+] 58.5s
+Downloading      100%
+Extracting  (32)  ⣾  [+] 58.6s
+Downloading      100%
+Extracting  (32)  ⣾  [+] 58.7s
+Downloading      100%
+Extracting  (32)  ⣾  [+] 58.8s
+Downloading      100%
+Extracting  (31)  ⣾  [+] 58.9s
+Downloading      100%
+Extracting  (31)  ⣾  [+] 59.0s
+Downloading      100%
+Extracting  (31)  ⣾  [+] 59.1s
+Downloading      100%
+Extracting  (31)  ⣾  [+] 59.2s
+Downloading      100%
+Extracting  (30)  ⣾  [+] 59.3s
+Downloading      100%
+Extracting  (30)  ⣾  [+] 59.4s
+Downloading      100%
+Extracting  (30)  ⣾  [+] 59.5s
+Downloading      100%
+Extracting  (30)  ⣾  [+] 59.6s
+Downloading      100%
+Extracting  (29)  ⣾  [+] 59.7s
+Downloading      100%
+Extracting  (29)  ⣾  [+] 59.8s
+Downloading      100%
+Extracting  (29)  ⣾  [+] 59.9s
+Downloading      100%
+Extracting  (29)  ⣾  [+] 1m:0.0s
+Downloading      100%
+Extracting  (28)  ⣾  [+] 1m:0.1s
+Downloading      100%
+Extracting  (28)  ⣾  [+] 1m:0.2s
+Downloading      100%
+Extracting  (28)  ⣾  [+] 1m:0.3s
+Downloading      100%
+Extracting  (28)  ⣾  [+] 1m:0.4s
+Downloading      100%
+Extracting  (27)  ⣾  [+] 1m:0.5s
+Downloading      100%
+Extracting  (27)  ⣾  [+] 1m:0.6s
+Downloading      100%
+Extracting  (27)  ⣾  [+] 1m:0.7s
+Downloading      100%
+Extracting  (26)  ⣾  [+] 1m:0.8s
+Downloading      100%
+Extracting  (26)  ⣾  [+] 1m:0.9s
+Downloading      100%
+Extracting  (26)  ⣾  [+] 1m:1.0s
+Downloading      100%
+Extracting  (26)  ⣾  [+] 1m:1.1s
+Downloading      100%
+Extracting  (25)  ⣾  [+] 1m:1.2s
+Downloading      100%
+Extracting  (25)  ⣾  [+] 1m:1.3s
+Downloading      100%
+Extracting  (25)  ⣾  [+] 1m:1.4s
+Downloading      100%
+Extracting  (25)  ⣾  [+] 1m:1.5s
+Downloading      100%
+Extracting  (25)  ⣾  [+] 1m:1.6s
+Downloading      100%
+Extracting  (25)  ⣾  [+] 1m:1.7s
+Downloading      100%
+Extracting  (25)  ⣾  [+] 1m:1.8s
+Downloading      100%
+Extracting  (24)  ⣾  [+] 1m:1.9s
+Downloading      100%
+Extracting  (24)  ⣾  [+] 1m:2.0s
+Downloading      100%
+Extracting  (24)  ⣾  [+] 1m:2.1s
+Downloading      100%
+Extracting  (24)  ⣾  [+] 1m:2.2s
+Downloading      100%
+Extracting  (23)  ⣾  [+] 1m:2.3s
+Downloading      100%
+Extracting  (23)  ⣾  [+] 1m:2.4s
+Downloading      100%
+Extracting  (23)  ⣾  [+] 1m:2.5s
+Downloading      100%
+Extracting  (22)  ⣾  [+] 1m:2.6s
+Downloading      100%
+Extracting  (22)  ⣾  [+] 1m:2.7s
+Downloading      100%
+Extracting  (22)  ⣾  [+] 1m:2.8s
+Downloading      100%
+Extracting  (22)  ⣾  [+] 1m:2.9s
+Downloading      100%
+Extracting  (21)  ⣾  [+] 1m:3.0s
+Downloading      100%
+Extracting  (21)  ⣾  [+] 1m:3.1s
+Downloading      100%
+Extracting  (21)  ⣾  [+] 1m:3.2s
+Downloading      100%
+Extracting  (21)  ⣾  [+] 1m:3.3s
+Downloading      100%
+Extracting  (21)  ⣾  [+] 1m:3.4s
+Downloading      100%
+Extracting  (21)  ⣾  [+] 1m:3.5s
+Downloading      100%
+Extracting  (21)  ⣾  [+] 1m:3.6s
+Downloading      100%
+Extracting  (21)  ⣾  [+] 1m:3.7s
+Downloading      100%
+Extracting  (20)  ⣾  [+] 1m:3.8s
+Downloading      100%
+Extracting  (20)  ⣾  [+] 1m:3.9s
+Downloading      100%
+Extracting  (20)  ⣾  [+] 1m:4.0s
+Downloading      100%
+Extracting  (20)  ⣾  [+] 1m:4.1s
+Downloading      100%
+Extracting  (20)  ⣾  [+] 1m:4.2s
+Downloading      100%
+Extracting  (20)  ⣾  [+] 1m:4.3s
+Downloading      100%
+Extracting  (20)  ⣾  [+] 1m:4.4s
+Downloading      100%
+Extracting  (20)  ⣾  [+] 1m:4.5s
+Downloading      100%
+Extracting  (19)  ⣾  [+] 1m:4.6s
+Downloading      100%
+Extracting  (19)  ⣾  [+] 1m:4.7s
+Downloading      100%
+Extracting  (19)  ⣾  [+] 1m:4.8s
+Downloading      100%
+Extracting  (19)  ⣾  [+] 1m:4.9s
+Downloading      100%
+Extracting  (18)  ⣾  [+] 1m:5.0s
+Downloading      100%
+Extracting  (18)  ⣾  [+] 1m:5.1s
+Downloading      100%
+Extracting  (17)  ⣾  [+] 1m:5.2s
+Downloading      100%
+Extracting  (17)  ⣾  [+] 1m:5.3s
+Downloading      100%
+Extracting  (17)  ⣾  [+] 1m:5.4s
+Downloading      100%
+Extracting  (17)  ⣾  [+] 1m:5.5s
+Downloading      100%
+Extracting  (16)  ⣾  [+] 1m:5.6s
+Downloading      100%
+Extracting  (16)  ⣾  [+] 1m:5.7s
+Downloading      100%
+Extracting  (16)  ⣾  [+] 1m:5.8s
+Downloading      100%
+Extracting  (16)  ⣾  [+] 1m:5.9s
+Downloading      100%
+Extracting  (16)  ⣾  [+] 1m:6.0s
+Downloading      100%
+Extracting  (15)  ⣾  [+] 1m:6.1s
+Downloading      100%
+Extracting  (15)  ⣾  [+] 1m:6.2s
+Downloading      100%
+Extracting  (14)  ⣾  [+] 1m:6.3s
+Downloading      100%
+Extracting  (14)  ⣾  [+] 1m:6.4s
+Downloading      100%
+Extracting  (14)  ⣾  [+] 1m:6.5s
+Downloading      100%
+Extracting  (14)  ⣾  [+] 1m:6.6s
+Downloading      100%
+Extracting  (14)  ⣾  [+] 1m:6.7s
+Downloading      100%
+Extracting  (14)  ⣾  [+] 1m:6.8s
+Downloading      100%
+Extracting  (13)  ⣾  [+] 1m:6.9s
+Downloading      100%
+Extracting  (13)  ⣾  [+] 1m:7.0s
+Downloading      100%
+Extracting  (12)  ⣾  [+] 1m:7.1s
+Downloading      100%
+Extracting  (12)  ⣾  [+] 1m:7.2s
+Downloading      100%
+Extracting  (12)  ⣾  [+] 1m:7.3s
+Downloading      100%
+Extracting  (12)  ⣾  [+] 1m:7.4s
+Downloading      100%
+Extracting  (12)  ⣾  [+] 1m:7.5s
+Downloading      100%
+Extracting  (11)  ⣾  [+] 1m:7.6s
+Downloading      100%
+Extracting  (11)  ⣾  [+] 1m:7.7s
+Downloading      100%
+Extracting  (11)  ⣾  [+] 1m:7.8s
+Downloading      100%
+Extracting  (11)  ⣾  [+] 1m:7.9s
+Downloading      100%
+Extracting  (11)  ⣾  [+] 1m:8.0s
+Downloading      100%
+Extracting  (11)  ⣾  [+] 1m:8.1s
+Downloading      100%
+Extracting  (11)  ⣾  [+] 1m:8.2s
+Downloading      100%
+Extracting  (11)  ⣾  [+] 1m:8.3s
+Downloading      100%
+Extracting  (11)  ⣾  [+] 1m:8.4s
+Downloading      100%
+Extracting  (11)  ⣾  [+] 1m:8.5s
+Downloading      100%
+Extracting  (11)  ⣾  [+] 1m:8.6s
+Downloading      100%
+Extracting  (10)  ⣾  [+] 1m:8.7s
+Downloading      100%
+Extracting  (10)  ⣾  [+] 1m:8.8s
+Downloading      100%
+Extracting  (10)  ⣾  [+] 1m:8.9s
+Downloading      100%
+Extracting  (10)  ⣾  [+] 1m:9.0s
+Downloading      100%
+Extracting  (10)  ⣾  [+] 1m:9.1s
+Downloading      100%
+Extracting  (10)  ⣾  [+] 1m:9.2s
+Downloading      100%
+Extracting  (10)  ⣾  [+] 1m:9.3s
+Downloading      100%
+Extracting  (10)  ⣾  [+] 1m:9.4s
+Downloading      100%
+Extracting   (9)  ⣾  [+] 1m:9.5s
+Downloading      100%
+Extracting   (9)  ⣾  [+] 1m:9.6s
+Downloading      100%
+Extracting   (9)  ⣾  [+] 1m:9.7s
+Downloading      100%
+Extracting   (9)  ⣾  [+] 1m:9.8s
+Downloading      100%
+Extracting   (8)  ⣾  [+] 1m:9.9s
+Downloading      100%
+Extracting   (8)  ⣾  [+] 1m:10.0s
+Downloading      100%
+Extracting   (7)  ⣾  [+] 1m:10.1s
+Downloading      100%
+Extracting   (7)  ⣾  [+] 1m:10.2s
+Downloading      100%
+Extracting   (7)  ⣾  [+] 1m:10.3s
+Downloading      100%
+Extracting   (7)  ⣾  [+] 1m:10.4s
+Downloading      100%
+Extracting   (7)  ⣾  [+] 1m:10.5s
+Downloading      100%
+Extracting   (6)  ⣾  [+] 1m:10.6s
+Downloading      100%
+Extracting   (5)  ⣾  [+] 1m:10.7s
+Downloading      100%
+Extracting   (5)  ⣾  [+] 1m:10.8s
+Downloading      100%
+Extracting   (5)  ⣾  [+] 1m:10.9s
+Downloading      100%
+Extracting   (5)  ⣾  [+] 1m:11.0s
+Downloading      100%
+Extracting   (5)  ⣾  [+] 1m:11.1s
+Downloading      100%
+Extracting   (5)  ⣾  [+] 1m:11.2s
+Downloading      100%
+Extracting   (5)  ⣾  [+] 1m:11.3s
+Downloading      100%
+Extracting   (5)  ⣾  [+] 1m:11.4s
+Downloading      100%
+Extracting   (5)  ⣾  [+] 1m:11.5s
+Downloading      100%
+Extracting   (4)  ⣾  [+] 1m:11.6s
+Downloading      100%
+Extracting   (4)  ⣾  [+] 1m:11.7s
+Downloading      100%
+Extracting   (4)  ⣾  [+] 1m:11.8s
+Downloading      100%
+Extracting   (4)  ⣾  [+] 1m:11.9s
+Downloading      100%
+Extracting   (4)  ⣾  [+] 1m:12.0s
+Downloading      100%
+Extracting   (4)  ⣾  [+] 1m:12.1s
+Downloading      100%
+Extracting   (4)  ⣾  [+] 1m:12.2s
+Downloading      100%
+Extracting   (3)  ⣾  [+] 1m:12.3s
+Downloading      100%
+Extracting   (3)  ⣾  [+] 1m:12.4s
+Downloading      100%
+Extracting   (3)  ⣾  [+] 1m:12.5s
+Downloading      100%
+Extracting   (2)  ⣾  [+] 1m:12.6s
+Downloading      100%
+Extracting   (2)  ⣾  [+] 1m:12.7s
+Downloading      100%
+Extracting   (2)  ⣾  [+] 1m:12.8s
+Downloading      100%
+Extracting   (2)  ⣾  [+] 1m:12.9s
+Downloading      100%
+Extracting   (1)  ⣾  [+] 1m:13.0s
+Downloading      100%
+Extracting   (1)  ⣾  [+] 1m:13.1s
+Downloading      100%
+Extracting   (1)  ⣾  ?25h
+Downloading and Extracting Packages
+
+Preparing transaction: - \ | / - \ | / - \ | / - \ | / - \ | / done
+Verifying transaction: \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / done
+Executing transaction: \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ done
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="n">tic</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">intake</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">xesmf</span> <span class="k">as</span> <span class="nn">xe</span>
+
+<span class="kn">from</span> <span class="nn">xmip.preprocessing</span> <span class="kn">import</span> <span class="n">combined_preprocessing</span>
+<span class="kn">from</span> <span class="nn">xarrayutils.plotting</span> <span class="kn">import</span> <span class="n">shaded_line_plot</span>
+
+<span class="kn">from</span> <span class="nn">datatree</span> <span class="kn">import</span> <span class="n">DataTree</span>
+<span class="kn">from</span> <span class="nn">xmip.postprocessing</span> <span class="kn">import</span> <span class="n">_parse_metric</span>
+
+<span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Figure settings</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>       <span class="c1"># interactive display</span>
+<span class="o">%</span><span class="n">config</span> <span class="n">InlineBackend</span><span class="o">.</span><span class="n">figure_format</span> <span class="o">=</span> <span class="s1">&#39;retina&#39;</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/cma.mplstyle&quot;</span><span class="p">)</span>
+<span class="c1"># model_colors = {k:f&quot;C{ki}&quot; for ki, k in enumerate(source_ids)}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="cmip6-near-surface-temperature">
+<h2><strong>CMIP6: near surface temperature</strong><a class="headerlink" href="#cmip6-near-surface-temperature" title="Permalink to this headline">¶</a></h2>
+<p>The CMIP6 dataset will be utilized to examine temperature trends and heatwaves. Specifically, we will be focusing on near-surface temperature, which refers to the air temperature at the Earth’s surface. In this study, we will be analyzing data from one model and examining its historical temperature records. However, we encourage students to explore other models and investigate intermodel variability, as they have learned to do during their exploration of the CMIP dataset.</p>
+<p>After selecting our model, we will plot the near-surface air temperature for the entire globe.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importing </span>
+
+<span class="n">col</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span><span class="s2">&quot;https://storage.googleapis.com/cmip6/pangeo-cmip6.json&quot;</span><span class="p">)</span> <span class="c1"># open an intake catalog containing the Pangeo CMIP cloud data</span>
+
+<span class="c1"># pick our five example models</span>
+<span class="c1"># There are many more to test out! Try executing `col.df[&#39;source_id&#39;].unique()` to get a list of all available models</span>
+<span class="n">source_ids</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;MPI-ESM1-2-LR&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># from the full `col` object, create a subset using facet search</span>
+<span class="n">cat</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+    <span class="n">source_id</span><span class="o">=</span><span class="n">source_ids</span><span class="p">,</span>
+    <span class="n">variable_id</span><span class="o">=</span><span class="s1">&#39;tas&#39;</span><span class="p">,</span>
+    <span class="n">member_id</span><span class="o">=</span><span class="s1">&#39;r1i1p1f1&#39;</span><span class="p">,</span>
+    <span class="n">table_id</span><span class="o">=</span><span class="s1">&#39;3hr&#39;</span><span class="p">,</span>
+    <span class="n">grid_label</span><span class="o">=</span><span class="s1">&#39;gn&#39;</span><span class="p">,</span>
+    <span class="n">experiment_id</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;historical&#39;</span><span class="p">],</span><span class="c1"># add scenarios if interested in projection</span>
+    <span class="n">require_all_on</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;source_id&#39;</span><span class="p">]</span> <span class="c1">#make sure that we only get models which have all of the above experiments</span>
+<span class="p">)</span>
+
+<span class="c1"># convert the sub-catalog into a datatree object, by opening each dataset into an xarray.Dataset (without loading the data)</span>
+<span class="n">kwargs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+    <span class="n">preprocess</span><span class="o">=</span><span class="n">combined_preprocessing</span><span class="p">,</span> <span class="c1">#apply xMIP fixes to each dataset</span>
+    <span class="n">xarray_open_kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">use_cftime</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="c1">#ensure all datasets use the same time index</span>
+    <span class="n">storage_options</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;token&#39;</span><span class="p">:</span><span class="s1">&#39;anon&#39;</span><span class="p">}</span> <span class="c1">#anonymous/public authentication to google cloud storage</span>
+<span class="p">)</span>
+<span class="c1"># hopefully we can implement https://github.com/intake/intake-esm/issues/562 before the </span>
+<span class="c1"># actual tutorial, so this would be a lot cleaner</span>
+<span class="n">cat</span><span class="o">.</span><span class="n">esmcat</span><span class="o">.</span><span class="n">aggregation_control</span><span class="o">.</span><span class="n">groupby_attrs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;source_id&#39;</span><span class="p">,</span> <span class="s1">&#39;experiment_id&#39;</span><span class="p">]</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="n">cat</span><span class="o">.</span><span class="n">to_datatree</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; The keys in the returned dictionary of datasets are constructed as follows:
+	&#39;source_id/experiment_id&#39;
+</pre></div>
+</div>
+<div class="output text_html">
+<style>
+    /* Turns off some styling */
+    progress {
+        /* gets rid of default border in Firefox and Opera. */
+        border: none;
+        /* Needs to be in here for Safari polyfill so background images work as expected. */
+        background-size: auto;
+    }
+    progress:not([value]), progress:not([value])::-webkit-progress-bar {
+        background: repeating-linear-gradient(45deg, #7e7e7e, #7e7e7e 10px, #5c5c5c 10px, #5c5c5c 20px);
+    }
+    .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {
+        background: #F44336;
+    }
+</style>
+</div><div class="output text_html">
+<div>
+  <progress value='1' class='' max='1' style='width:300px; height:20px; vertical-align: middle;'></progress>
+  100.00% [1/1 00:06&lt;00:00]
+</div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># select just a single model and experiment</span>
+<span class="n">tas_historical</span><span class="o">=</span> <span class="n">dt</span><span class="p">[</span><span class="s1">&#39;MPI-ESM1-2-LR&#39;</span><span class="p">][</span><span class="s1">&#39;historical&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">ds</span><span class="o">.</span><span class="n">tas</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The time range is:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">tas_historical</span><span class="o">.</span><span class="n">time</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;M8[h]&#39;</span><span class="p">)</span> <span class="p">,</span> <span class="s1">&#39;to&#39;</span><span class="p">,</span> <span class="n">tas_historical</span><span class="o">.</span><span class="n">time</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;M8[h]&#39;</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The time range is:
+1850-01-01T03 to 2015-01-01T00
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now it’s time to plot the data. For this initial analysis, we will focus on a specific date and time. As you may have noticed, we are using 3-hourly data, which allows us to also examine the diurnal and seasonal cycles. It would be fascinating to explore how the amplitude of the diurnal and seasonal cycles varies with region and latitude. You can do it later!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax_present</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span>
+    <span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span>
+    <span class="n">subplot_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;projection&#39;</span><span class="p">:</span><span class="n">ccrs</span><span class="o">.</span><span class="n">Robinson</span><span class="p">()}</span>
+<span class="p">)</span>
+
+<span class="c1"># plot a timestep for 2020</span>
+<span class="n">tas_present</span> <span class="o">=</span> <span class="n">tas_historical</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">&#39;2013-07-01T00&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>
+<span class="n">tas_present</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax_present</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;lon&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;magma&#39;</span><span class="p">,</span> <span class="n">robust</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax_present</span><span class="o">.</span><span class="n">coastlines</span><span class="p">()</span>
+<span class="n">ax_present</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;July, 1st 2013&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;July, 1st 2013&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/Heatwaves_14_1.png" src="../../_images/Heatwaves_14_1.png" />
+</div>
+</div>
+<div class="section" id="cmip6-precipitation-and-soil-moisture-optional">
+<h3><strong>CMIP6: precipitation and soil moisture (optional)</strong><a class="headerlink" href="#cmip6-precipitation-and-soil-moisture-optional" title="Permalink to this headline">¶</a></h3>
+<p>In addition to examining temperature trends, students can also load precipitation data or variables related to soil moisture. This is an optional exploration, but if they choose to do so, they can load regional precipitation data at the same time and explore how these two variables are related when analyzing regional temperature trends. This can provide insights into how changes in temperature and precipitation may be affecting the local environment.</p>
+<p>If the sudent decides to go on in this road and look at covariability of temperature and moisture, they can have a look at <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2021GL097697">this</a> or <a class="reference external" href="https://www.nature.com/articles/s41586-021-03325-5">this</a> paper. The relationship between soil moisture, vegetation, and temperature is an active field of research.</p>
+</div>
+<div class="section" id="q7-heatwave-detection">
+<h3><strong>Q7: heatwave detection</strong><a class="headerlink" href="#q7-heatwave-detection" title="Permalink to this headline">¶</a></h3>
+<p>Question 7 asks you to detect heatwave. Below you can see a flowchart for detecting heatwaves. The flowchart includes three paramteres that you need to set in adavance. These three parameters are the window (numpber of days) over which you detect the extereme (95 percentile) of temperature, the duration of heatvwave and its spatioal extention.</p>
+<p align='center'><a href="https://github.com/ClimatematchAcademy/course-content/blob/main/projects/template-images/heatwaves_flowchart.jpg"><img src="https://github.com/ClimatematchAcademy/course-content/blob/main/projects/template-images/heatwaves_flowchart.jpg?raw=True" alt="Flowchart about heatwave detection" vw="100" vh="75" /></a></p>
+<!-- ![picture](https://raw.githubusercontent.com/Sshamekh/Heatwave/e7ae59ac394b0a9a040bcc4f58009ab478a3daa8/Heat_wave_detection_flewchart.jpg) -->
+</div>
+</div>
+<div class="section" id="worlbank-data-cereal-production-and-land-under-cereal-production">
+<h2><strong>Worlbank data: Cereal production and land under cereal production</strong><a class="headerlink" href="#worlbank-data-cereal-production-and-land-under-cereal-production" title="Permalink to this headline">¶</a></h2>
+<p>Cereal production is a crucial component of global agriculture and food security. The World Bank collects and provides data on cereal production, which includes crops such as wheat, rice, maize, barley, oats, rye, sorghum, millet, and mixed grains. The data covers various indicators such as production quantity, area harvested, yield, and production value.</p>
+<p>The World Bank also collects data on land under cereals production, which refers to the area of land that is being used to grow cereal crops. This information can be valuable for assessing the productivity and efficiency of cereal production systems in different regions, as well as identifying potential areas for improvement. Overall, the World Bank’s data on cereal production and land under cereals production is an important resource for policymakers, researchers, and other stakeholders who are interested in understanding global trends in agriculture and food security.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Code to retrieve and load the data</span>
+<span class="n">ulr</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/Sshamekh/Heatwave/f85f43997e3d6ae61e5d729bf77cfcc188fbf2fd/data_cereal_land.csv&#39;</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">ds_cereal_land</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">ulr</span><span class="p">)</span>
+<span class="n">ds_cereal_land</span><span class="o">.</span><span class="n">head</span><span class="p">()</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-6357fc52-e054-4152-857e-fc8d736bfb67">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country Name</th>
+      <th>Country Code</th>
+      <th>Series Name</th>
+      <th>Series Code</th>
+      <th>1972 [YR1972]</th>
+      <th>1973 [YR1973]</th>
+      <th>1974 [YR1974]</th>
+      <th>1975 [YR1975]</th>
+      <th>1976 [YR1976]</th>
+      <th>1977 [YR1977]</th>
+      <th>...</th>
+      <th>2012 [YR2012]</th>
+      <th>2013 [YR2013]</th>
+      <th>2014 [YR2014]</th>
+      <th>2015 [YR2015]</th>
+      <th>2016 [YR2016]</th>
+      <th>2017 [YR2017]</th>
+      <th>2018 [YR2018]</th>
+      <th>2019 [YR2019]</th>
+      <th>2020 [YR2020]</th>
+      <th>2021 [YR2021]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Afghanistan</td>
+      <td>AFG</td>
+      <td>Cereal production (metric tons)</td>
+      <td>AG.PRD.CREL.MT</td>
+      <td>3950000</td>
+      <td>4270000</td>
+      <td>4351000</td>
+      <td>4481000</td>
+      <td>4624000</td>
+      <td>4147000</td>
+      <td>...</td>
+      <td>6379000</td>
+      <td>6520329</td>
+      <td>6748023.28</td>
+      <td>5808288</td>
+      <td>5532695.42</td>
+      <td>4892953.97</td>
+      <td>4133051.85</td>
+      <td>5583461</td>
+      <td>6025977</td>
+      <td>4663880.79</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Afghanistan</td>
+      <td>AFG</td>
+      <td>Land under cereal production (hectares)</td>
+      <td>AG.LND.CREL.HA</td>
+      <td>3923100</td>
+      <td>3337000</td>
+      <td>3342000</td>
+      <td>3404000</td>
+      <td>3394000</td>
+      <td>3388000</td>
+      <td>...</td>
+      <td>3143000</td>
+      <td>3182922</td>
+      <td>3344733</td>
+      <td>2724070</td>
+      <td>2793694</td>
+      <td>2419213</td>
+      <td>1911652</td>
+      <td>2641911</td>
+      <td>3043589</td>
+      <td>2164537</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Albania</td>
+      <td>ALB</td>
+      <td>Cereal production (metric tons)</td>
+      <td>AG.PRD.CREL.MT</td>
+      <td>585830</td>
+      <td>625498</td>
+      <td>646200</td>
+      <td>666500</td>
+      <td>857000</td>
+      <td>910400</td>
+      <td>...</td>
+      <td>697400</td>
+      <td>702870</td>
+      <td>700370</td>
+      <td>695000</td>
+      <td>698430</td>
+      <td>701734</td>
+      <td>678196</td>
+      <td>666065</td>
+      <td>684023</td>
+      <td>691126.7</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Albania</td>
+      <td>ALB</td>
+      <td>Land under cereal production (hectares)</td>
+      <td>AG.LND.CREL.HA</td>
+      <td>331220</td>
+      <td>339400</td>
+      <td>334040</td>
+      <td>328500</td>
+      <td>350500</td>
+      <td>357000</td>
+      <td>...</td>
+      <td>142800</td>
+      <td>142000</td>
+      <td>143149</td>
+      <td>142600</td>
+      <td>148084</td>
+      <td>145799</td>
+      <td>140110</td>
+      <td>132203</td>
+      <td>131310</td>
+      <td>134337</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Algeria</td>
+      <td>DZA</td>
+      <td>Cereal production (metric tons)</td>
+      <td>AG.PRD.CREL.MT</td>
+      <td>2362625</td>
+      <td>1595994</td>
+      <td>1480275</td>
+      <td>2680452</td>
+      <td>2313186</td>
+      <td>1142509</td>
+      <td>...</td>
+      <td>5137455</td>
+      <td>4912551</td>
+      <td>3435535</td>
+      <td>3761229.6</td>
+      <td>3445227.37</td>
+      <td>3478175.14</td>
+      <td>6066252.82</td>
+      <td>5633596.78</td>
+      <td>4393336.75</td>
+      <td>2784017.29</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 54 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-6357fc52-e054-4152-857e-fc8d736bfb67')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-6357fc52-e054-4152-857e-fc8d736bfb67 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-6357fc52-e054-4152-857e-fc8d736bfb67');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="section" id="q9-correlation">
+<h3><strong>Q9: correlation</strong><a class="headerlink" href="#q9-correlation" title="Permalink to this headline">¶</a></h3>
+<p>For Question 9 you need to compute the correlation between two variables. You can use Pearson’s correlation coefficient to evaluate the correlation between two variables. You can read about Pearsons correlation coefficient <a class="reference external" href="https://online.stat.psu.edu/stat501/lesson/1/1.6">here</a>. You are also encouraged to plot the scatter plot between two variables to visually see their correlation.</p>
+</div>
+<div class="section" id="q12-linear-regression">
+<h3><strong>Q12: linear regression</strong><a class="headerlink" href="#q12-linear-regression" title="Permalink to this headline">¶</a></h3>
+<p>For question 12 you need to build the regession model. Regression model is built as follows:
+<code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">=</span> <span class="pre">B*</span> <span class="pre">+</span> <span class="pre">BnXn</span> <span class="pre">+</span> <span class="pre">e</span></code></p>
+<p>Where
+Y = independent variable</p>
+<ul class="simple">
+<li><p>B* = coefficient</p></li>
+<li><p>Bn = Marginal Value Product (MVP)</p></li>
+<li><p>Xn = dependent variables</p></li>
+</ul>
+<p>You can read abut regression model <a class="reference external" href="https://online.stat.psu.edu/stat501/lesson/1">here</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="further-reading">
+<h1><strong>Further reading</strong><a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Dirmeyer, P. A., Gochis, D. J., &amp; Schultz, D. M. (2016). Land-atmosphere interactions: the LoCo perspective. Bulletin of the American Meteorological Society, 97(5), 753-771.</p></li>
+<li><p>Ogwu I. J., Omotesho, O. A. and Muhammad-Lawal, A., (2018) Chapter 11: Economics of Soil Fertility Management Practices in Nigeria in the book by Obayelu, A. E. ‘Food Systems Sustainability and Environmental Policies in Modern Economies’ (pp. 1-371).Hershey, PA: IGI Global. doi:10.4018/978-1-5225-3631-4</p></li>
+<li><p>Jach, L., Schwitalla, T., Branch, O., Warrach-Sagi, K., and Wulfmeyer, V. (2022) Sensitivity of land–atmosphere coupling strength to changing atmospheric temperature and moisture over Europe, Earth Syst. Dynam., 13, 109–132, https://doi.org/10.5194/esd-13-109-2022</p></li>
+</ul>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./projects/project-notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="Regional_precipitation_variability.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><strong>Regional precipitation variability and extreme events</strong></p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Surface_albedo_and_land_use.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>Change in Earth’s albedo and its dependence on land cover changes in the past 20 years</strong></p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Climatematch<br/>
+  
+    <div class="extra_footer">
+      <div>
+<a href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>
+<a href="https://opensource.org/licenses/BSD-3-Clause"><img src="https://camo.githubusercontent.com/9b9ea65d95c9ef878afa1987df65731d47681336/68747470733a2f2f696d672e736869656c64732e696f2f707970692f6c2f736561626f726e2e737667"></a>
+The contents of this repository are shared under the <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+Software elements are additionally licensed under the <a href="https://opensource.org/licenses/BSD-3-Clause">BSD (3-Clause) License</a>.
+</div>
+
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

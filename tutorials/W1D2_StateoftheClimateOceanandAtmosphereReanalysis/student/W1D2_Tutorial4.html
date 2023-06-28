@@ -1,0 +1,1573 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tutorial 4: Ocean wind driven circulation — Climatematch Academy: Computational Climate Science</title>
+<!-- Loaded before other Sphinx assets -->
+<link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
+<link href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css" rel="stylesheet"/>
+<link as="font" crossorigin="" href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
+<link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/styles/sphinx-book-theme.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/togglebutton.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/copybutton.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/mystnb.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/sphinx-thebe.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/custom.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" rel="stylesheet" type="text/css"/>
+<!-- Pre-loaded scripts that we'll load fully later -->
+<link as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf" rel="preload"/>
+<script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+<script src="../../../_static/jquery.js"></script>
+<script src="../../../_static/underscore.js"></script>
+<script src="../../../_static/doctools.js"></script>
+<script src="../../../_static/togglebutton.js"></script>
+<script src="../../../_static/clipboard.min.js"></script>
+<script src="../../../_static/copybutton.js"></script>
+<script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+<script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+<script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+<script async="async" src="../../../_static/sphinx-thebe.js"></script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+<link href="../../../genindex.html" rel="index" title="Index">
+<link href="../../../search.html" rel="search" title="Search"/>
+<link href="W1D2_Tutorial5.html" rel="next" title="Tutorial 5: Thermohaline circulation"/>
+<link href="W1D2_Tutorial3.html" rel="prev" title="Tutorial 3: Atmospheric wind driven circulation"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="None" name="docsearch:language"/>
+<!-- Google Analytics -->
+</link></link></link></link></link></link></head>
+<body data-offset="60" data-spy="scroll" data-target="#bd-toc-nav">
+<!-- Checkboxes to toggle the left sidebar -->
+<input aria-label="Toggle navigation sidebar" class="sidebar-toggle" id="__navigation" name="__navigation" type="checkbox"/>
+<label class="overlay overlay-navbar" for="__navigation">
+<div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input aria-label="Toggle in-page Table of Contents" class="sidebar-toggle" id="__page-toc" name="__page-toc" type="checkbox"/>
+<label class="overlay overlay-pagetoc" for="__page-toc">
+<div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+<div class="container-fluid" id="banner"></div>
+<div class="container-xl">
+<div class="row">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+<div class="bd-sidebar__content">
+<div class="bd-sidebar__top"><div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+<h1 class="site-logo" id="site-title">Climatematch Academy: Computational Climate Science</h1>
+</a>
+</div><form action="../../../search.html" class="bd-search d-flex align-items-center" method="get">
+<i class="icon fas fa-search"></i>
+<input aria-label="Search this book..." autocomplete="off" class="form-control" id="search-input" name="q" placeholder="Search this book..." type="search"/>
+</form><nav aria-label="Main" class="bd-links" id="bd-docs-nav">
+<div class="bd-toc-item active">
+<ul class="nav bd-sidenav bd-sidenav__home-link">
+<li class="toctree-l1">
+<a class="reference internal" href="../../intro.html">
+                    Introduction
+                </a>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../TechnicalHelp/tech_intro.html">
+   Technical Help
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox">
+<label for="toctree-checkbox-1">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2 has-children">
+<a class="reference internal" href="../../TechnicalHelp/Jupyterbook.html">
+     Using jupyterbook
+    </a>
+<input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox">
+<label for="toctree-checkbox-2">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l3">
+<a class="reference internal" href="../../TechnicalHelp/Tutorial_colab.html">
+       Using Google Colab
+      </a>
+</li>
+<li class="toctree-l3">
+<a class="reference internal" href="../../TechnicalHelp/Tutorial_kaggle.html">
+       Using Kaggle
+      </a>
+</li>
+</ul>
+</input></li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../TechnicalHelp/Discord.html">
+     Using discord
+    </a>
+</li>
+</ul>
+</input></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1">
+<a class="reference internal" href="../../TechnicalHelp/Links_Policy.html">
+   Quick links and policies
+  </a>
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
+  Fundamentals
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/chapter_title.html">
+   Climate System Overview (W1D1)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox">
+<label for="toctree-checkbox-3">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.html">
+<strong>
+      Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial2.html">
+<strong>
+      Tutorial 2: Selection, Interpolation and Slicing
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial3.html">
+<strong>
+      Tutorial 3: Opening and Plotting netCDF Data
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial4.html">
+<strong>
+      Tutorial 4: Arithmetic and Aggregation Methods
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial5.html">
+<strong>
+      Tutorial 5: Xarray Data Analysis and Climatology
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial6.html">
+<strong>
+      Tutorial 6: Compute and Plot Temperature Anomalies
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial7.html">
+<strong>
+      Tutorial 7: Other Computational Tools in Xarray
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial8.html">
+<strong>
+      Tutorial 8: Masking with One Condition
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial9.html">
+<strong>
+      Tutorial 9: Masking with Multiple Conditions
+     </strong>
+</a>
+</li>
+</ul>
+</input></li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/chapter_title.html">
+   Good Research Practices (W2D2)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+<label for="toctree-checkbox-4">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial1.html">
+<strong>
+      Tutorial 1: Finding a Phenomenon and Asking a Question About It
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial2.html">
+<strong>
+      Tutorial 2: Doing a Literature Review
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial3.html">
+<strong>
+      Tutorial 3: Identifying the Basic Ingredients
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial4.html">
+<strong>
+      Tutorial 4: Formulating a Hypothesis
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial5.html">
+<strong>
+      Tutorial 5: Drafting the Analysis
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial6.html">
+<strong>
+      Tutorial 6: Implementing the Analysis
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial7.html">
+<strong>
+      Tutorial 7: Interpreting the Results
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial8.html">
+<strong>
+      Tutorial 8: Communicating Your Conclusions
+     </strong>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
+  Climate Data
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children">
+<a class="reference internal" href="../chapter_title.html">
+   State of the Climate Ocean and Atmosphere Reanalysis (W1D2)
+  </a>
+<input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+<label for="toctree-checkbox-5">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul class="current">
+<li class="toctree-l2">
+<a class="reference internal" href="W1D2_Tutorial1.html">
+     Calculating ENSO with Xarray
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="W1D2_Tutorial2.html">
+     Tutorial 2: A lot of weather makes climate - exploring the ERA5 Reanalysis
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="W1D2_Tutorial3.html">
+     Tutorial 3: Atmospheric wind driven circulation
+    </a>
+</li>
+<li class="toctree-l2 current active">
+<a class="current reference internal" href="#">
+     Tutorial 4: Ocean wind driven circulation
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="W1D2_Tutorial5.html">
+     Tutorial 5: Thermohaline circulation
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="W1D2_Tutorial6.html">
+     Tutorial 6: Ocean heat content
+    </a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/chapter_title.html">
+   Remote Sensing Land Ocean and Atmosphere (W1D3)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+<label for="toctree-checkbox-6">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.html">
+     Video 1: What is Remote Sensing
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial3.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial4.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial5.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial6.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial7.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial8.html">
+     Figure settings
+    </a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W1D4_Paleoclimate/chapter_title.html">
+   Paleoclimate (W1D4)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+<label for="toctree-checkbox-7">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial1.html">
+<strong>
+      Tutorial 1: Paleoclimate Proxies
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial2.html">
+<strong>
+      Tutorial 2: Reconstructing Past Changes in Ocean Climate
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial3.html">
+<strong>
+      Tutorial 3: Reconstructing Past Changes in Terrestrial Climate
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial4.html">
+<strong>
+      Tutorial 4: Reconstructing Past Changes in Atmospheric Climate
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial5.html">
+<strong>
+      Tutorial 5: Paleoclimate Data Analysis Tools
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial6.html">
+<strong>
+      Tutorial 6: Spectral Analysis of Paleoclimate Data
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial7.html">
+<strong>
+      Tutorial 7: Assessing Climate Forcings
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial8.html">
+<strong>
+      Tutorial 8: Paleoclimate Models
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial9.html">
+<strong>
+      Tutorial 9: Paleoclimate Reanalysis Products
+     </strong>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
+  Climate Future
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W1D5_ClimateModeling/chapter_title.html">
+   Climate Modeling (W1D5)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+<label for="toctree-checkbox-8">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial1.html">
+     Setup
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial2.html">
+     Setup
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial3.html">
+     Setup
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial4.html">
+     Setup
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial5.html">
+<strong>
+      Tutorial 5: Radiative Equilibrium
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial6.html">
+<strong>
+      Tutorial 6: Radiative Convective Equilibrium
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial7.html">
+<strong>
+      Tutorial 7: Introduction to Earth System Models
+     </strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/chapter_title.html">
+   Future Climate - IPCC I Physical Basis (W2D1)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+<label for="toctree-checkbox-9">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial1.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial2.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial3.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial4.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial5.html">
+     Figure settings
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial6.html">
+     Figure settings
+    </a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/chapter_title.html">
+   Future Climate - IPCC II &amp; III Socio-Economic Basis (W2D3)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+<label for="toctree-checkbox-10">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial1.html">
+     Tutorial 1 - Limits to growth in World3: A toy world model of diminishing non-renewable resources
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial2.html">
+     Tutorial 2 - A first look at integrated assessment models
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial4.html">
+     Tutorial 4 - Text analysis of COP tweets
+    </a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
+  Climate Response
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/chapter_title.html">
+   Climate Response - Adaptation Impact (W2D5)
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+<label for="toctree-checkbox-11">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial1.html">
+<strong>
+      Tutorial 1: Linear and Logistic Regression
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.html">
+     Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.html">
+     Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial4.html">
+     Tutorial 9:  Exploring other applications
+    </a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
+  Project Booklet
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1">
+<a class="reference internal" href="../../../projects/README.html">
+   Introduction
+  </a>
+</li>
+<li class="toctree-l1">
+<a class="reference internal" href="../../../projects/docs/continuing_your_project_after_the_course.html">
+   Climatematch Impact Scholars program
+  </a>
+</li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../../projects/docs/project_guidance.html">
+   Daily guide for projects
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+<label for="toctree-checkbox-12">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.html">
+<strong>
+      The impact of ENSO on precipitation and temperature
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Ocean_acidification.html">
+<strong>
+      Ocean acidification
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Wildfires_and_burnt_areas.html">
+<strong>
+      Monitoring and mapping wildfires using satellite data
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Regional_precipitation_variability.html">
+<strong>
+      Regional precipitation variability and extreme events
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
+<strong>
+      Heatwaves: Assessing the dynamic interactions of the atmosphere and land
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Surface_albedo_and_land_use.html">
+<strong>
+      Change in Earth’s albedo and its dependence on land cover changes in the past 20 years
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Sea_level_rise.html">
+<strong>
+      Sea level rise
+     </strong>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+<div class="bd-sidebar__bottom">
+<!-- To handle the deprecated key -->
+<div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+</div>
+</div>
+<div id="rtd-footer-container"></div>
+</div>
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+<div class="header-article row sticky-top noprint">
+<div class="col py-1 d-flex header-article-main">
+<div class="header-article__left">
+<label class="headerbtn" data-placement="right" data-toggle="tooltip" for="__navigation" title="Toggle navigation">
+<span class="headerbtn__icon-container">
+<i class="fas fa-bars"></i>
+</span>
+</label>
+</div>
+<div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+<button aria-label="Launch interactive content" class="headerbtn menu-dropdown__trigger">
+<i class="fas fa-rocket"></i>
+</button>
+<div class="menu-dropdown__content">
+<ul>
+</ul>
+</div>
+</div>
+<button class="headerbtn" data-placement="bottom" data-toggle="tooltip" onclick="toggleFullScreen()" title="Fullscreen mode">
+<span class="headerbtn__icon-container">
+<i class="fas fa-expand"></i>
+</span>
+</button>
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+<button aria-label="Source repositories" class="headerbtn menu-dropdown__trigger">
+<i class="fab fa-github"></i>
+</button>
+<div class="menu-dropdown__content">
+<ul>
+<li>
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://github.com/ClimatematchAcademy/course-content" title="Source repository">
+<span class="headerbtn__icon-container">
+<i class="fab fa-github"></i>
+</span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+</li>
+<li>
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://github.com/ClimatematchAcademy/course-content/issues/new?title=Issue%20on%20page%20%2Ftutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial4.html&amp;body=Your%20issue%20content%20here." title="Open an issue">
+<span class="headerbtn__icon-container">
+<i class="fas fa-lightbulb"></i>
+</span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="menu-dropdown menu-dropdown-download-buttons">
+<button aria-label="Download this page" class="headerbtn menu-dropdown__trigger">
+<i class="fas fa-download"></i>
+</button>
+<div class="menu-dropdown__content">
+<ul>
+<li>
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="../../../_sources/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial4.ipynb" title="Download source file">
+<span class="headerbtn__icon-container">
+<i class="fas fa-file"></i>
+</span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+</li>
+<li>
+<button class="headerbtn" data-placement="left" data-toggle="tooltip" onclick="printPdf(this)" title="Print to PDF">
+<span class="headerbtn__icon-container">
+<i class="fas fa-file-pdf"></i>
+</span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+</li>
+</ul>
+</div>
+</div>
+<label class="headerbtn headerbtn-page-toc" for="__page-toc">
+<span class="headerbtn__icon-container">
+<i class="fas fa-list"></i>
+</span>
+</label>
+</div>
+</div>
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+<div class="tocsection onthispage pt-5 pb-3">
+<i class="fas fa-list"></i> Contents
+    </div>
+<nav aria-label="Page" id="bd-toc-nav">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#">
+   Tutorial 4: Ocean wind driven circulation
+  </a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-objectives">
+     Tutorial Objectives
+    </a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-slides">
+       Tutorial slides
+      </a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry">
+<a class="reference internal nav-link" href="#id1">
+         Tutorial slides
+        </a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry">
+<a class="reference internal nav-link" href="#id2">
+           Tutorial slides
+          </a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#figure-settings">
+       Figure settings
+      </a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry">
+<a class="reference internal nav-link" href="#id3">
+         Figure settings
+        </a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry">
+<a class="reference internal nav-link" href="#id4">
+           Figure settings
+          </a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#discussion">
+     Discussion
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#surface-currents-compared-with-surface-winds">
+     Surface currents compared with surface winds
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-plotting-global-surface-winds-using-era5">
+     Section 1: Plotting global surface winds using ERA5
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-plotting-global-surface-currents-using-ecco">
+     Section 2: Plotting global surface currents using ECCO
+    </a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#a-few-notes">
+<em>
+        A few notes:
+       </em>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#winds-impose-a-surface-stress-which-forces-ocean-currents">
+     - Winds impose a surface stress which forces ocean currents
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#this-is-called-the-wind-driven-circulation">
+     - This is called the
+     <em>
+<strong>
+       wind driven circulation
+      </strong>
+</em>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="article row">
+<div class="col pl-md-3 pl-lg-5 content-container">
+<!-- Table of contents that is only displayed when printing the page -->
+<div class="onlyprint" id="jb-print-docs-body">
+<h1>Tutorial 4: Ocean wind driven circulation</h1>
+<!-- Table of contents -->
+<div id="print-main-content">
+<div id="jb-print-toc">
+<div>
+<h2> Contents </h2>
+</div>
+<nav aria-label="Page">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#">
+   Tutorial 4: Ocean wind driven circulation
+  </a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-objectives">
+     Tutorial Objectives
+    </a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-slides">
+       Tutorial slides
+      </a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry">
+<a class="reference internal nav-link" href="#id1">
+         Tutorial slides
+        </a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry">
+<a class="reference internal nav-link" href="#id2">
+           Tutorial slides
+          </a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#figure-settings">
+       Figure settings
+      </a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry">
+<a class="reference internal nav-link" href="#id3">
+         Figure settings
+        </a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry">
+<a class="reference internal nav-link" href="#id4">
+           Figure settings
+          </a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#discussion">
+     Discussion
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#surface-currents-compared-with-surface-winds">
+     Surface currents compared with surface winds
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-plotting-global-surface-winds-using-era5">
+     Section 1: Plotting global surface winds using ERA5
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-plotting-global-surface-currents-using-ecco">
+     Section 2: Plotting global surface currents using ECCO
+    </a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#a-few-notes">
+<em>
+        A few notes:
+       </em>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#winds-impose-a-surface-stress-which-forces-ocean-currents">
+     - Winds impose a surface stress which forces ocean currents
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#this-is-called-the-wind-driven-circulation">
+     - This is called the
+     <em>
+<strong>
+       wind driven circulation
+      </strong>
+</em>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<main id="main-content" role="main">
+<div>
+<ul class="simple">
+<li><p>brief slides on large-scale atmospheric dynamics (&lt;5min slides)</p></li>
+</ul>
+<hr class="docutils"/>
+<div class="section" id="tutorial-4-ocean-wind-driven-circulation">
+<h1>Tutorial 4: Ocean wind driven circulation<a class="headerlink" href="#tutorial-4-ocean-wind-driven-circulation" title="Permalink to this headline">¶</a></h1>
+<p><strong>Week 1, Day 2: State of the Climate - Ocean and Atmospheric Reanalysis</strong>
+<strong>By Neuromatch Academy</strong></p>
+<p><strong>Content creators:</strong>   Abigail Bodner,   Day Lead’s Name</p>
+<p><strong>Content reviewers:</strong>  Name Surname, Name Surname</p>
+<p><strong>Content editors:</strong>   Jenna Pearson, Brodie Pearson</p>
+<p><strong>Production editors:</strong> Name Surname, Name Surname</p>
+<p><strong>Our 2023 Sponsors</strong></p>
+<!-- <p align='center'><img src='https://github.com/NeuromatchAcademy/widgets/blob/master/sponsors.png?raw=True'/></p> --><div class="section" id="tutorial-objectives">
+<h2>Tutorial Objectives<a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">¶</a></h2>
+<p>The ocean’s motion is driven by radiation from the sun, winds, and various sources of fresh water  (precipitation, rivers, melting and freezing ice). This tutorial focuses on global atmospheric wind patterns and how these drive the “<em>wind driven circulation</em>” component of large-scale ocean currents. The wind driven circulation is important for coastal communities and climate. It impacts the ocean temperature and upwelling systems along many coast lines and influences weather on many timescales. At the end of this tutorial you will be able to</p>
+<p>a) access and select ocean reanalysis data data</p>
+<p>b) plot average surface currents</p>
+<p>c) compare with global winds from a previous tutorial</p>
+<p>For this tutorial we will use the <em>Estimating the Circulation and Climate of the Ocean (ECCO)</em> dataset, which makes the best possible estimates of ocean circulation and its role in climate (https://www.ecco-group.org/).</p>
+<div class="section" id="tutorial-slides">
+<h3>Tutorial slides<a class="headerlink" href="#tutorial-slides" title="Permalink to this headline">¶</a></h3>
+<p>These are the slides for the videos in all tutorials today</p>
+<div class="section" id="id1">
+<h4>Tutorial slides<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>These are the slides for the videos in all tutorials today</p>
+<div class="section" id="id2">
+<h5>Tutorial slides<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h5>
+<p>These are the slides for the videos in all tutorials today</p>
+<p>#######  Tutorial slides</p>
+<p>These are the slides for the videos in all tutorials today</p>
+<p>########  Tutorial slides</p>
+<p>These are the slides for the videos in all tutorials today</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#from intake import open_catalog</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">from</span> <span class="nn">cartopy</span> <span class="kn">import</span> <span class="n">crs</span> <span class="k">as</span> <span class="n">ccrs</span><span class="p">,</span> <span class="n">feature</span> <span class="k">as</span> <span class="n">cfeature</span>
+<span class="c1">#  Suppress warnings issued by Cartopy when downloading data files</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">'ignore'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot helping function</span>
+
+<span class="k">def</span> <span class="nf">set_projection_figure</span><span class="p">(</span><span class="n">projection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">figsize</span> <span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">)</span> <span class="p">):</span>
+    <span class="c1"># source:https://foundations.projectpythia.org/core/cartopy/cartopy.html</span>
+
+    <span class="n">projLccNY</span> <span class="o">=</span>  <span class="n">projection</span> <span class="c1">#ccrs.LambertConformal(central_longitude=cLon, central_latitude=cLat)</span>
+
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">)</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">projLccNY</span><span class="p">)</span>
+
+    <span class="n">format_axes</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+    <span class="c1">#ax.add_feature(cfeature.STATES)</span>
+    <span class="c1">#ax.add_feature(cfeature.RIVERS)</span>
+    <span class="k">return</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span>
+
+<span class="k">def</span> <span class="nf">format_axes</span><span class="p">(</span><span class="n">ax</span><span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">COASTLINE</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">LAKES</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">'None'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span> <span class="p">)</span>
+    <span class="n">gl</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">(</span><span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">)</span>
+    <span class="n">gl</span><span class="o">.</span><span class="n">xlocator</span> <span class="o">=</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">ticker</span><span class="o">.</span><span class="n">MaxNLocator</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+    <span class="n">gl</span><span class="o">.</span><span class="n">ylocator</span> <span class="o">=</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">ticker</span><span class="o">.</span><span class="n">MaxNLocator</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">gl</span><span class="o">.</span><span class="n">xlabels_top</span>  <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">gl</span><span class="o">.</span><span class="n">ylabels_left</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="c1">#gl.xlines = False</span>
+
+<span class="c1"># helping functions:</span>
+<span class="k">def</span> <span class="nf">geographic_lon_to_360</span><span class="p">(</span><span class="n">lon</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">360</span> <span class="o">+</span> <span class="n">lon</span>
+
+<span class="k">def</span> <span class="nf">inverted_geographic_lon_to_360</span><span class="p">(</span><span class="n">lon</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">lon</span> <span class="o">-</span> <span class="mi">180</span>
+
+<span class="k">def</span> <span class="nf">cbar_label</span><span class="p">(</span><span class="n">DD</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">DD</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">'long_name'</span><span class="p">]</span> <span class="o">+</span> <span class="s1">' ['</span> <span class="o">+</span> <span class="n">DD</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">'units'</span><span class="p">]</span><span class="o">+</span> <span class="s1">']'</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="figure-settings">
+<h3>Figure settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h4>Figure settings<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id4">
+<h5>Figure settings<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h5>
+<p>#######  Figure settings</p>
+<p>########  Figure settings</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Figure settings</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>       <span class="c1"># interactive display</span>
+<span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = 'retina'
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">"https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/cma.mplstyle"</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">font_for_print</span><span class="p">():</span>
+
+    <span class="n">SMALL_SIZE</span> <span class="o">=</span> <span class="mi">8</span>
+    <span class="n">MEDIUM_SIZE</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">BIGGER_SIZE</span> <span class="o">=</span> <span class="mi">11</span>
+    <span class="n">legend_properties</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'weight'</span><span class="p">:</span><span class="s1">'bold'</span><span class="p">}</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'font'</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">SMALL_SIZE</span><span class="p">,</span> <span class="n">serif</span><span class="o">=</span><span class="s1">'Helvetica Neue'</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="s1">'normal'</span><span class="p">)</span>          <span class="c1"># controls default text sizes</span>
+    <span class="c1">#plt.rc('font', size=SMALL_SIZE, serif='DejaVu Sans', weight='light')</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'text'</span><span class="p">,</span> <span class="n">usetex</span><span class="o">=</span><span class="s1">'false'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'axes'</span><span class="p">,</span> <span class="n">titlesize</span><span class="o">=</span><span class="n">MEDIUM_SIZE</span><span class="p">,</span> <span class="n">labelweight</span><span class="o">=</span><span class="s1">'normal'</span><span class="p">)</span>     <span class="c1"># fontsize of the axes title</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'axes'</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="n">SMALL_SIZE</span><span class="p">,</span> <span class="n">labelweight</span><span class="o">=</span><span class="s1">'normal'</span><span class="p">)</span> <span class="c1">#, family='bold')    # fontsize of the x and y labels</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'xtick'</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="n">SMALL_SIZE</span><span class="p">)</span>    <span class="c1"># fontsize of the tick labels</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'ytick'</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="n">SMALL_SIZE</span><span class="p">)</span>    <span class="c1"># fontsize of the tick labels</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'legend'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="n">SMALL_SIZE</span><span class="p">,</span> <span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>    <span class="c1"># legend fontsize</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'figure'</span><span class="p">,</span> <span class="n">titlesize</span><span class="o">=</span><span class="n">MEDIUM_SIZE</span><span class="p">,</span> <span class="n">titleweight</span><span class="o">=</span><span class="s1">'bold'</span><span class="p">,</span> <span class="n">autolayout</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#, family='bold')  # fontsize of the figure title</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'axes'</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span> <span class="n">SMALL_SIZE</span><span class="p">,</span> <span class="n">labelweight</span><span class="o">=</span><span class="s1">'normal'</span><span class="p">)</span>
+
+<span class="n">font_for_print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Load atmospheric (ERA5) and oceanic (ECCO) ranalysis data</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># from the Pangeo catalog</span>
+
+<span class="c1">#cat_ERA5 = open_catalog("https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/atmosphere.yaml")</span>
+<span class="c1">#ERA5  = cat_ERA5["era5_hourly_reanalysis_single_levels_sa"].to_dask()</span>
+
+<span class="c1">#cat_ECCO = open_catalog("https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean.yaml")</span>
+<span class="c1">#ECCO  = cat_ECCO["ECCOv4r3"].to_dask()</span>
+
+
+<span class="c1">### stand-alone version:</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">pooch</span>
+<span class="n">fname</span> <span class="o">=</span> <span class="s1">'ERA5_select_example.nc'</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">"https://osf.io/82gba/download"</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fname</span><span class="o">=</span><span class="n">fname</span><span class="p">)</span>
+
+<span class="n">ERA5</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+
+<span class="c1"># Will have this shortly</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">pooch</span>
+<span class="n">fname</span> <span class="o">=</span> <span class="s1">'surface_eval.nc.nc'</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">"https://osf.io/46e35/download"</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fname</span><span class="o">=</span><span class="n">fname</span><span class="p">)</span>
+<span class="n">ECCO_U</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataarray</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">pooch</span>
+<span class="n">fname</span> <span class="o">=</span> <span class="s1">'surface_nvel.nc'</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">"https://osf.io/v6mzq/download"</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fname</span><span class="o">=</span><span class="n">fname</span><span class="p">)</span>
+<span class="n">ECCO_V</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Examine the time ranges of each dataset</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'The time range is:'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">ERA5</span><span class="o">.</span><span class="n">time</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'M8[h]'</span><span class="p">)</span> <span class="p">,</span> <span class="s1">'to'</span><span class="p">,</span> <span class="n">ERA5</span><span class="o">.</span><span class="n">time</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'M8[h]'</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'The time range is:'</span><span class="p">)</span>
+<span class="c1"># print( ECCO_V.time[0].data.astype('M8[h]') , 'to', ECCO_V.time[-1].data.astype('M8[h]') )</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>List the available <em>time</em> data from a specific year (2000) to identify the <em>output frequency</em> or <em>temporal frequency</em>, which is the rate at which reanalysis data is provided.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ERA5</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">'2018'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice the array [‘2000-01-01T00:00:00.000000000’, ‘2000-01-01T01:00:00.000000000’,
+‘2000-01-01T02:00:00.000000000’,…] consists of dates ‘2000-01-01’ and time ‘T00:00:00.000000000’, which increases to ‘T01:00:00.000000000’. This indicates that the ERA5 data has an <em>hourly</em> output frequency.</p>
+<p>Now let’s examine the ECCO data again for the same year 2000,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ECCO.time.sel(time='2000')</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice that the ECCO data goes from ‘2000-01-15T00:00:00.000000000’ to ‘2000-02-13T00:00:00.000000000’, which indicates this is <em>monthly</em> data. Note: although the timestamp lists a specific day in the middle of a month, the data are actually monthly (temporal) averages.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="discussion">
+<h2>Discussion<a class="headerlink" href="#discussion" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Why do you think the atmospheric dataset have higher output frequency than the ocean dataset?</p></li>
+<li><p>What can we infer about the rate of change of the two systems and their role in the climate system from these output frequencies?</p></li>
+<li><p>What type of averaging do we need to perform on ERA5 in order to compare directly with ECCO?</p></li>
+</ul>
+</div>
+<div class="section" id="surface-currents-compared-with-surface-winds">
+<h2>Surface currents compared with surface winds<a class="headerlink" href="#surface-currents-compared-with-surface-winds" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Slides about wind driven circulation and introducing the ECCO model</p></li>
+</ul>
+</div>
+<div class="section" id="section-1-plotting-global-surface-winds-using-era5">
+<h2>Section 1: Plotting global surface winds using ERA5<a class="headerlink" href="#section-1-plotting-global-surface-winds-using-era5" title="Permalink to this headline">¶</a></h2>
+<p>Now let’s plot global maps of surface winds, averaged over a month that is present in the time ranges of both ECCO and ERA5. Fortunately, we can use a similar computation to the previous tutorial!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pick a month that overlaps between ERA5 and ECCO. Here we choose April 2000</span>
+<span class="n">year_month</span> <span class="o">=</span> <span class="s1">'2018-03'</span>
+
+<span class="c1">#examine the time array within this temporal selection</span>
+<span class="n">ERA5</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">year_month</span><span class="p">)</span><span class="o">.</span><span class="n">time</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, we calculate  monthly averages from the ERA5 hourly data, so we can compare it directly to the ECCO monthly data. We then select the atmospheric variables of interest, the 10 meter wind speeds in the zonal and meridional directions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># select year and month of interest and take average over all days in month</span>
+<span class="n">ERA5_monthly_mean</span><span class="o">=</span> <span class="n">ERA5</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">year_month</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">'time'</span><span class="p">)</span>
+
+<span class="c1"># zonal 10m wind speed</span>
+<span class="n">ERA_U</span> <span class="o">=</span> <span class="n">ERA5_monthly_mean</span><span class="p">[</span><span class="s1">'u10'</span><span class="p">]</span>
+<span class="c1"># meridional 10m wind speed</span>
+<span class="n">ERA_V</span> <span class="o">=</span> <span class="n">ERA5_monthly_mean</span><span class="p">[</span><span class="s1">'v10'</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Rather than ploting the zonal and meridional velocity components <span class="math notranslate nohighlight">\((u,v)\)</span> separately, we will plot the magnitude and direction of the total velocity vector. This type of plot is called a vector field. A <a class="reference external" href="https://glossary.ametsoc.org/wiki/Vector">vector</a> is a special mathematical quantity that has both a magnitude and a direction, just like the wind! The velocity components describe how much wind is blowing in the zonal (<span class="math notranslate nohighlight">\(u\)</span>) or meridional (<span class="math notranslate nohighlight">\(v\)</span>) directions. Specifically, wind can blow in the eastward (positive <span class="math notranslate nohighlight">\(u\)</span>) or westward (negative <span class="math notranslate nohighlight">\(u\)</span>) direction, and in the northward (positive <span class="math notranslate nohighlight">\(v\)</span>) or southward (negative <span class="math notranslate nohighlight">\(v\)</span>) direction. The total velocity vector is the <em>vector sum</em> of these two components, and has variable magnitude and direction. The magnitude (<span class="math notranslate nohighlight">\(||u||)\)</span> and direction (<span class="math notranslate nohighlight">\(\theta\)</span>) of the total velocity vector are given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-14d8244c-9227-48e4-b3ef-9260c02553fc">
+<span class="eqno">(1)<a class="headerlink" href="#equation-14d8244c-9227-48e4-b3ef-9260c02553fc" title="Permalink to this equation">¶</a></span>\[\begin{align}
+||u|| = \sqrt{u^2 + v^2},  \ \  \ \ \theta = tan^{-1}(\frac{v}{u})
+\end{align}\]</div>
+<p>When using a computer to plot a vector field, it is usually called a quiver plot instead. We will use a <a class="reference external" href="https://rabernat.github.io/intro_to_physical_oceanography/07_ekman.html">quiver function created by Ryan Abernathey</a> that derives the magnitude and direction of the total velocity vector from the given zonal and meridional components.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># make sure to credit Ryan Abernathey here</span>
+<span class="k">def</span> <span class="nf">quiver_ERA</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">sampling_x</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">sampling_y</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">mag_max</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+    <span class="n">x</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">longitude</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">latitude</span>
+
+    <span class="c1"># calculate magnitude of total velocity</span>
+    <span class="n">mag</span> <span class="o">=</span> <span class="p">(</span><span class="n">u</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">v</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
+
+    <span class="c1"># coarsen the grid so the arrows are distinguishable by only selecting</span>
+    <span class="c1"># some longitudes and latitudes defined by sampling_x and sampling_y.</span>
+    <span class="n">slx</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">sampling_x</span><span class="p">)</span>
+    <span class="n">sly</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">sampling_y</span><span class="p">)</span>
+    <span class="n">sl2d</span> <span class="o">=</span> <span class="p">(</span><span class="n">sly</span><span class="p">,</span> <span class="n">slx</span><span class="p">)</span>
+
+    <span class="c1">#fig, ax = plt.subplots(**kwargs)</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">set_projection_figure</span><span class="p">(</span><span class="n">projection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">)</span> <span class="p">)</span>
+
+    <span class="c1"># plot contours of the magnitude</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">mag</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="n">mag_max</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">'Blues_r'</span><span class="p">)</span>
+
+    <span class="c1">#plt.colorbar(fig, orientation='vertical', label = 'm/s', shrink= 0.55 , pad = 0.08)</span>
+
+    <span class="c1">#return the quiver plot just at the locations we sampled</span>
+    <span class="k">return</span> <span class="n">ax</span><span class="p">,</span> <span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">slx</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">sly</span><span class="p">],</span> <span class="n">u</span><span class="p">[</span><span class="n">sl2d</span><span class="p">],</span> <span class="n">v</span><span class="p">[</span><span class="n">sl2d</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot magnitude of wind speed overlayed by quiver arrows indicating vector direction</span>
+<span class="c1"># Note this one takes a little while</span>
+
+<span class="c1"># we define contours levels that will be used in all plots the compare them better</span>
+<span class="n">colorlevels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+
+<span class="n">quiver_ERA</span><span class="p">(</span><span class="n">ERA_U</span><span class="p">,</span> <span class="n">ERA_V</span><span class="p">,</span>
+             <span class="n">mag_max</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">sampling_x</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="c1">#plt.title('Date '+year_month +' | qrt(U^2 + V^2) ',loc ='left')</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="section-2-plotting-global-surface-currents-using-ecco">
+<h2>Section 2: Plotting global surface currents using ECCO<a class="headerlink" href="#section-2-plotting-global-surface-currents-using-ecco" title="Permalink to this headline">¶</a></h2>
+<p>To understand how the near-surface winds impact the ocean’s motion, we will examine surface currents from <a class="reference external" href="https://www.ecco-group.org">ECCO (Estimating the Circulation and Climate of the Ocean)</a> reanalysis and compare these to the atmosphere.</p>
+<p>First let us look at the ECCO dataset variables</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ECCO</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">year_month</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We next compute the time mean in the same manner as before. We also are only interested in the surface values so we select <span class="math notranslate nohighlight">\(k=0\)</span>, which represents the upper most layer of the ocean near the surface.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ECCO_monthly_mean= ECCO.sel(time=year_month).isel(k=0)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ECCO_V= ECCO_monthly_mean['VVELMASS']</span>
+<span class="c1"># ECCO_U= ECCO_monthly_mean['UVELMASS']</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let us examine ECCO_U and ECCO_V</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ECCO_V</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ECCO_U</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The only dimensions now <span class="math notranslate nohighlight">\(['j', 'i_g']\)</span> for <span class="math notranslate nohighlight">\(U\)</span>, <span class="math notranslate nohighlight">\(['j_g', 'i']\)</span> for <span class="math notranslate nohighlight">\(V\)</span>, and <span class="math notranslate nohighlight">\(['face']\)</span> for both. These are related to how velocity variables are computed and stored in the ECCO model. Here <span class="math notranslate nohighlight">\('face'\)</span> refers to the tiles of the <a class="reference external" href="https://xgcm.readthedocs.io/en/latest/grid_topology.html">grid for this particular model</a>, which are not regular.</p>
+<p>Let’s examine what the zonal ocean velocity (ECCO_u) looks like for each tile of our model</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ECCO_U.plot(col='face', col_wrap=5)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Each face represents a different section within the globe. It is possible to manually “patch” these together but we will interpolate U and V to a regular lat-lon grid using a <span class="xref myst">handy package</span> developed specifically to make it easier to work with the ECCO model!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ecco_v4_py</span> <span class="k">as</span> <span class="nn">ecco</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ECCO_V</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># interpolate the zonal and meridional velocities</span>
+<span class="c1"># ECCO_U_interp = ECCO_U.interp(i_g=ECCO_U.i)</span>
+<span class="c1"># ECCO_V_interp = ECCO_V.interp(j_g=ECCO_V.j)</span>
+
+<span class="c1"># plot</span>
+<span class="c1"># ecco.plot_proj_to_latlon_grid(ECCO.XC, ECCO.YC, 0.5*(ECCO_U_interp**2+ECCO_V_interp**2)**0.5, cmap='Blues_r', vmax=6);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let us add the surface winds quiver plot overlayed on top of surface surrents</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># make sure to credit Ryan Abernathey here</span>
+<span class="k">def</span> <span class="nf">quiver_ERA_ECCO</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">sampling_x</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">sampling_y</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">mag_max</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">longitude</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">latitude</span>
+    <span class="n">mag</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">u</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">v</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
+    <span class="n">slx</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">sampling_x</span><span class="p">)</span>
+    <span class="n">sly</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">sampling_y</span><span class="p">)</span>
+    <span class="n">sl2d</span> <span class="o">=</span> <span class="p">(</span><span class="n">sly</span><span class="p">,</span> <span class="n">slx</span><span class="p">)</span>
+    <span class="c1">#fig, ax = plt.subplots(**kwargs)</span>
+    <span class="c1">#fig, ax = set_projection_figure(projection = ccrs.PlateCarree(), figsize = (9, 5.5) )</span>
+    <span class="c1">#ax.contourf(x,y,mag, vmax=mag_max, cmap='Blues_r')</span>
+    <span class="c1">#plt.colorbar(fig, orientation='vertical', label = 'm/s', shrink= 0.55 , pad = 0.08)</span>
+    <span class="k">return</span> <span class="n">ax</span><span class="p">,</span> <span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">slx</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">sly</span><span class="p">],</span> <span class="n">u</span><span class="p">[</span><span class="n">sl2d</span><span class="p">],</span> <span class="n">v</span><span class="p">[</span><span class="n">sl2d</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># fig = ecco.plot_proj_to_latlon_grid(ECCO.XC, ECCO.YC, 0.5*(ECCO_U_interp**2+ECCO_V_interp**2)**0.5,</span>
+<span class="c1">#                               cmap='Blues_r', vmax=6, projection_type = 'PlateCarree');</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>SOMETHING WENT WRONG– CAN’T OVERLAY WIND QUIVER PLOT !!</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># #fig, ax = set_projection_figure(projection = ccrs.PlateCarree(), figsize = (9, 5.5) )</span>
+<span class="c1"># fig, ax = plt.subplots()</span>
+<span class="c1"># ecco.plot_proj_to_latlon_grid(ECCO.XC, ECCO.YC, 0.5*(ECCO_U_interp**2+ECCO_V_interp**2)**0.5,</span>
+<span class="c1">#                               cmap='Blues_r', vmax=6, projection_type = 'PlateCarree');</span>
+
+<span class="c1"># sampling_x=20</span>
+<span class="c1"># sampling_y=20</span>
+<span class="c1"># x = ERA_U.longitude</span>
+<span class="c1"># y = ERA_V.latitude</span>
+<span class="c1"># slx = slice(None, None, sampling_x)</span>
+<span class="c1"># sly = slice(None, None, sampling_y)</span>
+<span class="c1"># sl2d = (sly, slx)</span>
+
+<span class="c1"># ax.quiver(x[slx], y[sly], ERA_U[sl2d], ERA_V[sl2d])</span>
+
+<span class="c1"># plt.show()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>As a final step let us compare with the surface wind magnitude and direction.</p>
+<div class="section" id="a-few-notes">
+<h3><em>A few notes:</em><a class="headerlink" href="#a-few-notes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>Surprise fact!</strong> The wind driven currents at the surface are not actually in the direction of the wind but rather at a ~45 degree angle. This is known as the Ekman pumping effect, for which water is either upwelled or downwelled based on the directionality of the wind. Can you notice this relationship?</p></li>
+<li><p><strong>Fun fact!</strong> Upwelling and downwelling is actually a very important process in the El Nino phenomena we discussed earlier. The El Nino La Nina phase is identified either strong or week upwelling near the coast. .. add here story of Fisherman along the coast of Peru and why it is named El Nino.</p></li>
+</ul>
+<p>Next activity: can you plot the coast of Peru and examine the direction of the wind and the direction of the ocean currents?</p>
+<p>Let’s make the same plot with surface temperature? What is the relationship between wind, upwelling, and temperature in this location? (make connection here to next tutorial on density)</p>
+<p>Bonus activity! Try to repeat the steps above with different months and years. Can you identify an El Nino or La Nina event?</p>
+<p>Zooming back out, does the wind driven circulation does not explain all of the ocean currents? What do you think is missing? In the next tutorial you will discuss density driven currents</p>
+</div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="summary">
+<h1>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="winds-impose-a-surface-stress-which-forces-ocean-currents">
+<h2>- Winds impose a surface stress which forces ocean currents<a class="headerlink" href="#winds-impose-a-surface-stress-which-forces-ocean-currents" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="this-is-called-the-wind-driven-circulation">
+<h2>- This is called the <em><strong>wind driven circulation</strong></em><a class="headerlink" href="#this-is-called-the-wind-driven-circulation" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+<script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student"
+        },
+        predefinedOutput: true
+    }
+    </script>
+<script>kernelName = 'python3'</script>
+</div>
+</main>
+<footer class="footer-article noprint">
+<!-- Previous / next buttons -->
+<div class="prev-next-area">
+<a class="left-prev" href="W1D2_Tutorial3.html" id="prev-link" title="previous page">
+<i class="fas fa-angle-left"></i>
+<div class="prev-next-info">
+<p class="prev-next-subtitle">previous</p>
+<p class="prev-next-title">Tutorial 3: Atmospheric wind driven circulation</p>
+</div>
+</a>
+<a class="right-next" href="W1D2_Tutorial5.html" id="next-link" title="next page">
+<div class="prev-next-info">
+<p class="prev-next-subtitle">next</p>
+<p class="prev-next-title">Tutorial 5: Thermohaline circulation</p>
+</div>
+<i class="fas fa-angle-right"></i>
+</a>
+</div>
+</footer>
+</div>
+</div>
+<div class="footer-content row">
+<footer class="col footer"><p>
+  
+    By Climatematch<br/>
+<div class="extra_footer">
+<div>
+<a href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png"/></a>
+<a href="https://opensource.org/licenses/BSD-3-Clause"><img src="https://camo.githubusercontent.com/9b9ea65d95c9ef878afa1987df65731d47681336/68747470733a2f2f696d672e736869656c64732e696f2f707970692f6c2f736561626f726e2e737667"/></a>
+The contents of this repository are shared under the <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+Software elements are additionally licensed under the <a href="https://opensource.org/licenses/BSD-3-Clause">BSD (3-Clause) License</a>.
+</div>
+</div>
+</p>
+</footer>
+</div>
+</div>
+</div>
+</div>
+<!-- Scripts loaded after <body> so the DOM is not blocked -->
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+</body>
+</html>
