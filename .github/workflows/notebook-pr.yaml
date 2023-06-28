@@ -30,7 +30,7 @@ jobs:
       - name: Run Notebooks
         uses: ./.github/actions/check-notebooks
         with:
-          run_all: 'false'
+          run_all: 'true'
           exec_flag: '--check-execution'
           # exec_flag: '--execute'
           exercice-continue-on-error: 'true'
