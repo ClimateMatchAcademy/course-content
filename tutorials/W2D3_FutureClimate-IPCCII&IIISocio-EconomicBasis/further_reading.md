@@ -69,3 +69,13 @@ The $SCC$ quantifies how much consumption is lost with increased emissions, usin
 
 - the marginal value with respect to emissions relative to the marginal value with respect to consumption, $$SCC_t\propto\frac{\partial V/\partial E_t}{\partial V/\partial C_t}=\frac{\partial C_t}{\partial E_t}.$$
 This is usually expressed by multiplying by a proportionality factor of $-1000$ that converts the units to 2010 US dollars per tonne of CO2. 
+
+# **Tutorial 4 Further Reading**
+
+## **Vectorization Methods for Creating Word Clouds**
+
+Let's write down what they compute by denoting the index, $d$, over the $D$ documents and the index, $w$, over the $W$ words in the vocabulary (the list of all the words found in all the tweets, which we'll call documents): 
+- term frequency, $\mathrm{tf}(w,d)$. The frequency of a word $w$ in a document $d$ is $$\mathrm{tf}(w,d):=\frac{n(w,d)}{n(d)},$$ where $n(w,d)$ is the number of times term $w$ is in document $d$ and $n(d)=\sum_{w=1}^W n(w,d)$ is the total number of words in document $d$. The term frequency over all the documents is then, $$\mathrm{tf}(w):=\frac{\sum_{d=1}^D n(d)\mathrm{tf}(w,d)}{N},$$ where the denominator $N=\sum_{d=1}^D n(d)$ is just the total word count across all documents.
+- term frequency-inverse document frequency, $\mathrm{Tfidf}(w,d):=\mathrm{tf}(w,d)\mathrm{idf}(w)$. Here, $$\mathrm{idf}(w)=\frac{\log(D+1)}{\log(n(w)+1)+1},$$ where $n(w)$ is the number of documents in which term $t$ appears, i.e. $n(w,d)>0$. Idf is like an inverse document frequency. The `sklearn` package then uses $$\mathrm{Tfidf}(w)=\frac{1}{D}\sum_{d=1}^D \frac{\mathrm{Tfidf}(w,d)}{||\mathrm{Tfidf}(\cdot,d)||},$$ where $||\vec{x}||=\sqrt{\sum_{i=1}^Nx^2_i}$ is the Euclidean norm.
+
+$\mathrm{Tfidf}$ aims to add more discriminability to frequency as a word relevance metric by downweighting words that appear in many documents since these common words are less discriminative.
