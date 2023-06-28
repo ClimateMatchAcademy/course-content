@@ -13,6 +13,7 @@ The course will begin with Opening Ceremonies on Sunday, July 9th
 
 Tutorials, Projects and Professional Development activities will take place between July 17th and July 28th, 2023.
 
+
 ## Course Schedule for Timezones 2 & 5
 
 <table>
@@ -196,6 +197,7 @@ Tutorials, Projects and Professional Development activities will take place betw
    </td>
   </tr>
 </table>
+
 
 ## Course Schedule for Timezones 1, 3 & 4
 
@@ -458,6 +460,7 @@ All days (except W1D1 and W2D2) will follow this schedule for course time:
 </table>
 
 
+
 *Note that the synchronous coursework session starts at 0:00 with the first pod discussion.
 
 W1D1: The synchronous coursework session starts at -0:30 with 30 minutes for pod introductions. Students should watch the keynote lecture beforehand.
@@ -474,8 +477,8 @@ On W2D2 you will additionally be working on your group projects during the time 
 
 ### Professional Development Schedule
 
-A series of professional development events (viewing and discussing four Impact Talks, a career panel, and two meetings with mentors) will take place during the 3-hour project time. Check the [time slot widget](https://climatematchacademy.github.io/widgets/tz.html) to see when project time is scheduled for your slot.
 
+A series of professional development events (viewing and discussing four Impact Talks, a career panel, and two meetings with mentors) will take place during the 3-hour project time. Check the [time slot widget](https://climatematchacademy.github.io/widgets/tz.html) to see when project time is scheduled for your slot.
 
 
 * Impact talks and discussions will take place during the first or last 30 minutes of Project Sessions 2, 3, 6 and 8.
