@@ -4,19 +4,20 @@
   link: docs/project_guidance.md
 - title: Project materials
   link: docs/datasets_overview.md
-  - title: Sea level rise
-    link: project-notebooks/Sea_level_rise.ipynb
-  - title: Ocean acidification
-    link: project-notebooks/Ocean_acidification.ipynb
-  - title: The impact of ENSO on precipitation and temperature
-    link: project-notebooks/ENSO_impact_on_precipitation_and_temperature.ipynb
-  - title: Regional precipitation variability and extreme events
-    link: project-notebooks/Regional_precipitation_variability.ipynb
-  - title: "Heatwaves: Assessing the dynamic interactions of the atmosphere and land"
-    link: project-notebooks/Heatwaves.ipynb
-  - title: Monitoring and mapping wildfires using satellite data
-    link: project-notebooks/Wildfires_and_burnt_areas.ipynb
-  - title: Change in Earth's albedo and its dependence on land cover changes in the past 20 years
-    link: project-notebooks/Surface_albedo_and-land_use.ipynb
+# - chapters:
+#   - title: Sea level rise
+#     link: project-notebooks/Sea_level_rise.ipynb
+#   - title: Ocean acidification
+#     link: project-notebooks/Ocean_acidification.ipynb
+#   - title: The impact of ENSO on precipitation and temperature
+#     link: project-notebooks/ENSO_impact_on_precipitation_and_temperature.ipynb
+#   - title: Regional precipitation variability and extreme events
+#     link: project-notebooks/Regional_precipitation_variability.ipynb
+#   - title: "Heatwaves: Assessing the dynamic interactions of the atmosphere and land"
+#     link: project-notebooks/Heatwaves.ipynb
+#   - title: Monitoring and mapping wildfires using satellite data
+#     link: project-notebooks/Wildfires_and_burnt_areas.ipynb
+#   - title: Change in Earth's albedo and its dependence on land cover changes in the past 20 years
+#     link: project-notebooks/Surface_albedo_and-land_use.ipynb
 - title: Continuing your project after the course
   link: docs/continuing_your_project_after_the_course.md
