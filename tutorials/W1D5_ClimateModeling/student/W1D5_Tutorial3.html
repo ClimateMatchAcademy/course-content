@@ -655,23 +655,9 @@ const thebe_selector_output = ".output, .cell_output"
 </label>
 <ul>
 <li class="toctree-l2">
-<a class="reference internal" href="../../../projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.html">
-<strong>
-      The impact of ENSO on precipitation and temperature
-     </strong>
-</a>
-</li>
-<li class="toctree-l2">
 <a class="reference internal" href="../../../projects/project-notebooks/Ocean_acidification.html">
 <strong>
       Ocean acidification
-     </strong>
-</a>
-</li>
-<li class="toctree-l2">
-<a class="reference internal" href="../../../projects/project-notebooks/Wildfires_and_burnt_areas.html">
-<strong>
-      Monitoring and mapping wildfires using satellite data
      </strong>
 </a>
 </li>
@@ -683,9 +669,16 @@ const thebe_selector_output = ".output, .cell_output"
 </a>
 </li>
 <li class="toctree-l2">
-<a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
+<a class="reference internal" href="../../../projects/project-notebooks/Sea_level_rise.html">
 <strong>
-      Heatwaves: Assessing the dynamic interactions of the atmosphere and land
+      Sea level rise
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.html">
+<strong>
+      The impact of ENSO on precipitation and temperature
      </strong>
 </a>
 </li>
@@ -697,9 +690,16 @@ const thebe_selector_output = ".output, .cell_output"
 </a>
 </li>
 <li class="toctree-l2">
-<a class="reference internal" href="../../../projects/project-notebooks/Sea_level_rise.html">
+<a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
 <strong>
-      Sea level rise
+      Heatwaves: Assessing the dynamic interactions of the atmosphere and land
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Wildfires_and_burnt_areas.html">
+<strong>
+      Monitoring and mapping wildfires using satellite data
      </strong>
 </a>
 </li>
@@ -737,6 +737,14 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 <div class="menu-dropdown__content">
 <ul>
+<li>
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=tree/course-content/book/tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial3.ipynb&amp;branch=main" title="Launch on JupyterHub">
+<span class="headerbtn__icon-container">
+<img src="../../../_static/images/logo_jupyterhub.svg"/>
+</span>
+<span class="headerbtn__text-container">JupyterHub</span>
+</a>
+</li>
 </ul>
 </div>
 </div>
@@ -1017,8 +1025,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p>We can represent the change in temperature over time as the net heat input or loss from radiation (<span class="math notranslate nohighlight">\(ASR-OLR\)</span>) multiplied by the heat capacity of the Earth system.</p>
 <p>The heat capacity of a medium is it’s ability to increase in temperture given an input of heat. Not all components of the Earth system (for example land, ocean, atmosphere) have the same heat capacity.</p>
 <p>Mathematically the rate of change of global mean surface temperature (<span class="math notranslate nohighlight">\(T\)</span>) over time is given as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3d5f4a5f-adad-4abe-80c7-4f4452bab064">
-<span class="eqno">(10)<a class="headerlink" href="#equation-3d5f4a5f-adad-4abe-80c7-4f4452bab064" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-29586d67-68b1-40d4-8510-e937f2bb7689">
+<span class="eqno">(10)<a class="headerlink" href="#equation-29586d67-68b1-40d4-8510-e937f2bb7689" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \text{rate of change of }T = \frac{1}{\text{heat capacity}}\cdot (\text{energy flux in - energy flux out}) = \frac{1}{C} \cdot ASR - OLR
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(C\)</span> is the heat capacity of the Earth system. Note here that when <span class="math notranslate nohighlight">\(ASR &gt; OLR\)</span>, then the system is gaining heat. Conversly when <span class="math notranslate nohighlight">\(ASR &lt; OLR\)</span>, then the system is losing heat over time.</p>
@@ -1090,8 +1098,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="section-2-add-time-dependency-to-the-model">
 <h1>Section 2 : Add Time Dependency to the Model<a class="headerlink" href="#section-2-add-time-dependency-to-the-model" title="Permalink to this headline">¶</a></h1>
 <p>Knowing the heat capacity, and the descriptions of <span class="math notranslate nohighlight">\(OLR\)</span> and <span class="math notranslate nohighlight">\(ASR\)</span> from previous tutorials, we can write the equation</p>
-<div class="amsmath math notranslate nohighlight" id="equation-90a3c96c-187c-4525-afa2-da526bab29ea">
-<span class="eqno">(11)<a class="headerlink" href="#equation-90a3c96c-187c-4525-afa2-da526bab29ea" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5e73ccda-971c-438d-9500-694e96da4691">
+<span class="eqno">(11)<a class="headerlink" href="#equation-5e73ccda-971c-438d-9500-694e96da4691" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \text{rate of change }T = \frac{\text{change in }T}{\text{change in time}}=\frac{dT}{dt}= \frac{1}{C}(ASR - OLR)
 \end{align}\]</div>
 <p>Numerically, we can use this equation to compute the global mean surface temprature after a small interval of time by adding on the amount of energy gained or lost multiplied by the time interval itself.</p>

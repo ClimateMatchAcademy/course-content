@@ -655,23 +655,9 @@ const thebe_selector_output = ".output, .cell_output"
 </label>
 <ul>
 <li class="toctree-l2">
-<a class="reference internal" href="../../../projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.html">
-<strong>
-      The impact of ENSO on precipitation and temperature
-     </strong>
-</a>
-</li>
-<li class="toctree-l2">
 <a class="reference internal" href="../../../projects/project-notebooks/Ocean_acidification.html">
 <strong>
       Ocean acidification
-     </strong>
-</a>
-</li>
-<li class="toctree-l2">
-<a class="reference internal" href="../../../projects/project-notebooks/Wildfires_and_burnt_areas.html">
-<strong>
-      Monitoring and mapping wildfires using satellite data
      </strong>
 </a>
 </li>
@@ -683,9 +669,16 @@ const thebe_selector_output = ".output, .cell_output"
 </a>
 </li>
 <li class="toctree-l2">
-<a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
+<a class="reference internal" href="../../../projects/project-notebooks/Sea_level_rise.html">
 <strong>
-      Heatwaves: Assessing the dynamic interactions of the atmosphere and land
+      Sea level rise
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.html">
+<strong>
+      The impact of ENSO on precipitation and temperature
      </strong>
 </a>
 </li>
@@ -697,9 +690,16 @@ const thebe_selector_output = ".output, .cell_output"
 </a>
 </li>
 <li class="toctree-l2">
-<a class="reference internal" href="../../../projects/project-notebooks/Sea_level_rise.html">
+<a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
 <strong>
-      Sea level rise
+      Heatwaves: Assessing the dynamic interactions of the atmosphere and land
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Wildfires_and_burnt_areas.html">
+<strong>
+      Monitoring and mapping wildfires using satellite data
      </strong>
 </a>
 </li>
@@ -737,6 +737,14 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 <div class="menu-dropdown__content">
 <ul>
+<li>
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=tree/course-content/book/tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial4.ipynb&amp;branch=main" title="Launch on JupyterHub">
+<span class="headerbtn__icon-container">
+<img src="../../../_static/images/logo_jupyterhub.svg"/>
+</span>
+<span class="headerbtn__text-container">JupyterHub</span>
+</a>
+</li>
 </ul>
 </div>
 </div>
@@ -1022,8 +1030,8 @@ const thebe_selector_output = ".output, .cell_output"
 <h1>Section 1 : Temperature Dependent Albedo<a class="headerlink" href="#section-1-temperature-dependent-albedo" title="Permalink to this headline">¶</a></h1>
 <p>When earth’s surface warms, snow and ice melt. This decreases the amount of solar radiation that is reflected off Earth’s surface, and lowers the <strong>albedo (</strong><span class="math notranslate nohighlight">\(\mathbf{\alpha}\)</span><strong>)</strong>. This in turn warms the climate and more snow and ice melt. This is referred to as a <strong>postive feedback</strong>. Positive feedbacks amplify the changes that are already occurring. This particular feedback is referred to as the <strong>ice-albedo feedback</strong>.</p>
 <p>A simple introduction of this feature is through a temperature dependent albedo defined by a ramp function (see lecture slides).</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2704f605-941a-44cf-a967-75d1f0ff32f4">
-<span class="eqno">(12)<a class="headerlink" href="#equation-2704f605-941a-44cf-a967-75d1f0ff32f4" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-30d3d154-88dd-4b16-97e4-e5efe04e2483">
+<span class="eqno">(12)<a class="headerlink" href="#equation-30d3d154-88dd-4b16-97e4-e5efe04e2483" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \alpha = \left\{
         \begin{array}{cl}
         0.3 &amp; T \gt 280 K \\
@@ -1194,8 +1202,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="section-3-finding-equilibria-numerically-determining-convergence-or-divergence">
 <h1>Section 3: Finding Equilibria Numerically, Determining Convergence or Divergence<a class="headerlink" href="#section-3-finding-equilibria-numerically-determining-convergence-or-divergence" title="Permalink to this headline">¶</a></h1>
 <p>To verify the equilibria identified graphically in the previous section, we can use python to find the solutions to the equation when the rate of change in temeparture is zero. That is find the solution to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5a322fe5-9265-4929-a702-0c2c450e565e">
-<span class="eqno">(13)<a class="headerlink" href="#equation-5a322fe5-9265-4929-a702-0c2c450e565e" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a3b3739f-d4f2-4635-b586-ec982ca13a7f">
+<span class="eqno">(13)<a class="headerlink" href="#equation-a3b3739f-d4f2-4635-b586-ec982ca13a7f" title="Permalink to this equation">¶</a></span>\[\begin{align}
 0 = ASR-OLR
 \end{align}\]</div>
 <p>To aid us, we will use a ‘root-finding function’ from the scipy package.</p>

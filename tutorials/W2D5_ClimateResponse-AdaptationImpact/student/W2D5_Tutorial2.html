@@ -655,23 +655,9 @@ const thebe_selector_output = ".output, .cell_output"
 </label>
 <ul>
 <li class="toctree-l2">
-<a class="reference internal" href="../../../projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.html">
-<strong>
-      The impact of ENSO on precipitation and temperature
-     </strong>
-</a>
-</li>
-<li class="toctree-l2">
 <a class="reference internal" href="../../../projects/project-notebooks/Ocean_acidification.html">
 <strong>
       Ocean acidification
-     </strong>
-</a>
-</li>
-<li class="toctree-l2">
-<a class="reference internal" href="../../../projects/project-notebooks/Wildfires_and_burnt_areas.html">
-<strong>
-      Monitoring and mapping wildfires using satellite data
      </strong>
 </a>
 </li>
@@ -683,9 +669,16 @@ const thebe_selector_output = ".output, .cell_output"
 </a>
 </li>
 <li class="toctree-l2">
-<a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
+<a class="reference internal" href="../../../projects/project-notebooks/Sea_level_rise.html">
 <strong>
-      Heatwaves: Assessing the dynamic interactions of the atmosphere and land
+      Sea level rise
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.html">
+<strong>
+      The impact of ENSO on precipitation and temperature
      </strong>
 </a>
 </li>
@@ -697,9 +690,16 @@ const thebe_selector_output = ".output, .cell_output"
 </a>
 </li>
 <li class="toctree-l2">
-<a class="reference internal" href="../../../projects/project-notebooks/Sea_level_rise.html">
+<a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
 <strong>
-      Sea level rise
+      Heatwaves: Assessing the dynamic interactions of the atmosphere and land
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Wildfires_and_burnt_areas.html">
+<strong>
+      Monitoring and mapping wildfires using satellite data
      </strong>
 </a>
 </li>
@@ -737,6 +737,14 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 <div class="menu-dropdown__content">
 <ul>
+<li>
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=tree/course-content/book/tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.ipynb&amp;branch=main" title="Launch on JupyterHub">
+<span class="headerbtn__icon-container">
+<img src="../../../_static/images/logo_jupyterhub.svg"/>
+</span>
+<span class="headerbtn__text-container">JupyterHub</span>
+</a>
+</li>
 </ul>
 </div>
 </div>
@@ -2072,14 +2080,14 @@ Engage in a discussion with your group and see if anyone has noticed a trend tha
 <summary> <font color="violet">What is MAE and MSE   </font></summary>
 In addition to r^2, Mean Absolute Error (MAE) and Mean Squared Error (MSE) are both metrics used to evaluate the performance of a regression model. They both measure the difference between the predicted values and the actual values of the target variable.
 <p>The MAE is calculated by taking the average of the absolute differences between the predicted and actual values:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e3d7e72a-11b6-42f5-b8f0-0d6d43bad2cd">
-<span class="eqno">(17)<a class="headerlink" href="#equation-e3d7e72a-11b6-42f5-b8f0-0d6d43bad2cd" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ff91e835-19a4-4f9d-b748-b75442265700">
+<span class="eqno">(17)<a class="headerlink" href="#equation-ff91e835-19a4-4f9d-b748-b75442265700" title="Permalink to this equation">¶</a></span>\[\begin{align}
 MAE = \frac{1}{n}\sum_{i=1}^{n}|y_i - \hat{y_i}|
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(n\)</span> is the number of samples, <span class="math notranslate nohighlight">\(y_i\)</span> is the actual value of the target variable for sample <span class="math notranslate nohighlight">\(i\)</span>, and <span class="math notranslate nohighlight">\(\hat{y}_i\)</span> is the predicted value of the target variable for sample <span class="math notranslate nohighlight">\(i\)</span>.</p>
 <p>The RMSE is calculated by taking the square root of the average of the squared differences between the predicted and actual values:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fed26ec5-d7c4-4b8b-8f54-7930c1b34432">
-<span class="eqno">(18)<a class="headerlink" href="#equation-fed26ec5-d7c4-4b8b-8f54-7930c1b34432" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7f926030-e4b4-47b4-859a-9ba389db1fc6">
+<span class="eqno">(18)<a class="headerlink" href="#equation-7f926030-e4b4-47b4-859a-9ba389db1fc6" title="Permalink to this equation">¶</a></span>\[\begin{align}
  RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y_i})^2}
 \end{align}\]</div>
 <p>The main difference between MAE and RMSE is that RMSE gives more weight to larger errors, because the differences are squared. Therefore, if there are some large errors in the predictions, the MSE will be higher than the MAE.</p>

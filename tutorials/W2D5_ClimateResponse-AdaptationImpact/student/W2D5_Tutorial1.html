@@ -655,23 +655,9 @@ const thebe_selector_output = ".output, .cell_output"
 </label>
 <ul>
 <li class="toctree-l2">
-<a class="reference internal" href="../../../projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.html">
-<strong>
-      The impact of ENSO on precipitation and temperature
-     </strong>
-</a>
-</li>
-<li class="toctree-l2">
 <a class="reference internal" href="../../../projects/project-notebooks/Ocean_acidification.html">
 <strong>
       Ocean acidification
-     </strong>
-</a>
-</li>
-<li class="toctree-l2">
-<a class="reference internal" href="../../../projects/project-notebooks/Wildfires_and_burnt_areas.html">
-<strong>
-      Monitoring and mapping wildfires using satellite data
      </strong>
 </a>
 </li>
@@ -683,9 +669,16 @@ const thebe_selector_output = ".output, .cell_output"
 </a>
 </li>
 <li class="toctree-l2">
-<a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
+<a class="reference internal" href="../../../projects/project-notebooks/Sea_level_rise.html">
 <strong>
-      Heatwaves: Assessing the dynamic interactions of the atmosphere and land
+      Sea level rise
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.html">
+<strong>
+      The impact of ENSO on precipitation and temperature
      </strong>
 </a>
 </li>
@@ -697,9 +690,16 @@ const thebe_selector_output = ".output, .cell_output"
 </a>
 </li>
 <li class="toctree-l2">
-<a class="reference internal" href="../../../projects/project-notebooks/Sea_level_rise.html">
+<a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
 <strong>
-      Sea level rise
+      Heatwaves: Assessing the dynamic interactions of the atmosphere and land
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Wildfires_and_burnt_areas.html">
+<strong>
+      Monitoring and mapping wildfires using satellite data
      </strong>
 </a>
 </li>
@@ -737,6 +737,14 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 <div class="menu-dropdown__content">
 <ul>
+<li>
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=tree/course-content/book/tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial1.ipynb&amp;branch=main" title="Launch on JupyterHub">
+<span class="headerbtn__icon-container">
+<img src="../../../_static/images/logo_jupyterhub.svg"/>
+</span>
+<span class="headerbtn__text-container">JupyterHub</span>
+</a>
+</li>
 </ul>
 </div>
 </div>
@@ -1561,8 +1569,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <p>In a regression problem, we need data features (‘regressors’, or independent variables) that we will use to predict a dependent variable. For example, we could try to predict the amount of carbon dioxide released into the atmosphere (dependent variable) based on features such as temperature and humidity (regressors). We can use linear regression to model this relationship by fitting a straight line through the data points.</p>
 <p>To try out linear regression with scikit-learn, we will start with synthetic data. Linear regression assumes there is a linear relationship between the regressors and the predicted value, so we will simulate data that does have such a linear relationship.  Specifically, we will build data with the following relationship:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3e6c080d-aa00-49b6-9b20-7e1656a92db9">
-<span class="eqno">(15)<a class="headerlink" href="#equation-3e6c080d-aa00-49b6-9b20-7e1656a92db9" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-915eb1d8-2e88-471e-966f-685519e26a51">
+<span class="eqno">(15)<a class="headerlink" href="#equation-915eb1d8-2e88-471e-966f-685519e26a51" title="Permalink to this equation">¶</a></span>\[\begin{align}
  y = \beta x_1 + (1-\beta) x_2 + \alpha \epsilon 
 \end{align}\]</div>
 <p>where :</p>
@@ -1808,8 +1816,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Logistic regression can be useful in climate science for predicting the probability of occurrence of events such as extreme weather conditions or classifying land use changes in satellite data.</p>
 <p>Logistic regression is a statistical method used to model the probability of a binary outcome (e.g., success/failure, yes/no) as a function of one or more predictor variables. As such, it can be used to model binary outcomes such as whether a particular region will experience drought or not.</p>
 <p>Logistic regression is built on the same principles as linear regression, but it can be applied to classification problems instead of just regression. The equation for logisitic regression is as follows:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-382cd473-896e-4e7a-a43f-99501b0973c1">
-<span class="eqno">(16)<a class="headerlink" href="#equation-382cd473-896e-4e7a-a43f-99501b0973c1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d395065b-2197-41ec-a639-589d84faa821">
+<span class="eqno">(16)<a class="headerlink" href="#equation-d395065b-2197-41ec-a639-589d84faa821" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 p = S(\beta x_1 + \beta x_2 + \epsilon)
 \end{equation}\]</div>
 <p>where:</p>

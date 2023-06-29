@@ -655,23 +655,9 @@ const thebe_selector_output = ".output, .cell_output"
 </label>
 <ul>
 <li class="toctree-l2">
-<a class="reference internal" href="../../../projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.html">
-<strong>
-      The impact of ENSO on precipitation and temperature
-     </strong>
-</a>
-</li>
-<li class="toctree-l2">
 <a class="reference internal" href="../../../projects/project-notebooks/Ocean_acidification.html">
 <strong>
       Ocean acidification
-     </strong>
-</a>
-</li>
-<li class="toctree-l2">
-<a class="reference internal" href="../../../projects/project-notebooks/Wildfires_and_burnt_areas.html">
-<strong>
-      Monitoring and mapping wildfires using satellite data
      </strong>
 </a>
 </li>
@@ -683,9 +669,16 @@ const thebe_selector_output = ".output, .cell_output"
 </a>
 </li>
 <li class="toctree-l2">
-<a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
+<a class="reference internal" href="../../../projects/project-notebooks/Sea_level_rise.html">
 <strong>
-      Heatwaves: Assessing the dynamic interactions of the atmosphere and land
+      Sea level rise
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.html">
+<strong>
+      The impact of ENSO on precipitation and temperature
      </strong>
 </a>
 </li>
@@ -697,9 +690,16 @@ const thebe_selector_output = ".output, .cell_output"
 </a>
 </li>
 <li class="toctree-l2">
-<a class="reference internal" href="../../../projects/project-notebooks/Sea_level_rise.html">
+<a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
 <strong>
-      Sea level rise
+      Heatwaves: Assessing the dynamic interactions of the atmosphere and land
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Wildfires_and_burnt_areas.html">
+<strong>
+      Monitoring and mapping wildfires using satellite data
      </strong>
 </a>
 </li>
@@ -737,6 +737,14 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 <div class="menu-dropdown__content">
 <ul>
+<li>
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=tree/course-content/book/tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial2.ipynb&amp;branch=main" title="Launch on JupyterHub">
+<span class="headerbtn__icon-container">
+<img src="../../../_static/images/logo_jupyterhub.svg"/>
+</span>
+<span class="headerbtn__text-container">JupyterHub</span>
+</a>
+</li>
 </ul>
 </div>
 </div>
@@ -1028,8 +1036,8 @@ const thebe_selector_output = ".output, .cell_output"
 <h1>Section 1 : Insolation and Albedo<a class="headerlink" href="#section-1-insolation-and-albedo" title="Permalink to this headline">¶</a></h1>
 <p>Just as Earth emits radiation, so does the sun. The incoming solar radiation, called <strong>insolation</strong>, is observed to be <span class="math notranslate nohighlight">\(Q = 340 W m^{-2}\)</span>.</p>
 <p>Some of this radiation is reflected back to space (for example off of ice and snow). From observations the amount reflected back is <span class="math notranslate nohighlight">\(F_{ref} = 100 W m^{-2}\)</span>. The <em>fraction</em> of reflected radiation is captured by the <strong>albedo (</strong><span class="math notranslate nohighlight">\(\mathbf{\alpha}\)</span><strong>)</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-e0056e16-b7f2-4356-b0e3-c42d35586d48">
-<span class="eqno">(5)<a class="headerlink" href="#equation-e0056e16-b7f2-4356-b0e3-c42d35586d48" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6291e685-4d3e-483f-968c-627a0143d3d8">
+<span class="eqno">(5)<a class="headerlink" href="#equation-6291e685-4d3e-483f-968c-627a0143d3d8" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \alpha = \frac{F_{ref}}{Q}
 \end{align}\]</div>
 <p>Albedo is a unitless number between 0 and 1. We can use this formula and python to find the albedo of Earth.</p>
@@ -1068,8 +1076,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="section-2-absorbed-shortwave-radiation">
 <h1>Section 2 : Absorbed Shortwave Radiation<a class="headerlink" href="#section-2-absorbed-shortwave-radiation" title="Permalink to this headline">¶</a></h1>
 <p>The <strong>absorbed shortwave radiation (ASR)</strong> is the amount of this isolation that is <em>not</em> reflected, and actually makes it to Earth’s surface. Thus,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-78008ac4-6e9f-4e46-9309-6a3196f04d72">
-<span class="eqno">(6)<a class="headerlink" href="#equation-78008ac4-6e9f-4e46-9309-6a3196f04d72" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-02dc806b-bf25-4124-af6c-c8e17535ac18">
+<span class="eqno">(6)<a class="headerlink" href="#equation-02dc806b-bf25-4124-af6c-c8e17535ac18" title="Permalink to this equation">¶</a></span>\[\begin{align}
 ASR = Q-F_{ref} = (1-\alpha)Q
 \end{align}\]</div>
 <p>Using observations and python we can esimate the absorbed shortwave radiation.</p>
@@ -1104,19 +1112,19 @@ ASR = Q-F_{ref} = (1-\alpha)Q
 <div class="section" id="section-3-equilibrium-temperature">
 <h1>Section 3 : Equilibrium Temperature<a class="headerlink" href="#section-3-equilibrium-temperature" title="Permalink to this headline">¶</a></h1>
 <p>Energy Balance is achieved when radiation absorbed by Earth’s surface (ASR) is equal to longwave radiation going out to space (OLR). That is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-06cc1ef3-4d9c-4113-8a04-881cf8b401ee">
-<span class="eqno">(7)<a class="headerlink" href="#equation-06cc1ef3-4d9c-4113-8a04-881cf8b401ee" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9299bc67-ad34-4e69-b4e4-fc5d2078bfb7">
+<span class="eqno">(7)<a class="headerlink" href="#equation-9299bc67-ad34-4e69-b4e4-fc5d2078bfb7" title="Permalink to this equation">¶</a></span>\[\begin{align}
 ASR = OLR
 \end{align}\]</div>
 <p>By substituting in the equations from previous sections, we can find the surface temperature of Earth needed to maintain this balance. This is called the <strong>equilibrium temperature (</strong> <span class="math notranslate nohighlight">\(\mathbf{T_{eq}}\)</span> <strong>)</strong>.</p>
 <p>Recall <span class="math notranslate nohighlight">\(OLR = \tau\sigma T^4\)</span> and <span class="math notranslate nohighlight">\(ASR = (1-\alpha)Q\)</span>. The <strong>equilibrium temperature</strong> is the temperature the system would have if energy balance was perfectly reached. Assuming energy balance, we will call the emission temperature denoted previously the equilibrium temperature (<span class="math notranslate nohighlight">\(T_{eq}\)</span>) instead. Thus,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7397bf05-f501-46bc-8b6d-0b342d18ae1e">
-<span class="eqno">(8)<a class="headerlink" href="#equation-7397bf05-f501-46bc-8b6d-0b342d18ae1e" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8c6e403b-698c-4bfd-a472-40fd5beaba59">
+<span class="eqno">(8)<a class="headerlink" href="#equation-8c6e403b-698c-4bfd-a472-40fd5beaba59" title="Permalink to this equation">¶</a></span>\[\begin{align}
 (1-\alpha)Q = ASR = OLR = \tau\sigma T_{eq}^4
 \end{align}\]</div>
 <p>Solving for <span class="math notranslate nohighlight">\(T_{eq}\)</span> we find</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dcc573cf-d0d2-44e4-8805-7b49a37eb033">
-<span class="eqno">(9)<a class="headerlink" href="#equation-dcc573cf-d0d2-44e4-8805-7b49a37eb033" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-db6e9757-c631-46de-9579-67f6ad26f13a">
+<span class="eqno">(9)<a class="headerlink" href="#equation-db6e9757-c631-46de-9579-67f6ad26f13a" title="Permalink to this equation">¶</a></span>\[\begin{align}
 T_{eq} = \sqrt[4]{\frac{(1-\alpha)Q}{\tau\sigma}}
 \end{align}\]</div>
 <p>We can implement this equation in python to find the numeric value.</p>
