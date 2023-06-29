@@ -31,10 +31,11 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.7
-
+          
+        # BRANCH=`python -c 'import os, re; m = re.search(r"nmaci:([\w-]+)", os.environ["COMMIT_MESSAGE"]); print("main" if m is None else m.group(1))'`
       - name: Install CI tools
         run: |
-          BRANCH=`python -c 'import os, re; m = re.search(r"nmaci:([\w-]+)", os.environ["COMMIT_MESSAGE"]); print("main" if m is None else m.group(1))'`
+          BRANCH="climate"
           wget https://github.com/NeuromatchAcademy/nmaci/archive/refs/heads/$BRANCH.tar.gz
           tar -xzf $BRANCH.tar.gz
           pip install -r nmaci-$BRANCH/requirements.txt
@@ -63,7 +64,7 @@ jobs:
 
       - name: Build student book
         run: |
-          python ci/generate_book.py student
+          python ci/generate_book_climate.py student
           ln -s ../tutorials book/tutorials
           ln -s ../projects book/projects
           ln -s ../prereqs book/prereqs
