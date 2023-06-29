@@ -38,8 +38,6 @@ Tutorials, Projects and Professional Development activities will take place betw
 <p>
 (5 hours)
    </td>
-   <td bgcolor="#3F538A">
-   </td>
    <td bgcolor="#E99668" align="center" ><strong><font color="black" > Climate System Overview </font></strong>
    </td>
    <td bgcolor="#F5C690" align="center" ><strong><font color="black" > Ocean-Atmosphere Reanalysis </font></strong>
