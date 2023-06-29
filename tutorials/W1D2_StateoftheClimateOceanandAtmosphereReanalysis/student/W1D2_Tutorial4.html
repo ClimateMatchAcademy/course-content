@@ -655,9 +655,23 @@ const thebe_selector_output = ".output, .cell_output"
 </label>
 <ul>
 <li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.html">
+<strong>
+      The impact of ENSO on precipitation and temperature
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
 <a class="reference internal" href="../../../projects/project-notebooks/Ocean_acidification.html">
 <strong>
       Ocean acidification
+     </strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Wildfires_and_burnt_areas.html">
+<strong>
+      Monitoring and mapping wildfires using satellite data
      </strong>
 </a>
 </li>
@@ -669,16 +683,9 @@ const thebe_selector_output = ".output, .cell_output"
 </a>
 </li>
 <li class="toctree-l2">
-<a class="reference internal" href="../../../projects/project-notebooks/Sea_level_rise.html">
+<a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
 <strong>
-      Sea level rise
-     </strong>
-</a>
-</li>
-<li class="toctree-l2">
-<a class="reference internal" href="../../../projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.html">
-<strong>
-      The impact of ENSO on precipitation and temperature
+      Heatwaves: Assessing the dynamic interactions of the atmosphere and land
      </strong>
 </a>
 </li>
@@ -690,16 +697,9 @@ const thebe_selector_output = ".output, .cell_output"
 </a>
 </li>
 <li class="toctree-l2">
-<a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
+<a class="reference internal" href="../../../projects/project-notebooks/Sea_level_rise.html">
 <strong>
-      Heatwaves: Assessing the dynamic interactions of the atmosphere and land
-     </strong>
-</a>
-</li>
-<li class="toctree-l2">
-<a class="reference internal" href="../../../projects/project-notebooks/Wildfires_and_burnt_areas.html">
-<strong>
-      Monitoring and mapping wildfires using satellite data
+      Sea level rise
      </strong>
 </a>
 </li>
@@ -1302,8 +1302,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>Rather than ploting the zonal and meridional velocity components <span class="math notranslate nohighlight">\((u,v)\)</span> separately, we will plot the magnitude and direction of the total velocity vector. This type of plot is called a vector field. A <a class="reference external" href="https://glossary.ametsoc.org/wiki/Vector">vector</a> is a special mathematical quantity that has both a magnitude and a direction, just like the wind! The velocity components describe how much wind is blowing in the zonal (<span class="math notranslate nohighlight">\(u\)</span>) or meridional (<span class="math notranslate nohighlight">\(v\)</span>) directions. Specifically, wind can blow in the eastward (positive <span class="math notranslate nohighlight">\(u\)</span>) or westward (negative <span class="math notranslate nohighlight">\(u\)</span>) direction, and in the northward (positive <span class="math notranslate nohighlight">\(v\)</span>) or southward (negative <span class="math notranslate nohighlight">\(v\)</span>) direction. The total velocity vector is the <em>vector sum</em> of these two components, and has variable magnitude and direction. The magnitude (<span class="math notranslate nohighlight">\(||u||)\)</span> and direction (<span class="math notranslate nohighlight">\(\theta\)</span>) of the total velocity vector are given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e152ddae-359e-4e05-a99e-052eef4f251a">
-<span class="eqno">(1)<a class="headerlink" href="#equation-e152ddae-359e-4e05-a99e-052eef4f251a" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5d066eb9-f69c-46ad-a62c-64d5e4dc07b5">
+<span class="eqno">(1)<a class="headerlink" href="#equation-5d066eb9-f69c-46ad-a62c-64d5e4dc07b5" title="Permalink to this equation">¶</a></span>\[\begin{align}
 ||u|| = \sqrt{u^2 + v^2},  \ \  \ \ \theta = tan^{-1}(\frac{v}{u})
 \end{align}\]</div>
 <p>When using a computer to plot a vector field, it is usually called a quiver plot instead. We will use a <a class="reference external" href="https://rabernat.github.io/intro_to_physical_oceanography/07_ekman.html">quiver function created by Ryan Abernathey</a> that derives the magnitude and direction of the total velocity vector from the given zonal and meridional components.</p>
