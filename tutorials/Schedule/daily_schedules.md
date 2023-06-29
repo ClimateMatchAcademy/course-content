@@ -14,9 +14,11 @@ The course will begin with Opening Ceremonies on Sunday, July 9th
 Tutorials, Projects and Professional Development activities will take place between July 17th and July 28th, 2023.
 
 
+## Course Schedule for Timezones 2 & 5
+
 <table>
   <tr>
-   <td colspan="6" bgcolor="#B0C7DC" align="center" ><strong><font color="black" > Course Schedule - Timezones 2 & 5 </font></strong>
+   <td colspan="6" bgcolor="#B0C7DC" align="center" ><strong><font color="black" size="5" > Course Schedule - Timezones 2 & 5 </font></strong>
    </td>
   </tr>
   <tr>
@@ -34,7 +36,7 @@ Tutorials, Projects and Professional Development activities will take place betw
    </td>
   </tr>
   <tr>
-   <td  rowspan="2" bgcolor="#3F538A" align="center" >Curriculum
+   <td rowspan="3" bgcolor="#3F538A" align="center" >Curriculum
 <p>
 (5 hours)
    </td>
@@ -50,15 +52,15 @@ Tutorials, Projects and Professional Development activities will take place betw
    </td>
   </tr>
   <tr></tr>
-   <td bgcolor="#E99668"  align="center" ><img tutorials/static/icon_W1D1.png >
+   <td bgcolor="#E99668"  align="center" ><img src="images/icon_W1D1.png" >
    </td>
-   <td bgcolor="#F5C690"  align="center" ><img tutorials/static/icon_W1D2.png >
+   <td bgcolor="#F5C690"  align="center" ><img src="images/icon_W1D2.png" >
    </td>
-   <td bgcolor="#F5C690"  align="center" ><img tutorials/static/icon_W1D3.png >
+   <td bgcolor="#F5C690"  align="center" ><img src="images/icon_W1D3.png" >
    </td>
-   <td bgcolor="#F5C690"  align="center" ><img tutorials/static/icon_W1D4.png >
+   <td bgcolor="#F5C690"  align="center" ><img src="images/icon_W1D4.png" >
    </td>
-   <td bgcolor="#B0C7DC"  align="center" ><img tutorials/static/icon_W1D5.png >
+   <td bgcolor="#B0C7DC"  align="center" ><img src="images/icon_W1D5.png" >
    </td>
   </tr>
   <tr>
@@ -66,23 +68,23 @@ Tutorials, Projects and Professional Development activities will take place betw
 <p>
 (3 hours)
    </td>
-   <td bgcolor="#F9EEDA" style="color:black" align="center" ><strong><font color="black"> Session 1 </font></strong>
+   <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" ><strong><font color="black"> Session 1 </font></strong>
 <p>
 <font color="black"> Tutorial on good research Practices </font>
    </td>
-   <td bgcolor="#F9EEDA" style="color:black" align="center" ><strong><font color="black"> Session 2 </font></strong>
+   <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" ><strong><font color="black"> Session 2 </font></strong>
 <p>
 <font color="black"> Guided data exploration </font>
    </td>
-   <td bgcolor="#F9EEDA" style="color:black" align="center" ><strong><font color="black"> Session 3 </font></strong>
+   <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" ><strong><font color="black"> Session 3 </font></strong>
 <p>
 <font color="black">Literature review & question formulation</font>
    </td>
-   <td bgcolor="#F9EEDA" style="color:black" align="center" ><strong><font color="black"> Session 4 </font></strong>
+   <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" ><strong><font color="black"> Session 4 </font></strong>
 <p>
 <font color="black"> Proposal writing, swaps & submission </font>
    </td>
-   <td bgcolor="#F9EEDA" style="color:black" align="center" ><strong><font color="black"> Session 5 </font></strong>
+   <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" ><strong><font color="black"> Session 5 </font></strong>
 <p>
 <font color="black"> Drafting the analyses & task allocation </font>
    </td>
@@ -96,8 +98,6 @@ Tutorials, Projects and Professional Development activities will take place betw
    </td>
    <td bgcolor="#F9EEDA" align="center" ><font color="black" > Impact Talk: </font>
 <p><font color="black"> Equity in Climate Science </font>
-   </td>
-   <td bgcolor="#F9EEDA" >
    </td>
    <td bgcolor="#F9EEDA" >
    </td>
@@ -143,15 +143,15 @@ Tutorials, Projects and Professional Development activities will take place betw
    </td>
   </tr>
   <tr>
-   <td bgcolor="#B0C7DC"  align="center" ><img tutorials/static/icon_W2D1.png >
+   <td bgcolor="#B0C7DC"  align="center" ><img src="images/icon_W2D1.png" >
    </td>
-   <td bgcolor="#E99668"  align="center" ><img tutorials/static/icon_W2D2.png >
+   <td bgcolor="#E99668"  align="center" ><img src="images/icon_W2D2.png" >
    </td>
-   <td bgcolor="#B0C7DC"  align="center" ><img tutorials/static/icon_W2D3.png >
+   <td bgcolor="#B0C7DC"  align="center" ><img src="images/icon_W2D3.png" >
    </td>
-   <td bgcolor="#78BAB8"  align="center" ><img tutorials/static/icon_W2D4.png >
+   <td bgcolor="#78BAB8"  align="center" ><img src="images/icon_W2D4.png" >
    </td>
-   <td bgcolor="#78BAB8"  align="center" ><img tutorials/static/icon_W2D5.png >
+   <td bgcolor="#78BAB8"  align="center" ><img src="images/icon_W2D5.png" >
    </td>
   </tr>
   <tr>
@@ -159,21 +159,21 @@ Tutorials, Projects and Professional Development activities will take place betw
 <p>
 (3 hours)
    </td>
-   <td bgcolor="#F9EEDA" align="center" ><strong><font color="black"> Session 6 </font></strong>
+   <td bgcolor="#F9EEDA" align="center" valign="top" ><strong><font color="black"> Session 6 </font></strong>
 <p>
 <font color="black"> Implementation </font>
    </td>
-   <td bgcolor="#F9EEDA"  align="center" ><strong><font color="black"> Session 7 </font></strong>
+   <td bgcolor="#F9EEDA"  align="center" valign="top" ><strong><font color="black"> Session 7 </font></strong>
 <p>
 <font color="black"> Implementation </font>
    </td>
-   <td bgcolor="#F9EEDA" align="center" ><strong><font color="black"> Session 8 </font></strong>
+   <td bgcolor="#F9EEDA" align="center" valign="top" ><strong><font color="black"> Session 8 </font></strong>
 <p>
 <font color="black"> Implementation & result interpretation </font>
    </td>
-   <td bgcolor="#F9EEDA" align="center" ><strong><font color="black"> Session 9 </font></strong>
+   <td bgcolor="#F9EEDA" align="center" valign="top" ><strong><font color="black"> Session 9 </font></strong>
 <p>
-<font color="black"align="center" > Presentation preparation & project submission </font>
+<font color="black"align="center" valign="top" > Presentation preparation & project submission </font>
    </td>
    <td bgcolor="#F9EEDA" align="center" ><font color="black"> Presentations </font>
 <p>
@@ -199,10 +199,11 @@ Tutorials, Projects and Professional Development activities will take place betw
 </table>
 
 
+## Course Schedule for Timezones 1, 3 & 4
 
 <table>
   <tr>
-   <td colspan="6"  bgcolor="#B0C7DC" align="center" ><strong><font color="black"> Course Schedule - Timezones 1, 3 & 4</font> </strong>
+   <td colspan="6"  bgcolor="#B0C7DC" align="center" ><strong><font color="black" size="5" > Course Schedule - Timezones 1, 3 & 4</font> </strong>
    </td>
   </tr>
   <tr>
@@ -224,26 +225,28 @@ Tutorials, Projects and Professional Development activities will take place betw
 <p>
 (3 hours)
    </td>
-   <td bgcolor="#6C7D77" align="center" ><font color="black"> No project time</font>
+   <td rowspan="2" bgcolor="#6C7D77" align="center" ><font color="black"> No project time</font>
    </td>
-   <td bgcolor="#F9EEDA" align="center" ><strong><font color="black"> Session 1</strong>
+   <td bgcolor="#F9EEDA" align="center" valign="top" ><strong><font color="black"> Session 1</strong>
 <p>
 <font color="black"> Tutorial on good research Practices</font>
    </td>
-   <td bgcolor="#F9EEDA" align="center" ><strong><font color="black"> Session 2</font> </strong>
+   <td bgcolor="#F9EEDA" align="center" valign="top" ><strong><font color="black"> Session 2</font> </strong>
 <p>
 <font color="black"> Guided data exploration</font>
    </td>
-   <td bgcolor="#F9EEDA" align="center" ><strong><font color="black"> Session 3</font> </strong>
+   <td bgcolor="#F9EEDA" align="center" valign="top" ><strong><font color="black"> Session 3</font> </strong>
 <p>
 <font color="black"> Literature review & question formulation</font>
    </td>
-   <td bgcolor="#F9EEDA" align="center" ><strong><font color="black"> Session 4</font> </strong>
+   <td bgcolor="#F9EEDA" align="center" valign="top" ><strong><font color="black"> Session 4</font> </strong>
 <p>
 <font color="black"> Proposal writing, swaps & submission</font>
    </td>
   </tr>
   <tr>
+   <td bgcolor="#F9EEDA" >
+   </td>
    <td bgcolor="#F9EEDA" align="center" ><font color="black"> Impact Talk:</font>
 <p>
 <font color="black"> Climate Justice</font>
@@ -251,10 +254,6 @@ Tutorials, Projects and Professional Development activities will take place betw
    <td bgcolor="#F9EEDA" align="center" ><font color="black"> Impact Talk: </font>
 <p>
 <font color="black"> Equity in Climate Science</font>
-   </td>
-   <td bgcolor="#F9EEDA" >
-   </td>
-   <td bgcolor="#F9EEDA" >
    </td>
    <td bgcolor="#F9EEDA" >
    </td>
@@ -276,15 +275,15 @@ Tutorials, Projects and Professional Development activities will take place betw
    </td>
   </tr>
   <tr>
-   <td bgcolor="#E99668" >
+   <td bgcolor="#E99668" ><img src="images/icon_W1D1.png" >
    </td>
-   <td bgcolor="#F5C690" >
+   <td bgcolor="#F5C690" ><img src="images/icon_W1D2.png" >
    </td>
-   <td bgcolor="#F5C690" >
+   <td bgcolor="#F5C690" ><img src="images/icon_W1D3.png" >
    </td>
-   <td bgcolor="#F5C690" >
+   <td bgcolor="#F5C690" ><img src="images/icon_W1D4.png" >
    </td>
-   <td bgcolor="#B0C7DC" >
+   <td bgcolor="#B0C7DC" ><img src="images/icon_W1D5.png" >
    </td>
   </tr>
   <tr>
@@ -310,23 +309,23 @@ Tutorials, Projects and Professional Development activities will take place betw
 <p>
 (3 hours)
    </td>
-   <td bgcolor="#F9EEDA" align="center" ><strong><font color="black"> Session 5</font> </strong>
+   <td bgcolor="#F9EEDA" align="center" valign="top" ><strong><font color="black"> Session 5</font> </strong>
 <p>
 <font color="black"> Drafting the analyses & task allocation</font>
    </td>
-   <td bgcolor="#F9EEDA" align="center" ><strong><font color="black"> Session 6</font> </strong>
+   <td bgcolor="#F9EEDA" align="center" valign="top" ><strong><font color="black"> Session 6</font> </strong>
 <p>
 <font color="black"> Implementation</font>
    </td>
-   <td bgcolor="#F9EEDA" align="center" ><strong><font color="black"> Session 7</font> </strong>
+   <td bgcolor="#F9EEDA" align="center" valign="top" ><strong><font color="black"> Session 7</font> </strong>
 <p>
 <font color="black"> Implementation</font>
    </td>
-   <td bgcolor="#F9EEDA" align="center" ><strong><font color="black"> Session 8</font> </strong>
+   <td bgcolor="#F9EEDA" align="center" valign="top" ><strong><font color="black"> Session 8</font> </strong>
 <p>
 <font color="black"> Implementation & result interpretation</font>
    </td>
-   <td bgcolor="#F9EEDA" align="center" ><strong><font color="black"> Session 9</font> </strong>
+   <td bgcolor="#F9EEDA" align="center" valign="top" ><strong><font color="black"> Session 9</font> </strong>
 <p>
 <font color="black"> Presentation preparation & project submission</font>
    </td>
@@ -368,15 +367,15 @@ Tutorials, Projects and Professional Development activities will take place betw
    </td>
   </tr>
   <tr>
-   <td bgcolor="#B0C7DC" >
+   <td bgcolor="#B0C7DC" ><img src="images/icon_W2D1.png" >
    </td>
-   <td bgcolor="#E99668" >
+   <td bgcolor="#E99668" ><img src="images/icon_W2D2.png" >
    </td>
-   <td bgcolor="#B0C7DC" >
+   <td bgcolor="#B0C7DC" ><img src="images/icon_W2D3.png" >
    </td>
-   <td bgcolor="#78BAB8" >
+   <td bgcolor="#78BAB8" ><img src="images/icon_W2D4.png" >
    </td>
-   <td bgcolor="#78BAB8" >
+   <td bgcolor="#78BAB8" ><img src="images/icon_W2D5.png" >
    </td>
   </tr>
   <tr>
@@ -461,7 +460,8 @@ All days (except W1D1 and W2D2) will follow this schedule for course time:
 </table>
 
 
-* : Note that the synchronous coursework session starts at 0:00 with the first pod discussion.
+
+*Note that the synchronous coursework session starts at 0:00 with the first pod discussion.
 
 W1D1: The synchronous coursework session starts at -0:30 with 30 minutes for pod introductions. Students should watch the keynote lecture beforehand.
 
@@ -477,8 +477,8 @@ On W2D2 you will additionally be working on your group projects during the time 
 
 ### Professional Development Schedule
 
-A series of professional development events (viewing and discussing four Impact Talks, a career panel, and two meetings with mentors) will take place during the 3-hour project time. Check the [time slot widget [](https://climatematchacademy.github.io/widgets/tz.html)](https://climatematchacademy.github.io/widgets/tz.html) to see when project time is scheduled for your slot.
 
+A series of professional development events (viewing and discussing four Impact Talks, a career panel, and two meetings with mentors) will take place during the 3-hour project time. Check the [time slot widget](https://climatematchacademy.github.io/widgets/tz.html) to see when project time is scheduled for your slot.
 
 
 * Impact talks and discussions will take place during the first or last 30 minutes of Project Sessions 2, 3, 6 and 8.
@@ -577,7 +577,7 @@ A series of professional development events (viewing and discussing four Impact 
 </table>
 
 
-* Note that these events take place after the normal coursework time for slots 1/3/4.
+*Note that these events take place after the normal coursework time for slots 1/3/4.
 
 Course feedback survey: We will have a course completion survey for both students and teaching assistants. The link will be shared on discord. Please fill it out during this time!
 
