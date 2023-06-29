@@ -38,6 +38,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+<script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
 <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
 <link href="../../../genindex.html" rel="index" title="Index">
@@ -738,7 +740,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="menu-dropdown__content">
 <ul>
 <li>
-<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=tree/course-content/book/tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial5.ipynb&amp;branch=main" title="Launch on JupyterHub">
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=tree/course-content/book/tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial5.ipynb&amp;branch=main" title="Launch on JupyterHub">
 <span class="headerbtn__icon-container">
 <img src="../../../_static/images/logo_jupyterhub.svg"/>
 </span>
@@ -1172,6 +1174,20 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2270</span><span class="o">/</span><span class="mf">3993432956.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># imports</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>                     <span class="c1"># used to manipulate data and open datasets</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>                      <span class="c1"># used for algebra/arrays</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">urllib.request</span>                   <span class="c1"># used to download data from the internet</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">climlab</span>                          <span class="c1"># one of the models we are using</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named 'xarray'
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="figure-settings">
 <h2>Figure settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">¶</a></h2>
@@ -1190,6 +1206,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 </div>
 </div>
@@ -1230,6 +1247,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1238,6 +1256,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1245,6 +1264,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>however, we want an annual average profile:</p>
 <div class="cell docutils container">
@@ -1258,6 +1278,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Now that we have a global mean water vapor profile, we can define a model that has the same vertical levels as this water vapor data.</p>
 <div class="cell docutils container">
@@ -1268,6 +1289,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>To model the absorption and emission of different gases within each atmospheric layer, we use the <strong><a class="reference external" href="https://climlab.readthedocs.io/en/latest/api/climlab.radiation.RRTMG.html">Rapid Radiative Transfer Model</a></strong>, which is contained within the <code class="docutils literal notranslate"><span class="pre">RRTMG</span></code> module. We must first initialize our model using the water vapor .</p>
 <div class="cell docutils container">
@@ -1282,6 +1304,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Let’s explore this initial state. Here <code class="docutils literal notranslate"><span class="pre">Ts</span></code> is the initial global mean surface temperature, and <code class="docutils literal notranslate"><span class="pre">Tatm</span></code> is the initial global mean air temperature profile.</p>
 <div class="cell docutils container">
@@ -1290,6 +1313,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>One of the perks of using this model is it’s ability to incorporate the radiative effects of individual greenhouse gases in different parts of the radiation spectrum, rather than using a bulk reduction in transmission of outgoing longwave radiation (as in our previous models).</p>
 <p>Let’s display ‘absorber_vmr’, which contains the <strong>volume mixing ratio</strong>’s of each gas used in the radiative transfer model (these are pre-defined; and do not include the water vapor we used as a model input above). The volume mixing ratio describes the fraction of molecules in the air that are a given gas. For example, <span class="math notranslate nohighlight">\(21\%\)</span> of air is oxygen and so it’s volumn mixing ratio is 0.21.</p>
@@ -1299,6 +1323,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>To look at carbon dioxide (<code class="docutils literal notranslate"><span class="pre">CO2</span></code>) in a more familiar unit, parts per million (by volume), we can convert and print the new value.</p>
 <div class="cell docutils container">
@@ -1307,6 +1332,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>We can also look at all the available diagnostics of our model:</p>
 <div class="cell docutils container">
@@ -1316,6 +1342,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>For example to look at OLR,</p>
 <div class="cell docutils container">
@@ -1324,6 +1351,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Note. the OLR is currently 0 as we have not ran the model forward in time, so it has not calculated any radiation components.</p>
 <div class="section" id="questions-1-climate-connection">
@@ -1364,6 +1392,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main/tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial5_Solution_6dce0359.py"><em>Click for solution</em></a></p>
 <p><em>Example output:</em></p>
@@ -1383,6 +1412,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1396,6 +1426,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Below we will define two helper funcitons to visualize the profiles output from our model with a <em>SkewT</em> plot. This is common way to plot atmospheric temperature in climate science, and the <code class="docutils literal notranslate"><span class="pre">metpy</span></code> package has a built in function to make this easier.</p>
 <div class="cell docutils container">
@@ -1438,6 +1469,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>SkewT (also known as SkewT-logP) plots are generally used for much <a class="reference external" href="https://www.weather.gov/source/zhu/ZHU_Training_Page/convective_parameters/skewt/skewtinfo.html">more complex reasons</a> than we will use here. However, one of the benefits of this plot that we will utilize is the fact that pressure decreases approximately logarithmically with height. Thus, with a <em>logP</em> axis, we are showing information that is roughly linear in height, making the plots more intuitive.</p>
 </div>
@@ -1456,6 +1488,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1464,6 +1497,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Now let’s can compare this to observations.</p>
 <div class="cell docutils container">
@@ -1474,6 +1508,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="section" id="questions-3-climate-connection">
 <h2><strong>Questions 3: Climate Connection</strong><a class="headerlink" href="#questions-3-climate-connection" title="Permalink to this headline">¶</a></h2>
@@ -1517,6 +1552,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main/tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial5_Solution_e38e412c.py"><em>Click for solution</em></a></p>
 <p><em>Example output:</em></p>

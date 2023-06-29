@@ -47,6 +47,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="prev" title="Change in Earth’s albedo and its dependence on land cover changes in the past 20 years" href="Surface_albedo_and_land_use.html" />
@@ -784,7 +786,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://climatematch.2i2.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&urlpath=tree/course-content/book/projects/project-notebooks/Sea_level_rise.ipynb&branch=main"
+        <a href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&urlpath=tree/course-content/book/projects/project-notebooks/Sea_level_rise.ipynb&branch=main"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1072,7 +1074,7 @@ title="Print to PDF"
 <p><strong>Our 2023 Sponsors:</strong> TBD</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title #**Project background** </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title #**Project background** </span>
 <span class="c1">#This will be a short video introducing the content creator(s) and motivating the research direction of the template.</span>
 <span class="c1">#The Tech team will add code to format and display the video</span>
 
@@ -1094,43 +1096,84 @@ title="Print to PDF"
 <p>Please run the following cells!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span># Imports
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imports</span>
 
-#Import only the libraries/objects that are necessary for more than one dataset. 
-#Dataset-specific imports should be in the respective notebook section.
+<span class="c1">#Import only the libraries/objects that are necessary for more than one dataset. </span>
+<span class="c1">#Dataset-specific imports should be in the respective notebook section.</span>
 
-#If any external library has to be installed, !pip install library --quiet
-#follow this order: numpy&gt;matplotlib. 
-#import widgets in hidden Figure settings cell
+<span class="c1">#If any external library has to be installed, !pip install library --quiet</span>
+<span class="c1">#follow this order: numpy&gt;matplotlib. </span>
+<span class="c1">#import widgets in hidden Figure settings cell</span>
 
-import random
-import numpy as np
-import matplotlib.pyplot as plt
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-!pip install netCDF4 --quiet
-!pip install &quot;xarray[complete]&quot;  --quiet
-!pip install aiohttp --quiet
-!pip install cftime --quiet
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>netCDF4<span class="w"> </span>--quiet
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;xarray[complete]&quot;</span><span class="w">  </span>--quiet
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>aiohttp<span class="w"> </span>--quiet
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>cftime<span class="w"> </span>--quiet
 
-import xarray as xr
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 
-from google.colab import drive
-drive.mount(&#39;/content/drive&#39;)
+<span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount(&quot;/content/drive&quot;, force_remount=True).
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0.1</span> -&gt; <span class=" -Color -Color-Green">23.1.2</span>
+<span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">pip install --upgrade pip</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0.1</span> -&gt; <span class=" -Color -Color-Green">23.1.2</span>
+<span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">pip install --upgrade pip</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0.1</span> -&gt; <span class=" -Color -Color-Green">23.1.2</span>
+<span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">pip install --upgrade pip</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0.1</span> -&gt; <span class=" -Color -Color-Green">23.1.2</span>
+<span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">pip install --upgrade pip</span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/xarray/backends/cfgrib_.py:28: UserWarning: Failed to load cfgrib - most likely there is a problem accessing the ecCodes library. Try `import cfgrib` to get the full error message
+  &quot;Failed to load cfgrib - most likely there is a problem accessing the ecCodes library. &quot;
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2309</span><span class="o">/</span><span class="mf">1588651645.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span> 
+<span class="ne">---&gt; </span><span class="mi">21</span> <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;google&#39;
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># example plot. Plots map of sea surface height at one time-stamp.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># example plot. Plots map of sea surface height at one time-stamp.</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;zos&#39;</span><span class="p">][</span><span class="mi">1500</span><span class="p">,:,:]);</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2309</span><span class="o">/</span><span class="mf">3404427014.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># example plot. Plots map of sea surface height at one time-stamp.</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;zos&#39;</span><span class="p">][</span><span class="mi">1500</span><span class="p">,:,:]);</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;ds&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1148,7 +1191,7 @@ drive.mount(&#39;/content/drive&#39;)
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data source-specific imports</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data source-specific imports</span>
 
 <span class="c1"># Data source:   https://pangeo-forge.org/dashboard/feedstock/7</span>
 <span class="c1">## CMIP6.CMIP.CCCma.CanESM5.historical.r1i1p1f1.Omon.zos.gn.v20190429.zarr</span>
@@ -1163,447 +1206,139 @@ drive.mount(&#39;/content/drive&#39;)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
-<defs>
-<symbol id="icon-database" viewBox="0 0 32 32">
-<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
-<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
-<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
-</symbol>
-<symbol id="icon-file-text2" viewBox="0 0 32 32">
-<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
-<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
-<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
-<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
-</symbol>
-</defs>
-</svg>
-<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
- *
- */
-
-:root {
-  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
-  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
-  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
-  --xr-border-color: var(--jp-border-color2, #e0e0e0);
-  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
-  --xr-background-color: var(--jp-layout-color0, white);
-  --xr-background-color-row-even: var(--jp-layout-color1, white);
-  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
-}
-
-html[theme=dark],
-body[data-theme=dark],
-body.vscode-dark {
-  --xr-font-color0: rgba(255, 255, 255, 1);
-  --xr-font-color2: rgba(255, 255, 255, 0.54);
-  --xr-font-color3: rgba(255, 255, 255, 0.38);
-  --xr-border-color: #1F1F1F;
-  --xr-disabled-color: #515151;
-  --xr-background-color: #111111;
-  --xr-background-color-row-even: #111111;
-  --xr-background-color-row-odd: #313131;
-}
-
-.xr-wrap {
-  display: block !important;
-  min-width: 300px;
-  max-width: 700px;
-}
-
-.xr-text-repr-fallback {
-  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
-  display: none;
-}
-
-.xr-header {
-  padding-top: 6px;
-  padding-bottom: 6px;
-  margin-bottom: 4px;
-  border-bottom: solid 1px var(--xr-border-color);
-}
-
-.xr-header > div,
-.xr-header > ul {
-  display: inline;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.xr-obj-type,
-.xr-array-name {
-  margin-left: 2px;
-  margin-right: 10px;
-}
-
-.xr-obj-type {
-  color: var(--xr-font-color2);
-}
-
-.xr-sections {
-  padding-left: 0 !important;
-  display: grid;
-  grid-template-columns: 150px auto auto 1fr 20px 20px;
-}
-
-.xr-section-item {
-  display: contents;
-}
-
-.xr-section-item input {
-  display: none;
-}
-
-.xr-section-item input + label {
-  color: var(--xr-disabled-color);
-}
-
-.xr-section-item input:enabled + label {
-  cursor: pointer;
-  color: var(--xr-font-color2);
-}
-
-.xr-section-item input:enabled + label:hover {
-  color: var(--xr-font-color0);
-}
-
-.xr-section-summary {
-  grid-column: 1;
-  color: var(--xr-font-color2);
-  font-weight: 500;
-}
-
-.xr-section-summary > span {
-  display: inline-block;
-  padding-left: 0.5em;
-}
-
-.xr-section-summary-in:disabled + label {
-  color: var(--xr-font-color2);
-}
-
-.xr-section-summary-in + label:before {
-  display: inline-block;
-  content: '►';
-  font-size: 11px;
-  width: 15px;
-  text-align: center;
-}
-
-.xr-section-summary-in:disabled + label:before {
-  color: var(--xr-disabled-color);
-}
-
-.xr-section-summary-in:checked + label:before {
-  content: '▼';
-}
-
-.xr-section-summary-in:checked + label > span {
-  display: none;
-}
-
-.xr-section-summary,
-.xr-section-inline-details {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-.xr-section-inline-details {
-  grid-column: 2 / -1;
-}
-
-.xr-section-details {
-  display: none;
-  grid-column: 1 / -1;
-  margin-bottom: 5px;
-}
-
-.xr-section-summary-in:checked ~ .xr-section-details {
-  display: contents;
-}
-
-.xr-array-wrap {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 20px auto;
-}
-
-.xr-array-wrap > label {
-  grid-column: 1;
-  vertical-align: top;
-}
-
-.xr-preview {
-  color: var(--xr-font-color3);
-}
-
-.xr-array-preview,
-.xr-array-data {
-  padding: 0 5px !important;
-  grid-column: 2;
-}
-
-.xr-array-data,
-.xr-array-in:checked ~ .xr-array-preview {
-  display: none;
-}
-
-.xr-array-in:checked ~ .xr-array-data,
-.xr-array-preview {
-  display: inline-block;
-}
-
-.xr-dim-list {
-  display: inline-block !important;
-  list-style: none;
-  padding: 0 !important;
-  margin: 0;
-}
-
-.xr-dim-list li {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-}
-
-.xr-dim-list:before {
-  content: '(';
-}
-
-.xr-dim-list:after {
-  content: ')';
-}
-
-.xr-dim-list li:not(:last-child):after {
-  content: ',';
-  padding-right: 5px;
-}
-
-.xr-has-index {
-  font-weight: bold;
-}
-
-.xr-var-list,
-.xr-var-item {
-  display: contents;
-}
-
-.xr-var-item > div,
-.xr-var-item label,
-.xr-var-item > .xr-var-name span {
-  background-color: var(--xr-background-color-row-even);
-  margin-bottom: 0;
-}
-
-.xr-var-item > .xr-var-name:hover span {
-  padding-right: 5px;
-}
-
-.xr-var-list > li:nth-child(odd) > div,
-.xr-var-list > li:nth-child(odd) > label,
-.xr-var-list > li:nth-child(odd) > .xr-var-name span {
-  background-color: var(--xr-background-color-row-odd);
-}
-
-.xr-var-name {
-  grid-column: 1;
-}
-
-.xr-var-dims {
-  grid-column: 2;
-}
-
-.xr-var-dtype {
-  grid-column: 3;
-  text-align: right;
-  color: var(--xr-font-color2);
-}
-
-.xr-var-preview {
-  grid-column: 4;
-}
-
-.xr-index-preview {
-  grid-column: 2 / 5;
-  color: var(--xr-font-color2);
-}
-
-.xr-var-name,
-.xr-var-dims,
-.xr-var-dtype,
-.xr-preview,
-.xr-attrs dt {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding-right: 10px;
-}
-
-.xr-var-name:hover,
-.xr-var-dims:hover,
-.xr-var-dtype:hover,
-.xr-attrs dt:hover {
-  overflow: visible;
-  width: auto;
-  z-index: 1;
-}
-
-.xr-var-attrs,
-.xr-var-data,
-.xr-index-data {
-  display: none;
-  background-color: var(--xr-background-color) !important;
-  padding-bottom: 5px !important;
-}
-
-.xr-var-attrs-in:checked ~ .xr-var-attrs,
-.xr-var-data-in:checked ~ .xr-var-data,
-.xr-index-data-in:checked ~ .xr-index-data {
-  display: block;
-}
-
-.xr-var-data > table {
-  float: right;
-}
-
-.xr-var-name span,
-.xr-var-data,
-.xr-index-name div,
-.xr-index-data,
-.xr-attrs {
-  padding-left: 25px !important;
-}
-
-.xr-attrs,
-.xr-var-attrs,
-.xr-var-data,
-.xr-index-data {
-  grid-column: 1 / -1;
-}
-
-dl.xr-attrs {
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: 125px auto;
-}
-
-.xr-attrs dt,
-.xr-attrs dd {
-  padding: 0;
-  margin: 0;
-  float: left;
-  padding-right: 10px;
-  width: auto;
-}
-
-.xr-attrs dt {
-  font-weight: normal;
-  grid-column: 1;
-}
-
-.xr-attrs dt:hover span {
-  display: inline-block;
-  background: var(--xr-background-color);
-  padding-right: 10px;
-}
-
-.xr-attrs dd {
-  grid-column: 2;
-  white-space: pre-wrap;
-  word-break: break-all;
-}
-
-.xr-icon-database,
-.xr-icon-file-text2,
-.xr-no-icon {
-  display: inline-block;
-  vertical-align: middle;
-  width: 1em;
-  height: 1.5em !important;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
-}
-</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
-Dimensions:         (time: 312, latitude: 360, longitude: 720, nv: 2)
-Coordinates:
-  * time            (time) datetime64[ns] 1992-01-16T18:00:00 ... 2017-12-16T...
-  * latitude        (latitude) float32 -89.75 -89.25 -88.75 ... 89.25 89.75
-  * longitude       (longitude) float32 -179.8 -179.2 -178.8 ... 179.2 179.8
-    time_bnds       (time, nv) datetime64[ns] ...
-    latitude_bnds   (latitude, nv) float32 ...
-    longitude_bnds  (longitude, nv) float32 ...
-Dimensions without coordinates: nv
-Data variables:
-    SSH             (time, latitude, longitude) float32 ...
-    SSHIBC          (time, latitude, longitude) float32 ...
-    SSHNOIBC        (time, latitude, longitude) float32 ...
-Attributes: (12/57)
-    acknowledgement:              This research was carried out by the Jet Pr...
-    author:                       Ian Fenty and Ou Wang
-    cdm_data_type:                Grid
-    comment:                      Fields provided on a regular lat-lon grid. ...
-    Conventions:                  CF-1.8, ACDD-1.3
-    coordinates_comment:          Note: the global &#x27;coordinates&#x27; attribute de...
-    ...                           ...
-    time_coverage_duration:       P1M
-    time_coverage_end:            1992-02-01T00:00:00
-    time_coverage_resolution:     P1M
-    time_coverage_start:          1992-01-01T12:00:00
-    title:                        ECCO Sea Surface Height - Monthly Mean 0.5 ...
-    uuid:                         0910522c-4158-11eb-b85b-0cc47a3f5153</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-01c85a1f-1908-48d7-8e50-db237f6b4d6a' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-01c85a1f-1908-48d7-8e50-db237f6b4d6a' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 312</li><li><span class='xr-has-index'>latitude</span>: 360</li><li><span class='xr-has-index'>longitude</span>: 720</li><li><span>nv</span>: 2</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-f676328c-b781-4eec-8e85-0d87e95e3472' class='xr-section-summary-in' type='checkbox'  checked><label for='section-f676328c-b781-4eec-8e85-0d87e95e3472' class='xr-section-summary' >Coordinates: <span>(6)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>1992-01-16T18:00:00 ... 2017-12-...</div><input id='attrs-aa5cf615-b294-47b5-af8a-4445eda81e86' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-aa5cf615-b294-47b5-af8a-4445eda81e86' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-70c654ff-2df5-4d77-973a-3373a3befa16' class='xr-var-data-in' type='checkbox'><label for='data-70c654ff-2df5-4d77-973a-3373a3befa16' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>center time of averaging period</dd><dt><span>axis :</span></dt><dd>T</dd><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>bounds :</span></dt><dd>time_bnds</dd><dt><span>coverage_content_type :</span></dt><dd>coordinate</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;1992-01-16T18:00:00.000000000&#x27;, &#x27;1992-02-15T12:00:00.000000000&#x27;,
-       &#x27;1992-03-16T12:00:00.000000000&#x27;, ..., &#x27;2017-10-16T12:00:00.000000000&#x27;,
-       &#x27;2017-11-16T00:00:00.000000000&#x27;, &#x27;2017-12-16T06:00:00.000000000&#x27;],
-      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-89.75 -89.25 ... 89.25 89.75</div><input id='attrs-a4950ad7-5bc1-408f-959a-2d1cb9fc6dde' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-a4950ad7-5bc1-408f-959a-2d1cb9fc6dde' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6ae7c81c-f385-412b-a425-102bbf1b42be' class='xr-var-data-in' type='checkbox'><label for='data-6ae7c81c-f385-412b-a425-102bbf1b42be' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>latitude at grid cell center</dd><dt><span>axis :</span></dt><dd>Y</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>bounds :</span></dt><dd>latitude_bnds</dd><dt><span>coverage_content_type :</span></dt><dd>coordinate</dd><dt><span>comment :</span></dt><dd>uniform grid spacing from -89.75 to 89.75 by 0.5</dd><dt><span>units :</span></dt><dd>degrees_north</dd></dl></div><div class='xr-var-data'><pre>array([-89.75, -89.25, -88.75, ...,  88.75,  89.25,  89.75], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-179.8 -179.2 ... 179.2 179.8</div><input id='attrs-9ea335b7-87f7-43c0-879a-0829ea039fb6' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-9ea335b7-87f7-43c0-879a-0829ea039fb6' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-52f78db8-208b-4775-85c1-c7f8295f9d65' class='xr-var-data-in' type='checkbox'><label for='data-52f78db8-208b-4775-85c1-c7f8295f9d65' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>longitude at grid cell center</dd><dt><span>axis :</span></dt><dd>X</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>bounds :</span></dt><dd>longitude_bnds</dd><dt><span>coverage_content_type :</span></dt><dd>coordinate</dd><dt><span>comment :</span></dt><dd>uniform grid spacing from -179.75 to 179.75 by 0.5</dd><dt><span>units :</span></dt><dd>degrees_east</dd></dl></div><div class='xr-var-data'><pre>array([-179.75, -179.25, -178.75, ...,  178.75,  179.25,  179.75],
-      dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>time_bnds</span></div><div class='xr-var-dims'>(time, nv)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-1e085e4a-babb-4995-a6c9-9108d2d37f88' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-1e085e4a-babb-4995-a6c9-9108d2d37f88' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-95a60ef7-86a3-4d06-bb9d-dd84b4e2f504' class='xr-var-data-in' type='checkbox'><label for='data-95a60ef7-86a3-4d06-bb9d-dd84b4e2f504' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>comment :</span></dt><dd>Start and end times of averaging period.</dd><dt><span>coverage_content_type :</span></dt><dd>coordinate</dd><dt><span>long_name :</span></dt><dd>time bounds of averaging period</dd></dl></div><div class='xr-var-data'><pre>[624 values with dtype=datetime64[ns]]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>latitude_bnds</span></div><div class='xr-var-dims'>(latitude, nv)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-6cd30958-45d3-4b59-bc6f-49f3b60a7de8' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-6cd30958-45d3-4b59-bc6f-49f3b60a7de8' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9be66a7d-80fc-4427-add7-5a00cc9a01b1' class='xr-var-data-in' type='checkbox'><label for='data-9be66a7d-80fc-4427-add7-5a00cc9a01b1' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>coverage_content_type :</span></dt><dd>coordinate</dd><dt><span>long_name :</span></dt><dd>latitude bounds grid cells</dd></dl></div><div class='xr-var-data'><pre>[720 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>longitude_bnds</span></div><div class='xr-var-dims'>(longitude, nv)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-fc3149d8-f0f7-4ca8-90a2-e8a626a17f17' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-fc3149d8-f0f7-4ca8-90a2-e8a626a17f17' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ee8122fc-1aac-4933-8d4a-766eb54b219f' class='xr-var-data-in' type='checkbox'><label for='data-ee8122fc-1aac-4933-8d4a-766eb54b219f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>coverage_content_type :</span></dt><dd>coordinate</dd><dt><span>long_name :</span></dt><dd>longitude bounds grid cells</dd></dl></div><div class='xr-var-data'><pre>[1440 values with dtype=float32]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-9c32fd56-e5c1-4ef5-bea6-9ffe37163efb' class='xr-section-summary-in' type='checkbox'  checked><label for='section-9c32fd56-e5c1-4ef5-bea6-9ffe37163efb' class='xr-section-summary' >Data variables: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>SSH</span></div><div class='xr-var-dims'>(time, latitude, longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-02bd15b2-f7ac-483e-a1b5-63a0e4e93f99' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-02bd15b2-f7ac-483e-a1b5-63a0e4e93f99' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7f4a7485-8844-4463-958c-36088de7e680' class='xr-var-data-in' type='checkbox'><label for='data-7f4a7485-8844-4463-958c-36088de7e680' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Dynamic sea surface height anomaly</dd><dt><span>valid_max :</span></dt><dd>1.4207719564437866</dd><dt><span>standard_name :</span></dt><dd>sea_surface_height_above_geoid</dd><dt><span>coverage_content_type :</span></dt><dd>modelResult</dd><dt><span>comment :</span></dt><dd>Dynamic sea surface height anomaly above the geoid, suitable for comparisons with altimetry sea surface height data products that apply the inverse barometer (IB) correction. Note: SSH is calculated by correcting model sea level anomaly ETAN for three effects: a) global mean steric sea level changes related to density changes in the Boussinesq volume-conserving model (Greatbatch correction, see sterGloH), b) the inverted barometer (IB) effect (see SSHIBC) and c) sea level displacement due to sea-ice and snow pressure loading (see sIceLoad). SSH can be compared with the similarly-named SSH variable in previous ECCO products that did not include atmospheric pressure loading (e.g., Version 4 Release 3). Use SSHNOIBC for comparisons with altimetry data products that do NOT apply the IB correction.</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>valid_min :</span></dt><dd>-1.8805772066116333</dd></dl></div><div class='xr-var-data'><pre>[80870400 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>SSHIBC</span></div><div class='xr-var-dims'>(time, latitude, longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-dfdd6436-63f6-479a-a805-0021c504b1dc' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-dfdd6436-63f6-479a-a805-0021c504b1dc' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b3ccbc14-968b-464a-86ca-01663885cb1d' class='xr-var-data-in' type='checkbox'><label for='data-b3ccbc14-968b-464a-86ca-01663885cb1d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>The inverted barometer (IB) correction to sea surface height due to atmospheric pressure loading</dd><dt><span>valid_max :</span></dt><dd>0.5245633721351624</dd><dt><span>coverage_content_type :</span></dt><dd>modelResult</dd><dt><span>comment :</span></dt><dd>Not an SSH itself, but a correction to model sea level anomaly (ETAN) required to account for the static part of sea surface displacement by atmosphere pressure loading: SSH = SSHNOIBC - SSHIBC. Note: Use SSH for model-data comparisons with altimetry data products that DO apply the IB correction and SSHNOIBC for comparisons with altimetry data products that do NOT apply the IB correction.</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>valid_min :</span></dt><dd>-0.30144819617271423</dd></dl></div><div class='xr-var-data'><pre>[80870400 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>SSHNOIBC</span></div><div class='xr-var-dims'>(time, latitude, longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-6ebae0c2-4979-409c-8f7d-4294fd423981' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-6ebae0c2-4979-409c-8f7d-4294fd423981' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-862c0c14-81bb-4239-a7b0-2cc8f39a6f33' class='xr-var-data-in' type='checkbox'><label for='data-862c0c14-81bb-4239-a7b0-2cc8f39a6f33' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Sea surface height anomaly without the inverted barometer (IB) correction</dd><dt><span>valid_max :</span></dt><dd>1.4550364017486572</dd><dt><span>coverage_content_type :</span></dt><dd>modelResult</dd><dt><span>comment :</span></dt><dd>Sea surface height anomaly above the geoid without the inverse barometer (IB) correction, suitable for comparisons with altimetry sea surface height data products that do NOT apply the inverse barometer (IB) correction. Note: SSHNOIBC is calculated by correcting model sea level anomaly ETAN for two effects: a) global mean steric sea level changes related to density changes in the Boussinesq volume-conserving model (Greatbatch correction, see sterGloH), b) sea level displacement due to sea-ice and snow pressure loading (see sIceLoad). In ECCO Version 4 Release 4 the model is forced with atmospheric pressure loading. SSHNOIBC does not correct for the static part of the effect of atmosphere pressure loading on sea surface height (the so-called inverse barometer (IB) correction). Use SSH for comparisons with altimetry data products that DO apply the IB correction.</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>valid_min :</span></dt><dd>-1.6654272079467773</dd></dl></div><div class='xr-var-data'><pre>[80870400 values with dtype=float32]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-21f63dc4-08c2-412a-b1ce-137ee1a6c9ad' class='xr-section-summary-in' type='checkbox'  ><label for='section-21f63dc4-08c2-412a-b1ce-137ee1a6c9ad' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-df567566-b8b1-4d52-a393-12f390d47a24' class='xr-index-data-in' type='checkbox'/><label for='index-df567566-b8b1-4d52-a393-12f390d47a24' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;1992-01-16 18:00:00&#x27;, &#x27;1992-02-15 12:00:00&#x27;,
-               &#x27;1992-03-16 12:00:00&#x27;, &#x27;1992-04-16 00:00:00&#x27;,
-               &#x27;1992-05-16 12:00:00&#x27;, &#x27;1992-06-16 00:00:00&#x27;,
-               &#x27;1992-07-16 12:00:00&#x27;, &#x27;1992-08-16 12:00:00&#x27;,
-               &#x27;1992-09-16 00:00:00&#x27;, &#x27;1992-10-16 12:00:00&#x27;,
-               ...
-               &#x27;2017-03-16 12:00:00&#x27;, &#x27;2017-04-16 00:00:00&#x27;,
-               &#x27;2017-05-16 12:00:00&#x27;, &#x27;2017-06-16 00:00:00&#x27;,
-               &#x27;2017-07-16 12:00:00&#x27;, &#x27;2017-08-16 12:00:00&#x27;,
-               &#x27;2017-09-16 00:00:00&#x27;, &#x27;2017-10-16 12:00:00&#x27;,
-               &#x27;2017-11-16 00:00:00&#x27;, &#x27;2017-12-16 06:00:00&#x27;],
-              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time&#x27;, length=312, freq=None))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>latitude</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-255d8f9e-12a3-4f7c-a4e6-cba190f8ad7a' class='xr-index-data-in' type='checkbox'/><label for='index-255d8f9e-12a3-4f7c-a4e6-cba190f8ad7a' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Float64Index([-89.75, -89.25, -88.75, -88.25, -87.75, -87.25, -86.75, -86.25,
-              -85.75, -85.25,
-              ...
-               85.25,  85.75,  86.25,  86.75,  87.25,  87.75,  88.25,  88.75,
-               89.25,  89.75],
-             dtype=&#x27;float64&#x27;, name=&#x27;latitude&#x27;, length=360))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>longitude</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-c4b4dc90-f77e-4b01-b9af-27cb153b9fa5' class='xr-index-data-in' type='checkbox'/><label for='index-c4b4dc90-f77e-4b01-b9af-27cb153b9fa5' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Float64Index([-179.75, -179.25, -178.75, -178.25, -177.75, -177.25, -176.75,
-              -176.25, -175.75, -175.25,
-              ...
-               175.25,  175.75,  176.25,  176.75,  177.25,  177.75,  178.25,
-               178.75,  179.25,  179.75],
-             dtype=&#x27;float64&#x27;, name=&#x27;longitude&#x27;, length=720))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-4006df7b-69cb-4007-976a-2f9d80163e00' class='xr-section-summary-in' type='checkbox'  ><label for='section-4006df7b-69cb-4007-976a-2f9d80163e00' class='xr-section-summary' >Attributes: <span>(57)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>acknowledgement :</span></dt><dd>This research was carried out by the Jet Propulsion Laboratory, managed by the California Institute of Technology under a contract with the National Aeronautics and Space Administration.</dd><dt><span>author :</span></dt><dd>Ian Fenty and Ou Wang</dd><dt><span>cdm_data_type :</span></dt><dd>Grid</dd><dt><span>comment :</span></dt><dd>Fields provided on a regular lat-lon grid. They have been mapped to the regular lat-lon grid from the original ECCO lat-lon-cap 90 (llc90) native model grid. SSH (dynamic sea surface height) = SSHNOIBC (dynamic sea surface without the inverse barometer correction) - SSHIBC (inverse barometer correction). The inverted barometer correction accounts for variations in sea surface height due to atmospheric pressure variations.</dd><dt><span>Conventions :</span></dt><dd>CF-1.8, ACDD-1.3</dd><dt><span>coordinates_comment :</span></dt><dd>Note: the global &#x27;coordinates&#x27; attribute describes auxillary coordinates.</dd><dt><span>creator_email :</span></dt><dd>ecco-group@mit.edu</dd><dt><span>creator_institution :</span></dt><dd>NASA Jet Propulsion Laboratory (JPL)</dd><dt><span>creator_name :</span></dt><dd>ECCO Consortium</dd><dt><span>creator_type :</span></dt><dd>group</dd><dt><span>creator_url :</span></dt><dd>https://ecco-group.org</dd><dt><span>date_created :</span></dt><dd>2020-12-18T09:39:51</dd><dt><span>date_issued :</span></dt><dd>2020-12-18T09:39:51</dd><dt><span>date_metadata_modified :</span></dt><dd>2021-03-15T22:05:03</dd><dt><span>date_modified :</span></dt><dd>2021-03-15T22:05:03</dd><dt><span>geospatial_bounds_crs :</span></dt><dd>EPSG:4326</dd><dt><span>geospatial_lat_max :</span></dt><dd>90.0</dd><dt><span>geospatial_lat_min :</span></dt><dd>-90.0</dd><dt><span>geospatial_lat_resolution :</span></dt><dd>0.5</dd><dt><span>geospatial_lat_units :</span></dt><dd>degrees_north</dd><dt><span>geospatial_lon_max :</span></dt><dd>180.0</dd><dt><span>geospatial_lon_min :</span></dt><dd>-180.0</dd><dt><span>geospatial_lon_resolution :</span></dt><dd>0.5</dd><dt><span>geospatial_lon_units :</span></dt><dd>degrees_east</dd><dt><span>history :</span></dt><dd>Inaugural release of an ECCO Central Estimate solution to PO.DAAC</dd><dt><span>id :</span></dt><dd>10.5067/ECG5M-SSH44</dd><dt><span>institution :</span></dt><dd>NASA Jet Propulsion Laboratory (JPL)</dd><dt><span>instrument_vocabulary :</span></dt><dd>GCMD instrument keywords</dd><dt><span>keywords :</span></dt><dd>EARTH SCIENCE &gt; OCEANS &gt; SEA SURFACE TOPOGRAPHY &gt; SEA SURFACE HEIGHT, EARTH SCIENCE SERVICES &gt; MODELS &gt; EARTH SCIENCE REANALYSES/ASSIMILATION MODELS</dd><dt><span>keywords_vocabulary :</span></dt><dd>NASA Global Change Master Directory (GCMD) Science Keywords</dd><dt><span>license :</span></dt><dd>Public Domain</dd><dt><span>metadata_link :</span></dt><dd>https://cmr.earthdata.nasa.gov/search/collections.umm_json?ShortName=ECCO_L4_SSH_05DEG_MONTHLY_V4R4</dd><dt><span>naming_authority :</span></dt><dd>gov.nasa.jpl</dd><dt><span>platform :</span></dt><dd>ERS-1/2, TOPEX/Poseidon, Geosat Follow-On (GFO), ENVISAT, Jason-1, Jason-2, CryoSat-2, SARAL/AltiKa, Jason-3, AVHRR, Aquarius, SSM/I, SSMIS, GRACE, DTU17MDT, Argo, WOCE, GO-SHIP, MEOP, Ice Tethered Profilers (ITP)</dd><dt><span>platform_vocabulary :</span></dt><dd>GCMD platform keywords</dd><dt><span>processing_level :</span></dt><dd>L4</dd><dt><span>product_name :</span></dt><dd>SEA_SURFACE_HEIGHT_mon_mean_1992-01_ECCO_V4r4_latlon_0p50deg.nc</dd><dt><span>product_time_coverage_end :</span></dt><dd>2018-01-01T00:00:00</dd><dt><span>product_time_coverage_start :</span></dt><dd>1992-01-01T12:00:00</dd><dt><span>product_version :</span></dt><dd>Version 4, Release 4</dd><dt><span>program :</span></dt><dd>NASA Physical Oceanography, Cryosphere, Modeling, Analysis, and Prediction (MAP)</dd><dt><span>project :</span></dt><dd>Estimating the Circulation and Climate of the Ocean (ECCO)</dd><dt><span>publisher_email :</span></dt><dd>podaac@podaac.jpl.nasa.gov</dd><dt><span>publisher_institution :</span></dt><dd>PO.DAAC</dd><dt><span>publisher_name :</span></dt><dd>Physical Oceanography Distributed Active Archive Center (PO.DAAC)</dd><dt><span>publisher_type :</span></dt><dd>institution</dd><dt><span>publisher_url :</span></dt><dd>https://podaac.jpl.nasa.gov</dd><dt><span>references :</span></dt><dd>ECCO Consortium, Fukumori, I., Wang, O., Fenty, I., Forget, G., Heimbach, P., &amp; Ponte, R. M. 2020. Synopsis of the ECCO Central Production Global Ocean and Sea-Ice State Estimate (Version 4 Release 4). doi:10.5281/zenodo.3765928</dd><dt><span>source :</span></dt><dd>The ECCO V4r4 state estimate was produced by fitting a free-running solution of the MITgcm (checkpoint 66g) to satellite and in situ observational data in a least squares sense using the adjoint method</dd><dt><span>standard_name_vocabulary :</span></dt><dd>NetCDF Climate and Forecast (CF) Metadata Convention</dd><dt><span>summary :</span></dt><dd>This dataset provides monthly-averaged dynamic sea surface height interpolated to a regular 0.5-degree grid from the ECCO Version 4 Release 4 (V4r4) ocean and sea-ice state estimate. Estimating the Circulation and Climate of the Ocean (ECCO) state estimates are dynamically and kinematically-consistent reconstructions of the three-dimensional, time-evolving ocean, sea-ice, and surface atmospheric states. ECCO V4r4 is a free-running solution of a global, nominally 1-degree configuration of the MIT general circulation model (MITgcm) that has been fit to observations in a least-squares sense. Observational data constraints used in V4r4 include sea surface height (SSH) from satellite altimeters [ERS-1/2, TOPEX/Poseidon, GFO, ENVISAT, Jason-1,2,3, CryoSat-2, and SARAL/AltiKa]; sea surface temperature (SST) from satellite radiometers [AVHRR], sea surface salinity (SSS) from the Aquarius satellite radiometer/scatterometer, ocean bottom pressure (OBP) from the GRACE satellite gravimeter; sea-ice concentration from satellite radiometers [SSM/I and SSMIS], and in-situ ocean temperature and salinity measured with conductivity-temperature-depth (CTD) sensors and expendable bathythermographs (XBTs) from several programs [e.g., WOCE, GO-SHIP, Argo, and others] and platforms [e.g., research vessels, gliders, moorings, ice-tethered profilers, and instrumented pinnipeds]. V4r4 covers the period 1992-01-01T12:00:00 to 2018-01-01T00:00:00.</dd><dt><span>time_coverage_duration :</span></dt><dd>P1M</dd><dt><span>time_coverage_end :</span></dt><dd>1992-02-01T00:00:00</dd><dt><span>time_coverage_resolution :</span></dt><dd>P1M</dd><dt><span>time_coverage_start :</span></dt><dd>1992-01-01T12:00:00</dd><dt><span>title :</span></dt><dd>ECCO Sea Surface Height - Monthly Mean 0.5 Degree (Version 4 Release 4)</dd><dt><span>uuid :</span></dt><dd>0910522c-4158-11eb-b85b-0cc47a3f5153</dd></dl></div></li></ul></div></div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;SSH&#39;</span><span class="p">][:,</span><span class="mi">200</span><span class="p">,</span><span class="mi">134</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/xarray/backends/plugins.py:68: RuntimeWarning: Engine &#39;cfgrib&#39; loading failed:
+Cannot find the ecCodes library
+  warnings.warn(f&quot;Engine {name!r} loading failed:\n{ex}&quot;, RuntimeWarning)
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f9a716957b0&gt;]
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/xarray/backends/file_manager.py</span> in <span class="ni">_acquire_with_cache_info</span><span class="nt">(self, needs_lock)</span>
+<span class="g g-Whitespace">    </span><span class="mi">198</span>             <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">199</span>                 <span class="n">file</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_key</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">200</span>             <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/xarray/backends/lru_cache.py</span> in <span class="ni">__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span>         <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">53</span>             <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">54</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="o">.</span><span class="n">move_to_end</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+<span class="ne">KeyError</span>: [&lt;class &#39;netCDF4._netCDF4.Dataset&#39;&gt;, (&#39;/content/drive/Shareddrives/Academy/Courses/Climate/Climatematch/06-Projects/01-Resources/Data exploration notebooks/Sea level rise (Aakash)/SEA_SURFACE_HEIGHT_mon_mean_1992-01-2017-12_ECCO_V4r4_latlon_0p50deg.nc&#39;,), &#39;r&#39;, ((&#39;clobber&#39;, True), (&#39;diskless&#39;, False), (&#39;format&#39;, &#39;NETCDF4&#39;), (&#39;persist&#39;, False))]
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2309</span><span class="o">/</span><span class="mf">3165736946.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;/content/drive/Shareddrives/Academy/Courses/Climate/Climatematch/06-Projects/01-Resources/Data exploration notebooks/Sea level rise (Aakash)&#39;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">9</span> <span class="n">ds</span><span class="o">=</span><span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;/content/drive/Shareddrives/Academy/Courses/Climate/Climatematch/06-Projects/01-Resources/Data exploration notebooks/Sea level rise (Aakash)/SEA_SURFACE_HEIGHT_mon_mean_1992-01-2017-12_ECCO_V4r4_latlon_0p50deg.nc&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> 
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">ds</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/xarray/backends/api.py</span> in <span class="ni">open_dataset</span><span class="nt">(filename_or_obj, engine, chunks, cache, decode_cf, mask_and_scale, decode_times, decode_timedelta, use_cftime, concat_characters, decode_coords, drop_variables, backend_kwargs, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">497</span>         <span class="n">drop_variables</span><span class="o">=</span><span class="n">drop_variables</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">498</span>         <span class="o">**</span><span class="n">decoders</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">499</span>         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">500</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">501</span>     <span class="n">ds</span> <span class="o">=</span> <span class="n">_dataset_from_backend_dataset</span><span class="p">(</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/xarray/backends/netCDF4_.py</span> in <span class="ni">open_dataset</span><span class="nt">(self, filename_or_obj, mask_and_scale, decode_times, concat_characters, decode_coords, drop_variables, use_cftime, decode_timedelta, group, mode, format, clobber, diskless, persist, lock, autoclose)</span>
+<span class="g g-Whitespace">    </span><span class="mi">557</span>             <span class="n">persist</span><span class="o">=</span><span class="n">persist</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">558</span>             <span class="n">lock</span><span class="o">=</span><span class="n">lock</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">559</span>             <span class="n">autoclose</span><span class="o">=</span><span class="n">autoclose</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">560</span>         <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">561</span> 
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/xarray/backends/netCDF4_.py</span> in <span class="ni">open</span><span class="nt">(cls, filename, mode, format, group, clobber, diskless, persist, lock, lock_maker, autoclose)</span>
+<span class="g g-Whitespace">    </span><span class="mi">377</span>             <span class="n">netCDF4</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">=</span><span class="n">kwargs</span>
+<span class="g g-Whitespace">    </span><span class="mi">378</span>         <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">379</span>         <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">manager</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="n">group</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span> <span class="n">lock</span><span class="o">=</span><span class="n">lock</span><span class="p">,</span> <span class="n">autoclose</span><span class="o">=</span><span class="n">autoclose</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">380</span> 
+<span class="g g-Whitespace">    </span><span class="mi">381</span>     <span class="k">def</span> <span class="nf">_acquire</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">needs_lock</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/xarray/backends/netCDF4_.py</span> in <span class="ni">__init__</span><span class="nt">(self, manager, group, mode, lock, autoclose)</span>
+<span class="g g-Whitespace">    </span><span class="mi">325</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_group</span> <span class="o">=</span> <span class="n">group</span>
+<span class="g g-Whitespace">    </span><span class="mi">326</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span> <span class="o">=</span> <span class="n">mode</span>
+<span class="ne">--&gt; </span><span class="mi">327</span>         <span class="bp">self</span><span class="o">.</span><span class="n">format</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ds</span><span class="o">.</span><span class="n">data_model</span>
+<span class="g g-Whitespace">    </span><span class="mi">328</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ds</span><span class="o">.</span><span class="n">filepath</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">329</span>         <span class="bp">self</span><span class="o">.</span><span class="n">is_remote</span> <span class="o">=</span> <span class="n">is_remote_uri</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_filename</span><span class="p">)</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/xarray/backends/netCDF4_.py</span> in <span class="ni">ds</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">386</span>     <span class="nd">@property</span>
+<span class="g g-Whitespace">    </span><span class="mi">387</span>     <span class="k">def</span> <span class="nf">ds</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">388</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_acquire</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">389</span> 
+<span class="g g-Whitespace">    </span><span class="mi">390</span>     <span class="k">def</span> <span class="nf">open_store_variable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">var</span><span class="p">):</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/xarray/backends/netCDF4_.py</span> in <span class="ni">_acquire</span><span class="nt">(self, needs_lock)</span>
+<span class="g g-Whitespace">    </span><span class="mi">380</span> 
+<span class="g g-Whitespace">    </span><span class="mi">381</span>     <span class="k">def</span> <span class="nf">_acquire</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">needs_lock</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">382</span>         <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_manager</span><span class="o">.</span><span class="n">acquire_context</span><span class="p">(</span><span class="n">needs_lock</span><span class="p">)</span> <span class="k">as</span> <span class="n">root</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">383</span>             <span class="n">ds</span> <span class="o">=</span> <span class="n">_nc4_require_group</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_group</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">384</span>         <span class="k">return</span> <span class="n">ds</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/contextlib.py</span> in <span class="ni">__enter__</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">110</span>         <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">kwds</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span>
+<span class="g g-Whitespace">    </span><span class="mi">111</span>         <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">112</span>             <span class="k">return</span> <span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gen</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">113</span>         <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">114</span>             <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;generator didn&#39;t yield&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="kc">None</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/xarray/backends/file_manager.py</span> in <span class="ni">acquire_context</span><span class="nt">(self, needs_lock)</span>
+<span class="g g-Whitespace">    </span><span class="mi">185</span>     <span class="k">def</span> <span class="nf">acquire_context</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">needs_lock</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">186</span><span class="w">         </span><span class="sd">&quot;&quot;&quot;Context manager for acquiring a file.&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">187</span>         <span class="n">file</span><span class="p">,</span> <span class="n">cached</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_acquire_with_cache_info</span><span class="p">(</span><span class="n">needs_lock</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">188</span>         <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">189</span>             <span class="k">yield</span> <span class="n">file</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/xarray/backends/file_manager.py</span> in <span class="ni">_acquire_with_cache_info</span><span class="nt">(self, needs_lock)</span>
+<span class="g g-Whitespace">    </span><span class="mi">203</span>                     <span class="n">kwargs</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">204</span>                     <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;mode&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span>
+<span class="ne">--&gt; </span><span class="mi">205</span>                 <span class="n">file</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_opener</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">206</span>                 <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span> <span class="o">==</span> <span class="s2">&quot;w&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">207</span>                     <span class="c1"># ensure file doesn&#39;t get overriden when opened again</span>
+
+<span class="nn">src/netCDF4/_netCDF4.pyx</span> in <span class="ni">netCDF4._netCDF4.Dataset.__init__</span><span class="nt">()</span>
+
+<span class="nn">src/netCDF4/_netCDF4.pyx</span> in <span class="ni">netCDF4._netCDF4._ensure_nc_success</span><span class="nt">()</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;/content/drive/Shareddrives/Academy/Courses/Climate/Climatematch/06-Projects/01-Resources/Data exploration notebooks/Sea level rise (Aakash)/SEA_SURFACE_HEIGHT_mon_mean_1992-01-2017-12_ECCO_V4r4_latlon_0p50deg.nc&#39;
 </pre></div>
 </div>
-<img alt="../../_images/Sea_level_rise_9_1.png" src="../../_images/Sea_level_rise_9_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;SSH&#39;</span><span class="p">][</span><span class="mi">100</span><span class="p">,:,:]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;SSH&#39;</span><span class="p">][:,</span><span class="mi">200</span><span class="p">,</span><span class="mi">134</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.QuadMesh at 0x7f9a3b082740&gt;
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2309</span><span class="o">/</span><span class="mf">1471417321.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;SSH&#39;</span><span class="p">][:,</span><span class="mi">200</span><span class="p">,</span><span class="mi">134</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;ds&#39; is not defined
 </pre></div>
 </div>
-<img alt="../../_images/Sea_level_rise_10_1.png" src="../../_images/Sea_level_rise_10_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;SSH&#39;</span><span class="p">][</span><span class="mi">100</span><span class="p">,:,:]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2309</span><span class="o">/</span><span class="mf">3580441576.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;SSH&#39;</span><span class="p">][</span><span class="mi">100</span><span class="p">,:,:]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;ds&#39; is not defined
+</pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -1614,7 +1349,7 @@ It is recommended to download the NetCDF ‘daily’ data for a particular locat
 The file will have the sea level stored as a variable called ‘sea_level’ and is a single variable as a function of time. It can be fun to see how close the tidal gauge data agree (or disagree) with the ECCO data!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Students can download any tidal gauge data of their choice from this website: </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Students can download any tidal gauge data of their choice from this website: </span>
 <span class="c1"># https://uhslc.soest.hawaii.edu/data/</span>
 </pre></div>
 </div>
@@ -1622,12 +1357,20 @@ The file will have the sea level stored as a variable called ‘sea_level’ and
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">display_json</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">display_json</span>
 <span class="c1"># Data source-specific functions</span>
 
 <span class="c1">#example code after downloading tidal gauge data:</span>
 <span class="n">ds</span><span class="o">=</span><span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;d007.nc&#39;</span><span class="p">)</span><span class="o">.</span> <span class="c1"># this is just an example, tidal gauge NetCDF file needs to be downloaded in order to load this.</span>
 <span class="n">ds</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_2309/990944686.py&quot;</span><span class="gt">, line </span><span class="mi">5</span>
+    <span class="n">ds</span><span class="o">=</span><span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;d007.nc&#39;</span><span class="p">)</span><span class="o">.</span> <span class="c1"># this is just an example, tidal gauge NetCDF file needs to be downloaded in order to load this.</span>
+                                                                                                                                   <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
 </pre></div>
 </div>
 </div>

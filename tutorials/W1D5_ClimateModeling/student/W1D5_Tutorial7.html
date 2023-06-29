@@ -38,6 +38,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+<script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
 <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
 <link href="../../../genindex.html" rel="index" title="Index">
@@ -738,7 +740,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="menu-dropdown__content">
 <ul>
 <li>
-<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=tree/course-content/book/tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial7.ipynb&amp;branch=main" title="Launch on JupyterHub">
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=tree/course-content/book/tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial7.ipynb&amp;branch=main" title="Launch on JupyterHub">
 <span class="headerbtn__icon-container">
 <img src="../../../_static/images/logo_jupyterhub.svg"/>
 </span>
@@ -1145,6 +1147,20 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2159</span><span class="o">/</span><span class="mf">2915959978.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># imports</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">intake</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named 'intake'
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="figure-settings">
 <h2>Figure settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">¶</a></h2>
@@ -1163,6 +1179,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 </div>
 </div>
@@ -1215,6 +1232,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>We just loaded the full collection of Pangeo cloud datasets into an intake catalog, and defined a list of 5 example models (‘source_ids’) for this demonstration.  There are many more to test out! You could run <code class="docutils literal notranslate"><span class="pre">col.df['source_id'].unique()</span></code> in a new cell to get a list of all available models</p>
 <p>Now we will create a subset according to the provided facets using the <code class="docutils literal notranslate"><span class="pre">.search()</span></code> method, and finally open the <span class="xref myst">zarr stores</span> in the cloud into xarray datasets.</p>
@@ -1245,6 +1263,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 </div>
 <div class="section" id="section-1-2-checking-the-cmip6-datasets">
@@ -1256,6 +1275,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Each group in the tree is stored under a corresponding <code class="docutils literal notranslate"><span class="pre">name</span></code>, and we can select nodes via their name. The real usefulness of a datatree comes from having many groups at different depths, analogous to how one might store files in nested directories (e.g. <code class="docutils literal notranslate"><span class="pre">day1/experiment1/data.txt</span></code>, <code class="docutils literal notranslate"><span class="pre">day1/experiment2/data.txt</span></code> etc.).</p>
 <p>In our case the particular datatree object has different CMIP models and different experiments stored at distinct levels of the tree. This is useful because we can select just one experiment for one model, or all experiments for one model, or all experiments for all models!</p>
@@ -1270,6 +1290,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1279,6 +1300,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 </div>
 </div>
@@ -1286,8 +1308,8 @@ const thebe_selector_output = ".output, .cell_output"
 <h1><strong>Section 2:  Surface Energy Balance</strong><a class="headerlink" href="#section-2-surface-energy-balance" title="Permalink to this headline">¶</a></h1>
 <p>Up until this point we have been analyzing budgets at the top of the atmosphere. Now we will move to Earth’s surface, where we will run into both familiar and unfamiliar terminology.</p>
 <p>The first two terms we will analyze define the radiative component of the surface energy budget: shortwave and longwave radiation. For each of these terms, there is an upwelling and downwelling component. This is because, for example, some of the downwelling shortwave radiation is reflected back upwards due to the surface albedo. Similarly, some upwelling longwave radiation from Earth is absorbed by the atmosphere and re-emitted back towards the surface. The net radiative flux is given as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2765a6ee-1975-4695-bff8-42382b7fd322">
-<span class="eqno">(14)<a class="headerlink" href="#equation-2765a6ee-1975-4695-bff8-42382b7fd322" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-93f0f631-589d-450f-bb90-9eabc8d7b83c">
+<span class="eqno">(14)<a class="headerlink" href="#equation-93f0f631-589d-450f-bb90-9eabc8d7b83c" title="Permalink to this equation">¶</a></span>\[\begin{align}
 R_{net} = [R_{\uparrow S} - R_{\downarrow S}] + [R_{\uparrow L} - R_{\downarrow L}]
 \end{align}\]</div>
 <p>where the arrows indicate up(down)welling and the <span class="math notranslate nohighlight">\(S\)</span> and <span class="math notranslate nohighlight">\(L\)</span> are shortwave and longwave. Note that in keeping with the rest of the variables we will look at, the net radiation is defined so that a positive value refers to an upward flux of energy from the ocean or land to the atmosphere. That is, positive indicates heat transport upwards and away from the surface.</p>
@@ -1302,6 +1324,7 @@ R_{net} = [R_{\uparrow S} - R_{\downarrow S}] + [R_{\uparrow L} - R_{\downarrow 
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1322,6 +1345,7 @@ R_{net} = [R_{\uparrow S} - R_{\downarrow S}] + [R_{\uparrow L} - R_{\downarrow 
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Now we will plot the annual mean over the historical time period 1850-2015.</p>
 <div class="cell docutils container">
@@ -1358,6 +1382,7 @@ R_{net} = [R_{\uparrow S} - R_{\downarrow S}] + [R_{\uparrow L} - R_{\downarrow 
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="section" id="questions-2-climate-connection">
 <h2><strong>Questions 2: Climate Connection</strong><a class="headerlink" href="#questions-2-climate-connection" title="Permalink to this headline">¶</a></h2>
@@ -1383,6 +1408,7 @@ R_{net} = [R_{\uparrow S} - R_{\downarrow S}] + [R_{\uparrow L} - R_{\downarrow 
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1402,6 +1428,7 @@ R_{net} = [R_{\uparrow S} - R_{\downarrow S}] + [R_{\uparrow L} - R_{\downarrow 
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="section" id="questions-3-climate-connection">
 <h2><strong>Questions 3: Climate Connection</strong><a class="headerlink" href="#questions-3-climate-connection" title="Permalink to this headline">¶</a></h2>

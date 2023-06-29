@@ -38,6 +38,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+<script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
 <link href="../../../genindex.html" rel="index" title="Index">
 <link href="../../../search.html" rel="search" title="Search"/>
 <link href="W1D4_Tutorial7.html" rel="next" title="Tutorial 7: Assessing Climate Forcings"/>
@@ -736,7 +738,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="menu-dropdown__content">
 <ul>
 <li>
-<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=tree/course-content/book/tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial6.ipynb&amp;branch=main" title="Launch on JupyterHub">
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=tree/course-content/book/tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial6.ipynb&amp;branch=main" title="Launch on JupyterHub">
 <span class="headerbtn__icon-container">
 <img src="../../../_static/images/logo_jupyterhub.svg"/>
 </span>
@@ -1123,6 +1125,19 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2600</span><span class="o">/</span><span class="mf">416659080.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> 
+<span class="ne">----&gt; </span><span class="mi">7</span> <span class="kn">import</span> <span class="nn">cartopy</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">import</span> <span class="nn">pyleoclim</span> <span class="k">as</span> <span class="nn">pyleo</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named 'cartopy'
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="video-1-speaker-introduction">
 <h2>Video 1: Speaker Introduction<a class="headerlink" href="#video-1-speaker-introduction" title="Permalink to this headline">¶</a></h2>
@@ -1161,6 +1176,71 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from 'https://raw.githubusercontent.com/LinkedEarth/PyleoTutorials/main/data/LR04.csv' to file '/home/runner/.cache/pooch/b9a6e2977fb6c9663ca240912e75cb00-LR04.csv'.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: ad8e9f9df1c716afaa936361d320b4e73f245a59d6f0b4d3c4d722daf2e46b2b
+Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that the file hasn't changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Time (ka)</th>
+<th>Benthic d18O (per mil)</th>
+<th>Standard error (per mil)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>0.0</td>
+<td>3.23</td>
+<td>0.03</td>
+</tr>
+<tr>
+<th>1</th>
+<td>1.0</td>
+<td>3.23</td>
+<td>0.04</td>
+</tr>
+<tr>
+<th>2</th>
+<td>2.0</td>
+<td>3.18</td>
+<td>0.03</td>
+</tr>
+<tr>
+<th>3</th>
+<td>3.0</td>
+<td>3.29</td>
+<td>0.03</td>
+</tr>
+<tr>
+<th>4</th>
+<td>4.0</td>
+<td>3.30</td>
+<td>0.03</td>
+</tr>
+</tbody>
+</table>
+</div></div></div>
 </div>
 <p>We can now create a <code class="docutils literal notranslate"><span class="pre">Series</span></code> object containing the data:</p>
 <div class="cell docutils container">
@@ -1177,6 +1257,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>This record spans the past ~5 million years (5,000 kyr), but we’re going to focus in on the past 1 million years (1,000 kyr), so let’s create a time slice of just this time period, and plot the time series.</p>
 <div class="cell docutils container">
@@ -1187,6 +1268,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 </div>
 <div class="section" id="questions-2">
@@ -1241,6 +1323,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Which method should you choose? The Lomb-Scargle periodogram is the default method in Pyleoclim, and is a good choice for many applications because: (1) it works with unevenly-spaced timeseries which are often encountered in paleoclimate data, (2) it seems to give consistent results over parameter ranges, (3) doesn’t require interpolation, limiting timeseries manipulation, and (4) it is fairly fast to compute. We will choose this estimate to analyze.</p>
 <div class="cell docutils container">
@@ -1252,6 +1335,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 </div>
 </div>
@@ -1264,6 +1348,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1271,6 +1356,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>The variable <code class="docutils literal notranslate"><span class="pre">lr04_ls_sd_sig</span></code> <a class="reference external" href="https://pyleoclim-util.readthedocs.io/en/latest/core/api.html#pyleoclim.core.psds.PSD">PSD object</a> contains the significant frequencies of the significant peaks from the spectral density of the LR04 data. We can now create the same plot of spectral power, but with only the significant peaks.</p>
 <p>NOTE: For this figure, we will plot the x-axis a bit differently. In the previous plot, the x-axis was the “period” but this time the x-axis will be “frequency”, which is the inverse of the period.</p>
@@ -1284,6 +1370,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>The largest spectral powers in the data occur at a frequencies of ~0.01 and ~0.025, as well as a smaller peak at ~0.042, which correspond to 100 kyr, 40 kyr, and 23 kyr, respectively. Do those periodicities sound familiar?</p>
 <p>These are the cycles of <strong>eccentricity, obliquity and precession</strong>. The presence of spectral powers in the LR04 data at the eccentricity, obliquity and precession frequencies highlights the influence of orbital forcings on glacial-interglacial cycles.</p>
@@ -1298,6 +1385,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1306,6 +1394,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>In this wavelet spectrum, the age of the record is on the x-axis, the period is on the y-axis, and the color represents the amplitude of that power spectrum, with yellow indicating a higher power and purple indicating a lower power. The time series on top is the original LR04 δ<sup>18</sup>O  data, and the plot on the right is the spectral analysis and significance test figure we created earlier in this tutorial.</p>
 <div class="section" id="questions-2-3-climate-connection">

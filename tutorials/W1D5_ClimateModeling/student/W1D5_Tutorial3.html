@@ -38,6 +38,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+<script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
 <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
 <link href="../../../genindex.html" rel="index" title="Index">
@@ -738,7 +740,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="menu-dropdown__content">
 <ul>
 <li>
-<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=tree/course-content/book/tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial3.ipynb&amp;branch=main" title="Launch on JupyterHub">
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=tree/course-content/book/tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial3.ipynb&amp;branch=main" title="Launch on JupyterHub">
 <span class="headerbtn__icon-container">
 <img src="../../../_static/images/logo_jupyterhub.svg"/>
 </span>
@@ -1025,8 +1027,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p>We can represent the change in temperature over time as the net heat input or loss from radiation (<span class="math notranslate nohighlight">\(ASR-OLR\)</span>) multiplied by the heat capacity of the Earth system.</p>
 <p>The heat capacity of a medium is it’s ability to increase in temperture given an input of heat. Not all components of the Earth system (for example land, ocean, atmosphere) have the same heat capacity.</p>
 <p>Mathematically the rate of change of global mean surface temperature (<span class="math notranslate nohighlight">\(T\)</span>) over time is given as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-691fb743-d9a5-4198-92ed-7646bbd0c40f">
-<span class="eqno">(10)<a class="headerlink" href="#equation-691fb743-d9a5-4198-92ed-7646bbd0c40f" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fcba5913-3f7e-420e-9a9c-98e17c04c1a1">
+<span class="eqno">(10)<a class="headerlink" href="#equation-fcba5913-3f7e-420e-9a9c-98e17c04c1a1" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \text{rate of change of }T = \frac{1}{\text{heat capacity}}\cdot (\text{energy flux in - energy flux out}) = \frac{1}{C} \cdot ASR - OLR
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(C\)</span> is the heat capacity of the Earth system. Note here that when <span class="math notranslate nohighlight">\(ASR &gt; OLR\)</span>, then the system is gaining heat. Conversly when <span class="math notranslate nohighlight">\(ASR &lt; OLR\)</span>, then the system is losing heat over time.</p>
@@ -1098,8 +1100,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="section-2-add-time-dependency-to-the-model">
 <h1>Section 2 : Add Time Dependency to the Model<a class="headerlink" href="#section-2-add-time-dependency-to-the-model" title="Permalink to this headline">¶</a></h1>
 <p>Knowing the heat capacity, and the descriptions of <span class="math notranslate nohighlight">\(OLR\)</span> and <span class="math notranslate nohighlight">\(ASR\)</span> from previous tutorials, we can write the equation</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2f948a88-0c45-48fa-b2e9-192718506d04">
-<span class="eqno">(11)<a class="headerlink" href="#equation-2f948a88-0c45-48fa-b2e9-192718506d04" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f096ee92-4904-4084-a1e0-2f6062dd8d64">
+<span class="eqno">(11)<a class="headerlink" href="#equation-f096ee92-4904-4084-a1e0-2f6062dd8d64" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \text{rate of change }T = \frac{\text{change in }T}{\text{change in time}}=\frac{dT}{dt}= \frac{1}{C}(ASR - OLR)
 \end{align}\]</div>
 <p>Numerically, we can use this equation to compute the global mean surface temprature after a small interval of time by adding on the amount of energy gained or lost multiplied by the time interval itself.</p>
