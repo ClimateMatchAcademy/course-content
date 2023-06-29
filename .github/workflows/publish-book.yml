@@ -61,14 +61,14 @@ jobs:
       #     mv precourse-$BRANCH/prereqs .
       #     rm -r precourse-$BRANCH
       #     rm -r $BRANCH.tar.gz
-
+      
       - name: Cache Jupyter Build Artifacts
         uses: actions/cache@v2
         with:
-          path: ./book/_build/
-          key: ${{ runner.os }}-jupyter-${{ hashFiles('**/*.ipynb') }}
+          path: ./book/_build/.jupyter_cache/
+          key: ${{ runner.os }}-jupyter-execution-${{ hashFiles('**/*.ipynb') }}
           restore-keys: |
-            ${{ runner.os }}-jupyter-
+            ${{ runner.os }}-jupyter-execution-
 
       - name: Build student book
         run: |
@@ -78,19 +78,6 @@ jobs:
           ln -s ../prereqs book/prereqs
           jupyter-book build book
           python ci/parse_html_for_errors.py student
-
-      - name: Output the changed files
-        run: |
-          git diff --name-only HEAD^ HEAD | tee changed-files.txt
-
-      - name: Rebuild changed notebooks
-        run: |
-          for changed_file in $(cat changed-files.txt); do
-            if [[ $changed_file == *.ipynb ]]; then
-              jupyter-book clean . --all
-              jupyter-book build $changed_file
-            fi
-          done
 
       - name: Commit book
         run: |
