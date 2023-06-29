@@ -30,9 +30,9 @@ jobs:
       - name: Run Notebooks
         uses: ./.github/actions/check-notebooks
         with:
-          run_all: 'false'
-          # exec_flag: '--check-execution'
-          exec_flag: '--execute'
+          run_all: 'true'
+          exec_flag: '--check-only'
+          # exec_flag: '--execute'
           exercice-continue-on-error: 'true'
 
       - name: Add PR comment
