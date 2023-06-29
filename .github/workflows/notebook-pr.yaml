@@ -31,7 +31,7 @@ jobs:
         uses: ./.github/actions/check-notebooks
         with:
           run_all: 'true'
-          exec_flag: '--check-execution'
+          exec_flag: '--check-only'
           # exec_flag: '--execute'
           exercice-continue-on-error: 'true'
 
