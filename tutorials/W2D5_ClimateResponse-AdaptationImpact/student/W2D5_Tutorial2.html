@@ -1666,6 +1666,10 @@ const thebe_selector_output = ".output, .cell_output"
 <h5>Tutorial slides<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h5>
 <p>These are the slides for the videos in all tutorials today</p>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe allowfullscreen="" frameborder="0" height="480" src="https://mfr.ca-1.osf.io/render?url=https://osf.io/kaq2x/?direct%26mode=render%26action=download%26mode=render" width="854"></iframe>
+</div></div>
 </div>
 </div>
 </div>
@@ -1697,6 +1701,20 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2703</span><span class="o">/</span><span class="mf">278922184.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span> <span class="c1"># Import the LinearRegression class from the sklearn.linear_model module</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># Import the pyplot module from the matplotlib library</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> <span class="c1"># Import the pandas library and the drive function from the google.colab module</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_absolute_error</span><span class="p">,</span> <span class="n">mean_squared_error</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestRegressor</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named 'pandas'
+</pre></div>
+</div>
+</div>
 </div>
 <details>
 <summary> <font color="Red">Click here if you are running on local machine or you encounter any error while importing   </font></summary>
@@ -1719,6 +1737,10 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="id9">
 <h5>Video 1: Video 1 Name<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h5>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "3b64023929be4d8387504b414d287917", "version_major": 2, "version_minor": 0}
+</script></div>
 </div>
 </div>
 </div>
@@ -1744,6 +1766,20 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2703</span><span class="o">/</span><span class="mf">1592852178.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pooch</span><span class="o">,</span> <span class="nn">os</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">features_fname</span> <span class="o">=</span> <span class="s2">"dengue_features_train(1).csv"</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">features_fname</span><span class="p">):</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">url</span> <span class="o">=</span> <span class="s2">"https://osf.io/wm9un/download/"</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">features_fname</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named 'pooch'
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <hr class="docutils"/>
@@ -1758,6 +1794,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>We can see some of the variables discussed in the video. For full documentation of these features, see the associated description <a class="reference external" href="https://www.drivendata.org/competitions/44/dengai-predicting-disease-spread/page/82/">here</a>.</p>
 <p>In climate science, visualizing data is an important step in understanding patterns and trends in environmental data. It can also help identify outliers and inconsistencies that need to be addressed before modeling. Therefore, in the next subsection, we will visualize the climate and environmental data to gain insights and identify potential issues.</p>
@@ -1790,6 +1827,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W2D5_ClimateResponse-AdaptationImpact/solutions/W2D5_Tutorial2_Solution_146bf19c.py"><em>Click for solution</em></a></p>
 <p><em>Example output:</em></p>
@@ -1818,6 +1856,7 @@ So far we have only been looking at the enviornmental data. Let’s load the cor
 </pre></div>
 </div>
 </div>
+
 </div>
 </div>
 <hr class="docutils"/>
@@ -1882,6 +1921,7 @@ So far we have only been looking at the enviornmental data. Let’s load the cor
 </pre></div>
 </div>
 </div>
+
 </div>
 <p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W2D5_ClimateResponse-AdaptationImpact/solutions/W2D5_Tutorial2_Solution_7df3981d.py"><em>Click for solution</em></a></p>
 <p><em>Example output:</em></p>
@@ -1929,6 +1969,7 @@ Engage in a discussion with your group and see if anyone has noticed a trend tha
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1940,6 +1981,7 @@ Engage in a discussion with your group and see if anyone has noticed a trend tha
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>To build a model with the climate data, we need to divide it into a training and test set to ensure that the model works well on held-out data. This is important because, as we have seen, evaluating the model on the exact data it was trained on can be misleading.</p>
 <div class="cell docutils container">
@@ -1948,6 +1990,7 @@ Engage in a discussion with your group and see if anyone has noticed a trend tha
 </pre></div>
 </div>
 </div>
+
 </div>
 </div>
 </div>
@@ -1984,6 +2027,7 @@ Engage in a discussion with your group and see if anyone has noticed a trend tha
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1991,6 +2035,7 @@ Engage in a discussion with your group and see if anyone has noticed a trend tha
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1998,6 +2043,7 @@ Engage in a discussion with your group and see if anyone has noticed a trend tha
 </pre></div>
 </div>
 </div>
+
 </div>
 </div>
 </div>
@@ -2050,6 +2096,16 @@ Engage in a discussion with your group and see if anyone has noticed a trend tha
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>r^2 on training data is: 
+r^2 on test data is: 
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, 'Predicted Number of Dengue Cases')
+</pre></div>
+</div>
+<img alt="../../../_images/W2D5_Tutorial2_67_2.png" src="../../../_images/W2D5_Tutorial2_67_2.png"/>
+</div>
 </div>
 <p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W2D5_ClimateResponse-AdaptationImpact/solutions/W2D5_Tutorial2_Solution_0afb0959.py"><em>Click for solution</em></a></p>
 <p><em>Example output:</em></p>
@@ -2077,19 +2133,33 @@ Engage in a discussion with your group and see if anyone has noticed a trend tha
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2703</span><span class="o">/</span><span class="mf">4117467444.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#@title Evaluating the performance of the model using metrics such as mean absolute error (MAE) and mean squared error (MSE)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">y_pred</span> <span class="o">=</span> <span class="n">reg_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">df_cleaned_test</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="s1">'MAE:'</span><span class="p">,</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">cases_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="s1">'RMSE:'</span><span class="p">,</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">cases_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span><span class="n">squared</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+
+<span class="ne">AttributeError</span>: 'ellipsis' object has no attribute 'predict'
+</pre></div>
+</div>
+</div>
 </div>
 <details>
 <summary> <font color="violet">What is MAE and MSE   </font></summary>
 In addition to r^2, Mean Absolute Error (MAE) and Mean Squared Error (MSE) are both metrics used to evaluate the performance of a regression model. They both measure the difference between the predicted values and the actual values of the target variable.
 <p>The MAE is calculated by taking the average of the absolute differences between the predicted and actual values:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-137a9ba5-6781-41f7-9d9a-0ed0a2c1158f">
-<span class="eqno">(17)<a class="headerlink" href="#equation-137a9ba5-6781-41f7-9d9a-0ed0a2c1158f" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7b650bed-9f7d-4ef9-a7f1-2f5b41200b60">
+<span class="eqno">(17)<a class="headerlink" href="#equation-7b650bed-9f7d-4ef9-a7f1-2f5b41200b60" title="Permalink to this equation">¶</a></span>\[\begin{align}
 MAE = \frac{1}{n}\sum_{i=1}^{n}|y_i - \hat{y_i}|
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(n\)</span> is the number of samples, <span class="math notranslate nohighlight">\(y_i\)</span> is the actual value of the target variable for sample <span class="math notranslate nohighlight">\(i\)</span>, and <span class="math notranslate nohighlight">\(\hat{y}_i\)</span> is the predicted value of the target variable for sample <span class="math notranslate nohighlight">\(i\)</span>.</p>
 <p>The RMSE is calculated by taking the square root of the average of the squared differences between the predicted and actual values:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dbc6d4a1-faef-48a9-906e-30a70e0ea8fd">
-<span class="eqno">(18)<a class="headerlink" href="#equation-dbc6d4a1-faef-48a9-906e-30a70e0ea8fd" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-99a2c405-1ac7-42f7-9875-e746d5602384">
+<span class="eqno">(18)<a class="headerlink" href="#equation-99a2c405-1ac7-42f7-9875-e746d5602384" title="Permalink to this equation">¶</a></span>\[\begin{align}
  RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y_i})^2}
 \end{align}\]</div>
 <p>The main difference between MAE and RMSE is that RMSE gives more weight to larger errors, because the differences are squared. Therefore, if there are some large errors in the predictions, the MSE will be higher than the MAE.</p>
@@ -2142,6 +2212,7 @@ MAE = \frac{1}{n}\sum_{i=1}^{n}|y_i - \hat{y_i}|
 </pre></div>
 </div>
 </div>
+
 </div>
 <details>
 <summary> <font color="orangered">Click here description of plot  </font></summary>
@@ -2163,6 +2234,7 @@ The accuracy of the model can also be evaluated numerically by computing metrics
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Does including the city help the model predict cases?</p>
 </div>
@@ -2202,6 +2274,7 @@ The accuracy of the model can also be evaluated numerically by computing metrics
 </pre></div>
 </div>
 </div>
+
 </div>
 <details>
 <summary> <font color="orangered">Click here description of plot  </font></summary>
@@ -2222,6 +2295,7 @@ The plot generated is a scatter plot with the actual total cases on the x-axis a
 </pre></div>
 </div>
 </div>
+
 </div>
 </div>
 </div>
@@ -2288,6 +2362,7 @@ Use <code class="docutils literal notranslate"><span class="pre">RandomForestReg
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2322,6 +2397,13 @@ Use <code class="docutils literal notranslate"><span class="pre">RandomForestReg
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>R^2 on training data is: 
+R^2 on test data is: 
+Ellipsis
+</pre></div>
+</div>
+</div>
 </div>
 <p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W2D5_ClimateResponse-AdaptationImpact/solutions/W2D5_Tutorial2_Solution_658d1bf5.py"><em>Click for solution</em></a></p>
 <p><em>Example output:</em></p>
@@ -2339,6 +2421,20 @@ The plot generated is a scatter plot with the actual total cases on the x-axis a
 <span class="n">y_pred</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">df_cleaned_test</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'MAE:'</span><span class="p">,</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">cases_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'RMSE:'</span><span class="p">,</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">cases_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">squared</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2703</span><span class="o">/</span><span class="mf">1405659596.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#@markdown Evaluating the performance of the model using metrics such as mean absolute error (MAE) and root mean squared error (MSE)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">y_pred</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">df_cleaned_test</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="s1">'MAE:'</span><span class="p">,</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">cases_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="s1">'RMSE:'</span><span class="p">,</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">cases_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">squared</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+
+<span class="ne">AttributeError</span>: 'ellipsis' object has no attribute 'predict'
 </pre></div>
 </div>
 </div>
@@ -2430,6 +2526,7 @@ The plot generated is a scatter plot with the actual total cases on the x-axis a
 </pre></div>
 </div>
 </div>
+
 </div>
 <details>
 <summary> <font color="orangered">Click here for description of plot 📊 </font></summary>
@@ -2497,6 +2594,23 @@ The plot generated is a scatter plot with the actual total cases on the x-axis a
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2703</span><span class="o">/</span><span class="mf">1229232516.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Create a bar chart of the feature importances returned by the random forest model</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">rf</span><span class="o">.</span><span class="n">feature_importances_</span><span class="p">)),</span> <span class="n">rf</span><span class="o">.</span><span class="n">feature_importances_</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'navy'</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> 
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># Set the x-axis and y-axis labels and title</span>
+
+<span class="ne">AttributeError</span>: 'ellipsis' object has no attribute 'feature_importances_'
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 1000x600 with 0 Axes&gt;
+</pre></div>
+</div>
+</div>
 </div>
 <details>
 <summary> <font color="orangered">Click here for description of plot </font></summary>
@@ -2517,6 +2631,9 @@ The plot generated is a scatter plot with the actual total cases on the x-axis a
 </ol>
 <hr class="docutils"/>
 <p align="right"><font color="gree">Congratulations!</font> 🎉  You have reached the end of Tutorial 2!!</p></div>
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {"2386aac6e9f94b41ae6427de091dbe45": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "3b64023929be4d8387504b414d287917": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "TabModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "TabModel", "_titles": {"0": "Youtube", "1": "Bilibili"}, "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "TabView", "box_style": "", "children": ["IPY_MODEL_e7688cb9a6b2492282817ef3df1798c3", "IPY_MODEL_86c7a8e9fb8f4f4bb5fe80347449444c"], "layout": "IPY_MODEL_2386aac6e9f94b41ae6427de091dbe45", "selected_index": 0}}, "46d02671b3494d4e86e6380b501a8236": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "476c7737377946748a84ec6b3f33a465": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "86c7a8e9fb8f4f4bb5fe80347449444c": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_46d02671b3494d4e86e6380b501a8236", "msg_id": "", "outputs": [{"name": "stdout", "output_type": "stream", "text": "Video available at https://www.bilibili.com/video/\n"}, {"data": {"text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://player.bilibili.com/player.html?bvid=&page=1?fs=1\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        ", "text/plain": "<__main__.BiliVideo at 0x7f4383b3e8d0>"}, "metadata": {}, "output_type": "display_data"}]}}, "e7688cb9a6b2492282817ef3df1798c3": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_476c7737377946748a84ec6b3f33a465", "msg_id": "", "outputs": [{"name": "stdout", "output_type": "stream", "text": "Video available at https://youtube.com/watch?v=\n"}, {"data": {"text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://www.youtube.com/embed/?fs=1&rel=0\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        ", "text/plain": "<IPython.lib.display.YouTubeVideo at 0x7f4383fcd050>"}, "metadata": {}, "output_type": "display_data"}]}}}, "version_major": 2, "version_minor": 0}
+</script>
 <script type="text/x-thebe-config">
     {
         requestKernel: true,

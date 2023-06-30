@@ -1006,6 +1006,18 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2327</span><span class="o">/</span><span class="mf">3484110777.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>                     <span class="c1"># used to manipulate data and open datasets</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>                      <span class="c1"># used for algeba and array operations</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>         <span class="c1"># used for plotting</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named 'xarray'
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="figure-settings">
@@ -1018,6 +1030,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 </div>
 </div>
@@ -1027,8 +1040,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p>We can represent the change in temperature over time as the net heat input or loss from radiation (<span class="math notranslate nohighlight">\(ASR-OLR\)</span>) multiplied by the heat capacity of the Earth system.</p>
 <p>The heat capacity of a medium is it’s ability to increase in temperture given an input of heat. Not all components of the Earth system (for example land, ocean, atmosphere) have the same heat capacity.</p>
 <p>Mathematically the rate of change of global mean surface temperature (<span class="math notranslate nohighlight">\(T\)</span>) over time is given as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6d14df20-0b7c-4037-95d9-6557ba9c8bd7">
-<span class="eqno">(10)<a class="headerlink" href="#equation-6d14df20-0b7c-4037-95d9-6557ba9c8bd7" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5ba4161f-dc35-4e29-a1d1-04f4938139e4">
+<span class="eqno">(10)<a class="headerlink" href="#equation-5ba4161f-dc35-4e29-a1d1-04f4938139e4" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \text{rate of change of }T = \frac{1}{\text{heat capacity}}\cdot (\text{energy flux in - energy flux out}) = \frac{1}{C} \cdot ASR - OLR
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(C\)</span> is the heat capacity of the Earth system. Note here that when <span class="math notranslate nohighlight">\(ASR &gt; OLR\)</span>, then the system is gaining heat. Conversly when <span class="math notranslate nohighlight">\(ASR &lt; OLR\)</span>, then the system is losing heat over time.</p>
@@ -1059,6 +1072,13 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Ocean Heat Capactiy:      '</span><span class="p">,</span> <span class="n">C_oc</span><span class="p">,</span><span class="s1">' J m^-2K^-2'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Atmosphere Heat Capacity: '</span><span class="p">,</span> <span class="n">C_atm</span><span class="p">,</span><span class="s1">'   J m^-2K^-2'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Total Heat Capactiy:      '</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span><span class="s1">' J m^-2K^-2'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ocean Heat Capactiy:       276237500  J m^-2K^-2
+Atmosphere Heat Capacity:  10234454.638124362    J m^-2K^-2
+Total Heat Capactiy:       286471954.63812435  J m^-2K^-2
 </pre></div>
 </div>
 </div>
@@ -1093,6 +1113,11 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ellipsis
+</pre></div>
+</div>
+</div>
 </div>
 <p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial3_Solution_2dfdf179.py"><em>Click for solution</em></a></p>
 </div>
@@ -1100,8 +1125,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="section-2-add-time-dependency-to-the-model">
 <h1>Section 2 : Add Time Dependency to the Model<a class="headerlink" href="#section-2-add-time-dependency-to-the-model" title="Permalink to this headline">¶</a></h1>
 <p>Knowing the heat capacity, and the descriptions of <span class="math notranslate nohighlight">\(OLR\)</span> and <span class="math notranslate nohighlight">\(ASR\)</span> from previous tutorials, we can write the equation</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0891eb2c-823b-4c8c-af1a-bc644c4f402b">
-<span class="eqno">(11)<a class="headerlink" href="#equation-0891eb2c-823b-4c8c-af1a-bc644c4f402b" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e9529b01-6ddf-459d-9f62-05a303011fd8">
+<span class="eqno">(11)<a class="headerlink" href="#equation-e9529b01-6ddf-459d-9f62-05a303011fd8" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \text{rate of change }T = \frac{\text{change in }T}{\text{change in time}}=\frac{dT}{dt}= \frac{1}{C}(ASR - OLR)
 \end{align}\]</div>
 <p>Numerically, we can use this equation to compute the global mean surface temprature after a small interval of time by adding on the amount of energy gained or lost multiplied by the time interval itself.</p>
@@ -1163,6 +1188,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1170,6 +1196,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1180,6 +1207,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="section" id="id1">
 <h2>Questions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
@@ -1273,6 +1301,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="section" id="id3">
 <h2>Questions<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>

@@ -1128,6 +1128,20 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2518</span><span class="o">/</span><span class="mf">3133193179.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">s3fs</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">cartopy</span><span class="o">,</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named 's3fs'
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="figure-settings">
 <h1>Figure settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">¶</a></h1>
@@ -1148,6 +1162,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>#<strong>Section 1: From Climatology to Anomaly</strong></p>
 <p>The above section header should be a description of what the section covers.</p>
@@ -1195,6 +1210,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1204,6 +1220,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Now we have the monthly precipitation climatology. How can we calculate the monthly anomaly?</p>
 <p>The answer is straight forward - let’s use <code class="docutils literal notranslate"><span class="pre">.groupby()</span></code> from <code class="docutils literal notranslate"><span class="pre">xarray</span></code>. We can split the entire time period based on the month of the year and then subtract the climatology of that specific month from the monthly value and recombine the value together.</p>
@@ -1215,6 +1232,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>You may have noticed that there is an additional coordinate in the anomaly dataset. The additional coordinate is <code class="docutils literal notranslate"><span class="pre">month</span></code> which is a direct outcome because of the <code class="docutils literal notranslate"><span class="pre">.groupby()</span></code> action we just performed.</p>
 <p>Since we will use the anomaly data again in the next tutorial, let’s write the data out to a netCDF file to skip the calculation of it in the future. You can simply export a data array into a netCDF file using <code class="docutils literal notranslate"><span class="pre">.to_netcdf()</span></code>. It will automatically carry all the coordinates, dimensions, and relevant information into the netCDF file.</p>
@@ -1225,6 +1243,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 </div>
 </div>
@@ -1251,6 +1270,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>From the map of this monthly anomaly, we can see the spatial pattern of how precipitation for the January of 1979 has departed from the 30-year normal. Part of Amazon saw notable increase of precipitation that month as well as the northeast coast of the United States.</p>
 <p>We can also take a look at the time series of a selected grid. We will use the same point (0°N, 0°E) that we used before as an example to look at the monthly time series of the precipitation anomaly.</p>
@@ -1269,6 +1289,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>The monthly anomaly time series (lower subplot) does not seem to have obvious seasonal cycle that presented in the monthly precipitation data (upper subplot). This is one of the advantage of using anomaly data for climate analysis - we can remove the repeating pattern caused by seasonality or other stable factors. This will allow us to better focus on the signal in the data that we are interested in, e.g., climate variability or climate trend.</p>
 </div>
@@ -1292,6 +1313,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1304,6 +1326,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>As you can see, the 12-month rolling mean removed the high frequency change of monthly precipitation anomaly data while demonstrate the slow-moving change of the precipitation.</p>
 <div class="section" id="exercise-2-1-24-month-rolling-mean">
@@ -1331,6 +1354,11 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'\n\nPlease describe the comparison between 12-month and 24-month rolling mean:\n\n'
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1346,6 +1374,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1356,6 +1385,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1368,6 +1398,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="section" id="exercise-2-2-weighted-mean-or-unweighted-global-mean">
 <h2><strong>Exercise 2.2: Weighted mean or unweighted global mean?</strong><a class="headerlink" href="#exercise-2-2-weighted-mean-or-unweighted-global-mean" title="Permalink to this headline">¶</a></h2>
@@ -1389,6 +1420,11 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="sd">Please describe the difference between weighted and unweighted global mean:</span>
 
 <span class="sd">'''</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'\n\nPlease describe the difference between weighted and unweighted global mean:\n\n'
 </pre></div>
 </div>
 </div>

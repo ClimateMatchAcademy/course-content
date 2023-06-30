@@ -1013,6 +1013,19 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2578</span><span class="o">/</span><span class="mf">2655585703.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>                     <span class="c1"># used to manipulate data and open datasets</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>                      <span class="c1"># used for algeba and array operations</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>         <span class="c1"># used for plotting</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">brentq</span>       <span class="c1"># used for numerical root-finding to get the equilibria</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named 'xarray'
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="figure-settings">
@@ -1025,6 +1038,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 </div>
 </div>
@@ -1032,8 +1046,8 @@ const thebe_selector_output = ".output, .cell_output"
 <h1>Section 1 : Temperature Dependent Albedo<a class="headerlink" href="#section-1-temperature-dependent-albedo" title="Permalink to this headline">¶</a></h1>
 <p>When earth’s surface warms, snow and ice melt. This decreases the amount of solar radiation that is reflected off Earth’s surface, and lowers the <strong>albedo (</strong><span class="math notranslate nohighlight">\(\mathbf{\alpha}\)</span><strong>)</strong>. This in turn warms the climate and more snow and ice melt. This is referred to as a <strong>postive feedback</strong>. Positive feedbacks amplify the changes that are already occurring. This particular feedback is referred to as the <strong>ice-albedo feedback</strong>.</p>
 <p>A simple introduction of this feature is through a temperature dependent albedo defined by a ramp function (see lecture slides).</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0264d0ef-3f1d-4376-9858-7476f2ded2a1">
-<span class="eqno">(12)<a class="headerlink" href="#equation-0264d0ef-3f1d-4376-9858-7476f2ded2a1" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-379348b9-b276-4341-9d7c-62d568d61ca3">
+<span class="eqno">(12)<a class="headerlink" href="#equation-379348b9-b276-4341-9d7c-62d568d61ca3" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \alpha = \left\{
         \begin{array}{cl}
         0.3 &amp; T \gt 280 K \\
@@ -1090,6 +1104,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="section" id="questions">
 <h2>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h2>
@@ -1149,6 +1164,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1191,6 +1207,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="section" id="id1">
 <h2>Questions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
@@ -1204,8 +1221,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="section-3-finding-equilibria-numerically-determining-convergence-or-divergence">
 <h1>Section 3: Finding Equilibria Numerically, Determining Convergence or Divergence<a class="headerlink" href="#section-3-finding-equilibria-numerically-determining-convergence-or-divergence" title="Permalink to this headline">¶</a></h1>
 <p>To verify the equilibria identified graphically in the previous section, we can use python to find the solutions to the equation when the rate of change in temeparture is zero. That is find the solution to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a133ed05-2b90-4f80-a62f-5ce2242749fb">
-<span class="eqno">(13)<a class="headerlink" href="#equation-a133ed05-2b90-4f80-a62f-5ce2242749fb" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-258c7044-b01a-4103-9a3e-2a0f422fbb01">
+<span class="eqno">(13)<a class="headerlink" href="#equation-258c7044-b01a-4103-9a3e-2a0f422fbb01" title="Permalink to this equation">¶</a></span>\[\begin{align}
 0 = ASR-OLR
 \end{align}\]</div>
 <p>To aid us, we will use a ‘root-finding function’ from the scipy package.</p>
@@ -1242,6 +1259,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>To asess the stability of these equilibria, we can plot the difference in ASR and OSR. This is the same function we used the brentq package on to find the temperatures at which the energy difference was zero. Thus, when the graph here is zero, those are the equilibrium values.</p>
 <div class="cell docutils container">
@@ -1298,6 +1316,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>The red regions represent when incoming energy is greater than that released to space from Earth’s surface. Thus, the temperature is increasing. The blue regions represent temperatures where the outgoing radiation is larger than the incoming radiation, and so Earth is cooling.</p>
 <p>If for example, starting from an initial temperature below <span class="math notranslate nohighlight">\(T_{eq1}\)</span> (which is in a red region), it will move to the right on the X axis, towards this equilibrium point. Conversely if starting between <span class="math notranslate nohighlight">\(T_{eq1}\)</span> and <span class="math notranslate nohighlight">\(T_{eq1}\)</span>, (which is a blue region), the temperature is dropping and it will move to the left on the x axis towards <span class="math notranslate nohighlight">\(T_{eq1}\)</span>. Thus <span class="math notranslate nohighlight">\(T_{eq1}\)</span> is a convergent, or stable equilibrium and the temperature curves will tend to this point after a long time.</p>
@@ -1347,6 +1366,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Now let’s try starting at a higher intial temperature</p>
 <div class="cell docutils container">
@@ -1384,6 +1404,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="section" id="id3">
 <h2>Questions<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>

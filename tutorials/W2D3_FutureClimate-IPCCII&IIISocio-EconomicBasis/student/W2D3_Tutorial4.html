@@ -986,6 +986,20 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2760</span><span class="o">/</span><span class="mf">2392329055.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">'matplotlib'</span><span class="p">,</span> <span class="s1">'inline'</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">pl</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named 'pandas'
+</pre></div>
+</div>
+</div>
 </div>
 <p>figure settings</p>
 <div class="cell docutils container">
@@ -995,6 +1009,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="section" id="section-0-data-preprocessing">
 <h2>Section 0: Data preprocessing<a class="headerlink" href="#section-0-data-preprocessing" title="Permalink to this headline">¶</a></h2>
@@ -1110,6 +1125,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Let’s check the timing of the tweets relative to the COP26 event to see how the tweets are spread over time.</p>
 <div class="cell docutils container">
@@ -1123,6 +1139,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Who is tweeting about this COP? Look at how many tweets were posted in various languages:</p>
 <div class="cell docutils container">
@@ -1131,6 +1148,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>The stored language name of the tweet is stored as a code name. Pull a language code dictionary from the web and use it to translate the language code to the language name.</p>
 <div class="cell docutils container">
@@ -1143,6 +1161,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p><em>Exercise</em>: find your native language code in the dictionary and use it to select the COP tweets that were written in your language!</p>
 <div class="cell docutils container">
@@ -1151,6 +1170,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Select tweets of a given language</p>
 <div class="cell docutils container">
@@ -1163,6 +1183,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="section" id="section-2-word-set-prevelance">
 <h2>Section 2: Word set prevelance<a class="headerlink" href="#section-2-word-set-prevelance" title="Permalink to this headline">¶</a></h2>
@@ -1184,6 +1205,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Let’s pull these tweets out and look at thier occurence statistics relative to those of the whole dataset computed above</p>
 <div class="cell docutils container">
@@ -1194,6 +1216,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1204,6 +1227,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Note these are normalized so larger fractions closer to the COP26 dates correspond to significantly more absolute number of tweets.</p>
 <p>Let’s look at what these tweets say. Take 100 randomly sampled.</p>
@@ -1213,6 +1237,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p><em>Exercise</em>: Pick another topic, propose a list of topic words, and run the same analysis. (Example topic: “renewable technology”)</p>
 </div>
@@ -1227,6 +1252,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Load the dictionary</p>
 <div class="cell docutils container">
@@ -1242,6 +1268,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>let’s look at the distribution of scores over all words in the dictionary</p>
 <div class="cell docutils container">
@@ -1252,6 +1279,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Before focussing on sentiments about institutions within the hypocrisy tweets, let’s look at the hypocrisy tweets in comparison to non-hypocrisy tweets. This will take some more intensive computation, so let’s only perform it on a 1% subsample of the dataset</p>
 <div class="cell docutils container">
@@ -1260,6 +1288,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1267,6 +1296,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1274,6 +1304,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>The score is a sum over all dictionary words in the tweet. A rough approach to making scores comparable across tweets of different length is convert to a per-word score by normalizing each tweet’s score by its word count (note this is not a per-dictionary word score and so this rough approach introduces a bias dependent on how much of each tweet is formed by dictionary words). Let’s call this normalized score <em>afinn_adjusted</em>.</p>
 <div class="cell docutils container">
@@ -1286,6 +1317,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1293,6 +1325,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Now let’s look at the sentiment of tweets with hypocrisy words versus those without those words. We’ll first plot for some other possibly negative words for reference.</p>
 <div class="cell docutils container">
@@ -1304,6 +1337,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>make cumulative distribtion plots of score distributions</p>
 <div class="cell docutils container">
@@ -1324,6 +1358,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Observe that tweets containing the selected <em>hypocrisy</em>-associated words set are scored much more negative than all of these. So what is the content of these selected tweets?</p>
 </div>
@@ -1387,6 +1422,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Okay so let’s vectorize and look at the wordclouds for single word statistics. Let’s explicitly exclude some words and implicity exclude ones that appear in fewer than some threshold number of documents</p>
 <div class="cell docutils container">
@@ -1399,6 +1435,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1409,6 +1446,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Note in the histograms how the TFidf vectorizer has scaled down the hypocrisy words such that they are less outlyingly prevalent relative to the count vectorizer.</p>
 <p>There are some words here  (e.g. <code class="docutils literal notranslate"><span class="pre">private</span></code> and <code class="docutils literal notranslate"><span class="pre">jet</span></code>) that look like they likely would appear in pairs. Let’s tell the vectorizer to also look for high frequency <em>pairs</em> of words.</p>
@@ -1421,6 +1459,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>The hypocrisy words take up so much frequency it is hard to see what the remaining words are. To clear this list a bit more, let’s also remove the hypocrisy words altogether.</p>
 <div class="cell docutils container">
@@ -1429,6 +1468,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1439,6 +1479,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Observe terms that we might have expected are associated to hypocrisy, e.g. “flying”. Even when allowing for pairs, the semantics are hard to extract from this analysis that ignores the correlations in usage among multiple words.</p>
 <p>To futher assess statistics, one approach is use a generative model with latent structure.</p>

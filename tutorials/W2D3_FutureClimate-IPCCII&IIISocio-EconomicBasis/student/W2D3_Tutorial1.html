@@ -1035,6 +1035,20 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2662</span><span class="o">/</span><span class="mf">2817555634.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Math</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">Image</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">pl</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named 'seaborn'
+</pre></div>
+</div>
+</div>
 </div>
 <p>figure settings</p>
 <div class="cell docutils container">
@@ -1047,6 +1061,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="section" id="figure-functions">
 <h2>Figure functions<a class="headerlink" href="#figure-functions" title="Permalink to this headline">¶</a></h2>
@@ -1157,6 +1172,7 @@ If you give them only an email, you can download any data you select. I download
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>So far you have seen how forcing as an input to a climate model leads to temperature increases and other climate effects like changes in precipitation.
 The IAM projections that use these forcings profiles feed the temperature effects into a socioeconomic model component that evolves our population and the amount of emissions we produce consistent with the forcing for that scenario. There are 5 main scenarios (called <em>socioeconomic pathways</em>) that the IPCC considers (that’s what the different colors are in the above plots). We’ll get into all those details in a subsequent tutorial.</p>
@@ -1191,6 +1207,8 @@ The IAM projections that use these forcings profiles feed the temperature effect
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><img class="unconfined" src="https://osf.io/download/hzrsn/" width="1000"/></div></div>
 </div>
 <p>WOw! that’s a lot of variables!</p>
 <p><em>Exercise</em>: increase width to 3000 and scroll around to read the node labels of the different parts of the model. Can you group them into broader categories?</p>
@@ -1202,6 +1220,8 @@ The IAM projections that use these forcings profiles feed the temperature effect
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><img src="https://osf.io/download/h3mj2/" width="250"/></div></div>
 </div>
 <p>Follow the dependencies. E.g. industrial capital grows wtih investment and produces industrial output that generates pollution and argicultural capital. Along with cultivated land, the latter generate food. Increasing pollution and decreasing (-) food per capita drive up mortality, which decreases population via the deaths per year, while fertility increases population via births per year.</p>
 </div>
@@ -1223,6 +1243,17 @@ The IAM projections that use these forcings profiles feed the temperature effect
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyworld3</span> <span class="kn">import</span> <span class="n">World3</span>
 <span class="kn">from</span> <span class="nn">pyworld3.utils</span> <span class="kn">import</span> <span class="n">plot_world_variables</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2662</span><span class="o">/</span><span class="mf">1472745449.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">pyworld3</span> <span class="kn">import</span> <span class="n">World3</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">pyworld3.utils</span> <span class="kn">import</span> <span class="n">plot_world_variables</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named 'pyworld3'
 </pre></div>
 </div>
 </div>
@@ -1250,6 +1281,7 @@ The IAM projections that use these forcings profiles feed the temperature effect
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Observe how industrial output (rising orange), food per capita (rising green), and population (rising red) grow until diminishing non-renewable resources (falling blue) drive a fall in industrial production (falling orange).</p>
 <p>This tanks food production (falling green) and medical services which reverses the decreasing death rate trend (pink) and drops the population (falling red) over the second half of the 21st century.</p>
@@ -1265,6 +1297,7 @@ The IAM projections that use these forcings profiles feed the temperature effect
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Observe that the crash in industrial output still occurs for this larger resource pool, only now delayed (here by a few decades). Unlike the previous case, soaring pollution (purple) from those extra decades of exponential industrial output precipitates a faster and larger (relative to case 1) population crash starting mid-century.</p>
 </div>
@@ -1280,6 +1313,7 @@ The IAM projections that use these forcings profiles feed the temperature effect
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Observe that turning down production limits pollution, which limits the drop in population to a (transient) plateau and leaves intact a significant amount of non-renewable resources (e.g. ecosystems). However, the asymptotic death rate eventually creeps up to that of case 2.</p>
 <p>Dropping industrial output affects our ability to develop new technologies, e.g. those needed for decarbonization (c.f. the article <em>Decarbonizing the downturn: Addressing climate change in an age of stagnation</em> by Copley et al. <em>Competition &amp; Change</em>, 2022). This stagnation scenario is a central challenge we face in the narrative of Shared Socio-economic Pathway 3 (SSP3 <em>Regional Rivary</em>).</p>
@@ -1314,6 +1348,7 @@ The IAM projections that use these forcings profiles feed the temperature effect
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1331,6 +1366,7 @@ The IAM projections that use these forcings profiles feed the temperature effect
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1345,6 +1381,7 @@ The IAM projections that use these forcings profiles feed the temperature effect
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1359,6 +1396,7 @@ The IAM projections that use these forcings profiles feed the temperature effect
 </pre></div>
 </div>
 </div>
+
 </div>
 </div>
 <script type="text/x-thebe-config">

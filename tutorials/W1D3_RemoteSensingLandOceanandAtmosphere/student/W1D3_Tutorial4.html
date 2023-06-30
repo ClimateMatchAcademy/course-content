@@ -1064,6 +1064,19 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2457</span><span class="o">/</span><span class="mf">1555901524.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">s3fs</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">cartopy</span><span class="o">,</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named 's3fs'
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="figure-settings">
 <h1>Figure settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">¶</a></h1>
@@ -1084,6 +1097,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>#<strong>Section 1: Access Monthly Precipitation Data</strong></p>
 </div>
@@ -1125,6 +1139,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1133,6 +1148,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>We have 528 GPCP monthly precipitation CDR data files in the AWS S3 buckect. Each data file contains the data of each month globally starting from January 1979. Now, let’s open single data file to look at the data strcuture before we open all data files.</p>
 <div class="cell docutils container">
@@ -1145,6 +1161,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1153,6 +1170,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>From the information provided by <code class="docutils literal notranslate"><span class="pre">xarray</span></code>, there are totally five data variables in this monthly data file, including <code class="docutils literal notranslate"><span class="pre">precip</span></code> for the monthly precipitation and <code class="docutils literal notranslate"><span class="pre">precip_error</span></code> for the monthly precipitation error.</p>
 <div class="cell docutils container">
@@ -1162,6 +1180,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>All data is organised in three dimensions: <code class="docutils literal notranslate"><span class="pre">latitude</span></code>, <code class="docutils literal notranslate"><span class="pre">longitude</span></code>, and <code class="docutils literal notranslate"><span class="pre">time</span></code>. If we want to create a three-dimensional data array for the monthly precipitation data across the entire data period (from January 1979 until present).</p>
 <div class="cell docutils container">
@@ -1172,6 +1191,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>Since we are mostly interested in the precipitation data globally at this moment, let’s extract the data array of precipitation from the entire dataset.</p>
 <div class="cell docutils container">
@@ -1182,6 +1202,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>As you can see, the data array has the dimension of <code class="docutils literal notranslate"><span class="pre">time=528</span></code> <code class="docutils literal notranslate"><span class="pre">longitude=144</span></code> <code class="docutils literal notranslate"><span class="pre">latitude=72</span></code>. Let’s visualize the precipitation data to better understand it before further analysis.</p>
 <p>##<strong>Section 1.2: Visualize GPCP Data with Additional Map Features</strong></p>
@@ -1195,6 +1216,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>From the figure, you can vaguely see the boundary of land and ocean. Particularly for the North and South America. But this is not an ideal situation for visualize the data since we don’t want to put any guess work in where we are looking at. So, we will now use <code class="docutils literal notranslate"><span class="pre">cartopy</span></code> to create the visualization with more advanced map features, such as, adding coastal lines, major grid marking, and creating maps with a specific projection for better science communication and climate applications.</p>
 <div class="cell docutils container">
@@ -1218,6 +1240,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>The new map is much improved and gives us more information to better understand the GPCP monthly precipitation data. As we can see, Amazon rainforest, northern part of Australia, other tropical regions show higher amount of monthly precipitation during the month of January in 1979, which fits our basic knowledge of geography.</p>
 <div class="cell docutils container">
@@ -1239,6 +1262,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 </div>
 </div>
@@ -1270,6 +1294,11 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ellipsis
+</pre></div>
+</div>
+</div>
 </div>
 <p>Can you comment on the spatial pattern of the precipitation error provided by GPCP CDR data for this specific month?</p>
 <div class="cell docutils container">
@@ -1278,6 +1307,11 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="sd">'''</span>
 <span class="sd">Write you comments here</span>
 <span class="sd">'''</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'\nWrite you comments here\n'
 </pre></div>
 </div>
 </div>
@@ -1297,6 +1331,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>From the time series plot, it looks like we have a repeating pattern with seasonal cycle. When we talk about climatology, we often mean the pattern that is averaged over a long time period (e.g., typically 30 years). Climatology can tell us what the weather will typically be like in certain time of the year.</p>
 <p>For example, for a given location, we know summer will be the hottest season of the year. This can also apply to rainy/dry seasons. Now let’s calculate the monthly climatology of precipitation using GPCP monthly data.</p>
@@ -1309,6 +1344,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>We now have a defined time period 1981–2010 that we want to calculate climatology with. We can use <code class="docutils literal notranslate"><span class="pre">xarray</span></code> package’s <code class="docutils literal notranslate"><span class="pre">groupby</span></code> functionality to easily calculate the monthly climatology.</p>
 <p><code class="docutils literal notranslate"><span class="pre">groupby</span></code> basically split the data based on a specific criteria (in this case, month of the year) and then perform the process (in our case, calculating mean value across 30 years for that specific month) to each group and recombine data together.</p>
@@ -1320,6 +1356,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>As you can see, the resulting outcome is a data array with the time dimension of <strong>12</strong> – the exact value for the number of months in a year. We now have the monthly climatology for precipitation for 1981-2010 using GPCP monthly data.</p>
 <p>Let’s make a set of map to visualize the monthly climatology from four different seasons.</p>
@@ -1347,6 +1384,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>In the seasonal collection of the climatology map, we can see a clear pattern of precipitation across the globe. The tropics show higher amount of precipitation comparing to other regions. You can also see the seasonal patterns of the precipitation change across different region of the globe (e.g., moonsoon imapcted areas).</p>
 <p>Now let’s look at the climatology of the point that we examined its entire time series earlier (i.e., (0°N, 0°E)).</p>
@@ -1356,6 +1394,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+
 </div>
 <p>The monthly climatology time series for the point of interest demonstrate a notable seasonal pattern of dry and rainy months for the region with more precipitation between December and May while August is the driest of the year.</p>
 <p>Climatology tells us about how the weather typically is like. When we compare the weather of a specific day/month against the climatology, we will know how much it is different from the climatology, or the norm. This will be the content for our next tutorial - anomaly!</p>
@@ -1384,6 +1423,11 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="sd">monthly data for two different</span>
 
 <span class="sd">'''</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'\n\nPlease briefly describe the difference between two climatologies using GPCP\nmonthly data for two different\n\n'
 </pre></div>
 </div>
 </div>
