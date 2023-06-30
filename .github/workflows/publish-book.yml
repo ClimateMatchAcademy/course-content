@@ -13,8 +13,6 @@ env:
 jobs:
   build-and-deploy-book:
     runs-on: ubuntu-latest
-    container:  # Pulls the Docker image and runs the subsequent steps on the container instead of the ubuntu-latest runner
-      image: docker://wesleyban/climatematch-notebook:v1
     steps:
 
       - name: Checkout
