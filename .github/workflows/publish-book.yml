@@ -49,12 +49,6 @@ jobs:
           pip install -r requirements.txt
           pip install jupyter-book==0.10.2 ghp-import
 
-      - name: Install kernels
-        run: |
-          python -m ipykernel install --user --name=my_env
-          python -m ipykernel install --user --name=pangeo
-          python -m ipykernel install --user --name=climatematch
-
       # - name: Copy tutorials from precourse repo
       #   if: "!contains(env.COMMIT_MESSAGE, 'skip precourse')"
       #   run: |
@@ -71,10 +65,10 @@ jobs:
       - name: Cache Jupyter Build Artifacts
         uses: actions/cache@v2
         with:
-          path: ./book/_build/.jupyter_cache/
-          key: ${{ runner.os }}-jupyter-execution-${{ hashFiles('**/*.ipynb') }}
+          path: ./book/_build/
+          key: ${{ runner.os }}-jupyter-${{ hashFiles('**/*.ipynb') }}
           restore-keys: |
-            ${{ runner.os }}-jupyter-execution-
+            ${{ runner.os }}-jupyter-
 
       - name: Build student book
         run: |
