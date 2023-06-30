@@ -1032,8 +1032,8 @@ const thebe_selector_output = ".output, .cell_output"
 <h1>Section 1 : Temperature Dependent Albedo<a class="headerlink" href="#section-1-temperature-dependent-albedo" title="Permalink to this headline">¶</a></h1>
 <p>When earth’s surface warms, snow and ice melt. This decreases the amount of solar radiation that is reflected off Earth’s surface, and lowers the <strong>albedo (</strong><span class="math notranslate nohighlight">\(\mathbf{\alpha}\)</span><strong>)</strong>. This in turn warms the climate and more snow and ice melt. This is referred to as a <strong>postive feedback</strong>. Positive feedbacks amplify the changes that are already occurring. This particular feedback is referred to as the <strong>ice-albedo feedback</strong>.</p>
 <p>A simple introduction of this feature is through a temperature dependent albedo defined by a ramp function (see lecture slides).</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8c05edb4-204a-4223-9aec-fb80112e8041">
-<span class="eqno">(12)<a class="headerlink" href="#equation-8c05edb4-204a-4223-9aec-fb80112e8041" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0264d0ef-3f1d-4376-9858-7476f2ded2a1">
+<span class="eqno">(12)<a class="headerlink" href="#equation-0264d0ef-3f1d-4376-9858-7476f2ded2a1" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \alpha = \left\{
         \begin{array}{cl}
         0.3 &amp; T \gt 280 K \\
@@ -1204,8 +1204,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="section-3-finding-equilibria-numerically-determining-convergence-or-divergence">
 <h1>Section 3: Finding Equilibria Numerically, Determining Convergence or Divergence<a class="headerlink" href="#section-3-finding-equilibria-numerically-determining-convergence-or-divergence" title="Permalink to this headline">¶</a></h1>
 <p>To verify the equilibria identified graphically in the previous section, we can use python to find the solutions to the equation when the rate of change in temeparture is zero. That is find the solution to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ef9aabe0-ec76-40c5-ac64-66bbafe42a6a">
-<span class="eqno">(13)<a class="headerlink" href="#equation-ef9aabe0-ec76-40c5-ac64-66bbafe42a6a" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a133ed05-2b90-4f80-a62f-5ce2242749fb">
+<span class="eqno">(13)<a class="headerlink" href="#equation-a133ed05-2b90-4f80-a62f-5ce2242749fb" title="Permalink to this equation">¶</a></span>\[\begin{align}
 0 = ASR-OLR
 \end{align}\]</div>
 <p>To aid us, we will use a ‘root-finding function’ from the scipy package.</p>
