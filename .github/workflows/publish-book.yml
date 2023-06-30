@@ -49,10 +49,11 @@ jobs:
           pip install -r requirements.txt
           pip install jupyter-book==0.10.2 ghp-import
 
-      - name: Install my_env kernel
+      - name: Install kernels
         run: |
           python -m ipykernel install --user --name=my_env
           python -m ipykernel install --user --name=pangeo
+          python -m ipykernel install --user --name=climatematch
 
       # - name: Copy tutorials from precourse repo
       #   if: "!contains(env.COMMIT_MESSAGE, 'skip precourse')"
