@@ -38,8 +38,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-<script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
 <link href="../../../genindex.html" rel="index" title="Index">
 <link href="../../../search.html" rel="search" title="Search"/>
 <link href="W1D4_Tutorial5.html" rel="next" title="Tutorial 5: Paleoclimate Data Analysis Tools"/>
@@ -738,7 +736,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="menu-dropdown__content">
 <ul>
 <li>
-<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=tree/course-content/book/tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial4.ipynb&amp;branch=main" title="Launch on JupyterHub">
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=lab/tree/course-content/book/tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial4.ipynb&amp;branch=main" title="Launch on JupyterHub">
 <span class="headerbtn__icon-container">
 <img src="../../../_static/images/logo_jupyterhub.svg"/>
 </span>
@@ -1052,18 +1050,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2580</span><span class="o">/</span><span class="mf">2511084796.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">pooch</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">pyleoclim</span> <span class="k">as</span> <span class="nn">pyleo</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named 'pyleoclim'
-</pre></div>
-</div>
-</div>
 </div>
 <div class="section" id="video-1-speaker-introduction">
 <h2>Video 1: Speaker Introduction<a class="headerlink" href="#video-1-speaker-introduction" title="Permalink to this headline">¶</a></h2>
@@ -1108,71 +1094,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from 'https://www.ncei.noaa.gov/pub/data/paleo/icecore/antarctica/antarctica2015co2composite.txt' to file '/home/runner/.cache/pooch/3831339a4c4980e758a8c66b03ccdcc5-antarctica2015co2composite.txt'.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: de57b3967758725b9650717a71bd665ebc87e23d41d3d3ad05c9095a6e7e393f
-Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that the file hasn't changed if it is downloaded again in the future.
-</pre></div>
-</div>
-<div class="output text_html"><div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>age_gas_calBP</th>
-<th>co2_ppm</th>
-<th>co2_1s_ppm</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>-51.03</td>
-<td>368.02</td>
-<td>0.06</td>
-</tr>
-<tr>
-<th>1</th>
-<td>-48.00</td>
-<td>361.78</td>
-<td>0.37</td>
-</tr>
-<tr>
-<th>2</th>
-<td>-46.28</td>
-<td>359.65</td>
-<td>0.10</td>
-</tr>
-<tr>
-<th>3</th>
-<td>-44.41</td>
-<td>357.11</td>
-<td>0.16</td>
-</tr>
-<tr>
-<th>4</th>
-<td>-43.08</td>
-<td>353.95</td>
-<td>0.04</td>
-</tr>
-</tbody>
-</table>
-</div></div></div>
 </div>
 <p>Next, we can store this data as a <code class="docutils literal notranslate"><span class="pre">Series</span></code> in Pyleoclim:</p>
 <div class="cell docutils container">
@@ -1189,7 +1110,6 @@ Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that t
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>We can now plot age vs. CO<sub>2</sub> from EPICA Dome C:</p>
 <div class="cell docutils container">
@@ -1198,7 +1118,6 @@ Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that t
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>Notice that the x-axis is plotted with present-day (0 kyr) on the left and the past (800 kyr) on the right. This is a common practice when plotting paleoclimate time series data.</p>
 <p>These changes in CO<sub>2</sub> are tracking glacial-interglacial cycles (Ice Ages) over the past 800,000 years. Recall that these Ice Ages occur as a result of changes in the orbital cycles of Earth: eccentricity (100,000 year cycle), obliquity (40,000 year cycle) and precession (21,000 year cycle). Can you observe them in the graph above?</p>
@@ -1227,83 +1146,6 @@ Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that t
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from 'https://www.ncei.noaa.gov/pub/data/paleo/icecore/antarctica/epica_domec/edc3deuttemp2007.txt' to file '/home/runner/.cache/pooch/38ace636a8af94ffff934fdf1b30a07e-edc3deuttemp2007.txt'.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: dcc2e6988d5d316cc06c1b6bb27989e8d24b7d93b8529d86ccb28157bd565945
-Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that the file hasn't changed if it is downloaded again in the future.
-</pre></div>
-</div>
-<div class="output text_html"><div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>Bag</th>
-<th>ztop</th>
-<th>Age</th>
-<th>Deuterium</th>
-<th>Temperature</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>12</th>
-<td>13</td>
-<td>6.60</td>
-<td>38.37379</td>
-<td>-390.9</td>
-<td>0.88</td>
-</tr>
-<tr>
-<th>13</th>
-<td>14</td>
-<td>7.15</td>
-<td>46.81203</td>
-<td>-385.1</td>
-<td>1.84</td>
-</tr>
-<tr>
-<th>14</th>
-<td>15</td>
-<td>7.70</td>
-<td>55.05624</td>
-<td>-377.8</td>
-<td>3.04</td>
-</tr>
-<tr>
-<th>15</th>
-<td>16</td>
-<td>8.25</td>
-<td>64.41511</td>
-<td>-394.1</td>
-<td>0.35</td>
-</tr>
-<tr>
-<th>16</th>
-<td>17</td>
-<td>8.80</td>
-<td>73.15077</td>
-<td>-398.7</td>
-<td>-0.42</td>
-</tr>
-</tbody>
-</table>
-</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1319,7 +1161,6 @@ Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that t
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1327,7 +1168,6 @@ Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that t
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>When we observe the δD data, we see very similar patterns as in the atmospheric CO<sub>2</sub> data. To more easily compare the two records, we can plot the two series side by side by putting them into a <code class="docutils literal notranslate"><span class="pre">MultipleSeries</span></code> object. Since the δD and CO<sub>2</sub> values have different units, we can first standardize the series and then plot the data.</p>
 <div class="cell docutils container">
@@ -1340,7 +1180,6 @@ Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that t
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>Now we can more easily compare the timing and magnitude of changes in CO<sub>2</sub> and δD at EPICA Dome C over the past 800,000 years. During glacial periods, δD was more depleted (cooler temperatures) and atmospheric CO<sub>2</sub>  was lower. During interglacial periods, δD was more enriched (warmer temperatures) and atmospheric CO<sub>2</sub>  was higher.</p>
 </div>

@@ -38,8 +38,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-<script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
 <link href="../../../genindex.html" rel="index" title="Index">
 <link href="../../../search.html" rel="search" title="Search"/>
 <link href="W1D4_Tutorial9.html" rel="next" title="Tutorial 9: Paleoclimate Reanalysis Products"/>
@@ -738,7 +736,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="menu-dropdown__content">
 <ul>
 <li>
-<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=tree/course-content/book/tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial8.ipynb&amp;branch=main" title="Launch on JupyterHub">
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=lab/tree/course-content/book/tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial8.ipynb&amp;branch=main" title="Launch on JupyterHub">
 <span class="headerbtn__icon-container">
 <img src="../../../_static/images/logo_jupyterhub.svg"/>
 </span>
@@ -1108,23 +1106,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/xarray/backends/cfgrib_.py:28: UserWarning: Failed to load cfgrib - most likely there is a problem accessing the ecCodes library. Try `import cfgrib` to get the full error message
-  "Failed to load cfgrib - most likely there is a problem accessing the ecCodes library. "
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2412</span><span class="o">/</span><span class="mf">387636681.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">pooch</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> 
-<span class="ne">----&gt; </span><span class="mi">7</span> <span class="kn">import</span> <span class="nn">cartopy</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">import</span> <span class="nn">pyleoclim</span> <span class="k">as</span> <span class="nn">pyleo</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named 'cartopy'
-</pre></div>
-</div>
-</div>
 </div>
 <div class="section" id="video-1-speaker-introduction">
 <h2>Video 1: Speaker Introduction<a class="headerlink" href="#video-1-speaker-introduction" title="Permalink to this headline">¶</a></h2>
@@ -1161,65 +1142,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from 'https://osf.io/p8tx3/download' to file '/home/runner/.cache/pooch/171843a7ee1d4842d77a3b11f683b820-download'.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 238b0e12afb70c60d649bfc18072330e0f73fb376f3fccae5afdab72a37c311a
-Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that the file hasn't changed if it is downloaded again in the future.
-</pre></div>
-</div>
-<div class="output text_html"><div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>Year</th>
-<th>LST</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>1996</td>
-<td>25.7</td>
-</tr>
-<tr>
-<th>1</th>
-<td>1986</td>
-<td>25.6</td>
-</tr>
-<tr>
-<th>2</th>
-<td>1976</td>
-<td>25.0</td>
-</tr>
-<tr>
-<th>3</th>
-<td>1966</td>
-<td>24.6</td>
-</tr>
-<tr>
-<th>4</th>
-<td>1956</td>
-<td>24.5</td>
-</tr>
-</tbody>
-</table>
-</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1237,7 +1159,6 @@ Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that t
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="section" id="questions-1">
 <h2><strong>Questions 1</strong><a class="headerlink" href="#questions-1" title="Permalink to this headline">¶</a></h2>
@@ -1263,324 +1184,6 @@ Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that t
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from 'https://osf.io/gw2m5/download' to file '/home/runner/.cache/pooch/40cd0a1d9bf38b0f303eb234ae90b52e-download'.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 7cb042abdc072202119a45fff3383a590ef770e8602afe1b0583e68fcfcfb843
-Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that the file hasn't changed if it is downloaded again in the future.
-</pre></div>
-</div>
-<div class="output text_html"><div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>Year</th>
-<th>bcc_csm1_1</th>
-<th>CCSM4</th>
-<th>FGOALS_gl</th>
-<th>FGOALS_s2</th>
-<th>IPSL_CM5A_LR</th>
-<th>MPI_ESM_P</th>
-<th>CSIRO</th>
-<th>GISS-E2-R_r1i1p121</th>
-<th>GISS-E2-R_r1i1p127</th>
-<th>...</th>
-<th>CESM_member_1</th>
-<th>CESM_member_2</th>
-<th>CESM_member_3</th>
-<th>CESM_member_4</th>
-<th>CESM_member_5</th>
-<th>CESM_member_6</th>
-<th>CESM_member_7</th>
-<th>CESM_member_8</th>
-<th>CESM_member_9</th>
-<th>CESM_member_10</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>850</td>
-<td>-0.570693</td>
-<td>-0.431830</td>
-<td>NaN</td>
-<td>-0.620995</td>
-<td>-0.475963</td>
-<td>-0.170230</td>
-<td>NaN</td>
-<td>0.116333</td>
-<td>0.155407</td>
-<td>...</td>
-<td>0.036672</td>
-<td>0.067692</td>
-<td>0.085340</td>
-<td>-0.000616</td>
-<td>0.157021</td>
-<td>0.048458</td>
-<td>0.038173</td>
-<td>-0.027151</td>
-<td>0.143404</td>
-<td>-0.053464</td>
-</tr>
-<tr>
-<th>1</th>
-<td>851</td>
-<td>-0.698903</td>
-<td>-0.411177</td>
-<td>NaN</td>
-<td>-0.753160</td>
-<td>-0.742970</td>
-<td>-0.303124</td>
-<td>-0.398695</td>
-<td>0.068174</td>
-<td>0.210337</td>
-<td>...</td>
-<td>0.246816</td>
-<td>0.181400</td>
-<td>0.251417</td>
-<td>0.170710</td>
-<td>0.165139</td>
-<td>0.324856</td>
-<td>0.191677</td>
-<td>0.120951</td>
-<td>0.216921</td>
-<td>0.068698</td>
-</tr>
-<tr>
-<th>2</th>
-<td>852</td>
-<td>-0.575440</td>
-<td>-0.404802</td>
-<td>NaN</td>
-<td>-0.743508</td>
-<td>-0.758939</td>
-<td>-0.422623</td>
-<td>-0.406343</td>
-<td>0.060088</td>
-<td>0.240585</td>
-<td>...</td>
-<td>0.187429</td>
-<td>0.065922</td>
-<td>0.190229</td>
-<td>0.264551</td>
-<td>0.092629</td>
-<td>0.386593</td>
-<td>0.068904</td>
-<td>0.292246</td>
-<td>0.101564</td>
-<td>0.200259</td>
-</tr>
-<tr>
-<th>3</th>
-<td>853</td>
-<td>-0.724757</td>
-<td>-0.552719</td>
-<td>NaN</td>
-<td>-0.869331</td>
-<td>-0.746460</td>
-<td>-0.335177</td>
-<td>-0.353557</td>
-<td>-0.074396</td>
-<td>0.030596</td>
-<td>...</td>
-<td>0.202443</td>
-<td>0.089054</td>
-<td>-0.031298</td>
-<td>0.205805</td>
-<td>0.049447</td>
-<td>0.023312</td>
-<td>-0.041356</td>
-<td>0.206064</td>
-<td>0.212954</td>
-<td>0.288272</td>
-</tr>
-<tr>
-<th>4</th>
-<td>854</td>
-<td>-0.724328</td>
-<td>-0.734938</td>
-<td>NaN</td>
-<td>-0.826238</td>
-<td>-0.684093</td>
-<td>-0.650792</td>
-<td>-0.416140</td>
-<td>-0.402800</td>
-<td>-0.330589</td>
-<td>...</td>
-<td>0.062795</td>
-<td>0.137882</td>
-<td>-0.233049</td>
-<td>-0.227240</td>
-<td>-0.156577</td>
-<td>-0.339176</td>
-<td>-0.103825</td>
-<td>0.058420</td>
-<td>-0.006102</td>
-<td>-0.006619</td>
-</tr>
-<tr>
-<th>...</th>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-</tr>
-<tr>
-<th>1161</th>
-<td>2011</td>
-<td>1.013544</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>1162</th>
-<td>2012</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>1163</th>
-<td>2013</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>1164</th>
-<td>2014</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>1165</th>
-<td>2015</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-</tbody>
-</table>
-<p>1166 rows × 22 columns</p>
-</div></div></div>
 </div>
 <p>Note that the data file includes several ensemble members for <a class="reference external" href="https://www.cesm.ucar.edu/">Community Earth System Model (CESM)</a> and <a class="reference external" href="https://www.giss.nasa.gov/">Goddard Institute for Space Studies (GISS)</a> simulations. Ensembles are essentially groups of climate model simulations used for climate projections, or in this case, reconstructions. You will learn about this in much more detail on W1D5: Climate Modeling.</p>
 <p>For now, we can replace these with their ensemble mean series.</p>
@@ -1627,197 +1230,6 @@ Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that t
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>Year</th>
-<th>bcc_csm1_1</th>
-<th>CCSM4</th>
-<th>FGOALS_gl</th>
-<th>FGOALS_s2</th>
-<th>IPSL_CM5A_LR</th>
-<th>MPI_ESM_P</th>
-<th>CSIRO</th>
-<th>HadCM3</th>
-<th>CESM</th>
-<th>GISS</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>850</td>
-<td>-0.570693</td>
-<td>-0.431830</td>
-<td>NaN</td>
-<td>-0.620995</td>
-<td>-0.475963</td>
-<td>-0.170230</td>
-<td>NaN</td>
-<td>-0.620517</td>
-<td>0.049553</td>
-<td>0.127429</td>
-</tr>
-<tr>
-<th>1</th>
-<td>851</td>
-<td>-0.698903</td>
-<td>-0.411177</td>
-<td>NaN</td>
-<td>-0.753160</td>
-<td>-0.742970</td>
-<td>-0.303124</td>
-<td>-0.398695</td>
-<td>-0.553043</td>
-<td>0.193858</td>
-<td>0.138796</td>
-</tr>
-<tr>
-<th>2</th>
-<td>852</td>
-<td>-0.575440</td>
-<td>-0.404802</td>
-<td>NaN</td>
-<td>-0.743508</td>
-<td>-0.758939</td>
-<td>-0.422623</td>
-<td>-0.406343</td>
-<td>-0.560791</td>
-<td>0.185033</td>
-<td>0.098170</td>
-</tr>
-<tr>
-<th>3</th>
-<td>853</td>
-<td>-0.724757</td>
-<td>-0.552719</td>
-<td>NaN</td>
-<td>-0.869331</td>
-<td>-0.746460</td>
-<td>-0.335177</td>
-<td>-0.353557</td>
-<td>-0.438949</td>
-<td>0.120470</td>
-<td>-0.054552</td>
-</tr>
-<tr>
-<th>4</th>
-<td>854</td>
-<td>-0.724328</td>
-<td>-0.734938</td>
-<td>NaN</td>
-<td>-0.826238</td>
-<td>-0.684093</td>
-<td>-0.650792</td>
-<td>-0.416140</td>
-<td>-0.812194</td>
-<td>-0.081349</td>
-<td>-0.407169</td>
-</tr>
-<tr>
-<th>...</th>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-</tr>
-<tr>
-<th>1161</th>
-<td>2011</td>
-<td>1.013544</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>1162</th>
-<td>2012</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>1163</th>
-<td>2013</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>1164</th>
-<td>2014</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>1165</th>
-<td>2015</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-</tbody>
-</table>
-<p>1166 rows × 11 columns</p>
-</div></div></div>
 </div>
 <p>In our new dataframe, you can now see that the ensemble members for CESM and GISS are now replaced with one ensemble mean for each model simulation.</p>
 <p>Now we can create a Pyleoclim <code class="docutils literal notranslate"><span class="pre">Series</span></code> object for each simulated GMST time series, which will allow us to easily plot the time series for each simulation and perform data analysis using various built-in tools.</p>
@@ -1838,22 +1250,11 @@ Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that t
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>We can now plot each simulation. For example, let’s plot the CCSM4 GMST anomaly:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ts_dict</span><span class="p">[</span><span class="s1">'CCSM4'</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2412</span><span class="o">/</span><span class="mf">3031173126.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ts_dict</span><span class="p">[</span><span class="s1">'CCSM4'</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-
-<span class="ne">KeyError</span>: 'CCSM4'
 </pre></div>
 </div>
 </div>
@@ -1866,7 +1267,6 @@ Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that t
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>We can now plot all PMIP3 simulation time series at once:</p>
 <div class="cell docutils container">
@@ -1879,7 +1279,6 @@ Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that t
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>Note that like the paleo proxy data we have looked at, these model simulations are also referred to as reconstructions as they are attempts to recreate past climates.</p>
 <p>The reconstructed GMST anomalies from all of the PMIP3 simulations follow the same overall trend of relatively stable, long-term temperature from 800-1800 AD, followed by an increase in temperature over the past 200 years. What do you think is driving this recent warming trend?</p>
@@ -1904,7 +1303,6 @@ Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that t
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1925,7 +1323,6 @@ Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that t
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="section" id="questions-3-climate-connection">
 <h2><strong>Questions 3: Climate Connection</strong><a class="headerlink" href="#questions-3-climate-connection" title="Permalink to this headline">¶</a></h2>

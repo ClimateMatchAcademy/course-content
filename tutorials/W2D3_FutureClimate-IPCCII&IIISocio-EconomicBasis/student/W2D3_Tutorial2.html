@@ -38,8 +38,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-<script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
 <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
 <link href="../../../genindex.html" rel="index" title="Index">
@@ -740,7 +738,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="menu-dropdown__content">
 <ul>
 <li>
-<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=tree/course-content/book/tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial2.ipynb&amp;branch=main" title="Launch on JupyterHub">
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=lab/tree/course-content/book/tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial2.ipynb&amp;branch=main" title="Launch on JupyterHub">
 <span class="headerbtn__icon-container">
 <img src="../../../_static/images/logo_jupyterhub.svg"/>
 </span>
@@ -1120,20 +1118,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2497</span><span class="o">/</span><span class="mf">1875469062.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Math</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">Image</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">pl</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named 'seaborn'
-</pre></div>
-</div>
-</div>
 </div>
 <p>FIgure settings</p>
 <div class="cell docutils container">
@@ -1146,7 +1130,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 </div>
 <hr class="docutils"/>
@@ -1201,7 +1184,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>A linear relationship between consumption and utility is obtained for <span class="math notranslate nohighlight">\(\alpha=0\)</span>. Note that this function includes the case of zero elasticity (<span class="math notranslate nohighlight">\(\alpha=1\)</span>), in which case l’Hôpital’s rule gives <span class="math notranslate nohighlight">\(u(c)=\log (1+c)\)</span> (alternatively, write <span class="math notranslate nohighlight">\(1+c=e^{\log (1+c)}\)</span> in the expression for <span class="math notranslate nohighlight">\(u(c)\)</span> and expand the exponential to linear order in <span class="math notranslate nohighlight">\(1-\alpha\)</span>).</p>
 </div>
@@ -1256,7 +1238,6 @@ $<span class="math notranslate nohighlight">\(V=\sum_{t=1}^{\infty}\gamma^t U(c_
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>Observe how the shorter the horizon, the sooner future discounted return saturates and no utility from further time steps contributes to the value. IN contrast for the undiscounted case, all future times matter equally and the future return grows linearly with the upper time to which utilities are computed.</p>
 </div>
@@ -1291,7 +1272,6 @@ where \)</span>a$ is some small (1e-3) constant. Let’s plot this function. For
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>Observe how larger temperature changes lead to a smaller fraction of remaining productivity. This drop is due to the putative damages caused by that temperature.</p>
 <p><em>Exercise</em>: Brainstorm reasons why a deterministic, continuous mapping between the two might not reflect, even qualitatively, the causal processes underlying the relationship between temperature and economic damage?</p>
@@ -1356,7 +1336,6 @@ N.b. that the DICE model was recently updated (<a class="reference external" hre
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>Check that the optimal control solution is within the bounds we set:</p>
 <div class="cell docutils container">
@@ -1382,7 +1361,6 @@ N.b. that the DICE model was recently updated (<a class="reference external" hre
 </pre></div>
 </div>
 </div>
-
 </div>
 <p><em>Exercise</em>: change <code class="docutils literal notranslate"><span class="pre">max_year</span></code> in the cell above to see what happens after 2100. What does the mitigation rate do?</p>
 <p>The model aims include the effects of negative emission technologies by allowing the mitigation rate (via the bounds) to go greater than 1 at about 2140. Note that the solution definitely makes use of this and would do so before 2100 if allowed. What do the rest of the variables look like:</p>
@@ -1393,7 +1371,6 @@ N.b. that the DICE model was recently updated (<a class="reference external" hre
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>So the carbon price (green) roughly tracks the mitiation rate (Em rate). The emissions rate roughly tracks the industrial emissions. Cumulative emissions peak around 2090 (since NETS aren’t used until 2140).</p>
 </div>
@@ -1414,7 +1391,6 @@ N.b. that the DICE model was recently updated (<a class="reference external" hre
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>What are the main differences between these two projections?</p>
 <p>IAMs model climate damages as affecting productivity only in the year in which they occur. What if the negative effects on productivity persist into the future? A persistence time can be added to damages such that a damage incurred in one year can continue affecting productivity into following years (c.f. Schultes et al. <em>Environ. Res. Lett.</em> (2021); Hansel et al. <em>Nat. Clim. Change</em> (2020)). These effects are not negligible, but are absent from current IAMs used by the IPCC.</p>
@@ -1436,7 +1412,6 @@ N.b. that the DICE model was recently updated (<a class="reference external" hre
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>How are the differences in these two sets of projections consistent with the change in the discount rate?</p>
 </div>
@@ -1465,7 +1440,6 @@ N.b. that the DICE model was recently updated (<a class="reference external" hre
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>How are the differences in these two sets of projections consistent with the change in the elasticity?</p>
 </div>

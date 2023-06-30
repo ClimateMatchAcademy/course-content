@@ -38,8 +38,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-<script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
 <link href="../../../genindex.html" rel="index" title="Index">
 <link href="../../../search.html" rel="search" title="Search"/>
 <link href="W1D5_Tutorial7.html" rel="next" title="Tutorial 7: Introduction to Earth System Models"/>
@@ -738,7 +736,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="menu-dropdown__content">
 <ul>
 <li>
-<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=tree/course-content/book/tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial6.ipynb&amp;branch=main" title="Launch on JupyterHub">
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=lab/tree/course-content/book/tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial6.ipynb&amp;branch=main" title="Launch on JupyterHub">
 <span class="headerbtn__icon-container">
 <img src="../../../_static/images/logo_jupyterhub.svg"/>
 </span>
@@ -1181,24 +1179,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/xarray/backends/cfgrib_.py:28: UserWarning: Failed to load cfgrib - most likely there is a problem accessing the ecCodes library. Try `import cfgrib` to get the full error message
-  "Failed to load cfgrib - most likely there is a problem accessing the ecCodes library. "
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2944</span><span class="o">/</span><span class="mf">2750409340.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>                      <span class="c1"># used for algebra/arrays</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">urllib.request</span>                   <span class="c1"># used to download data from the internet</span>
-<span class="ne">----&gt; </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">climlab</span>                          <span class="c1"># one of the models we are using</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>         <span class="c1"># used for plotting</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">import</span> <span class="nn">metpy</span>                            <span class="c1"># used to make Skew T Plots of temperature and pressure</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named 'climlab'
-</pre></div>
-</div>
-</div>
 </div>
 <div class="section" id="figure-settings">
 <h2>Figure settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">¶</a></h2>
@@ -1217,7 +1197,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 </div>
 </div>
@@ -1315,7 +1294,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 </div>
 </div>
@@ -1386,7 +1364,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 </div>
 <div class="section" id="section-2-radiative-convective-equilibrium">
@@ -1404,7 +1381,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>Near the surface, the reanalysis temperature profile is steeper than the dry adiabats. In these layers vertical motion is inhibited, and the surface conditions are considered stable. However, the model profile is shallower than the dry adiabats. In the model, the surface air is <em>statically unstable</em>, which would lead to convective mixing if this physical process was included in the model (the model currently only includes radiative processes). <strong>In this tutorial we will see whether including convective mixing in our model can bring the model closer to the reanalysis temperature profile.</strong></p>
 <p>To build a radiative-convective model we can take the radiative model we have already made and couple it to a convective model. Here the term <strong>couple</strong> implies there is communication between the models such that their effects are both incorporated into the final product, which in our case is the temperature profile.</p>
@@ -1434,7 +1410,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>Now let’s run the radiation part to equilibrium, which should give us the same profile as in the previous section. Once we get this <em>radiative equilibrium</em> profile we will add convective mixing physics to the model and continue running it until it reaches <em>radiative-convective equilibrium</em>.</p>
 <p>The new model does not actually resolve the actual vertical motion and mixing that occurs in convection. Instead, the model includes a <em>parameterization</em> for convection which automatically mixes regions of the atmospheric column that are statically unstable.</p>
@@ -1455,7 +1430,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>Adding convective mixing to the initially unstable temperature profile leads to an instant mixing of air throughout the lower atmosphere, moving the profile towards the observations. The balance at play is between radiative process that warm the surface and cool the troposphere (lower atmosphere) as well as convection which moves heat away from the surface, leading to a colder surface and warmer troposphere. Note the differences in surface versus tropospheric temperatures in the new versus old equilibrium profiles.</p>
 <div class="section" id="questions-2-climate-connection">
@@ -1489,7 +1463,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main/tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial6_Solution_71d3e850.py"><em>Click for solution</em></a></p>
 </div>

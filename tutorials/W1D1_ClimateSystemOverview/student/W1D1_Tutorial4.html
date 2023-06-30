@@ -38,8 +38,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-<script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
 <link href="../../../genindex.html" rel="index" title="Index">
 <link href="../../../search.html" rel="search" title="Search"/>
 <link href="W1D1_Tutorial5.html" rel="next" title="Tutorial 5: Xarray Data Analysis and Climatology"/>
@@ -738,7 +736,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="menu-dropdown__content">
 <ul>
 <li>
-<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=tree/course-content/book/tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial4.ipynb&amp;branch=main" title="Launch on JupyterHub">
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=lab/tree/course-content/book/tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial4.ipynb&amp;branch=main" title="Launch on JupyterHub">
 <span class="headerbtn__icon-container">
 <img src="../../../_static/images/logo_jupyterhub.svg"/>
 </span>
@@ -1123,24 +1121,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/xarray/backends/cfgrib_.py:28: UserWarning: Failed to load cfgrib - most likely there is a problem accessing the ecCodes library. Try `import cfgrib` to get the full error message
-  "Failed to load cfgrib - most likely there is a problem accessing the ecCodes library. "
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2919</span><span class="o">/</span><span class="mf">1642551864.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">pythia_datasets</span> <span class="kn">import</span> <span class="n">DATASETS</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named 'pythia_datasets'
-</pre></div>
-</div>
-</div>
 </div>
 <div class="section" id="figure-settings">
 <h2>Figure Settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">¶</a></h2>
@@ -1202,7 +1182,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>And look at the temeprature variable <code class="docutils literal notranslate"><span class="pre">tos</span></code>.</p>
 <div class="cell docutils container">
@@ -1211,7 +1190,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>Note in the attributes that the units are ‘degC’. One arithmetic operation we can do is to the  convert the temperature from degrees Celsius to Kelvin:</p>
 <div class="cell docutils container">
@@ -1220,7 +1198,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>You may notice that there are a lot of NaN values in the DataArray for <code class="docutils literal notranslate"><span class="pre">tos</span></code>. NaN isn’t a bad thing and it just means there isn’t data for those coordinates. In this case, there’s no <code class="docutils literal notranslate"><span class="pre">tos</span></code> data for areas with land since this dataset only contains SST values.</p>
 <p>Just to practice another arithmetic operation, lets’s square all values in <code class="docutils literal notranslate"><span class="pre">tos</span></code>:</p>
@@ -1230,7 +1207,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 </div>
 <div class="section" id="section-2-aggregation-methods">
@@ -1275,7 +1251,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>Compute the spatial sum:</p>
 <div class="cell docutils container">
@@ -1284,7 +1259,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>Compute the temporal median:</p>
 <div class="cell docutils container">
@@ -1293,7 +1267,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>Compute the mean SST:</p>
 <div class="cell docutils container">
@@ -1302,7 +1275,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>Because we specified no <code class="docutils literal notranslate"><span class="pre">dim</span></code> argument, the function was applied over all dimensions, computing the mean of every element of <code class="docutils literal notranslate"><span class="pre">tos</span></code> across time and space. It is possible to specify a dimension along which to compute an aggregation. For example, to calculate the mean in time for all locations (i.e. the global mean annual SST), specify the time dimension as the dimension along which the mean should be calculated:</p>
 <div class="cell docutils container">
@@ -1311,7 +1283,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="section" id="questions-2-climate-connection">
 <h2><strong>Questions 2: Climate Connection</strong><a class="headerlink" href="#questions-2-climate-connection" title="Permalink to this headline">¶</a></h2>

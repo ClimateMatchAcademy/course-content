@@ -38,8 +38,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-<script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
 <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
 <link href="../../../genindex.html" rel="index" title="Index">
@@ -740,7 +738,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="menu-dropdown__content">
 <ul>
 <li>
-<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=tree/course-content/book/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial6.ipynb&amp;branch=main" title="Launch on JupyterHub">
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=lab/tree/course-content/book/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial6.ipynb&amp;branch=main" title="Launch on JupyterHub">
 <span class="headerbtn__icon-container">
 <img src="../../../_static/images/logo_jupyterhub.svg"/>
 </span>
@@ -931,20 +929,6 @@ NOTE: Here working with interpolated data fields to lat-lon grid</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2241</span><span class="o">/</span><span class="mf">2793536457.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">cartopy</span> <span class="k">as</span> <span class="nn">cart</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named 'xarray'
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -960,20 +944,6 @@ NOTE: Here working with interpolated data fields to lat-lon grid</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2241</span><span class="o">/</span><span class="mf">2362600007.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#Import preprocessed ECCO data. This data is full depth temperature data over 1992 to 2016 (annual mean)</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">pooch</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">fname</span> <span class="o">=</span> <span class="s2">"theta_annual_mean.nc"</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">url</span> <span class="o">=</span> <span class="s2">"https://osf.io/c8wqt/download"</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named 'pooch'
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="section-1-where-in-the-vertical-is-ocean-heat-located">
@@ -985,7 +955,6 @@ NOTE: Here working with interpolated data fields to lat-lon grid</p>
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -995,7 +964,6 @@ NOTE: Here working with interpolated data fields to lat-lon grid</p>
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>We see that temperature is warmer near the surface and closer to the Equator. <strong>Let’s explore what this means for heat content, by looking at where heat is stored!</strong></p>
 <p>Heat is measured in Joules which is equivalent to kg<span class="math notranslate nohighlight">\(*\)</span>m<span class="math notranslate nohighlight">\(^2\)</span>/s<span class="math notranslate nohighlight">\(^2\)</span>. The heat content between a certain depth <span class="math notranslate nohighlight">\(z_1\)</span> up to the surface (height of 0) is a <em>volume integral</em> over dimensions <span class="math notranslate nohighlight">\(x,y,z\)</span>, that can be written as:
@@ -1007,7 +975,6 @@ if we here use \)</span>dA<span class="math notranslate nohighlight">\( for the 
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1023,7 +990,6 @@ if we here use \)</span>dA<span class="math notranslate nohighlight">\( for the 
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>We see that more heat is held in the upper ocean than the lower ocean. This correlates with what we saw with the zonal mean plotting that it is warmer in the upper ocean. Assume the ocean is around 6000 meters deep. Reading off this graph, what percentage of heat is held in the third of the ocean (top 2000 meters)?</p>
 </div>
@@ -1048,7 +1014,6 @@ if we here use \)</span>dA<span class="math notranslate nohighlight">\( for the 
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1066,7 +1031,6 @@ if we here use \)</span>dA<span class="math notranslate nohighlight">\( for the 
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>We see that most heat gain is in the upper ocean - the change in the top 2000 meters is nearly equal to the full depth change. Based on this graph, what percentage of additional heat since 1992 is stored in the top 2000 meters?</p>
 </div>
@@ -1089,7 +1053,6 @@ if we here use \)</span>dA<span class="math notranslate nohighlight">\( for the 
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>We see the lower latitudes have more heat content than the higher latitudes, consistent with the warmer waters near the Equator that we plotted earlier in this tutorial.</p>
 <p>Now let’s look at the spatial pattern of <em>heat gain</em> over 1992 to 2016</p>
@@ -1100,7 +1063,6 @@ if we here use \)</span>dA<span class="math notranslate nohighlight">\( for the 
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1118,7 +1080,6 @@ if we here use \)</span>dA<span class="math notranslate nohighlight">\( for the 
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1135,7 +1096,6 @@ if we here use \)</span>dA<span class="math notranslate nohighlight">\( for the 
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>We see heat gain isn’t spatially uniform. Comparing the two plots, we again see that most heat gain is in the upper ocean</p>
 </div>

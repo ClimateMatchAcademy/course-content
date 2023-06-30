@@ -38,8 +38,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-<script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
 <link href="../../../genindex.html" rel="index" title="Index">
 <link href="../../../search.html" rel="search" title="Search"/>
 <link href="W1D3_Tutorial4.html" rel="next" title="Figure settings"/>
@@ -738,7 +736,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="menu-dropdown__content">
 <ul>
 <li>
-<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=tree/course-content/book/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial3.ipynb&amp;branch=main" title="Launch on JupyterHub">
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=lab/tree/course-content/book/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial3.ipynb&amp;branch=main" title="Launch on JupyterHub">
 <span class="headerbtn__icon-container">
 <img src="../../../_static/images/logo_jupyterhub.svg"/>
 </span>
@@ -1036,20 +1034,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2558</span><span class="o">/</span><span class="mf">831306187.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="c1">#!pip install cartopy --quiet</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> 
-<span class="ne">---&gt; </span><span class="mi">12</span> <span class="kn">import</span> <span class="nn">s3fs</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named 's3fs'
-</pre></div>
-</div>
-</div>
 </div>
 <div class="section" id="figure-settings">
 <h1>Figure settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">¶</a></h1>
@@ -1070,7 +1054,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>#<strong>Section 1: Satellite monitoring of vegetation status</strong></p>
 <p>As we learned in the previous tutorial, all NOAA CDR datasets are available both at NOAA NCEI and commercial cloud platforms. Here, we are accessing the data directly via Amazon Web Service (AWS). You can find out the NOAA CDR data on AWS’s Open Data Registry.</p>
@@ -1143,7 +1126,6 @@ File format: <code class="docutils literal notranslate"><span class="pre">.nc</s
 </pre></div>
 </div>
 </div>
-
 </div>
 </div>
 </div>
@@ -1181,7 +1163,6 @@ File format: <code class="docutils literal notranslate"><span class="pre">.nc</s
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>The output from the code block tells us that the NDVI data file of 2002-03-12 has the dimention of <code class="docutils literal notranslate"><span class="pre">3600x7200</span></code>. This makes sense for a dataset with the spatial resolution of 0.5°×0.5°. There is another dimension of the dataset named <code class="docutils literal notranslate"><span class="pre">time</span></code>. Since it is a daily data file, it only contains one value in its dimension.</p>
 <p>Two main data variables in this dataset are <code class="docutils literal notranslate"><span class="pre">NDVI</span></code> and <code class="docutils literal notranslate"><span class="pre">QA</span></code>.</p>
@@ -1198,7 +1179,6 @@ File format: <code class="docutils literal notranslate"><span class="pre">.nc</s
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1212,7 +1192,6 @@ File format: <code class="docutils literal notranslate"><span class="pre">.nc</s
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>##<strong>Section 1.4: Mask NDVI Data Using Quality Flag</strong></p>
 <p>As stated earlier, there is also a variable <code class="docutils literal notranslate"><span class="pre">QA</span></code> that indicates the quality of the NDVI value for each grid cell. This quality information is very important when using satellite data to ensure the climate analysis is only done using the highest quality data that are appropirate for the application.</p>
@@ -1422,7 +1401,6 @@ File format: <code class="docutils literal notranslate"><span class="pre">.nc</s
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>The output of the previous operation gives us a data array with logical values to indicate if a grid has high quality NDVI values or not. Now let’s mask out the NDVI data array with this quality information to see if this will make a difference in the final map.</p>
 <p>Run this cell to use <code class="docutils literal notranslate"><span class="pre">.where</span></code> to only keep the NDVI values with high quality flag.</p>
@@ -1438,7 +1416,6 @@ File format: <code class="docutils literal notranslate"><span class="pre">.nc</s
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>As you may have noticed, a lot of the NDVI values in the masked data array becomes <code class="docutils literal notranslate"><span class="pre">nan</span></code> which means <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">a</span> <span class="pre">number</span></code>. This means that the grid does not have a high quality NDVI value based on the QA value. Now, let’s plot the map one more time to see the difference after the quality masking.</p>
 <p>Run this cell to re-plot the NDVI map using masked data</p>
@@ -1453,7 +1430,6 @@ File format: <code class="docutils literal notranslate"><span class="pre">.nc</s
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>You can clearly see the difference after the quality mask for NDVI value. This is largely because of the cloud effect. Since NDVI value is calculated using the reflectance values of the red and near-infrared spectral band, this value is only useful for vegetation and surface monitoring when there is no cloud present. Thus, we always need to remove the grid with cloud in the data.</p>
 <p>###<strong>Code Exercise 1.4: Read and Visualize the NDVI data of your choice</strong></p>

@@ -38,8 +38,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-<script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
 <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
 <link href="../../../genindex.html" rel="index" title="Index">
@@ -740,7 +738,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="menu-dropdown__content">
 <ul>
 <li>
-<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=tree/course-content/book/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.ipynb&amp;branch=main" title="Launch on JupyterHub">
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=lab/tree/course-content/book/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.ipynb&amp;branch=main" title="Launch on JupyterHub">
 <span class="headerbtn__icon-container">
 <img src="../../../_static/images/logo_jupyterhub.svg"/>
 </span>
@@ -1013,18 +1011,6 @@ Satellite images of NOAA’s GOES-West (on the left) and GOES-East (on the right
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2216</span><span class="o">/</span><span class="mf">4226905874.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">## This code can be hidden from the students.</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">Image</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">'./asset/img/t1_modis_snow.gif'</span><span class="p">,</span><span class="s1">'rb'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: './asset/img/t1_modis_snow.gif'
-</pre></div>
-</div>
-</div>
 </div>
 <p>##<strong>Section 2.2: Land/Terrestrial Ecology – Vegetation Health</strong></p>
 <p>Gloabl terrestrial ecosystem is highly regulated by the climate conditions of different geographical regions. Long term satellite data records allow us to map the vegetation dynamics at relatively high spatial resolution (i.e., 1-5 km) frequently (i.e., daily to monthly). This large amount of data can help us answer a lot of questions about climate impact on ecosystems, both natural (e.g., forest and grassland) and human-modified (e.g., cropland).</p>
@@ -1040,18 +1026,6 @@ Satellite images of NOAA’s GOES-West (on the left) and GOES-East (on the right
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## This code can be hidden from the students.</span>
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
 <span class="n">Image</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">'./asset/img/t1_modis_ndvi.gif'</span><span class="p">,</span><span class="s1">'rb'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2216</span><span class="o">/</span><span class="mf">3351523887.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">## This code can be hidden from the students.</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">Image</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">'./asset/img/t1_modis_ndvi.gif'</span><span class="p">,</span><span class="s1">'rb'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: './asset/img/t1_modis_ndvi.gif'
 </pre></div>
 </div>
 </div>
@@ -1073,18 +1047,6 @@ Satellite images of NOAA’s GOES-West (on the left) and GOES-East (on the right
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2216</span><span class="o">/</span><span class="mf">2427777556.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">## This code can be hidden from the students.</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">Image</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">'./asset/img/t1_modis_cloud.gif'</span><span class="p">,</span><span class="s1">'rb'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: './asset/img/t1_modis_cloud.gif'
-</pre></div>
-</div>
-</div>
 </div>
 <p>##<strong>Section 2.4: Atmosphere – Rainfall</strong></p>
 <p>In addition to temperature change, rainfall is another important aspects of climate change which has notable imact on the society and natural systems, such as drought and flooding.</p>
@@ -1098,18 +1060,6 @@ Satellite images of NOAA’s GOES-West (on the left) and GOES-East (on the right
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## This code can be hidden from the students.</span>
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
 <span class="n">Image</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">'./asset/img/t1_gpm_imerg_rainfall.gif'</span><span class="p">,</span><span class="s1">'rb'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2216</span><span class="o">/</span><span class="mf">2719550590.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">## This code can be hidden from the students.</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">Image</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">'./asset/img/t1_gpm_imerg_rainfall.gif'</span><span class="p">,</span><span class="s1">'rb'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: './asset/img/t1_gpm_imerg_rainfall.gif'
 </pre></div>
 </div>
 </div>
@@ -1129,18 +1079,6 @@ Satellite images of NOAA’s GOES-West (on the left) and GOES-East (on the right
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2216</span><span class="o">/</span><span class="mf">3543791778.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">## This code can be hidden from the students.</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">Image</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">'./asset/img/t1_modis_sst.gif'</span><span class="p">,</span><span class="s1">'rb'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: './asset/img/t1_modis_sst.gif'
-</pre></div>
-</div>
-</div>
 </div>
 <p>##<strong>Section 2.6: Ocean/Marine Ecosystem – Chlorophyll</strong></p>
 <p>Similar to terrestrial ecosystems, remotely sensed data can also be used to monitor and study the marine ecosystems. Phytoplanktans, a large group of micro-organisms, play a critical role in marine food web thus affecting marine ecosystems and many human activities (e.g., fisheries).</p>
@@ -1154,18 +1092,6 @@ Satellite images of NOAA’s GOES-West (on the left) and GOES-East (on the right
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## This code can be hidden from the students.</span>
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
 <span class="n">Image</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">'./asset/img/t1_modis_chl.gif'</span><span class="p">,</span><span class="s1">'rb'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2216</span><span class="o">/</span><span class="mf">1653477864.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">## This code can be hidden from the students.</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">Image</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">'./asset/img/t1_modis_chl.gif'</span><span class="p">,</span><span class="s1">'rb'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: './asset/img/t1_modis_chl.gif'
 </pre></div>
 </div>
 </div>

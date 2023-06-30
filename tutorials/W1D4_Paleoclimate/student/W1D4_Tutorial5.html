@@ -38,8 +38,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-<script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
 <link href="../../../genindex.html" rel="index" title="Index">
 <link href="../../../search.html" rel="search" title="Search"/>
 <link href="W1D4_Tutorial6.html" rel="next" title="Tutorial 6: Spectral Analysis of Paleoclimate Data"/>
@@ -738,7 +736,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="menu-dropdown__content">
 <ul>
 <li>
-<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=tree/course-content/book/tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial5.ipynb&amp;branch=main" title="Launch on JupyterHub">
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=lab/tree/course-content/book/tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial5.ipynb&amp;branch=main" title="Launch on JupyterHub">
 <span class="headerbtn__icon-container">
 <img src="../../../_static/images/logo_jupyterhub.svg"/>
 </span>
@@ -1115,20 +1113,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2676</span><span class="o">/</span><span class="mf">3990336808.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># imports</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">cartopy</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">pyleoclim</span> <span class="k">as</span> <span class="nn">pyleo</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named 'cartopy'
-</pre></div>
-</div>
-</div>
 </div>
 <div class="section" id="video-1-speaker-introduction">
 <h2>Video 1: Speaker Introduction<a class="headerlink" href="#video-1-speaker-introduction" title="Permalink to this headline">¶</a></h2>
@@ -1166,7 +1150,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>We can now create a <code class="docutils literal notranslate"><span class="pre">Series</span></code> in Pyleoclim and assign names to different variables so that we can easily plot the data.</p>
 <div class="cell docutils container">
@@ -1185,7 +1168,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>You may notice that the y-axis is inverted. When we’re plotting δD data, we typically invert the y-axis because more negative (“depleted”) values suggest increased rainfall, whereas more positive (“enriched”) values suggest decreased rainfall.</p>
 </div>
@@ -1199,7 +1181,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>Our data is not evenly spaced. There are a few different methods available in <code class="docutils literal notranslate"><span class="pre">pyleoclim</span></code> to place the data on a uniform axis, and in this tutorial, we’ll explore two methods: interpolating and binning. In general, these methods use the available data near a chosen time to estimate what the value was at that time, but each method differs in which nearby data points it uses and how it uses them.</p>
 <div class="section" id="section-2-1-interpolation">
@@ -1211,7 +1192,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1220,7 +1200,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>Now that we’ve interpolated our data, let’s compare the original dataset to the linearly interpolated dataset we just created.</p>
 <div class="cell docutils container">
@@ -1231,7 +1210,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>Notice there are only some minor differences between the original and linearly interpolated data.</p>
 <p>You can print the data in the original and interpolated time series to see the difference in the ages between the two datasets. The interpolated dataset is now evenly spaced with a δD value every ~290 years.</p>
@@ -1241,7 +1219,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1249,7 +1226,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>Let’s compare a few of the different interpolation methods (e.g., quadratic, next, zero) with one another just to see how they are similar and different:</p>
 <div class="cell docutils container">
@@ -1261,7 +1237,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>The methods can produce slightly different results, but mostly reproduce the same overall trend. In this case, the quadractic method may be less appropriate than the other methods.</p>
 </div>
@@ -1274,7 +1249,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1284,7 +1258,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>Again, notice that although there are some minor differences between the original and binned data, the records still capture the same overall trend.</p>
 </div>
@@ -1311,7 +1284,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W1D4_Paleoclimate/solutions/W1D4_Tutorial5_Solution_17f3a2b3.py"><em>Click for solution</em></a></p>
 <p><em>Example output:</em></p>
@@ -1336,7 +1308,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1349,7 +1320,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1361,7 +1331,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>Next, let’s convert each dataset into a <code class="docutils literal notranslate"><span class="pre">Series</span></code> in Pyleoclim.</p>
 <div class="cell docutils container">
@@ -1401,7 +1370,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>Now let’s set up a <code class="docutils literal notranslate"><span class="pre">MultipleSeries</span></code> using Pyleoclim with all four δD datasets.</p>
 <div class="cell docutils container">
@@ -1411,7 +1379,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>We can now create a stackplot with all four δD records:</p>
 <div class="cell docutils container">
@@ -1420,7 +1387,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>By creating a stackplot, we can visually compare between the datasets. However, the four δD records aren’t the same resolution and don’t span the same time interval.</p>
 <p>To better compare the records and assess a common trend, we can use PCA. First, we can use [<code class="docutils literal notranslate"><span class="pre">.common_time()</span></code>] to place the records on a shared time axis with a common sampling frequency. This function takes the argument <code class="docutils literal notranslate"><span class="pre">method</span></code>, which can be either <code class="docutils literal notranslate"><span class="pre">bin</span></code>, <code class="docutils literal notranslate"><span class="pre">interp</span></code>, and <code class="docutils literal notranslate"><span class="pre">gdkernel</span></code>. The binning and interpolation methods are what we just covered in the previous section. Let’s set the time step to 500 years, the method to <code class="docutils literal notranslate"><span class="pre">interp</span></code>, and standarize the data:</p>
@@ -1431,7 +1397,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>We now have standardized δD records that are the same sampling resolution and span the same time interval. Note this meant trimming the longer time series down to around 20,000 years in length.</p>
 <p>We can now apply PCA which will allow us to quantitatively identify a common signal between the four δD paleoclimate reconstructions through the <a class="reference external" href="https://pyleoclim-util.readthedocs.io/en/latest/core/api.html#pyleoclim.core.multipleseries.MultipleSeries.pca"><code class="docutils literal notranslate"><span class="pre">.pca</span></code></a> method. Note that this line of code may take a few minutes to run.</p>
@@ -1441,7 +1406,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>The result is an object containing multiple outputs, and with two plotting methods attached to it. The two outputs we’ll look at are pctvar (the variance) and pcs (the principal components).</p>
 <p>First, let’s print the percentage of variance accounted for by each mode, which is saved as pctvar:</p>
@@ -1451,7 +1415,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>This means that 97% of the variance in the four paleoclimate records is explained by the first principal component. The number of datasets in the PCA constrains the number of principal components that can be defined, which is why we only have four components in this example.</p>
 <p>We can now look at the principal component of the first mode of variance. Let’s create a new series for the first mode of variance and plot it against the original datasets:</p>
@@ -1461,7 +1424,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1476,7 +1438,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1492,7 +1453,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>The original δD records are shown in the colored lines, and the first principal component (PC1) time series is shown in black.</p>
 <div class="section" id="questions-3-climate-connection">

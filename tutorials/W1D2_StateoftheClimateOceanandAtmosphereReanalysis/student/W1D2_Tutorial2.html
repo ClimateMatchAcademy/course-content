@@ -38,8 +38,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-<script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
 <link href="../../../genindex.html" rel="index" title="Index">
 <link href="../../../search.html" rel="search" title="Search"/>
 <link href="W1D2_Tutorial3.html" rel="next" title="Tutorial 3: Atmospheric wind driven circulation"/>
@@ -738,7 +736,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="menu-dropdown__content">
 <ul>
 <li>
-<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=tree/course-content/book/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial2.ipynb&amp;branch=main" title="Launch on JupyterHub">
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=lab/tree/course-content/book/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial2.ipynb&amp;branch=main" title="Launch on JupyterHub">
 <span class="headerbtn__icon-container">
 <img src="../../../_static/images/logo_jupyterhub.svg"/>
 </span>
@@ -1420,20 +1418,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2683</span><span class="o">/</span><span class="mf">3074431351.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">intake</span> <span class="kn">import</span> <span class="n">open_catalog</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> 
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named 'intake'
-</pre></div>
-</div>
-</div>
 </div>
 <div class="section" id="figure-settings">
 <h2>Figure settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">¶</a></h2>
@@ -1476,7 +1460,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 </div>
 </div>
@@ -1615,7 +1598,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 </div>
 </div>
@@ -1725,20 +1707,6 @@ The conversion between both reference systems is given in the fuctions below:</p
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2683</span><span class="o">/</span><span class="mf">3748090286.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> 
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="c1">### stand-alone version:</span>
-<span class="ne">---&gt; </span><span class="mi">12</span> <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">ERA5_select</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">'ERA5_select_example.nc'</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="n">ERA5_select</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named 'xarray'
-</pre></div>
-</div>
-</div>
 </div>
 <p>Now lets plot data in this selected month. To understand the variable of the data we do that in 3 three different ways.</p>
 <ol class="simple">
@@ -1756,7 +1724,6 @@ The conversion between both reference systems is given in the fuctions below:</p
 </pre></div>
 </div>
 </div>
-
 </div>
 </div>
 </div>
@@ -1790,7 +1757,6 @@ The conversion between both reference systems is given in the fuctions below:</p
 </pre></div>
 </div>
 </div>
-
 </div>
 </div>
 <div class="section" id="exercise">
@@ -1816,7 +1782,6 @@ In a last step create the monthly mean of the data and subtract it from the sele
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>Lets then plot the monthly mean and the 4 days foreach variable. Use the framework from the last section for the monthly mean and the function <em>plot_variable_Facet</em> like this:</p>
 <div class="cell docutils container">
@@ -1847,7 +1812,6 @@ In a last step create the monthly mean of the data and subtract it from the sele
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>you should see 4 panels for each variable. Each panel shows the difference, the anomalie, to the monthly mean, and each panel is 5 days appart. You see that indeed the</p>
 </div>
@@ -1870,7 +1834,6 @@ During the day, the sun warms the surface and effect many other variables, like 
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>Now we want to calculate the typical durinal cycle for the year and the month we chose before. For that, we can group the data by hour of the day, andthen take the mean for each hour of the day over the whole month, and then select hour 0 (midnight), 6, 12, and 24:</p>
 <div class="cell docutils container">
@@ -1879,7 +1842,6 @@ During the day, the sun warms the surface and effect many other variables, like 
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>It is often better to show the data as the anomalie from a mean value, to see the differences in the data better. For that, we here just take the mean over the whole month and subtract it. The remaining data is the anomalous data, i.e. the anomalie of the durinal cyle from the monthly mean:</p>
 <div class="cell docutils container">
@@ -1888,7 +1850,6 @@ During the day, the sun warms the surface and effect many other variables, like 
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1909,7 +1870,6 @@ During the day, the sun warms the surface and effect many other variables, like 
 </pre></div>
 </div>
 </div>
-
 </div>
 </div>
 <div class="section" id="discussion-questions">
@@ -1946,7 +1906,6 @@ https://resources.eumetrain.org/satmanu/CMs/SB/print.htm</p>
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1960,7 +1919,6 @@ https://resources.eumetrain.org/satmanu/CMs/SB/print.htm</p>
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="section" id="questions">
 <h3><em>Questions</em><a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h3>
@@ -2005,7 +1963,6 @@ For that, focus on the surface wind speed ‘u_speed’ and make four different 
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2019,7 +1976,6 @@ For that, focus on the surface wind speed ‘u_speed’ and make four different 
 </pre></div>
 </div>
 </div>
-
 </div>
 </div>
 <div class="section" id="id19">

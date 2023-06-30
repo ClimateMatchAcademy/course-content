@@ -38,8 +38,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-<script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
 <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
 <link href="../../../genindex.html" rel="index" title="Index">
@@ -740,7 +738,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="menu-dropdown__content">
 <ul>
 <li>
-<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=tree/course-content/book/tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial1.ipynb&amp;branch=main" title="Launch on JupyterHub">
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=lab/tree/course-content/book/tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial1.ipynb&amp;branch=main" title="Launch on JupyterHub">
 <span class="headerbtn__icon-container">
 <img src="../../../_static/images/logo_jupyterhub.svg"/>
 </span>
@@ -981,18 +979,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2373</span><span class="o">/</span><span class="mf">3634788097.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>                     <span class="c1"># used to manipulate data and open datasets</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>                      <span class="c1"># used for algebra and array operations</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>         <span class="c1"># used for plotting</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named 'xarray'
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="figure-settings">
@@ -1005,7 +991,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 </div>
 </div>
@@ -1022,14 +1007,14 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="section-1-blackbody-radiation">
 <h1>Section 1 : Blackbody Radiation<a class="headerlink" href="#section-1-blackbody-radiation" title="Permalink to this headline">¶</a></h1>
 <p>Suppose Earth behaves as a perfect blackbody radiatior, emitting <strong>outgoing longwave radiation (OLR)</strong> for a given <strong>emission temperature</strong> (<span class="math notranslate nohighlight">\(\mathbf{T}\)</span>) following the Stefan-Boltzmann law.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-49c1cb72-7bf6-4b3e-842f-e550fe6230a3">
-<span class="eqno">(2)<a class="headerlink" href="#equation-49c1cb72-7bf6-4b3e-842f-e550fe6230a3" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3bad2243-9508-435c-bc00-bfeed8d8ffb7">
+<span class="eqno">(2)<a class="headerlink" href="#equation-3bad2243-9508-435c-bc00-bfeed8d8ffb7" title="Permalink to this equation">¶</a></span>\[\begin{align}
 OLR = \sigma T^4
 \end{align}\]</div>
 <p>Where the Stefan-Boltzmann constant <span class="math notranslate nohighlight">\(\sigma = 5.67 \times 10^{-8} W m^{-2} K^{-4}\)</span>.</p>
 <p>Rearranging the equation above, we can solve for the emission temperature of Earth, <span class="math notranslate nohighlight">\(T\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4d6fed95-73a9-4a22-8f7a-6ad517ff1fd6">
-<span class="eqno">(3)<a class="headerlink" href="#equation-4d6fed95-73a9-4a22-8f7a-6ad517ff1fd6" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-aa571401-497c-47dd-84f7-5cafa42d2329">
+<span class="eqno">(3)<a class="headerlink" href="#equation-aa571401-497c-47dd-84f7-5cafa42d2329" title="Permalink to this equation">¶</a></span>\[\begin{align}
 T = \sqrt[4]{\frac{OLR}{\sigma}}
 \end{align}\]</div>
 <p>Using <span class="math notranslate nohighlight">\(OLR = 239 W m^{-2}\)</span>, python allows us to calculate this.</p>
@@ -1046,11 +1031,6 @@ T = \sqrt[4]{\frac{OLR}{\sigma}}
 
 <span class="c1"># display answer</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Emission Temperature: '</span> <span class="p">,</span><span class="n">T</span><span class="p">,</span> <span class="s1">'K or'</span><span class="p">,</span><span class="n">T</span> <span class="o">-</span> <span class="mi">273</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Emission Temperature:  254.80251510194708 K or -18.19748489805292 C
 </pre></div>
 </div>
 </div>
@@ -1087,11 +1067,6 @@ T = \sqrt[4]{\frac{OLR}{\sigma}}
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>OLR:  Ellipsis W m^2
-</pre></div>
-</div>
-</div>
 </div>
 <p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial1_Solution_d28abbfc.py"><em>Click for solution</em></a></p>
 </div>
@@ -1101,8 +1076,8 @@ T = \sqrt[4]{\frac{OLR}{\sigma}}
 <p>The expected surface temperature using blackbody radiation was much colder than we observe it to be. Using the blackbody radiation model, we assume that there is nothing that lies between Earth’s surface and space that interacts with Earth’s emitted radiation. From the initial lecture on the global energy budget we know this is not true. Earth has an atmosphere, and within it are many gases and that changes the picture of pure blackbody radiation we used before. The effect of these gases on radiation, called the <strong>greenhouse effect</strong>, is what warms earth to a habitable temperture.</p>
 <p>A first approach is to model the greenhouse effect on outgoing longwave radiation (OLR) to space by adding a transmissivity coefficient. The <strong>transmissivity coeficient (</strong><span class="math notranslate nohighlight">\(\mathbf{\tau}\)</span><strong>)</strong> represents the fraction of the radiation emitted from Earth that actually makes it to space. This coefficient is a number that lies between 0 and 1, and represents the <em>effects</em> of all the greenhouse gases on radiation, rather than including them explicity in the model. This is called a <strong>parametrization</strong>, and it will be discussed in more detail in tomorrows lecture.</p>
 <p>Applying this to the original model for blackbody radiation, we find the modified model to be</p>
-<div class="amsmath math notranslate nohighlight" id="equation-29d64026-d463-4f04-81f2-241fdb447586">
-<span class="eqno">(4)<a class="headerlink" href="#equation-29d64026-d463-4f04-81f2-241fdb447586" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-40fcd916-490e-4753-b67e-5889be5c35e2">
+<span class="eqno">(4)<a class="headerlink" href="#equation-40fcd916-490e-4753-b67e-5889be5c35e2" title="Permalink to this equation">¶</a></span>\[\begin{align}
 OLR = \tau \sigma T^4
 \end{align}\]</div>
 <p>Using  <span class="math notranslate nohighlight">\(OLR = 239 W m^{-2}\)</span> and <span class="math notranslate nohighlight">\(T = 288 K\)</span>, estimate <span class="math notranslate nohighlight">\(\tau\)</span>.</p>
@@ -1122,11 +1097,6 @@ OLR = \tau \sigma T^4
 
 <span class="c1"># display answer</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Transmissivity Coefficient: '</span> <span class="p">,</span><span class="n">tau</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Transmissivity Coefficient:  0.6126957827090973
 </pre></div>
 </div>
 </div>
@@ -1160,11 +1130,6 @@ OLR = \tau \sigma T^4
 
   <span class="c1"># display answer</span>
   <span class="nb">print</span><span class="p">(</span><span class="s1">'Transmissivity:'</span><span class="p">,</span><span class="n">tau</span><span class="p">,</span><span class="s1">',     '</span> <span class="s1">'OLR: '</span> <span class="p">,</span><span class="n">OLR</span><span class="p">,</span> <span class="s1">'W m^2'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Transmissivity: Ellipsis ,     OLR:  Ellipsis W m^2
 </pre></div>
 </div>
 </div>

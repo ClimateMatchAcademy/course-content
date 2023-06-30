@@ -38,8 +38,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-<script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
 <link href="../../../genindex.html" rel="index" title="Index">
 <link href="../../../search.html" rel="search" title="Search"/>
 <link href="W2D5_Tutorial4.html" rel="next" title="Tutorial 9: Exploring other applications"/>
@@ -738,7 +736,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="menu-dropdown__content">
 <ul>
 <li>
-<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=tree/course-content/book/tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.ipynb&amp;branch=main" title="Launch on JupyterHub">
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=lab/tree/course-content/book/tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.ipynb&amp;branch=main" title="Launch on JupyterHub">
 <span class="headerbtn__icon-container">
 <img src="../../../_static/images/logo_jupyterhub.svg"/>
 </span>
@@ -1509,10 +1507,6 @@ const thebe_selector_output = ".output, .cell_output"
 <h5>Tutorial slides<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h5>
 <p>These are the slides for the videos in all tutorials today</p>
 <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html">
-<iframe allowfullscreen="" frameborder="0" height="480" src="https://mfr.ca-1.osf.io/render?url=https://osf.io/kaq2x/?direct%26mode=render%26action=download%26mode=render" width="854"></iframe>
-</div></div>
 </div>
 </div>
 </div>
@@ -1547,20 +1541,6 @@ const thebe_selector_output = ".output, .cell_output"
 
 <span class="c1"># Ignore the convergence warnings that may appear during model training</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">"ignore"</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">ConvergenceWarning</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2394</span><span class="o">/</span><span class="mf">824542905.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#@title Importing necessary libraries</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>              <span class="c1"># NumPy for numerical computing</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>             <span class="c1"># Pandas for data manipulation</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># Matplotlib for visualization</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-
-<span class="ne">ModuleNotFoundError</span>: No module named 'pandas'
 </pre></div>
 </div>
 </div>
@@ -1664,10 +1644,6 @@ NOTE: Please note that if you are running this code on a local machine and encou
 <div class="section" id="id12">
 <h5>Video 1: Video 1 Name<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h5>
 <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "320d853d553d4dd68546c93029c0759b", "version_major": 2, "version_minor": 0}
-</script></div>
 </div>
 </div>
 </div>
@@ -1693,20 +1669,6 @@ If you want to know more about what these bands (feature) mean, you can refer to
 <span class="n">y_train</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'arr_1'</span><span class="p">]</span>  <span class="c1"># Labels of the training set</span>
 <span class="n">X_test</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'arr_2'</span><span class="p">]</span>   <span class="c1"># Features of the test set</span>
 <span class="n">y_test</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'arr_3'</span><span class="p">]</span>   <span class="c1"># Labels of the test set</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2394</span><span class="o">/</span><span class="mf">2481012250.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#Load the data from the specified file path</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">pooch</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">fname</span> <span class="o">=</span> <span class="s1">'togo_crops_data.npz'</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">url</span> <span class="o">=</span> <span class="s2">"https://osf.io/4tqhe/download"</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named 'pooch'
 </pre></div>
 </div>
 </div>
@@ -1747,7 +1709,6 @@ If you want to know more about what these bands (feature) mean, you can refer to
 </pre></div>
 </div>
 </div>
-
 </div>
 <p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W2D5_ClimateResponse-AdaptationImpact/solutions/W2D5_Tutorial3_Solution_5a22ad64.py"><em>Click for solution</em></a></p>
 <p><em>Example output:</em></p>
@@ -1786,20 +1747,6 @@ If you want to know more about what these bands (feature) mean, you can refer to
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2394</span><span class="o">/</span><span class="mf">4165097569.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># Calculate the correlation matrix</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">corr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">corrcoef</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">rowvar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> 
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Plot the correlation matrix using a heatmap</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named 'seaborn'
-</pre></div>
-</div>
-</div>
 </div>
 <details>
 <summary> <font color="orangered">But what is Correlation coefficient? 🤷‍♂️  </font></summary>
@@ -1826,7 +1773,6 @@ If you want to know more about what these bands (feature) mean, you can refer to
 </pre></div>
 </div>
 </div>
-
 </div>
 </div>
 <div class="section" id="think-reflecting-on-correlations">
@@ -2129,7 +2075,6 @@ The plot generated shows the feature importance scores using the permutation imp
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># After successfull implementation your result should look like this</span>
  <span class="n">Training</span> <span class="n">Accuracy</span><span class="p">:</span>  <span class="mf">0.7875968992248062</span>
@@ -2332,7 +2277,6 @@ The plot generated shows the feature importance scores using the permutation imp
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>How do you interpret the plot above? What do you observe?</p>
 <details>
@@ -2489,9 +2433,6 @@ As the number of hidden units increases, the training accuracy generally increas
 <p>The tutorial covered how to analyze and visualize the crop dataset, train a logistic regression model, and evaluate its performance using various metrics. Feature importance was also discussed, and two methods were explored. In addition, the tutorial covered training an artificial neural network on the crops dataset and preventing overfitting.</p>
 <hr class="docutils"/>
 <p align="right"><font color="gree">Congratulations!</font> 🎉  You have reached the end of Tutorial 3!!</p></div>
-<script type="application/vnd.jupyter.widget-state+json">
-{"state": {"0dda82e056234a79ad2fc6758b114758": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_202340162f7a4753a72dbd7e49f50e92", "msg_id": "", "outputs": [{"name": "stdout", "output_type": "stream", "text": "Video available at https://youtube.com/watch?v=\n"}, {"data": {"text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://www.youtube.com/embed/?fs=1&rel=0\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        ", "text/plain": "<IPython.lib.display.YouTubeVideo at 0x7f1e7829bd90>"}, "metadata": {}, "output_type": "display_data"}]}}, "202340162f7a4753a72dbd7e49f50e92": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "2ee9b54ccc364b97baffdae793eb62d4": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "320d853d553d4dd68546c93029c0759b": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "TabModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "TabModel", "_titles": {"0": "Youtube", "1": "Bilibili"}, "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "TabView", "box_style": "", "children": ["IPY_MODEL_0dda82e056234a79ad2fc6758b114758", "IPY_MODEL_5d972f0fb07f498c9082f63b30ef5b03"], "layout": "IPY_MODEL_84ac1ddce4224291b257bbcf8bd031dd", "selected_index": 0}}, "5d972f0fb07f498c9082f63b30ef5b03": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_2ee9b54ccc364b97baffdae793eb62d4", "msg_id": "", "outputs": [{"name": "stdout", "output_type": "stream", "text": "Video available at https://www.bilibili.com/video/\n"}, {"data": {"text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://player.bilibili.com/player.html?bvid=&page=1?fs=1\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        ", "text/plain": "<__main__.BiliVideo at 0x7f1e78278810>"}, "metadata": {}, "output_type": "display_data"}]}}, "84ac1ddce4224291b257bbcf8bd031dd": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}}, "version_major": 2, "version_minor": 0}
-</script>
 <script type="text/x-thebe-config">
     {
         requestKernel: true,

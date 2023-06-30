@@ -38,8 +38,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-<script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
 <link href="../../../genindex.html" rel="index" title="Index">
 <link href="../../../search.html" rel="search" title="Search"/>
 <link href="../further_reading.html" rel="next" title="&lt;no title&gt;"/>
@@ -738,7 +736,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="menu-dropdown__content">
 <ul>
 <li>
-<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=tree/course-content/book/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial8.ipynb&amp;branch=main" title="Launch on JupyterHub">
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=lab/tree/course-content/book/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial8.ipynb&amp;branch=main" title="Launch on JupyterHub">
 <span class="headerbtn__icon-container">
 <img src="../../../_static/images/logo_jupyterhub.svg"/>
 </span>
@@ -1123,20 +1121,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2438</span><span class="o">/</span><span class="mf">3117121135.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#Imports</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">s3fs</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named 's3fs'
-</pre></div>
-</div>
-</div>
 </div>
 <div class="section" id="figure-settings">
 <h1>Figure settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">¶</a></h1>
@@ -1157,7 +1141,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>#<strong>Section 1: Evaluating Satellite Data with Observations</strong></p>
 </div>
@@ -1205,7 +1188,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>We can see that the nClimGrid dataset is available from <code class="docutils literal notranslate"><span class="pre">1895-01-01</span></code> until present. Since our GPCP data is only available between <code class="docutils literal notranslate"><span class="pre">1979-01-01</span></code> and <code class="docutils literal notranslate"><span class="pre">2022-12-01</span></code>. We extract only the data for that time period from the nClimGrid monthly data.</p>
 <div class="cell docutils container">
@@ -1215,7 +1197,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>From the information about the precipitation data from nClimGird monthly dataset, we know it is the monthly total precipitation, which is the total amount of rainfall that a location receives for the entire month with the unit of <code class="docutils literal notranslate"><span class="pre">millimeter</span></code>.</p>
 <div class="cell docutils container">
@@ -1224,7 +1205,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>For the GPCP precipitation data, it is the daily precipitation rate with the unit of <code class="docutils literal notranslate"><span class="pre">mm/day</span></code>. That quantifies on average in the month the amount of precipitation in a day for a given location. So we need to do some conversion for the precipitation amount from nClimGrid.</p>
 <p>To convert total amount to precipitation rate, we just need to divide the amount by the number of days within a month (e.g., 31 days for January). We can use <code class="docutils literal notranslate"><span class="pre">.days_in_month</span></code> to achieve that.</p>
@@ -1236,7 +1216,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1245,7 +1224,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>In this quick map, we can see the value range of the precipitation rate appears to be on par (reasonably) comparing to the GPCP motnhly precipitation CDR data (0-20 mm/day). This is the basis for our comparison - make sure the satellite data and observations are describing the same quantity.</p>
 </div>
@@ -1266,7 +1244,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1276,7 +1253,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 </div>
 <div class="section" id="section-1-3-spatial-pattern">
@@ -1313,7 +1289,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>Overall, we have a similar spatial pattern but with widely different spatial resolution (e.g., 5km v.s. 2.5°).</p>
 </div>
@@ -1330,7 +1305,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1343,7 +1317,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>We clearly see the systematic shift between the total precipitation amount from nClimGrid data and the precipitation rate from GPCP. Now, let’s see if the nClimGrid rate will be any better for the evaluation.</p>
 <div class="cell docutils container">
@@ -1357,7 +1330,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>The plot show much improvement between the two datasets because now we are looking at the same quantity of the precipitation rate. We are going to zoom in to a few years to see how the data compares.</p>
 <div class="cell docutils container">
@@ -1369,7 +1341,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>We see a great alignment in the precipitation rate between the nClimGrid and GPCP data when we look at the details in a small time window.</p>
 </div>
@@ -1384,7 +1355,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1404,7 +1374,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
 </div>
 <p>We see a strong correlation between the satellite data and the observations for NYC. We now can also calculate the correlation between these two time series.</p>
 <div class="section" id="exercise-compare-the-anomaly">
@@ -1433,11 +1402,6 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="sd">Please describe the relationship between the anomaly time series between two data:</span>
 
 <span class="sd">'''</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'\n\nPlease describe the relationship between the anomaly time series between two data:\n\n'
 </pre></div>
 </div>
 </div>
