@@ -64,7 +64,7 @@ _Tuesday, 18th July (PM) for groups in timezone slots 2 and 5_
 
 _Wednesday, 19th July (AM) for groups in timezone slots 1, 3, and 4_
 
->**Professional Development:** Watch the interview about [Climate Justice](https://climatematchacademy.github.io/professional_development/impact_talks.html#climate-justice) and use the provided prompts to discuss the topic within your project group for 15 minutes As agreed during introductions on W1D1, one project group in the pod should do this during the first 30 minutes of the project block, while the other should leave this for the last 30 minutes of the block. Also as decided on W1D1, two students should practice their leadership skills by leading the discussion from the front and from behind.
+>**Professional Development:** Watch the interview about [Climate Justice](/professional_development/impact_talks.ipynb##Climate-Justice) and use the provided prompts to discuss the topic within your project group for 15 minutes As agreed during introductions on W1D1, one project group in the pod should do this during the first 30 minutes of the project block, while the other should leave this for the last 30 minutes of the block. Also as decided on W1D1, two students should practice their leadership skills by leading the discussion from the front and from behind.
 
 The remaining 2.5 hours are time to get your hands dirty! Explore one of the provided climate datasets by working through the **_GREEN_** questions of your project template. Use the **data loading notebook** to get started and try to understand what is being done and why. Parts of this code might be reusable or adaptable later. Be on the lookout for interesting hypotheses and remember to work as a team! Ask for help, assist others, and discuss your findings throughout the day.
 
@@ -79,11 +79,11 @@ _Wednesday, 19th July (PM) for groups in timezone slots 2 and 5_
 
 _Thursday, 20th July (AM) for groups in timezone slots 1, 3, and 4_
 
->**Professional Development:** Watch the interview about, [Equity in Climate and Climate Science](https://climatematchacademy.github.io/professional_development/impact_talks.html#equity-in-climate-and-climate-science) and use the provided prompts to discuss the topic within your project group for 15 minutes. As agreed during introductions on W1D1, one project group in the pod should do this during the first 30 minutes of the project block, while the other should leave this for the last 30 minutes of the block. Also as decided on W1D1, two students should practice their leadership skills by leading the discussion from the front and from behind.
+>**Professional Development:** Watch the interview about, [Equity in Climate and Climate Science](/professional_development/impact_talks.ipynb##equity-in-climate-and-climate-science) and use the provided prompts to discuss the topic within your project group for 15 minutes. As agreed during introductions on W1D1, one project group in the pod should do this during the first 30 minutes of the project block, while the other should leave this for the last 30 minutes of the block. Also as decided on W1D1, two students should practice their leadership skills by leading the discussion from the front and from behind.
 
->**Professional Development:** On any two days between now and the end of the course, your project group will be visited by mentors. In 1-hour meetings, they will share their professional path in a climate-related field, offer personalized career advice, and provide a networking opportunity. Your pod’s Teaching Assistant can tell you the exact times of these meetings. Make sure to familiarize yourself with the suggested meeting structure and tips for getting the most out of these meetings [here](https://climatematchacademy.github.io/professional_development/mentors.html).
+>**Professional Development:** On any two days between now and the end of the course, your project group will be visited by mentors. In 1-hour meetings, they will share their professional path in a climate-related field, offer personalized career advice, and provide a networking opportunity. Your pod’s Teaching Assistant can tell you the exact times of these meetings. Make sure to familiarize yourself with the suggested meeting structure and tips for getting the most out of these meetings [here](/professional_development/mentors.md).
 
-The remaining time will be dedicated to brainstorming and reviewing the literature! The goal of this literature review is to find out what is known or has been hypothesized about your climate phenomenon, to determine what aspects are currently the most debated, and to help you define some keywords that you will use in your project proposal tomorrow. You do not need to come up with a completely original question! Do, however, situate your research within the relevant literature, and try to get hints/suggestions from other papers. Revisit Step 2 of the [tutorial on good research practices](https://climatematchacademy.github.io/tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial1.html) to review the literature more efficiently!
+The remaining time will be dedicated to brainstorming and reviewing the literature! The goal of this literature review is to find out what is known or has been hypothesized about your climate phenomenon, to determine what aspects are currently the most debated, and to help you define some keywords that you will use in your project proposal tomorrow. You do not need to come up with a completely original question! Do, however, situate your research within the relevant literature, and try to get hints/suggestions from other papers. Revisit Step 2 of the [tutorial on good research practices](/tutorials/W2D2_GoodResearchPractices/W2D2_Tutorial1.ipynb) to review the literature more efficiently!
 
 
 * (**15 min**) Start by discussing your initial project ideas! As a group, try to come up with one or a few questions of interest, either by yourselves or directly from the project template. Was there anything weird or intriguing you noticed in the data yesterday? Are there any questions in the template you find particularly exciting?
@@ -140,7 +140,7 @@ _Monday, 24th July (PM) for groups in timezone slots 2 and 5_
 
 _Tuesday, 25th July (AM) for groups in timezone slots 1, 3, and 4_
 
->**Professional Development:** Watch the interview about [Open Climate Science](https://climatematchacademy.github.io/professional_development/impact_talks.html#open_climate_science) and use the provided prompts to discuss the topic within your project group for 15 minutes. As agreed during introductions on W1D1, one project group in the pod should do this during the first 30 minutes of the project block, while the other should leave this for the last 30 minutes of the block. Also as decided on W1D1, two students should practice their leadership skills by leading the discussion from the front and from behind.
+>**Professional Development:** Watch the interview about [Open Climate Science](/professional_development/impact_talks.ipynb##Open-Climate-Science) and use the provided prompts to discuss the topic within your project group for 15 minutes. As agreed during introductions on W1D1, one project group in the pod should do this during the first 30 minutes of the project block, while the other should leave this for the last 30 minutes of the block. Also as decided on W1D1, two students should practice their leadership skills by leading the discussion from the front and from behind.
 
 
 Continue working on your project!
@@ -163,7 +163,7 @@ Watch the keynote talk _“Futures from the Frontiers of Climate Science”_ by 
 
 Continue working on your project for the rest of the day! Your pod’s Teaching Assistant will be around during the tutorial time block and your Project Teaching Assistant will be available during the project time block as usual. 
 
-During the last hour of the tutorial block, there will be a **live** [career panel](https://climatematchacademy.github.io/professional_development/career_panels.html) with an opportunity to ask questions to the panelists:
+During the last hour of the tutorial block, there will be a **live** [career panel](/professional_development/career_panels) with an opportunity to ask questions to the panelists:
 
 
 
@@ -187,11 +187,11 @@ _Wednesday, 26th July (PM) for groups in timezone slots 2 and 5_
 
 _Thursday, 27th July (AM) for groups in timezone slots 1, 3, and 4_
 
->**Professional Development:** Watch the interview about [Psychology of the climate crisis and climate science communication](https://climatematchacademy.github.io/professional_development/impact_talks.html#psychology-of-the-climate-crisis-and-climate-science-communication) and use the provided prompts to discuss the topic within your project group for 15 minutes. As agreed during introductions on W1D1, one project group in the pod should do this during the first 30 minutes of the project block, while the other should leave this for the last 30 minutes of the block. Also as decided on W1D1, two students should practice their leadership skills by leading the discussion from the front and from behind.
+>**Professional Development:** Watch the interview about [Psychology of the climate crisis and climate science communication](/professional_development/impact_talks.ipynb##Psychology-of-the-Climate-Crisis-and-Climate-Science-Communication) and use the provided prompts to discuss the topic within your project group for 15 minutes. As agreed during introductions on W1D1, one project group in the pod should do this during the first 30 minutes of the project block, while the other should leave this for the last 30 minutes of the block. Also as decided on W1D1, two students should practice their leadership skills by leading the discussion from the front and from behind.
 
 Continue working on your project and start thinking about your conclusions. 
 
-The project submission form you will complete tomorrow also includes a question about your interest in potentially **continuing your project after the course** as a Climatematch Impact Scholar. Please take a moment to [read about this opportunity](https://climatematchacademy.github.io/projects/docs/continuing_your_project_after_the_course.html) and discuss it with your teammates and Teaching Assistants. 
+The project submission form you will complete tomorrow also includes a question about your interest in potentially **continuing your project after the course** as a Climatematch Impact Scholar. Please take a moment to [read about this opportunity](/projects/docs/continuing_your_project_after_the_course) and discuss it with your teammates and Teaching Assistants. 
 
 ---
 ### SESSION 9
@@ -238,7 +238,7 @@ This is the day you present your project to other groups in your megapod. You ca
 * **30-40 minutes of presentations**, including questions. Each group should speak for approximately 5 minutes (depending on group size), and then take questions for 1-2 minutes. The Lead Teaching Assistant of your megapod will determine the order of presentations.
 * **10-20 minutes of general discussion**. Use the following questions to guide the group discussion. Spend a few minutes on each question. It’s ok not to use all these questions, especially if you have your own questions to ask!
     * What was missing in the dataset that you would have really liked to have?
-    * Does anyone plan to continue working on this project in the future? Climatematch Academy will be able to support selected groups with the computing resources required to take projects to the next level. Read more about the opportunity to become a Climatematch Impact Scholar [here](https://climatematchacademy.github.io/projects/docs/continuing_your_project_after_the_course.html). 
+    * Does anyone plan to continue working on this project in the future? Climatematch Academy will be able to support selected groups with the computing resources required to take projects to the next level. Read more about the opportunity to become a Climatematch Impact Scholar [here](/projects/docs/continuing_your_project_after_the_course). 
     * Which one of the 8 steps of good research practices was hardest and why?
     * Based on your experience with the project, what project would you most like to do next? Make up your own, or pick from the other projects available in the course.
     * What surprised you the most about the process of working on a project? In what way was this project most different from other projects you have worked on in the past?
