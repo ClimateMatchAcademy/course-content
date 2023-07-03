@@ -1,10 +1,10 @@
 - title: Introduction
-  file: README.md
+  file: professional_development/README.md
 - title: Impact Talks
-  file: impact_talks.ipynb
+  file: professional_development/impact_talks.ipynb
 - title: Mentor Meetings
-  file: mentors.md
+  file: professional_development/mentors.md
 - title: Career Features
-  file: career_features.md
+  file: professional_development/career_features.md
 - title: Career Panels
-  file: career_panels.md
+  file: professional_development/career_panels.md

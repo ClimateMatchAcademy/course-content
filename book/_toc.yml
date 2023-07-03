@@ -10,6 +10,7 @@
     sections:
     - file: tutorials/TechnicalHelp/Jupyterbook.md
       sections:
+      - file: tutorials/TechnicalHelp/Tutorial_jupyterhub.md
       - file: tutorials/TechnicalHelp/Tutorial_colab.md
       - file: tutorials/TechnicalHelp/Tutorial_kaggle.md
     - file: tutorials/TechnicalHelp/Discord.md
@@ -149,3 +150,15 @@
   - file: projects/docs/continuing_your_project_after_the_course.md
     title: Continuing your project after the course
   part: Project Booklet
+- chapters:
+  - file: professional_development/README.md
+    title: Introduction
+  - file: professional_development/impact_talks.ipynb
+    title: Impact Talks
+  - file: professional_development/mentors.md
+    title: Mentor Meetings
+  - file: professional_development/career_features.md
+    title: Career Features
+  - file: professional_development/career_panels.md
+    title: Career Panels
+  part: Professional Development
