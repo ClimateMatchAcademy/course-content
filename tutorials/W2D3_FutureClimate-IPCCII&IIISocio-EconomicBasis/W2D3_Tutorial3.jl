@@ -1079,21 +1079,21 @@ Week 2, Day 3: IPCC Socio-economic Basis
 
 By Neuromatch Academy
 
-Content creators: Name Surname, Name Surname, Maximilian Puelma Touzel
+Content creators: Maximilian Puelma Touzel
 
-Content reviewers: Name Surname, Name Surname
+Content reviewers:  Peter Ohue, Derick Temfack, Zahra Khodakaramimaghsoud, Peizhen Yang, Younkap Nina DuplexLaura Paccini, Sloane Garelick, Abigail Bodner, Manisha Sinha, Agustina Pesce, Dionessa Biton, Cheng Zhang, Jenna Pearson, Chi Zhang, Ohad Zivan
 
-Content editors: Name Surname, Name Surname
+Content editors: Jenna Pearson, Chi Zhang, Ohad Zivan
 
-Production editors: Name Surname, Name Surname
+Production editors: Wesley Banfield, Jenna Pearson, Chi Zhang, Ohad Zivan
 
-Our 2023 Sponsors
+Our 2023 Sponsors: NASA TOPS
 """
 
 # ╔═╡ 2dacd4cd-68bd-4c31-857e-d8cab04b5180
 md"""
 # Tutorial Objectives
-In this tutorial you'll explore how climate policy best adapts to potential obstacles can that arise in the upcoming years.
+In this tutorial you'll explore how climate policy best adapts to potential obstacles that can arise in the upcoming years.
 
 You'll run [MARGO](https://github.com/ClimateMARGO/ClimateMARGO.jl), a simple climate model, to explore what it takes to avoid the catastrophic impacts of global warming.
 
@@ -1131,16 +1131,20 @@ md"First let's look at the baseline scenario where emissions continue to grow li
 
 # ╔═╡ 0c00a7da-fa98-4253-9770-9a88bb02b849
 md"""
-## _Can you limit human-caused global warming to "well-below 2ºC"?_
+## Section 1.1: _Can you limit human-caused global warming to "well-below 2ºC"?_
 
-What would our emission-reducing efforts over time have to look like to limit warming to less than 2 degrees? Try it lowering emissions using the blue dot in the plot below while watching the yellow curve showing the corresponding time course of temperature in the plot below it:
+What would our emission-reducing efforts over time have to look like to limit warming to less than 2 degrees? Try it by lowering emissions using the blue dot in the plot below while watching the yellow curve showing the corresponding time course of temperature in the plot below it:
 """
 
 # ╔═╡ 8f7f21bf-ec5d-4fa8-934a-14231e781f70
+<<<<<<< HEAD
+md"""The length of the bars above this text show the mitigation costs (i.e. the control costs) and the benefit (i.e. the avoided damages) and their difference as the net benefit.
+=======
 md"""The length of the bars above this text show 
 - the mitigation cost (top purple bar),
 - the benefit (the avoided damages; the middle organe bar) and 
 - their difference as the net benefit (the bottom green bar).
+>>>>>>> main
 """
 
 # ╔═╡ f4b380c9-0ef4-4951-9954-3ddf92ddddb8
@@ -1157,12 +1161,12 @@ _Figure from: [ClimateMARGO.jl](https://github.com/ClimateMARGO/ClimateMARGO.jl)
 
 # ╔═╡ ec325089-8418-4fed-ac0e-e8ae21b433ab
 md"""
-## Mitigating emissions
+## Section 1.2: Mitigating emissions
 Human greenhouse gas emissions are the result of fossil fuel burning (e.g. for transportation, electricity generation, heating, industry), unsustainable agriculture, and land use changes. We refer to any actions or policies that reduce these emissions as *mitigation*.
 
 The MARGO model lumps all potential mitigation into a single number: the fraction of *baseline* emissions that are mitigated in a given year. Baseline emissions are the emissions that would arise in a hypothetical future world absent of climate policy.
 
-*In the plot below, drag the blue dot around* to vary the amount and timing of mitigation, and observe how these changes affect key climate variables, using the drop-box menu: CO₂ₑ emissions, CO₂ₑ concentrations, and global temperature.
+In the plot below (y-axis is the fraction of baseline emissions that are mitigated in a given year), *drag the blue dot around* to vary the amount and timing of mitigation, and observe how these changes affect key climate variables, using the drop-box menu: CO₂ₑ emissions, CO₂ₑ concentrations, and global temperature.
 """
 
 # ╔═╡ 76411fcd-a8bb-422e-b063-8a460c522fe4
@@ -1175,7 +1179,9 @@ For a mitigation scheme that keeps temperature to below 3 degrees, by what year 
 
 # ╔═╡ 30218715-6469-4a0f-bf90-f3243219e7b5
 md"""
-## Cost & damages
+## Section 1.3: Cost & damages
+So far in this tutorial we have looked at the effects that changes in CO2 emissions and mitigation have on climate (e.g. atmospheric CO2 concentrations and global temperature). It’s also essential to assess the socioeconomic impact of mitigation efforts.
+
 Use the `Next` button to move through the 3 points below and watch the relevant plot appear below.
 """
 
@@ -1197,7 +1203,7 @@ Use the `Next` button to move through the 3 points below and watch the relevant 
 
 		md"""### 3. Cost-benefit analysis
 
-		Unfortunately, mitigating CO₂ₑ emissions also carries a cost. In MARGO, the *marginal* cost of mitigation is proportional to the fraction of CO₂ₑ emissions that have been mitigated in a given year, increasing up to a maximum of $70 per metric ton of CO₂ₑ at 100% mitigation.
+		Unfortunately, mitigating CO₂ₑ emissions also carries a cost. In MARGO, the cost of mitigation control is proportional to the fraction of CO₂ₑ emissions that have been mitigated in a given year, increasing up to a maximum of $70 per metric ton of CO₂ₑ at 100% mitigation.
 
 		This naturally leads to a **cost-benefit analysis**. We search for the most beneficial, or *optimal*, scenario: the one with the *maximum net present benefits*. In the figure below, try finding a mitigation strategy that optimizes these _Net benefits_.
 		"""
@@ -1208,13 +1214,31 @@ if cost_benefits_narrative_slide == 1
 	hidecloack("cost_benefits_narrative_input")
 end
 
+<<<<<<< HEAD
+# ╔═╡ 4c7fccc5-450c-4903-96a6-ce36ff60d280
+md"""
+## Section 1.4: Picking up the slack: carbon dioxide removal
+
+While substantial emissions mitigations are necessary to reduce future climate suffering, they can not make up for the hundreds of billions of tons of CO₂ that humans have already emitted. However, both natural and technological methods for removing CO₂ from the atmosphere exist. Although they are presently miniscule compared to the tens-of-gigatons scale of global emissions, some experts expect that CO₂ removal methods will play a key role in the future once major mitigation goal have been accomplished. In MARGO, we do not distinguish between different carbon dioxide removal methods, and further assume that the carbon is stored permanently.
+
+*Drag the yellow dot in the figure below to modify the amount and timing of carbon dioxide removal*.
+"""
+
+=======
+>>>>>>> main
 # ╔═╡ b2d65726-df99-4710-9d03-9f6838036c87
 md"""
 # Section 2: MARGO's automated optimization
 
+<<<<<<< HEAD
+In the above example, *you* manually adjusted the timing and amount of mitigation and carbon dioxide removal to achieve some desired temperature, but did not have much control on the shape of curves. Using a computer algorithm, we can do this optimization step *automatically* and *faster*, without having to assume anything about the shape of the mitigation and carbon dioxide removal curves. This optimization (see the bottom right corner of the model schematic shown above) maximizes the difference of benefits (i.e. avoided damages) and costs (i.e. control costs) under the constraint of a maximum temperature.
+
+Adjust the parameters below to assess their effect on global temperature. First, you can adjust the maximum temperature using the slider, which will set the goal temperature in the bottom plot. Selecting the *allow temperature overshoot* option will allow the projected temperature to temporily exceed the maximum temperature you selected. Next, you can enable various controls (mitigation, removal, geo-engineering, and adaptation) and set the cost multiplier for each which will adjust the costs associated with each approach for reducing damages. Observe how changes in these various settings affect the global temperature projections in the bottom plot.
+=======
 In the above example, *you* manually adjusted the timing and amount of mitigation and carbon dioxide removal, but did not have much control on the shape of curves. Using a computer algorithm, we can do this optimization step *automatically* and *faster*, without having to assume anything about the shape of the mitigation and carbon dioxide removal curves.
 
 The horizontal black line in the bottom plot shows the maximum temperature you select using the slider.
+>>>>>>> main
 """
 
 # ╔═╡ a0a1bb20-ec9b-446d-a36a-272840b8d35c
@@ -1249,14 +1273,35 @@ Much of the solution space here uses carbon dioxide removal (orange) at substant
 
 # ╔═╡ 38ff6efc-ccf1-4ca3-8437-152784a98a9e
 md"""
-# Section 3: From unaware to purposeful Solar Radiation Management
+# Section 3: From Unaware to Purposeful Solar Radiation Management
 
 Various regulations arising from well-established public health concerns (mostly regarding air quality) have been successful at significantly reducing over the last decades the amount of aerosols we emit when burning fossil fuels (e.g. China, *circa* 2010 and sulfur emissions from freight shipping, *circa* 2020). 
 
+<<<<<<< HEAD
+Over the year or so that it takes the typical aerosol particle to fall out of the atmosphere, they reflect sunlight to space and have an effective negative contribution to radiative forcing. The IPCC estimates at least 0.5 degrees of warming has been masked by yearly sulfur emissions alone (i.e. if we stopped emitting sulfur the global average temperature would go up by 0.5 degrees as existing sulfur aerosols fall out of the atmosphere). The effective warming effects of reducing aerosol emissions are typically absent from assessments of how aerosols affect public health. 
+=======
 Over the year or so that it takes the typical aerosol particle to fall out of the atmosphere after being emitted, they reflect sunlight to space and have an effective negative contribution to radiative forcing. The IPCC estimates at least 0.5 degs of warming has been masked by sulfur alone. 
+>>>>>>> main
 
 The effective warming effects of reducing aerosol emissions are typically absent from assessments of how aerosols affect public health. At the expense of accelerated global warming, our society is likely to continue reducing aerosols for the public health benefit in the near future. 
 
+<<<<<<< HEAD
+Let's use MARGO to simulate how we manage (purposefully or not) our aerosol emissions using a baseline (uncontrolled) scenario in which we are ignorant of the associated warming of their reduction and do not apply any of the other controls (mitigation, removal, or adaptation). Our control is a reduction knob of the total aerosol forcing budget of 1.5 $$W/m^2$$ normalized from 0 (no reduction) to 1 (full reduction). Consistent with the large sulfur reductions in recent years, let's assume we've eliminated sulfur so our initial control is a pulse up to 1/3 (a socalled _termination shock_).
+
+What are the effects on global temperature of continuing to reduce our aerosol emissions?
+"""
+
+# ╔═╡ edcb60ca-6dc8-4d6b-b722-d3b2a621a305
+md"""
+# Summary
+In this tutorial you explored components of MARGO, a simple climate model with dynamic mitigation controls that allow us to assess the measures needed to avoid the worst impacts of global warming. First, varied the amount and timing of CO2 emissions and mitigation efforts to investigate how these changes affect global warming. You then explored the socioeconomic impact of mitigation efforts on factors such as control costs, climate damages and net benefits and also assessed the combined impact of carbon dioxide removal and mitigation efforts on global CO2.  Finally, you further analyzed the socioeconomic impact of global warming and mitigation efforts using MARGO’s automated optimization computer algorithm.
+"""
+
+# ╔═╡ 3f44b23a-f772-4988-9f35-e477b3439219
+md"""
+# Resources
+The model code from the MARGO simulations used in this tutorial can be accessed [here](https://github.com/ClimateMARGO/ClimateMARGO.jl).
+=======
 Estimation uncertainty of aerosol forcing is relatively large but the current best estimates are -1.5 to -1 $$W/m^2$$, with sulfate alone contributing about -0.5 $$W/m^2$$. 
 More recent analysis suggests aerosol reductions over the last decades are in the process of significantly increasing the warming rate over the next decade ([Hansen et al. 2022](https://arxiv.org/ftp/arxiv/papers/2212/2212.04474.pdf)).
 
@@ -1270,6 +1315,7 @@ md"""
 - By how much does temperature go up relative to the baseline if we remove all aerosols? If we remove 50%?
 - What is the temperature difference between removing them immediately versus over the rest of the century?
 - What if over the next two decades we deployed non-controversial (available and safe) SRM technology (e.g. surface reflectors) at scale that were able to replicate the cooling effects of the sulfur we have just removed? Do we get back to the baseline?
+>>>>>>> main
 """
 
 # ╔═╡ 4e1524e9-27d2-45a7-9ebd-21e6e369c4a7
@@ -1435,7 +1481,11 @@ end
 
 		
 	plotclicktracker2(
+<<<<<<< HEAD
+		plot_controls(controls_x; title="Controlled reduction of aerosols (1=full reduction of 1.5 W/m2)", reverse=true),
+=======
 		plot_controls(controls_x; title="Controlled reduction of aerosols (1=full reduction of 1.5 W/m2)",reverse=true),
+>>>>>>> main
 		initial_x
 	)
 end
@@ -1513,7 +1563,7 @@ end
 
 # ╔═╡ 700f982d-85da-4dc1-9319-f3b2527d0308
 function plot_temp(result::ClimateModel)
-	Tmax = 5
+	Tmax = 6
 	
 	# setup
 	p = plot(; 
@@ -2017,7 +2067,12 @@ end
 # ╟─373cba19-511e-483e-8bfe-14bbb92d5a21
 # ╟─37c056fc-a3e9-47ad-89d5-72e6a36a243d
 # ╟─5a80d968-2664-4b4f-89d1-845279e419ee
+<<<<<<< HEAD
+# ╟─edcb60ca-6dc8-4d6b-b722-d3b2a621a305
+# ╟─3f44b23a-f772-4988-9f35-e477b3439219
+=======
 # ╟─1bb0a463-4998-44fc-b5f2-998bddf6aee4
+>>>>>>> main
 # ╟─4e1524e9-27d2-45a7-9ebd-21e6e369c4a7
 # ╟─1c8d2d00-b7d9-11eb-35c4-47f2a2aa1593
 # ╟─d5ab2398-2904-4b44-a855-e4729996bc0d
