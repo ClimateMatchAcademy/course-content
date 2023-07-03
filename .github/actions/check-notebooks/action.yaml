@@ -11,7 +11,7 @@ inputs:
     type: string
   exercice-continue-on-error:
     description: 'Should continue on Error in exercices'
-    required: flase
+    required: false
     default: 'false'
     type: string
 
@@ -37,7 +37,7 @@ runs:
         force_env_update: 'false'
     
     - name: Get changed files
-      if: ${{ inputs.runall == 'true' }}
+      if: ${{ inputs.runall != 'true' }}
       id: changes
       uses: trilom/file-changes-action@v1.2.4
       with:

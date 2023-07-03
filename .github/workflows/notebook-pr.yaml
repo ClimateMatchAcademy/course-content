@@ -2,8 +2,6 @@ name: notebook-pr
 on:
   workflow_dispatch:
   pull_request:
-    branches:
-      - main
     paths:
       - '**/*.ipynb'
       - .github/workflows/notebook-pr.yaml
@@ -32,8 +30,8 @@ jobs:
       - name: Run Notebooks
         uses: ./.github/actions/check-notebooks
         with:
-          run_all: 'false'
-          # exec_flag: '--check-execution'
+          run_all: 'true'
+          # exec_flag: '--check-only'
           exec_flag: '--execute'
           exercice-continue-on-error: 'true'
 
@@ -44,7 +42,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           path: comment.txt
-
       - name: Update READMEs
         if: ${{ env.NBS != '' }}
         run: python ci/generate_tutorial_readmes.py
