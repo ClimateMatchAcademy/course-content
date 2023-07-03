@@ -1,3 +1,5 @@
+# Project materials
+
 You have been matched with 4-6 students from your pod to form a project group. Based on the joint project preferences of the people in your group, you have been assigned one of seven project topics. You can find your project topic on the portal. Your pod's Teaching Assistant will tell you your project group on the first day of the course.
 
 In this section, you will find materials to help you get started on your project. These include a brief background, an introductory video (except _Heatwaves_ and _ENSO impact on precipitation and temperature_), a project map, a data exploration notebook, as well as some further reading recommendations.
