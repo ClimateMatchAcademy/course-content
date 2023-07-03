@@ -25,20 +25,24 @@ The mentor talks about who they are, what they have done and still do, any lesso
 
 These are some questions that can be used as prompts: 
 
-* In your own opinion, what qualifications and background are required to succeed in climate science?
-* What are the biggest obstacles and opportunities you see in the field of climate research right now?
-* What advice would you give with regards to ensuring that diversity, equity and inclusion are preserved in the field of climate science?
-* In your opinion, how can climate justice be actualised and what are the major challenges (if you agree that there are)?
-* How do you go about explaining difficult topics in climate science to the public or decision-makers? Do you have any suggestions for successful methods to close the gap between research and action?
-* Can you shed any light on how interdisciplinary climate science is and the significance of working with other disciplines?
-* How do you anticipate the climate will change?
-* Can you suggest other mitigation and adaptation measures especially for the traditionally under-represented regions of the world?
-* How does one go about incorporating climate research into decision-making and policy processes? Are there any particular difficulties or concerns you have faced?
-* Are there any international partnerships or groups that, in your opinion, are particularly crucial to advancing the study of climate science and tackling climate challenges?
-* How else can students who are interested in climate science get practical experience or take part in fieldwork?
-* Can you offer any tips or techniques for efficiently presenting climate science to various audiences, including skeptics or individuals with little prior knowledge of the subject?
-* What else should people, communities, and governments do in your opinion to lessen the effects of climate change and prepare for them?
-* What practical steps can one take to foster collaboration and networking and what help can you provide in this regard?
+* General career-related questions:
+    * In your own opinion, what qualifications and background are required to succeed in your area of work?
+    * What are the biggest obstacles and opportunities you see in your field right now?
+    * How important would you say that diversity, equity, and inclusion are in your field?
+    * How can one acquire the practical experience required to enter your field?
+    * What do you wish you had known when you started working in your field?
+* Specific career-related questions (might not be relevant to all mentors):
+    * How do you go about explaining difficult topics in your field to the public or decision-makers? Are there any particular difficulties or concerns you have faced?
+    * Do you have any suggestions for successful methods to close the gap between climate research and climate action?
+    * Can you shed any light on how interdisciplinary climate science is and the significance of working with other disciplines?
+* General climate questions:
+    * In your opinion, how can climate justice be actualised and what are the major challenges (if you agree that there are)?
+    * How do you anticipate the climate will change?
+    * Can you suggest other mitigation and adaptation measures especially for the traditionally under-represented regions of the world?
+    * Are there any international partnerships or groups that, in your opinion, are particularly crucial to advancing the study of climate science and tackling climate challenges?
+    * Can you offer any tips or techniques for efficiently presenting climate science to various audiences, including skeptics or individuals with little prior knowledge of the subject?
+    * What else should people, communities, and governments do in your opinion to lessen the effects of climate change and prepare for them?
+    * What practical steps can one take to foster collaboration between climate-related disciplines? How important is it in your opinion?
 
 
 ### Networking and Collaboration: 10 minutes
