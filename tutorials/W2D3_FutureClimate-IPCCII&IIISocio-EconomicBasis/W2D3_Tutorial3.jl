@@ -63,12 +63,6 @@ const initial_2 = Dict("M" => [2080, .7]);
 # ╔═╡ a3422533-2b78-4bc2-92bd-737da3c8982d
 const initial_3 = Dict("M" => [2080, .7]);
 
-# ╔═╡ bb66d347-99be-4a95-8ba8-57dc9d33384b
-const initial_4 = Dict(
-	"M" => [2080, 0.7],
-	"R" => [2120, 0.2],
-);
-
 # ╔═╡ 51037451-0fea-4021-8824-56911970b97b
 const initial_x = Dict("G" => [2030, 1]);
 
@@ -204,14 +198,6 @@ end
 		"Concentrations"
 		"Temperature"
 		])
-
-# ╔═╡ 9d603716-3069-4032-9416-cd8ab2e272c6
-@bind which_graph_4 Select([
-		"Emissions"
-		"Concentrations"
-		"Temperature"
-		"Costs and benefits"
-])
 
 # ╔═╡ 70173466-c9b5-4227-8fba-6256fc1ecace
 Tmax_9_slider = @bind Tmax_9 Slider(0:0.1:5; default=2);
@@ -1151,7 +1137,14 @@ What would our emission-reducing efforts over time have to look like to limit wa
 """
 
 # ╔═╡ 8f7f21bf-ec5d-4fa8-934a-14231e781f70
+<<<<<<< HEAD
 md"""The length of the bars above this text show the mitigation costs (i.e. the control costs) and the benefit (i.e. the avoided damages) and their difference as the net benefit.
+=======
+md"""The length of the bars above this text show 
+- the mitigation cost (top purple bar),
+- the benefit (the avoided damages; the middle organe bar) and 
+- their difference as the net benefit (the bottom green bar).
+>>>>>>> main
 """
 
 # ╔═╡ f4b380c9-0ef4-4951-9954-3ddf92ddddb8
@@ -1178,6 +1171,11 @@ In the plot below (y-axis is the fraction of baseline emissions that are mitigat
 
 # ╔═╡ 76411fcd-a8bb-422e-b063-8a460c522fe4
 md"""Pick "Emissions", "Concentrations", or "Temperature" from this dropdown menu to show the respective plot below."""
+
+# ╔═╡ 99d950f9-e3bf-4c18-9f82-0fec6dcb89d6
+md"""
+For a mitigation scheme that keeps temperature to below 3 degrees, by what year do our emissions have to have dropped by 50%? What about for 2 degrees?
+"""
 
 # ╔═╡ 30218715-6469-4a0f-bf90-f3243219e7b5
 md"""
@@ -1216,6 +1214,7 @@ if cost_benefits_narrative_slide == 1
 	hidecloack("cost_benefits_narrative_input")
 end
 
+<<<<<<< HEAD
 # ╔═╡ 4c7fccc5-450c-4903-96a6-ce36ff60d280
 md"""
 ## Section 1.4: Picking up the slack: carbon dioxide removal
@@ -1225,13 +1224,21 @@ While substantial emissions mitigations are necessary to reduce future climate s
 *Drag the yellow dot in the figure below to modify the amount and timing of carbon dioxide removal*.
 """
 
+=======
+>>>>>>> main
 # ╔═╡ b2d65726-df99-4710-9d03-9f6838036c87
 md"""
 # Section 2: MARGO's automated optimization
 
+<<<<<<< HEAD
 In the above example, *you* manually adjusted the timing and amount of mitigation and carbon dioxide removal to achieve some desired temperature, but did not have much control on the shape of curves. Using a computer algorithm, we can do this optimization step *automatically* and *faster*, without having to assume anything about the shape of the mitigation and carbon dioxide removal curves. This optimization (see the bottom right corner of the model schematic shown above) maximizes the difference of benefits (i.e. avoided damages) and costs (i.e. control costs) under the constraint of a maximum temperature.
 
 Adjust the parameters below to assess their effect on global temperature. First, you can adjust the maximum temperature using the slider, which will set the goal temperature in the bottom plot. Selecting the *allow temperature overshoot* option will allow the projected temperature to temporily exceed the maximum temperature you selected. Next, you can enable various controls (mitigation, removal, geo-engineering, and adaptation) and set the cost multiplier for each which will adjust the costs associated with each approach for reducing damages. Observe how changes in these various settings affect the global temperature projections in the bottom plot.
+=======
+In the above example, *you* manually adjusted the timing and amount of mitigation and carbon dioxide removal, but did not have much control on the shape of curves. Using a computer algorithm, we can do this optimization step *automatically* and *faster*, without having to assume anything about the shape of the mitigation and carbon dioxide removal curves.
+
+The horizontal black line in the bottom plot shows the maximum temperature you select using the slider.
+>>>>>>> main
 """
 
 # ╔═╡ a0a1bb20-ec9b-446d-a36a-272840b8d35c
@@ -1247,17 +1254,38 @@ blob(
 	"#c5710014"
 )
 
+# ╔═╡ c1971e19-8ce1-4f80-a00f-2815330e5753
+md"""
+We can see
+- how which of the 4 classes of controls we use (checkbox), and
+- how expensive each is (the cost multiplier sliders) 
+affects the optimal solution.
+"""
+
+# ╔═╡ 5f9090d4-1a40-4217-b537-c497cf92976a
+md"""
+Expore the space of optimal solutions within different scenarios you can think of. 
+
+For example, mitigation and adaptation are considered two important responses to climate change now. Are they? If we restrict ourselves to only mitigation and adaptation measures, do we use both in equal amounts? When do we start doing them? The result you'll find suggests misplaced emphasis on adaptation relative to mitigation now.
+
+Much of the solution space here uses carbon dioxide removal (orange) at substantial (>10% levels) starting in the next decade or two. Although natural and technological methods for removing CO₂ from the atmosphere exist now, they are presently miniscule compared to the tens-of-gigatons scale of global emissions. Some experts believe that the challenges in scaling these technologies will be overcome and they will play a key role in the future. Other experts argue there are inherent limitations to such technologies and useful only as fine adjustments later in the century and that any emphasis on them now takes away from more effective mitigation efforts. Toggle carbon removal on and off to see the effect. Do we still use these removal controls if they are more expensive?
+"""
+
 # ╔═╡ 38ff6efc-ccf1-4ca3-8437-152784a98a9e
 md"""
 # Section 3: From Unaware to Purposeful Solar Radiation Management
 
-Various regulations arising from well-established public health concerns (mostly regarding air quality) have been successful at significantly reducing over the last decades the amount of aerosols we emit when burning fossil fuels (e.g. sulfur emissions from freight shipping underwent a legislated reduction by 80% in 2020; sulfate is the strongest forcing aerosol). 
+Various regulations arising from well-established public health concerns (mostly regarding air quality) have been successful at significantly reducing over the last decades the amount of aerosols we emit when burning fossil fuels (e.g. China, *circa* 2010 and sulfur emissions from freight shipping, *circa* 2020). 
 
+<<<<<<< HEAD
 Over the year or so that it takes the typical aerosol particle to fall out of the atmosphere, they reflect sunlight to space and have an effective negative contribution to radiative forcing. The IPCC estimates at least 0.5 degrees of warming has been masked by yearly sulfur emissions alone (i.e. if we stopped emitting sulfur the global average temperature would go up by 0.5 degrees as existing sulfur aerosols fall out of the atmosphere). The effective warming effects of reducing aerosol emissions are typically absent from assessments of how aerosols affect public health. 
+=======
+Over the year or so that it takes the typical aerosol particle to fall out of the atmosphere after being emitted, they reflect sunlight to space and have an effective negative contribution to radiative forcing. The IPCC estimates at least 0.5 degs of warming has been masked by sulfur alone. 
+>>>>>>> main
 
-Estimation uncertainty of aerosol forcing is relatively large but the current best estimates are -1.5 $$W/m^2$$, with sulfate alone contributing about -0.5 $$W/m^2$$. 
-More recent analysis is pointing to aerosol reductions as what will drive increases in warming rates in the next decades ([Hansen et al. 2022](https://arxiv.org/ftp/arxiv/papers/2212/2212.04474.pdf)).
+The effective warming effects of reducing aerosol emissions are typically absent from assessments of how aerosols affect public health. At the expense of accelerated global warming, our society is likely to continue reducing aerosols for the public health benefit in the near future. 
 
+<<<<<<< HEAD
 Let's use MARGO to simulate how we manage (purposefully or not) our aerosol emissions using a baseline (uncontrolled) scenario in which we are ignorant of the associated warming of their reduction and do not apply any of the other controls (mitigation, removal, or adaptation). Our control is a reduction knob of the total aerosol forcing budget of 1.5 $$W/m^2$$ normalized from 0 (no reduction) to 1 (full reduction). Consistent with the large sulfur reductions in recent years, let's assume we've eliminated sulfur so our initial control is a pulse up to 1/3 (a socalled _termination shock_).
 
 What are the effects on global temperature of continuing to reduce our aerosol emissions?
@@ -1273,6 +1301,21 @@ In this tutorial you explored components of MARGO, a simple climate model with d
 md"""
 # Resources
 The model code from the MARGO simulations used in this tutorial can be accessed [here](https://github.com/ClimateMARGO/ClimateMARGO.jl).
+=======
+Estimation uncertainty of aerosol forcing is relatively large but the current best estimates are -1.5 to -1 $$W/m^2$$, with sulfate alone contributing about -0.5 $$W/m^2$$. 
+More recent analysis suggests aerosol reductions over the last decades are in the process of significantly increasing the warming rate over the next decade ([Hansen et al. 2022](https://arxiv.org/ftp/arxiv/papers/2212/2212.04474.pdf)).
+
+Let's use MARGO to simulate how we manage (purposefully or not) our aerosol emissions. We'll use a baseline (i.e. uncontrolled) scenario in which we are ignorant of the associated warming of thier reduction. We also assume we do not apply any of the other controls (mitiation, removal, or adaptation). Our control is a reduction knob of a total aerosol forcing budget of 1.5 $$W/m^2$$ normalized from 0 (no reduction) to 1 (full reduction). Consistent with the large sulfur reductions in recent years, let's assume we've eliminated sulfur so our initial control is a pulse up to 1/3 (a socalled _termination shock_).
+
+To assess the effects on global temperature of different scenarios of aerosol reductions, move around the red dot below.
+"""
+
+# ╔═╡ 1bb0a463-4998-44fc-b5f2-998bddf6aee4
+md"""
+- By how much does temperature go up relative to the baseline if we remove all aerosols? If we remove 50%?
+- What is the temperature difference between removing them immediately versus over the rest of the century?
+- What if over the next two decades we deployed non-controversial (available and safe) SRM technology (e.g. surface reflectors) at scale that were able to replicate the cooling effects of the sulfur we have just removed? Do we get back to the baseline?
+>>>>>>> main
 """
 
 # ╔═╡ 4e1524e9-27d2-45a7-9ebd-21e6e369c4a7
@@ -1438,7 +1481,11 @@ end
 
 		
 	plotclicktracker2(
+<<<<<<< HEAD
 		plot_controls(controls_x; title="Controlled reduction of aerosols (1=full reduction of 1.5 W/m2)", reverse=true),
+=======
+		plot_controls(controls_x; title="Controlled reduction of aerosols (1=full reduction of 1.5 W/m2)",reverse=true),
+>>>>>>> main
 		initial_x
 	)
 end
@@ -1662,34 +1709,6 @@ elseif cost_benefits_narrative_slide == 2
 	plot_costs(result_3; show_controls=false)
 else
 	plot_costs(result_3)
-end
-
-# ╔═╡ aac86adf-465f-464f-b258-406c2e55b82f
-@initially initial_4 @bind input_4 begin
-	
-	
-	controls_4 = MRGA(
-		M=gaussish(input_4["M"]...),
-		R=gaussish(input_4["R"]...),
-	)
-	
-	result_4 = forward_controls_temp(controls_4)
-	
-	plotclicktracker2(
-		plot_controls(controls_4; title="Deployment of mitigation"),
-		initial_4
-	)
-end
-
-# ╔═╡ a751fb75-952e-41d4-a8b5-aba512c10e55
-if which_graph_4 == "Emissions"
-	plot_emissions(result_4)
-elseif which_graph_4 == "Concentrations"
-	plot_concentrations(result_4; relative_to_preindustrial=true)
-elseif which_graph_4 == "Temperature"
-	plot_temp(result_4)
-else
-	plot_costs(result_4)
 end
 
 # ╔═╡ 182b58bf-3733-400e-9d91-425615d36f1b
@@ -2022,6 +2041,7 @@ end
 # ╟─e846c6e2-aa63-40db-8592-c9563bbbdd40
 # ╟─76411fcd-a8bb-422e-b063-8a460c522fe4
 # ╟─02851ee9-8050-4821-b3c9-1f65c9b8135b
+# ╟─99d950f9-e3bf-4c18-9f82-0fec6dcb89d6
 # ╟─e810a90f-f964-4d7d-acdb-fc3a159dc12e
 # ╟─30218715-6469-4a0f-bf90-f3243219e7b5
 # ╟─8433cb38-915a-46c1-b3db-8e7905351c1b
@@ -2031,18 +2051,15 @@ end
 # ╟─5154aac7-812d-447f-8435-b8209d45fe04
 # ╟─11d62228-476c-4616-9e7d-de6c05a6a53d
 # ╟─a3422533-2b78-4bc2-92bd-737da3c8982d
-# ╟─4c7fccc5-450c-4903-96a6-ce36ff60d280
-# ╟─aac86adf-465f-464f-b258-406c2e55b82f
-# ╟─9d603716-3069-4032-9416-cd8ab2e272c6
-# ╟─a751fb75-952e-41d4-a8b5-aba512c10e55
-# ╟─bb66d347-99be-4a95-8ba8-57dc9d33384b
 # ╟─b2d65726-df99-4710-9d03-9f6838036c87
 # ╟─70173466-c9b5-4227-8fba-6256fc1ecace
 # ╟─6bcb9b9e-e0ab-45d3-b9b9-3d7282f89df6
 # ╟─a0a1bb20-ec9b-446d-a36a-272840b8d35c
+# ╟─c1971e19-8ce1-4f80-a00f-2815330e5753
 # ╟─8e89f521-c19d-4f87-9497-f9b61c19c176
 # ╟─6978acad-9cac-4490-85fb-7e43d9558aca
 # ╟─7a435e46-4f36-4037-a9a6-d296b20bf6ac
+# ╟─5f9090d4-1a40-4217-b537-c497cf92976a
 # ╟─a83e47fa-4b48-4bbc-b210-382d1cf19f55
 # ╟─242f3109-244b-4884-a0e9-6ea8950ca47e
 # ╟─38ff6efc-ccf1-4ca3-8437-152784a98a9e
@@ -2050,8 +2067,12 @@ end
 # ╟─373cba19-511e-483e-8bfe-14bbb92d5a21
 # ╟─37c056fc-a3e9-47ad-89d5-72e6a36a243d
 # ╟─5a80d968-2664-4b4f-89d1-845279e419ee
+<<<<<<< HEAD
 # ╟─edcb60ca-6dc8-4d6b-b722-d3b2a621a305
 # ╟─3f44b23a-f772-4988-9f35-e477b3439219
+=======
+# ╟─1bb0a463-4998-44fc-b5f2-998bddf6aee4
+>>>>>>> main
 # ╟─4e1524e9-27d2-45a7-9ebd-21e6e369c4a7
 # ╟─1c8d2d00-b7d9-11eb-35c4-47f2a2aa1593
 # ╟─d5ab2398-2904-4b44-a855-e4729996bc0d
@@ -2083,7 +2104,7 @@ end
 # ╟─ab557633-e0b5-4439-bc81-d274770f2e65
 # ╟─bb4b25e4-0db5-414b-a384-0a27fe7efb66
 # ╟─646591c4-cb60-41cd-beb9-506807ce17d2
-# ╠═6fb77b13-7a54-4d1d-9985-4735318680e1
+# ╟─6fb77b13-7a54-4d1d-9985-4735318680e1
 # ╟─5c484595-4646-484f-9e75-a4a3b4c2af9b
 # ╟─013807a0-bddb-448b-9300-f7f559e48a45
 # ╟─4e91fb48-fc5e-409e-9a7e-bf846f1d211d
@@ -2093,7 +2114,7 @@ end
 # ╟─2758b185-cd54-484e-bb7d-d4cfcd2d39f4
 # ╟─8fa94ec9-1fab-41b9-a7e6-1917e975e4ff
 # ╟─611c25ab-a454-4d52-b8fb-a58b0d1f5ca6
-# ╠═182b58bf-3733-400e-9d91-425615d36f1b
+# ╟─182b58bf-3733-400e-9d91-425615d36f1b
 # ╟─785c428d-d4f7-431e-94d7-039b0708a78a
 # ╟─7e540eaf-8700-4176-a96c-77ee2e4c384b
 # ╟─89752d91-9c8e-4203-b6f1-bdad41386b31

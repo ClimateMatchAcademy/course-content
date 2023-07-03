@@ -1,7 +1,6 @@
 book/_build/
 *.nc
 *.csv
-.DS_Store
 .ipynb_checkpoints/
 pages2k_data
 pages2k_data.unzip/
@@ -18,3 +17,8 @@ tutorials/.DS_Store
 *.lpd
 tutorials/W1D4_Paleoclimate/euro2k_data
 tutorials/.DS_Store
+*.DS_Store
+ci/
+tutorials/W1D4_Paleoclimate/euro2k_data
+*.lpd
+*.icloud

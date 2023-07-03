@@ -7,13 +7,6 @@ on:
       - .github/workflows/docker.yaml
       - Dockerfile
       - environment.yml
-  pull_request:
-    branches:
-      - main
-    paths:
-      - .github/workflows/docker.yaml
-      - Dockerfile
-      - environment.yml
 
 jobs:
   docker:
@@ -39,4 +32,4 @@ jobs:
           platforms: linux/amd64
           push: true
           file: Dockerfile
-          tags: wesleyban/climatematch-notebook:latest
+          tags: wesleyban/climatematch-notebook:v1

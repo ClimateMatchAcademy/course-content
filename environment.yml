@@ -15,7 +15,8 @@ dependencies:
  - dask-ml
  - datashader
  - descartes
- - earthdata
+ - earthaccess
+ - eigen
  - eofs
  - erddapy
  - fastjmd95
@@ -114,7 +115,7 @@ dependencies:
  - texttable
  - openpyxl
  - pyworld3
- - wordcloud 
+ - wordcloud
  - nltk
  - ecco_v4_py
  - cmocean
@@ -128,7 +129,7 @@ dependencies:
    - afinn
    - "mystatsfunctions @ https://github.com/njleach/mystatsfunctions/archive/main.zip"
 #   - "SDFC @ https://github.com/yrobink/SDFC/archive/master.zip" # this is not working
-   -  https://github.com/mptouzel/PyDICE/archive/master.zip # for W2D3 Tutorial 2 
+   -  https://github.com/mptouzel/PyDICE/archive/master.zip # for W2D3 Tutorial 2
  # Note: Enable after https://github.com/conda-incubator/conda-lock/pull/295
  # Uncomment and remove separate requirements.txt file
  #- pip:
