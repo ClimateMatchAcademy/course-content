@@ -16,29 +16,29 @@ Tutorials, Projects and Professional Development activities will take place betw
 
 ## Course Schedule for Timezones 2 & 5
 
-<table>
+<table cellspacing="0" cellpadding="0">
   <tr>
    <td colspan="6" bgcolor="#B0C7DC" align="center" ><strong><font color="black" size="5" > Course Schedule - Timezones 2 & 5 </font></strong>
    </td>
   </tr>
-  <tr>
-   <td bgcolor="#6C7D77" align="center" ><font color="white" >Week 1</font>
+  <tr style="color: white; font-weight: bold; margin-top: 1em;">
+   <td bgcolor="#6C7D77" align="center" style="border-radius: 10px;padding-top: 5px; padding-bottom: 5px;">Week 1
    </td>
-   <td bgcolor="#6C7D77" align="center" ><font color="white" >W1D1</font>
+   <td bgcolor="#6C7D77" align="center" style="border-radius: 10px;padding-top: 5px; padding-bottom: 5px;">W1D1
    </td>
-   <td bgcolor="#6C7D77" align="center" ><font color="white" >W1D2</font>
+   <td bgcolor="#6C7D77" align="center" style="border-radius: 10px;padding-top: 5px; padding-bottom: 5px;">W1D2
    </td>
-   <td bgcolor="#6C7D77" align="center" ><font color="white" >W1D3</font>
+   <td bgcolor="#6C7D77" align="center" style="border-radius: 10px;padding-top: 5px; padding-bottom: 5px;">W1D3
    </td>
-   <td bgcolor="#6C7D77" align="center" ><font color="white" >W1D4</font>
+   <td bgcolor="#6C7D77" align="center" style="border-radius: 10px;padding-top: 5px; padding-bottom: 5px;">W1D4
    </td>
-   <td bgcolor="#6C7D77" align="center" ><font color="white" >W1D5</font>
+   <td bgcolor="#6C7D77" align="center" style="border-radius: 10px;padding-top: 5px; padding-bottom: 5px;">W1D5
    </td>
   </tr>
   <tr>
-   <td rowspan="3" bgcolor="#3F538A" align="center" ><font color="white" >Curriculum</font>
-<p>
-<font color="white" >(5 hours)</font>
+   <td rowspan="3" bgcolor="#3F538A" align="center" style="color: white; font-weight: bold; border-top-left-radius: 10px; border-bottom-left-radius: 10px;">Curriculum
+<p style="color: white; font-weight: bold;">
+(5 hours)
    </td>
    <td bgcolor="#E99668" align="center" ><strong><font color="black" > Climate System Overview </font></strong>
    </td>
@@ -52,21 +52,21 @@ Tutorials, Projects and Professional Development activities will take place betw
    </td>
   </tr>
   <tr></tr>
-   <td bgcolor="#E99668"  align="center" ><img src="images/icon_W1D1.png" >
+   <td bgcolor="#E99668"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W1D1.png">
    </td>
-   <td bgcolor="#F5C690"  align="center" ><img src="images/icon_W1D2.png" >
+   <td bgcolor="#F5C690"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W1D2.png" >
    </td>
-   <td bgcolor="#F5C690"  align="center" ><img src="images/icon_W1D3.png" >
+   <td bgcolor="#F5C690"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W1D3.png" />
    </td>
-   <td bgcolor="#F5C690"  align="center" ><img src="images/icon_W1D4.png" >
+   <td bgcolor="#F5C690"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W1D4.png" >
    </td>
-   <td bgcolor="#B0C7DC"  align="center" ><img src="images/icon_W1D5.png" >
+   <td bgcolor="#B0C7DC"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W1D5.png" >
    </td>
   </tr>
   <tr>
-   <td rowspan="2" bgcolor="#3F538A"  align="center" ><font color="white" >Projects & Professional Development</font>
-<p>
-<font color="white" >(3 hours)</font>
+   <td rowspan="2" bgcolor="#3F538A"  align="center" style="color: white; font-weight: bold; border-top-left-radius: 10px; border-bottom-left-radius: 10px;">Projects & Professional Development
+<p style="color: white; font-weight: bold;">
+(3 hours)
    </td>
    <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" ><strong><font color="black"> Session 1 </font></strong>
 <p>
@@ -108,24 +108,24 @@ Tutorials, Projects and Professional Development activities will take place betw
    <td colspan="6"  bgcolor="#B0C7DC" >
    </td>
   </tr>
-  <tr>
-   <td bgcolor="#6C7D77"  align="center" ><font color="white" >Week 2</font>
+  <tr style="color: white; font-weight: bold;">
+   <td bgcolor="#6C7D77"  align="center" style="border-radius: 10px;padding-top: 5px; padding-bottom: 5px;">Week 2
    </td>
-   <td bgcolor="#6C7D77"  align="center" ><font color="white" >W2D1</font>
+   <td bgcolor="#6C7D77"  align="center" style="border-radius: 10px;padding-top: 5px; padding-bottom: 5px;">W2D1
    </td>
-   <td bgcolor="#6C7D77"  align="center" ><font color="white" >W2D2</font>
+   <td bgcolor="#6C7D77"  align="center" style="border-radius: 10px;padding-top: 5px; padding-bottom: 5px;">W2D2
    </td>
-   <td bgcolor="#6C7D77"  align="center" ><font color="white" >W2D3</font>
+   <td bgcolor="#6C7D77"  align="center" style="border-radius: 10px;padding-top: 5px; padding-bottom: 5px;">W2D3
    </td>
-   <td bgcolor="#6C7D77"  align="center" ><font color="white" >W2D4</font>
+   <td bgcolor="#6C7D77"  align="center" style="border-radius: 10px;padding-top: 5px; padding-bottom: 5px;">W2D4
    </td>
-   <td bgcolor="#6C7D77"  align="center" ><font color="white" >W2D5</font>
+   <td bgcolor="#6C7D77"  align="center" style="border-radius: 10px;padding-top: 5px; padding-bottom: 5px;">W2D5
    </td>
   </tr>
   <tr>
-   <td rowspan="2" bgcolor="#3F538A" align="center" ><font color="white" >Curriculum</font>
-<p>
-<font color="white" >(5 hours)</font>
+   <td rowspan="2" bgcolor="#3F538A" align="center" style="color: white; font-weight: bold; border-top-left-radius: 10px; border-bottom-left-radius: 10px;">Curriculum
+<p style="color: white; font-weight: bold;">
+(5 hours)
    </td>
    <td bgcolor="#B0C7DC"  align="center" ><strong><font color="black"> IPCC I: </font></strong>
 <p>
@@ -143,21 +143,21 @@ Tutorials, Projects and Professional Development activities will take place betw
    </td>
   </tr>
   <tr>
-   <td bgcolor="#B0C7DC"  align="center" ><img src="images/icon_W2D1.png" >
+   <td bgcolor="#B0C7DC"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W2D1.png" >
    </td>
-   <td bgcolor="#E99668"  align="center" ><img src="images/icon_W2D2.png" >
+   <td bgcolor="#E99668"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W2D2.png" >
    </td>
-   <td bgcolor="#B0C7DC"  align="center" ><img src="images/icon_W2D3.png" >
+   <td bgcolor="#B0C7DC"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W2D3.png" >
    </td>
-   <td bgcolor="#78BAB8"  align="center" ><img src="images/icon_W2D4.png" >
+   <td bgcolor="#78BAB8"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W2D4.png" >
    </td>
-   <td bgcolor="#78BAB8"  align="center" ><img src="images/icon_W2D5.png" >
+   <td bgcolor="#78BAB8"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W2D5.png" >
    </td>
   </tr>
   <tr>
-   <td rowspan="2" bgcolor="#3F538A"  align="center" ><font color="white" >Projects & Professional Development</font>
-<p>
-<font color="white" >(3 hours)</font>
+   <td rowspan="2" bgcolor="#3F538A"  align="center" style="color: white; font-weight: bold; border-top-left-radius: 10px; border-bottom-left-radius: 10px;">Projects & Professional Development
+<p style="color: white; font-weight: bold">
+(3 hours)
    </td>
    <td bgcolor="#F9EEDA" align="center" valign="top" ><strong><font color="black"> Session 6 </font></strong>
 <p>
@@ -199,31 +199,31 @@ Tutorials, Projects and Professional Development activities will take place betw
 
 ## Course Schedule for Timezones 1, 3 & 4
 
-<table>
+<table cellspacing="0" cellpadding="0">
   <tr>
    <td colspan="6"  bgcolor="#B0C7DC" align="center" ><strong><font color="black" size="5" > Course Schedule - Timezones 1, 3 & 4</font> </strong>
    </td>
   </tr>
-  <tr>
-   <td bgcolor="#6C7D77" align="center" ><font color="white" >Week 1</font>
+  <tr style="color: white; font-weight: bold; margin-top: 1em;">
+   <td bgcolor="#6C7D77" align="center" style="border-radius: 10px;padding-top: 5px; padding-bottom: 5px;">Week 1
    </td>
-   <td bgcolor="#6C7D77" align="center" ><font color="white" >W1D1</font>
+   <td bgcolor="#6C7D77" align="center" style="border-radius: 10px;padding-top: 5px; padding-bottom: 5px;">W1D1
    </td>
-   <td bgcolor="#6C7D77" align="center" ><font color="white" >W1D2</font>
+   <td bgcolor="#6C7D77" align="center" style="border-radius: 10px;padding-top: 5px; padding-bottom: 5px;">W1D2
    </td>
-   <td bgcolor="#6C7D77" align="center" ><font color="white" >W1D3</font>
+   <td bgcolor="#6C7D77" align="center" style="border-radius: 10px;padding-top: 5px; padding-bottom: 5px;">W1D3
    </td>
-   <td bgcolor="#6C7D77" align="center" ><font color="white" >W1D4</font>
+   <td bgcolor="#6C7D77" align="center" style="border-radius: 10px;padding-top: 5px; padding-bottom: 5px;">W1D4
    </td>
-   <td bgcolor="#6C7D77" align="center" ><font color="white" >W1D5</font>
+   <td bgcolor="#6C7D77" align="center" style="border-radius: 10px;padding-top: 5px; padding-bottom: 5px;">W1D5
    </td>
   </tr>
   <tr>
-   <td rowspan="2" bgcolor="#3F538A" align="center" ><font color="white" >Projects & Professional Development</font>
+   <td rowspan="2" bgcolor="#3F538A" align="center" style="color: white; font-weight: bold; border-top-left-radius: 10px; border-bottom-left-radius: 10px;">Projects & Professional Development
 <p>
 <font color="white" >(3 hours)</font>
    </td>
-   <td rowspan="2" bgcolor="#6C7D77" align="center" ><font color="black"> No project time</font>
+   <td rowspan="2" bgcolor="#6C7D77" align="center" ><font color="white"> No project time</font>
    </td>
    <td bgcolor="#F9EEDA" align="center" valign="top" ><strong><font color="black"> Session 1</strong>
 <p>
@@ -257,7 +257,7 @@ Tutorials, Projects and Professional Development activities will take place betw
    </td>
   </tr>
   <tr>
-   <td rowspan="2" bgcolor="#3F538A" align="center" ><font color="white" >Curriculum</font>
+   <td rowspan="2" bgcolor="#3F538A" align="center" style="color: white; font-weight: bold; border-top-left-radius: 10px; border-bottom-left-radius: 10px;">Curriculum
 <p>
 <font color="white" >(5 hours)</font>
    </td>
@@ -273,37 +273,37 @@ Tutorials, Projects and Professional Development activities will take place betw
    </td>
   </tr>
   <tr>
-   <td bgcolor="#E99668" align="center" ><img src="images/icon_W1D1.png" >
+   <td bgcolor="#E99668" align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W1D1.png" >
    </td>
-   <td bgcolor="#F5C690" align="center" ><img src="images/icon_W1D2.png" >
+   <td bgcolor="#F5C690" align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W1D2.png" >
    </td>
-   <td bgcolor="#F5C690" align="center" ><img src="images/icon_W1D3.png" >
+   <td bgcolor="#F5C690" align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W1D3.png" >
    </td>
-   <td bgcolor="#F5C690" align="center" ><img src="images/icon_W1D4.png" >
+   <td bgcolor="#F5C690" align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W1D4.png" >
    </td>
-   <td bgcolor="#B0C7DC" align="center" ><img src="images/icon_W1D5.png" >
+   <td bgcolor="#B0C7DC" align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W1D5.png" >
    </td>
   </tr>
   <tr>
    <td colspan="6"  bgcolor="#B0C7DC" >
    </td>
   </tr>
-  <tr>
-   <td bgcolor="#6C7D77" align="center" ><font color="white" >Week 2</font>
+<tr style="color: white; font-weight: bold;">
+   <td bgcolor="#6C7D77"  align="center" style="border-radius: 10px;padding-top: 5px; padding-bottom: 5px;">Week 2
    </td>
-   <td bgcolor="#6C7D77" align="center" ><font color="white" >W2D1</font>
+   <td bgcolor="#6C7D77"  align="center" style="border-radius: 10px;padding-top: 5px; padding-bottom: 5px;">W2D1
    </td>
-   <td bgcolor="#6C7D77" align="center" ><font color="white" >W2D2</font>
+   <td bgcolor="#6C7D77"  align="center" style="border-radius: 10px;padding-top: 5px; padding-bottom: 5px;">W2D2
    </td>
-   <td bgcolor="#6C7D77" align="center" ><font color="white" >W2D3</font>
+   <td bgcolor="#6C7D77"  align="center" style="border-radius: 10px;padding-top: 5px; padding-bottom: 5px;">W2D3
    </td>
-   <td bgcolor="#6C7D77" align="center" ><font color="white" >W2D4</font>
+   <td bgcolor="#6C7D77"  align="center" style="border-radius: 10px;padding-top: 5px; padding-bottom: 5px;">W2D4
    </td>
-   <td bgcolor="#6C7D77" align="center" ><font color="white" >W2D5</font>
+   <td bgcolor="#6C7D77"  align="center" style="border-radius: 10px;padding-top: 5px; padding-bottom: 5px;">W2D5
    </td>
   </tr>
   <tr>
-   <td rowspan="2" bgcolor="#3F538A" align="center" ><font color="white" >Projects & Professional Development</font>
+   <td rowspan="2" bgcolor="#3F538A" align="center" style="color: white; font-weight: bold; border-top-left-radius: 10px; border-bottom-left-radius: 10px;">Projects & Professional Development
 <p>
 <font color="white" >(3 hours)</font>
    </td>
@@ -345,7 +345,7 @@ Tutorials, Projects and Professional Development activities will take place betw
    </td>
   </tr>
   <tr>
-   <td rowspan="2" bgcolor="#3F538A" align="center" ><font color="white" >Curriculum</font>
+   <td rowspan="2" bgcolor="#3F538A" align="center" style="color: white; font-weight: bold; border-top-left-radius: 10px; border-bottom-left-radius: 10px;">Curriculum
 <p>
 <font color="white" >(5 hours)</font>
    </td>
@@ -365,15 +365,15 @@ Tutorials, Projects and Professional Development activities will take place betw
    </td>
   </tr>
   <tr>
-   <td bgcolor="#B0C7DC" align="center" ><img src="images/icon_W2D1.png" >
+   <td bgcolor="#B0C7DC" align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W2D1.png" >
    </td>
-   <td bgcolor="#E99668" align="center" ><img src="images/icon_W2D2.png" >
+   <td bgcolor="#E99668" align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W2D2.png" >
    </td>
-   <td bgcolor="#B0C7DC" align="center" ><img src="images/icon_W2D3.png" >
+   <td bgcolor="#B0C7DC" align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W2D3.png" >
    </td>
-   <td bgcolor="#78BAB8" align="center" ><img src="images/icon_W2D4.png" >
+   <td bgcolor="#78BAB8" align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W2D4.png" >
    </td>
-   <td bgcolor="#78BAB8" align="center" ><img src="images/icon_W2D5.png" >
+   <td bgcolor="#78BAB8" align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W2D5.png" >
    </td>
   </tr>
   <tr>
