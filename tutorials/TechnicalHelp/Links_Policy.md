@@ -2,7 +2,7 @@
 
 ## Quick links
 
-Course materials: [https://compneuro.neuromatch.io/](https://compneuro.neuromatch.io/)
+Course materials: [https://comptools.climatematch.io/](https://comptools.climatematch.io/)
 
 Portal: [https://portal.neuromatchacademy.org/](https://portal.neuromatchacademy.org/)
 
