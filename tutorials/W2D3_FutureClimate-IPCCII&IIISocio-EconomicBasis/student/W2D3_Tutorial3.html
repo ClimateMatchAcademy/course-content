@@ -40,8 +40,8 @@ const thebe_selector_output = ".output, .cell_output"
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
 <link href="../../../genindex.html" rel="index" title="Index">
 <link href="../../../search.html" rel="search" title="Search"/>
-<link href="W2D3_Tutorial4.html" rel="next" title="Tutorial 4 - Text analysis of COP tweets"/>
-<link href="W2D3_Tutorial2.html" rel="prev" title="Tutorial 2 - A first look at integrated assessment models"/>
+<link href="W2D3_Tutorial4.html" rel="next" title="Tutorial 4: Public Opinion on the Climate Emergency and Why it Matters"/>
+<link href="W2D3_Tutorial2.html" rel="prev" title="Tutorial 2: Transition Goals and Integrated Assessment Models"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="None" name="docsearch:language"/>
 <!-- Google Analytics -->
@@ -481,8 +481,10 @@ const thebe_selector_output = ".output, .cell_output"
 <ul>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial1.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 1 : A Simple Greenhouse Model
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial2.html">
@@ -576,18 +578,24 @@ const thebe_selector_output = ".output, .cell_output"
 <ul>
 <li class="toctree-l2">
 <a class="reference internal" href="W2D3_Tutorial1.html">
-     Tutorial 1 - Limits to growth in World3: A toy world model of diminishing non-renewable resources
-    </a>
+<strong>
+      Tutorial Objectives
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W2D3_Tutorial2.html">
-     Tutorial 2 - A first look at integrated assessment models
-    </a>
+<strong>
+      Tutorial 2: Transition Goals and Integrated Assessment Models
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W2D3_Tutorial4.html">
-     Tutorial 4 - Text analysis of COP tweets
-    </a>
+<strong>
+      Tutorial 4: Public Opinion on the Climate Emergency and Why it Matters
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../further_reading.html">
@@ -624,18 +632,24 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.html">
-     Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
-    </a>
+<strong>
+      Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.html">
-     Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
-    </a>
+<strong>
+      Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial4.html">
-     Tutorial 9:  Exploring other applications
-    </a>
+<strong>
+      Tutorial 4:  Exploring other applications
+     </strong>
+</a>
 </li>
 </ul>
 </li>
@@ -739,6 +753,23 @@ const thebe_selector_output = ".output, .cell_output"
 </label>
 </div>
 <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+<button aria-label="Launch interactive content" class="headerbtn menu-dropdown__trigger">
+<i class="fas fa-rocket"></i>
+</button>
+<div class="menu-dropdown__content">
+<ul>
+<li>
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=lab/tree/course-content/book/tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial3.ipynb&amp;branch=main" title="Launch on JupyterHub">
+<span class="headerbtn__icon-container">
+<img src="../../../_static/images/logo_jupyterhub.svg"/>
+</span>
+<span class="headerbtn__text-container">JupyterHub</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
 <button class="headerbtn" data-placement="bottom" data-toggle="tooltip" onclick="toggleFullScreen()" title="Fullscreen mode">
 <span class="headerbtn__icon-container">
 <i class="fas fa-expand"></i>
@@ -832,7 +863,16 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <main id="main-content" role="main">
 <div>
-<iframe height="800px" src="https://climatematchacademy.github.io/margoweb/" width="100%"></iframe>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">IPython</span>
+<span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="s2">"&lt;style&gt;.container { width:100% !important;}&lt;/style&gt;"</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
 <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -861,13 +901,13 @@ const thebe_selector_output = ".output, .cell_output"
 <i class="fas fa-angle-left"></i>
 <div class="prev-next-info">
 <p class="prev-next-subtitle">previous</p>
-<p class="prev-next-title">Tutorial 2 - A first look at integrated assessment models</p>
+<p class="prev-next-title"><strong>Tutorial 2: Transition Goals and Integrated Assessment Models</strong></p>
 </div>
 </a>
 <a class="right-next" href="W2D3_Tutorial4.html" id="next-link" title="next page">
 <div class="prev-next-info">
 <p class="prev-next-subtitle">next</p>
-<p class="prev-next-title">Tutorial 4 - Text analysis of COP tweets</p>
+<p class="prev-next-title"><strong>Tutorial 4: Public Opinion on the Climate Emergency and Why it Matters</strong></p>
 </div>
 <i class="fas fa-angle-right"></i>
 </a>

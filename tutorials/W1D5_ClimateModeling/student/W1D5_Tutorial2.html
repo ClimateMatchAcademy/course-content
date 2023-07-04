@@ -43,7 +43,7 @@ const thebe_selector_output = ".output, .cell_output"
 <link href="../../../genindex.html" rel="index" title="Index">
 <link href="../../../search.html" rel="search" title="Search"/>
 <link href="W1D5_Tutorial3.html" rel="next" title="Setup"/>
-<link href="W1D5_Tutorial1.html" rel="prev" title="Setup"/>
+<link href="W1D5_Tutorial1.html" rel="prev" title="Tutorial 1 : A Simple Greenhouse Model"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="None" name="docsearch:language"/>
 <!-- Google Analytics -->
@@ -483,8 +483,10 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current">
 <li class="toctree-l2">
 <a class="reference internal" href="W1D5_Tutorial1.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 1 : A Simple Greenhouse Model
+     </strong>
+</a>
 </li>
 <li class="toctree-l2 current active">
 <a class="current reference internal" href="#">
@@ -578,18 +580,24 @@ const thebe_selector_output = ".output, .cell_output"
 <ul>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial1.html">
-     Tutorial 1 - Limits to growth in World3: A toy world model of diminishing non-renewable resources
-    </a>
+<strong>
+      Tutorial Objectives
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial2.html">
-     Tutorial 2 - A first look at integrated assessment models
-    </a>
+<strong>
+      Tutorial 2: Transition Goals and Integrated Assessment Models
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial4.html">
-     Tutorial 4 - Text analysis of COP tweets
-    </a>
+<strong>
+      Tutorial 4: Public Opinion on the Climate Emergency and Why it Matters
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/further_reading.html">
@@ -626,18 +634,24 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.html">
-     Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
-    </a>
+<strong>
+      Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.html">
-     Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
-    </a>
+<strong>
+      Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial4.html">
-     Tutorial 9:  Exploring other applications
-    </a>
+<strong>
+      Tutorial 4:  Exploring other applications
+     </strong>
+</a>
 </li>
 </ul>
 </li>
@@ -1046,8 +1060,8 @@ const thebe_selector_output = ".output, .cell_output"
 <h1>Section 1 : Insolation and Albedo<a class="headerlink" href="#section-1-insolation-and-albedo" title="Permalink to this headline">¶</a></h1>
 <p>Just as Earth emits radiation, so does the sun. The incoming solar radiation, called <strong>insolation</strong>, is observed to be <span class="math notranslate nohighlight">\(Q = 340 W m^{-2}\)</span>.</p>
 <p>Some of this radiation is reflected back to space (for example off of ice and snow). From observations the amount reflected back is <span class="math notranslate nohighlight">\(F_{ref} = 100 W m^{-2}\)</span>. The <em>fraction</em> of reflected radiation is captured by the <strong>albedo (</strong><span class="math notranslate nohighlight">\(\mathbf{\alpha}\)</span><strong>)</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-ecdaa5fc-afb0-4339-901b-cee75767d79a">
-<span class="eqno">(5)<a class="headerlink" href="#equation-ecdaa5fc-afb0-4339-901b-cee75767d79a" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-867d1890-8426-4575-a6ff-c40ffce60e88">
+<span class="eqno">(6)<a class="headerlink" href="#equation-867d1890-8426-4575-a6ff-c40ffce60e88" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \alpha = \frac{F_{ref}}{Q}
 \end{align}\]</div>
 <p>Albedo is a unitless number between 0 and 1. We can use this formula and python to find the albedo of Earth.</p>
@@ -1086,8 +1100,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="section-2-absorbed-shortwave-radiation">
 <h1>Section 2 : Absorbed Shortwave Radiation<a class="headerlink" href="#section-2-absorbed-shortwave-radiation" title="Permalink to this headline">¶</a></h1>
 <p>The <strong>absorbed shortwave radiation (ASR)</strong> is the amount of this isolation that is <em>not</em> reflected, and actually makes it to Earth’s surface. Thus,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ce8a7ebf-3b7c-4882-9b10-f110014d2367">
-<span class="eqno">(6)<a class="headerlink" href="#equation-ce8a7ebf-3b7c-4882-9b10-f110014d2367" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3f7ac94b-f7f0-454a-a90b-ad055c667ad9">
+<span class="eqno">(7)<a class="headerlink" href="#equation-3f7ac94b-f7f0-454a-a90b-ad055c667ad9" title="Permalink to this equation">¶</a></span>\[\begin{align}
 ASR = Q-F_{ref} = (1-\alpha)Q
 \end{align}\]</div>
 <p>Using observations and python we can esimate the absorbed shortwave radiation.</p>
@@ -1122,19 +1136,19 @@ ASR = Q-F_{ref} = (1-\alpha)Q
 <div class="section" id="section-3-equilibrium-temperature">
 <h1>Section 3 : Equilibrium Temperature<a class="headerlink" href="#section-3-equilibrium-temperature" title="Permalink to this headline">¶</a></h1>
 <p>Energy Balance is achieved when radiation absorbed by Earth’s surface (ASR) is equal to longwave radiation going out to space (OLR). That is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4290215b-206b-4f7b-ad60-7098dc87dacb">
-<span class="eqno">(7)<a class="headerlink" href="#equation-4290215b-206b-4f7b-ad60-7098dc87dacb" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e3921822-f61d-4fa0-9c3a-291aea722cd2">
+<span class="eqno">(8)<a class="headerlink" href="#equation-e3921822-f61d-4fa0-9c3a-291aea722cd2" title="Permalink to this equation">¶</a></span>\[\begin{align}
 ASR = OLR
 \end{align}\]</div>
 <p>By substituting in the equations from previous sections, we can find the surface temperature of Earth needed to maintain this balance. This is called the <strong>equilibrium temperature (</strong> <span class="math notranslate nohighlight">\(\mathbf{T_{eq}}\)</span> <strong>)</strong>.</p>
 <p>Recall <span class="math notranslate nohighlight">\(OLR = \tau\sigma T^4\)</span> and <span class="math notranslate nohighlight">\(ASR = (1-\alpha)Q\)</span>. The <strong>equilibrium temperature</strong> is the temperature the system would have if energy balance was perfectly reached. Assuming energy balance, we will call the emission temperature denoted previously the equilibrium temperature (<span class="math notranslate nohighlight">\(T_{eq}\)</span>) instead. Thus,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9ce2a182-6ce6-44d1-9e7f-046a5219f7a4">
-<span class="eqno">(8)<a class="headerlink" href="#equation-9ce2a182-6ce6-44d1-9e7f-046a5219f7a4" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9d35f20c-1944-4bb5-b52a-ddfc38f44dab">
+<span class="eqno">(9)<a class="headerlink" href="#equation-9d35f20c-1944-4bb5-b52a-ddfc38f44dab" title="Permalink to this equation">¶</a></span>\[\begin{align}
 (1-\alpha)Q = ASR = OLR = \tau\sigma T_{eq}^4
 \end{align}\]</div>
 <p>Solving for <span class="math notranslate nohighlight">\(T_{eq}\)</span> we find</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4ea1c06a-2d7e-44ad-81c8-a92078b8350c">
-<span class="eqno">(9)<a class="headerlink" href="#equation-4ea1c06a-2d7e-44ad-81c8-a92078b8350c" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-bcf772d8-4ba6-4dd5-9561-43380a0f6341">
+<span class="eqno">(10)<a class="headerlink" href="#equation-bcf772d8-4ba6-4dd5-9561-43380a0f6341" title="Permalink to this equation">¶</a></span>\[\begin{align}
 T_{eq} = \sqrt[4]{\frac{(1-\alpha)Q}{\tau\sigma}}
 \end{align}\]</div>
 <p>We can implement this equation in python to find the numeric value.</p>
@@ -1299,7 +1313,7 @@ T_{eq} = \sqrt[4]{\frac{(1-\alpha)Q}{\tau\sigma}}
 <i class="fas fa-angle-left"></i>
 <div class="prev-next-info">
 <p class="prev-next-subtitle">previous</p>
-<p class="prev-next-title">Setup</p>
+<p class="prev-next-title"><strong>Tutorial 1 : A Simple Greenhouse Model</strong></p>
 </div>
 </a>
 <a class="right-next" href="W1D5_Tutorial3.html" id="next-link" title="next page">

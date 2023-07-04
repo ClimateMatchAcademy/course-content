@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Tutorial 1 - Limits to growth in World3: A toy world model of diminishing non-renewable resources — Climatematch Academy: Computational Climate Science</title>
+<title>Tutorial Objectives — Climatematch Academy: Computational Climate Science</title>
 <!-- Loaded before other Sphinx assets -->
 <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
@@ -40,7 +40,7 @@ const thebe_selector_output = ".output, .cell_output"
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
 <link href="../../../genindex.html" rel="index" title="Index">
 <link href="../../../search.html" rel="search" title="Search"/>
-<link href="W2D3_Tutorial2.html" rel="next" title="Tutorial 2 - A first look at integrated assessment models"/>
+<link href="W2D3_Tutorial2.html" rel="next" title="Tutorial 2: Transition Goals and Integrated Assessment Models"/>
 <link href="../chapter_title.html" rel="prev" title="Future Climate - IPCC II &amp; III Socio-Economic Basis"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="None" name="docsearch:language"/>
@@ -481,8 +481,10 @@ const thebe_selector_output = ".output, .cell_output"
 <ul>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial1.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 1 : A Simple Greenhouse Model
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial2.html">
@@ -576,18 +578,24 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current">
 <li class="toctree-l2 current active">
 <a class="current reference internal" href="#">
-     Tutorial 1 - Limits to growth in World3: A toy world model of diminishing non-renewable resources
-    </a>
+<strong>
+      Tutorial Objectives
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W2D3_Tutorial2.html">
-     Tutorial 2 - A first look at integrated assessment models
-    </a>
+<strong>
+      Tutorial 2: Transition Goals and Integrated Assessment Models
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W2D3_Tutorial4.html">
-     Tutorial 4 - Text analysis of COP tweets
-    </a>
+<strong>
+      Tutorial 4: Public Opinion on the Climate Emergency and Why it Matters
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../further_reading.html">
@@ -624,18 +632,24 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.html">
-     Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
-    </a>
+<strong>
+      Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.html">
-     Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
-    </a>
+<strong>
+      Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial4.html">
-     Tutorial 9:  Exploring other applications
-    </a>
+<strong>
+      Tutorial 4:  Exploring other applications
+     </strong>
+</a>
 </li>
 </ul>
 </li>
@@ -827,90 +841,202 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#">
-   Tutorial 1 - Limits to growth in World3: A toy world model of diminishing non-renewable resources
-  </a>
-</li>
-<li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#tutorial-objectives">
-   Tutorial Objectives
-  </a>
+<strong>
+    Tutorial Objectives
+   </strong>
+</a>
 </li>
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#setup">
-   Setup
-  </a>
+<strong>
+    Setup
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#figure-functions">
-     Figure functions
+<a class="reference internal nav-link" href="#figure-settings">
+     Figure settings
     </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id1">
-       Figure functions
-      </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id2">
-         Figure functions
-        </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id3">
-           Figure functions
-          </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h6 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id4">
-             Figure functions
-            </a>
 </li>
-</ul>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#helper-functions">
+     Helper functions
+    </a>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#video-1-title">
+     Video 1: Title
+    </a>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-1-peak-at-the-ipccs-socioeconomic-projections">
-   Section 1: Peak at the IPCCs Socioeconomic projections
-  </a>
+<a class="reference internal nav-link" href="#section-1-exploring-the-ipcc-s-socioeconomic-scenarios">
+<strong>
+    Section 1: Exploring the IPCC’s Socioeconomic Scenarios
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#question-1">
+<strong>
+      Question 1
+     </strong>
+</a>
+</li>
+</ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#section-2-world-models-and-world3">
-   Section 2: World Models and World3
-  </a>
-</li>
-<li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-3-pyworld3">
-   Section 3: Pyworld3
-  </a>
+<strong>
+    Section 2: World Models and
+    <code class="docutils literal notranslate">
+<span class="pre">
+      World3
+     </span>
+</code>
+</strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#case-1-original-business-as-usual-bau-model-parameters">
-     Case 1: original (Business-As-Usual - BAU) model parameters
-    </a>
+<a class="reference internal nav-link" href="#section-2-1-a-complete-map-of-world3">
+<strong>
+      Section 2.1: A Complete Map of
+      <code class="docutils literal notranslate">
+<span class="pre">
+        World3
+       </span>
+</code>
+</strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#question-2-1">
+<strong>
+        Question 2.1
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#case-2-bau3-increased-efficiency">
-     Case 2: BAU3 - increased efficiency
-    </a>
+<a class="reference internal nav-link" href="#section-2-2-a-sub-region-of-the-map-of-world3">
+<strong>
+      Section 2.2: A Sub-region of the Map of
+      <code class="docutils literal notranslate">
+<span class="pre">
+        World3
+       </span>
+</code>
+</strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-2-2">
+<strong>
+        Questions 2.2
+       </strong>
+</a>
 </li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#case-3-bau3-with-active-cap-on-production">
-     Case 3: BAU3 with active cap on production
-    </a>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#a-note-on-exponential-growth-in-a-bounded-system">
+       A note on exponential growth in a bounded system
+      </a>
+</li>
+</ul>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#appendix">
-   Appendix
-  </a>
+<a class="reference internal nav-link" href="#section-3-working-with-pyworld3">
+<strong>
+    Section 3: Working with
+    <code class="docutils literal notranslate">
+<span class="pre">
+      pyworld3
+     </span>
+</code>
+</strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-3-1-original-business-as-usual-bau-scenario">
+<strong>
+      Section 3.1: Original (Business-As-Usual -
+      <em>
+       BAU
+      </em>
+      ) Scenario
+     </strong>
+</a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-3-2-bau3-an-abundant-resource-scenario">
+<strong>
+      Section 3.2:
+      <em>
+       BAU3
+      </em>
+      - An Abundant Resource Scenario
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#coding-exercise-3-2">
+<strong>
+        Coding Exercise 3.2
+       </strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-3-3-bau3-with-an-active-cap-on-production">
+<strong>
+      Section 3.3:
+      <em>
+       BAU3
+      </em>
+      with an Active Cap on Production
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-3-3">
+<strong>
+        Questions 3.3:
+       </strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-3-4-validity-and-limitations-of-pyworld3">
+<strong>
+      Section 3.4: Validity and Limitations of
+      <code class="docutils literal notranslate">
+<span class="pre">
+        pyworld3
+       </span>
+</code>
+</strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#summary">
+<strong>
+    Summary
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#resources">
+<strong>
+    Resources
+   </strong>
+</a>
 </li>
 </ul>
 </nav>
@@ -920,7 +1046,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="col pl-md-3 pl-lg-5 content-container">
 <!-- Table of contents that is only displayed when printing the page -->
 <div class="onlyprint" id="jb-print-docs-body">
-<h1>Tutorial 1 - Limits to growth in World3: A toy world model of diminishing non-renewable resources</h1>
+<h1>Tutorial Objectives</h1>
 <!-- Table of contents -->
 <div id="print-main-content">
 <div id="jb-print-toc">
@@ -931,90 +1057,202 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#">
-   Tutorial 1 - Limits to growth in World3: A toy world model of diminishing non-renewable resources
-  </a>
-</li>
-<li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#tutorial-objectives">
-   Tutorial Objectives
-  </a>
+<strong>
+    Tutorial Objectives
+   </strong>
+</a>
 </li>
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#setup">
-   Setup
-  </a>
+<strong>
+    Setup
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#figure-functions">
-     Figure functions
+<a class="reference internal nav-link" href="#figure-settings">
+     Figure settings
     </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id1">
-       Figure functions
-      </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id2">
-         Figure functions
-        </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id3">
-           Figure functions
-          </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h6 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id4">
-             Figure functions
-            </a>
 </li>
-</ul>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#helper-functions">
+     Helper functions
+    </a>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#video-1-title">
+     Video 1: Title
+    </a>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-1-peak-at-the-ipccs-socioeconomic-projections">
-   Section 1: Peak at the IPCCs Socioeconomic projections
-  </a>
+<a class="reference internal nav-link" href="#section-1-exploring-the-ipcc-s-socioeconomic-scenarios">
+<strong>
+    Section 1: Exploring the IPCC’s Socioeconomic Scenarios
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#question-1">
+<strong>
+      Question 1
+     </strong>
+</a>
+</li>
+</ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#section-2-world-models-and-world3">
-   Section 2: World Models and World3
-  </a>
-</li>
-<li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-3-pyworld3">
-   Section 3: Pyworld3
-  </a>
+<strong>
+    Section 2: World Models and
+    <code class="docutils literal notranslate">
+<span class="pre">
+      World3
+     </span>
+</code>
+</strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#case-1-original-business-as-usual-bau-model-parameters">
-     Case 1: original (Business-As-Usual - BAU) model parameters
-    </a>
+<a class="reference internal nav-link" href="#section-2-1-a-complete-map-of-world3">
+<strong>
+      Section 2.1: A Complete Map of
+      <code class="docutils literal notranslate">
+<span class="pre">
+        World3
+       </span>
+</code>
+</strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#question-2-1">
+<strong>
+        Question 2.1
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#case-2-bau3-increased-efficiency">
-     Case 2: BAU3 - increased efficiency
-    </a>
+<a class="reference internal nav-link" href="#section-2-2-a-sub-region-of-the-map-of-world3">
+<strong>
+      Section 2.2: A Sub-region of the Map of
+      <code class="docutils literal notranslate">
+<span class="pre">
+        World3
+       </span>
+</code>
+</strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-2-2">
+<strong>
+        Questions 2.2
+       </strong>
+</a>
 </li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#case-3-bau3-with-active-cap-on-production">
-     Case 3: BAU3 with active cap on production
-    </a>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#a-note-on-exponential-growth-in-a-bounded-system">
+       A note on exponential growth in a bounded system
+      </a>
+</li>
+</ul>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#appendix">
-   Appendix
-  </a>
+<a class="reference internal nav-link" href="#section-3-working-with-pyworld3">
+<strong>
+    Section 3: Working with
+    <code class="docutils literal notranslate">
+<span class="pre">
+      pyworld3
+     </span>
+</code>
+</strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-3-1-original-business-as-usual-bau-scenario">
+<strong>
+      Section 3.1: Original (Business-As-Usual -
+      <em>
+       BAU
+      </em>
+      ) Scenario
+     </strong>
+</a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-3-2-bau3-an-abundant-resource-scenario">
+<strong>
+      Section 3.2:
+      <em>
+       BAU3
+      </em>
+      - An Abundant Resource Scenario
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#coding-exercise-3-2">
+<strong>
+        Coding Exercise 3.2
+       </strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-3-3-bau3-with-an-active-cap-on-production">
+<strong>
+      Section 3.3:
+      <em>
+       BAU3
+      </em>
+      with an Active Cap on Production
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-3-3">
+<strong>
+        Questions 3.3:
+       </strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-3-4-validity-and-limitations-of-pyworld3">
+<strong>
+      Section 3.4: Validity and Limitations of
+      <code class="docutils literal notranslate">
+<span class="pre">
+        pyworld3
+       </span>
+</code>
+</strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#summary">
+<strong>
+    Summary
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#resources">
+<strong>
+    Resources
+   </strong>
+</a>
 </li>
 </ul>
 </nav>
@@ -1023,74 +1261,57 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <main id="main-content" role="main">
 <div>
-<div class="section" id="tutorial-1-limits-to-growth-in-world3-a-toy-world-model-of-diminishing-non-renewable-resources">
-<h1>Tutorial 1 - Limits to growth in World3: A toy world model of diminishing non-renewable resources<a class="headerlink" href="#tutorial-1-limits-to-growth-in-world3-a-toy-world-model-of-diminishing-non-renewable-resources" title="Permalink to this headline">¶</a></h1>
-<p>Week 2, Day 3: IPCC Socio-economic Basis</p>
-<p>By Neuromatch Academy</p>
-<p>Content creators: Maximilian Puelma Touzel</p>
-<p>Content reviewers: Name Surname, Name Surname</p>
-<p>Content editors: Name Surname, Name Surname</p>
-<p>Production editors: Name Surname, Name Surname</p>
-<p>Our 2023 Sponsors</p>
-</div>
-<hr class="docutils"/>
 <div class="section" id="tutorial-objectives">
-<h1>Tutorial Objectives<a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">¶</a></h1>
-<p>Learn about nonlinear, coupled dynamics of various aggregated world system variables in <code class="docutils literal notranslate"><span class="pre">World3</span></code>, one of the first toy world models that combined economic activity and the effects it has on the natural world.</p>
+<h1><strong>Tutorial Objectives</strong><a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">¶</a></h1>
+<p>During the first week of the course, you learned about types of climate data from measurements, proxies and models, and computational tools for assessing past, present and future climate variability recorded by this data. During day one of this week, you began to explore climate model data from Earth System Models (ESMs) simulations conducted for the recent Climate Model Intercomparison Project (CMIP6) that are presented in the report from the Intergovernmental Panel on Climate Changes (IPCC). However, the dominant source of uncertainty in those projections arise from how human society responds: e.g. how our emissions reduction and renewable energy technologies develop, how coherent our global politics are, how our consumption grows etc. For these reasons, in addition to understanding the physical basis of the climate variations projected by these models, it’s also important to assess the current and future socioeconomic impact of climate change and what aspects of human activity are driving emissions. This day’s tutorials focus on the socioeconomic projections regarding the future of climate change and are centered around the Shared Socioeconomic Pathways (SSP) framework used by the IPCC.</p>
+<p>In this first tutorial, you will see how society can be represented by inter-related socio-economic variables and thier projections into the future. This tutorial will provide insights into the pressing socioeconomic issues related to climate change, such as resource scarcity, population dynamics, and the potential impacts of unchecked resource extraction. In particular, you will see some socioeconomic projections of the Integrated Assessment Modelling (IAM) used by the IPCC, and the influence of shared socio-economic pathways on these projections. In the bulk of the tutorial, you will use the <code class="docutils literal notranslate"><span class="pre">World3</span></code> model, a tool developed in the 1970s to analyze potential economic and population scenarios. You will use it to learn about nonlinear, coupled dynamics of various aggregated world system variables and how this model informs modern day climate challenges.</p>
 </div>
-<hr class="docutils"/>
 <div class="section" id="setup">
-<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
-<p>Import libaries</p>
+<h1><strong>Setup</strong><a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Math</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># imports</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Math</span>
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">Image</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">pl</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span>
 <span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
 <span class="kn">import</span> <span class="nn">pooch</span>
 <span class="kn">import</span> <span class="nn">urllib</span>
+<span class="kn">from</span> <span class="nn">pyworld3</span> <span class="kn">import</span> <span class="n">World3</span>
+<span class="kn">from</span> <span class="nn">pyworld3.utils</span> <span class="kn">import</span> <span class="n">plot_world_variables</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>figure settings</p>
-<div class="cell docutils container">
+<div class="section" id="figure-settings">
+<h2>Figure settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">"ticks"</span><span class="p">,</span> <span class="p">{</span><span class="s1">'axes.grid'</span><span class="p">:</span> <span class="kc">False</span><span class="p">})</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Figure settings</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>       <span class="c1"># interactive display</span>
+<span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = 'retina'
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">"https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/cma.mplstyle"</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">"ticks"</span><span class="p">,</span> <span class="p">{</span><span class="s1">'axes.grid'</span><span class="p">:</span> <span class="kc">False</span><span class="p">})</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s2">"&lt;style&gt;.container { width:100% !important; }&lt;/style&gt;"</span><span class="p">))</span>
 <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'lines.linewidth'</span><span class="p">:</span> <span class="s1">'3'</span><span class="p">}</span>
-<span class="n">pl</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="figure-functions">
-<h2>Figure functions<a class="headerlink" href="#figure-functions" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id1">
-<h3>Figure functions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id2">
-<h4>Figure functions<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="id3">
-<h5>Figure functions<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h5>
-<div class="section" id="id4">
-<h6>Figure functions<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h6>
-<p>#######  Figure functions</p>
-<p>########  Figure functions</p>
-<p>#########  Figure functions</p>
-<p>##########  Figure functions</p>
-<p>###########  Figure functions</p>
-<p>############  Figure functions</p>
-<p>#############  Figure functions</p>
-<p>##############  Figure functions</p>
+</div>
+<div class="section" id="helper-functions">
+<h2>Helper functions<a class="headerlink" href="#helper-functions" title="Permalink to this headline">¶</a></h2>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title Figure functions</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Helper functions</span>
+
 <span class="k">def</span> <span class="nf">get_IPCC_data</span><span class="p">(</span><span class="n">var_name</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
     <span class="n">IAMdf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
     <span class="n">IAMdf</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">IAMdf</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">,</span><span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>  <span class="c1"># excel file has 2 trailing rows of notes</span>
@@ -1126,16 +1347,14 @@ const thebe_selector_output = ".output, .cell_output"
     <span class="c1"># select model variables to plot</span>
     <span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="n">world3</span><span class="o">.</span><span class="n">nrfr</span><span class="p">,</span> <span class="n">world3</span><span class="o">.</span><span class="n">iopc</span><span class="p">,</span> <span class="n">world3</span><span class="o">.</span><span class="n">fpc</span><span class="p">,</span>
                  <span class="n">world3</span><span class="o">.</span><span class="n">pop</span><span class="p">,</span> <span class="n">world3</span><span class="o">.</span><span class="n">ppolx</span><span class="p">,</span> <span class="n">world3</span><span class="o">.</span><span class="n">d</span><span class="p">,</span> <span class="n">world3</span><span class="o">.</span><span class="n">cdr</span><span class="p">]</span>
-    <span class="n">variable_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"NRFR"</span><span class="p">,</span>  <span class="c1"># nonrenewable resource fraction remaining</span>
-                       <span class="c1"># industrial output per capita [dollars/person-year]</span>
-                       <span class="s2">"IOPC"</span><span class="p">,</span>
-                       <span class="c1"># food production per capita [vegetable-equivalent kilograms/person-year]</span>
-                       <span class="s2">"FPC"</span><span class="p">,</span>
-                       <span class="s2">"POP"</span><span class="p">,</span>  <span class="c1"># population [persons]</span>
-                       <span class="s2">"PPOLX"</span><span class="p">,</span>  <span class="c1"># index of persistent pollution</span>
+    <span class="n">variable_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Resource"</span><span class="p">,</span>  <span class="c1"># nonrenewable resource fraction remaining (NRFR)</span>
+                       <span class="s2">"Industry"</span><span class="p">,</span> <span class="c1"># industrial output per capita [dollars/person-year] (IOPC)</span>
+                       <span class="s2">"Food"</span><span class="p">,</span> <span class="c1"># food production per capita [vegetable-equivalent kilograms/person-year] (FPC)</span>
+                       <span class="s2">"Population"</span><span class="p">,</span>  <span class="c1"># population [persons] (POP)</span>
+                       <span class="s2">"Pollution"</span><span class="p">,</span>  <span class="c1"># index of persistent pollution (PPOLX)</span>
                                 <span class="c1"># (fraction of peristent pollution in 1970 = 1.36e8 pollution units)</span>
-                       <span class="s2">"deaths"</span><span class="p">,</span>
-                       <span class="s2">"deathrate</span><span class="se">\n</span><span class="s2">/1000"</span><span class="p">]</span>
+                       <span class="s2">"Deaths"</span><span class="p">,</span>
+                       <span class="s2">"Deathrate</span><span class="se">\n</span><span class="s2">/1000"</span><span class="p">]</span>
     <span class="n">variable_limits</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1e3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1e3</span><span class="p">],</span> <span class="p">[</span>
         <span class="mi">0</span><span class="p">,</span> <span class="mf">16e9</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">32</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">5e8</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">250</span><span class="p">]]</span>  <span class="c1"># y axis ranges</span>
 
@@ -1152,37 +1371,54 @@ const thebe_selector_output = ".output, .cell_output"
     <span class="n">IAMpopdf</span><span class="o">=</span><span class="n">get_IPCC_data</span><span class="p">(</span><span class="s1">'pop'</span><span class="p">,</span> <span class="n">pop_path</span><span class="p">)</span>
     <span class="n">year_data</span> <span class="o">=</span> <span class="n">IAMpopdf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">IAMpopdf</span><span class="o">.</span><span class="n">Scenario</span><span class="o">==</span><span class="n">scenario_name</span><span class="p">,</span><span class="s1">'year'</span><span class="p">]</span>
     <span class="n">var_data</span> <span class="o">=</span> <span class="n">IAMpopdf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">IAMpopdf</span><span class="o">.</span><span class="n">Scenario</span><span class="o">==</span><span class="n">scenario_name</span><span class="p">,</span><span class="s1">'pop'</span><span class="p">]</span>
-    <span class="n">axs</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">axes</span>
-    <span class="n">axs</span><span class="p">[</span><span class="n">variable_labels</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">'POP'</span><span class="p">)]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">year_data</span><span class="p">,</span><span class="n">var_data</span><span class="p">,</span> <span class="s1">'r--'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">scenario_name</span><span class="p">)</span>
-    <span class="n">axs</span><span class="p">[</span><span class="n">variable_labels</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">'POP'</span><span class="p">)]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">axes</span>
+    <span class="n">axs</span><span class="p">[</span><span class="n">variable_labels</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">'Population'</span><span class="p">)]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">year_data</span><span class="p">,</span><span class="n">var_data</span><span class="p">,</span> <span class="s1">'r--'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">scenario_name</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="n">variable_labels</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">'Population'</span><span class="p">)]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="video-1-title">
+<h2>Video 1: Title<a class="headerlink" href="#video-1-title" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Video 1: Title</span>
+<span class="c1">#Tech team will add code to format and display the video</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="section-1-peak-at-the-ipccs-socioeconomic-projections">
-<h1>Section 1: Peak at the IPCCs Socioeconomic projections<a class="headerlink" href="#section-1-peak-at-the-ipccs-socioeconomic-projections" title="Permalink to this headline">¶</a></h1>
-<p>In subsequent tutorials, we will play with Integrated Assessment Models, the standard class of models used to make climate change projections.</p>
-<p>Here, let’s start by just looking at some of their model output to motivate us looking at <code class="docutils literal notranslate"><span class="pre">World3</span></code> which gives similar socioeconomic output.</p>
-<p>All data from the main simulations of the IAMs used in the IPCC reports is freely available for viewing at https://tntcat.iiasa.ac.at/.
-If you give them only an email, you can download any data you select. I downloaded</p>
+<div class="section" id="section-1-exploring-the-ipcc-s-socioeconomic-scenarios">
+<h1><strong>Section 1: Exploring the IPCC’s Socioeconomic Scenarios</strong><a class="headerlink" href="#section-1-exploring-the-ipcc-s-socioeconomic-scenarios" title="Permalink to this headline">¶</a></h1>
+<p>In this, and subsequent, tutorials, you will explore Integrated Assessment Models (IAMs) which are the standard class of models used to make climate change projections. IAMs couple a climate model to an economic model, allowing us to evaluate the two-way coupling between economic productivity and climate change severity. IAMs can also account for changes that result from mitigation efforts, which lessen anthropogenic emissions. In other words, IAMs are models that link human economic activity with climate change.</p>
+<p>Let’s start by investigating some IAM model output, which will prepare you to explore <code class="docutils literal notranslate"><span class="pre">World3</span></code> (which gives similar socioeconomic output) later in this tutorial.</p>
+<p>All data from the main simulations of the IAMs used in the IPCC reports is freely available for viewing <a class="reference external" href="https://tntcat.iiasa.ac.at/SspDb/dsd">here</a>. The simulations are labeled by both the Shared Socioeconomic Pathway (SSP1, SSP2, SSP3, SSP4, and SSP5) and the forcing level (greenhouse gas forcing of 2.6, 7.0, 8.5 W m<sup>2</sup> etc. by 2100). The 5 SSPS are:</p>
 <ul class="simple">
-<li><p>world population,</p></li>
-<li><p>total CO<sub>2</sub> emissions (harmonized), and</p></li>
-<li><p>climate forcing</p></li>
+<li><p>SSP1: Sustainability (Taking the Green Road)</p></li>
+<li><p>SSP2: Middle of the Road</p></li>
+<li><p>SSP3: Regional Rivalry (A Rocky Road)</p></li>
+<li><p>SSP4: Inequality (A Road divided)</p></li>
+<li><p>SSP5: Fossil-fueled Development (Taking the Highway)
+You will learn more about how these 5 SSPs were determined in future tutorials.</p></li>
 </ul>
-<p>The files all download with the same name, <code class="docutils literal notranslate"><span class="pre">iamc_db.xlsx</span></code>, so I appended ‘_pop’,’_CO2’, and ‘_forcing’ to distinguish them. Let’s load and plot that data here using a plotting function that you don’t need to understand, which is defined in the plotting functions section above.</p>
+<p>In previous days, you have looked at climate model data for projections of sea surface temperature change under different SSPs. We saw that applying different greenhouse gas forcings to a climate model affects global temperature projections and also influences other parts of the climate system, such as precipitation. In this section, we will take a look at the modelled socio-economic impacts associated with such changes to the physical climate system.</p>
+<p>It is possible to download the IAM data if you provide an email address, but for this tutorial the following files have already been downloaded:</p>
+<ul class="simple">
+<li><p>Climate forcing</p></li>
+<li><p>World population</p></li>
+<li><p>Total CO<sub>2</sub> emissions</p></li>
+</ul>
+<p>Since the files all have the same name, <code class="docutils literal notranslate"><span class="pre">iamc_db.xlsx</span></code>, we have added ‘_forcing’, ‘_pop’, and ‘_CO2’ to differentiate the files and have stored them in our OSF repository.</p>
+<p>Let’s load and plot this data to explore the forcing, population and CO<sub>2</sub> emissions across the different SSP scenarios. You can utilize the pre-defined plotting function from above.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'forcing'</span><span class="p">,</span><span class="s1">'pop'</span><span class="p">,</span><span class="s1">'CO2'</span><span class="p">]</span>
 <span class="n">paths</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'https://osf.io/download/tkrf7/'</span><span class="p">,</span> <span class="s1">'https://osf.io/download/ed9aq/'</span><span class="p">,</span><span class="s1">'https://osf.io/download/gcb79/'</span><span class="p">]</span>
 <span class="n">axis_size</span><span class="o">=</span><span class="mi">4</span>
-<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">var_names</span><span class="p">),</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="n">axis_size</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">var_names</span><span class="p">),</span><span class="n">axis_size</span><span class="p">))</span>
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">var_names</span><span class="p">),</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="n">axis_size</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">var_names</span><span class="p">),</span><span class="n">axis_size</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">ax_idx</span><span class="p">,</span><span class="n">var_name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">var_names</span><span class="p">):</span>
     <span class="n">path</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">paths</span><span class="p">[</span><span class="n">ax_idx</span><span class="p">],</span><span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
     <span class="n">data_df</span><span class="o">=</span><span class="n">get_IPCC_data</span><span class="p">(</span><span class="n">var_name</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
@@ -1191,29 +1427,32 @@ If you give them only an email, you can download any data you select. I download
 </div>
 </div>
 </div>
-<p>So far you have seen how forcing as an input to a climate model leads to temperature increases and other climate effects like changes in precipitation.
-The IAM projections that use these forcings profiles feed the temperature effects into a socioeconomic model component that evolves our population and the amount of emissions we produce consistent with the forcing for that scenario. There are 5 main scenarios (called <em>socioeconomic pathways</em>) that the IPCC considers (that’s what the different colors are in the above plots). We’ll get into all those details in a subsequent tutorial.</p>
+<p>The projections in the plots you just created show changes in climate forcing (left), population (middle) and CO<sub>2</sub> emissions (right) across the five different SSP scenarios computed at thier baseline forcing level (different for each scenario), which are each represented by a distinct color in each plot.</p>
+<p>The projections for each SSP are created by optimizing economic activity within the constraint of a given level of greenhouse gas forcing at 2100. This activity drives distinct temperature changes via the emissions it produces, which are inputted into a socioeconomic model component to compute economic damages. These damages feedback into the model to limit emissions-producing economic activity. The forcing constraint ensures the amount of emissions produced is consistent for that particular scenario. In other words, the projected temperature change under different scenarios is fed to a socioeconomic model component in order to assess the socioeconomic impacts resulting from the temperature change associated with each SSP.</p>
+<p>Not every variable in IAMs is endogenous (i.e. determined by other variables in the model). Some variables, like population or technology growth, are exogeneous (i.e. variables whose time course is given to the model). In this case, the time course of population and economic growth, are derived from simple growth models.</p>
+<div class="section" id="question-1">
+<h2><strong>Question 1</strong><a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Having watched the video on the limits of growth, why might the continued growth in both population and economy not be assured?</p></li>
+</ol>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/solutions/W2D3_Tutorial1_Solution_b081dd60.py"><em>Click for solution</em></a></p>
+</div>
 </div>
 <div class="section" id="section-2-world-models-and-world3">
-<h1>Section 2: World Models and World3<a class="headerlink" href="#section-2-world-models-and-world3" title="Permalink to this headline">¶</a></h1>
-<p>Here, we want to step back from IAMs and use another model class, world models, to first explore how socioeconomic system variables like population, capital and pollution co-evolve.</p>
-<ul class="simple">
-<li><p>World models are another modelling tradition separate from the policy optimization found in an Integrated Assessment Model.</p></li>
-<li><p>World models are literally that, a model of the world in which all variables are endogeneous, <em>i.e.</em> the model is self-contained and simply runs as a dynamical system, i.e. given equations of rates of change of the variables and an initial condition to start them from.</p></li>
-<li><p>The important variables in a world model are similar to those of Integrated Assessment Models: capital, production, population, pollution etc.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">World3</span></code> is a world model that was developed in the 1970s and doesn’t have an explicit climate component (perhaps its developers were unaware of climate change at the time, as many were back then).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">World3</span></code> does have a <em>pollution</em> variable that is driven by industrial activity, and this pollution negatively impacts food production and directly increases mortality rates via health effects.</p></li>
-<li><p>If we were developing <code class="docutils literal notranslate"><span class="pre">World3</span></code> today with our knowledge of human-driven climate change, we would add greenhouse gas emissions as a component of the pollution variable, which is the place in <code class="docutils literal notranslate"><span class="pre">World3</span></code> representing the damaging waste of our industrial activity.</p></li>
-<li><p>The reason we are looking at <code class="docutils literal notranslate"><span class="pre">World3</span></code> here in this first tutorial, is that:</p></li>
-</ul>
+<h1><strong>Section 2: World Models and <code class="docutils literal notranslate"><span class="pre">World3</span></code></strong><a class="headerlink" href="#section-2-world-models-and-world3" title="Permalink to this headline">¶</a></h1>
+<p>In this section you will take a step back from IAMs and use another model class, <em>world models</em>, to first explore how socioeconomic system variables like population, capital and pollution co-vary. You’ve already seen world models in the video for this tutorial, but let’s recap what they are and why they are interesting.</p>
+<p>World models are computational models that incorporate natural physical limits in the economy. For example, world models can help to assess the impact of an economy based on growth-oriented extraction of a finite resource. All variables in world model are endogeneous. Recall that endogeneous variables determined by other variables in the model, rather than being given to the model. Therefore, world models are self-contained and simply run as a dynamical system: given an initial condition (a value for all variables) and the equations describing rates of change of the variables, they output the subsequent time series of these variables. The important variables in a world model are similar to those of Integrated Assessment Models: capital, production, population, pollution etc.</p>
+<p><code class="docutils literal notranslate"><span class="pre">World3</span></code> is a world model that was developed in the 1970s and doesn’t have an explicit climate component (perhaps its developers were unaware of climate change at the time, as many were back then). However, <code class="docutils literal notranslate"><span class="pre">World3</span></code> does have a <em>pollution</em> variable that is driven by industrial activity, and this pollution negatively impacts food production and directly increases mortality rates via health effects. If we were developing <code class="docutils literal notranslate"><span class="pre">World3</span></code> today with our knowledge of human-driven climate change, we would add greenhouse gas emissions as a component of the pollution variable, which is the place in <code class="docutils literal notranslate"><span class="pre">World3</span></code> representing the damaging waste of our industrial activity.</p>
+<p>The reason we are looking at <code class="docutils literal notranslate"><span class="pre">World3</span></code> here in this first tutorial, is that:</p>
 <ol class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">World3</span></code> is a instructive world model of the resource depletion and pollution problem. These problems are prior to climate change in that they encapsulate it, and understanding them helps us understand the socioeconomic forces at work in driving the emissions that are the source of the climate change problem.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">World3</span></code> is an instructive world model of the resource depletion and pollution problem. It is essential to understand the forcings, feedbacks and results associated with these problems because they directly contribute to climate change. More specifically, understanding these problems helps us understand the socioeconomic forces driving the emissions that are the source of the climate change problem.</p></li>
 <li><p>World models provide an alternative modelling tradition not steeped in the neoclassical economics on which IAMs are based. This provides some diversity in perspective.</p></li>
 </ol>
-<ul class="simple">
-<li><p>N.B. the model is not only wrong (i.e. missing many variables), but is a poor idealization, i.e. not necessarily even qualitatively predictive because it is missing some determining variables/model features (e.g. technology innovation/adaptation). It is thus almost certainly not predictive, but is still useful in starting to think about ‘world systems’ because it includes important relationships between some important natural and socio-economic variables that we will look at here. To be fair, one could also criticize IAMs for lacking important variables, as we will see in future tutorials.</p></li>
-</ul>
-<p>OKay, so welcome to World3! Here’s a stock-flow diagram of the full model:</p>
+<p><em>Note: the model in <code class="docutils literal notranslate"><span class="pre">World3</span></code> is not only wrong (i.e. missing many variables), but is a poor idealization. In other words, the <code class="docutils literal notranslate"><span class="pre">World3</span></code> model is not necessarily qualitatively predictive because it is missing some determining variables/model features (e.g. technology innovation/adaptation). It is thus almost certainly not predictive, but is still useful for thinking about ‘world systems’ because it includes important relationships between some key natural and socio-economic variables that we will look at here. In later tutorials, we will learn about similr critiques of elements of IAMs (e.g. for lacking important variables).</em></p>
+<div class="section" id="section-2-1-a-complete-map-of-world3">
+<h2><strong>Section 2.1: A Complete Map of <code class="docutils literal notranslate"><span class="pre">World3</span></code></strong><a class="headerlink" href="#section-2-1-a-complete-map-of-world3" title="Permalink to this headline">¶</a></h2>
+<p>Now that we have a basic understanding of World3, we can start to explore some more specific components and interactions of the model.</p>
+<p>Welcome to World3! Here is a stock-flow diagram of the full model:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s2">"https://osf.io/download/hzrsn/"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">unconfined</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
@@ -1225,47 +1464,88 @@ The IAM projections that use these forcings profiles feed the temperature effect
 </div>
 </div>
 </div>
-<p>WOw! that’s a lot of variables!</p>
-<p><em>Exercise</em>: increase width to 3000 and scroll around to read the node labels of the different parts of the model. Can you group them into broader categories?</p>
-<p>Here is a reduced diagram containing only some major variables and thier couplings:</p>
+<div class="section" id="question-2-1">
+<h3><strong>Question 2.1</strong><a class="headerlink" href="#question-2-1" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Increase the width of this image to 3000.</p></li>
+<li><p>Scroll around the larger image you just created to see what words you find in the node labels of the different parts of the model. Suggest a category label for each quadrant of the model.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#################################################</span>
+<span class="c1">## TODO for students: details of what they should do ##</span>
+<span class="c1"># Fill out function and remove</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">"1. Increase the width of this image to 3000."</span><span class="p">)</span>
+<span class="c1">#################################################</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s2">"https://osf.io/download/hzrsn/"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">unconfined</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/solutions/W2D3_Tutorial1_Solution_3637d20e.py"><em>Click for solution</em></a></p>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/solutions/W2D3_Tutorial1_Solution_8b3d4f01.py"><em>Click for solution</em></a></p>
+</div>
+</div>
+<div class="section" id="section-2-2-a-sub-region-of-the-map-of-world3">
+<h2><strong>Section 2.2: A Sub-region of the Map of <code class="docutils literal notranslate"><span class="pre">World3</span></code></strong><a class="headerlink" href="#section-2-2-a-sub-region-of-the-map-of-world3" title="Permalink to this headline">¶</a></h2>
+<p>Here is a reduced diagram containing only some major variables in the model and their couplings:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s2">"https://osf.io/download/h3mj2/"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">250</span><span class="p">))</span>
-<span class="c1">#modified from another copyrighted image from Limits To Growth (1972, page 97). This woudl be easy to reproduce</span>
+<span class="c1">#modified from another copyrighted image from Limits To Growth (1972, page 97)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Follow the dependencies. E.g. industrial capital grows wtih investment and produces industrial output that generates pollution and argicultural capital. Along with cultivated land, the latter generate food. Increasing pollution and decreasing (-) food per capita drive up mortality, which decreases population via the deaths per year, while fertility increases population via births per year.</p>
-</div>
-<div class="section" id="section-3-pyworld3">
-<h1>Section 3: Pyworld3<a class="headerlink" href="#section-3-pyworld3" title="Permalink to this headline">¶</a></h1>
-<p>We’ll be using a nice python implementation of this model called <code class="docutils literal notranslate"><span class="pre">pyworld3</span></code> that is openly accessible: https://github.com/cvanwynsberghe/pyworld3.</p>
-<div class="cell tag_colab docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># !pip install pyworld3</span>
-<span class="c1"># # if running locally (i.e. into in collab) run this instead:</span>
-<span class="c1"># import sys</span>
-<span class="c1"># !{sys.executable} - m pip install pyworld3</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>load the model</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyworld3</span> <span class="kn">import</span> <span class="n">World3</span>
-<span class="kn">from</span> <span class="nn">pyworld3.utils</span> <span class="kn">import</span> <span class="n">plot_world_variables</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>We’ve defined a useful plotting function that we will use that has two inputs we will vary:</p>
+<p>This image can be used to follow a <em>pathway</em> describing the flow of model variable dependencies to gain insight into how the model works (note this use of the word ‘pathway’ is distinct from that in ‘socioeconomic pathways’). When a pathway comes back to itself, this is a termed a feedback pathway (or feedback loop) by which changes can be amplified or attenuated by the way the model couples distinct variables. Recall from W1D1 that there are two types of feedbacks: positives feedbacks (change in variable A causes a change in variable B, which in turn causes a change in variable A in the same direction as the initial change) and negative feedbaks (change in variable A causes a change in variable B, which in turn causes a change in variable A in the opposite direction as the initial change).</p>
+<p>Let’s look at some important feedback pathways in the model that appear in this image (also see pg. 95 of <a class="reference external" href="http://www.donellameadows.org/wp-content/userfiles/Limits-to-Growth-digital-scan-version.pdf">Limits of growth</a>):</p>
 <ul class="simple">
-<li><p>the initial amount of non-renewable resources (<code class="docutils literal notranslate"><span class="pre">nri_factor</span></code>), and</p></li>
-<li><p>a perturbed value of the lifetime of industrial capital to which the system will be perturbed at the perturbation year (<code class="docutils literal notranslate"><span class="pre">new_lifetime_industrial_capital</span></code>)</p></li>
+<li><p>The two positive feedback loops involving births and investment generate the exponential growth behavior of population and capital, respectively.</p>
+<ul>
+<li><p>Investment drives industrial capital which drives industrial output which drives investment.</p></li>
+<li><p>Population drives births drives population.</p></li>
 </ul>
-<p>Let’s also set the year up to which we want to run the simulations</p>
+</li>
+<li><p>The two negative feedback loops involving deaths and depreciation tend to regulate this exponential growth.</p>
+<ul>
+<li><p>Industrial capital drives up depreciation which lowers industrial capital.</p></li>
+<li><p>Population drives deaths which lowers population.</p></li>
+</ul>
+</li>
+</ul>
+<p>There is a clear and intricate web of dependencies between these various factors. Changes in one area, such as industrial investment, can have cascading effects through this system, ultimately influencing population size, health, and wellbeing. This underscores the interconnected nature of socio-economic systems and the environment.</p>
+<div class="section" id="questions-2-2">
+<h3><strong>Questions 2.2</strong><a class="headerlink" href="#questions-2-2" title="Permalink to this headline">¶</a></h3>
+<p>Based on the model variable dependancy pathway described above and in the image, can you describe a:</p>
+<ol class="simple">
+<li><p><em>Positive</em> feedback loop?</p></li>
+<li><p><em>Negative</em> feedback loop?</p></li>
+</ol>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/solutions/W2D3_Tutorial1_Solution_9c4840e8.py"><em>Click for solution</em></a></p>
+</div>
+<div class="section" id="a-note-on-exponential-growth-in-a-bounded-system">
+<h3>A note on exponential growth in a bounded system<a class="headerlink" href="#a-note-on-exponential-growth-in-a-bounded-system" title="Permalink to this headline">¶</a></h3>
+<p>Consider a bounded system undergoing only positive feedback leading to exponential growth. The characteristic duration of growth until the system state reaches the system boundary is only weakly sensitive to the size of the boundary. For example, in the context of exponential resource-driven economic growth on Earth, reaching the boundary means exhausting its accessible physical resources. Ten times more or less of the starting amount of accessible resources only changes the time at which those resources are exhausted by a factor of 2 up or down, respectively.</p>
+<p>Physics demands that behind the exponential extraction of resources is an exponential use of an energy resource. In recent times on Earth, this has been fossil fuels, which are non-renewable. Legitimate concerns of peak oil in the late 1990s were quelled by the Shale revolution in the United States and other technological advances in oil and gas exploration and exploitation. These have increased (by a factor between 2 and 4) the total amount of known reserves that can be profitably exploited. While this increase is significant on an linear scale, it is negligible on an exponential scale. Looking forward, the largest estimates for how much larger accessible oil and gas reserves will be are within an order of magnitude of current reserves. Presuming resource-driven growth economics continues, whatever accessible oil and gass is left will then be exhausted within a short period of time (e.g. within a century).</p>
+<p>Exponential growth in a bounded system will often slow as it reaches the boundary because of boundary-sized feedback effects. In our case, demand growth for fossil fuels is starting to slow with the development of renewable energy sources. There still substantial uncertainty about how these feedbacks will play out. Some questions to consider:</p>
+<ul class="simple">
+<li><p>whether the transition to renewable energy sources can happen before we exhaust the associated non-renewable resources.</p></li>
+<li><p>Once transitioned, whether the non-renewable resource use (e.g. of rare-earth metals) needed to sustain the renewable energy sector is sustainable in a growth-based economics</p></li>
+<li><p>Once transitioned, whether this renewable energy resource might not slow, but instead accelerate the extraction of all non-renewable resources (see <a class="reference external" href="https://en.wikipedia.org/wiki/Jevons_paradox">Jevon’s paradox</a>).</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="section-3-working-with-pyworld3">
+<h1><strong>Section 3: Working with <code class="docutils literal notranslate"><span class="pre">pyworld3</span></code></strong><a class="headerlink" href="#section-3-working-with-pyworld3" title="Permalink to this headline">¶</a></h1>
+<p>In this section you will use a <code class="docutils literal notranslate"><span class="pre">python</span></code> implementation of the <code class="docutils literal notranslate"><span class="pre">World3</span></code> called <code class="docutils literal notranslate"><span class="pre">pyworld3</span></code>. This model is openly accessible <a class="reference external" href="https://github.com/cvanwynsberghe/pyworld3">here</a>.</p>
+<p>We have pre-defined a plotting function that also runs <code class="docutils literal notranslate"><span class="pre">pyworld3</span></code>, that you will use in this section. The plotting function has two inputs:</p>
+<ul class="simple">
+<li><p><strong>nri_factor</strong>: the initial amount of non-renewable resources. For example, this could include coal, natural gas and oil.</p></li>
+<li><p><strong>new_lifetime_industrial_capital</strong>: a perturbed value of the lifetime of industrial capital to which the system will be perturbed at the perturbation year. For example, this variable could be used to represent a transition from fossil fuel-burning power plants to lower-emitting technologies.</p></li>
+</ul>
+<p>In addition, you need to set the end year of the simulations you wish to conduct. In this example, you should stop the simulations at 2100, which is also when most IPCC Earth System Model projections end.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">maxyear</span> <span class="o">=</span> <span class="mi">2100</span>
@@ -1273,126 +1553,118 @@ The IAM projections that use these forcings profiles feed the temperature effect
 </div>
 </div>
 </div>
-<div class="section" id="case-1-original-business-as-usual-bau-model-parameters">
-<h2>Case 1: original (Business-As-Usual - BAU) model parameters<a class="headerlink" href="#case-1-original-business-as-usual-bau-model-parameters" title="Permalink to this headline">¶</a></h2>
+<p>In this section, you will use <code class="docutils literal notranslate"><span class="pre">pyworld3</span></code> to assess changes associated with three different scenarios:</p>
+<ol class="simple">
+<li><p><strong>Business-As-Usual (BAU)</strong>: assumes continued growth based on historical trends and specified amount of non-renewable resources</p></li>
+<li><p><strong>Abundant Resources (BAU3)</strong>: same as BAU but with triple the amount of initial non-renewable resources</p></li>
+<li><p><strong>BAU3 with Active Cap on Production</strong>: same as BAU3 but a step decrease in the lifetime of industrial capital, by imposing a reduction from 14 to 8 years in 2025.</p></li>
+</ol>
+<p>For each scenario, you will plot and assess changes in multiple variables:</p>
+<ul class="simple">
+<li><p><strong>Death rate</strong>: number of deaths per 1000 people</p></li>
+<li><p><strong>Deaths</strong>: number of deaths</p></li>
+<li><p><strong>Pollution</strong>: index of persistent pollution (fraction of peristent pollution in 1970 = 1.36e8 pollution units)</p></li>
+<li><p><strong>Population</strong>: population (people)</p></li>
+<li><p><strong>Food</strong>: food production per capita (vegetable-equivalent kilograms/person-year)</p></li>
+<li><p><strong>Industry</strong>: industrial output per capita (dollars/person-year)</p></li>
+<li><p><strong>Resource</strong>: nonrenewable resource fraction remaining (of 1e12 resource units). This includes all nonrenewable resources (e.g. ecosystems).</p></li>
+</ul>
+<div class="section" id="section-3-1-original-business-as-usual-bau-scenario">
+<h2><strong>Section 3.1: Original (Business-As-Usual - <em>BAU</em>) Scenario</strong><a class="headerlink" href="#section-3-1-original-business-as-usual-bau-scenario" title="Permalink to this headline">¶</a></h2>
+<p>The Business-As-Usual (<em>BAU</em>) scenario assumes continued growth based on historical trends. In this scenario there is specified amount of accessible, remaining non-renewable resources (normalized to 1 in the plots).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">world3</span> <span class="o">=</span> <span class="n">World3</span><span class="p">(</span><span class="n">year_max</span><span class="o">=</span><span class="n">maxyear</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">world3</span> <span class="o">=</span> <span class="n">World3</span><span class="p">(</span><span class="n">year_max</span><span class="o">=</span><span class="n">maxyear</span><span class="p">)</span> <span class="c1">#default value for nri_factor is 1</span>
 <span class="n">run_and_plot</span><span class="p">(</span><span class="n">world3</span><span class="p">)</span>
-<span class="c1"># pl.savefig("world3_timeseries_case_1.png",transparent=True,bbox_inches="tight",dpi=300)</span>
+<span class="c1"># plt.savefig("world3_timeseries_case_1.png",transparent=True,bbox_inches="tight",dpi=300)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Observe how industrial output (rising orange), food per capita (rising green), and population (rising red) grow until diminishing non-renewable resources (falling blue) drive a fall in industrial production (falling orange).</p>
-<p>This tanks food production (falling green) and medical services which reverses the decreasing death rate trend (pink) and drops the population (falling red) over the second half of the 21st century.</p>
-<p>Here, the population projection for IPCC baseline scenario for SSP2 is shown as the red dashed line.</p>
+<p>Initially, industrial production (rising orange), food per capita (rising green) and population (rising red) experience growth. However, as non-renewable resources start rapidly decline (falling blue), industrial production begins to decline (falling orange). This decline subsequently causes a decrease in food production (falling green), which causes an increase in the death rate (rising pink) and a decline in population (falling red) during the latter half of the 21st century. This scenario is resource-constrained because the collapse in growth that occured in the middle of the 21st century was initially driven by a decline in available resources.</p>
+<p>For comparison, the red dashed line represents the population projection for the IPCC baseline scenario of SSP2, a ‘Middle of the road’ scenario in which current trends continue (effecively the business-as-usual SSP scenario). Note the difference with the population projection of <code class="docutils literal notranslate"><span class="pre">world3</span></code>’s BAU scenario. While a priori unclear, the origin of this discrepancy likely arises from the different values that were chosen for the many parameters as well as which components and interactions were assumed when designing a world model or IAM. One obvious difference is the assumption of continued economic growth (decoupled from resource use) in SSP2. The large prediction uncertainty inherent in this modelling activity limits its predictive power. However, characteristic mechanisms (e.g. feedback pathways) are shared across these very different models and imply characteristic phenomena (e.g. population saturation).</p>
 </div>
-<div class="section" id="case-2-bau3-increased-efficiency">
-<h2>Case 2: BAU3 - increased efficiency<a class="headerlink" href="#case-2-bau3-increased-efficiency" title="Permalink to this headline">¶</a></h2>
-<p><em>Exercise</em>: Now, triple the initial resources, modelling the effect of increased efficiency in resource extraction (e.g. crop yields, as has been observed over the last decades, or “learning-by-doing” effect seen in the economics of many energy technologies)</p>
+<div class="section" id="section-3-2-bau3-an-abundant-resource-scenario">
+<h2><strong>Section 3.2: <em>BAU3</em> - An Abundant Resource Scenario</strong><a class="headerlink" href="#section-3-2-bau3-an-abundant-resource-scenario" title="Permalink to this headline">¶</a></h2>
+<p>The previous scenario was resource-constrained, as the collapse in growth was driven by the limited available resources in the middle of the 21st century. In this section you will create a scenario that is not purely resource-constrained by initializing the <code class="docutils literal notranslate"><span class="pre">pyworld3</span></code> with triple the initial non-renewable resources of the <em>BAU</em> scenario. As such, let’s call this new scenario <em>BAU3</em>.</p>
+<div class="section" id="coding-exercise-3-2">
+<h3><strong>Coding Exercise 3.2</strong><a class="headerlink" href="#coding-exercise-3-2" title="Permalink to this headline">¶</a></h3>
+<p>To create the <em>BAU3</em> scenario you will need to triple the initial resources (<code class="docutils literal notranslate"><span class="pre">nri_factor</span></code>). Tripling the initial resources could represent the effect of increased efficiency in resource extraction via approaches such as changes in crop yields (as has been observed over recent decades), or the “learning-by-doing” effect that productivity is achieved through practice and innovations (as seen in the economics of many energy technologies).</p>
+<p><strong>Based on the input parameters of the <code class="docutils literal notranslate"><span class="pre">run_and_plot()</span></code> function discussed above, run the <em>BAU3</em> scenario and plot the output.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">run_and_plot</span><span class="p">(</span><span class="n">world3</span><span class="p">,</span> <span class="n">nri_factor</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="c1"># pl.savefig("world3_timeseries_case_2.png",transparent=True,bbox_inches="tight",dpi=300)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#################################################</span>
+<span class="c1"># Students: Fill in missing code (...) and comment or remove the next line</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">"Student exercise: Based on the input parameters of the `run_and_plot()` function discussed above, run the BAU3 scenario and plot the output."</span><span class="p">)</span>
+<span class="c1">#################################################</span>
+
+<span class="n">run_and_plot</span><span class="p">(</span><span class="n">world3</span><span class="p">,</span> <span class="n">nri_factor</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="c1"># plt.savefig("world3_timeseries_case_2.png",transparent=True,bbox_inches="tight",dpi=300)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Observe that the crash in industrial output still occurs for this larger resource pool, only now delayed (here by a few decades). Unlike the previous case, soaring pollution (purple) from those extra decades of exponential industrial output precipitates a faster and larger (relative to case 1) population crash starting mid-century.</p>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/solutions/W2D3_Tutorial1_Solution_cf331b68.py"><em>Click for solution</em></a></p>
+<p><em>Example output:</em></p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/static/W2D3_Tutorial1_Solution_cf331b68_1.png"><img align="center" alt="Solution hint" class="align-center" src="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/static/W2D3_Tutorial1_Solution_cf331b68_1.png" style="width: 1037.0px; height: 683.0px;"/></a>
+<p>Notice that the decline in industrial production (orange) still occurs in this scenario, but it is delayed by a few decades due to the larger initial resource pool (blue). However, unlike the previous case that was resource-constrained, the extended period of exponential industrial growth (orange) in this scenario leads to a significant increase in pollution (purple). As a result, the population crash (red), which is now driven by both increased pollution (purple) and diminishing resources (blue), is faster and more substantial than the <em>BAU</em> scenario’s population crash.</p>
+<p>In this BAU3 scenario, the population growth and crash more closely resembles the population projection for the IPCC baseline scenario of SSP2 than the BAU scenario, but there is still a contrast between the two population projections.</p>
 </div>
-<div class="section" id="case-3-bau3-with-active-cap-on-production">
-<h2>Case 3: BAU3 with active cap on production<a class="headerlink" href="#case-3-bau3-with-active-cap-on-production" title="Permalink to this headline">¶</a></h2>
-<p><em>Exercise</em>: Turn down production abruptly via a step decrease in the lifetime of industrial capital (from 14 to 8 years occuring at 2025).
-(see Rozenberg et al. <em>Environ. Res. Lett.</em> (2015) for an IAM analysis of transitioning with reductions in lifetime capital)</p>
+</div>
+<div class="section" id="section-3-3-bau3-with-an-active-cap-on-production">
+<h2><strong>Section 3.3: <em>BAU3</em> with an Active Cap on Production</strong><a class="headerlink" href="#section-3-3-bau3-with-an-active-cap-on-production" title="Permalink to this headline">¶</a></h2>
+<p>In the BAU and BAU3 scenarios, we assessed the impact of changes in initial resource availability (<code class="docutils literal notranslate"><span class="pre">nri_factor</span></code>). However, another important variable to consider is the lifetime of industrial capital (<code class="docutils literal notranslate"><span class="pre">new_lifetime_industrial_capital</span></code>). Economic growth is likely to result in increaesd energy demand, but it’s essential to find a way to avoid high levels of climate warming while also meeting the growing world energy demands. To do so would require rapidly transforming current capital infrastructure in our energy system so that it relies on technologies that produce significantly less greenhouse gas emissions. For further details of IAM transitioning with reductions in lifetime capital see <a class="reference external" href="https://iopscience.iop.org/article/10.1088/1748-9326/10/9/095006/pdf">Rozenberg et al. <em>Environ. Res. Lett.</em> (2015)</a>.</p>
+<p>In this section, you will assess the effects of reducing the lifetime of industrial capital. We will use the same BAU3 scenario with triple the initial resources, but will adjust the <code class="docutils literal notranslate"><span class="pre">new_lifetime_industrial_capital</span></code> variable to reflect a reduced lifetime of industrial capital. Specifically, this scenario turn down production abruptly via a step decrease in the lifetime of industrial capital, by imposing a reduction from 14 to 8 years in 2025.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">world3</span> <span class="o">=</span> <span class="n">World3</span><span class="p">(</span><span class="n">pyear</span><span class="o">=</span><span class="mi">2025</span><span class="p">,</span> <span class="n">year_max</span><span class="o">=</span><span class="mi">2100</span><span class="p">)</span>
 <span class="n">run_and_plot</span><span class="p">(</span><span class="n">world3</span><span class="p">,</span> <span class="n">nri_factor</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">new_lifetime_industrial_capital</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
-<span class="c1"># pl.savefig("world3_timeseries_case_3.png",transparent=True,bbox_inches="tight",dpi=300)</span>
+<span class="c1"># plt.savefig("world3_timeseries_case_3.png",transparent=True,bbox_inches="tight",dpi=300)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Observe that turning down production limits pollution, which limits the drop in population to a (transient) plateau and leaves intact a significant amount of non-renewable resources (e.g. ecosystems). However, the asymptotic death rate eventually creeps up to that of case 2.</p>
-<p>Dropping industrial output affects our ability to develop new technologies, e.g. those needed for decarbonization (c.f. the article <em>Decarbonizing the downturn: Addressing climate change in an age of stagnation</em> by Copley et al. <em>Competition &amp; Change</em>, 2022). This stagnation scenario is a central challenge we face in the narrative of Shared Socio-economic Pathway 3 (SSP3 <em>Regional Rivary</em>).</p>
-<p>Activity Questions:</p>
+<p>Notice that by reducing production (orange), pollution levels are also reduced (purple), which in turn limits the decline in population to a plateau (red). This approach preserves a significant amount of non-renewable resource (blue). However, over time, the asymptotic death rate (pink) gradually increases, approaching that of the BAU3 scenario without the reduced production. As a result, the population plateau is not sustained, and the population continues to decline slowly beyond the year 2100.</p>
+<p>Additionally, dropping industrial output (as we did in this scenario) negatively impacts our ability to develop new technologies, e.g. those needed for decarbonization (c.f. the article <a class="reference external" href="https://journals.sagepub.com/doi/full/10.1177/10245294221120986">Decarbonizing the downturn: Addressing climate change in an age of stagnation by Copley, 2022</a>. This stagnation scenario is a central challenge faced in the narrative of Shared Socio-economic Pathway 3 (SSP3 <em>Regional Rivary</em>).</p>
+<div class="section" id="questions-3-3">
+<h3><strong>Questions 3.3:</strong><a class="headerlink" href="#questions-3-3" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>What scenarios might lead to a drop in the lifetime of industrial capital?</p></li>
+<li><p>What are some important features of the world, society, and/or economy that are missing in this model?</p></li>
+</ol>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/solutions/W2D3_Tutorial1_Solution_4f5777c0.py"><em>Click for solution</em></a></p>
+</div>
+</div>
+<div class="section" id="section-3-4-validity-and-limitations-of-pyworld3">
+<h2><strong>Section 3.4: Validity and Limitations of <code class="docutils literal notranslate"><span class="pre">pyworld3</span></code></strong><a class="headerlink" href="#section-3-4-validity-and-limitations-of-pyworld3" title="Permalink to this headline">¶</a></h2>
+<p>Validity analyses for <code class="docutils literal notranslate"><span class="pre">pyworld3</span></code> are presented in the <code class="docutils literal notranslate"><span class="pre">pyworld3</span></code> github repository. For example, shown below is the <code class="docutils literal notranslate"><span class="pre">pyworld3</span></code> standard run simulation output (shown in the same colors we’ve been using throughout this tutorial) compared to the original World3 model output (shown in black):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s2">"https://github.com/cvanwynsberghe/pyworld3/raw/main/img/result_standard_run.png"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">250</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Overall, the <code class="docutils literal notranslate"><span class="pre">pyworld3</span></code> simulation output replicates well the original World3 simulation.</p>
+<p>Note that there are limitations to the <code class="docutils literal notranslate"><span class="pre">world3</span></code> model that are important to remember:</p>
 <ul class="simple">
-<li><p>What scenarios can you think of that would lead to such a drop in the lifetime of industrial capital?</p></li>
-<li><p>What are some important features of the world/society/the economy that you think this model is missing? Do you have ideas for how to implement them here?</p></li>
-</ul>
-<p>Model Limitations</p>
-<ul class="simple">
-<li><p>no spatial structure: spatial structure is important! (allows for distinct regional solutions that aid or hinder global cooperation, c.f. emergence of cooperation in game theory).</p></li>
-<li><p>ignores technology innovation, in particular that focussed on adaptation and mitigation</p></li>
-<li><p><em>ad hoc</em> setting of relationship between economic growth, investment in health services, and changes in life expectancy</p></li>
-<li><p>only includes a monolithic non-renewable resource (e.g. doesn’t breakdown the resource into renewable &amp; nonrenewable classes)</p></li>
-<li><p>…probably lots more!</p></li>
+<li><p>There is no spatial structure. Spatial structure is important, as it allows for distinct regional solutions that aid or hinder global cooperation</p></li>
+<li><p>The model ignores technology innovation, including innovations in adaptation and mitigation</p></li>
+<li><p>There is an <em>ad hoc</em> relationship between economic growth, investment in health services, and changes in life expectancy</p></li>
+<li><p>The model only includes a monolithic non-renewable resource (e.g. doesn’t break down the resource into renewable and non-renewable classes)</p></li>
 </ul>
 </div>
 </div>
-<hr class="docutils"/>
-<div class="section" id="appendix">
-<h1>Appendix<a class="headerlink" href="#appendix" title="Permalink to this headline">¶</a></h1>
-<p>For easy reference, here is the validity analyses presented in the pyworld3 github repository. These are standard parameter runs of the model overlayed with those of original implementation to show validity of the <code class="docutils literal notranslate"><span class="pre">pyworld3</span></code> package implementation</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">world3</span> <span class="o">=</span> <span class="n">World3</span><span class="p">()</span>
-<span class="c1"># nonrenewable resources initial [resource units]</span>
-<span class="n">world3</span><span class="o">.</span><span class="n">init_world3_constants</span><span class="p">()</span>
-<span class="n">world3</span><span class="o">.</span><span class="n">init_world3_variables</span><span class="p">()</span>
-<span class="n">world3</span><span class="o">.</span><span class="n">set_world3_table_functions</span><span class="p">()</span>
-<span class="n">world3</span><span class="o">.</span><span class="n">set_world3_delay_functions</span><span class="p">()</span>
-<span class="n">world3</span><span class="o">.</span><span class="n">run_world3</span><span class="p">(</span><span class="n">fast</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
+<div class="section" id="summary">
+<h1><strong>Summary</strong><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial, you explored a socio-economic model based on resource extraction. This is the conceptual basis of the world models within IAMs used in IPCC projections.</p>
+<p>You examined this interplay through <code class="docutils literal notranslate"><span class="pre">World3</span></code>, a <em>World model</em> which is a class of model similar to IAMs. You followed several variable dependency pathways within this model to identify some positive and negative feedback loops, and then you used this model to simulate 3 future scenarios which varied in their amount of initially available non-renewable resources and the lifetime of capital. Through these simulations you explored the factors driving current population growth, and its future projected decline or stabilization. In particular, you found rapid resource consumption can have negative impacts by exhausting these resources and/or by increasing pollution and reducing human health, thus highlighting the potential threats of unregulated resource extraction on a finite planet.</p>
+<p>Finally, you learned about some of the limitations of models like <code class="docutils literal notranslate"><span class="pre">World3</span></code>, as they don’t include some important natural and socio-economic variables. By exploring these complex concepts, you are now better equipped to engage with discussions on climate change, resource management, and sustainable economic growth.</p>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_world_variables</span><span class="p">(</span><span class="n">world3</span><span class="o">.</span><span class="n">time</span><span class="p">,</span>
-                     <span class="p">[</span><span class="n">world3</span><span class="o">.</span><span class="n">nrfr</span><span class="p">,</span> <span class="n">world3</span><span class="o">.</span><span class="n">iopc</span><span class="p">,</span> <span class="n">world3</span><span class="o">.</span><span class="n">fpc</span><span class="p">,</span> <span class="n">world3</span><span class="o">.</span><span class="n">pop</span><span class="p">,</span>
-                      <span class="n">world3</span><span class="o">.</span><span class="n">ppolx</span><span class="p">],</span>
-                     <span class="p">[</span><span class="s2">"NRFR"</span><span class="p">,</span> <span class="s2">"IOPC"</span><span class="p">,</span> <span class="s2">"FPC"</span><span class="p">,</span> <span class="s2">"POP"</span><span class="p">,</span> <span class="s2">"PPOLX"</span><span class="p">],</span>
-                     <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1e3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1e3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">16e9</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">32</span><span class="p">]],</span>
-                     <span class="n">img_background</span><span class="o">=</span><span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s2">"https://osf.io/download/r4npd/"</span><span class="p">,</span><span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">),</span>
-<span class="c1">#                      img_background=urllib.request.urlopen("https://osf.io/download/r4npd/"),</span>
-<span class="c1">#                      img_background=data_dir+"fig7-7.png",</span>
-                     <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
-                     <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                     <span class="n">grid</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_world_variables</span><span class="p">(</span><span class="n">world3</span><span class="o">.</span><span class="n">time</span><span class="p">,</span>
-                     <span class="p">[</span><span class="n">world3</span><span class="o">.</span><span class="n">fcaor</span><span class="p">,</span> <span class="n">world3</span><span class="o">.</span><span class="n">io</span><span class="p">,</span> <span class="n">world3</span><span class="o">.</span><span class="n">tai</span><span class="p">,</span> <span class="n">world3</span><span class="o">.</span><span class="n">aiph</span><span class="p">,</span>
-                      <span class="n">world3</span><span class="o">.</span><span class="n">fioaa</span><span class="p">],</span>
-                     <span class="p">[</span><span class="s2">"FCAOR"</span><span class="p">,</span> <span class="s2">"IO"</span><span class="p">,</span> <span class="s2">"TAI"</span><span class="p">,</span> <span class="s2">"AI"</span><span class="p">,</span> <span class="s2">"FIOAA"</span><span class="p">],</span>
-                     <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">4e12</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">4e12</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">2e2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.201</span><span class="p">]],</span>
-                     <span class="n">img_background</span><span class="o">=</span><span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s2">"https://osf.io/download/d6gz2/"</span><span class="p">,</span><span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">),</span>
-                     <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
-                     <span class="n">title</span><span class="o">=</span><span class="s2">"World3 standard run - Capital sector"</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_world_variables</span><span class="p">(</span><span class="n">world3</span><span class="o">.</span><span class="n">time</span><span class="p">,</span>
-                     <span class="p">[</span><span class="n">world3</span><span class="o">.</span><span class="n">ly</span><span class="p">,</span> <span class="n">world3</span><span class="o">.</span><span class="n">al</span><span class="p">,</span> <span class="n">world3</span><span class="o">.</span><span class="n">fpc</span><span class="p">,</span> <span class="n">world3</span><span class="o">.</span><span class="n">lmf</span><span class="p">,</span>
-                      <span class="n">world3</span><span class="o">.</span><span class="n">pop</span><span class="p">],</span>
-                     <span class="p">[</span><span class="s2">"LY"</span><span class="p">,</span> <span class="s2">"AL"</span><span class="p">,</span> <span class="s2">"FPC"</span><span class="p">,</span> <span class="s2">"LMF"</span><span class="p">,</span> <span class="s2">"POP"</span><span class="p">],</span>
-                     <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">4e3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">4e9</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">8e2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.6</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">16e9</span><span class="p">]],</span>
-                    <span class="n">img_background</span><span class="o">=</span><span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s2">"https://osf.io/download/t2qdm/"</span><span class="p">,</span><span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">),</span>
-                     <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
-                     <span class="n">title</span><span class="o">=</span><span class="s2">"World3 standard run - Agriculture sector"</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
+<div class="section" id="resources">
+<h1><strong>Resources</strong><a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h1>
+<p>The data for the IAMs used in this tutorial, as well as the main simulations of the IAMs used in the IPCC reports can be accessed h<a class="reference external" href="https://tntcat.iiasa.ac.at/SspDb/dsd">here</a>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">pyworld3</span></code> model and data used in this tutorial can be accessed <a class="reference external" href="https://github.com/cvanwynsberghe/pyworld3">here</a>.</p>
 </div>
 <script type="text/x-thebe-config">
     {
@@ -1403,16 +1675,16 @@ The IAM projections that use these forcings profiles feed the temperature effect
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "pangeo"
+            mode: "python"
         },
         kernelOptions: {
-            kernelName: "pangeo",
+            kernelName: "python3",
             path: "./tutorials/W2D3_FutureClimate-IPCCII&IIISocio-EconomicBasis/student"
         },
         predefinedOutput: true
     }
     </script>
-<script>kernelName = 'pangeo'</script>
+<script>kernelName = 'python3'</script>
 </div>
 </main>
 <footer class="footer-article noprint">
@@ -1428,7 +1700,7 @@ The IAM projections that use these forcings profiles feed the temperature effect
 <a class="right-next" href="W2D3_Tutorial2.html" id="next-link" title="next page">
 <div class="prev-next-info">
 <p class="prev-next-subtitle">next</p>
-<p class="prev-next-title">Tutorial 2 - A first look at integrated assessment models</p>
+<p class="prev-next-title"><strong>Tutorial 2: Transition Goals and Integrated Assessment Models</strong></p>
 </div>
 <i class="fas fa-angle-right"></i>
 </a>

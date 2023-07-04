@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Tutorial 4 - Text analysis of COP tweets — Climatematch Academy: Computational Climate Science</title>
+<title>Tutorial 4: Public Opinion on the Climate Emergency and Why it Matters — Climatematch Academy: Computational Climate Science</title>
 <!-- Loaded before other Sphinx assets -->
 <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
@@ -483,8 +483,10 @@ const thebe_selector_output = ".output, .cell_output"
 <ul>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial1.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 1 : A Simple Greenhouse Model
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial2.html">
@@ -578,18 +580,24 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current">
 <li class="toctree-l2">
 <a class="reference internal" href="W2D3_Tutorial1.html">
-     Tutorial 1 - Limits to growth in World3: A toy world model of diminishing non-renewable resources
-    </a>
+<strong>
+      Tutorial Objectives
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W2D3_Tutorial2.html">
-     Tutorial 2 - A first look at integrated assessment models
-    </a>
+<strong>
+      Tutorial 2: Transition Goals and Integrated Assessment Models
+     </strong>
+</a>
 </li>
 <li class="toctree-l2 current active">
 <a class="current reference internal" href="#">
-     Tutorial 4 - Text analysis of COP tweets
-    </a>
+<strong>
+      Tutorial 4: Public Opinion on the Climate Emergency and Why it Matters
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../further_reading.html">
@@ -626,18 +634,24 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.html">
-     Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
-    </a>
+<strong>
+      Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.html">
-     Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
-    </a>
+<strong>
+      Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial4.html">
-     Tutorial 9:  Exploring other applications
-    </a>
+<strong>
+      Tutorial 4:  Exploring other applications
+     </strong>
+</a>
 </li>
 </ul>
 </li>
@@ -829,47 +843,110 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#">
-   Tutorial 4 - Text analysis of COP tweets
-  </a>
+<strong>
+    Tutorial 4: Public Opinion on the Climate Emergency and Why it Matters
+   </strong>
+</a>
 </li>
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#tutorial-objectives">
-   Tutorial Objectives
-  </a>
+<strong>
+    Tutorial Objectives
+   </strong>
+</a>
 </li>
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#setup">
-   Setup
-  </a>
+<strong>
+    Setup
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-0-data-preprocessing">
-     Section 0: Data preprocessing
+<a class="reference internal nav-link" href="#figure-settings">
+     Figure settings
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#video-2-a-simple-greenhouse-model">
+     Video 2: A Simple Greenhouse Model
     </a>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-1-load-and-inspect-data">
-   Section 1: load and inspect data
-  </a>
+<a class="reference internal nav-link" href="#section-1-data-preprocessing">
+<strong>
+    Section 1: Data Preprocessing
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-load-and-inspect-data">
+<strong>
+    Section 2: Load and Inspect Data
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-2-word-set-prevelance">
-     Section 2: Word set prevelance
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-3-sentiment-analysis">
-     Section 3: Sentiment analysis
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-4-word-clouds">
-     Section 4: word clouds
-    </a>
+<a class="reference internal nav-link" href="#coding-exercise-2">
+<strong>
+      Coding Exercise 2
+     </strong>
+</a>
 </li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-3-word-set-prevalence">
+<strong>
+    Section 3: Word Set Prevalence
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-3">
+<strong>
+      Questions 3
+     </strong>
+</a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#coding-exercise-3">
+<strong>
+      Coding Exercise 3
+     </strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-4-sentiment-analysis">
+<strong>
+    Section 4: Sentiment Analysis
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-5-word-clouds">
+<strong>
+    Section 5: Word Clouds
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#summary">
+<strong>
+    Summary
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#resources">
+<strong>
+    Resources
+   </strong>
+</a>
 </li>
 </ul>
 </nav>
@@ -879,7 +956,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="col pl-md-3 pl-lg-5 content-container">
 <!-- Table of contents that is only displayed when printing the page -->
 <div class="onlyprint" id="jb-print-docs-body">
-<h1>Tutorial 4 - Text analysis of COP tweets</h1>
+<h1>Tutorial 4: Public Opinion on the Climate Emergency and Why it Matters</h1>
 <!-- Table of contents -->
 <div id="print-main-content">
 <div id="jb-print-toc">
@@ -890,47 +967,110 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#">
-   Tutorial 4 - Text analysis of COP tweets
-  </a>
+<strong>
+    Tutorial 4: Public Opinion on the Climate Emergency and Why it Matters
+   </strong>
+</a>
 </li>
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#tutorial-objectives">
-   Tutorial Objectives
-  </a>
+<strong>
+    Tutorial Objectives
+   </strong>
+</a>
 </li>
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#setup">
-   Setup
-  </a>
+<strong>
+    Setup
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-0-data-preprocessing">
-     Section 0: Data preprocessing
+<a class="reference internal nav-link" href="#figure-settings">
+     Figure settings
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#video-2-a-simple-greenhouse-model">
+     Video 2: A Simple Greenhouse Model
     </a>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-1-load-and-inspect-data">
-   Section 1: load and inspect data
-  </a>
+<a class="reference internal nav-link" href="#section-1-data-preprocessing">
+<strong>
+    Section 1: Data Preprocessing
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-load-and-inspect-data">
+<strong>
+    Section 2: Load and Inspect Data
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-2-word-set-prevelance">
-     Section 2: Word set prevelance
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-3-sentiment-analysis">
-     Section 3: Sentiment analysis
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-4-word-clouds">
-     Section 4: word clouds
-    </a>
+<a class="reference internal nav-link" href="#coding-exercise-2">
+<strong>
+      Coding Exercise 2
+     </strong>
+</a>
 </li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-3-word-set-prevalence">
+<strong>
+    Section 3: Word Set Prevalence
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-3">
+<strong>
+      Questions 3
+     </strong>
+</a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#coding-exercise-3">
+<strong>
+      Coding Exercise 3
+     </strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-4-sentiment-analysis">
+<strong>
+    Section 4: Sentiment Analysis
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-5-word-clouds">
+<strong>
+    Section 5: Word Clouds
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#summary">
+<strong>
+    Summary
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#resources">
+<strong>
+    Resources
+   </strong>
+</a>
 </li>
 </ul>
 </nav>
@@ -939,35 +1079,27 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <main id="main-content" role="main">
 <div>
-<div class="section" id="tutorial-4-text-analysis-of-cop-tweets">
-<h1>Tutorial 4 - Text analysis of COP tweets<a class="headerlink" href="#tutorial-4-text-analysis-of-cop-tweets" title="Permalink to this headline">¶</a></h1>
-<p>Week 2, Day 3: IPCC Socio-economic Basis</p>
-<p>By Neuromatch Academy</p>
-<p>Content creators: Maximilian Puelma Touzel</p>
-<p>Content reviewers: Name Surname, Name Surname</p>
-<p>Content editors: Name Surname, Name Surname</p>
-<p>Production editors: Name Surname, Name Surname</p>
-<p>Our 2023 Sponsors</p>
+<div class="section" id="tutorial-4-public-opinion-on-the-climate-emergency-and-why-it-matters">
+<h1><strong>Tutorial 4: Public Opinion on the Climate Emergency and Why it Matters</strong><a class="headerlink" href="#tutorial-4-public-opinion-on-the-climate-emergency-and-why-it-matters" title="Permalink to this headline">¶</a></h1>
+<p><strong>Week 2, Day 3: IPCC Socio-economic Basis</strong></p>
+<p><strong>Content creators:</strong> Maximilian Puelma Touzel</p>
+<p><strong>Content reviewers:</strong> Peter Ohue, Derick Temfack, Zahra Khodakaramimaghsoud, Peizhen Yang, Younkap Nina Duplex, Laura Paccini, Sloane Garelick, Abigail Bodner, Manisha Sinha, Agustina Pesce, Dionessa Biton, Cheng Zhang, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Content editors:</strong> Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Production editors:</strong> Wesley Banfield, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Our 2023 Sponsors:</strong> NASA TOPS</p>
 </div>
-<hr class="docutils"/>
 <div class="section" id="tutorial-objectives">
-<h1>Tutorial Objectives<a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">¶</a></h1>
-<p>Learn to assess public sentiment about climate change and how it is changing by analyzing changes in word use on social media. An auxillary objective is to learn how to load and analyze large amounts of text</p>
+<h1><strong>Tutorial Objectives</strong><a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial, we will explore a dataset derived from Twitter, focusing on public sentiment surrounding the <a class="reference external" href="https://unfccc.int/process/bodies/supreme-bodies/conference-of-the-parties-cop">Conference of Parties (COP) climate change conferences</a>. We will use data from a published study by <a class="reference external" href="https://www.nature.com/articles/s41558-022-01527-x">Falkenberg et al. <em>Nature Clim. Chg.</em> 2022</a>. This dataset encompasses tweets mentioning the COP conferences, which bring together world governments, NGOs, and businesses to discuss and negotiate on climate change progress. Our main objective is to understand public sentiment about climate change and how it has evolved over time through an analysis of changing word usage on social media. In the process, we will also learn how to manage and analyze large quantities of text data.</p>
+<p>The tutorial is divided into sections, where we first delve into loading and inspecting the data, examining the timing and languages of the tweets, and analyzing sentiments associated with specific words, including those indicating ‘hypocrisy’. We’ll also look at sentiments regarding institutions within these tweets and compare the sentiment of tweets containing ‘hypocrisy’-related words versus those without. This analysis is supplemented with visualization techniques like word clouds and distribution plots.</p>
+<p>By the end of this tutorial, you will have developed a nuanced understanding of how text analysis can be used to study public sentiment on climate change and other environmental issues, helping us to navigate the intricate and evolving landscape of climate communication and advocacy.</p>
 </div>
-<hr class="docutils"/>
 <div class="section" id="setup">
-<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
-<p>Import libraries</p>
-<div class="cell tag_colab docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># !pip install afinn</span>
-</pre></div>
-</div>
-</div>
-</div>
+<h1><strong>Setup</strong><a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># imports</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">pl</span>
@@ -977,17 +1109,11 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
 <span class="c1">#notebook config</span>
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Math</span>
-<span class="kn">import</span> <span class="nn">glob</span>
-<span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">import</span> <span class="nn">datetime</span>
-<span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">import</span> <span class="nn">nltk</span>
-<span class="kn">from</span> <span class="nn">nltk.stem.porter</span> <span class="kn">import</span> <span class="n">PorterStemmer</span>
 <span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
 <span class="kn">from</span> <span class="nn">mpl_toolkits.axes_grid1.inset_locator</span> <span class="kn">import</span> <span class="n">inset_axes</span>
-<span class="kn">import</span> <span class="nn">urllib3</span>
 <span class="kn">import</span> <span class="nn">urllib.request</span>  <span class="c1"># the lib that handles the url stuff</span>
 <span class="kn">from</span> <span class="nn">afinn</span> <span class="kn">import</span> <span class="n">Afinn</span>
 <span class="kn">import</span> <span class="nn">pooch</span>
@@ -995,26 +1121,46 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>figure settings</p>
-<div class="cell docutils container">
+<div class="section" id="figure-settings">
+<h2>Figure settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">"ticks"</span><span class="p">,</span> <span class="p">{</span><span class="s1">'axes.grid'</span> <span class="p">:</span> <span class="kc">False</span><span class="p">})</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Figure settings</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>       <span class="c1"># interactive display</span>
+<span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = 'retina'
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">"https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/cma.mplstyle"</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">"ticks"</span><span class="p">,</span> <span class="p">{</span><span class="s1">'axes.grid'</span> <span class="p">:</span> <span class="kc">False</span><span class="p">})</span>
 <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s2">"&lt;style&gt;.container { width:100% !important; }&lt;/style&gt;"</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="section-0-data-preprocessing">
-<h2>Section 0: Data preprocessing<a class="headerlink" href="#section-0-data-preprocessing" title="Permalink to this headline">¶</a></h2>
-<p>We have done the following preprocessing steps for you (just read along; no need to run anything in this section):</p>
-<p>Twitter ids of tweets mentioning COPx (x=20-26) used in Falkenberg et al. (2022) were placed by the authors in an osf archive: https://osf.io/nu75j. Download the 7 .csv files (one for each COP) here: https://osf.io/download/pr29x/</p>
-<p>The program <code class="docutils literal notranslate"><span class="pre">twarc2</span></code> interfaces with the Twitter API. It can be used to hydrate the tweets (i.e. download the full tweet and metadata using the provided tweet id). Similar to github you have to open a Twitter API account and set up twarc on your local machine by giving it your account authentication keys. The command to rehyrdate a set of tweets from their ids is simply <code class="docutils literal notranslate"><span class="pre">twarc2</span> <span class="pre">hydrate</span> <span class="pre">source_file.txt</span> <span class="pre">store_file.jsonl</span></code>, where each line of <code class="docutils literal notranslate"><span class="pre">source_file.txt</span></code> is a Twitter id and <code class="docutils literal notranslate"><span class="pre">store_file.jsonl</span></code> is where the hydrated tweets are stored.</p>
+</div>
+<div class="section" id="video-2-a-simple-greenhouse-model">
+<h2>Video 2: A Simple Greenhouse Model<a class="headerlink" href="#video-2-a-simple-greenhouse-model" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Video 2: A Simple Greenhouse Model</span>
+<span class="c1">#Tech team will add code to format and display the video</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="section-1-data-preprocessing">
+<h1><strong>Section 1: Data Preprocessing</strong><a class="headerlink" href="#section-1-data-preprocessing" title="Permalink to this headline">¶</a></h1>
+<p>We have performed the following preprocessing steps for you (simply follow along; there is no need to execute any commands in this section):</p>
+<p>Every Twitter message (hereon called <em>tweets</em>) has an ID. IDs of all tweets mentioning <code class="docutils literal notranslate"><span class="pre">COPx</span></code> (x=20-26, which refers to the session number of each COP meeting) used in <a class="reference external" href="https://doi.org/10.1038/s41558-022-01527-x">Falkenberg et al. (2022)</a> were placed by the authors in an <a class="reference external" href="https://osf.io/nu75j">osf archive</a>. You can download the 7 .csv files (one for each COP) <a class="reference external" href="https://osf.io/download/pr29x/">here</a></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">twarc2</span></code> program serves as an interface with the Twitter API, allowing users to retrieve full tweet content and metadata by providing the tweet ID. Similar to GitHub, you need to create a Twitter API account and configure <code class="docutils literal notranslate"><span class="pre">twarc</span></code> on your local machine by providing your account authentication keys. To rehydrate a set of tweets using their IDs, you can use the following command: <code class="docutils literal notranslate"><span class="pre">twarc2</span> <span class="pre">hydrate</span> <span class="pre">source_file.txt</span> <span class="pre">store_file.jsonl</span></code>. In this command, each line of the <code class="docutils literal notranslate"><span class="pre">source_file.txt</span></code> represents a Twitter ID, and the hydrated tweets will be stored in the <code class="docutils literal notranslate"><span class="pre">store_file.jsonl</span></code>.</p>
 <ul class="simple">
-<li><p>First format the downloaded ids and split them into seperate files (<em>batches</em>) to make hydration calls to the API more time manageable (hours versus days - this is slow because of an API-imposed limit of 100 tweets/min.).</p></li>
+<li><p>First, format the downloaded IDs and split them into separate files (<em>batches</em>) to make hydration calls to the API more time manageable (hours versus days - this is slow because of an API-imposed limit of 100 tweets/min.).</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dir_name='Falkenberg2022_data/'</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import os</span>
+<span class="c1"># dir_name='Falkenberg2022_data/'</span>
 <span class="c1"># if not os.path.exists(dir_name):</span>
 <span class="c1">#     os.mkdir(dir_name)</span>
 <span class="c1"># batch_size = int(1e5)</span>
@@ -1029,11 +1175,13 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <ul class="simple">
-<li><p>Make the hydration calls for a COP (this took 4 days to download 50GB of data for COP26).</p></li>
+<li><p>Make the hydration calls for COP26 (this took 4 days to download 50GB of data for COP26).</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># copid=26</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import glob</span>
+<span class="c1"># import time</span>
+<span class="c1"># copid=26</span>
 <span class="c1"># filename_list = glob.glob('Falkenberg2022_data/'+"tweetids_COP"+str(copid)+"*")</span>
 <span class="c1"># dir_name='tweet_data/'</span>
 <span class="c1"># if not os.path.exists(dir_name):</span>
@@ -1051,9 +1199,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <ul class="simple">
-<li><p>Load data</p></li>
+<li><p>Load the data, then inspect and pick a chunk size. Note, by default, there are 100 tweets per line in the <code class="docutils literal notranslate"><span class="pre">.json</span></code> files returned by the API. Given we asked for 1e5 tweets/batch, there should be 1e3 lines in these files.</p></li>
 </ul>
-<p>Inspect and pick a chunk size. Note, by default there are 100 tweets per line in the .json files returned by the API. Given we asked for 1e5 tweets/batch, there should be 1e3 lines in these files.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># copid=26</span>
@@ -1065,7 +1212,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>Now we read in the data, iterating over chunks in each batch and only store the needed data in a dataframe (takes 10-20 minutes to run). Let’s look at when the tweets were posted, what language they are in, and the tweet text:</p>
+<ul class="simple">
+<li><p>Now we read in the data, iterating over chunks in each batch and only store the needed data in a dataframe (takes 10-20 minutes to run). Let’s look at when the tweets were posted, what language they are in, and the tweet text:</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># selected_columns = ['created_at','lang','text']</span>
@@ -1096,7 +1245,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <ul class="simple">
-<li><p>finally store the data in the efficiently compressed feather format</p></li>
+<li><p>Finally, store the data in the efficiently compressed feather format</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1105,21 +1254,19 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>(run notebook from here)</p>
 </div>
-</div>
-<div class="section" id="section-1-load-and-inspect-data">
-<h1>Section 1: load and inspect data<a class="headerlink" href="#section-1-load-and-inspect-data" title="Permalink to this headline">¶</a></h1>
-<p>Load the preprocessed data</p>
+<div class="section" id="section-2-load-and-inspect-data">
+<h1><strong>Section 2: Load and Inspect Data</strong><a class="headerlink" href="#section-2-load-and-inspect-data" title="Permalink to this headline">¶</a></h1>
+<p>Now that we have reviewed the steps that were taken to generate the preprocessed data, we can load the data. It may a few minutes to download the data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s2">"https://osf.io/8p52x/download"</span><span class="p">,</span><span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s2">"https://osf.io/download/8p52x/"</span><span class="p">,</span><span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 <span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_feather</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="c1">#takes a couple minutes to download</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Let’s check the timing of the tweets relative to the COP26 event to see how the tweets are spread over time.</p>
+<p>Let’s check the timing of the tweets relative to the COP26 event (duration shaded in blue in the plot you will make) to see how the number of tweets vary over time.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">total_tweetCounts</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">created_at</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">created_at</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">date</span><span class="p">))</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">'counts'</span><span class="p">)</span>
@@ -1132,7 +1279,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>Who is tweeting about this COP? Look at how many tweets were posted in various languages:</p>
+<p>In addition to assessing the number of tweets, we can also explore who was tweeting about this COP. Look at how many tweets were posted in various languages:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">counts</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
@@ -1140,7 +1287,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>The stored language name of the tweet is stored as a code name. Pull a language code dictionary from the web and use it to translate the language code to the language name.</p>
+<p>The language name of the tweet is stored as a code name. We can pull a language code dictionary from the web and use it to translate the language code to the language name.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">target_url</span><span class="o">=</span><span class="s1">'https://gist.githubusercontent.com/carlopires/1262033/raw/c52ef0f7ce4f58108619508308372edd8d0bd518/gistfile1.txt'</span>
@@ -1152,7 +1299,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p><em>Exercise</em>: find your native language code in the dictionary and use it to select the COP tweets that were written in your language!</p>
+<div class="section" id="coding-exercise-2">
+<h2><strong>Coding Exercise 2</strong><a class="headerlink" href="#coding-exercise-2" title="Permalink to this headline">¶</a></h2>
+<p>Run the following cell to print the dictionary for the language codes:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lang_code_dict</span>
@@ -1160,10 +1309,15 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>Select tweets of a given language</p>
+<p>Find your native language code in the dictionary you just printed and use it to select the COP tweets that were written in your language!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">language_code</span> <span class="o">=</span> <span class="s1">'en'</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#################################################</span>
+<span class="c1"># Students: Fill in missing code (...) and comment or remove the next line</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">"Student exercise: Find your native language code in the dictionary you just printed and use it to select the COP tweets that were written in your language!"</span><span class="p">)</span>
+<span class="c1">#################################################</span>
+
+<span class="n">language_code</span> <span class="o">=</span> <span class="s1">'en'</span>
 <span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">lang</span><span class="o">==</span><span class="n">language_code</span><span class="p">,:]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_rows</span><span class="o">=</span><span class="mi">100</span> <span class="c1">#see up to 100 entries</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_colwidth</span><span class="o">=</span><span class="mi">250</span> <span class="c1">#widen how much text is presented of each tweet</span>
@@ -1172,8 +1326,11 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="section" id="section-2-word-set-prevelance">
-<h2>Section 2: Word set prevelance<a class="headerlink" href="#section-2-word-set-prevelance" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/solutions/W2D3_Tutorial4_Solution_83a82c89.py"><em>Click for solution</em></a></p>
+</div>
+</div>
+<div class="section" id="section-3-word-set-prevalence">
+<h1><strong>Section 3: Word Set Prevalence</strong><a class="headerlink" href="#section-3-word-set-prevalence" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://www.nature.com/articles/s41558-022-01533-z">Falkenberg et al.</a> investigated the hypothesis that <em>public sentiment</em> around the COP conferences has increasingly framed them as hypocritical (“political hypocrisy as a topic of cross-ideological appeal”). The authors operationalized hypocrisy language as any tweet containing any of the following words:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1182,18 +1339,23 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>The authors then searched for these words within a distinct dataset across all COP conferences (that they did not make openly accessible; result: https://www.nature.com/articles/s41558-022-01527-x/figures/7). The results show that hypocrisy has been mentioned more.</p>
-<p>How might this matching procedure be limited in its ability to capture this sentiment?</p>
-<p>Here, we will instead focus on their acessible COP26 dataset and assess the nature of comments about specific topics, like political hypocrisy.</p>
+<div class="section" id="questions-3">
+<h2><strong>Questions 3</strong><a class="headerlink" href="#questions-3" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>How might this matching procedure be limited in its ability to capture this sentiment?</p></li>
+</ol>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/solutions/W2D3_Tutorial4_Solution_9e8c4029.py"><em>Click for solution</em></a></p>
+<p>The authors then searched for these words within a distinct dataset across all COP conferences (this dataset was not made openly accessible but the figure using that data is <a class="reference external" href="https://www.nature.com/articles/s41558-022-01527-x/figures/7">here</a>). They found that hypocrisy has been mentioned more in recent COP conferences.</p>
+<p>Here, we will shift our focus to their accessible COP26 dataset and analyze the nature of comments related to specific topics, such as political hypocrisy. First, let’s look through the whole dataset and pull tweets that mention any of the selected words.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selectwords_detector</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">'\b(?:</span><span class="si">{0}</span><span class="s1">)\b'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">'|'</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">selected_words</span><span class="p">)))</span> <span class="c1">#compile for speed!</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selectwords_detector</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">'\b(?:</span><span class="si">{0}</span><span class="s1">)\b'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">'|'</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">selected_words</span><span class="p">)))</span> <span class="c1">#to make a word detector for a wordlist faster to run, compile it!</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">'select_talk'</span><span class="p">]</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">selectwords_detector</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">))</span> <span class="c1"># look through whole dataset, flagging tweets with select_talk (computes in under a minute)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Let’s pull these tweets out and look at thier occurence statistics relative to those of the whole dataset computed above</p>
+<p>Let’s extract these tweets and examine their occurrence statistics in relation to the entire dataset that we calculated above.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected_tweets</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df</span><span class="o">.</span><span class="n">select_talk</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),:]</span>
@@ -1213,22 +1375,51 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>Note these are normalized so larger fractions closer to the COP26 dates correspond to significantly more absolute number of tweets.</p>
-<p>Let’s look at what these tweets say. Take 100 randomly sampled.</p>
+<p>Please note that these fractions are normalized, meaning that larger fractions closer to the COP26 dates (shaded in blue) when the total number of tweets are orders of magnitude larger indicate a significantly greater absolute number of tweets talking about hypocrisy.</p>
+<p>Now, let’s examine the content of these tweets by randomly sampling 100 of them.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected_tweets</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected_tweets</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p><em>Exercise</em>: Pick another topic, propose a list of topic words, and run the same analysis. (Example topic: “renewable technology”)</p>
 </div>
-<div class="section" id="section-3-sentiment-analysis">
-<h2>Section 3: Sentiment analysis<a class="headerlink" href="#section-3-sentiment-analysis" title="Permalink to this headline">¶</a></h2>
-<p>The hypocrisy displayed above seems charged against international organizations central to globalization (e.g. G7). Let’s assess that hypothesis by analyzing the sentiment of the subset of these hypocrisy tweets that mention these institutions.</p>
-<p>(part of the computation flow in what follows was taken from Caren Neal’s tutorial: https://nealcaren.org/lessons/wordlists/)</p>
-<p>We’ll match words in tweets to sentiment scores using a dictionary method. The particular dictionary we will use is compiled in the AFINN package. Let’s initialize it for the language we’ve chosen</p>
+<div class="section" id="coding-exercise-3">
+<h2><strong>Coding Exercise 3</strong><a class="headerlink" href="#coding-exercise-3" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Please select another topic and provide a list of topic words. We will then conduct the same analysis for that topic. For example, if the topic is “renewable technology,” please provide a list of relevant words.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#################################################</span>
+<span class="c1"># Students: Fill in missing code (...) and comment or remove the next line</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">"Student exercise: Please select another topic and provide a list of topic words. We will then conduct the same analysis for that topic. For example, if the topic is 'renewable technology', please provide a list of relevant words.."</span><span class="p">)</span>
+<span class="c1">#################################################</span>
+
+<span class="n">selected_words_2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'renewable'</span><span class="p">,</span><span class="s1">'wind'</span><span class="p">,</span> <span class="s1">'solar'</span><span class="p">,</span> <span class="s1">'geothermal'</span><span class="p">,</span> <span class="s1">'biofuel'</span><span class="p">]</span>
+
+<span class="n">selectwords_detector_2</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">'\b(?:</span><span class="si">{0}</span><span class="s1">)\b'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">'|'</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">selected_words_2</span><span class="p">)))</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'select_talk_2'</span><span class="p">]</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">selectwords_detector_2</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">))</span>
+
+<span class="n">selected_tweets_2</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df</span><span class="o">.</span><span class="n">select_talk_2</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),:]</span>
+<span class="n">selected_tweet_counts_2</span><span class="o">=</span><span class="n">selected_tweets_2</span><span class="o">.</span><span class="n">created_at</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">selected_tweets_2</span><span class="o">.</span><span class="n">created_at</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">date</span><span class="p">))</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">'counts'</span><span class="p">)</span>
+<span class="n">selected_tweet_fraction_2</span><span class="o">=</span><span class="n">selected_tweet_counts_2</span><span class="o">/</span><span class="n">total_tweetCounts</span>
+
+<span class="n">selected_tweets_2</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/solutions/W2D3_Tutorial4_Solution_f7b4a4b1.py"><em>Click for solution</em></a></p>
+</div>
+</div>
+<div class="section" id="section-4-sentiment-analysis">
+<h1><strong>Section 4: Sentiment Analysis</strong><a class="headerlink" href="#section-4-sentiment-analysis" title="Permalink to this headline">¶</a></h1>
+<p>Let’s test this hypothesis from <a class="reference external" href="https://www.nature.com/articles/s41558-022-01533-z">Falkenberg et al.</a> (that <em>public sentiment</em> around the COP conferences has increasingly framed them as political hypocrisy). To do so, we can use <strong>sentiment analysis</strong>, which is a method for computing the proportion of words that have positive connotations, negative connotations or are neutral. Some sentiment analysis systems can measure other word attributes as well. In this case, we will analyze the sentiment of the subset of tweets that mention international organizations central to globalization (e.g., G7), focusing specifically on the tweets related to hypocrisy.</p>
+<p>Note: part of the computation flow in what follows is from <a class="reference external" href="https://nealcaren.org/lessons/wordlists/">Caren Neal’s tutorial</a>.</p>
+<p>We’ll assign tweets a sentiment score using a dictionary method (i.e. based on the word sentiment scores of words in the tweet that appear in given word-sentiment score dictionary). The particular word-sentiment score dictionary we will use is compiled in the <a class="reference external" href="https://pypi.org/project/afinn/">AFINN package</a> and reflects a scoring between -5 (negative connotation) and 5 (positive connotation). The English language dictionary consists of 2,477 coded words.</p>
+<p>Let’s initialize the dictionary for the selected language. For example, the language code for English is ‘en’.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">afinn</span> <span class="o">=</span> <span class="n">Afinn</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="n">language_code</span><span class="p">)</span>
@@ -1236,7 +1427,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>Load the dictionary</p>
+<p>Now we can load the dictionary:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">afinn_wl_url</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'https://raw.githubusercontent.com'</span>
@@ -1251,7 +1442,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>let’s look at the distribution of scores over all words in the dictionary</p>
+<p>Let’s look at the distribution of scores over all words in the dictionary</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">afinn_wl_df</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">()</span>
@@ -1261,6 +1452,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
+<p>These scores were assigned to words based on labeled tweets (<a class="reference external" href="http://www2.imm.dtu.dk/pubdb/edoc/imm6006.pdf">validation paper</a>).</p>
 <p>Before focussing on sentiments about institutions within the hypocrisy tweets, let’s look at the hypocrisy tweets in comparison to non-hypocrisy tweets. This will take some more intensive computation, so let’s only perform it on a 1% subsample of the dataset</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1278,12 +1470,13 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">smalldf</span><span class="p">[</span><span class="s1">'afinn_score'</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">smalldf</span><span class="p">[</span><span class="s1">'afinn_score'</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span> <span class="c1"># generate descriptive statistics.</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>The score is a sum over all dictionary words in the tweet. A rough approach to making scores comparable across tweets of different length is convert to a per-word score by normalizing each tweet’s score by its word count (note this is not a per-dictionary word score and so this rough approach introduces a bias dependent on how much of each tweet is formed by dictionary words). Let’s call this normalized score <em>afinn_adjusted</em>.</p>
+<p>From this, we can see that the maximum score is 24 and the minimum score is -33. The score is computed by summing up the scores of all dictionary words present in the tweet, which means that longer tweets tend to have higher scores.</p>
+<p>To make the scores comparable across tweets of different lengths, a rough approach is to convert them to a per-word score. This is done by normalizing each tweet’s score by its word count. It’s important to note that this per-word score is not specific to the dictionary words used, so this approach introduces a bias that depends on the proportion of dictionary words in each tweet. We will refer to this normalized score as <em>afinn_adjusted</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">word_count</span><span class="p">(</span><span class="n">text_string</span><span class="p">):</span>
@@ -1302,7 +1495,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>Now let’s look at the sentiment of tweets with hypocrisy words versus those without those words. We’ll first plot for some other possibly negative words for reference.</p>
+<p>After normalizing the scores, we find that the maximum score is now 2 and the minimum score is now -1.5.</p>
+<p>Now let’s look at the sentiment of tweets with hypocrisy words versus those without those words. For reference, we’ll first make cumulative distribution plots of score distributions for some other possibly negative words: fossil, G7, Boris and Davos.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">sel_words</span> <span class="ow">in</span> <span class="p">[[</span><span class="s1">'Fossil'</span><span class="p">],[</span><span class="s1">'G7'</span><span class="p">],[</span><span class="s1">'Boris'</span><span class="p">],[</span><span class="s1">'Davos'</span><span class="p">],</span><span class="n">selected_words</span><span class="p">]:</span>
@@ -1313,7 +1507,6 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>make cumulative distribtion plots of score distributions</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">sel_words</span> <span class="ow">in</span> <span class="p">[[</span><span class="s1">'Fossil'</span><span class="p">],[</span><span class="s1">'G7'</span><span class="p">],[</span><span class="s1">'Boris'</span><span class="p">],[</span><span class="s1">'Davos'</span><span class="p">],</span><span class="n">selected_words</span><span class="p">]:</span>
@@ -1333,18 +1526,24 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>Observe that tweets containing the selected <em>hypocrisy</em>-associated words set are scored much more negative than all of these. So what is the content of these selected tweets?</p>
+<p>Recall from our previous calculations that the tweets containing the selected <em>hypocrisy</em>-associated words have minimum adjusted score of -1.5. This score is much more negative than the scores of all four reference words we just plotted. So what is the content of these selected tweets that is causing them to be so negative? The explore this, we can use word clouds to assess the usage of specific words.</p>
 </div>
-<div class="section" id="section-4-word-clouds">
-<h2>Section 4: word clouds<a class="headerlink" href="#section-4-word-clouds" title="Permalink to this headline">¶</a></h2>
-<p>To analyze word usage, let’s first vectorize the text data. Vectorization here means giving each word in the vocabulary an index and transforming each word sequence in each to its vector representation whose sequence of elements are the sequence of the corresponding word indices (e.g. the response <code class="docutils literal notranslate"><span class="pre">['I','love','icecream']</span></code> maps to something like <code class="docutils literal notranslate"><span class="pre">[34823,5937,79345]</span></code>).</p>
-<p>We’ll use and compare two methods. Let’s write down what they compute by denoting the index, <span class="math notranslate nohighlight">\(d\)</span>, over the <span class="math notranslate nohighlight">\(D\)</span> documents and the index, <span class="math notranslate nohighlight">\(w\)</span>, over the <span class="math notranslate nohighlight">\(W\)</span> words in the vocabulary (the list of all the words found in all the tweets, which we’ll call documents):</p>
-<ul class="simple">
-<li><p>term frequency, <span class="math notranslate nohighlight">\(\mathrm{tf}(w,d)\)</span>. The frequency of a word <span class="math notranslate nohighlight">\(w\)</span> in a document <span class="math notranslate nohighlight">\(d\)</span> is $<span class="math notranslate nohighlight">\(\mathrm{tf}(w,d):=\frac{n(w,d)}{n(d)},\)</span><span class="math notranslate nohighlight">\( where \)</span>n(w,d)<span class="math notranslate nohighlight">\( is the number of times term \)</span>w<span class="math notranslate nohighlight">\( is in document \)</span>d<span class="math notranslate nohighlight">\( and \)</span>n(d)=\sum_{w=1}^W n(w,d)<span class="math notranslate nohighlight">\( is the total number of words in document \)</span>d<span class="math notranslate nohighlight">\(. The term frequency over all the documents is then, \)</span><span class="math notranslate nohighlight">\(\mathrm{tf}(w):=\frac{\sum_{d=1}^D n(d)\mathrm{tf}(w,d)}{N},\)</span><span class="math notranslate nohighlight">\( where the denominator \)</span>N=\sum_{d=1}^D n(d)$ is just the total word count across all documents.</p></li>
-<li><p>term frequency-inverse document frequency, <span class="math notranslate nohighlight">\(\mathrm{Tfidf}(w,d):=\mathrm{tf}(w,d)\mathrm{idf}(w)\)</span>. Here, $<span class="math notranslate nohighlight">\(\mathrm{idf}(w)=\frac{\log(D+1)}{\log(n(w)+1)+1},\)</span><span class="math notranslate nohighlight">\( where \)</span>n(w)<span class="math notranslate nohighlight">\( is the number of documents in which term \)</span>t<span class="math notranslate nohighlight">\( appears, i.e. \)</span>n(w,d)&gt;0<span class="math notranslate nohighlight">\(. Idf is like an inverse document frequency. The `sklearn` package then uses \)</span><span class="math notranslate nohighlight">\(\mathrm{Tfidf}(w)=\frac{1}{D}\sum_{d=1}^D \frac{\mathrm{Tfidf}(w,d)}{||\mathrm{Tfidf}(\cdot,d)||},\)</span><span class="math notranslate nohighlight">\( where \)</span>||\vec{x}||=\sqrt{\sum_{i=1}^Nx^2_i}$ is the Euclidean norm.</p></li>
-</ul>
-<p><span class="math notranslate nohighlight">\(\mathrm{Tfidf}\)</span> aims to add more discriminability to frequency as a word relevance metric by downweighting words that appear in many documents since these common words are less discriminative.</p>
-<p>Let’s run both these methods and store the vectorized data in a dictionary</p>
+<div class="section" id="section-5-word-clouds">
+<h1><strong>Section 5: Word Clouds</strong><a class="headerlink" href="#section-5-word-clouds" title="Permalink to this headline">¶</a></h1>
+<p>To analyze word usage, let’s first vectorize the text data. Vectorization (also known as tokenization) here means giving each word in the vocabulary an index and transforming each word sequence to its vector representation and creating a sequence of elements with the corresponding word indices (e.g. the response <code class="docutils literal notranslate"><span class="pre">['I','love','icecream']</span></code> maps to something like <code class="docutils literal notranslate"><span class="pre">[34823,5937,79345]</span></code>).</p>
+<p>We’ll use and compare two methods: term-frequency (<span class="math notranslate nohighlight">\(\mathrm{tf}\)</span>) and term-frequency inverse document frequency (<span class="math notranslate nohighlight">\(\mathrm{Tfidf}\)</span>). Both of these methods measure how important a term is within a document relative to a collection of documents by using vectorization to transform words into numbers.</p>
+<p><strong>Term Frequency</strong> (<span class="math notranslate nohighlight">\(\mathrm{tf}\)</span>): the number of times the word appears in a document compared to the total number of words in the document.</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{tf}=\frac{\mathrm{number \; of \; times \; the \; term \; appears \; in \; the \; document}}{\mathrm{total \; number \; of \; terms \; in \; the \; document}}\]</div>
+<p><strong>Inverse Document Frequency</strong> (<span class="math notranslate nohighlight">\(\mathrm{idf}\)</span>): reflects the proportion of documents in the collection of documents that contain the term. Words unique to a small percentage of documents (e.g., technical jargon terms) receive higher importance values than words common across all documents (e.g., a, the, and).</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{idf}=\frac{\log(\mathrm{number \; of \; the \; documents \; in \; the \; collection})}{\log(\mathrm{number \; of \; documents \; in \; the \; collection \; containing \; the \; term})}\]</div>
+<p>Thus the overall term-frequency inverse document frequency can be calculated by multiplying the term-frequency and the inverse document frequency:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{Tfidf}=\mathrm{Tf} * \mathrm{idf}\]</div>
+<p><span class="math notranslate nohighlight">\(\mathrm{Tfidf}\)</span> aims to add more discriminability to frequency as a word relevance metric by downweighting words that appear in many documents since these common words are less discriminative. In other words, the importance of a term is high when it occurs a lot in a given document and rarely in others.</p>
+<p>If you are interested in learning more about the mathematical equations used to develop these two methods, please refer to the additional details in the “Further Reading” section for this day.</p>
+<p>Let’s run both of these methods and store the vectorized data in a dictionary:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vectypes</span><span class="o">=</span><span class="p">[</span><span class="s1">'counts'</span><span class="p">,</span><span class="s1">'Tfidf'</span><span class="p">]</span>
@@ -1396,7 +1595,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>Okay so let’s vectorize and look at the wordclouds for single word statistics. Let’s explicitly exclude some words and implicity exclude ones that appear in fewer than some threshold number of documents</p>
+<p>We can now vectorize and look at the wordclouds for single word statistics. Let’s explicitly exclude some words and implicity exclude ones that appear in fewer than some threshold number of tweets.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">selected_tweets</span><span class="p">[</span><span class="s1">'text'</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span><span class="o">.</span><span class="n">values</span> <span class="c1">#reduce size since the vectorization computation transforms the corpus into an array of large size (vocabulary size x number of tweets)</span>
@@ -1418,7 +1617,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>Note in the histograms how the TFidf vectorizer has scaled down the hypocrisy words such that they are less outlyingly prevalent relative to the count vectorizer.</p>
+<p>Note in the histograms how the <span class="math notranslate nohighlight">\(\mathrm{Tfidf}\)</span> vectorizer has scaled down the hypocrisy words such that they are less prevalent relative to the count vectorizer.</p>
 <p>There are some words here  (e.g. <code class="docutils literal notranslate"><span class="pre">private</span></code> and <code class="docutils literal notranslate"><span class="pre">jet</span></code>) that look like they likely would appear in pairs. Let’s tell the vectorizer to also look for high frequency <em>pairs</em> of words.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1430,7 +1629,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>The hypocrisy words take up so much frequency it is hard to see what the remaining words are. To clear this list a bit more, let’s also remove the hypocrisy words altogether.</p>
+<p>The hypocrisy words take up so much frequency that it is hard to see what the remaining words are. To clear this list a bit more, let’s also remove the hypocrisy words altogether.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">remove_words</span> <span class="o">+=</span> <span class="n">selected_words</span>
@@ -1448,7 +1647,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>Observe terms that we might have expected are associated to hypocrisy, e.g. “flying”. Even when allowing for pairs, the semantics are hard to extract from this analysis that ignores the correlations in usage among multiple words.</p>
+<p>Observe that terms we might have expected are associated with hypocrisy, e.g. “flying” are still present. Even when allowing for pairs, the semantics are hard to extract from this analysis that ignores the correlations in usage among multiple words.</p>
 <p>To futher assess statistics, one approach is use a generative model with latent structure.</p>
 <p>Topic models (the <a class="reference external" href="https://www.structuraltopicmodel.com/">structural topic model</a> in particular) are a nice modelling framework to start analyzing those correlations.</p>
 <p>For a modern introduction to text analysis in the social sciences, I recommend the textbook:</p>
@@ -1456,6 +1655,15 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+<div class="section" id="summary">
+<h1><strong>Summary</strong><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial, you’ve learned how to analyze large amounts of text data from social media to understand public sentiment about climate change. You’ve been introduced to the process of loading and examining Twitter data, specifically relating to the COP climate change conferences. You’ve also gained insights into identifying and analyzing sentiments associated with specific words, with a focus on those indicating ‘hypocrisy’.</p>
+<p>We used techniques to normalize sentiment scores and to compare sentiment among different categories of tweets. You have also learned about text vectorization methods, term-frequency (tf) and term-frequency inverse document frequency (tfidf), and their applications in word usage analysis. This tutorial provided you a valuable stepping stone to further delve into text analysis, which could help deeper our understanding of public sentiment on climate change. Such analysis helps us track how global perceptions and narratives about climate change evolve over time, which is crucial for policy planning and climate communication strategies.</p>
+<p>This tutorial therefore not only provided you with valuable tools for text analysis but also demonstrated their potential in contributing to our understanding of climate change perceptions, a key factor in driving climate action.</p>
+</div>
+<div class="section" id="resources">
+<h1><strong>Resources</strong><a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h1>
+<p>The data for this tutorial can be accessed from <a class="reference external" href="https://www.nature.com/articles/s41558-022-01527-x">Falkenberg et al. <em>Nature Clim. Chg.</em> 2022</a>.</p>
 </div>
 <script type="text/x-thebe-config">
     {
@@ -1466,16 +1674,16 @@ const thebe_selector_output = ".output, .cell_output"
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "pangeo"
+            mode: "python"
         },
         kernelOptions: {
-            kernelName: "pangeo",
+            kernelName: "python3",
             path: "./tutorials/W2D3_FutureClimate-IPCCII&IIISocio-EconomicBasis/student"
         },
         predefinedOutput: true
     }
     </script>
-<script>kernelName = 'pangeo'</script>
+<script>kernelName = 'python3'</script>
 </div>
 </main>
 <footer class="footer-article noprint">

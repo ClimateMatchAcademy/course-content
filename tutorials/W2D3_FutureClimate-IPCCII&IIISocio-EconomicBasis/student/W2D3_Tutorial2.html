@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Tutorial 2 - A first look at integrated assessment models — Climatematch Academy: Computational Climate Science</title>
+<title>Tutorial 2: Transition Goals and Integrated Assessment Models — Climatematch Academy: Computational Climate Science</title>
 <!-- Loaded before other Sphinx assets -->
 <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
@@ -43,7 +43,7 @@ const thebe_selector_output = ".output, .cell_output"
 <link href="../../../genindex.html" rel="index" title="Index">
 <link href="../../../search.html" rel="search" title="Search"/>
 <link href="W2D3_Tutorial3.html" rel="next" title="&lt;no title&gt;"/>
-<link href="W2D3_Tutorial1.html" rel="prev" title="Tutorial 1 - Limits to growth in World3: A toy world model of diminishing non-renewable resources"/>
+<link href="W2D3_Tutorial1.html" rel="prev" title="Tutorial Objectives"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="None" name="docsearch:language"/>
 <!-- Google Analytics -->
@@ -483,8 +483,10 @@ const thebe_selector_output = ".output, .cell_output"
 <ul>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial1.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 1 : A Simple Greenhouse Model
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial2.html">
@@ -578,18 +580,24 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current">
 <li class="toctree-l2">
 <a class="reference internal" href="W2D3_Tutorial1.html">
-     Tutorial 1 - Limits to growth in World3: A toy world model of diminishing non-renewable resources
-    </a>
+<strong>
+      Tutorial Objectives
+     </strong>
+</a>
 </li>
 <li class="toctree-l2 current active">
 <a class="current reference internal" href="#">
-     Tutorial 2 - A first look at integrated assessment models
-    </a>
+<strong>
+      Tutorial 2: Transition Goals and Integrated Assessment Models
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W2D3_Tutorial4.html">
-     Tutorial 4 - Text analysis of COP tweets
-    </a>
+<strong>
+      Tutorial 4: Public Opinion on the Climate Emergency and Why it Matters
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../further_reading.html">
@@ -626,18 +634,24 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.html">
-     Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
-    </a>
+<strong>
+      Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.html">
-     Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
-    </a>
+<strong>
+      Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial4.html">
-     Tutorial 9:  Exploring other applications
-    </a>
+<strong>
+      Tutorial 4:  Exploring other applications
+     </strong>
+</a>
 </li>
 </ul>
 </li>
@@ -829,126 +843,220 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#">
-   Tutorial 2 - A first look at integrated assessment models
-  </a>
+<strong>
+    Tutorial 2: Transition Goals and Integrated Assessment Models
+   </strong>
+</a>
 </li>
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#tutorial-objectives">
-   Tutorial Objectives
-  </a>
+<strong>
+    Tutorial Objectives
+   </strong>
+</a>
 </li>
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#setup">
-   Setup
-  </a>
+<strong>
+    Setup
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#figure-settings">
+     Figure settings
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#helper-functions">
+     Helper functions
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#video-1-title">
+     Video 1: Title
+    </a>
+</li>
+</ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#section-1-background-on-iam-economics-and-the-dice-model">
-   Section 1: background on IAM economics and the DICE model
-  </a>
+<strong>
+    Section 1: Background on IAM Economics and the DICE Model
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#brief-description">
-     Brief description
-    </a>
+<a class="reference internal nav-link" href="#section-1-1-utility">
+<strong>
+      Section 1.1: Utility
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-1-1-utilities-at-different-levels-of-consumption">
+<strong>
+        Section 1.1.1: Utilities at Different Levels of Consumption
+       </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-1-1">
+<strong>
+          Questions 1.1.1
+         </strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-1-2-utilities-over-a-population">
+<strong>
+        Section 1.1.2: Utilities Over a Population
+       </strong>
+</a>
+</li>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-1-3-utilities-over-time">
+<strong>
+        Section 1.1.3: Utilities Over Time
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#utility">
-   Utility
-  </a>
+<a class="reference internal nav-link" href="#section-2-damage-functions">
+<strong>
+    Section 2: Damage Functions
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#utilities-at-different-levels-of-consumption">
-     Utilities at different levels of consumption
-    </a>
+<a class="reference internal nav-link" href="#questions-2">
+<strong>
+      Questions 2
+     </strong>
+</a>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#utilities-over-a-population">
-     Utilities over a population
-    </a>
+<a class="reference internal nav-link" href="#section-2-1-iam-model-summary">
+<strong>
+      Section 2.1: IAM Model Summary
+     </strong>
+</a>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#utilities-over-time">
-     Utilities over time
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#utilities-over-different-populations">
-     Utilities over different populations
-    </a>
+<a class="reference internal nav-link" href="#section-2-2-optimal-planning">
+<strong>
+      Section 2.2: Optimal Planning
+     </strong>
+</a>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#damage-functions">
-   Damage functions
-  </a>
+<a class="reference internal nav-link" href="#section-3-dice-simulations">
+<strong>
+    Section 3: DICE Simulations
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#exogeneous-control-variables">
-     Exogeneous control variables
-    </a>
+<a class="reference internal nav-link" href="#section-3-1-case-1-standard-run">
+<strong>
+      Section 3.1: Case 1 Standard Run
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#coding-exercise-3-1">
+<strong>
+        Coding Exercise 3.1
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#economy-model-summary">
-     Economy model summary
-    </a>
+<a class="reference internal nav-link" href="#section-3-2-case-2-damage-functions">
+<strong>
+      Section 3.2: Case 2 Damage Functions
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#coding-exercise-3-2">
+<strong>
+        Coding Exercise 3.2
+       </strong>
+</a>
+</li>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-3-2">
+<strong>
+        Questions 3.2
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#climate-model">
-     Climate model
-    </a>
+<a class="reference internal nav-link" href="#section-3-3-case-3-discount-rate">
+<strong>
+      Section 3.3: Case 3 Discount Rate
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#coding-exercise-3-3">
+<strong>
+        Coding Exercise 3.3
+       </strong>
+</a>
+</li>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-3-3">
+<strong>
+        Questions 3.3
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#optimal-planning">
-     Optimal Planning
-    </a>
+<a class="reference internal nav-link" href="#section-3-4-case-4-the-utility-function">
+<strong>
+      Section 3.4: Case 4 the Utility Function
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-3-4">
+<strong>
+        Questions 3.4
+       </strong>
+</a>
 </li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#social-cost-of-carbon">
-     Social cost of carbon
-    </a>
+</ul>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-2-dice-simulations">
-   Section 2: DICE simulations
-  </a>
-<ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#case-1-run-standard-run">
-     Case 1 Run standard run
-    </a>
+<a class="reference internal nav-link" href="#summary">
+<strong>
+    Summary
+   </strong>
+</a>
 </li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#case-2-damage-functions">
-     Case 2 Damage functions
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#case-3-discount-rate">
-     Case 3: discount rate
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#case-4-the-utility-function">
-     Case 4 The utility function
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#extra-1-social-welfare-functions">
-     Extra 1: Social welfare functions
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#extra-2-tipping-points">
-     Extra 2: tipping points
-    </a>
-</li>
-</ul>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#resources">
+<strong>
+    Resources
+   </strong>
+</a>
 </li>
 </ul>
 </nav>
@@ -958,7 +1066,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="col pl-md-3 pl-lg-5 content-container">
 <!-- Table of contents that is only displayed when printing the page -->
 <div class="onlyprint" id="jb-print-docs-body">
-<h1>Tutorial 2 - A first look at integrated assessment models</h1>
+<h1>Tutorial 2: Transition Goals and Integrated Assessment Models</h1>
 <!-- Table of contents -->
 <div id="print-main-content">
 <div id="jb-print-toc">
@@ -969,126 +1077,220 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#">
-   Tutorial 2 - A first look at integrated assessment models
-  </a>
+<strong>
+    Tutorial 2: Transition Goals and Integrated Assessment Models
+   </strong>
+</a>
 </li>
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#tutorial-objectives">
-   Tutorial Objectives
-  </a>
+<strong>
+    Tutorial Objectives
+   </strong>
+</a>
 </li>
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#setup">
-   Setup
-  </a>
+<strong>
+    Setup
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#figure-settings">
+     Figure settings
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#helper-functions">
+     Helper functions
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#video-1-title">
+     Video 1: Title
+    </a>
+</li>
+</ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#section-1-background-on-iam-economics-and-the-dice-model">
-   Section 1: background on IAM economics and the DICE model
-  </a>
+<strong>
+    Section 1: Background on IAM Economics and the DICE Model
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#brief-description">
-     Brief description
-    </a>
+<a class="reference internal nav-link" href="#section-1-1-utility">
+<strong>
+      Section 1.1: Utility
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-1-1-utilities-at-different-levels-of-consumption">
+<strong>
+        Section 1.1.1: Utilities at Different Levels of Consumption
+       </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-1-1">
+<strong>
+          Questions 1.1.1
+         </strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-1-2-utilities-over-a-population">
+<strong>
+        Section 1.1.2: Utilities Over a Population
+       </strong>
+</a>
+</li>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-1-3-utilities-over-time">
+<strong>
+        Section 1.1.3: Utilities Over Time
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#utility">
-   Utility
-  </a>
+<a class="reference internal nav-link" href="#section-2-damage-functions">
+<strong>
+    Section 2: Damage Functions
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#utilities-at-different-levels-of-consumption">
-     Utilities at different levels of consumption
-    </a>
+<a class="reference internal nav-link" href="#questions-2">
+<strong>
+      Questions 2
+     </strong>
+</a>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#utilities-over-a-population">
-     Utilities over a population
-    </a>
+<a class="reference internal nav-link" href="#section-2-1-iam-model-summary">
+<strong>
+      Section 2.1: IAM Model Summary
+     </strong>
+</a>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#utilities-over-time">
-     Utilities over time
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#utilities-over-different-populations">
-     Utilities over different populations
-    </a>
+<a class="reference internal nav-link" href="#section-2-2-optimal-planning">
+<strong>
+      Section 2.2: Optimal Planning
+     </strong>
+</a>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#damage-functions">
-   Damage functions
-  </a>
+<a class="reference internal nav-link" href="#section-3-dice-simulations">
+<strong>
+    Section 3: DICE Simulations
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#exogeneous-control-variables">
-     Exogeneous control variables
-    </a>
+<a class="reference internal nav-link" href="#section-3-1-case-1-standard-run">
+<strong>
+      Section 3.1: Case 1 Standard Run
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#coding-exercise-3-1">
+<strong>
+        Coding Exercise 3.1
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#economy-model-summary">
-     Economy model summary
-    </a>
+<a class="reference internal nav-link" href="#section-3-2-case-2-damage-functions">
+<strong>
+      Section 3.2: Case 2 Damage Functions
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#coding-exercise-3-2">
+<strong>
+        Coding Exercise 3.2
+       </strong>
+</a>
+</li>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-3-2">
+<strong>
+        Questions 3.2
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#climate-model">
-     Climate model
-    </a>
+<a class="reference internal nav-link" href="#section-3-3-case-3-discount-rate">
+<strong>
+      Section 3.3: Case 3 Discount Rate
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#coding-exercise-3-3">
+<strong>
+        Coding Exercise 3.3
+       </strong>
+</a>
+</li>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-3-3">
+<strong>
+        Questions 3.3
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#optimal-planning">
-     Optimal Planning
-    </a>
+<a class="reference internal nav-link" href="#section-3-4-case-4-the-utility-function">
+<strong>
+      Section 3.4: Case 4 the Utility Function
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-3-4">
+<strong>
+        Questions 3.4
+       </strong>
+</a>
 </li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#social-cost-of-carbon">
-     Social cost of carbon
-    </a>
+</ul>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-2-dice-simulations">
-   Section 2: DICE simulations
-  </a>
-<ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#case-1-run-standard-run">
-     Case 1 Run standard run
-    </a>
+<a class="reference internal nav-link" href="#summary">
+<strong>
+    Summary
+   </strong>
+</a>
 </li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#case-2-damage-functions">
-     Case 2 Damage functions
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#case-3-discount-rate">
-     Case 3: discount rate
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#case-4-the-utility-function">
-     Case 4 The utility function
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#extra-1-social-welfare-functions">
-     Extra 1: Social welfare functions
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#extra-2-tipping-points">
-     Extra 2: tipping points
-    </a>
-</li>
-</ul>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#resources">
+<strong>
+    Resources
+   </strong>
+</a>
 </li>
 </ul>
 </nav>
@@ -1097,42 +1299,48 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <main id="main-content" role="main">
 <div>
-<div class="section" id="tutorial-2-a-first-look-at-integrated-assessment-models">
-<h1>Tutorial 2 - A first look at integrated assessment models<a class="headerlink" href="#tutorial-2-a-first-look-at-integrated-assessment-models" title="Permalink to this headline">¶</a></h1>
-<p>Week 2, Day 3: IPCC Socio-economic Basis</p>
-<p>By Neuromatch Academy</p>
-<p>Content creators: Maximilian Puelma Touzel</p>
-<p>Content reviewers: Name Surname, Name Surname</p>
-<p>Content editors: Name Surname, Name Surname</p>
-<p>Production editors: Name Surname, Name Surname</p>
-<p>Our 2023 Sponsors</p>
+<div class="section" id="tutorial-2-transition-goals-and-integrated-assessment-models">
+<h1><strong>Tutorial 2: Transition Goals and Integrated Assessment Models</strong><a class="headerlink" href="#tutorial-2-transition-goals-and-integrated-assessment-models" title="Permalink to this headline">¶</a></h1>
+<p><strong>Week 2, Day 3: IPCC Socio-economic Basis</strong></p>
+<p><strong>Content creators:</strong> Maximilian Puelma Touzel</p>
+<p><strong>Content reviewers:</strong> Peter Ohue, Derick Temfack, Zahra Khodakaramimaghsoud, Peizhen Yang, Younkap Nina DuplexLaura Paccini, Sloane Garelick, Abigail Bodner, Manisha Sinha, Agustina Pesce, Dionessa Biton, Cheng Zhang, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Content editors:</strong> Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Production editors:</strong> Wesley Banfield, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Our 2023 Sponsors:</strong> NASA TOPS</p>
 </div>
-<hr class="docutils"/>
 <div class="section" id="tutorial-objectives">
-<h1>Tutorial Objectives<a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">¶</a></h1>
-<p>To understand in a relatively simple Integrated Assessment Model (IAM) how parameters that set how we distribute value in society affect the corresponding optimal climate policy.</p>
+<h1><strong>Tutorial Objectives</strong><a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial, you will learn about the Dynamic Integrated Climate-Economy (DICE) model, a cornerstone in the history of climate economics. This is one the first Integrated Assessment Models (IAMs), a class of models that combine climatology, economics, and social science, reflecting the intertwined nature of these domains in addressing climate change.</p>
+<p>You will explore the inner workings of the DICE model, starting with the foundational principles of economics: <em>utility</em> and <em>welfare</em> functions. You will also learn how these functions aggregate and weight the satisfaction derived from consumption across different societal groups. You will also learn how the these functions incorporate uncertain future utility into decision-making through <em>discount rates</em>. Valuing future states of the world allows the DICE model to place a value on its projections of future scenarios.</p>
+<p>Later in the tutorial you will learn about damage functions, which combine climatological and economic knowledge to estimate how climate changes will affect economic productivity and the resultant well-being of society.</p>
+<p>Finally, you will diagnose optimal planning within the DICE model, determining the best strategies for savings and emissions reduction rates (where <em>best</em> is with respect to a chosen utility and welfare function).</p>
+<p>The overall objective of this tutorial is to provide a technical understanding of how parameters related to the distribution of value in society impact the optimal climate policy within a relatively simple IAM.</p>
 </div>
-<hr class="docutils"/>
 <div class="section" id="setup">
-<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
-<p>Import libraries</p>
+<h1><strong>Setup</strong><a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Math</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">Image</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># imports</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">pl</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">dicelib</span>
+<span class="kn">import</span> <span class="nn">dicelib</span> <span class="c1">#https://github.com/mptouzel/PyDICE</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>FIgure settings</p>
-<div class="cell docutils container">
+<div class="section" id="figure-settings">
+<h2>Figure settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Figure settings</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>       <span class="c1"># interactive display</span>
+<span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = 'retina'
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">"https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/cma.mplstyle"</span><span class="p">)</span>
+
+<span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">"ticks"</span><span class="p">,</span> <span class="p">{</span><span class="s1">'axes.grid'</span><span class="p">:</span> <span class="kc">False</span><span class="p">})</span>
 <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'lines.linewidth'</span><span class="p">:</span> <span class="s1">'3'</span><span class="p">}</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
@@ -1142,44 +1350,87 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<hr class="docutils"/>
+<div class="section" id="helper-functions">
+<h2>Helper functions<a class="headerlink" href="#helper-functions" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Helper functions</span>
+
+<span class="k">def</span> <span class="nf">plot_future_returns</span><span class="p">(</span><span class="n">gamma</span><span class="p">,</span> <span class="n">random_seed</span><span class="p">):</span>
+    <span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">random_seed</span><span class="p">)</span>
+    <span class="n">undiscounted_utility_time_series</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">time_steps</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">undiscounted_utility_time_series</span><span class="p">)</span>
+
+    <span class="n">discounted_utility_time_series</span><span class="o">=</span><span class="n">undiscounted_utility_time_series</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">gamma</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">time_steps</span><span class="p">))</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">discounted_utility_time_series</span><span class="p">)</span>
+
+    <span class="n">cumulsum_discounted_utility_time_series</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">discounted_utility_time_series</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cumulsum_discounted_utility_time_series</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">gamma</span><span class="p">),</span><span class="n">color</span><span class="o">=</span><span class="s1">'C1'</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">'discounted on $1/(1-\gamma)=$'</span><span class="o">+</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="o">+</span><span class="sa">r</span><span class="s1">'$'</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">gamma</span><span class="p">)))</span><span class="o">+</span><span class="s1">'$-step horizon'</span><span class="p">,)</span>
+    <span class="n">cumulsum_undiscounted_utility_time_series</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">undiscounted_utility_time_series</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cumulsum_undiscounted_utility_time_series</span><span class="o">/</span><span class="n">cumulsum_undiscounted_utility_time_series</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">'undiscounted'</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">'C0'</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">gamma</span><span class="p">),</span><span class="n">ls</span><span class="o">=</span><span class="s1">'--'</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">'k'</span><span class="p">)</span>
+
+
+    <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'utility at step t'</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">time_steps</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'time steps into the future'</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'future return (normalized)'</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'time steps into the future'</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">time_steps</span><span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="video-1-title">
+<h2>Video 1: Title<a class="headerlink" href="#video-1-title" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Video 1: Title</span>
+<span class="c1">#Tech team will add code to format and display the video</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="section" id="section-1-background-on-iam-economics-and-the-dice-model">
-<h1>Section 1: background on IAM economics and the DICE model<a class="headerlink" href="#section-1-background-on-iam-economics-and-the-dice-model" title="Permalink to this headline">¶</a></h1>
-<p>The Dynamic Integrated Climate-Economy (DICE) was the first prominent Integrated Assessment model, a class of models economists use to inform policy decisions. Like world3, it’s too idealized to be predictive. DICE is still useful as a sandbox for climate policy ideas (though even in that it could be improved! c.f.  https://www3.nd.edu/~nmark/Climate/DICE-simplified_2019.pdf), which is how we will use it here.</p>
-<div class="section" id="brief-description">
-<h2>Brief description<a class="headerlink" href="#brief-description" title="Permalink to this headline">¶</a></h2>
+<h1><strong>Section 1: Background on IAM Economics and the DICE Model</strong><a class="headerlink" href="#section-1-background-on-iam-economics-and-the-dice-model" title="Permalink to this headline">¶</a></h1>
+<p>The <a class="reference external" href="https://www3.nd.edu/~nmark/Climate/DICE-simplified_2019.pdf">Dynamic Integrated Climate-Economy (DICE)</a> was the first prominent Integrated Assessment Model (IAM), a class of models economists use to inform policy decisions. Recall that IAMs couple a climate model to an economic model, allowing us to evaluate the two-way coupling between economic productivity and climate change severity. DICE is too idealized to be predictive, like <code class="docutils literal notranslate"><span class="pre">world3</span></code>, but DICE is still useful as a sandbox for exploring climate policy ideas, which is how we will use it here.</p>
+<p>Let’s begin with a brief description of IAMs and the DICE model:</p>
 <ul class="simple">
-<li><p>The DICE is a fully aggregated (ie. non-spatial) model, but otherwise contains the essence of many key components of more complex IAMs.</p></li>
-<li><p>Unlike World3 (from tutorial 1), the world models used in IAMs usually have <em>exogeneous</em> variables, ie. those that are set externally, in addition to fixed world system parameters. These exogeneous variables are assumed to be under our society’s control.</p></li>
-<li><p>IAMs come equipped with an objective function that returns how valuable is a projected future obtained from running the world model under a given climate policy defined by time series of these exogeneous variables. In this sense, the objective function is what defines “good” in “good climate policy”.</p></li>
-<li><p>The computation in an IAM is then optimization of this objective as a function of the time series of these exogeneous variables over some fixed time window. In DICE, these exogeneous parameters are the time-dependent mitigation (i.e. emissions reduction) rate <span class="math notranslate nohighlight">\(\mu(t)\)</span> limiting warming-caused damages, and a savings rate, <span class="math notranslate nohighlight">\(S(t)\)</span>, driving capital investment (discussed below).</p></li>
-<li><p>The choices for the standard values of the parameters used in the DICE models have been critisized, and updated versions have been analyzed and proposed (Hansel et al. 2021). Here, we look at the standard DICE2016 version of the model.</p></li>
+<li><p>DICE is a fully aggregated (i.e., non-spatial) model, but otherwise contains the essence of many key components of more complex IAMs.</p></li>
+<li><p>Unlike <code class="docutils literal notranslate"><span class="pre">world3</span></code>, which we encountered in Tutorial 1, the world models used in IAMs usually have <em>exogeneous</em> (externally set) times series for variables, in addition to fixed world system parameters. These exogeneous variables are assumed to be under our society’s control (e.g. mitigation).</p></li>
+<li><p>IAMs come equipped with an objective function (a formula that calculates the quantity to be optimized). This function returns the value of a projected future obtained from running the world model under a given climate policy. This value is defined by time series of these exogeneous variables. In this sense, the objective function is what defines “good” in “good climate policy”.</p></li>
+<li><p>The computation in an IAM is then an optimization of this objective as a function of the time series of these exogeneous variables over some fixed time window. In DICE, there are two exogeneous parameters:</p>
+<ul>
+<li><p><strong><span class="math notranslate nohighlight">\(\mu(t)\)</span></strong>: time-dependent mitigation rate (i.e. emissions reduction), which limits warming-caused damages</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(S(t)\)</span></strong>: savings rate, which drives capital investment</p></li>
 </ul>
-<p>For anyone new to establishment (socalled <em>neo-classical</em>) economics, it’s worth first going over some basics. (notation: lower case versions of variables are for individuals, upper case for populations). Let’s start with utility, a central concept not only for economics but also all decision theory, the field in which the activity of <em>planning</em> is formalized mathematically.</p>
-</div>
-</div>
-<div class="section" id="utility">
-<h1>Utility<a class="headerlink" href="#utility" title="Permalink to this headline">¶</a></h1>
-<p>Economic value, or <em>utility</em>, of a state of the world for an individual is quantified by the consumption conferred (capital consumed).</p>
-<p>Reducing value to consumption may seem restrictive, and it is, but it’s how most economists see the world (not all! c.f. Hüttel, Balderjahn, &amp; Hoffmann,
-<em>Welfare Beyond Consumption: The Benefits of Having Less</em> Ecological Economics (2020)). That said, economists don’t think utility is identically consumption. Let’s work through the assumptions in a standard presentation of the economics that links the two.</p>
-<div class="section" id="utilities-at-different-levels-of-consumption">
-<h2>Utilities at different levels of consumption<a class="headerlink" href="#utilities-at-different-levels-of-consumption" title="Permalink to this headline">¶</a></h2>
-<p>It’s natural that the utility of consumption is relative to the level of consumption. A crude illustration here is that the value of a meal is higher to those who haven’t eaten yet than for those who have. Thus, we assume units of consumption at low values confer more utility than those at high values, or equivalently,</p>
+</li>
+<li><p>The choices for the standard values of the parameters used in the DICE models have been critisized, and updated versions have been analyzed and proposed (<a class="reference external" href="https://www.nature.com/articles/s41558-020-0833-x">Hansel et al. 2020</a>;<a class="reference external" href="https://www.nber.org/papers/w31112">Barrage &amp; Nordhaus 2023</a>). Here, we look at the standard DICE2016 version of the model.</p></li>
+</ul>
+<p>All DICE models (and most IAMs) are based on <em>Neo-classical economics</em> (also referred to as “establishment economics”). This is an approach to economics that makes particular assumptions. For example, it is assumed that production, consumption, and valuation of goods and services are driven solely by the supply and demand model. To understand this approach and how it is used in the DICE model, it is important to begin with a brief overview of some fundamental concepts. One such concept is <strong>utility</strong> (i.e. economic value), which is not only central to economics but also to decision theory as a whole, which is a research field that mathematically formalizes the activity of <em>planning</em> (planning here means selecting strategies based on how they are expected to play out given a model that takes those strategies and projects forward into the future).</p>
+<div class="section" id="section-1-1-utility">
+<h2><strong>Section 1.1: Utility</strong><a class="headerlink" href="#section-1-1-utility" title="Permalink to this headline">¶</a></h2>
+<p><strong>Utility</strong>, or economic value, is the total degree of satisfaction someone gets from using a product or service. In the context of socioeconomic climate impacts, utility of a state of the world for an individual is quantified by the consumption conferred (i.e. capital consumed; you can think of money as a placeholder for capital).</p>
+<p>Reducing value to consumption may seem restrictive, and it is, but it’s how most economists see the world (not all! c.f. <a class="reference external" href="https://www.sciencedirect.com/science/article/abs/pii/S0921800919318683">Hüttel, Balderjahn, &amp; Hoffmann,<em>Welfare Beyond Consumption: The Benefits of Having Less</em> Ecological Economics (2020)</a>). That said, economists don’t think utility is identical to consumption. Let’s work through the assumptions in a standard presentation of the economics that links the two.</p>
+<div class="section" id="section-1-1-1-utilities-at-different-levels-of-consumption">
+<h3><strong>Section 1.1.1: Utilities at Different Levels of Consumption</strong><a class="headerlink" href="#section-1-1-1-utilities-at-different-levels-of-consumption" title="Permalink to this headline">¶</a></h3>
+<p>It’s natural that the utility of consumption is relative to the level of consumption. A crude illustration here is that the value of a meal is higher to those who haven’t eaten recently than for those who have. Thus, we assume units of consumption at low values confer more utility than those at high values. In other words:</p>
 <ul class="simple">
-<li><p><strong>a unit of consumption carries less value the more an individual consumes</strong>.</p></li>
+<li><p><strong>A unit of consumption has less value to an individual, the more that individual tends to consume overall</strong></p></li>
 </ul>
-<p>Economic elasticity is the percentage change of one economic variable in response to a percentage change in another, <span class="math notranslate nohighlight">\(\frac{dy(x)}{dx}\frac{x}{y(x)}\)</span> (e.g. linear relationships give elasticity of 1). For utility as a function of consumption, let’s assume</p>
-<ul class="simple">
-<li><p><strong>a constant elasticity</strong></p></li>
-</ul>
-<p>for all consumption values, <span class="math notranslate nohighlight">\(c\)</span>, (also called the isoelastic case) parametrized by convention using <span class="math notranslate nohighlight">\(\alpha=1-\frac{du(c)}{dc}\cdot \frac{c}{u(c)}\)</span>. We can solve this differential equation and apply the convention <span class="math notranslate nohighlight">\(u(0)=0\)</span> as a boundary condition to obtain the utility function, $<span class="math notranslate nohighlight">\(u(c)=\frac{(c+1)^{1-\alpha}-1}{1-\alpha},\)</span><span class="math notranslate nohighlight">\( where \)</span>c\geq0$ and dimensionless, i.e. set in some multiples of some standard unit like 1 Big Mac, or more conventionally USDs.</p>
-<p>Utility is thus a monotonically increasing function with decreasing derivative or <em>marginal utility</em>, <span class="math notranslate nohighlight">\(\frac{du}{dc}=c^{-\alpha}\)</span>. Plot this utility function for different values of <span class="math notranslate nohighlight">\(\alpha\)</span></p>
+<p>The one parameter for the utility function is <strong>elasticity</strong> (<span class="math notranslate nohighlight">\(\alpha\)</span>), which is the measure of a variable’s sensitivity to change in another variable, in this case, how utility changes with consumption.</p>
+<p>We can plot the utility function for different values of elasticity to assess how the sensitivity of utility to changes in comsumption varies with different elasticity values.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">alpha</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.45</span><span class="p">]:</span>
+<span class="k">for</span> <span class="n">alpha</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.45</span><span class="p">]:</span>
     <span class="k">if</span> <span class="n">alpha</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">c</span><span class="p">),</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">'$\alpha='</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">alpha</span><span class="p">)</span><span class="o">+</span><span class="s1">'$'</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">alpha</span><span class="o">==</span><span class="mf">1.45</span><span class="p">:</span>
@@ -1195,147 +1446,137 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>A linear relationship between consumption and utility is obtained for <span class="math notranslate nohighlight">\(\alpha=0\)</span>. Note that this function includes the case of zero elasticity (<span class="math notranslate nohighlight">\(\alpha=1\)</span>), in which case l’Hôpital’s rule gives <span class="math notranslate nohighlight">\(u(c)=\log (1+c)\)</span> (alternatively, write <span class="math notranslate nohighlight">\(1+c=e^{\log (1+c)}\)</span> in the expression for <span class="math notranslate nohighlight">\(u(c)\)</span> and expand the exponential to linear order in <span class="math notranslate nohighlight">\(1-\alpha\)</span>).</p>
+<p>The plot you just made shows the relationship between consumption and utility for four different values of elasticity. For all values of elasticity, as consumption increases, the utility also increases, as we discussed above. However, let’s make some observations about how changes in elasticity affect this relationship. For lower elasticity values (i.e. <span class="math notranslate nohighlight">\(\alpha\)</span> = 1 shown in blue) an increase in consumption results in a stronger increase in utility. In constrast, for high elasticity values (i.e. <span class="math notranslate nohighlight">\(\alpha\)</span> = 1.45 shown in red), such as what is used in the DICE model, an increase in consumption results in only a smaller increase in utility.</p>
+<div class="section" id="questions-1-1-1">
+<h4><strong>Questions 1.1.1</strong><a class="headerlink" href="#questions-1-1-1" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>What do you think the function looks like for <span class="math notranslate nohighlight">\(\alpha=0\)</span>?</p></li>
+</ol>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/solutions/W2D3_Tutorial2_Solution_6aa285a9.py"><em>Click for solution</em></a></p>
 </div>
-<div class="section" id="utilities-over-a-population">
-<h2>Utilities over a population<a class="headerlink" href="#utilities-over-a-population" title="Permalink to this headline">¶</a></h2>
-<p>In the case that individuals are of the same type, a population of <span class="math notranslate nohighlight">\(L\)</span> such individuals (termed <span class="math notranslate nohighlight">\(L\)</span> for labor force) that has consumption <span class="math notranslate nohighlight">\(C\)</span>, equally spread among its members, i.e. per capita consumption, <span class="math notranslate nohighlight">\(C/L\)</span>, equal to the consumption of each member, <span class="math notranslate nohighlight">\(c_l\)</span>, <span class="math notranslate nohighlight">\(l=1,\dots,L\)</span>. The joint utility for this population is $<span class="math notranslate nohighlight">\(U(C,L)=\sum_{l=1}^Lu(c_l)=Lu(C/L).\)</span>$ This means we are assuming that</p>
+</div>
+<div class="section" id="section-1-1-2-utilities-over-a-population">
+<h3><strong>Section 1.1.2: Utilities Over a Population</strong><a class="headerlink" href="#section-1-1-2-utilities-over-a-population" title="Permalink to this headline">¶</a></h3>
+<p>In the case that individuals are of the same type, i.e. a population of such individuals, we assume that</p>
 <ul class="simple">
-<li><p><strong>utilities of individuals of the same type sum</strong>.</p></li>
+<li><p><strong>Utilities of individuals of the same type sum</strong></p></li>
 </ul>
 </div>
-<div class="section" id="utilities-over-time">
-<h2>Utilities over time<a class="headerlink" href="#utilities-over-time" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="section-1-1-3-utilities-over-time">
+<h3><strong>Section 1.1.3: Utilities Over Time</strong><a class="headerlink" href="#section-1-1-3-utilities-over-time" title="Permalink to this headline">¶</a></h3>
 <p>Since our actions now affect those in the future (the socalled <em>intertemporal choice problem</em>), we can’t decide what is best to do at each time point by looking only at how it affects the world at that time. We need to incorporate utilities from the future into our value definition to know what is best to do now. How should we combine these?</p>
-<p>Economists and decision theorists typically assume that a unit of utility is worth less the further into the future it is received. This is justified by pointing to the inherent uncertainty of this future event and the finite probability that it might not come to pass. This means</p>
+<p>Economists and decision theorists generally operate under the assumption that the value of a unit of utility decreases as it is received further into the future. This assumption is based on the recognition of the inherent uncertainty surrounding future events and the finite probability that they may not materialize. In other words:</p>
 <ul class="simple">
-<li><p><strong>utilities in the near future are valued more than those in the far future.</strong></p></li>
+<li><p><strong>Utilities in the near future are valued more than those in the far future</strong></p></li>
 </ul>
-<p>This devaluation of the future is called temporal discounting. You can imagine that there is alot of debate about how and even whether to do this in climate policy design!</p>
-<p>The standard formulation (<em>exponential discounting</em>) is to multiply projected future utilities by increasing powers of a discount factor, <span class="math notranslate nohighlight">\(\gamma\)</span> (corresponding to the assumption of a constant hazard rate (c.f. Sozou (1998)), before summing them. For example, the value, <span class="math notranslate nohighlight">\(V\)</span>, of a projection given a policy over this window is
-$<span class="math notranslate nohighlight">\(V=\sum_{t=1}^{\infty}\gamma^t U(c_t)\)</span><span class="math notranslate nohighlight">\( where \)</span>c_t<span class="math notranslate nohighlight">\( is the projected consumption \)</span>t<span class="math notranslate nohighlight">\( steps into the future. Economists parametrize \)</span>\gamma<span class="math notranslate nohighlight">\( using a discount rate \)</span>\rho<span class="math notranslate nohighlight">\(, \)</span>\gamma=1/(1+\rho)<span class="math notranslate nohighlight">\(, such that the characteristic horizon timescale after which future utility is ignored is \)</span>\rho^{-1}<span class="math notranslate nohighlight">\( time steps (in practise then the sum can be truncated to a finite time window a few multiples of \)</span>\rho^{-1}$ without affecting the value).</p>
-<p>In the following toy illustration of temporal discounting, see how (uncertain) projected future rewards (blue) are scaled down when summed to compute a value (e.g. of a current action).</p>
+<p>This devaluation of the future is called <em>temporal discounting</em>. You can imagine that there is a lot of debate about how and even whether to do this in climate policy design!</p>
+<p>The standard approach to incorporate temporal discounting into the model is to multiply the utilities of future benefits and costs by a <strong>discount factor</strong> (<span class="math notranslate nohighlight">\(\gamma\)</span> (‘gamma’), which is a number just less than 1, e.g. 0.95). The discount factor is raised to the power of time (in years) into the future to give the discount rate at that future time:</p>
+<ul class="simple">
+<li><p>after 1 year <span class="math notranslate nohighlight">\((0.95)^1=0.95\)</span></p></li>
+<li><p>after 2 years <span class="math notranslate nohighlight">\((0.95)^2=0.90\)</span></p></li>
+<li><p>after 10 years <span class="math notranslate nohighlight">\((0.95)\)</span><sup>10</sup><span class="math notranslate nohighlight">\(=0.60\)</span></p></li>
+</ul>
+<p>The <em>return</em> is the sum of future utilities, which is taken as the value of that future projection. If these utilies are discounted, their sum is called the <em>discounted return</em>. The following code will show an illustration of the effect of temporal discounting on future utilities and the return up to a given number of time steps into the future for a discount factor of <span class="math notranslate nohighlight">\(\gamma\)</span> = 0.95.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
-<span class="n">steps</span><span class="o">=</span><span class="mi">300</span>
-<span class="n">gamma_vec</span><span class="o">=</span><span class="p">[</span><span class="mf">0.9</span><span class="p">,</span><span class="mf">0.97</span><span class="p">]</span>
-<span class="n">num_realizations</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">realization_id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
-
-    <span class="n">undiscounted_utility_time_series</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">steps</span><span class="p">)</span> <span class="c1">#</span>
-    <span class="n">ax</span><span class="p">[</span><span class="n">realization_id</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">undiscounted_utility_time_series</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">'undiscounted'</span><span class="p">)</span>
-
-    <span class="n">cumsum_undiscounted_utility_time_series</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">undiscounted_utility_time_series</span><span class="p">)</span>
-    <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cumsum_undiscounted_utility_time_series</span><span class="o">/</span><span class="n">cumsum_undiscounted_utility_time_series</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">'undiscounted'</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">'C0'</span><span class="p">)</span>
-
-    <span class="k">for</span> <span class="n">git</span><span class="p">,</span><span class="n">gamma</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">gamma_vec</span><span class="p">):</span>
-        <span class="n">discounted_utility_time_series</span><span class="o">=</span><span class="n">undiscounted_utility_time_series</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">gamma</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">steps</span><span class="p">))</span>
-        <span class="n">ax</span><span class="p">[</span><span class="n">realization_id</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">discounted_utility_time_series</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">'discounted on $1/(1-\gamma)=$'</span><span class="o">+</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="o">+</span><span class="sa">r</span><span class="s1">'$'</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">gamma</span><span class="p">)))</span><span class="o">+</span><span class="s1">'$-step horizon'</span><span class="p">)</span>
-
-        <span class="n">cumsum_discounted_utility_time_series</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">discounted_utility_time_series</span><span class="p">)</span>
-        <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cumsum_discounted_utility_time_series</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">gamma</span><span class="p">),</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">'$1/(1-\gamma)='</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">gamma</span><span class="p">)))</span><span class="o">+</span><span class="s1">'$ horizon'</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">'C'</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">git</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
-
-    <span class="n">ax</span><span class="p">[</span><span class="n">realization_id</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'utility at step t'</span><span class="p">)</span>
-    <span class="n">ax</span><span class="p">[</span><span class="n">realization_id</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'example realization '</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">realization_id</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
-    <span class="n">ax</span><span class="p">[</span><span class="n">realization_id</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">steps</span><span class="p">)</span>
-    <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="s1">'center left'</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span>
-    <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'future return (normalized)'</span><span class="p">)</span>
-    <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'time steps into the future'</span><span class="p">)</span>
-<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">steps</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">time_steps</span><span class="o">=</span><span class="mi">300</span>
+<span class="n">gamma</span><span class="o">=</span><span class="mf">0.95</span>
+<span class="n">random_seed</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">plot_future_returns</span><span class="p">(</span><span class="n">gamma</span><span class="p">,</span><span class="n">random_seed</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Observe how the shorter the horizon, the sooner future discounted return saturates and no utility from further time steps contributes to the value. IN contrast for the undiscounted case, all future times matter equally and the future return grows linearly with the upper time to which utilities are computed.</p>
-</div>
-<div class="section" id="utilities-over-different-populations">
-<h2>Utilities over different populations<a class="headerlink" href="#utilities-over-different-populations" title="Permalink to this headline">¶</a></h2>
-<p>Now, let’s consider the case that there are populations of individuals of <em>different</em> types (e.g. different blocks of countries in the world economy). In a centralized planning setting, how do we value the utilities of each relative to each other? Consider the following family of <em>social welfare functions</em> (<em>social</em> is used here simply because there is more than 1) that combine the utilities of <span class="math notranslate nohighlight">\(N\)</span> groups (assuming these are discounted returns as computed above), $<span class="math notranslate nohighlight">\(W(U_1,\dots, U_N)=\sum_{i=1}^N U^\beta_i\)</span><span class="math notranslate nohighlight">\( The choice of exponent parameter \)</span>\beta<span class="math notranslate nohighlight">\( specifies the kind of welfare function. The socalled utilitarian choice is to set \)</span>\beta=1<span class="math notranslate nohighlight">\(, such that it is a sum that gives equal weight to each group. Alternatively, \)</span>\beta&lt;1<span class="math notranslate nohighlight">\( is a case analogous to how we transformed consumption to utility above (\)</span>\beta<span class="math notranslate nohighlight">\( analogoues to \)</span>1-\alpha<span class="math notranslate nohighlight">\() in a way that overweighs lower consumption. Here this means prioritizing groups having lower utility so it's called the prioritarian choice (studied in the context of climate policy by Adler et al. *Nat. Clim. Change* (2017)). Fairness excludes all cases of \)</span>\beta&gt;1<span class="math notranslate nohighlight">\(. Note that the case of \)</span>\beta<span class="math notranslate nohighlight">\( near 0 gives \)</span><span class="math notranslate nohighlight">\(\frac{W(U_1,\dots, U_N)-N}{\beta}=\sum_{i=1}^N\log U_i =\log\prod_{i=1}^{N}U_i.\)</span><span class="math notranslate nohighlight">\(
-Both the logarithm, subtraction by \)</span>N<span class="math notranslate nohighlight">\( and rescaling by \)</span>1/\beta<span class="math notranslate nohighlight">\( do not change the ordering of joint utilities induced by \)</span>W$. The result is then simply the product of utilities, called the Nash social welfare function. It is a natural fairness function and has many solution methods associated with it (see game theory literature).</p>
+<p>In both plots, the blue lines are undiscounted case (i.e. without the effect of temporal discounting) and the orange lines are the discounted case (i.e. including the effect of temporal discounting).</p>
+<p>The figure on the left shows utility at each time step. In both the undiscounted scenario (blue) and the discounted scenario (orange), projected utilities are variable and uncertain. Notice that in the unsidcounted case, the average size of these utilities stays the same. In contrast, in the discounted case the typical size of utility rapidly decreases to zero, reflecting the effect of temporal discounting (i.e. the devaluation of utilities in the far future).</p>
+<p>The figure on the right shows changes in return (i.e. the cumulative sum of future utilities) over time. The black dashed line shows the effective time horizon beyond which rewards are ignored in the discounted case for this chosen value of the discount factor, <span class="math notranslate nohighlight">\(\gamma\)</span> (this time is set by the natural convention of when the return gets to a fraction (<span class="math notranslate nohighlight">\(1-1/e\approx0.64\)</span>) of the final value). Beyond the time horizon, the future discounted return (orange) reaches saturation, and no additional utility from further time steps contributes to the overall value. In contrast, in the undiscounted case (blue), all future times are equally important, and the return grows linearly with the maximum time considered for computing utilities.</p>
 </div>
 </div>
-<div class="section" id="damage-functions">
-<h1>Damage functions<a class="headerlink" href="#damage-functions" title="Permalink to this headline">¶</a></h1>
-<p>The central model object linking climate and socio-economic processes in integrated assessment models is the damage function.</p>
-<p>These are the objects in the model that dictate how changes in temperature affect production (e.g. through direct weather-related damage). They are thus hugely important but unfortunately are estimated using ad hoc function families and a largely unjustifiable methodology that extrapolates from historical and geographic variability. (c.f. <em>The appallingly bad neoclassical economics of climate change</em> by S. Keen in <em>Globalizations</em> (2020) )</p>
-<p>The standard form is a deterministic continuous function that maps changes in temperature, <span class="math notranslate nohighlight">\(\Delta T\)</span> to the fraction, <span class="math notranslate nohighlight">\(\Omega\)</span>, of productivity destroyed. The standard parametrization an quadratic dependence
-$<span class="math notranslate nohighlight">\(
-\Omega=a\Delta T^2\)</span><span class="math notranslate nohighlight">\(
-where \)</span>a$ is some small (1e-3) constant. Let’s plot this function. For more contemporary damage functions see van der Wijst et al. <em>Nat. Clim. Change</em> (2023).</p>
+</div>
+<div class="section" id="section-2-damage-functions">
+<h1><strong>Section 2: Damage Functions</strong><a class="headerlink" href="#section-2-damage-functions" title="Permalink to this headline">¶</a></h1>
+<p>Now that we have familiarized ourselves with some of the main components of IAMs and the DICE model, we can begin to explore another important component: the <strong>damage function</strong>. The damage function is a central model component that connects climate and socio-economic processes in integrated assessment models.</p>
+<p>Damage functions are the objects in IAMs that dictate how changes in temperature affect production (e.g. through direct weather-related damages). They play a crucial role in determining the model’s projections.</p>
+<p>The standard form is a deterministic continuous function that maps changes in temperature, <span class="math notranslate nohighlight">\(\Delta T\)</span>, to the fraction of productivity that is destroyed by climate change every year, <span class="math notranslate nohighlight">\(\Omega\)</span>. The standard parametrization is a quadratic dependence
+$<span class="math notranslate nohighlight">\(\Omega=a \times (\Delta T)^2\)</span><span class="math notranslate nohighlight">\(
+where \)</span>a$ is some small constant (e.g. 0.001) whose value is set by regression of GDP and temperature over geographic and historical variation. Let’s plot this function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
-<span class="n">a1</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Damage intercept                                 /0   /</span>
-<span class="n">a2</span> <span class="o">=</span> <span class="mf">0.00236</span>  <span class="c1"># Damage quadratic term                     /0.00236/</span>
-<span class="n">a3</span> <span class="o">=</span> <span class="mf">2.00</span>  <span class="c1"># Damage exponent</span>
-<span class="k">for</span> <span class="n">a2</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1e-2</span><span class="p">,</span><span class="mf">1e-3</span><span class="p">]:</span>
-    <span class="c1"># p=ax.plot(T,1/(1+a1*T+a2*T**a3),label=r'$a_2='+str(a2)+'$ (DICE2016)') #older form</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,(</span><span class="n">a1</span><span class="o">*</span><span class="n">T</span><span class="o">+</span><span class="n">a2</span><span class="o">*</span><span class="n">T</span><span class="o">**</span><span class="n">a3</span><span class="p">),</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">'$a_2='</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">a2</span><span class="p">)</span><span class="o">+</span><span class="s1">'$ (DICE2023)'</span><span class="p">)</span><span class="c1">#ls='--',color=p[-1].get_color())#newer form</span>
+<span class="n">a1DICE</span> <span class="o">=</span> <span class="mf">0.00236</span>
+<span class="n">a2</span> <span class="o">=</span> <span class="mf">2.00</span>
+<span class="k">for</span> <span class="n">a1</span> <span class="ow">in</span> <span class="p">[</span><span class="n">a1DICE</span><span class="p">,</span><span class="mf">1e-2</span><span class="p">,</span><span class="mf">1e-1</span><span class="p">]:</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="n">a1</span><span class="o">*</span><span class="p">(</span><span class="n">T</span><span class="o">**</span><span class="n">a2</span><span class="p">),</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">'$a_1='</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span><span class="o">+</span><span class="s1">'$'</span> <span class="o">+</span><span class="p">(</span><span class="s1">'(DICE2023)'</span> <span class="k">if</span> <span class="n">a1</span><span class="o">==</span><span class="n">a1DICE</span> <span class="k">else</span> <span class="s1">''</span><span class="p">))</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'temperature change, $\Delta T$'</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">'fraction productivity destroyed'</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.05</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'fraction productivity destroyed'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Observe how larger temperature changes lead to a smaller fraction of remaining productivity. This drop is due to the putative damages caused by that temperature.</p>
-<p><em>Exercise</em>: Brainstorm reasons why a deterministic, continuous mapping between the two might not reflect, even qualitatively, the causal processes underlying the relationship between temperature and economic damage?</p>
-<p>(E.g. in a toy picture, what is the economic damage to coastal city subway systems as a function of change in height of sea level?)</p>
-<div class="section" id="exogeneous-control-variables">
-<h2>Exogeneous control variables<a class="headerlink" href="#exogeneous-control-variables" title="Permalink to this headline">¶</a></h2>
-<p>There are two exogeneous variables in the model:</p>
+<p>Observe how larger temperature changes lead to a larger fraction of productivity destroyed due to the damages caused by that temperature. The damage at a given temperature scales linearly with the parameter <span class="math notranslate nohighlight">\(a_1\)</span>, and exponentially with the parameters <span class="math notranslate nohighlight">\(a_2\)</span>.</p>
+<p>There are at least two fundamental problems with damage functions (for more see <a class="reference external" href="https://www.tandfonline.com/doi/full/10.1080/14747731.2020.1807856"><em>The appallingly bad neoclassical economics of climate change</em> by S. Keen in <em>Globalizations</em> (2020)</a>):</p>
+<ol class="simple">
+<li><p>As mathematical model objects, they are likely too simple to be useful predictors in characterizing climate damages in sufficient complexity.</p></li>
+<li><p>They arise from a poorly validated model-fitting procedure. In particular, it relies on ad hoc functional forms and the relevance of historical and geographical variability to future variability.</p></li>
+</ol>
+<div class="section" id="questions-2">
+<h2><strong>Questions 2</strong><a class="headerlink" href="#questions-2" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Pick an assumption that is made about the relationship between temperature and economic damage in arriving at a conventional damage function (e.g. that it is: <em>deterministic</em>, <em>continuous</em>, <em>constant in time</em>, <em>functional</em> (instead of dynamical), …) and explain why you think that assumption might be unrealistic for a specific sector of the economy or a specific region of the planet.</p></li>
+<li><p>Can you think of a specific way that temperature variation might cause variation in GDP that could have been significant in structuring the historical and/or geographical covariation of the two variables? How about a causal relationship that will not have been significant in historical or geographic variation up to now, but is likely to be significant as temperatures continue to rise and we experience more extreme climates?</p></li>
+</ol>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/solutions/W2D3_Tutorial2_Solution_6a1be695.py"><em>Click for solution</em></a></p>
+<p>Despite these problems highlighting a pressing need to improve how we formulate climate damages, damage functions allow economists within the neoclassical paradigm to start seriously considering the damaging effects of climate change. After a few decades of economists using overly optimistic damage functions that downplayed the damaging effects of climate change, current research on damage functions is striving to incorporate more realism and better estimation.</p>
+<p>For more contemporary damage functions see <a class="reference external" href="https://www.nature.com/articles/s41558-023-01636-1">van der Wijst et al. <em>Nat. Clim. Change</em> (2023)</a>. Note that even this modern publication is hindered by the <a class="reference external" href="https://en.wikipedia.org/wiki/McNamara_fallacy">McNamara Fallacy</a> of leaving out things that are hard to measure. The authors state: “The climate change impacts did not include potential losses originated in ecosystems or in the health sector. This is motivated by the difficulty in addressing the non-market dimension of those impacts with a ‘market-transaction-based’ model such as CGE. Also, catastrophic events were not considered, even though some ‘extremes’ (riverine floods) were included.”</p>
+</div>
+<div class="section" id="section-2-1-iam-model-summary">
+<h2><strong>Section 2.1: IAM Model Summary</strong><a class="headerlink" href="#section-2-1-iam-model-summary" title="Permalink to this headline">¶</a></h2>
+<p>We’ve now explored both the utility function and damage function components of IAMs.  Before we move on to actually running the DICE model, let’s summarize what we’ve learned so far about IAMs, specifically regarding the economy and climate models:</p>
+<p>The economy model in most IAMs is a capital accumulation model.</p>
 <ul class="simple">
-<li><p>mitigation (emissions reduction) rate <span class="math notranslate nohighlight">\(\mu_t\)</span>, and</p></li>
-<li><p>the savings rate <span class="math notranslate nohighlight">\(S_t\)</span>.</p></li>
+<li><p>Capital (<span class="math notranslate nohighlight">\(K\)</span>) combines with a laboring population and technology to generate productivity (<span class="math notranslate nohighlight">\(Y\)</span>) that is hindered by climate damage.</p></li>
+<li><p>A savings rate, <span class="math notranslate nohighlight">\(S\)</span>, drives capital accumulation, while the rest is consumed. Welfare is determined by consumption.</p></li>
+<li><p>Climate action is formulated by a mitigation rate, <span class="math notranslate nohighlight">\(\mu\)</span>, which along with the savings rate, <span class="math notranslate nohighlight">\(S\)</span>, are the two exogeneous control parameters in the model and are used to maximize welfare.</p></li>
 </ul>
-<p>There is a mitigation cost associated with a given mitigation rate given as the fraction of productivity, <span class="math notranslate nohighlight">\(\Lambda_t=\theta_1\mu^{\theta_2}\)</span>, such that mitigating more costs more.</p>
-<p>The savings rate <span class="math notranslate nohighlight">\(S_t\)</span> pulls out a fraction of production to invest to drive up capital, with the remaining production consumed.</p>
-</div>
-<div class="section" id="economy-model-summary">
-<h2>Economy model summary<a class="headerlink" href="#economy-model-summary" title="Permalink to this headline">¶</a></h2>
-<p>The essence of the economy model in DICE is a capital accumulation model. Existing capital depreciates at rate <span class="math notranslate nohighlight">\(\delta\)</span> and new capital arises through investment,
-$<span class="math notranslate nohighlight">\(K_{t+1}=(1-\delta)K_t+I_t\)</span><span class="math notranslate nohighlight">\(
-where the invested capital \)</span>I=SQ<span class="math notranslate nohighlight">\( is determined by a chosen fraction \)</span>S<span class="math notranslate nohighlight">\( of the production \)</span>Q<span class="math notranslate nohighlight">\( that is "saved" rather than consumed. Production is given as the productivity \)</span>Y<span class="math notranslate nohighlight">\( reduced by damages and mitigation cost, \)</span><span class="math notranslate nohighlight">\(Q=(1-\Omega)(1-\Lambda)Y.\)</span><span class="math notranslate nohighlight">\( Productivity, \)</span><span class="math notranslate nohighlight">\(Y=A K^\gamma L^{1-\gamma},\)</span><span class="math notranslate nohighlight">\(
-is determined by the technology conversion \)</span>A<span class="math notranslate nohighlight">\( operating on a combination of capital \)</span>K<span class="math notranslate nohighlight">\( and labor \)</span>L<span class="math notranslate nohighlight">\( whose relative contributions are set by the capital elasticity parameter \)</span>\gamma$. Labor is population which set to saturate over the 2nd half of the 21st century. Technology conversion is only weakly sigmoidal in time, deviating slightly from linear growth.</p>
-<p>The remaining production is consumed $<span class="math notranslate nohighlight">\(C:=(1-S)Q\)</span><span class="math notranslate nohighlight">\( producing utility \)</span><span class="math notranslate nohighlight">\(U(C,L)=Lu(c)=Lu(C/L),\)</span><span class="math notranslate nohighlight">\( using the isoelastic utility function, \)</span><span class="math notranslate nohighlight">\(u(c)=\frac{(c+1)^{1-\alpha}-1}{1-\alpha}.\)</span><span class="math notranslate nohighlight">\( The overall value of a projected future is then \)</span><span class="math notranslate nohighlight">\(V=\sum_{t=1}^{\infty}\gamma^t U(C_t,L_t),\)</span><span class="math notranslate nohighlight">\( where \)</span>\gamma=1/(1+\rho)<span class="math notranslate nohighlight">\( for discount rate \)</span>\rho<span class="math notranslate nohighlight">\( and we use the population level utility function \)</span>U(C,L)=Lu(C/L)$.</p>
-</div>
-<div class="section" id="climate-model">
-<h2>Climate model<a class="headerlink" href="#climate-model" title="Permalink to this headline">¶</a></h2>
-<p>The climate model in DICE could be improved (c.f. https://www3.nd.edu/~nmark/Climate/DICE-simplified_2019.pdf). We only summarize here how it interacts with the economy model.</p>
-<p>Productivity generates industrial emissions, $<span class="math notranslate nohighlight">\(E_\mathrm{ind}=(1-\mu)\sigma Y,\)</span><span class="math notranslate nohighlight">\( where the \)</span>1-\mu<span class="math notranslate nohighlight">\( factor accounts for reduced carbon intensity of production, \)</span>\sigma<span class="math notranslate nohighlight">\(, via supply-side mitigation measures (e.g. increased efficiency). Productivity rather than output production \)</span>Q$ is used here because damages aren’t included. Namely, the emissions produced in the process of capital production occur before climate change has a chance to inflict damage on the produced output.</p>
-<p>These emissions combine with natural emissions to drive the temperature changes appearing in the damage function, closing the economy-climate loop.</p>
-</div>
-<div class="section" id="optimal-planning">
-<h2>Optimal Planning<a class="headerlink" href="#optimal-planning" title="Permalink to this headline">¶</a></h2>
-<p>The uncontrained problem is simply to maximize <span class="math notranslate nohighlight">\(V\)</span> over the space of time courses of <span class="math notranslate nohighlight">\(\mu_t\)</span> and <span class="math notranslate nohighlight">\(S_t\)</span> (although with bound constraints on <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(S\)</span>). Why is there a sweet spot? Savings increases investment and thus productivity, but the resulting higher production drives emissions, driving up temperature and resulting in damages that scale down production. Mitigation costs balance this latter effect such that there typically exists a non-trivial joint time series of <span class="math notranslate nohighlight">\(\mu_t\)</span> and <span class="math notranslate nohighlight">\(S_t\)</span> that maximizes <span class="math notranslate nohighlight">\(V\)</span>. Because of the discount factor <span class="math notranslate nohighlight">\(\gamma\)</span>, <span class="math notranslate nohighlight">\(V\)</span> is only determined by the future sequence of consumption (non-invested production) a few multiples of the horizon, <span class="math notranslate nohighlight">\(1/(1-\gamma)\)</span> time steps into the future.</p>
-<p>Constrained formulations add the constraint of industrial emissions below some value.</p>
-</div>
-<div class="section" id="social-cost-of-carbon">
-<h2>Social cost of carbon<a class="headerlink" href="#social-cost-of-carbon" title="Permalink to this headline">¶</a></h2>
-<p>A definition for the social cost of carbon is</p>
+<p>The climate model in DICE interacts with the economy model via the following equation:
+$<span class="math notranslate nohighlight">\(E_\mathrm{ind}=(1-\mu)\sigma Y,\)</span>$</p>
 <ul class="simple">
-<li><p><em>the decrease in aggregate consumption in that year that would change the current…value of social welfare by the same amount as a one unit increase in carbon emissions in that year.</em> (Newbold, Griffiths, Moore, Wolverton, &amp; Kopits, 2013).</p></li>
+<li><p>Productivity (<span class="math notranslate nohighlight">\(Y\)</span>) generates industrial emissions (<span class="math notranslate nohighlight">\(E_\mathrm{ind}\)</span>), where the <span class="math notranslate nohighlight">\(1-\mu\)</span> factor accounts for a reduction of the carbon intensity of production, <span class="math notranslate nohighlight">\(\sigma\)</span>, via supply-side mitigation measures (e.g. increased efficiency).</p></li>
+<li><p>The productivity <span class="math notranslate nohighlight">\(Y\)</span> rather than output production (<span class="math notranslate nohighlight">\(Q\)</span>) is used here because damages aren’t included.</p></li>
+<li><p>Damages aren’t included because the emissions produced in the process of capital production occur before climate change has a chance to inflict damage on the produced output.</p></li>
+<li><p>These industrial emissions combine with natural emissions to drive the temperature changes appearing in the damage function, closing the economy-climate loop.</p></li>
 </ul>
-<p>Here, that means the social cost of carbon (SCC) is the marginal value with respect to emissions relative to the marginal value with respect to consumption, $<span class="math notranslate nohighlight">\(SCC_t\propto\frac{\partial V/\partial E_t}{\partial V/\partial C_t}=\frac{\partial C_t}{\partial E_t}.\)</span><span class="math notranslate nohighlight">\(
-This is usually expressed by multiplying by a proportionality factor of \)</span>-1000<span class="math notranslate nohighlight">\( that converts the units to 2010 US dollars per tonne of CO2. The \)</span>SCC_t$ quantifies how much consumption is lost with increased emissions, using changes in welfare to make the connection.</p>
-<p>Now you have a sense for how climate economists dervie optimal plans, here via the specification of a welfare function for society that serves as a basis to rank and select different climate policies defined via time-varying rates of mitigation and capital investment.</p>
+</div>
+<div class="section" id="section-2-2-optimal-planning">
+<h2><strong>Section 2.2: Optimal Planning</strong><a class="headerlink" href="#section-2-2-optimal-planning" title="Permalink to this headline">¶</a></h2>
+<p>The goal of the model is to maximize the overall value of a projected future, <span class="math notranslate nohighlight">\(V\)</span>, within the bounds of mitigation rate, <span class="math notranslate nohighlight">\(\mu\)</span>, and savings rate, <span class="math notranslate nohighlight">\(S\)</span>, time courses (while considering constraints on <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(S\)</span>). This approach is known as <strong>optimal planning</strong>. But why does this “sweet spot” in which overall value is maximized exist? Increasing savings boosts investment and productivity, but higher production leads to higher emissions, resulting in increased temperature and damages that reduce production. Mitigation costs counterbalance this effect, creating a trade-off. As a result, there typically exists a meaningful joint time series of <span class="math notranslate nohighlight">\(\mu_t\)</span> and <span class="math notranslate nohighlight">\(S_t\)</span> that maximizes <span class="math notranslate nohighlight">\(V\)</span>. Due to the discount factor <span class="math notranslate nohighlight">\(\gamma\)</span>, <span class="math notranslate nohighlight">\(V\)</span> depends on the future consumption sequence (non-invested production) within a few multiples of the time horizon, approximately <span class="math notranslate nohighlight">\(1/(1-\gamma)\)</span> time steps into the future.</p>
+<p>We gone over many variables so far in this tutorial. Here is a list of variables used fore easier reference:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(K\)</span> capital</p></li>
+<li><p><span class="math notranslate nohighlight">\(Y\)</span> productivity</p></li>
+<li><p><span class="math notranslate nohighlight">\(S\)</span> savings rate</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mu\)</span> mitigation rate</p></li>
+<li><p><span class="math notranslate nohighlight">\(E\)</span> emissions</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sigma\)</span> carbon intensity of production</p></li>
+<li><p><span class="math notranslate nohighlight">\(Q\)</span> production</p></li>
+<li><p><span class="math notranslate nohighlight">\(\gamma\)</span> discount factor</p></li>
+<li><p><span class="math notranslate nohighlight">\(V\)</span> value</p></li>
+</ul>
+<p>If you’d like to explore the mathematical equations behind these models in more detail, please refer to the information in the “Further Reading” section for this day.</p>
 </div>
 </div>
-<div class="section" id="section-2-dice-simulations">
-<h1>Section 2: DICE simulations<a class="headerlink" href="#section-2-dice-simulations" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="section-3-dice-simulations">
+<h1><strong>Section 3: DICE Simulations</strong><a class="headerlink" href="#section-3-dice-simulations" title="Permalink to this headline">¶</a></h1>
 <p>Now, let’s move to the DICE model that gives us some control over our emissions and consumption to see the effect of varying the parameters arising from the above design choices.</p>
-<p>We’ll use a <code class="docutils literal notranslate"><span class="pre">Python</span></code> implementation of the DICE2016 model (https://github.com/hazem2410/PyDICE) that I refactored into a class and made a few other changes to make it easier to vary parameters (https://github.com/mptouzel/PyDICE/blob/master/dicelib.py).
-N.b. that the DICE model was recently updated (<a class="reference external" href="https://www.nber.org/papers/w31112">DICE2023</a>).</p>
-<p>The model equations are described in the associated document that can be downloaded: https://github.com/hazem2410/PyDICE/blob/master/PyDICE2016.pdf. The notation is similar, but not identical.</p>
-<p><em>Exercise</em>: Open <code class="docutils literal notranslate"><span class="pre">dicelib.py</span></code> in the local folder and look at the list of parameter definitions. Crosscheck some of them with the equations in the pdf above.</p>
-<div class="section" id="case-1-run-standard-run">
-<h2>Case 1 Run standard run<a class="headerlink" href="#case-1-run-standard-run" title="Permalink to this headline">¶</a></h2>
-<p>Let’s run the standard run</p>
+<p>I’ve forked an existing <code class="docutils literal notranslate"><span class="pre">Python</span></code> implementation of the <a class="reference external" href="https://github.com/hazem2410/PyDICE">DICE2016 model</a> and refactored it into a class (defined in <a class="reference external" href="https://github.com/mptouzel/PyDICE/blob/master/dicelib.py"><code class="docutils literal notranslate"><span class="pre">dicelib.py</span></code></a>) and made a few other changes to make it easier to vary parameters. We’ll use that <a class="reference external" href="https://github.com/mptouzel/PyDICE/">forked version</a> in this tutorial.
+Note that the DICE model was recently updated (<a class="reference external" href="https://www.nber.org/papers/w31112">DICE2023</a>).</p>
+<p>The model equations are described in a <a class="reference external" href="https://github.com/hazem2410/PyDICE/blob/master/PyDICE2016.pdf">document</a> associated with the exising <code class="docutils literal notranslate"><span class="pre">Python</span></code> implementation.</p>
+<div class="section" id="section-3-1-case-1-standard-run">
+<h2><strong>Section 3.1: Case 1 Standard Run</strong><a class="headerlink" href="#section-3-1-case-1-standard-run" title="Permalink to this headline">¶</a></h2>
+<p>Let’s run the standard run of the DICE model:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dice_std</span> <span class="o">=</span> <span class="n">dicelib</span><span class="o">.</span><span class="n">DICE</span><span class="p">()</span>  <span class="c1">#create an instance of the model</span>
@@ -1347,7 +1588,7 @@ N.b. that the DICE model was recently updated (<a class="reference external" hre
 </div>
 </div>
 </div>
-<p>Check that the optimal control solution is within the bounds we set:</p>
+<p>Before assessing the results, let’s first check that the optimal control solution is within the bounds we set. To do so, let’s assess the mitigation rate and savings rate:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
@@ -1355,16 +1596,18 @@ N.b. that the DICE model was recently updated (<a class="reference external" hre
 <span class="n">TT</span><span class="o">=</span><span class="n">dice_std</span><span class="o">.</span><span class="n">TT</span>
 <span class="n">NT</span><span class="o">=</span><span class="n">dice_std</span><span class="o">.</span><span class="n">NT</span>
 <span class="n">upp</span><span class="p">,</span><span class="n">low</span><span class="o">=</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">controls_bounds_std</span><span class="p">[:</span><span class="n">NT</span><span class="p">])</span>
-<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">TT</span><span class="p">,</span><span class="n">dice_std</span><span class="o">.</span><span class="n">optimal_controls</span><span class="p">[:</span><span class="n">NT</span><span class="p">])</span>
-<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">TT</span><span class="p">,</span> <span class="n">upp</span><span class="p">,</span><span class="s1">'k--'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">TT</span><span class="p">,</span><span class="n">dice_std</span><span class="o">.</span><span class="n">optimal_controls</span><span class="p">[:</span><span class="n">NT</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">'optimal'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">TT</span><span class="p">,</span> <span class="n">upp</span><span class="p">,</span><span class="s1">'k--'</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">'bounds'</span><span class="p">)</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">TT</span><span class="p">,</span><span class="n">low</span><span class="p">,</span><span class="s1">'k--'</span><span class="p">)</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'mitigation rate'</span><span class="p">)</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span><span class="n">max_year</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">upp</span><span class="p">,</span><span class="n">low</span><span class="o">=</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">controls_bounds_std</span><span class="p">[</span><span class="n">NT</span><span class="p">:])</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">TT</span><span class="p">,</span><span class="n">dice_std</span><span class="o">.</span><span class="n">optimal_controls</span><span class="p">[</span><span class="n">NT</span><span class="p">:])</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">TT</span><span class="p">,</span><span class="n">upp</span><span class="p">,</span><span class="s1">'k--'</span><span class="p">)</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">TT</span><span class="p">,</span><span class="n">low</span><span class="p">,</span><span class="s1">'k--'</span><span class="p">)</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'savings rate'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'year'</span><span class="p">)</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span><span class="n">max_year</span><span class="p">)</span>
 
 <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
@@ -1372,8 +1615,50 @@ N.b. that the DICE model was recently updated (<a class="reference external" hre
 </div>
 </div>
 </div>
-<p><em>Exercise</em>: change <code class="docutils literal notranslate"><span class="pre">max_year</span></code> in the cell above to see what happens after 2100. What does the mitigation rate do?</p>
-<p>The model aims include the effects of negative emission technologies by allowing the mitigation rate (via the bounds) to go greater than 1 at about 2140. Note that the solution definitely makes use of this and would do so before 2100 if allowed. What do the rest of the variables look like:</p>
+<div class="section" id="coding-exercise-3-1">
+<h3><strong>Coding Exercise 3.1</strong><a class="headerlink" href="#coding-exercise-3-1" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Please change <code class="docutils literal notranslate"><span class="pre">max_year</span></code> to 2500 in the cell above to see what happens after 2100. What does the mitigation rate do?</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#################################################</span>
+<span class="c1"># Students: Fill in missing code (...) and comment or remove the next line</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">"Student exercise: Please change `max_year` to 2500 in the cell above to see what happens after 2100. What does the mitigation rate do?"</span><span class="p">)</span>
+<span class="c1">#################################################</span>
+
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">max_year</span><span class="o">=</span><span class="mi">2500</span>
+<span class="n">TT</span><span class="o">=</span><span class="n">dice_std</span><span class="o">.</span><span class="n">TT</span>
+<span class="n">NT</span><span class="o">=</span><span class="n">dice_std</span><span class="o">.</span><span class="n">NT</span>
+<span class="n">upp</span><span class="p">,</span><span class="n">low</span><span class="o">=</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">controls_bounds_std</span><span class="p">[:</span><span class="n">NT</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">TT</span><span class="p">,</span><span class="n">dice_std</span><span class="o">.</span><span class="n">optimal_controls</span><span class="p">[:</span><span class="n">NT</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">'optimal'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">TT</span><span class="p">,</span> <span class="n">upp</span><span class="p">,</span><span class="s1">'k--'</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">'bounds'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">TT</span><span class="p">,</span><span class="n">low</span><span class="p">,</span><span class="s1">'k--'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'mitigation rate'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span><span class="n">max_year</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">upp</span><span class="p">,</span><span class="n">low</span><span class="o">=</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">controls_bounds_std</span><span class="p">[</span><span class="n">NT</span><span class="p">:])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">TT</span><span class="p">,</span><span class="n">dice_std</span><span class="o">.</span><span class="n">optimal_controls</span><span class="p">[</span><span class="n">NT</span><span class="p">:])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">TT</span><span class="p">,</span><span class="n">upp</span><span class="p">,</span><span class="s1">'k--'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">TT</span><span class="p">,</span><span class="n">low</span><span class="p">,</span><span class="s1">'k--'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'savings rate'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'year'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span><span class="n">max_year</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/solutions/W2D3_Tutorial2_Solution_b5fb40ae.py"><em>Click for solution</em></a></p>
+<p><em>Example output:</em></p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/static/W2D3_Tutorial2_Solution_b5fb40ae_0.png"><img align="center" alt="Solution hint" class="align-center" src="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/static/W2D3_Tutorial2_Solution_b5fb40ae_0.png" style="width: 775.0px; height: 575.0px;"/></a>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/solutions/W2D3_Tutorial2_Solution_79cb322d.py"><em>Click for solution</em></a></p>
+<p>The model incorporates the effects of negative emission technologies by allowing the mitigation rate (via the bounds) to exceed 1 around the year 2140. It is worth noting that the solution explicitly utilizes this feature and would do so even before 2100 if permitted. The decision to include this behavior was made by the modellers who realized that it enabled feasible solutions for the higher forcing SSP scenarios that were previously unattainable.</p>
+<p>At the time, there was a lively debate surrounding this decision, although it was largely in favor of allowing mitigation rates greater than 1. As a result, such rates have become a standard feature in many models for high forcing regimes. However, it is important to acknowledge that there have been arguments against this practice, as discussed in <a class="reference external" href="https://DOI:10.1126/science.aah45">Anderson &amp; Peters, 2006</a>.</p>
+<p>In the final two tutorials, we will explore sociological aspects such as these.</p>
+<p>Now, let’s examine the remaining variables of the DICE model:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dice_std</span><span class="o">.</span><span class="n">roll_out</span><span class="p">(</span><span class="n">dice_std</span><span class="o">.</span><span class="n">optimal_controls</span><span class="p">)</span>
@@ -1382,15 +1667,23 @@ N.b. that the DICE model was recently updated (<a class="reference external" hre
 </div>
 </div>
 </div>
-<p>So the carbon price (green) roughly tracks the mitiation rate (Em rate). The emissions rate roughly tracks the industrial emissions. Cumulative emissions peak around 2090 (since NETS aren’t used until 2140).</p>
+<p>In this plot, the mitigation rate we looked at earlier is now referred to as the “Em rate” (orange line), which closely follows the patter of the carbon price (green line). Similarly, the rate of CO2 emissions (gray line) aligns with the industrial emissions (red line). Cumulative emissions (pink line) reach their peak around 2090, considering that negative emission technologies (NETs) are not employed until 2140.</p>
 </div>
-<div class="section" id="case-2-damage-functions">
-<h2>Case 2 Damage functions<a class="headerlink" href="#case-2-damage-functions" title="Permalink to this headline">¶</a></h2>
-<p>How fast we scale up mitigation efforts in the standard run depends on how much damage climate change is projected to cause, which is set by the parameters of the damage function. How sensitive is our response to these parameters?</p>
-<p><em>Exercise</em>: Change strength of the nonlinearity in the damage function by changing the exponent from 2 to 3.</p>
+</div>
+<div class="section" id="section-3-2-case-2-damage-functions">
+<h2><strong>Section 3.2: Case 2 Damage Functions</strong><a class="headerlink" href="#section-3-2-case-2-damage-functions" title="Permalink to this headline">¶</a></h2>
+<p>The rate at which we increase our mitigation efforts in the standard scenario depends on the projected damage caused by climate change (brown line in the plot above), which is determined by the parameters of the damage function. The question is, how responsive is our response to these parameters?</p>
+<div class="section" id="coding-exercise-3-2">
+<h3><strong>Coding Exercise 3.2</strong><a class="headerlink" href="#coding-exercise-3-2" title="Permalink to this headline">¶</a></h3>
+<p>Change the strength of the nonlinearity in the damage function by changing the exponent from 2 to 3.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">a3</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#################################################</span>
+<span class="c1"># Students: Fill in missing code (...) and comment or remove the next line</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">"Student exercise: Change the strength of the nonlinearity in the damage function by changing the exponent from 2 to 3.."</span><span class="p">)</span>
+<span class="c1">#################################################</span>
+
+<span class="k">for</span> <span class="n">a3</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]:</span>
     <span class="n">dice</span> <span class="o">=</span> <span class="n">dicelib</span><span class="o">.</span><span class="n">DICE</span><span class="p">()</span>
     <span class="n">dice</span><span class="o">.</span><span class="n">init_parameters</span><span class="p">(</span><span class="n">a3</span><span class="o">=</span><span class="n">a3</span><span class="p">)</span>
     <span class="n">dice</span><span class="o">.</span><span class="n">init_variables</span><span class="p">()</span>
@@ -1402,16 +1695,34 @@ N.b. that the DICE model was recently updated (<a class="reference external" hre
 </div>
 </div>
 </div>
-<p>What are the main differences between these two projections?</p>
-<p>IAMs model climate damages as affecting productivity only in the year in which they occur. What if the negative effects on productivity persist into the future? A persistence time can be added to damages such that a damage incurred in one year can continue affecting productivity into following years (c.f. Schultes et al. <em>Environ. Res. Lett.</em> (2021); Hansel et al. <em>Nat. Clim. Change</em> (2020)). These effects are not negligible, but are absent from current IAMs used by the IPCC.</p>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/solutions/W2D3_Tutorial2_Solution_9ba9935c.py"><em>Click for solution</em></a></p>
+<p><em>Example output:</em></p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/static/W2D3_Tutorial2_Solution_9ba9935c_2.png"><img align="center" alt="Solution hint" class="align-center" src="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/static/W2D3_Tutorial2_Solution_9ba9935c_2.png" style="width: 1307.0px; height: 677.0px;"/></a>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/static/W2D3_Tutorial2_Solution_9ba9935c_3.png"><img align="center" alt="Solution hint" class="align-center" src="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/static/W2D3_Tutorial2_Solution_9ba9935c_3.png" style="width: 1307.0px; height: 677.0px;"/></a>
 </div>
-<div class="section" id="case-3-discount-rate">
-<h2>Case 3: discount rate<a class="headerlink" href="#case-3-discount-rate" title="Permalink to this headline">¶</a></h2>
-<p>The value definition includes exponential temporal discounting at a rate of r=1.5% per year so that utility obtained <span class="math notranslate nohighlight">\(t\)</span> years into the future is scaled down by <span class="math notranslate nohighlight">\(1/(1+r)^t\)</span>. What if we set this rate lower so that we don’t down scale as quickly and so incorporate more in the value definition of what happens in the future when we make decisions?</p>
-<p><em>Exercise</em>: Change the discount rate from 1.5% to 0.5% (c.f. Arrow et al. <em>Science</em> (2013))</p>
+<div class="section" id="questions-3-2">
+<h3><strong>Questions 3.2</strong><a class="headerlink" href="#questions-3-2" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>What are the main differences between these two projections?</p></li>
+</ol>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/solutions/W2D3_Tutorial2_Solution_7b92403d.py"><em>Click for solution</em></a></p>
+<p>IAMs model climate damages as affecting productivity only in the year in which they occur. What if the negative effects on productivity persist into the future? A persistence time can be added to damages such that damage incurred in one year can continue affecting productivity into following years (c.f. <a class="reference external" href="https://iopscience.iop.org/article/10.1088/1748-9326/ac27ce/pdf">Schultes et al. <em>Environ. Res. Lett.</em> (2021)</a>; <a class="reference external" href="https://eprints.lse.ac.uk/105699/1/Climate_economics_support_for_the_UN_climate_targets_2.pdf">Hansel et al. <em>Nat. Clim. Change</em> (2020)</a>). These effects are not negligible, but are absent from current IAMs used by the IPCC.</p>
+</div>
+</div>
+<div class="section" id="section-3-3-case-3-discount-rate">
+<h2><strong>Section 3.3: Case 3 Discount Rate</strong><a class="headerlink" href="#section-3-3-case-3-discount-rate" title="Permalink to this headline">¶</a></h2>
+<p>The value definition includes exponential temporal discounting (i.e. devaluation of utilities over time) at a rate of r = 1.5% per year so that utility obtained <span class="math notranslate nohighlight">\(t\)</span> years into the future is scaled down by <span class="math notranslate nohighlight">\(1/(1+r)^t\)</span>. What if we set this rate lower so that we don’t down scale as quickly (i.e. utilities have more value for longer) and incorporate more in the value definition of what happens in the future when we make decisions?</p>
+<div class="section" id="coding-exercise-3-3">
+<h3><strong>Coding Exercise 3.3</strong><a class="headerlink" href="#coding-exercise-3-3" title="Permalink to this headline">¶</a></h3>
+<p>Change the discount rate from 1.5% to 0.5% (c.f. <a class="reference external" href="https://www.science.org/doi/10.1126/science.1235665">Arrow et al. <em>Science</em> (2013)</a>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">prstp</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">0.015</span><span class="p">,</span> <span class="mf">0.005</span><span class="p">]:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#################################################</span>
+<span class="c1"># Students: Fill in missing code (...) and comment or remove the next line</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">"Student exercise: Change the discount rate from 1.5% to 0.5% ."</span><span class="p">)</span>
+<span class="c1">#################################################</span>
+
+<span class="k">for</span> <span class="n">prstp</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">0.015</span><span class="p">,</span> <span class="mf">0.005</span><span class="p">]:</span>
     <span class="n">dice</span> <span class="o">=</span> <span class="n">dicelib</span><span class="o">.</span><span class="n">DICE</span><span class="p">()</span>
     <span class="n">dice</span><span class="o">.</span><span class="n">init_parameters</span><span class="p">(</span><span class="n">prstp</span><span class="o">=</span><span class="n">prstp</span><span class="p">)</span>
     <span class="n">dice</span><span class="o">.</span><span class="n">init_variables</span><span class="p">()</span>
@@ -1423,20 +1734,23 @@ N.b. that the DICE model was recently updated (<a class="reference external" hre
 </div>
 </div>
 </div>
-<p>How are the differences in these two sets of projections consistent with the change in the discount rate?</p>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/solutions/W2D3_Tutorial2_Solution_2c81fb58.py"><em>Click for solution</em></a></p>
+<p><em>Example output:</em></p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/static/W2D3_Tutorial2_Solution_2c81fb58_2.png"><img align="center" alt="Solution hint" class="align-center" src="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/static/W2D3_Tutorial2_Solution_2c81fb58_2.png" style="width: 1307.0px; height: 677.0px;"/></a>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/static/W2D3_Tutorial2_Solution_2c81fb58_3.png"><img align="center" alt="Solution hint" class="align-center" src="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/static/W2D3_Tutorial2_Solution_2c81fb58_3.png" style="width: 1307.0px; height: 677.0px;"/></a>
 </div>
-<div class="section" id="case-4-the-utility-function">
-<h2>Case 4 The utility function<a class="headerlink" href="#case-4-the-utility-function" title="Permalink to this headline">¶</a></h2>
-<p>These models use an elasticity of consumption when defining the utility function that serves as the basis for the value definition. Here, the elasticity parameter is the exponent called <code class="docutils literal notranslate"><span class="pre">elasmu</span></code>. Let’s look at the definitions of the utility:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># def fPERIODU(iC, il, index):</span>
-<span class="c1">#     return ((iC[indddex]*1000/il[index])**(1-elasmu) - 1) / (1 - elasmu) - 1</span>
-</pre></div>
+<div class="section" id="questions-3-3">
+<h3><strong>Questions 3.3</strong><a class="headerlink" href="#questions-3-3" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>How are the differences in these two sets of projections consistent with the change in the discount rate?</p></li>
+</ol>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/solutions/W2D3_Tutorial2_Solution_3b8be0b9.py"><em>Click for solution</em></a></p>
 </div>
 </div>
-</div>
-<p>Let’s vary this elasticity exponent</p>
+<div class="section" id="section-3-4-case-4-the-utility-function">
+<h2><strong>Section 3.4: Case 4 the Utility Function</strong><a class="headerlink" href="#section-3-4-case-4-the-utility-function" title="Permalink to this headline">¶</a></h2>
+<p>These models use an elasticity of consumption when defining the utility function that serves as the basis for the value definition. Recall that elasticity describes the sensitivity of utility to changes in comsumption. Here, the elasticity parameter is the exponent called <code class="docutils literal notranslate"><span class="pre">elasmu</span></code>.</p>
+<p>Let’s vary this elasticity exponent:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">elasmu</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">1.45</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">]:</span>
@@ -1451,17 +1765,22 @@ N.b. that the DICE model was recently updated (<a class="reference external" hre
 </div>
 </div>
 </div>
-<p>How are the differences in these two sets of projections consistent with the change in the elasticity?</p>
+<div class="section" id="questions-3-4">
+<h3><strong>Questions 3.4</strong><a class="headerlink" href="#questions-3-4" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>How are the differences in these two sets of projections consistent with the change in the elasticity?</p></li>
+</ol>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W2D3_FutureClimate-IPCCII&amp;IIISocio-EconomicBasis/solutions/W2D3_Tutorial2_Solution_5a417149.py"><em>Click for solution</em></a></p>
 </div>
-<div class="section" id="extra-1-social-welfare-functions">
-<h2>Extra 1: Social welfare functions<a class="headerlink" href="#extra-1-social-welfare-functions" title="Permalink to this headline">¶</a></h2>
-<p>Local energy use varies with local temperature. Early work used an IAM to argue that climate change would actually lead to a net savings in energy expentidure as colder regions become warmer and require less energy for heating. Does that result of economic benefit pass your smell test? Savings for who? Those in cooler climates! Those in warmer climates would certainly suffer, but they don’t use as much energy so their welfare wasn’t affecting this calculation. Perhaps we should weight averting suffering over energy savings?</p>
-<p>A regional version of the DICE model is called the RICE model. There are nice python implementations of these, e.g. the RICE-N model https://github.com/mila-iqia/climate-cooperation-competition. In that competition they use a utilitarian social welare function. Alternatively, a prioritarian social welfare function would transform the utilities before summing such that increases from lower utility are valued more than those from higher utility (<em>c.f.</em> Adler et al. <em>Nat. Clim. Change</em> (2017)). What would varying the elasticity of this social welfare function do?</p>
 </div>
-<div class="section" id="extra-2-tipping-points">
-<h2>Extra 2: tipping points<a class="headerlink" href="#extra-2-tipping-points" title="Permalink to this headline">¶</a></h2>
-<p>How might tipping points be incorporated into this model? What effect would they have (<em>c.f.</em> Cai et al. <em>Nat. Clim. Change</em> (2016)).</p>
 </div>
+<div class="section" id="summary">
+<h1><strong>Summary</strong><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial, you’ve gained a foundational understanding of the DICE model, a basic Integrated Assessment Model in climate economics. You’ve learned how utility and welfare functions quantify societal satisfaction and balance the needs of different groups and near and far futures. You now understand the role of damage functions in relating climatic changes to economic impacts, giving you insight into the economic implications of climate change. Lastly, you’ve explored how the DICE model navigates the challenges of economic growth and climate mitigation through optimal planning. These insights equip you to participate more effectively in dialogues and decisions about our climate future.</p>
+</div>
+<div class="section" id="resources">
+<h1><strong>Resources</strong><a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h1>
+<p>The Python implementation of DICE used in this tutorial can be accessed <a class="reference external" href="https://github.com/mptouzel/PyDICE/">here</a>.</p>
 </div>
 <script type="text/x-thebe-config">
     {
@@ -1472,16 +1791,16 @@ N.b. that the DICE model was recently updated (<a class="reference external" hre
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "pangeo"
+            mode: "python"
         },
         kernelOptions: {
-            kernelName: "pangeo",
+            kernelName: "python3",
             path: "./tutorials/W2D3_FutureClimate-IPCCII&IIISocio-EconomicBasis/student"
         },
         predefinedOutput: true
     }
     </script>
-<script>kernelName = 'pangeo'</script>
+<script>kernelName = 'python3'</script>
 </div>
 </main>
 <footer class="footer-article noprint">
@@ -1491,7 +1810,7 @@ N.b. that the DICE model was recently updated (<a class="reference external" hre
 <i class="fas fa-angle-left"></i>
 <div class="prev-next-info">
 <p class="prev-next-subtitle">previous</p>
-<p class="prev-next-title">Tutorial 1 - Limits to growth in World3: A toy world model of diminishing non-renewable resources</p>
+<p class="prev-next-title"><strong>Tutorial Objectives</strong></p>
 </div>
 </a>
 <a class="right-next" href="W2D3_Tutorial3.html" id="next-link" title="next page">

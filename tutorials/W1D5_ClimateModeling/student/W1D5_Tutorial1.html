@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Setup — Climatematch Academy: Computational Climate Science</title>
+<title>Tutorial 1 : A Simple Greenhouse Model — Climatematch Academy: Computational Climate Science</title>
 <!-- Loaded before other Sphinx assets -->
 <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
@@ -483,8 +483,10 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current">
 <li class="toctree-l2 current active">
 <a class="current reference internal" href="#">
-     Setup
-    </a>
+<strong>
+      Tutorial 1 : A Simple Greenhouse Model
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D5_Tutorial2.html">
@@ -578,18 +580,24 @@ const thebe_selector_output = ".output, .cell_output"
 <ul>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial1.html">
-     Tutorial 1 - Limits to growth in World3: A toy world model of diminishing non-renewable resources
-    </a>
+<strong>
+      Tutorial Objectives
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial2.html">
-     Tutorial 2 - A first look at integrated assessment models
-    </a>
+<strong>
+      Tutorial 2: Transition Goals and Integrated Assessment Models
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial4.html">
-     Tutorial 4 - Text analysis of COP tweets
-    </a>
+<strong>
+      Tutorial 4: Public Opinion on the Climate Emergency and Why it Matters
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/further_reading.html">
@@ -626,18 +634,24 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.html">
-     Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
-    </a>
+<strong>
+      Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.html">
-     Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
-    </a>
+<strong>
+      Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial4.html">
-     Tutorial 9:  Exploring other applications
-    </a>
+<strong>
+      Tutorial 4:  Exploring other applications
+     </strong>
+</a>
 </li>
 </ul>
 </li>
@@ -829,59 +843,133 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#">
-   Setup
-  </a>
+<strong>
+    Tutorial 1 : A Simple Greenhouse Model
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-objectives">
+<strong>
+    Tutorial Objectives
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#setup">
+<strong>
+    Setup
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#package-imports">
-     Package Imports
+<a class="reference internal nav-link" href="#figure-settings">
+     Figure settings
     </a>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#figure-settings">
-     Figure Settings
+<a class="reference internal nav-link" href="#video-1-speaker-introduction">
+     Video 1: Speaker Introduction
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#video-2-a-simple-greenhouse-model">
+     Video 2: A Simple Greenhouse Model
     </a>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#lecture">
-   Lecture
-  </a>
-</li>
-<li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-1-blackbody-radiation">
-   Section 1 : Blackbody Radiation
-  </a>
+<a class="reference internal nav-link" href="#section-1-a-radiating-earth">
+<strong>
+    Section 1 : A Radiating Earth
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#questions">
-     Questions
-    </a>
+<a class="reference internal nav-link" href="#section-1-1-planck-s-law">
+<strong>
+      Section 1.1 Planck’s Law
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#interactive-demo-1-1">
+<strong>
+        Interactive Demo 1.1
+       </strong>
+</a>
+</li>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-1-climate-connection">
+<strong>
+        Questions 1.1: Climate Connection
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#coding-exercises">
-     Coding Exercises
-    </a>
+<a class="reference internal nav-link" href="#section-1-2-the-stefan-boltzmann-law">
+<strong>
+      Section 1.2: The Stefan-Boltzmann Law
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-2-climate-connection">
+<strong>
+        Questions 1.2: Climate Connection
+       </strong>
+</a>
+</li>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#coding-exercises-1-2">
+<strong>
+        Coding Exercises 1.2
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#section-2-the-greenhouse-effect">
-   Section 2 : The Greenhouse Effect
-  </a>
+<strong>
+    Section 2 : The Greenhouse Effect
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id1">
-     Questions
-    </a>
+<a class="reference internal nav-link" href="#questions-2-1-climate-connection">
+<strong>
+      Questions 2.1: Climate Connection
+     </strong>
+</a>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id2">
-     Coding Exercises
-    </a>
+<a class="reference internal nav-link" href="#coding-exercises-2-1">
+<strong>
+      Coding Exercises 2.1
+     </strong>
+</a>
 </li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#bonus-blackbody-radiation-coding-exercise">
+<strong>
+    Bonus: Blackbody Radiation Coding Exercise
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#summary">
+<strong>
+    Summary
+   </strong>
+</a>
 </li>
 </ul>
 </nav>
@@ -891,7 +979,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="col pl-md-3 pl-lg-5 content-container">
 <!-- Table of contents that is only displayed when printing the page -->
 <div class="onlyprint" id="jb-print-docs-body">
-<h1>Setup</h1>
+<h1>Tutorial 1 : A Simple Greenhouse Model</h1>
 <!-- Table of contents -->
 <div id="print-main-content">
 <div id="jb-print-toc">
@@ -902,59 +990,133 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#">
-   Setup
-  </a>
+<strong>
+    Tutorial 1 : A Simple Greenhouse Model
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-objectives">
+<strong>
+    Tutorial Objectives
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#setup">
+<strong>
+    Setup
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#package-imports">
-     Package Imports
+<a class="reference internal nav-link" href="#figure-settings">
+     Figure settings
     </a>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#figure-settings">
-     Figure Settings
+<a class="reference internal nav-link" href="#video-1-speaker-introduction">
+     Video 1: Speaker Introduction
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#video-2-a-simple-greenhouse-model">
+     Video 2: A Simple Greenhouse Model
     </a>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#lecture">
-   Lecture
-  </a>
-</li>
-<li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-1-blackbody-radiation">
-   Section 1 : Blackbody Radiation
-  </a>
+<a class="reference internal nav-link" href="#section-1-a-radiating-earth">
+<strong>
+    Section 1 : A Radiating Earth
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#questions">
-     Questions
-    </a>
+<a class="reference internal nav-link" href="#section-1-1-planck-s-law">
+<strong>
+      Section 1.1 Planck’s Law
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#interactive-demo-1-1">
+<strong>
+        Interactive Demo 1.1
+       </strong>
+</a>
+</li>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-1-climate-connection">
+<strong>
+        Questions 1.1: Climate Connection
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#coding-exercises">
-     Coding Exercises
-    </a>
+<a class="reference internal nav-link" href="#section-1-2-the-stefan-boltzmann-law">
+<strong>
+      Section 1.2: The Stefan-Boltzmann Law
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-2-climate-connection">
+<strong>
+        Questions 1.2: Climate Connection
+       </strong>
+</a>
+</li>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#coding-exercises-1-2">
+<strong>
+        Coding Exercises 1.2
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#section-2-the-greenhouse-effect">
-   Section 2 : The Greenhouse Effect
-  </a>
+<strong>
+    Section 2 : The Greenhouse Effect
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id1">
-     Questions
-    </a>
+<a class="reference internal nav-link" href="#questions-2-1-climate-connection">
+<strong>
+      Questions 2.1: Climate Connection
+     </strong>
+</a>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id2">
-     Coding Exercises
-    </a>
+<a class="reference internal nav-link" href="#coding-exercises-2-1">
+<strong>
+      Coding Exercises 2.1
+     </strong>
+</a>
 </li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#bonus-blackbody-radiation-coding-exercise">
+<strong>
+    Bonus: Blackbody Radiation Coding Exercise
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#summary">
+<strong>
+    Summary
+   </strong>
+</a>
 </li>
 </ul>
 </nav>
@@ -963,39 +1125,32 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <main id="main-content" role="main">
 <div>
-<p>#<strong>Tutorial # 1 : A Simple Greenhouse Model</strong></p>
+<div class="section" id="tutorial-1-a-simple-greenhouse-model">
+<h1><strong>Tutorial 1 : A Simple Greenhouse Model</strong><a class="headerlink" href="#tutorial-1-a-simple-greenhouse-model" title="Permalink to this headline">¶</a></h1>
 <p><strong>Week 1, Day 5, Climate Modeling</strong></p>
-<p><strong>Content creators:</strong> Jenna Pearson, Brodie Pearson, and Abigail Bodner</p>
-<p><strong>Content reviewers:</strong> TBD</p>
-<p><strong>Content editors:</strong> TBD</p>
-<p><strong>Production editors:</strong> TBD</p>
-<p><strong>Our 2023 Sponsors:</strong> TBD</p>
-<p>#<strong>Tutorial Objectives</strong></p>
-<p>In this tutorial students will learn about the blackbody and greenhouse radiation models for energy emitted from Earth.</p>
+<p><strong>Content creators:</strong> Jenna Pearson</p>
+<p><strong>Content reviewers:</strong> Dionessa Biton, Younkap Nina Duplex, Zahra Khodakaramimaghsoud, Will Gregory, Peter Ohue, Derick Temfack,  Yunlong Xu, Peizhen Yang, Chi Zhang, Ohad Zivan</p>
+<p><strong>Content editors:</strong> Brodie Pearson, Abigail Bodner, Ohad Zivan, Chi Zhang</p>
+<p><strong>Production editors:</strong> Wesley Banfield, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Our 2023 Sponsors:</strong> NASA TOPS</p>
+</div>
+<div class="section" id="tutorial-objectives">
+<h1><strong>Tutorial Objectives</strong><a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial students will learn about blackbody radiation and greenhouse models for energy emitted from Earth.</p>
 <p>By the end of this tutorial students will be able to:</p>
 <ul class="simple">
 <li><p>Understand what an emission temperature is, and how to find it given observed outgoing longwave radiation.</p></li>
 <li><p>Modify the blackbody radiation model to include the greenhouse effect.</p></li>
 </ul>
+</div>
 <div class="section" id="setup">
-<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="package-imports">
-<h2>Package Imports<a class="headerlink" href="#package-imports" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>                     <span class="c1"># used to manipulate data and open datasets</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>                      <span class="c1"># used for algebra and array operations</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>         <span class="c1"># used for plotting</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+<h1><strong>Setup</strong><a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="figure-settings">
-<h2>Figure Settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
+<h2>Figure settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>       <span class="c1"># interactive display</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Figure settings</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>       <span class="c1"># interactive display</span>
 <span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = 'retina'
 <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">"https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/cma.mplstyle"</span><span class="p">)</span>
 </pre></div>
@@ -1003,31 +1158,136 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="lecture">
-<h1>Lecture<a class="headerlink" href="#lecture" title="Permalink to this headline">¶</a></h1>
-<div class="cell docutils container">
+<div class="section" id="video-1-speaker-introduction">
+<h2>Video 1: Speaker Introduction<a class="headerlink" href="#video-1-speaker-introduction" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Tech team will add code to format and display the video</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Video 1: Speaker Introduction</span>
+<span class="c1">#Tech team will add code to format and display the video</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="section-1-blackbody-radiation">
-<h1>Section 1 : Blackbody Radiation<a class="headerlink" href="#section-1-blackbody-radiation" title="Permalink to this headline">¶</a></h1>
-<p>Suppose Earth behaves as a perfect blackbody radiatior, emitting <strong>outgoing longwave radiation (OLR)</strong> for a given <strong>emission temperature</strong> (<span class="math notranslate nohighlight">\(\mathbf{T}\)</span>) following the Stefan-Boltzmann law.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8057745b-f2c0-49e8-b1e9-fe914e4b726d">
-<span class="eqno">(2)<a class="headerlink" href="#equation-8057745b-f2c0-49e8-b1e9-fe914e4b726d" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="section" id="video-2-a-simple-greenhouse-model">
+<h2>Video 2: A Simple Greenhouse Model<a class="headerlink" href="#video-2-a-simple-greenhouse-model" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Video 2: A Simple Greenhouse Model</span>
+<span class="c1">#Tech team will add code to format and display the video</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="section-1-a-radiating-earth">
+<h1><strong>Section 1 : A Radiating Earth</strong><a class="headerlink" href="#section-1-a-radiating-earth" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="section-1-1-planck-s-law">
+<h2><strong>Section 1.1 Planck’s Law</strong><a class="headerlink" href="#section-1-1-planck-s-law" title="Permalink to this headline">¶</a></h2>
+<p>All objects with a temperature emit <strong><a class="reference external" href="https://www.noaa.gov/jetstream/satellites/electromagnetic-waves">electromagnetic radiation</a></strong>. This energy travels through space in the form of waves. In the lecture we discussed that blackbody radiation is a model of how Earth loses radiative energy to space. Although this is not a perfect model for Earth, we will use it as a basis to understand Earth’s energy balance throughout tutorials 1-4. If we suppose Earth behaves as a perfect blackbody, then it emits energy at all wavelengths according to <strong><a class="reference external" href="https://glossary.ametsoc.org/wiki/Planck%27s_radiation_law">Planck’s Law</a></strong>:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-8eac7e88-b1b0-4fc9-97eb-e9602015eac4">
+<span class="eqno">(2)<a class="headerlink" href="#equation-8eac7e88-b1b0-4fc9-97eb-e9602015eac4" title="Permalink to this equation">¶</a></span>\[\begin{align}
+    B(\lambda,T) = \frac{2 h c^2}{\lambda^5}\frac{1}{e^{hc/(\kappa T)}-1}
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(h =  6.626075 \times 10^{-34} J s\)</span> is Planck’s constant, <span class="math notranslate nohighlight">\(c= 2.99792 \times 108 m s^{-1}\)</span> is the speed of light, and <span class="math notranslate nohighlight">\(\kappa = 1.3804 \times 10^{23} W K^{-1}\)</span> is Boltzmann’s constant.</p>
+<div class="section" id="interactive-demo-1-1">
+<h3><strong>Interactive Demo 1.1</strong><a class="headerlink" href="#interactive-demo-1-1" title="Permalink to this headline">¶</a></h3>
+<p>This interactive demo will allow you to visualize how to blackbody curve changes as Earth warms and cools relative to it’s current surface temperature of about 288K. Use the slide bar to adjust the emission temperature. Give the code  few seconds to replot before choosing a new temperature.</p>
+<p>No need to worry about understanding the code here - this is conceptual.</p>
+<p>Make sure you execute this cell to enable the widget!</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @markdown Make sure you execute this cell to enable the widget!</span>
+
+<span class="kn">import</span> <span class="nn">holoviews</span> <span class="k">as</span> <span class="nn">hv</span>
+<span class="kn">import</span> <span class="nn">panel</span> <span class="k">as</span> <span class="nn">pn</span>
+<span class="n">hv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">'bokeh'</span><span class="p">)</span>
+
+<span class="c1"># define constants used in Planck's Law</span>
+<span class="n">h</span> <span class="o">=</span> <span class="mf">6.626075e-34</span>    <span class="c1"># J s</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mf">2.99792e+8</span>      <span class="c1"># m s^-1</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mf">1.3804e-23</span>      <span class="c1"># W K^-1</span>
+
+<span class="c1"># define the function for Planck's Law depedent on wavelength (lambda) and temeprature (T)</span>
+<span class="k">def</span> <span class="nf">planck</span><span class="p">(</span><span class="n">wavelength</span><span class="p">,</span> <span class="n">temperature</span><span class="p">):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mf">2.0</span><span class="o">*</span><span class="n">h</span><span class="o">*</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">h</span><span class="o">*</span><span class="n">c</span><span class="o">/</span><span class="p">(</span><span class="n">wavelength</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">temperature</span><span class="p">)</span>
+    <span class="n">intensity</span> <span class="o">=</span> <span class="n">a</span><span class="o">/</span> <span class="p">(</span> <span class="p">(</span><span class="n">wavelength</span><span class="o">**</span><span class="mi">5</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">)</span> <span class="p">)</span>
+
+    <span class="n">lpeak</span> <span class="o">=</span> <span class="p">(</span><span class="mf">2.898</span> <span class="o">*</span> <span class="mf">1e-3</span><span class="p">)</span><span class="o">/</span><span class="n">temperature</span>
+
+    <span class="k">return</span> <span class="n">intensity</span>
+
+<span class="k">def</span> <span class="nf">update_plot</span><span class="p">(</span><span class="n">emiss_temp</span><span class="p">):</span>
+
+    <span class="c1"># generate x-axis in increments from 1um to 100 micrometer in 1 nm increments</span>
+    <span class="c1"># starting at 1 nm to avoid wav = 0, which would result in division by zero.</span>
+    <span class="n">wavelengths</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">1e-6</span><span class="p">,</span> <span class="mf">50e-6</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">)</span>
+
+    <span class="c1"># get the blackbody curve and peak emission wavelength for 288 K</span>
+    <span class="n">intensity288</span> <span class="o">=</span> <span class="n">planck</span><span class="p">(</span><span class="n">wavelengths</span><span class="p">,</span> <span class="mi">288</span><span class="p">)</span>
+
+    <span class="c1"># get the blackbody curve and peak emission wavelength for selected temperature</span>
+    <span class="n">intensity</span> <span class="o">=</span> <span class="n">planck</span><span class="p">(</span><span class="n">wavelengths</span><span class="p">,</span> <span class="n">emiss_temp</span><span class="p">)</span>
+
+<span class="c1">#     # get the intensity at peak wavelength to limit the lines</span>
+<span class="c1">#     Ipeak,_ = planck(lpeak,emission_temperature)</span>
+<span class="c1">#     Ipeak288,_ = planck(lpeak288,288)</span>
+
+    <span class="c1"># curves output</span>
+    <span class="n">vary</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">wavelengths</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span> <span class="n">intensity</span><span class="p">)</span>
+    <span class="n">init_val</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">wavelengths</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span> <span class="n">intensity288</span><span class="p">)</span>
+
+    <span class="c1"># Specified individually</span>
+    <span class="n">list_of_curves</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">hv</span><span class="o">.</span><span class="n">Curve</span><span class="p">(</span><span class="n">init_val</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'T='</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">emiss_temp</span><span class="p">)</span> <span class="o">+</span> <span class="s1">'K'</span><span class="p">)</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.0e7</span><span class="p">)),</span>
+            <span class="n">hv</span><span class="o">.</span><span class="n">Curve</span><span class="p">(</span><span class="n">vary</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'T=288K'</span><span class="p">)</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.0e7</span><span class="p">)),</span>
+    <span class="p">]</span>
+
+    <span class="n">bb_plot</span> <span class="o">=</span> <span class="n">hv</span><span class="o">.</span><span class="n">Overlay</span><span class="p">(</span><span class="n">list_of_curves</span><span class="p">)</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span>
+    <span class="n">xlabel</span><span class="o">=</span><span class="s1">'Wavelength (μm)'</span><span class="p">,</span>
+    <span class="n">ylabel</span><span class="o">=</span> <span class="s1">'B(λ,T) (W/(m³ steradian)'</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">'Spectral Radiance'</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">bb_plot</span>
+
+<span class="n">emiss_temp_widget</span> <span class="o">=</span> <span class="n">pn</span><span class="o">.</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Emission Temperature'</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">288</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<span class="n">bound_plot</span> <span class="o">=</span> <span class="n">pn</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">update_plot</span><span class="p">,</span><span class="n">emiss_temp</span><span class="o">=</span><span class="n">emiss_temp_widget</span><span class="p">)</span>
+
+<span class="n">pn</span><span class="o">.</span><span class="n">Row</span><span class="p">(</span><span class="n">emiss_temp_widget</span><span class="p">,</span> <span class="n">bound_plot</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="questions-1-1-climate-connection">
+<h3><strong>Questions 1.1: Climate Connection</strong><a class="headerlink" href="#questions-1-1-climate-connection" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Recall from Tutorial 1 on Week 1 Day 3 the <strong>electromagnetic spectrum</strong> (shown below), which displays the different wavelengths of electromagnetic energy. According to our model and noting that 1 micrometer = <span class="math notranslate nohighlight">\(10^{-6}\)</span> meters, with a surface temperature of 288K what type of radiation does Earth primarily emit at?</p></li>
+</ol>
+<p><img alt="Diagram of the Electromagnetic Spectrum" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/EM_spectrumrevised.png/1920px-EM_spectrumrevised.png">
+Diagram of the Electromagnetic Spectrum. (Credit: <a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/EM_spectrumrevised.png/1920px-EM_spectrumrevised.png">Wikipedia</a>)</img></p>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial1_Solution_bd931bda.py"><em>Click for solution</em></a></p>
+</div>
+</div>
+<div class="section" id="section-1-2-the-stefan-boltzmann-law">
+<h2><strong>Section 1.2: The Stefan-Boltzmann Law</strong><a class="headerlink" href="#section-1-2-the-stefan-boltzmann-law" title="Permalink to this headline">¶</a></h2>
+<p>If we integrate Planck’s Law over all wavelengths and outward angles of emission, the total <strong>outgoing longwave radiation (OLR)</strong> for a given <strong>emission temperature</strong> (<span class="math notranslate nohighlight">\(\mathbf{T}\)</span>) follows the <strong><a class="reference external" href="https://glossary.ametsoc.org/wiki/Stefan-boltzmann_law">Stefan-Boltzmann Law</a></strong>.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6b896d66-9f13-45ed-bf1c-95b27d7bb3a0">
+<span class="eqno">(3)<a class="headerlink" href="#equation-6b896d66-9f13-45ed-bf1c-95b27d7bb3a0" title="Permalink to this equation">¶</a></span>\[\begin{align}
 OLR = \sigma T^4
 \end{align}\]</div>
-<p>Where the Stefan-Boltzmann constant <span class="math notranslate nohighlight">\(\sigma = 5.67 \times 10^{-8} W m^{-2} K^{-4}\)</span>.</p>
+<p>Where the <a class="reference external" href="https://glossary.ametsoc.org/wiki/Stefan-boltzmann_constant">Stefan-Boltzmann constant</a> <span class="math notranslate nohighlight">\(\sigma = 5.67 \times 10^{-8} W m^{-2} K^{-4}\)</span>.</p>
 <p>Rearranging the equation above, we can solve for the emission temperature of Earth, <span class="math notranslate nohighlight">\(T\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0c339453-5ef7-42aa-a1d1-d420adacb6ec">
-<span class="eqno">(3)<a class="headerlink" href="#equation-0c339453-5ef7-42aa-a1d1-d420adacb6ec" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-700151d0-34cc-45ef-a888-3019c3ba32e1">
+<span class="eqno">(4)<a class="headerlink" href="#equation-700151d0-34cc-45ef-a888-3019c3ba32e1" title="Permalink to this equation">¶</a></span>\[\begin{align}
 T = \sqrt[4]{\frac{OLR}{\sigma}}
 \end{align}\]</div>
-<p>Using <span class="math notranslate nohighlight">\(OLR = 239 W m^{-2}\)</span>, python allows us to calculate this.</p>
+<p>Using <span class="math notranslate nohighlight">\(OLR = 239 W m^{-2}\)</span>, we can calcuate this using python.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the Stefan-Boltzmann Constant, noting we are using 'e' for scientific notation</span>
@@ -1045,29 +1305,27 @@ T = \sqrt[4]{\frac{OLR}{\sigma}}
 </div>
 </div>
 </div>
-<div class="section" id="questions">
-<h2>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="questions-1-2-climate-connection">
+<h3><strong>Questions 1.2: Climate Connection</strong><a class="headerlink" href="#questions-1-2-climate-connection" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>How does this compare to the actual global mean surface temperature of ~288 <span class="math notranslate nohighlight">\(K\)</span> / 15 <span class="math notranslate nohighlight">\(C\)</span>?</p></li>
 <li><p>Using <span class="math notranslate nohighlight">\(T = 288 K\)</span> would you expect the corresponding outgoing longwave radiation to be higher or lower than the observed 239 <span class="math notranslate nohighlight">\(W m^{-2}\)</span>?</p></li>
-<li><p>Is blackbody radiation a <em>good</em> model for Earth’s radiation emission to space?</p></li>
-<li><p>What could be taken account of in this model to make it more realistic?</p></li>
+<li><p>What could be accounted for in this model to make it more realistic?</p></li>
 </ol>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial1_Solution_3a0c44b9.py"><em>Click for solution</em></a></p>
 </div>
-<div class="section" id="coding-exercises">
-<h2>Coding Exercises<a class="headerlink" href="#coding-exercises" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="coding-exercises-1-2">
+<h3><strong>Coding Exercises 1.2</strong><a class="headerlink" href="#coding-exercises-1-2" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
-<li><p>By modifying the code above and solving for OLR, find the outgoing longwave radiation expected for the observed surface temperature of <span class="math notranslate nohighlight">\(288 K\)</span>.</p></li>
+<li><p>By modifying the code above and solving for OLR, find the outgoing longwave radiation expected for the observed surface temperature of <span class="math notranslate nohighlight">\(288 K\)</span>. This should help you answer Question 2 above.</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># insert your solution here, replacing the ellipses (...) with code.</span>
-
-<span class="c1"># define the Stefan-Boltzmann Constant, noting we are using 'e' for scientific notation</span>
-<span class="n">sigma</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># W m^-2 K^-4</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the Stefan-Boltzmann Constant, noting we are using 'e' for scientific notation</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="o">...</span>
 
 <span class="c1"># define the global mean surface temperature based on observations</span>
-<span class="n">T</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># K</span>
+<span class="n">T</span> <span class="o">=</span> <span class="o">...</span>
 
 <span class="c1"># plug into equation</span>
 <span class="n">OLR</span> <span class="o">=</span> <span class="o">...</span>
@@ -1081,16 +1339,21 @@ T = \sqrt[4]{\frac{OLR}{\sigma}}
 <p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial1_Solution_d28abbfc.py"><em>Click for solution</em></a></p>
 </div>
 </div>
+</div>
 <div class="section" id="section-2-the-greenhouse-effect">
-<h1>Section 2 : The Greenhouse Effect<a class="headerlink" href="#section-2-the-greenhouse-effect" title="Permalink to this headline">¶</a></h1>
-<p>The expected surface temperature using blackbody radiation was much colder than we observe it to be. Using the blackbody radiation model, we assume that there is nothing that lies between Earth’s surface and space that interacts with Earth’s emitted radiation. From the initial lecture on the global energy budget we know this is not true. Earth has an atmosphere, and within it are many gases and that changes the picture of pure blackbody radiation we used before. The effect of these gases on radiation, called the <strong>greenhouse effect</strong>, is what warms earth to a habitable temperture.</p>
-<p>A first approach is to model the greenhouse effect on outgoing longwave radiation (OLR) to space by adding a transmissivity coefficient. The <strong>transmissivity coeficient (</strong><span class="math notranslate nohighlight">\(\mathbf{\tau}\)</span><strong>)</strong> represents the fraction of the radiation emitted from Earth that actually makes it to space. This coefficient is a number that lies between 0 and 1, and represents the <em>effects</em> of all the greenhouse gases on radiation, rather than including them explicity in the model. This is called a <strong>parametrization</strong>, and it will be discussed in more detail in tomorrows lecture.</p>
-<p>Applying this to the original model for blackbody radiation, we find the modified model to be</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e7315fdc-8687-4781-b25c-60818082b68a">
-<span class="eqno">(4)<a class="headerlink" href="#equation-e7315fdc-8687-4781-b25c-60818082b68a" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<h1><strong>Section 2 : The Greenhouse Effect</strong><a class="headerlink" href="#section-2-the-greenhouse-effect" title="Permalink to this headline">¶</a></h1>
+<p>The expected surface temperature using the blackbody radiation model is much colder than we observe it to be. In this model we assumed there is nothing that lies between Earth’s surface and space that interacts with Earth’s emitted radiation. From the initial lecture on the global energy budget we know this is not true. Earth has an atmosphere, and within it are many gases that interact with radiation in the infrared range at which Earth primarily emits. The effect of these gases on radiation, called the <strong><a class="reference external" href="https://glossary.ametsoc.org/wiki/Greenhouse_effect#:~:text=As%20used%20in%20the%20field,absorb%20and%20emit%20infrared%20radiation.">greenhouse effect</a></strong>, is what warms earth to a habitable temperature.</p>
+<p>The gases that are responsible for this (<a class="reference external" href="https://glossary.ametsoc.org/wiki/Carbon_dioxide">carbon dioxide</a>, <a class="reference external" href="https://glossary.ametsoc.org/wiki/Water_vapor">water vapor</a>, <a class="reference external" href="https://glossary.ametsoc.org/wiki/Methane">methane</a>, <a class="reference external" href="https://glossary.ametsoc.org/wiki/Ozone">ozone</a>, <a class="reference external" href="https://glossary.ametsoc.org/wiki/Nitrous_oxide">nitrous oxide</a>, and <a class="reference external" href="https://glossary.ametsoc.org/wiki/Chlorofluorocarbons">chloroflourocarbons</a>) are termed <strong><a class="reference external" href="https://glossary.ametsoc.org/wiki/Greenhouse_gases">greenhouse gases</a></strong>. The figure below shows the contributions to the global surface air temperature change relative to 1750. We can see that all of these gases have contributed positively, that is towards warming Earth. Also note that the total curve tracks the volcano curve quite well until around the 1850s when industrialization took hold. The total and volcanic curves begin to deviate here, and after the mid 1900s the total curve begins tracking the total anthropogenic curve instead.</p>
+<p><img alt="Attributed global surface air temperature change (GSAT)" src="https://www.ipcc.ch/report/ar6/wg1/downloads/figures/IPCC_AR6_WGI_Figure_7_8.png"/><br/>
+Figure 7.8 | Attributed global surface air temperature change (GSAT) from 1750 to 2019 produced using the two-layer emulator (Supplementary Material 7.SM.2), forced with ERF derived in this chapter (displayed in Figure 2.10) and climate response constrained to assessed ranges for key climate metrics described in Cross-Chapter Box 7.1. The results shown are the medians from a 2237-member ensemble that encompasses uncertainty in forcing and climate response (year-2019 best estimates and uncertainties are shown in Figure 7.7 for several components). Temperature contributions are expressed for carbon dioxide (CO2), methane (CH4), nitrous oxide (N2O), other well-mixed greenhouse gases (WMGHGs), ozone (O3), aerosols, and other anthropogenic forcings, as well as total anthropogenic, solar, volcanic, and total forcing. Shaded uncertainty bands showvery likely (5–95%)ranges. Further details on data sources and processing are available in the chapter data table (Table 7.SM.14). (Credit <a class="reference external" href="https://www.ipcc.ch/report/ar6/wg1/downloads/figures/IPCC_AR6_WGI_Figure_7_8.png">IPCC</a>)</p>
+<p>As shown above, greenhouse gases are incredibly important for regulating Earth’s energy balance and temperature. A first approach is to model the greenhouse effect on outgoing longwave radiation (OLR) to space by adding a transmissivity coefficient. The <strong>transmissivity coeficient (</strong><span class="math notranslate nohighlight">\(\mathbf{\tau}\)</span><strong>)</strong> is the fraction of
+the radiation emitted from Earth that actually makes it to space. This coefficient <span class="math notranslate nohighlight">\(\mathbf{\tau}\)</span> is a number that lies between 0 and 1, and represents the <em>effects</em> of all the greenhouse gases on radiation, rather than including them explicity in the model. This approach is called a <strong><a class="reference external" href="https://glossary.ametsoc.org/wiki/Parameterization">parametrization</a></strong>.</p>
+<p>Applying this to the original model for blackbody radiation, the modified model is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5ff61d07-ba72-4510-bed8-d2bd2691ac72">
+<span class="eqno">(5)<a class="headerlink" href="#equation-5ff61d07-ba72-4510-bed8-d2bd2691ac72" title="Permalink to this equation">¶</a></span>\[\begin{align}
 OLR = \tau \sigma T^4
 \end{align}\]</div>
-<p>Using  <span class="math notranslate nohighlight">\(OLR = 239 W m^{-2}\)</span> and <span class="math notranslate nohighlight">\(T = 288 K\)</span>, estimate <span class="math notranslate nohighlight">\(\tau\)</span>.</p>
+<p>Using  <span class="math notranslate nohighlight">\(OLR = 239 W m^{-2}\)</span> and <span class="math notranslate nohighlight">\(T = 288 K\)</span>, we can estimate <span class="math notranslate nohighlight">\(\tau\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the Stefan-Boltzmann Constant, noting we are using 'e' for scientific notation</span>
@@ -1111,41 +1374,117 @@ OLR = \tau \sigma T^4
 </div>
 </div>
 </div>
-<div class="section" id="id1">
-<h2>Questions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="questions-2-1-climate-connection">
+<h2><strong>Questions 2.1: Climate Connection</strong><a class="headerlink" href="#questions-2-1-climate-connection" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
-<li><p>For a generic planet, what would it mean for OLR when <span class="math notranslate nohighlight">\(\tau\)</span> is close to 1? Close to 0?</p></li>
-<li><p>For a generic planet, what could be said about the planet’s atmopshere when <span class="math notranslate nohighlight">\(\tau\)</span> is close to 1? Close to 0?</p></li>
-<li><p>In terms of energy received from the sun, what does only modifying the OLR to account for the greenhouse effect imply? Are there any greenhouse gases you think would make this implication problematic?</p></li>
+<li><p>For a generic planet, what could be said about the planet’s atmosphere when <span class="math notranslate nohighlight">\(\tau\)</span> is close to 1? Close to 0? Use the OLR seen at the top of the atmosphere in your answer.</p></li>
+<li><p>In terms of energy received from the sun, what does only modifying the <em>OLR</em> to account for the greenhouse effect imply? Are there any greenhouse gases you think would make this implication problematic?</p></li>
+<li><p>Is there any other part of the atmosphere aside from greenhouse gases that we have not discussed that would also affect <span class="math notranslate nohighlight">\(\tau\)</span>?</p></li>
 </ol>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial1_Solution_83fdc728.py"><em>Click for solution</em></a></p>
 </div>
-<div class="section" id="id2">
-<h2>Coding Exercises<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="coding-exercises-2-1">
+<h2><strong>Coding Exercises 2.1</strong><a class="headerlink" href="#coding-exercises-2-1" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
-<li><p>By using a for loop, calculate and print the OLR for three values of <span class="math notranslate nohighlight">\(\tau = 0.2,0.6114,0.8\)</span>.</p></li>
+<li><p>Using list comprehension, calculate the OLR for three values of <span class="math notranslate nohighlight">\(\tau = 0.2,0.6114,0.8\)</span>. Then plot this on a bar chat to compare. This should help you answer question 1 above. Hint: what is <a class="reference external" href="https://foundations.projectpythia.org/foundations/quickstart.html#lists">list comprehension</a>?</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the Stefan-Boltzmann Constant, noting we are using 'e' for scientific notation</span>
-<span class="n">sigma</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># W m^-2 K^-4</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="o">...</span>
 
 <span class="c1"># define the emission temperature based on observtions of global mean surface temperature</span>
-<span class="n">T</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># K</span>
+<span class="n">T</span> <span class="o">=</span> <span class="o">...</span>
 
-<span class="c1"># loop through values of tau</span>
-<span class="k">for</span> <span class="n">tau</span> <span class="ow">in</span> <span class="p">[</span><span class="o">...</span><span class="p">]:</span>
+<span class="c1"># define values of tau</span>
+<span class="n">tau</span> <span class="o">=</span> <span class="o">...</span>
 
-  <span class="c1"># plug into equation</span>
-  <span class="n">OLR</span> <span class="o">=</span> <span class="o">...</span>
+<span class="c1"># get values of OLR from tau using list comprehension</span>
+<span class="n">OLR</span> <span class="o">=</span> <span class="o">...</span>
 
-  <span class="c1"># display answer</span>
-  <span class="nb">print</span><span class="p">(</span><span class="s1">'Transmissivity:'</span><span class="p">,</span><span class="n">tau</span><span class="p">,</span><span class="s1">',     '</span> <span class="s1">'OLR: '</span> <span class="p">,</span><span class="n">OLR</span><span class="p">,</span> <span class="s1">'W m^2'</span><span class="p">)</span>
+<span class="c1"># convert tau to list of strings using list comprehension so we can create a categorical plot</span>
+<span class="n">tau</span> <span class="o">=</span> <span class="o">...</span>
+
+<span class="n">_</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Transmissivity'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Outgoing Longwave Radiation ($W m^{-2}$)'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial1_Solution_aec552c3.py"><em>Click for solution</em></a></p>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial1_Solution_8c8d542f.py"><em>Click for solution</em></a></p>
+<p><em>Example output:</em></p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W1D5_ClimateModeling/static/W1D5_Tutorial1_Solution_8c8d542f_1.png"><img align="center" alt="Solution hint" class="align-center" src="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W1D5_ClimateModeling/static/W1D5_Tutorial1_Solution_8c8d542f_1.png" style="width: 775.0px; height: 575.0px;"/></a>
 </div>
+</div>
+<div class="section" id="bonus-blackbody-radiation-coding-exercise">
+<h1><strong>Bonus: Blackbody Radiation Coding Exercise</strong><a class="headerlink" href="#bonus-blackbody-radiation-coding-exercise" title="Permalink to this headline">¶</a></h1>
+<p>By defining a function for Planck’s Law, plot the blackbody radiation curve for the sun, assuming an emission temperature of 5800K. Underlay an approximation of the visible range from the electromagnetic spectrum. This exercise should help you understand why we see in color as well as why the sun’s radiation headed towards Earth is called incoming shortwave radiation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the emission temperature of the sun</span>
+<span class="n">T_sun</span> <span class="o">=</span> <span class="o">...</span>
+
+
+<span class="c1"># define constants used in Planck's Law</span>
+<span class="n">h</span> <span class="o">=</span> <span class="mf">6.626075e-34</span>    <span class="c1"># J s</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mf">2.99792e+8</span>      <span class="c1"># m s^-1</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mf">1.3804e-23</span>      <span class="c1"># W K^-1</span>
+
+<span class="c1"># define the function for Planck's Law that returns the intensity as well</span>
+<span class="c1"># as the peak wavelength defined by Wien's Law</span>
+<span class="k">def</span> <span class="nf">planck</span><span class="p">(</span><span class="n">wavelength</span><span class="p">,</span> <span class="n">temperature</span><span class="p">):</span>
+    <span class="o">...</span>
+    <span class="n">intensity</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="n">lpeak</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">return</span> <span class="n">intensity</span><span class="p">,</span><span class="n">lpeak</span>
+
+<span class="c1"># generate x-axis in increments from 1um to 100 micrometer in 1 nm increments</span>
+<span class="c1"># starting at 1 nm to avoid wav = 0, which would result in division by zero.</span>
+<span class="n">wavelengths</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">1e-7</span><span class="p">,</span> <span class="mf">4e-6</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">)</span>
+
+<span class="c1"># intensity and peak radiating wavelength at different temperatures</span>
+<span class="n">intensity</span><span class="p">,</span> <span class="n">lpeak</span> <span class="o">=</span> <span class="n">planck</span><span class="p">(</span><span class="n">wavelengths</span><span class="p">,</span> <span class="n">T_sun</span><span class="p">)</span>
+
+<span class="c1"># get the intensity at peak wavelength to limit the lines</span>
+<span class="n">Ipeak</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">planck</span><span class="p">(</span><span class="n">lpeak</span><span class="p">,</span> <span class="n">T_sun</span><span class="p">)</span>
+
+<span class="c1"># plot an approximation of the visible range by defining a dictionary with</span>
+<span class="c1"># wavelength ranges and colors</span>
+<span class="n">rainbow_dict</span><span class="o">=</span> <span class="p">{</span> <span class="p">(</span><span class="mf">.4</span><span class="p">,</span> <span class="mf">.44</span><span class="p">):</span> <span class="s1">'#8b00ff'</span><span class="p">,</span> <span class="p">(</span><span class="mf">.44</span><span class="p">,</span> <span class="mf">.46</span><span class="p">):</span> <span class="s1">'#4b0082'</span><span class="p">,</span>
+                <span class="p">(</span><span class="mf">.46</span><span class="p">,</span> <span class="mf">.5</span><span class="p">):</span> <span class="s1">'#0000ff'</span><span class="p">,</span> <span class="p">(</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.57</span><span class="p">):</span> <span class="s1">'#00ff00'</span><span class="p">,</span>
+                <span class="p">(</span><span class="mf">.57</span><span class="p">,</span> <span class="mf">.59</span><span class="p">):</span> <span class="s1">'#ffff00'</span><span class="p">,</span> <span class="p">(</span><span class="mf">.59</span><span class="p">,</span> <span class="mf">.62</span><span class="p">):</span> <span class="s1">'#ff7f00'</span><span class="p">,</span>
+                <span class="p">(</span><span class="mf">.62</span><span class="p">,</span> <span class="mf">.75</span><span class="p">):</span> <span class="s1">'#ff0000'</span><span class="p">}</span>
+<span class="k">for</span> <span class="n">wv_range</span><span class="p">,</span> <span class="n">rgb</span> <span class="ow">in</span> <span class="n">rainbow_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="o">*</span><span class="n">wv_range</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">rgb</span><span class="p">,</span><span class="n">ec</span> <span class="o">=</span> <span class="s1">'none'</span><span class="p">)</span>
+
+<span class="c1"># add in wiens law</span>
+<span class="n">_</span> <span class="o">=</span> <span class="o">...</span>
+
+<span class="c1"># plot intensity curve</span>
+<span class="n">_</span> <span class="o">=</span> <span class="o">...</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Wavelength ($\mu m$)'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'$B_\lambda(\lambda,T)$ $(W/(m^3 steradian)$'</span><span class="p">,</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">16</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span> <span class="p">(</span><span class="s1">'Spectral Radiance'</span><span class="p">)</span>
+
+<span class="c1"># add legend</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial1_Solution_d3ca3faf.py"><em>Click for solution</em></a></p>
+<p><em>Example output:</em></p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W1D5_ClimateModeling/static/W1D5_Tutorial1_Solution_d3ca3faf_1.png"><img align="center" alt="Solution hint" class="align-center" src="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W1D5_ClimateModeling/static/W1D5_Tutorial1_Solution_d3ca3faf_1.png" style="width: 775.0px; height: 575.0px;"/></a>
+</div>
+<div class="section" id="summary">
+<h1><strong>Summary</strong><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial, we’ve learned about the principles of blackbody and greenhouse radiation models, which are crucial to understanding Earth’s energy emission. We explored the concept of emission temperature and how it’s calculated using observed outgoing longwave radiation. We discovered that the simple blackbody model needs to be augmented by considering the greenhouse effect to accurately represent Earth’s observed surface temperature. This led us to incorporate the transmissivity coefficient, a representation of greenhouse gases’ impact, into our model.</p>
 </div>
 <script type="text/x-thebe-config">
     {
@@ -1156,16 +1495,16 @@ OLR = \tau \sigma T^4
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "pangeo"
+            mode: "climatematch"
         },
         kernelOptions: {
-            kernelName: "pangeo",
+            kernelName: "climatematch",
             path: "./tutorials/W1D5_ClimateModeling/student"
         },
         predefinedOutput: true
     }
     </script>
-<script>kernelName = 'pangeo'</script>
+<script>kernelName = 'climatematch'</script>
 </div>
 </main>
 <footer class="footer-article noprint">
