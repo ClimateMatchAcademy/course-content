@@ -22,23 +22,23 @@ Tutorials, Projects and Professional Development activities will take place betw
    </td>
   </tr>
   <tr>
-   <td bgcolor="#6C7D77" align="center" >Week 1
+   <td bgcolor="#6C7D77" align="center" ><font color="white" >Week 1</font>
    </td>
-   <td bgcolor="#6C7D77" align="center" >W1D1
+   <td bgcolor="#6C7D77" align="center" ><font color="white" >W1D1</font>
    </td>
-   <td bgcolor="#6C7D77" align="center" >W1D2
+   <td bgcolor="#6C7D77" align="center" ><font color="white" >W1D2</font>
    </td>
-   <td bgcolor="#6C7D77" align="center" >W1D3
+   <td bgcolor="#6C7D77" align="center" ><font color="white" >W1D3</font>
    </td>
-   <td bgcolor="#6C7D77" align="center" >W1D4
+   <td bgcolor="#6C7D77" align="center" ><font color="white" >W1D4</font>
    </td>
-   <td bgcolor="#6C7D77" align="center" >W1D5
+   <td bgcolor="#6C7D77" align="center" ><font color="white" >W1D5</font>
    </td>
   </tr>
   <tr>
-   <td rowspan="3" bgcolor="#3F538A" align="center" >Curriculum
+   <td rowspan="3" bgcolor="#3F538A" align="center" ><font color="white" >Curriculum</font>
 <p>
-(5 hours)
+<font color="white" >(5 hours)</font>
    </td>
    <td bgcolor="#E99668" align="center" ><strong><font color="black" > Climate System Overview </font></strong>
    </td>
@@ -64,9 +64,9 @@ Tutorials, Projects and Professional Development activities will take place betw
    </td>
   </tr>
   <tr>
-   <td rowspan="2" bgcolor="#3F538A"  align="center" >Projects & Professional Development
+   <td rowspan="2" bgcolor="#3F538A"  align="center" ><font color="white" >Projects & Professional Development</font>
 <p>
-(3 hours)
+<font color="white" >(3 hours)</font>
    </td>
    <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" ><strong><font color="black"> Session 1 </font></strong>
 <p>
@@ -109,23 +109,23 @@ Tutorials, Projects and Professional Development activities will take place betw
    </td>
   </tr>
   <tr>
-   <td bgcolor="#6C7D77"  align="center" >Week 2
+   <td bgcolor="#6C7D77"  align="center" ><font color="white" >Week 2</font>
    </td>
-   <td bgcolor="#6C7D77"  align="center" >W2D1
+   <td bgcolor="#6C7D77"  align="center" ><font color="white" >W2D1</font>
    </td>
-   <td bgcolor="#6C7D77"  align="center" >W2D2
+   <td bgcolor="#6C7D77"  align="center" ><font color="white" >W2D2</font>
    </td>
-   <td bgcolor="#6C7D77"  align="center" >W2D3
+   <td bgcolor="#6C7D77"  align="center" ><font color="white" >W2D3</font>
    </td>
-   <td bgcolor="#6C7D77"  align="center" >W2D4
+   <td bgcolor="#6C7D77"  align="center" ><font color="white" >W2D4</font>
    </td>
-   <td bgcolor="#6C7D77"  align="center" >W2D5
+   <td bgcolor="#6C7D77"  align="center" ><font color="white" >W2D5</font>
    </td>
   </tr>
   <tr>
-   <td rowspan="2" bgcolor="#3F538A" align="center" >Curriculum
+   <td rowspan="2" bgcolor="#3F538A" align="center" ><font color="white" >Curriculum</font>
 <p>
-(5 hours)
+<font color="white" >(5 hours)</font>
    </td>
    <td bgcolor="#B0C7DC"  align="center" ><strong><font color="black"> IPCC I: </font></strong>
 <p>
@@ -155,9 +155,9 @@ Tutorials, Projects and Professional Development activities will take place betw
    </td>
   </tr>
   <tr>
-   <td rowspan="2" bgcolor="#3F538A"  align="center" >Projects & Professional Development
+   <td rowspan="2" bgcolor="#3F538A"  align="center" ><font color="white" >Projects & Professional Development</font>
 <p>
-(3 hours)
+<font color="white" >(3 hours)</font>
    </td>
    <td bgcolor="#F9EEDA" align="center" valign="top" ><strong><font color="black"> Session 6 </font></strong>
 <p>
@@ -176,8 +176,6 @@ Tutorials, Projects and Professional Development activities will take place betw
 <font color="black"align="center" valign="top" > Presentation preparation & project submission </font>
    </td>
    <td bgcolor="#F9EEDA" align="center" ><font color="black"> Presentations </font>
-<p>
-<font color="black"> Closing ceremony </font>
    </td>
   </tr>
   <tr>
@@ -207,23 +205,23 @@ Tutorials, Projects and Professional Development activities will take place betw
    </td>
   </tr>
   <tr>
-   <td bgcolor="#6C7D77" align="center" >Week 1
+   <td bgcolor="#6C7D77" align="center" ><font color="white" >Week 1</font>
    </td>
-   <td bgcolor="#6C7D77" align="center" >W1D1
+   <td bgcolor="#6C7D77" align="center" ><font color="white" >W1D1</font>
    </td>
-   <td bgcolor="#6C7D77" align="center" >W1D2
+   <td bgcolor="#6C7D77" align="center" ><font color="white" >W1D2</font>
    </td>
-   <td bgcolor="#6C7D77" align="center" >W1D3
+   <td bgcolor="#6C7D77" align="center" ><font color="white" >W1D3</font>
    </td>
-   <td bgcolor="#6C7D77" align="center" >W1D4
+   <td bgcolor="#6C7D77" align="center" ><font color="white" >W1D4</font>
    </td>
-   <td bgcolor="#6C7D77" align="center" >W1D5
+   <td bgcolor="#6C7D77" align="center" ><font color="white" >W1D5</font>
    </td>
   </tr>
   <tr>
-   <td rowspan="2" bgcolor="#3F538A" align="center" >Projects & Professional Development
+   <td rowspan="2" bgcolor="#3F538A" align="center" ><font color="white" >Projects & Professional Development</font>
 <p>
-(3 hours)
+<font color="white" >(3 hours)</font>
    </td>
    <td rowspan="2" bgcolor="#6C7D77" align="center" ><font color="black"> No project time</font>
    </td>
@@ -259,9 +257,9 @@ Tutorials, Projects and Professional Development activities will take place betw
    </td>
   </tr>
   <tr>
-   <td rowspan="2" bgcolor="#3F538A" align="center" >Curriculum
+   <td rowspan="2" bgcolor="#3F538A" align="center" ><font color="white" >Curriculum</font>
 <p>
-(5 hours)
+<font color="white" >(5 hours)</font>
    </td>
    <td bgcolor="#E99668" align="center" ><strong><font color="black"> Climate System Overview</font> </strong>
    </td>
@@ -275,15 +273,15 @@ Tutorials, Projects and Professional Development activities will take place betw
    </td>
   </tr>
   <tr>
-   <td bgcolor="#E99668" ><img src="images/icon_W1D1.png" >
+   <td bgcolor="#E99668" align="center" ><img src="images/icon_W1D1.png" >
    </td>
-   <td bgcolor="#F5C690" ><img src="images/icon_W1D2.png" >
+   <td bgcolor="#F5C690" align="center" ><img src="images/icon_W1D2.png" >
    </td>
-   <td bgcolor="#F5C690" ><img src="images/icon_W1D3.png" >
+   <td bgcolor="#F5C690" align="center" ><img src="images/icon_W1D3.png" >
    </td>
-   <td bgcolor="#F5C690" ><img src="images/icon_W1D4.png" >
+   <td bgcolor="#F5C690" align="center" ><img src="images/icon_W1D4.png" >
    </td>
-   <td bgcolor="#B0C7DC" ><img src="images/icon_W1D5.png" >
+   <td bgcolor="#B0C7DC" align="center" ><img src="images/icon_W1D5.png" >
    </td>
   </tr>
   <tr>
@@ -291,23 +289,23 @@ Tutorials, Projects and Professional Development activities will take place betw
    </td>
   </tr>
   <tr>
-   <td bgcolor="#6C7D77" align="center" >Week 2
+   <td bgcolor="#6C7D77" align="center" ><font color="white" >Week 2</font>
    </td>
-   <td bgcolor="#6C7D77" align="center" >W2D1
+   <td bgcolor="#6C7D77" align="center" ><font color="white" >W2D1</font>
    </td>
-   <td bgcolor="#6C7D77" align="center" >W2D2
+   <td bgcolor="#6C7D77" align="center" ><font color="white" >W2D2</font>
    </td>
-   <td bgcolor="#6C7D77" align="center" >W2D3
+   <td bgcolor="#6C7D77" align="center" ><font color="white" >W2D3</font>
    </td>
-   <td bgcolor="#6C7D77" align="center" >W2D4
+   <td bgcolor="#6C7D77" align="center" ><font color="white" >W2D4</font>
    </td>
-   <td bgcolor="#6C7D77" align="center" >W2D5
+   <td bgcolor="#6C7D77" align="center" ><font color="white" >W2D5</font>
    </td>
   </tr>
   <tr>
-   <td rowspan="2" bgcolor="#3F538A" align="center" >Projects & Professional Development
+   <td rowspan="2" bgcolor="#3F538A" align="center" ><font color="white" >Projects & Professional Development</font>
 <p>
-(3 hours)
+<font color="white" >(3 hours)</font>
    </td>
    <td bgcolor="#F9EEDA" align="center" valign="top" ><strong><font color="black"> Session 5</font> </strong>
 <p>
@@ -347,9 +345,9 @@ Tutorials, Projects and Professional Development activities will take place betw
    </td>
   </tr>
   <tr>
-   <td rowspan="2" bgcolor="#3F538A" align="center" >Curriculum
+   <td rowspan="2" bgcolor="#3F538A" align="center" ><font color="white" >Curriculum</font>
 <p>
-(5 hours)
+<font color="white" >(5 hours)</font>
    </td>
    <td bgcolor="#B0C7DC" align="center" ><strong><font color="black"> IPCC I:</font> </strong>
 <p>
@@ -367,15 +365,15 @@ Tutorials, Projects and Professional Development activities will take place betw
    </td>
   </tr>
   <tr>
-   <td bgcolor="#B0C7DC" ><img src="images/icon_W2D1.png" >
+   <td bgcolor="#B0C7DC" align="center" ><img src="images/icon_W2D1.png" >
    </td>
-   <td bgcolor="#E99668" ><img src="images/icon_W2D2.png" >
+   <td bgcolor="#E99668" align="center" ><img src="images/icon_W2D2.png" >
    </td>
-   <td bgcolor="#B0C7DC" ><img src="images/icon_W2D3.png" >
+   <td bgcolor="#B0C7DC" align="center" ><img src="images/icon_W2D3.png" >
    </td>
-   <td bgcolor="#78BAB8" ><img src="images/icon_W2D4.png" >
+   <td bgcolor="#78BAB8" align="center" ><img src="images/icon_W2D4.png" >
    </td>
-   <td bgcolor="#78BAB8" ><img src="images/icon_W2D5.png" >
+   <td bgcolor="#78BAB8" align="center" ><img src="images/icon_W2D5.png" >
    </td>
   </tr>
   <tr>
@@ -390,8 +388,6 @@ Tutorials, Projects and Professional Development activities will take place betw
    <td bgcolor="#6C7D77" >
    </td>
    <td bgcolor="#F9EEDA" align="center" ><font color="black"> Presentations
-<p>
-<font color="black"> Closing ceremony
    </td>
   </tr>
 </table>
@@ -568,12 +564,6 @@ A series of professional development events (viewing and discussing four Impact 
    <td>Pod farewell
    </td>
   </tr>
-  <tr>
-   <td>6:30-7:15*
-   </td>
-   <td>Closing ceremony / Graduation
-   </td>
-  </tr>
 </table>
 
 
@@ -583,5 +573,5 @@ Course feedback survey: We will have a course completion survey for both student
 
 Pod farewell: This is just a chance for your pod to say goodbye to each other. No structure imposed here!
 
-Closing Ceremony / Graduation: We will do this all together on crowdcast.
+Closing Ceremony / Graduation: We will do this all together on crowdcast on the Saturday after the course.
 
