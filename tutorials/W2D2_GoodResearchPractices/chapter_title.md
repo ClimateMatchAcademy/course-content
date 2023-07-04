@@ -1,7 +1,7 @@
 # Good Research Practices
 
  ````{div} full-width 
- <img src='../Art/W2D2_LinearSystems-Ekaterina_Morozova.JPG' alt='art relevant to chapter contents' width='100%'> 
+ <img src='../Art/W2D2.png' alt='W2D2 artwork by Sloane Garelick' width='100%'> 
 ```` 
 
-*Artwork by Ekaterina Morozova*
+*Artwork by Sloane Garelick*
