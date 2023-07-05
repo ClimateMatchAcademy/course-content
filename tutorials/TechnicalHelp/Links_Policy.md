@@ -14,7 +14,7 @@ Code of Conduct: [https://github.com/NeuromatchAcademy/precourse/blob/main/CODE_
 
 Code of Conduct Violations Form: [https://airtable.com/shrezDSthWPlJ4Rpy](https://airtable.com/shrezDSthWPlJ4Rpy)
 
-Project Exemption Form:
+Project Exemption Form: [https://airtable.com/shrupmgfGax5qeAuK](https://airtable.com/shrupmgfGax5qeAuK)
 
 Attendance Exemption Form: [https://airtable.com/shr7CB9qLcIVejpUd](https://airtable.com/shr7CB9qLcIVejpUd)
 

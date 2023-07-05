@@ -2,7 +2,9 @@ book/_build/
 *.nc
 *.csv
 .ipynb_checkpoints/
+euro2k_data
 pages2k_data
+euro2k_data.unzip/
 pages2k_data.unzip/
 *.pyc
 **/.DS_Store
