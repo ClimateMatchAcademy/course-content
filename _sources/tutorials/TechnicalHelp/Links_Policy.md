@@ -2,7 +2,7 @@
 
 ## Quick links
 
-Course materials: [https://compneuro.neuromatch.io/](https://compneuro.neuromatch.io/)
+Course materials: [https://comptools.climatematch.io/](https://comptools.climatematch.io/)
 
 Portal: [https://portal.neuromatchacademy.org/](https://portal.neuromatchacademy.org/)
 
@@ -14,7 +14,7 @@ Code of Conduct: [https://github.com/NeuromatchAcademy/precourse/blob/main/CODE_
 
 Code of Conduct Violations Form: [https://airtable.com/shrezDSthWPlJ4Rpy](https://airtable.com/shrezDSthWPlJ4Rpy)
 
-Project Exemption Form:
+Project Exemption Form: [https://airtable.com/shrupmgfGax5qeAuK](https://airtable.com/shrupmgfGax5qeAuK)
 
 Attendance Exemption Form: [https://airtable.com/shr7CB9qLcIVejpUd](https://airtable.com/shr7CB9qLcIVejpUd)
 

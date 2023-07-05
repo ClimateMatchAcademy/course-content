@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Tutorial 6: Ocean heat content — Climatematch Academy: Computational Climate Science</title>
+<title>Tutorial 6: Ocean Heat Content — Climatematch Academy: Computational Climate Science</title>
 <!-- Loaded before other Sphinx assets -->
 <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
@@ -40,10 +40,11 @@ const thebe_selector_output = ".output, .cell_output"
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
 <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-<link href="../../../genindex.html" rel="index" title="Index">
+<link href="../../../_static/cma-logo-square-4xp.png" rel="shortcut icon">
+<link href="../../../genindex.html" rel="index" title="Index"/>
 <link href="../../../search.html" rel="search" title="Search"/>
 <link href="../further_reading.html" rel="next" title="&lt;no title&gt;"/>
-<link href="W1D2_Tutorial5.html" rel="prev" title="Tutorial 5: Thermohaline circulation"/>
+<link href="W1D2_Tutorial5.html" rel="prev" title="Tutorial 5: Thermohaline Circulation"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="None" name="docsearch:language"/>
 <!-- Google Analytics -->
@@ -70,6 +71,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="bd-sidebar__content">
 <div class="bd-sidebar__top"><div class="navbar-brand-box">
 <a class="navbar-brand text-wrap" href="../../../index.html">
+<!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+<img alt="logo" class="logo" src="../../../_static/cma-logo-square-4xp.png"/>
 <h1 class="site-logo" id="site-title">Climatematch Academy: Computational Climate Science</h1>
 </a>
 </div><form action="../../../search.html" class="bd-search d-flex align-items-center" method="get">
@@ -307,33 +310,45 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current">
 <li class="toctree-l2">
 <a class="reference internal" href="W1D2_Tutorial1.html">
-     Calculating ENSO with Xarray
-    </a>
+<strong>
+      Tutorial 1: Calculating ENSO with Xarray
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D2_Tutorial2.html">
-     Tutorial 2: A lot of weather makes climate - exploring the ERA5 Reanalysis
-    </a>
+<strong>
+      Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D2_Tutorial3.html">
-     Tutorial 3: Atmospheric wind driven circulation
-    </a>
+<strong>
+      Tutorial 3: Atmospheric  Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D2_Tutorial4.html">
-     Tutorial 4: Ocean wind driven circulation
-    </a>
+<strong>
+      Tutorial 4: Oceanic Wind-driven Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D2_Tutorial5.html">
-     Tutorial 5: Thermohaline circulation
-    </a>
+<strong>
+      Tutorial 5: Thermohaline Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2 current active">
 <a class="current reference internal" href="#">
-     Tutorial 6: Ocean heat content
-    </a>
+<strong>
+      Tutorial 6: Ocean Heat Content
+     </strong>
+</a>
 </li>
 </ul>
 </li>
@@ -349,13 +364,17 @@ const thebe_selector_output = ".output, .cell_output"
 <ul>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.html">
-     Video 1: What is Remote Sensing
-    </a>
+<strong>
+      Tutorial 1: Introduction to Remote Sensing
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.html">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 2: Exploring Satellite Climate Data Records
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial3.html">
@@ -364,13 +383,17 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial4.html">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 4: Understanding Climatology Through Precipitation Data
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial5.html">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 5: Calculating Anomalies Using Precipitation Data
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial6.html">
@@ -490,18 +513,24 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial2.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 2 : Energy Balance
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial3.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 3 : A Zero-Dimensional Energy Balance Model
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial4.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 4: Climate Feedbacks
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial5.html">
@@ -841,35 +870,86 @@ const thebe_selector_output = ".output, .cell_output"
     </div>
 <nav aria-label="Page" id="bd-toc-nav">
 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#week-1-day-2-state-of-the-climate-ocean-and-atmospheric-reanalysis">
-   Week 1, Day 2: State of the Climate - Ocean and Atmospheric Reanalysis
-  </a>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#">
+<strong>
+    Tutorial 6: Ocean Heat Content
+   </strong>
+</a>
 </li>
-<li class="toc-h2 nav-item toc-entry">
+<li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#tutorial-objectives">
-   Tutorial objectives
-  </a>
-</li>
+<strong>
+    Tutorial Objectives
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#set-up">
-   Set up
-  </a>
+<a class="reference internal nav-link" href="#video-1-speaker-introduction">
+     Video 1: Speaker Introduction
+    </a>
 </li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-1-where-in-the-vertical-is-ocean-heat-located">
-   Section 1: Where in the vertical is ocean heat located?
-  </a>
+</ul>
 </li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-2-how-is-heat-changing-in-time">
-   Section 2: How is heat changing in time?
-  </a>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#setup">
+<strong>
+    Setup
+   </strong>
+</a>
 </li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-vertical-distribution-of-heat-within-the-ocean">
+<strong>
+    Section 1: Vertical Distribution of Heat Within the Ocean
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-3-spatial-locations-of-heat">
-   Section 3: Spatial locations of heat
-  </a>
+<a class="reference internal nav-link" href="#question-1">
+<strong>
+      Question 1
+     </strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-changes-in-ocean-heat-content">
+<strong>
+    Section 2: Changes in Ocean Heat Content
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-2">
+<strong>
+      Questions 2
+     </strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-3-spatial-distribution-of-ocean-heat-content">
+<strong>
+    Section 3: Spatial Distribution of Ocean Heat Content
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#summary">
+<strong>
+    Summary
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#resources">
+<strong>
+    Resources
+   </strong>
+</a>
 </li>
 </ul>
 </nav>
@@ -879,7 +959,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="col pl-md-3 pl-lg-5 content-container">
 <!-- Table of contents that is only displayed when printing the page -->
 <div class="onlyprint" id="jb-print-docs-body">
-<h1>Tutorial 6: Ocean heat content</h1>
+<h1>Tutorial 6: Ocean Heat Content</h1>
 <!-- Table of contents -->
 <div id="print-main-content">
 <div id="jb-print-toc">
@@ -888,35 +968,86 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <nav aria-label="Page">
 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#week-1-day-2-state-of-the-climate-ocean-and-atmospheric-reanalysis">
-   Week 1, Day 2: State of the Climate - Ocean and Atmospheric Reanalysis
-  </a>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#">
+<strong>
+    Tutorial 6: Ocean Heat Content
+   </strong>
+</a>
 </li>
-<li class="toc-h2 nav-item toc-entry">
+<li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#tutorial-objectives">
-   Tutorial objectives
-  </a>
-</li>
+<strong>
+    Tutorial Objectives
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#set-up">
-   Set up
-  </a>
+<a class="reference internal nav-link" href="#video-1-speaker-introduction">
+     Video 1: Speaker Introduction
+    </a>
 </li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-1-where-in-the-vertical-is-ocean-heat-located">
-   Section 1: Where in the vertical is ocean heat located?
-  </a>
+</ul>
 </li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-2-how-is-heat-changing-in-time">
-   Section 2: How is heat changing in time?
-  </a>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#setup">
+<strong>
+    Setup
+   </strong>
+</a>
 </li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-vertical-distribution-of-heat-within-the-ocean">
+<strong>
+    Section 1: Vertical Distribution of Heat Within the Ocean
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-3-spatial-locations-of-heat">
-   Section 3: Spatial locations of heat
-  </a>
+<a class="reference internal nav-link" href="#question-1">
+<strong>
+      Question 1
+     </strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-changes-in-ocean-heat-content">
+<strong>
+    Section 2: Changes in Ocean Heat Content
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-2">
+<strong>
+      Questions 2
+     </strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-3-spatial-distribution-of-ocean-heat-content">
+<strong>
+    Section 3: Spatial Distribution of Ocean Heat Content
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#summary">
+<strong>
+    Summary
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#resources">
+<strong>
+    Resources
+   </strong>
+</a>
 </li>
 </ul>
 </nav>
@@ -925,21 +1056,46 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <main id="main-content" role="main">
 <div>
+<p><a class="reference external" href="https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial6.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/></a>   <a href="https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/{ORG}/course-content/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial6.ipynb" target="_blank"><img alt="Open in Kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg"/></a></p>
 <div class="section" id="tutorial-6-ocean-heat-content">
-<h1>Tutorial 6: Ocean heat content<a class="headerlink" href="#tutorial-6-ocean-heat-content" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="week-1-day-2-state-of-the-climate-ocean-and-atmospheric-reanalysis">
-<h2>Week 1, Day 2: State of the Climate - Ocean and Atmospheric Reanalysis<a class="headerlink" href="#week-1-day-2-state-of-the-climate-ocean-and-atmospheric-reanalysis" title="Permalink to this headline">¶</a></h2>
+<h1><strong>Tutorial 6: Ocean Heat Content</strong><a class="headerlink" href="#tutorial-6-ocean-heat-content" title="Permalink to this headline">¶</a></h1>
+<p><strong>Week 1, Day 2: Ocean and Atmospheric Reanalysis</strong></p>
+<p><strong>Content creators:</strong> Aurora Basinski</p>
+<p><strong>Content reviewers:</strong> Katrina Dobson, Danika Gupta, Maria Gonzalez, Will Gregory, Nahid Hasan, Sherry Mi, Beatriz Cosenza Muralles, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Content editors:</strong> Brodie, Pearson, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Production editors:</strong> Wesley Banfield, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Our 2023 Sponsors:</strong> NASA TOPS</p>
 </div>
-<hr class="docutils"/>
 <div class="section" id="tutorial-objectives">
-<h2>Tutorial objectives<a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">¶</a></h2>
-<p>This tutorial focuses on heat content in the ocean. We aim to understand the spatial structure of heat and how heat content is changing in time.</p>
+<h1><strong>Tutorial Objectives</strong><a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial, you will explore the ocean’s vast heat capacity, which has a significant impact on the climate system.</p>
+<p>The ocean has a heat capacity that is approximately 1000 times greater than the entire atmosphere, due to the relatively large mass and specific heat capacity of water. This means that the ocean has a significant impact on Earth’s thermal equilibrium state. <em>Ocean heat uptake</em> and <em>ocean carbon uptake</em> mitigates the effect of anthropogenic climate change by absorbing roughly 90% of the excess heat and 25% of human-emitted CO2. As you will see in this tutorial, ocean heat uptake largely occurs in the upper ocean as it is the region in contact with the atmosphere.</p>
+<p>The ocean’s high heat capacity also facilitates meridional ocean heat transport from the equator to the poles, which acts in addition to the meridional <em>atmospheric</em> heat transport.</p>
+<p>Through this tutorial, you will explore the spatial distribution of heat in the ocean and how the ocean’s  heat content is changing over time. To do this, you will utilize the <a class="reference external" href="https://www.ecco-group.org/">Estimating the Circulation and Climate of the Ocean (ECCO)</a> dataset.</p>
+<div class="section" id="video-1-speaker-introduction">
+<h2>Video 1: Speaker Introduction<a class="headerlink" href="#video-1-speaker-introduction" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Video 1: Speaker Introduction</span>
+<span class="c1">#Tech team will add code to format and display the video</span>
+</pre></div>
 </div>
-<hr class="docutils"/>
-<div class="section" id="set-up">
-<h2>Set up<a class="headerlink" href="#set-up" title="Permalink to this headline">¶</a></h2>
-<p>Here we import needed packages, and import ECCO data that has been preprocessed.
-NOTE: Here working with interpolated data fields to lat-lon grid</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="setup">
+<h1><strong>Setup</strong><a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
+<div class="cell tag_colab docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># !pip install seaborn</span>
+<span class="c1"># !pip install cmocean</span>
+<span class="c1"># !pip install cartopy</span>
+<span class="c1"># !pip install geoviews</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -950,52 +1106,52 @@ NOTE: Here working with interpolated data fields to lat-lon grid</p>
 <span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
 <span class="kn">from</span> <span class="nn">cartopy.mpl.ticker</span> <span class="kn">import</span> <span class="n">LongitudeFormatter</span><span class="p">,</span> <span class="n">LatitudeFormatter</span>
 <span class="kn">import</span> <span class="nn">cmocean</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pooch</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="section-1-vertical-distribution-of-heat-within-the-ocean">
+<h1><strong>Section 1: Vertical Distribution of Heat Within the Ocean</strong><a class="headerlink" href="#section-1-vertical-distribution-of-heat-within-the-ocean" title="Permalink to this headline">¶</a></h1>
+<p>First, let’s load ECCO ocean temperature (<code class="docutils literal notranslate"><span class="pre">THETA</span></code>). This datasets contains the annual mean temperature over the period of 1992 to 2016.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import preprocessed ECCO data. This data is full depth temperature data over 1992 to 2016 (annual mean)</span>
+<span class="c1"># this file takes about 5 minutes to load</span>
+<span class="n">url_theta</span> <span class="o">=</span> <span class="s2">"https://osf.io/c8wqt/download"</span>
+<span class="n">theta_annual</span><span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">url_theta</span><span class="p">,</span> <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">))</span>
+<span class="n">theta_annual</span><span class="o">=</span><span class="n">theta_annual</span><span class="o">.</span><span class="n">THETA</span>
+<span class="n">theta_annual</span><span class="o">=</span><span class="n">theta_annual</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">theta_annual</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="c1">#make land points equal to NaN</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Import preprocessed ECCO data. This data is full depth temperature data over 1992 to 2016 (annual mean)</span>
-<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">pooch</span>
-<span class="n">fname</span> <span class="o">=</span> <span class="s2">"theta_annual_mean.nc"</span>
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s2">"https://osf.io/c8wqt/download"</span>
-    <span class="n">fname</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fname</span><span class="o">=</span><span class="n">fname</span><span class="p">)</span>
-<span class="n">A</span><span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
-<span class="n">A</span><span class="o">=</span><span class="n">A</span><span class="o">.</span><span class="n">THETA</span>
-<span class="n">A</span><span class="o">=</span><span class="n">A</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">A</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="c1">#make land points equal to NaN</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="section-1-where-in-the-vertical-is-ocean-heat-located">
-<h2>Section 1: Where in the vertical is ocean heat located?<a class="headerlink" href="#section-1-where-in-the-vertical-is-ocean-heat-located" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#First let's take the mean over the period 1992 to 1994</span>
-<span class="n">subset_theta</span><span class="o">=</span><span class="n">A</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="s1">'1992'</span><span class="p">,</span> <span class="s1">'1994'</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">'year'</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># take the mean over the period 1992 to 1994</span>
+<span class="n">subset_theta</span><span class="o">=</span><span class="n">theta_annual</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="s1">'1992'</span><span class="p">,</span> <span class="s1">'1994'</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">'year'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Let's plot a zonal mean slice of this data. We take a mean just in longitudes by dividing the dA coordinate by the</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot a zonal mean slice of this data. we take a mean just in longitudes by dividing the dA coordinate by the</span>
 <span class="p">(((</span><span class="n">subset_theta</span><span class="o">-</span><span class="mf">273.15</span><span class="p">)</span><span class="o">*</span><span class="n">subset_theta</span><span class="o">.</span><span class="n">dX</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'longitude'</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">subset_theta</span><span class="o">.</span><span class="n">dX</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'longitude'</span><span class="p">)))</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Global zonal mean of temperature (C)'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>We see that temperature is warmer near the surface and closer to the Equator. <strong>Let’s explore what this means for heat content, by looking at where heat is stored!</strong></p>
-<p>Heat is measured in Joules which is equivalent to kg<span class="math notranslate nohighlight">\(*\)</span>m<span class="math notranslate nohighlight">\(^2\)</span>/s<span class="math notranslate nohighlight">\(^2\)</span>. The heat content between a certain depth <span class="math notranslate nohighlight">\(z_1\)</span> up to the surface (height of 0) is a <em>volume integral</em> over dimensions <span class="math notranslate nohighlight">\(x,y,z\)</span>, that can be written as:
-$<span class="math notranslate nohighlight">\(\iiint_{z_1}^0 c_p*\rho_0*\theta(x,y,z) dz dA\)</span><span class="math notranslate nohighlight">\(
-if we here use \)</span>dA<span class="math notranslate nohighlight">\( for the area integral (double integral) over the \)</span>x<span class="math notranslate nohighlight">\( and \)</span>y<span class="math notranslate nohighlight">\( (lat, lon) coordinates. \)</span>\rho_0<span class="math notranslate nohighlight">\( is the reference density in units of kg/m\)</span>^3<span class="math notranslate nohighlight">\( and \)</span>c_p<span class="math notranslate nohighlight">\( is specific heat capacity in units of J/(kg\)</span>*$K)</p>
+<p>Temperatures are warmest near the ocean’s surface and close to the Equator, which suggests that heat is not distributed evenly within the ocean. <strong>In this tutorial you will explore the spatial distribution of heat storage in the ocean (i.e., ocean heat content), and how this distribution is changing over time</strong>.</p>
+<p>Heat content is typically measured in Joules, which is equivalent to the units kg<span class="math notranslate nohighlight">\(*\)</span>m<span class="math notranslate nohighlight">\(^2\)</span>/s<span class="math notranslate nohighlight">\(^2\)</span>. To determine the heat content within a specific depth range of the global ocean, i.e., between depth <span class="math notranslate nohighlight">\(z_1\)</span> and the surface (height of 0), you can calculate a <em>volume integral</em> over the dimensions <span class="math notranslate nohighlight">\(x,y,\)</span> and <span class="math notranslate nohighlight">\(z\)</span>. This integral can be written as:
+$<span class="math notranslate nohighlight">\(\iiint_{-z_1}^0 c_p \cdot \rho_0 \cdot \theta(x,y,z) dz dA\)</span>$</p>
+<p>Here, <span class="math notranslate nohighlight">\(dA\)</span> represents the area integral over the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> (lat, lon) coordinates. <span class="math notranslate nohighlight">\(\rho_0\)</span> is the reference density in units of kg/m<span class="math notranslate nohighlight">\(^3\)</span> and <span class="math notranslate nohighlight">\(c_p\)</span> is specific heat capacity in units of J/(kg<span class="math notranslate nohighlight">\(*\)</span>K)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">theta_area_int</span><span class="o">=</span><span class="p">(</span><span class="n">subset_theta</span><span class="o">*</span><span class="n">A</span><span class="o">.</span><span class="n">dA</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'latitude'</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'longitude'</span><span class="p">)</span> <span class="c1">#we take an area integral first at each depth level</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">theta_area_int</span><span class="o">=</span><span class="p">(</span><span class="n">subset_theta</span><span class="o">*</span><span class="n">subset_theta</span><span class="o">.</span><span class="n">dA</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'latitude'</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'longitude'</span><span class="p">)</span> <span class="c1">#we take an area integral first at each depth level</span>
 </pre></div>
 </div>
 </div>
@@ -1005,124 +1161,165 @@ if we here use \)</span>dA<span class="math notranslate nohighlight">\( for the 
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rho</span> <span class="o">=</span> <span class="mi">1026</span> <span class="c1">#kg/m^3</span>
 <span class="n">c_p</span> <span class="o">=</span> <span class="mi">3990</span> <span class="c1">#J/(kg K)</span>
 
-<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">"whitegrid"</span><span class="p">)</span> <span class="c1">#comment out if don't want seaborn background</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">"whitegrid"</span><span class="p">)</span>
 <span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">-</span><span class="n">A</span><span class="o">.</span><span class="n">Zu</span><span class="p">,(</span><span class="n">rho</span><span class="o">*</span><span class="n">c_p</span><span class="o">*</span><span class="n">theta_area_int</span><span class="o">*</span><span class="n">A</span><span class="o">.</span><span class="n">dZ</span><span class="p">)</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span><span class="o">/</span><span class="mi">10</span><span class="o">**</span><span class="mi">21</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">-</span><span class="n">theta_annual</span><span class="o">.</span><span class="n">Zu</span><span class="p">,(</span><span class="n">rho</span><span class="o">*</span><span class="n">c_p</span><span class="o">*</span><span class="n">theta_area_int</span><span class="o">*</span><span class="n">subset_theta</span><span class="o">.</span><span class="n">dZ</span><span class="p">)</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span><span class="o">/</span><span class="mi">10</span><span class="o">**</span><span class="mi">27</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Depth (m)'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Heat content above this level (ZJ)'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Where heat is stored by depth'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Heat content above this depth ($10^6$ ZJ)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Global Ocean Heat Content above each depth'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>We see that more heat is held in the upper ocean than the lower ocean. This correlates with what we saw with the zonal mean plotting that it is warmer in the upper ocean. Assume the ocean is around 6000 meters deep. Reading off this graph, what percentage of heat is held in the third of the ocean (top 2000 meters)?</p>
-</div>
-<div class="section" id="section-2-how-is-heat-changing-in-time">
-<h2>Section 2: How is heat changing in time?<a class="headerlink" href="#section-2-how-is-heat-changing-in-time" title="Permalink to this headline">¶</a></h2>
-<p>Let’s look at the change in ocean heath content over time across the full depth of the ocean, and across two upper-ocean layers (above 677 m and above 1994 m) to see where those changes are occuring in the water column</p>
+<p>You can see that much of the ocean’s heat is concentrated in the upper ocean (where the line is steep), with less heat stored in the deepest ocean regions (where the line plateaus). At first glance, this seems consistent with the zonal mean plot you plotted earlier in the tutorial, where the upper ocean tends to be warmer than deeper waters. However, in the integral equation above, <span class="math notranslate nohighlight">\(\theta\)</span> is not the only depth-dependent term. The global ocean area (<span class="math notranslate nohighlight">\(A\)</span>) also varies with depth, with the area of the global ocean decreasing with depth until only a few deep trenches contain water at the greatest ocean depths.</p>
+<p>Let’s explore whether the ocean heat content plot we just created is driven by temperature variations or global ocean area variations with depth. One way to do this is to calculate and plot an integral of the global ocean area between each depth and the surface (i.e., the volume of the ocean above a each depth): <span class="math notranslate nohighlight">\(Volume(z) = \iiint_{-z_1}^0 dz dA\)</span>.</p>
+<p>If the volume as a function of depth looks similar to the heat content plot above, it would suggest that the  smaller heat content of the deeper ocean (i.e., the plateau at large depths) is caused by the relatively small volume of water contained at these depths, rather than the vertical variations in temperature.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#theta_clim = A.groupby('time.month').mean(dim='time') #seasonal cycle</span>
-<span class="c1">#theta_anom = A.groupby('time.month') - theta_clim #get rid of seasonal cycle</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">area_of_ocean</span><span class="o">=</span><span class="p">(</span><span class="n">subset_theta</span><span class="o">*</span><span class="n">subset_theta</span><span class="o">.</span><span class="n">dA</span><span class="o">/</span><span class="n">subset_theta</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'latitude'</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'longitude'</span><span class="p">)</span> <span class="c1">#we take an area integral first at each depth level</span>
 
-
-<span class="n">rho</span> <span class="o">=</span> <span class="mi">1026</span> <span class="c1">#kg/m^3</span>
-<span class="n">c_p</span> <span class="o">=</span> <span class="mi">3990</span> <span class="c1">#J/(kg K)</span>
-<span class="n">global_heat</span><span class="o">=</span><span class="n">rho</span><span class="o">*</span><span class="n">c_p</span><span class="o">*</span><span class="p">((</span><span class="n">A</span><span class="o">*</span><span class="n">A</span><span class="o">.</span><span class="n">dZ</span><span class="o">*</span><span class="n">A</span><span class="o">.</span><span class="n">dA</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'Z'</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'latitude'</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'longitude'</span><span class="p">))</span>
-<span class="n">global_heat_upper2000</span><span class="o">=</span><span class="n">rho</span><span class="o">*</span><span class="n">c_p</span><span class="o">*</span><span class="p">((</span><span class="n">A</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="o">-</span><span class="n">A</span><span class="o">.</span><span class="n">Zu</span><span class="o">&lt;</span><span class="mi">2000</span><span class="p">)</span><span class="o">*</span><span class="n">A</span><span class="o">.</span><span class="n">dZ</span><span class="o">*</span><span class="n">A</span><span class="o">.</span><span class="n">dA</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'Z'</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'latitude'</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'longitude'</span><span class="p">))</span>
-<span class="n">global_heat_upper700</span><span class="o">=</span><span class="n">rho</span><span class="o">*</span><span class="n">c_p</span><span class="o">*</span><span class="p">((</span><span class="n">A</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="o">-</span><span class="n">A</span><span class="o">.</span><span class="n">Zu</span><span class="o">&lt;</span><span class="mi">700</span><span class="p">)</span><span class="o">*</span><span class="n">A</span><span class="o">.</span><span class="n">dZ</span><span class="o">*</span><span class="n">A</span><span class="o">.</span><span class="n">dA</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'Z'</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'latitude'</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'longitude'</span><span class="p">))</span>
-
-<span class="n">heat_anom_fulldepth</span><span class="o">=</span><span class="n">global_heat</span><span class="o">-</span><span class="n">global_heat</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="c1">#remove first 5 year mean</span>
-<span class="n">heat_anom_upper2000</span><span class="o">=</span><span class="n">global_heat_upper2000</span><span class="o">-</span><span class="n">global_heat_upper2000</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="n">heat_anom_upper700</span><span class="o">=</span><span class="n">global_heat_upper700</span><span class="o">-</span><span class="n">global_heat_upper700</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">"whitegrid"</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">-</span><span class="n">theta_annual</span><span class="o">.</span><span class="n">Zu</span><span class="p">,(</span><span class="n">area_of_ocean</span><span class="o">*</span><span class="n">subset_theta</span><span class="o">.</span><span class="n">dZ</span><span class="p">)</span><span class="o">.</span><span class="n">cumsum</span><span class="p">())</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Depth (m)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Volume of the global ocean above this depth (m$^3$)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Global ocean volume above each depth'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<div class="section" id="question-1">
+<h2><strong>Question 1</strong><a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Based on the last two plots, are depth-variations in ocean heat content primarily due to vertical changes in the temperature or area of the ocean?</p></li>
+</ol>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/solutions/W1D2_Tutorial6_Solution_387259da.py"><em>Click for solution</em></a></p>
+</div>
+</div>
+<div class="section" id="section-2-changes-in-ocean-heat-content">
+<h1><strong>Section 2: Changes in Ocean Heat Content</strong><a class="headerlink" href="#section-2-changes-in-ocean-heat-content" title="Permalink to this headline">¶</a></h1>
+<p>In this section you will examine how the total (i.e., full-depth) heat content of the ocean has changed over time. You will also explore heat content changes within two specific upper-ocean layers: one above 700 m depth and another above 2000 m depth<span class="math notranslate nohighlight">\(^*\)</span>. By analyzing these near surface layers, you will identify whether changes in the ocean’s heat content are evenly distributed through the water column.</p>
+<p><span class="math notranslate nohighlight">\(^*\)</span><em>Note: technically the grid of the data means you will be looking above 677 m and 1997 m respectively</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#this cell may take a while to run!</span>
+<span class="n">rho</span> <span class="o">=</span> <span class="mi">1026</span> <span class="c1">#kg/m^3</span>
+<span class="n">c_p</span> <span class="o">=</span> <span class="mi">3990</span> <span class="c1">#J/(kg K)</span>
+<span class="n">global_heat</span><span class="o">=</span><span class="n">rho</span><span class="o">*</span><span class="n">c_p</span><span class="o">*</span><span class="p">((</span><span class="n">theta_annual</span><span class="o">*</span><span class="n">theta_annual</span><span class="o">.</span><span class="n">dZ</span><span class="o">*</span><span class="n">theta_annual</span><span class="o">.</span><span class="n">dA</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'Z'</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'latitude'</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'longitude'</span><span class="p">))</span>
+<span class="n">global_heat_upper2000</span><span class="o">=</span><span class="n">rho</span><span class="o">*</span><span class="n">c_p</span><span class="o">*</span><span class="p">((</span><span class="n">theta_annual</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">theta_annual</span><span class="o">.</span><span class="n">Zu</span><span class="o">&gt;-</span><span class="mi">2000</span><span class="p">)</span><span class="o">*</span><span class="n">theta_annual</span><span class="o">.</span><span class="n">dZ</span><span class="o">*</span><span class="n">theta_annual</span><span class="o">.</span><span class="n">dA</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'Z'</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'latitude'</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'longitude'</span><span class="p">))</span>
+<span class="n">global_heat_upper700</span><span class="o">=</span><span class="n">rho</span><span class="o">*</span><span class="n">c_p</span><span class="o">*</span><span class="p">((</span><span class="n">theta_annual</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">theta_annual</span><span class="o">.</span><span class="n">Zu</span><span class="o">&gt;-</span><span class="mi">700</span><span class="p">)</span><span class="o">*</span><span class="n">theta_annual</span><span class="o">.</span><span class="n">dZ</span><span class="o">*</span><span class="n">theta_annual</span><span class="o">.</span><span class="n">dA</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'Z'</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'latitude'</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'longitude'</span><span class="p">))</span>
 
-<span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">"whitegrid"</span><span class="p">)</span> <span class="c1">#comment out if don't want seaborn background</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">global_heat</span><span class="o">.</span><span class="n">year</span><span class="p">,</span><span class="n">heat_anom_fulldepth</span><span class="o">/</span><span class="mi">10</span><span class="o">**</span><span class="mi">21</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">global_heat</span><span class="o">.</span><span class="n">year</span><span class="p">,</span><span class="n">heat_anom_upper2000</span><span class="o">/</span><span class="mi">10</span><span class="o">**</span><span class="mi">21</span><span class="p">)</span>
+<span class="n">heat_anom_fulldepth</span><span class="o">=</span><span class="n">global_heat</span><span class="o">-</span><span class="n">global_heat</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># remove year 1992</span>
+<span class="n">heat_anom_upper2000</span><span class="o">=</span><span class="n">global_heat_upper2000</span><span class="o">-</span><span class="n">global_heat_upper2000</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">heat_anom_upper700</span><span class="o">=</span><span class="n">global_heat_upper700</span><span class="o">-</span><span class="n">global_heat_upper700</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">"whitegrid"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">global_heat</span><span class="o">.</span><span class="n">year</span><span class="p">,</span><span class="n">heat_anom_fulldepth</span><span class="o">/</span><span class="mi">10</span><span class="o">**</span><span class="mi">21</span><span class="p">,</span> <span class="s1">'k--'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">global_heat</span><span class="o">.</span><span class="n">year</span><span class="p">,</span><span class="n">heat_anom_upper700</span><span class="o">/</span><span class="mi">10</span><span class="o">**</span><span class="mi">21</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">global_heat</span><span class="o">.</span><span class="n">year</span><span class="p">,(</span><span class="n">heat_anom_upper2000</span><span class="o">-</span><span class="n">heat_anom_upper700</span><span class="p">)</span><span class="o">/</span><span class="mi">10</span><span class="o">**</span><span class="mi">21</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">global_heat</span><span class="o">.</span><span class="n">year</span><span class="p">,(</span><span class="n">heat_anom_fulldepth</span><span class="o">-</span><span class="n">heat_anom_upper2000</span><span class="p">)</span><span class="o">/</span><span class="mi">10</span><span class="o">**</span><span class="mi">21</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Time'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Heat content change (ZJ)'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">'Full depth'</span><span class="p">,</span><span class="s1">'Surface to 1994 meters depth'</span><span class="p">,</span><span class="s1">'Surface to 677 meters depth'</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">'Full depth'</span><span class="p">,</span><span class="s1">'Surface to 700 meters depth'</span><span class="p">,</span><span class="s1">'700 to 2000 meters depth'</span><span class="p">,</span> <span class="s1">'Below 2000 meters depth'</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Change in heat over time'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>We see that most heat gain is in the upper ocean - the change in the top 2000 meters is nearly equal to the full depth change. Based on this graph, what percentage of additional heat since 1992 is stored in the top 2000 meters?</p>
+<div class="section" id="questions-2">
+<h2><strong>Questions 2</strong><a class="headerlink" href="#questions-2" title="Permalink to this headline">¶</a></h2>
+<p>The volume of the ocean model in the reanalysis product does not change over time. Thus the <em>changes</em> in ocean heat content that you just calculated are caused by changes in the ocean’s temperature. Most of the ocean’s warming (heat gain) has been within the upper ocean (shallower than 700 m). The deeper ocean has also warmed, but not as substantially as near-surface waters.</p>
+<ol class="simple">
+<li><p>Based on this graph, what percentage of the ocean’s heat gain since 1992 is contained within the top 2000 meters?</p></li>
+</ol>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/solutions/W1D2_Tutorial6_Solution_29b1198d.py"><em>Click for solution</em></a></p>
 </div>
-<div class="section" id="section-3-spatial-locations-of-heat">
-<h2>Section 3: Spatial locations of heat<a class="headerlink" href="#section-3-spatial-locations-of-heat" title="Permalink to this headline">¶</a></h2>
-<p>Now we’ve seen how the ocean heat increase is concentrated near the ocean surface, let’s look at where that heat is stored as a function of latitude and longitude. We can do this by creating a global map of ocean heat content in the upper 700 m of the ocean</p>
+</div>
+<div class="section" id="section-3-spatial-distribution-of-ocean-heat-content">
+<h1><strong>Section 3: Spatial Distribution of Ocean Heat Content</strong><a class="headerlink" href="#section-3-spatial-distribution-of-ocean-heat-content" title="Permalink to this headline">¶</a></h1>
+<p>You just saw that the ocean heat increase is concentrated near the ocean surface. <strong>Now you will explore where that heat is stored as a function of latitude and longitude</strong>. You can do this by creating a global map of ocean heat content in the upper 700 m of the ocean - which is essentially the same integral as above without the horizontal area integral: <span class="math notranslate nohighlight">\(\int_{-700m}^0 c_p\rho_0\theta(x,y,z) dz\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#First let's plot where heat is stored in the mean</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># first let's plot where heat is stored in the mean</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">subplot_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">'projection'</span><span class="p">:</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()},</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span> <span class="c1">#this is from cartopy https://rabernat.github.io/research_computing_2018/maps-with-cartopy.html</span>
-<span class="n">p</span><span class="o">=</span><span class="p">(((</span><span class="n">rho</span><span class="o">*</span><span class="n">c_p</span><span class="o">*</span><span class="n">subset_theta</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="o">-</span><span class="n">subset_theta</span><span class="o">.</span><span class="n">Zu</span><span class="o">&lt;</span><span class="mi">700</span><span class="p">)</span><span class="o">*</span><span class="n">subset_theta</span><span class="o">.</span><span class="n">dZ</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'Z'</span><span class="p">)))</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="mf">7.4E11</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mf">8.15E11</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="n">cmocean</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">thermal</span><span class="p">,</span><span class="n">cbar_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">'shrink'</span><span class="p">:</span><span class="mf">0.75</span><span class="p">,</span><span class="s1">'orientation'</span><span class="p">:</span><span class="s1">'horizontal'</span><span class="p">,</span><span class="s1">'extend'</span><span class="p">:</span><span class="s1">'both'</span><span class="p">,</span><span class="s1">'pad'</span><span class="p">:</span><span class="mf">0.05</span><span class="p">,</span><span class="s1">'label'</span><span class="p">:</span> <span class="s2">""</span><span class="p">})</span>
+
+<span class="n">p</span><span class="o">=</span><span class="p">(((</span><span class="n">rho</span><span class="o">*</span><span class="n">c_p</span><span class="o">*</span><span class="n">subset_theta</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="o">-</span><span class="n">subset_theta</span><span class="o">.</span><span class="n">Zu</span><span class="o">&lt;</span><span class="mi">700</span><span class="p">)</span><span class="o">*</span><span class="n">subset_theta</span><span class="o">.</span><span class="n">dZ</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'Z'</span><span class="p">)))</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">vmin</span><span class="o">=</span><span class="mf">7e11</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mf">8.15E11</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="n">cmocean</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">thermal</span><span class="p">,</span>
+    <span class="n">cbar_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">'shrink'</span><span class="p">:</span><span class="mf">0.75</span><span class="p">,</span><span class="s1">'orientation'</span><span class="p">:</span><span class="s1">'horizontal'</span><span class="p">,</span><span class="s1">'extend'</span><span class="p">:</span><span class="s1">'both'</span><span class="p">,</span><span class="s1">'pad'</span><span class="p">:</span><span class="mf">0.05</span><span class="p">,</span><span class="s1">'label'</span><span class="p">:</span> <span class="s2">""</span><span class="p">}</span>
+<span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'grey'</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">120</span><span class="p">,</span> <span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">180</span><span class="p">],</span> <span class="n">crs</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="o">-</span><span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">90</span><span class="p">],</span> <span class="n">crs</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
 <span class="n">lon_formatter</span> <span class="o">=</span> <span class="n">LongitudeFormatter</span><span class="p">(</span><span class="n">zero_direction_label</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">lat_formatter</span> <span class="o">=</span> <span class="n">LatitudeFormatter</span><span class="p">()</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cart</span><span class="o">.</span><span class="n">feature</span><span class="o">.</span><span class="n">LAND</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'k'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Heat content, top 700 meters, mean of 1992 to 1994, J'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Ocean Heat Content of top 700 m per unit area, mean of 1992 to 1994, J m$^{-2}$'</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>We see the lower latitudes have more heat content than the higher latitudes, consistent with the warmer waters near the Equator that we plotted earlier in this tutorial.</p>
-<p>Now let’s look at the spatial pattern of <em>heat gain</em> over 1992 to 2016</p>
+<p>The lower latitude ocean contains more heat than the higher latitudes. This finding is consistent with your previous plot of warmer waters near the Equator during this tutorial.</p>
+<p><em>Note: the color scale of this figure was chosen to emphasize latitudinal differences in ocean heat conent. As a result, some regions with shallow water depth display as black on the plot due to their relatively low column-integrated ocean heat content (<span class="math notranslate nohighlight">\(&lt;7 \times 10^{11} J m^{-2}\)</span>). <strong>These black regions do not have zero ocean heat content.</strong></em></p>
+<p>Now let’s explore the spatial pattern of (full-depth) ocean heat content <em>rate of change</em> between 1992 and 2016.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#We already defined an object that's the mean over years 1992 to 1994 (subset_theta). Now define an object that's mean over 2014 to 2016</span>
-<span class="n">subset_theta_future</span><span class="o">=</span><span class="n">A</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="s1">'2014'</span><span class="p">,</span> <span class="s1">'2016'</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">'year'</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we already defined an object that's the mean over years 1992 to 1994 (subset_theta)</span>
+<span class="c1"># now define an object that's the mean over 2014 to 2016</span>
+<span class="n">subset_theta_future</span><span class="o">=</span><span class="n">theta_annual</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="s1">'2014'</span><span class="p">,</span> <span class="s1">'2016'</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">'year'</span><span class="p">)</span>
+
+<span class="n">length_of_time_period</span> <span class="o">=</span> <span class="mi">24</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">365</span><span class="o">*</span><span class="p">(</span><span class="mi">2015</span><span class="o">-</span><span class="mi">1993</span><span class="p">)</span>
+
+<span class="n">full_depth_heat_content_change</span> <span class="o">=</span> <span class="p">(</span><span class="n">rho</span><span class="o">*</span><span class="n">c_p</span><span class="o">*</span><span class="n">subset_theta_future</span><span class="o">*</span><span class="n">subset_theta_future</span><span class="o">.</span><span class="n">dZ</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'Z'</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">rho</span><span class="o">*</span><span class="n">c_p</span><span class="o">*</span><span class="n">subset_theta</span><span class="o">*</span><span class="n">subset_theta</span><span class="o">.</span><span class="n">dZ</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'Z'</span><span class="p">)</span>
+<span class="n">upper_700m_heat_content_change</span> <span class="o">=</span> <span class="p">(</span><span class="n">rho</span><span class="o">*</span><span class="n">c_p</span><span class="o">*</span><span class="n">subset_theta_future</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="o">-</span><span class="n">subset_theta</span><span class="o">.</span><span class="n">Zu</span><span class="o">&lt;</span><span class="mi">700</span><span class="p">)</span><span class="o">*</span><span class="n">subset_theta_future</span><span class="o">.</span><span class="n">dZ</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'Z'</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">rho</span><span class="o">*</span><span class="n">c_p</span><span class="o">*</span><span class="n">subset_theta</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="o">-</span><span class="n">subset_theta</span><span class="o">.</span><span class="n">Zu</span><span class="o">&lt;</span><span class="mi">700</span><span class="p">)</span><span class="o">*</span><span class="n">subset_theta</span><span class="o">.</span><span class="n">dZ</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'Z'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">subplot_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">'projection'</span><span class="p">:</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()},</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span> <span class="c1">#this is from cartopy https://rabernat.github.io/research_computing_2018/maps-with-cartopy.html</span>
-<span class="n">p</span><span class="o">=</span><span class="p">(((</span><span class="n">rho</span><span class="o">*</span><span class="n">c_p</span><span class="o">*</span><span class="n">subset_theta_future</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="o">-</span><span class="n">subset_theta_future</span><span class="o">.</span><span class="n">Zu</span><span class="o">&lt;</span><span class="mi">700</span><span class="p">)</span><span class="o">*</span><span class="n">subset_theta_future</span><span class="o">.</span><span class="n">dZ</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'Z'</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">rho</span><span class="o">*</span><span class="n">c_p</span><span class="o">*</span><span class="n">subset_theta</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="o">-</span><span class="n">subset_theta_future</span><span class="o">.</span><span class="n">Zu</span><span class="o">&lt;</span><span class="mi">700</span><span class="p">)</span><span class="o">*</span><span class="n">subset_theta</span><span class="o">.</span><span class="n">dZ</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'Z'</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">24</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">365</span><span class="o">*</span><span class="p">(</span><span class="mi">2015</span><span class="o">-</span><span class="mi">1993</span><span class="p">)))</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="n">cmocean</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">balance</span><span class="p">,</span><span class="n">cbar_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">'shrink'</span><span class="p">:</span><span class="mf">0.75</span><span class="p">,</span><span class="s1">'orientation'</span><span class="p">:</span><span class="s1">'horizontal'</span><span class="p">,</span><span class="s1">'extend'</span><span class="p">:</span><span class="s1">'both'</span><span class="p">,</span><span class="s1">'pad'</span><span class="p">:</span><span class="mf">0.05</span><span class="p">,</span><span class="s1">'label'</span><span class="p">:</span> <span class="s2">""</span><span class="p">})</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'grey'</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">120</span><span class="p">,</span> <span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">180</span><span class="p">],</span> <span class="n">crs</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="o">-</span><span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">90</span><span class="p">],</span> <span class="n">crs</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">subplot_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">'projection'</span><span class="p">:</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()},</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span> <span class="c1">#this is from cartopy https://rabernat.github.io/research_computing_2018/maps-with-cartopy.html</span>
+<span class="p">(</span><span class="n">full_depth_heat_content_change</span><span class="o">/</span><span class="n">length_of_time_period</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">vmin</span><span class="o">=-</span><span class="mi">10</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="n">cmocean</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">balance</span><span class="p">,</span><span class="n">cbar_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">'shrink'</span><span class="p">:</span><span class="mf">0.75</span><span class="p">,</span><span class="s1">'orientation'</span><span class="p">:</span><span class="s1">'horizontal'</span><span class="p">,</span><span class="s1">'extend'</span><span class="p">:</span><span class="s1">'both'</span><span class="p">,</span><span class="s1">'pad'</span><span class="p">:</span><span class="mf">0.05</span><span class="p">,</span><span class="s1">'label'</span><span class="p">:</span> <span class="s2">""</span><span class="p">})</span>
+<span class="p">(</span><span class="n">upper_700m_heat_content_change</span><span class="o">/</span><span class="n">length_of_time_period</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">vmin</span><span class="o">=-</span><span class="mi">10</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="n">cmocean</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">balance</span><span class="p">,</span><span class="n">cbar_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">'shrink'</span><span class="p">:</span><span class="mf">0.75</span><span class="p">,</span><span class="s1">'orientation'</span><span class="p">:</span><span class="s1">'horizontal'</span><span class="p">,</span><span class="s1">'extend'</span><span class="p">:</span><span class="s1">'both'</span><span class="p">,</span><span class="s1">'pad'</span><span class="p">:</span><span class="mf">0.05</span><span class="p">,</span><span class="s1">'label'</span><span class="p">:</span> <span class="s2">""</span><span class="p">})</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">coastlines</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'grey'</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">120</span><span class="p">,</span> <span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">180</span><span class="p">],</span> <span class="n">crs</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="o">-</span><span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">90</span><span class="p">],</span> <span class="n">crs</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
 <span class="n">lon_formatter</span> <span class="o">=</span> <span class="n">LongitudeFormatter</span><span class="p">(</span><span class="n">zero_direction_label</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">lat_formatter</span> <span class="o">=</span> <span class="n">LatitudeFormatter</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cart</span><span class="o">.</span><span class="n">feature</span><span class="o">.</span><span class="n">LAND</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'k'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Change in heat content, mean of years 2014-16 minus mean of years 1992-94 converted to J/year, top 700 meters'</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="c1">#can be compared to plot on ECCO website for top 200 meters, https://www.ecco-group.org/ohc.htm</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">subplot_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">'projection'</span><span class="p">:</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()},</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span> <span class="c1">#this is from cartopy https://rabernat.github.io/research_computing_2018/maps-with-cartopy.html</span>
-<span class="n">p</span><span class="o">=</span><span class="p">(((</span><span class="n">rho</span><span class="o">*</span><span class="n">c_p</span><span class="o">*</span><span class="n">subset_theta_future</span><span class="o">*</span><span class="n">subset_theta_future</span><span class="o">.</span><span class="n">dZ</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'Z'</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">rho</span><span class="o">*</span><span class="n">c_p</span><span class="o">*</span><span class="n">subset_theta</span><span class="o">*</span><span class="n">subset_theta</span><span class="o">.</span><span class="n">dZ</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'Z'</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">24</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">365</span><span class="o">*</span><span class="p">(</span><span class="mi">2015</span><span class="o">-</span><span class="mi">1993</span><span class="p">)))</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="n">cmocean</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">balance</span><span class="p">,</span><span class="n">cbar_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">'shrink'</span><span class="p">:</span><span class="mf">0.75</span><span class="p">,</span><span class="s1">'orientation'</span><span class="p">:</span><span class="s1">'horizontal'</span><span class="p">,</span><span class="s1">'extend'</span><span class="p">:</span><span class="s1">'both'</span><span class="p">,</span><span class="s1">'pad'</span><span class="p">:</span><span class="mf">0.05</span><span class="p">,</span><span class="s1">'label'</span><span class="p">:</span> <span class="s2">""</span><span class="p">})</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'grey'</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">120</span><span class="p">,</span> <span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">180</span><span class="p">],</span> <span class="n">crs</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="o">-</span><span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">90</span><span class="p">],</span> <span class="n">crs</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cart</span><span class="o">.</span><span class="n">feature</span><span class="o">.</span><span class="n">LAND</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'k'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Rate of change in full-depth ocean heat content </span><span class="se">\n</span><span class="s1"> (2014-2016 minus 1992-1994); (J m$^{-2}$)/year'</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">coastlines</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'grey'</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">120</span><span class="p">,</span> <span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">180</span><span class="p">],</span> <span class="n">crs</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="o">-</span><span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">90</span><span class="p">],</span> <span class="n">crs</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'Latitude'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'Longitude'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'Longitude'</span><span class="p">)</span>
 <span class="n">lon_formatter</span> <span class="o">=</span> <span class="n">LongitudeFormatter</span><span class="p">(</span><span class="n">zero_direction_label</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">lat_formatter</span> <span class="o">=</span> <span class="n">LatitudeFormatter</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cart</span><span class="o">.</span><span class="n">feature</span><span class="o">.</span><span class="n">LAND</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'k'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Change in heat content, mean of years 2014-16 minus mean of years 1992-94 converted to J/year, Full depth'</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cart</span><span class="o">.</span><span class="n">feature</span><span class="o">.</span><span class="n">LAND</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'k'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Rate of change in upper 700 m ocean heat content </span><span class="se">\n</span><span class="s1"> (2014-2016 minus 1992-1994); (J m$^{-2}$)/year'</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>We see heat gain isn’t spatially uniform. Comparing the two plots, we again see that most heat gain is in the upper ocean</p>
+<p>With these plots, you demonstrated that ocean heat gain is not evenly distributed across space. When comparing the two plots, you once again see that the upper ocean contains a large fraction of the warming (recall that Equatorial regions contribute more to the global mean than high-latitude regions becasue of their relatively large area).</p>
 </div>
+<div class="section" id="summary">
+<h1><strong>Summary</strong><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial, you have quantified the spatial patterns and temporal changes of the ocean’s heat content. You showed that the upper layers of the ocean contain most of the ocean’s heat content, due to their relatively large area (and hence volume) compared to the deepest ocean layers. These upper layers also experience a disproportionately large fraction of the ocean warming that has been observed in recent decades. You also found that heat content distribution varies by latitude and longitude, and is typically greater in the lower latitudes, and the ocean’s heat gain over time is not uniformly distributed across different oceanic regions.</p>
+</div>
+<div class="section" id="resources">
+<h1><strong>Resources</strong><a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h1>
+<p>Data for this tutorial can be accessed <a class="reference external" href="https://www.ecco-group.org/">here</a>.</p>
 </div>
 <script type="text/x-thebe-config">
     {
@@ -1133,16 +1330,16 @@ if we here use \)</span>dA<span class="math notranslate nohighlight">\( for the 
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "my_env"
+            mode: "climatematch"
         },
         kernelOptions: {
-            kernelName: "my_env",
+            kernelName: "climatematch",
             path: "./tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student"
         },
         predefinedOutput: true
     }
     </script>
-<script>kernelName = 'my_env'</script>
+<script>kernelName = 'climatematch'</script>
 </div>
 </main>
 <footer class="footer-article noprint">
@@ -1152,7 +1349,7 @@ if we here use \)</span>dA<span class="math notranslate nohighlight">\( for the 
 <i class="fas fa-angle-left"></i>
 <div class="prev-next-info">
 <p class="prev-next-subtitle">previous</p>
-<p class="prev-next-title">Tutorial 5: Thermohaline circulation</p>
+<p class="prev-next-title"><strong>Tutorial 5: Thermohaline Circulation</strong></p>
 </div>
 </a>
 <a class="right-next" href="../further_reading.html" id="next-link" title="next page">

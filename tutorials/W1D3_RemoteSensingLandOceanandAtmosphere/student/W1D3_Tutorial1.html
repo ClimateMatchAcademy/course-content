@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Video 1: What is Remote Sensing — Climatematch Academy: Computational Climate Science</title>
+<title>Tutorial 1: Introduction to Remote Sensing — Climatematch Academy: Computational Climate Science</title>
 <!-- Loaded before other Sphinx assets -->
 <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
@@ -40,9 +40,10 @@ const thebe_selector_output = ".output, .cell_output"
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
 <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-<link href="../../../genindex.html" rel="index" title="Index">
+<link href="../../../_static/cma-logo-square-4xp.png" rel="shortcut icon">
+<link href="../../../genindex.html" rel="index" title="Index"/>
 <link href="../../../search.html" rel="search" title="Search"/>
-<link href="W1D3_Tutorial2.html" rel="next" title="Figure settings"/>
+<link href="W1D3_Tutorial2.html" rel="next" title="Tutorial 2: Exploring Satellite Climate Data Records"/>
 <link href="../chapter_title.html" rel="prev" title="Remote Sensing Land Ocean and Atmosphere"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="None" name="docsearch:language"/>
@@ -70,6 +71,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="bd-sidebar__content">
 <div class="bd-sidebar__top"><div class="navbar-brand-box">
 <a class="navbar-brand text-wrap" href="../../../index.html">
+<!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+<img alt="logo" class="logo" src="../../../_static/cma-logo-square-4xp.png"/>
 <h1 class="site-logo" id="site-title">Climatematch Academy: Computational Climate Science</h1>
 </a>
 </div><form action="../../../search.html" class="bd-search d-flex align-items-center" method="get">
@@ -307,33 +310,45 @@ const thebe_selector_output = ".output, .cell_output"
 <ul>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial1.html">
-     Calculating ENSO with Xarray
-    </a>
+<strong>
+      Tutorial 1: Calculating ENSO with Xarray
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial2.html">
-     Tutorial 2: A lot of weather makes climate - exploring the ERA5 Reanalysis
-    </a>
+<strong>
+      Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial3.html">
-     Tutorial 3: Atmospheric wind driven circulation
-    </a>
+<strong>
+      Tutorial 3: Atmospheric  Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial4.html">
-     Tutorial 4: Ocean wind driven circulation
-    </a>
+<strong>
+      Tutorial 4: Oceanic Wind-driven Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial5.html">
-     Tutorial 5: Thermohaline circulation
-    </a>
+<strong>
+      Tutorial 5: Thermohaline Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial6.html">
-     Tutorial 6: Ocean heat content
-    </a>
+<strong>
+      Tutorial 6: Ocean Heat Content
+     </strong>
+</a>
 </li>
 </ul>
 </li>
@@ -349,13 +364,17 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current">
 <li class="toctree-l2 current active">
 <a class="current reference internal" href="#">
-     Video 1: What is Remote Sensing
-    </a>
+<strong>
+      Tutorial 1: Introduction to Remote Sensing
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D3_Tutorial2.html">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 2: Exploring Satellite Climate Data Records
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D3_Tutorial3.html">
@@ -364,13 +383,17 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D3_Tutorial4.html">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 4: Understanding Climatology Through Precipitation Data
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D3_Tutorial5.html">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 5: Calculating Anomalies Using Precipitation Data
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D3_Tutorial6.html">
@@ -490,18 +513,24 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial2.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 2 : Energy Balance
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial3.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 3 : A Zero-Dimensional Energy Balance Model
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial4.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 4: Climate Feedbacks
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial5.html">
@@ -841,31 +870,123 @@ const thebe_selector_output = ".output, .cell_output"
     </div>
 <nav aria-label="Page" id="bd-toc-nav">
 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#">
+<strong>
+    Tutorial 1: Introduction to Remote Sensing
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-objectives">
+<strong>
+    Tutorial Objectives
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id1">
-   Video 1: What is Remote Sensing
-  </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id2">
+<a class="reference internal nav-link" href="#video-1-what-is-remote-sensing">
      Video 1: What is Remote Sensing
     </a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-what-is-remote-sensing">
+<strong>
+    Section 1: What is Remote Sensing?
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-1-electromagnetic-spectrum">
+<strong>
+      Section 1.1: Electromagnetic Spectrum
+     </strong>
+</a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-2-satellite-orbits">
+<strong>
+      Section 1.2: Satellite Orbits
+     </strong>
+</a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-3-resolution">
+<strong>
+      Section 1.3: Resolution
+     </strong>
+</a>
 <ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id3">
-       Video 1: What is Remote Sensing
-      </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id4">
-         Video 1: What is Remote Sensing
-        </a>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-3">
+<strong>
+        Questions 1.3
+       </strong>
+</a>
 </li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-example-use-cases">
+<strong>
+    Section 2: Example Use Cases
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-1-land-cryosphere-snow-coverage">
+<strong>
+      Section 2.1: Land/Cryosphere – Snow Coverage
+     </strong>
+</a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-2-land-terrestrial-ecology-vegetation-health">
+<strong>
+      Section 2.2: Land/Terrestrial Ecology – Vegetation Health
+     </strong>
+</a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-3-atmosphere-cloud">
+<strong>
+      Section 2.3: Atmosphere – Cloud
+     </strong>
+</a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-4-atmosphere-rainfall">
+<strong>
+      Section 2.4: Atmosphere – Rainfall
+     </strong>
+</a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-5-ocean-sea-surface-temperature">
+<strong>
+      Section 2.5: Ocean – Sea Surface Temperature
+     </strong>
+</a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-6-ocean-marine-ecosystem-chlorophyll">
+<strong>
+      Section 2.6: Ocean/Marine Ecosystem – Chlorophyll
+     </strong>
+</a>
+</li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#summary">
+<strong>
+    Summary
+   </strong>
+</a>
 </li>
 </ul>
 </nav>
@@ -875,7 +996,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="col pl-md-3 pl-lg-5 content-container">
 <!-- Table of contents that is only displayed when printing the page -->
 <div class="onlyprint" id="jb-print-docs-body">
-<h1>Video 1: What is Remote Sensing</h1>
+<h1>Tutorial 1: Introduction to Remote Sensing</h1>
 <!-- Table of contents -->
 <div id="print-main-content">
 <div id="jb-print-toc">
@@ -884,31 +1005,123 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <nav aria-label="Page">
 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#">
+<strong>
+    Tutorial 1: Introduction to Remote Sensing
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-objectives">
+<strong>
+    Tutorial Objectives
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id1">
-   Video 1: What is Remote Sensing
-  </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id2">
+<a class="reference internal nav-link" href="#video-1-what-is-remote-sensing">
      Video 1: What is Remote Sensing
     </a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-what-is-remote-sensing">
+<strong>
+    Section 1: What is Remote Sensing?
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-1-electromagnetic-spectrum">
+<strong>
+      Section 1.1: Electromagnetic Spectrum
+     </strong>
+</a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-2-satellite-orbits">
+<strong>
+      Section 1.2: Satellite Orbits
+     </strong>
+</a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-3-resolution">
+<strong>
+      Section 1.3: Resolution
+     </strong>
+</a>
 <ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id3">
-       Video 1: What is Remote Sensing
-      </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id4">
-         Video 1: What is Remote Sensing
-        </a>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-3">
+<strong>
+        Questions 1.3
+       </strong>
+</a>
 </li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-example-use-cases">
+<strong>
+    Section 2: Example Use Cases
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-1-land-cryosphere-snow-coverage">
+<strong>
+      Section 2.1: Land/Cryosphere – Snow Coverage
+     </strong>
+</a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-2-land-terrestrial-ecology-vegetation-health">
+<strong>
+      Section 2.2: Land/Terrestrial Ecology – Vegetation Health
+     </strong>
+</a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-3-atmosphere-cloud">
+<strong>
+      Section 2.3: Atmosphere – Cloud
+     </strong>
+</a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-4-atmosphere-rainfall">
+<strong>
+      Section 2.4: Atmosphere – Rainfall
+     </strong>
+</a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-5-ocean-sea-surface-temperature">
+<strong>
+      Section 2.5: Ocean – Sea Surface Temperature
+     </strong>
+</a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-6-ocean-marine-ecosystem-chlorophyll">
+<strong>
+      Section 2.6: Ocean/Marine Ecosystem – Chlorophyll
+     </strong>
+</a>
+</li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#summary">
+<strong>
+    Summary
+   </strong>
+</a>
 </li>
 </ul>
 </nav>
@@ -917,53 +1130,27 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <main id="main-content" role="main">
 <div>
-<p>#<strong>Tutorial 1: Introduction to Remote Sensing Data</strong></p>
-<blockquote>
-<div><p>Indented block</p>
-</div></blockquote>
-<blockquote>
-<div><p>Indented block</p>
-</div></blockquote>
-<p><strong>Week 1, Day 3, Remote Sesning</strong></p>
+<p><a class="reference external" href="https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/></a>   <a href="https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/{ORG}/course-content/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.ipynb" target="_blank"><img alt="Open in Kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg"/></a></p>
+<div class="section" id="tutorial-1-introduction-to-remote-sensing">
+<h1><strong>Tutorial 1: Introduction to Remote Sensing</strong><a class="headerlink" href="#tutorial-1-introduction-to-remote-sensing" title="Permalink to this headline">¶</a></h1>
+<p><strong>Week 1, Day 3, Remote Sensing</strong></p>
 <p><strong>Content creators:</strong> Douglas Rao</p>
-<p><strong>Content reviewers:</strong> YOUNKAP NINA Duplex</p>
-<p><strong>Content editors:</strong> TBD</p>
-<p><strong>Production editors:</strong> TBD</p>
-<p><strong>Our 2023 Sponsors:</strong> TBD</p>
-<p>#<strong>Tutorial Objectives</strong></p>
-<p>In this introductory tutorial, you will learn about the basic concepts of remote sensing technologies and remote sensing data. This tutorial will not involve active coding but you will look at some sample use cases of how remote sensing data can be used to monitor the environment and different aspects of our society.</p>
-<p>By the end of this tutorial you will be able to:</p>
+<p><strong>Content reviewers:</strong> Dionessa Biton, Katrina Dobson, Younkap Nina Duplex, Maria Gonzalez, Will Gregory, Nahid Hasan, Sherry Mi, Beatriz Cosenza Muralles, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Content editors:</strong> Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Production editors:</strong> Wesley Banfield, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Our 2023 Sponsors:</strong> NASA TOPS</p>
+</div>
+<div class="section" id="tutorial-objectives">
+<h1><strong>Tutorial Objectives</strong><a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">¶</a></h1>
+<p>Today you will learn the basics of remote sensing, how to find remote sensing data, and how to use it for studying the climate across 8 tutorials.</p>
+<p>The first tutorial introduces the fundamental concepts of remote sensing technologies and data. Although you won’t be doing any coding in this initial module, some compelling examples of how remote sensing data can be utilized to monitor our environment and society’s diverse facets will be illustrated.</p>
+<p>By the end of this tutorial, you’ll be able to:</p>
 <ul class="simple">
-<li><p>Understand key concepts of satellite remote sensing</p></li>
-<li><p>Understand the value and benefits of satellite remote sensing</p></li>
+<li><p>Grasp key concepts of satellite remote sensing, including the electromagnetic spectrum, satellite orbits, and resolutions.</p></li>
+<li><p>Appreciate the value and benefits of satellite remote sensing for climate studies through selected examples.</p></li>
 </ul>
-<p>#<strong>Section 1: What is Remote Sensing?</strong></p>
-<p>Remote sensing is the technique of getting information from a distance by definition. In our daily life, photography is a very common format of remote sensing. In Earth and environmental science, we often use sensors onboard satellites in the space or aircrafts in the sky to acquire information of interests, such as, agriculture, disaster response, air pollution.</p>
-<p>Many organizations, including government agencies (e.g., NASA, NOAA), private companies (e.g., Planet, Maxar), and universities, design and launch remote sensors on satellites and aircrafts to observe the natural and human environment.</p>
-<p>Remote sensors, which provide a unique perspective and a wealth of data about Earth systems, enable data-informed decision making based on the current and future state of our planet. Below is the very first global image captured on November 28, 2011 by the remote sensor – VIIRS (Visible Infrared Imager Radiometer Suite) – onboard the Suomi-NPP satellite launched in 2011.</p>
-<p><img alt="The first global composite of data captured by VIIRS on November 28, 2011" src="https://eoimages.gsfc.nasa.gov/images/imagerecords/76000/76674/global_vir_2011328_lrg.jpg">
-The first global composite of data captured by VIIRS on November 28, 2011. (Credit: NASA Earth Observatory)</img></p>
 <div class="section" id="video-1-what-is-remote-sensing">
-<h1>Video 1: What is Remote Sensing<a class="headerlink" href="#video-1-what-is-remote-sensing" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2>Video 1: What is Remote Sensing<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id2">
-<h3>Video 1: What is Remote Sensing<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id3">
-<h4>Video 1: What is Remote Sensing<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="id4">
-<h5>Video 1: What is Remote Sensing<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h5>
-<p>#######  Video 1: What is Remote Sensing</p>
-<p>########  Video 1: What is Remote Sensing</p>
-<p>#########  Video 1: What is Remote Sensing</p>
-<p>##########  Video 1: What is Remote Sensing</p>
-<p>###########  Video 1: What is Remote Sensing</p>
-<p>############  Video 1: What is Remote Sensing</p>
-<p>#############  Video 1: What is Remote Sensing</p>
-<p>##############  Video 1: What is Remote Sensing</p>
-<p>###############  Video 1: What is Remote Sensing</p>
-<p>################  Video 1: What is Remote Sensing</p>
-<p>#################  Video 1: What is Remote Sensing</p>
+<h2>Video 1: What is Remote Sensing<a class="headerlink" href="#video-1-what-is-remote-sensing" title="Permalink to this headline">¶</a></h2>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Video 1: What is Remote Sensing</span>
@@ -972,172 +1159,167 @@ The first global composite of data captured by VIIRS on November 28, 2011. (Cred
 </div>
 </div>
 </div>
-<p>##<strong>Section 1.1: Electromagnetic Spectrum</strong></p>
-<p>The concept of electromagetic spectrum is at the core of remote sensing.</p>
+</div>
+</div>
+<div class="section" id="section-1-what-is-remote-sensing">
+<h1><strong>Section 1: What is Remote Sensing?</strong><a class="headerlink" href="#section-1-what-is-remote-sensing" title="Permalink to this headline">¶</a></h1>
+<p>Remote sensing is the technique of getting information from a distance (remotely). In daily life, photography is a very common format of remote sensing. In Earth and environmental science, sensors are often used on satellites in space or aircrafts in the sky to acquire information on topics such as agriculture, disaster response, and air pollution.</p>
+<p>There are many organizations involved in this work, including government agencies like <a class="reference external" href="https://www.nasa.gov/">NASA</a> and <a class="reference external" href="https://www.noaa.gov/">NOAA</a>, private companies like <a class="reference external" href="https://www.planet.com/">Planet</a> and <a class="reference external" href="https://www.maxar.com/">Maxar</a>, and various universities. They design and launch remote sensors on satellites and aircraft to monitor natural and human environments.</p>
+<p>These remote sensors offer a unique perspective of Earth and enable data-informed decision making about our planet’s present and future state.   For an example of the data these sensors can provide, this is the <a class="reference external" href="https://www.nesdis.noaa.gov/current-satellite-missions/currently-flying/joint-polar-satellite-system/visible-infrared-imaging">Visible Infrared Imager Radiometer Suite (VIIRS)</a> onboard the <a class="reference external" href="https://www.nasa.gov/mission_pages/NPP/main/index.html">Suomi-NPP satellite</a> launched in 2011. The image below is the first global image it captured on November 28, 2011.</p>
+<p><img alt="The first global composite of data captured by VIIRS on November 28, 2011" src="https://eoimages.gsfc.nasa.gov/images/imagerecords/76000/76674/global_vir_2011328_lrg.jpg"/>
+The first global composite of data captured by VIIRS on November 28, 2011. (Credit: <a class="reference external" href="https://eoimages.gsfc.nasa.gov/images/imagerecords/76000/76674/global_vir_2011328_lrg.jpg">NASA Earth Observatory</a>)</p>
+<div class="section" id="section-1-1-electromagnetic-spectrum">
+<h2><strong>Section 1.1: Electromagnetic Spectrum</strong><a class="headerlink" href="#section-1-1-electromagnetic-spectrum" title="Permalink to this headline">¶</a></h2>
+<p>The concept of the electromagnetic spectrum is at the core of remote sensing.</p>
 <ul class="simple">
-<li><p><strong>Electromagnetic energy</strong>, emitted or reflected by objects travels in the form of waves through the atmosphere and the vacuum of space. These waves have different wavelengths (the distance from wave crest to wave crest) and frequencies; a shorter wavelength means a higher frequency. Some, like radio, microwave, and infrared waves, have a longer wavelength, while others, such as ultraviolet, x-rays, and gamma rays, have a much shorter wavelength.</p></li>
-<li><p>Human vision can only see visible light which sits in the middle of that range of long to shortwave radiation.</p></li>
-<li><p>But we can design sensors to detect all other forms of electromagnetic energy emitted or reflected by components of the Earth system to monitor and study the Earth system</p></li>
+<li><p><strong>Electromagnetic energy</strong>, radiated or reflected by objects, travels as waves through the atmosphere and the void of space. These waves exhibit different <a class="reference external" href="https://glossary.ametsoc.org/wiki/Wavelength">wavelengths</a> (the distance between successive wave crests) and <a class="reference external" href="https://glossary.ametsoc.org/wiki/Frequency">frequencies</a>; a shorter wavelength corresponds to a higher frequency. Certain waves, like radio, microwave, and infrared, possess longer wavelengths, whereas others, such as ultraviolet, x-rays, and gamma rays, possess much shorter wavelengths.</p></li>
+<li><p>Humans can only perceive visible light, situated in the middle of the spectrum that spans from longwave to shortwave radiation.</p></li>
+<li><p>Nonetheless, we can engineer sensors to capture all other forms of electromagnetic energy emitted or reflected by elements of the Earth system, enabling us to monitor and research the Earth system.</p></li>
 </ul>
 <p><img alt="Diagram of the Electromagnetic Spectrum" src="https://www.earthdata.nasa.gov/s3fs-public/imported/EMS-Introduction_0.jpeg?VersionId=rSEKLCj0F2zuFCQ6hRTw6zaBBipH.UWY"/>
-Diagram of the Electromagnetic Spectrum. (Credit: NASA Science)</p>
-<p>What does this electromagnetic spectrum have to do with studying and monitoring Earth?</p>
-<p>All components of the Earth system reflect, absorb, or transmit energy, the amount of which varies by wavelength. The energies reflected and transmitted by these components can be captured by carefully designed remote sensors and used to study them.</p>
-<p>For example,</p>
+Diagram of the Electromagnetic Spectrum. (Credit: <a class="reference external" href="https://www.earthdata.nasa.gov/s3fs-public/imported/EMS-Introduction_0.jpeg?VersionId=rSEKLCj0F2zuFCQ6hRTw6zaBBipH.UWY">NASA Science</a>)</p>
+<p><strong>What is the connection between the electromagnetic spectrum and the study and monitoring of Earth?</strong></p>
+<p>Every element of Earth’s system—land, water, air, and life—interacts with energy differently, reflecting, absorbing, or transmitting varying amounts depending on the wavelength. These energy interactions can be captured by strategically designed remote sensors, allowing us to analyze and understand these components.</p>
+<p>For instance,</p>
 <ul class="simple">
-<li><p>Snow has a very high albedo and reflects up to 90% of incoming solar radiation at the visible light wavelengtt. That’s why snow is often bright and white to human eyes.</p></li>
-<li><p>In contrast, the ocean reflects only about 6% of incoming solar radiation and absorbs the rest. So it often looks dark but that can be affected by other property of the ocean (e.g., surface waves, phytoplankton, water quality).</p></li>
-<li><p>Meanwhile, when the solar energy is absorbed, it is re-emitted, usually at longer wavelengths (e.g., infrared and thermal infrared). Hence, ocean often re-emits the absorbed solar energy as infrared radiation, which is used to monitor the temperature of ocean.</p></li>
+<li><p>Snow possesses a high albedo, reflecting up to 90% of incoming solar radiation in the visible light wavelength. This high reflectivity accounts for snow’s bright, white appearance to the human eye.</p></li>
+<li><p>Conversely, the ocean reflects only about 6% of incoming solar radiation, absorbing the remainder. This absorption makes the ocean appear darker, though its appearance can be influenced by other factors like surface waves, phytoplankton presence, and water quality.</p></li>
+<li><p>When solar energy is absorbed, it is typically re-emitted at longer wavelengths, such as infrared and thermal infrared. Thus, the ocean commonly re-emits absorbed solar energy as infrared radiation, which is utilized to monitor ocean temperatures.
+These are processes we experience in our everyday life, even if we don’t consciously recognize them. Have you ever wondered why most leaves are green, why the sky is blue, or why flowers come in such a variety of colors?</p></li>
 </ul>
-<p>You may not think about it in your daily life, but you are experiencing these processes all the time. Can you find out the answer why most leaves are green, why the sky is blue, and why flowers have different colors?</p>
-<p>These answers help scientists design sensors that can monitor the health of vegetation, air quality, water quality, detect wildfires, and many other applications.</p>
+<p>The answers to these questions assist scientists in developing sensors to monitor vegetation health, air and water quality, detect wildfires, and many other crucial applications.</p>
 <p><em>Want to learn more about electromagnetic spectrum? Take a <a class="reference external" href="https://science.nasa.gov/ems/">tour of the electromagnetic spectrum with NASA Science</a>!</em></p>
-<p>##<strong>Section 1.2: Satellite Orbits</strong></p>
-<p>Satellites can be placed in several types of orbits around Earth. The three common classes of orbits are:</p>
+</div>
+<div class="section" id="section-1-2-satellite-orbits">
+<h2><strong>Section 1.2: Satellite Orbits</strong><a class="headerlink" href="#section-1-2-satellite-orbits" title="Permalink to this headline">¶</a></h2>
+<p>Satellites can occupy several types of orbits around Earth. The three common categories of orbits are:</p>
 <ul>
-<li><p>Low-Earth orbit (approximately 160 to 2,000 km above Earth): this is the typical orbit for many Earth-observing satellites, including polar-orbiting satellites (e.g., Terra, Aqua, CloudSat, CALOPSO, see the image below of a list of NASA’s polar orbiting satellites). Polar orbiting satellites travel from pole to pole as Earth rotates. This enables sensors aboard the satellite to acquire data for the entire globe rapidly, including the polar regions.</p>
+<li><p><strong>Low-Earth orbit</strong> (approximately 160 to 2,000 km above Earth): This orbit is common for many Earth-observing satellites, including polar-orbiting satellites (e.g., <a class="reference external" href="https://terra.nasa.gov/">Terra</a>, <a class="reference external" href="https://aqua.nasa.gov/">Aqua</a>, <a class="reference external" href="https://www.jpl.nasa.gov/missions/cloudsat">CloudSat</a>, <a class="reference external" href="https://www-calipso.larc.nasa.gov/">CALIPSO</a>). As the name suggests, polar-orbiting satellites travel from pole to pole, allowing Earth to rotate beneath them. This movement enables the onboard sensors to rapidly collect data across the entire globe, inclusive of the polar regions.</p>
 <p><img alt="Illustration of the A-train polar-orbiting satellites operated by NASA and partner organizations." src="https://earthobservatory.nasa.gov/ContentFeature/OrbitsManeuver/images/atrain.jpg"/><br/>
-Illustration of the A-train polar-orbiting satellites operated by NASA. (Credit: NASA)</p>
+Illustration of the A-train polar-orbiting satellites operated by NASA. (Credit: <a class="reference external" href="https://earthobservatory.nasa.gov/ContentFeature/OrbitsManeuver/images/atrain.jpg">NASA</a>)</p>
 </li>
-<li><p>Medium-Earth orbit (approximately 2,000 to 35,500 km above Earth): this type of orbit is often used by the Global Positioning System (GPS) satellites.</p></li>
-<li><p>High-Earth orbit (above 35,500 km above Earth): this type of orbit is often used by geostationary satellites which enables a satellite to maintain its position directly over the same place on Earth’s surface. For example, NOAA operates two geostationary satellites to provide observations of the west Hemisphere every five minutes and targetted observations of severe weathers every 30 seconds.
-<img alt="Satellite images of NOAA's GOES-West (on the left) and GOES-East (on the right) full disk data on the day of summer solitice of 2022." src="https://live.staticflickr.com/65535/48127127191_911a25f659_b.jpg"/><br/>
-Satellite images of NOAA’s GOES-West (on the left) and GOES-East (on the right) full disk data on the day of summer solitice of 2022. (Credit: NOAA)</p></li>
+<li><p><strong>Medium-Earth orbit</strong> (approximately 2,000 to 35,500 km above Earth): this type of orbit is often used by the <a class="reference external" href="https://en.wikipedia.org/wiki/Global_Positioning_System">Global Positioning System (GPS)</a> satellites.</p></li>
+<li><p><strong>High-Earth orbit</strong> (above 35,500 km above Earth): Satellites in this orbit are typically geostationary. They maintain a fixed position above a specific location on Earth’s surface. NOAA, for instance, operates two geostationary satellites that provide observations of the western hemisphere every five minutes and targeted observations of severe weather events every 30 seconds.</p>
+<p><img alt="Satellite images of NOAA's GOES-West (on the left) and GOES-East (on the right) full disk data on the day of summer solitice of 2022." src="https://live.staticflickr.com/65535/48127127191_911a25f659_b.jpg"/><br/>
+Satellite images of NOAA’s GOES-West (on the left) and GOES-East (on the right) full disk data on the day of summer solstice of 2022. (Credit: <a class="reference external" href="https://live.staticflickr.com/65535/48127127191_911a25f659_b.jpg">NOAA</a> )</p>
+</li>
 </ul>
-<p>##<strong>Section 1.3: Resolutions</strong></p>
-<p>Resolution plays a role in how data from a sensor can be used. Resolution can vary depending on the satellite’s orbit and sensor design. There are four types of resolution to consider for any dataset—radiometric, spatial, spectral, and temporal.</p>
-<p><strong>Spatial resolution</strong> is defined as the area on Earth’s surface represended by each pixel within a remotely sensed image. The smaller area a pixel represent usually indicate higher spatial resolution. The finer the resolution (the lower the number), the more detail you can see. In the image below, you can see the difference in pixelation between a 30 m/pixel image (left image), a 100 m/pixel image (center image), and a 300 m/pixel image (right image). (Image credit: NASA Earth Observatory).</p>
-<p><img alt="" src="https://www.earthdata.nasa.gov/s3fs-public/2022-02/spatial_resolution.jpg?VersionId=CqYOXFpvK326WrJYS_34WAr8cIRuH9Mm"/></p>
-<p>Therefore, the spatial resolution of remotely sensed data will limit what type of applications the data can be used for. For example, it is probably not appropriate to use the right image above to map local roads but the left image may suit for such application.</p>
-<p><strong>Temporal resolution</strong>, also often referred to revisiting frequency, is defined as the time it takes for a satellite to complete an orbit and revisit the same observation area. This often depends on the orbit, the sensor’s characteristics, and how wide the sensor can see from the space.</p>
+</div>
+<div class="section" id="section-1-3-resolution">
+<h2><strong>Section 1.3: Resolution</strong><a class="headerlink" href="#section-1-3-resolution" title="Permalink to this headline">¶</a></h2>
+<p>Resolution plays a crucial role in determining how data from a sensor can be interpreted and utilized. This can vary depending on the design of the satellite’s sensor and its orbit. Four types of resolution are important to consider for any dataset—radiometric, spatial, spectral, and temporal.</p>
+<p><strong>Spatial resolution</strong> is defined as the area on Earth’s surface represented by each pixel within a remotely sensed image. Typically, a pixel representing a smaller area indicates a higher spatial resolution. The <em>fine</em> the resolution (the smaller the numerical value), the <em>more</em> detail can be discerned. In the image below, you can observe the difference in pixelation between a higher resolution 30 m/pixel image (left image), a medium resolution 100 m/pixel image (center image), and a coarser resolution 300 m/pixel image (right image).</p>
+<p><img alt="Different Spatial Resolution" src="https://www.earthdata.nasa.gov/s3fs-public/2022-02/spatial_resolution.jpg?VersionId=CqYOXFpvK326WrJYS_34WAr8cIRuH9Mm"/></p>
+<p>(Credit: <a class="reference external" href="https://www.earthdata.nasa.gov/s3fs-public/2022-02/spatial_resolution.jpg?VersionId=CqYOXFpvK326WrJYS_34WAr8cIRuH9Mm">NASA Earth Observatory</a>)</p>
+<p>Consequently, the spatial resolution of remotely sensed data imposes constraints on the types of applications for which the data can be utilized. For instance, it would likely be inappropriate to use the right image above to map local roads, whereas the left image might be suitable for such an application.</p>
+<p><strong>Temporal resolution</strong>, also frequently referred to as <strong>revisiting frequency</strong>, is the time it takes for a satellite to complete an orbit and revisit the same observation area. This parameter often depends on the satellite’s orbit, the characteristics of the sensor, and the sensor’s field of view from space.</p>
 <ul class="simple">
-<li><p>For polar-orbiting satellite, temporal resolution can vary from 1 day to 16 days. Moderate Resolution Imaging Spectroradiometer (MODIS, spatial resolution ranging from 250 m/pixel to 1 km/pixel depending on wavelength) flying onboard NASA’s Terra and Aqua satellite since 2000 has a temporal resolution of 1-2 days. On the other hand, Operational Land Imager (OLI, 30 meter/pixel spatial resolution) on Landsat-8, a satellite jointly operated by NASA/USGS, has a narrower swath width and a temporal resolution of 16 days.</p></li>
-<li><p>For geostationary satellites, they match the rate at which Earth is rotating, hence remotely sensed data from geostationary orbit usually have the temporal resolution of sub-hourly. For instance, the current generation of geostationary satellites has the temporal resolution of 5-15 minutes, while earlier geostationary satellites has the temporal resolution of 0.5-3 hours.</p></li>
+<li><p>For polar-orbiting satellites, temporal resolution can vary from 1 day to 16 days. The Moderate Resolution Imaging Spectroradiometer (<a class="reference external" href="https://modis.gsfc.nasa.gov/">MODIS</a>, spatial resolution ranging from 250 m/pixel to 1 km/pixel depending on wavelength) flying onboard NASA’s Terra and Aqua satellite since 2000 has a temporal resolution of 1-2 days. Conversely, the Operational Land Imager (<a class="reference external" href="https://landsat.gsfc.nasa.gov/satellites/landsat-8/spacecraft-instruments/operational-land-imager/">OLI</a>, with a spatial resolution of 30 meter/pixel is featured on Landsat-8, a satellite jointly operated by NASA/USGS that has a narrower swath width and temporal resolution of 16 days.</p></li>
+<li><p>Geostationary satellites maintain pace with Earth’s rotation, allowing them to provide sub-hourly temporal resolution for remotely sensed data. For instance, the latest generation of geostationary satellites offers a temporal resolution of 5-15 minutes, while their predecessors provided a resolution of 0.5-3 hours.</p></li>
 </ul>
-<p><strong>Spectral resolution</strong> refers to the ability of a remote sensor to discern finer wavelengths, that is, having more and narrower bands. Imagining that you have a camera that can take pictures at the wavelenght of thermal infrared sensors and x-ray, that will allow you to see the objects in a much more details and different purposes. Typically, <strong>multispectral</strong> remote sensors have 3-10 spectral bands while <strong>hyperspectral</strong> sensors have hundreds of spectral bands that allow us to look at objects on Earth’s in enhanced details.</p>
-<p>For example, the Airborne Visible/Infrared Imaging Spectrometer (AVIRIS) captures information in 224 spectral channels (see image below, credit: NASA JPL). The sensors allow us to seperate rock and mineral types, vegetation types, water quality, and other features.</p>
+<p><strong>Spectral resolution</strong> represents a sensor’s capability to distinguish finer, or more and narrower, wavelengths. The more wavelengths a sensor can distinguish, the more information we can obtain and the more applications we can apply the data to. Typically, <strong>multispectral</strong> remote sensors feature 3-10 spectral bands, while <strong>hyperspectral</strong> sensors have hundreds of spectral bands, enabling us to scrutinize Earth’s objects in more detail.</p>
+<p>For instance, the Airborne Visible/Infrared Imaging Spectrometer (<a class="reference external" href="https://aviris.jpl.nasa.gov/">AVIRIS</a>) shown below records data in 224 spectral channels. These sensors enable us to differentiate between various rock and mineral types, vegetation types, water quality, and other features.</p>
 <p><img alt="Sample image of AVIRIS over a lake and evaporation pond." src="https://www.earthdata.nasa.gov/s3fs-public/imported/avcubebig.gif?VersionId=vB8vyHe0veiLvzKN37vSwnXUpe4WpOHa"/></p>
-<p><strong>Radiometric resolution</strong> quantifies how much information is contained in each pixel, often expressed as the number of bits representing the energy recorded. Each bit records an exponent of power 2. For example, an 8 bit resolution is <span class="math notranslate nohighlight">\(2^8\)</span>, which indicates that the sensor has 256 potential digital values (0-255) to store information. The image below from NASA Earth Observatory demonstrate the impact of radiometric resolutions on the details that we can see from the remotely sensed data.</p>
+<p>(Credit: <a class="reference external" href="https://www.earthdata.nasa.gov/s3fs-public/imported/avcubebig.gif?VersionId=vB8vyHe0veiLvzKN37vSwnXUpe4WpOHa">NASA JPL</a>)</p>
+<p><strong>Radiometric resolution</strong>  quantifies the amount of information contained in each pixel and is often expressed as the number of bits representing the recorded energy. Each bit records an exponent of power 2. For instance, an 8-bit resolution equals <span class="math notranslate nohighlight">\(2^8\)</span>, implying that the sensor can utilize 256 potential digital values (0-255) to store information. The image below from NASA Earth Observatory illustrates how radiometric resolution affects the level of detail visible in remotely sensed data.</p>
 <p><img alt="Illustration of the impact of radiometric resoultion on remotely sensed data." src="https://www.earthdata.nasa.gov/s3fs-public/2022-02/radiometric_resolution.png?VersionId=SUfbvvyRgjUqC1C5CoB2Br52GvwKq9iZ"/></p>
+<p>Credit: <a class="reference external" href="https://www.earthdata.nasa.gov/s3fs-public/2022-02/radiometric_resolution.png?VersionId=SUfbvvyRgjUqC1C5CoB2Br52GvwKq9iZ">NASA</a></p>
 <p>As illustrated in the image above, the higher the radiometric resolution (right image), the more values are available to store information, providing better discrimination between even the slightest differences in energy.</p>
 <p><em><strong>“Why can’t we have the sensor with the best resolution of all four categories?”</strong></em></p>
-<p>This is a great question! Due to technology limitations, it is very difficulte to have the “perfect sensor”. For example, if you want to have high spatial resolution, there are only very limited energy in an ara for that pixel. This means you will need longer exposure to capture enough energy to get meaningful information for an area. The longer exposure means that you won’t be able to revisit the same place as frequent as you want. But we can use a constellation of satellites with the same sensors to reduce the gaps between revisits, such as European Space Agency’s Sentinel-2 satellite pairs.</p>
-<p>#<strong>Exercise</strong></p>
-<p>Now you have learned about four different types of resolutions. Thinking about something you want to study/monitor, let it be monitoring crop health or studying the impact of landslide to a city. Can you describe what type of remotely sensed data do you need? Be specific - how frequent do you need the data (e.g., minutes, daily, or weekly, etc.)? what is the ideal spatial resolution?</p>
+<p>This is a great question! Due to technology limitations, it is very difficult to have the “perfect sensor”. If you’re aiming for high spatial resolution, there’s only a limited amount of energy in the area for that pixel. This implies that you’ll need a longer exposure to capture enough energy to extract meaningful information from that area. The longer the exposure, the less frequently you can revisit the same place. However, we can overcome this issue by using a constellation of satellites equipped with identical sensors to minimize the gaps between revisits. An example of this approach is the Sentinel-2 satellite pairs used by the European Space Agency.</p>
+<div class="section" id="questions-1-3">
+<h3><strong>Questions 1.3</strong><a class="headerlink" href="#questions-1-3" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Now you have learned about four different types of resolution. Imagine a specific subject that you would like to study or monitor. It could be monitoring crop health, studying the impact of a landslide on a city, or any other topic of interest. Can you describe what type of remotely sensed data would be necessary for your project? Try to be specific - how often would you need the data (e.g., every few minutes, daily, weekly, etc.)? What would be the ideal spatial resolution for your purposes?</p></li>
+</ol>
 <p><em>Hint</em>: You can look at NASA’s <a class="reference external" href="https://www.earthdata.nasa.gov/learn/pathfinders">Earthdata Data Pathfinders</a> to see if you can find some inspirations.</p>
-<p>##<strong>Section 2: Example Use Cases</strong></p>
-<p>Now you just went through the crash course of the satellite remote sensing to understand some basic concepts. You may ask how can satellite data be used to answer some of your climate questions.</p>
-<p>You will see six different examples of long-term satellite remotely sensed data to monitor the dynamics of our land, ocean, and atmosphere. These animations are produced using monthly aggregated satellite data to show the dynamics of different components. You will learn computational skills later to generate animations like this on your own.</p>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/solutions/W1D3_Tutorial1_Solution_7d742a70.py"><em>Click for solution</em></a></p>
+</div>
+</div>
+</div>
+<div class="section" id="section-2-example-use-cases">
+<h1><strong>Section 2: Example Use Cases</strong><a class="headerlink" href="#section-2-example-use-cases" title="Permalink to this headline">¶</a></h1>
+<p>You’ve just completed a quick dive into the realm of satellite remote sensing and grasped some fundamental concepts. You might be wondering, <em>“How can satellite data help answer some of my climate-related questions?”</em></p>
+<p>To illuminate this, we’ll present six diverse examples of long-term satellite remote sensing data that track the dynamics of our land, ocean, and atmosphere. These animations are created using aggregated monthly satellite data, showcasing the fluidity of different Earth’s components. As we proceed, you’ll acquire computational skills to independently generate such animations.</p>
 <p>These animations are all generated by <a class="reference external" href="https://earthobservatory.nasa.gov/global-maps">NASA Earth Observatory</a> using NASA satellite products. You can explore the dynamics of different components of the Earth system.</p>
-<p>##<strong>Section 2.1: Land/Cryosphere – Snow Coverage</strong></p>
-<p>One of the most direct effect of a warming planet is the reduction of snow coverage. With long term satellite data, we can quantify exactly how the cryosphere has changed in response to the changing temperature.</p>
-<p>For exmaple, we can answer the questions like:</p>
+<div class="section" id="section-2-1-land-cryosphere-snow-coverage">
+<h2><strong>Section 2.1: Land/Cryosphere – Snow Coverage</strong><a class="headerlink" href="#section-2-1-land-cryosphere-snow-coverage" title="Permalink to this headline">¶</a></h2>
+<p>One of the most immediate effects of a warming planet is a reduction of snow coverage. Through long-term satellite data, we can accurately measure how the cryosphere has responded to changing temperature.</p>
+<p>For instance, we can answer questions such as:</p>
 <ul class="simple">
-<li><p>Are there less days that a region is covered by snow in the winter ?</p></li>
-<li><p>Has the first day of snow coverage changed for a region?</p></li>
-<li><p>Is there any change of the maximum snow coverage for a region?</p></li>
+<li><p>Are there fewer days in which a region is covered by snow during the winter?</p></li>
+<li><p>Has the first day of snow coverage shifted for a specific region?</p></li>
+<li><p>Has the maximum snow coverage for a given region experienced any changes?</p></li>
 </ul>
-<p>These questions are all very important for local water availability, thus leading to other important impacts like agriculture, wildlife conservation, and energy consumption.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## This code can be hidden from the students.</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="n">Image</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">'./asset/img/t1_modis_snow.gif'</span><span class="p">,</span><span class="s1">'rb'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-</pre></div>
+<p>The answers to these questions bear significant implications for local water availability, thereby influencing crucial areas such as agriculture, wildlife conservation, and energy consumption.</p>
+<p><img alt="modis_snow" src="tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/asset/img/t1_modis_snow.gif"/></p>
+<p>Credit: <a class="reference external" href="https://earthobservatory.nasa.gov/global-maps/MOD10C1_M_SNOW">NASA</a></p>
 </div>
-</div>
-</div>
-<p>##<strong>Section 2.2: Land/Terrestrial Ecology – Vegetation Health</strong></p>
-<p>Gloabl terrestrial ecosystem is highly regulated by the climate conditions of different geographical regions. Long term satellite data records allow us to map the vegetation dynamics at relatively high spatial resolution (i.e., 1-5 km) frequently (i.e., daily to monthly). This large amount of data can help us answer a lot of questions about climate impact on ecosystems, both natural (e.g., forest and grassland) and human-modified (e.g., cropland).</p>
-<p>With the data, we can answer the questions like:</p>
+<div class="section" id="section-2-2-land-terrestrial-ecology-vegetation-health">
+<h2><strong>Section 2.2: Land/Terrestrial Ecology – Vegetation Health</strong><a class="headerlink" href="#section-2-2-land-terrestrial-ecology-vegetation-health" title="Permalink to this headline">¶</a></h2>
+<p>The global terrestrial ecosystem is highly regulated by the climatic conditions of different geographical regions. Long-term satellite data records allow us to map vegetation dynamics at relatively high spatial resolution (i.e., 1-5 km) frequently (i.e., daily to monthly). This data can help us answer questions about the impact of climate on ecosystems, both natural (e.g., forest and grassland) and human-modified (e.g., cropland) including:</p>
 <ul class="simple">
-<li><p>Has the growing season of different ecosystems changed (e.g., lengthened or shortend) due to climate change?</p></li>
+<li><p>Has the growing season of different ecosystems changed (e.g., lengthened or shortened) due to climate change?</p></li>
 <li><p>What’s the impact of extreme events like drought, heatwave, wildfire, and flooding on different ecosystems?</p></li>
 <li><p>How much carbon does the ecosystem store?</p></li>
 </ul>
-<p>These applications have strong implications on the society and different communities as it relates to food security, culture activities, and other economic activities.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## This code can be hidden from the students.</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="n">Image</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">'./asset/img/t1_modis_ndvi.gif'</span><span class="p">,</span><span class="s1">'rb'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-</pre></div>
+<p>These applications have strong implications on communities through food security, culture activities, and other economic activities.</p>
+<p><img alt="modis_ndvi" src="tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/asset/img/t1_modis_ndvi.gif"/></p>
+<p>Credit: <a class="reference external" href="https://earthobservatory.nasa.gov/global-maps/MOD_NDVI_M">NASA</a></p>
 </div>
-</div>
-</div>
-<p>##<strong>Section 2.3: Atmosphere – Cloud Coverage</strong></p>
-<p>Cloud is one of the critical and complex process of the atmospheric system. With long term satellite data, we can study different aspects of this critical component of the climate system.</p>
-<p>To study the cloud process, remotely sensed data can provide information about:</p>
+<div class="section" id="section-2-3-atmosphere-cloud">
+<h2><strong>Section 2.3: Atmosphere – Cloud</strong><a class="headerlink" href="#section-2-3-atmosphere-cloud" title="Permalink to this headline">¶</a></h2>
+<p>Clouds are one of the most complex proceses of the climate system. With long-term satellite data, different aspects of this critical component can be studied.</p>
+<p>To study cloud processes, remotely sensed data can provide information about:</p>
 <ul class="simple">
-<li><p>when and where does cloud exist in the atmosphere</p></li>
-<li><p>physical properties of the cloud (e.g., cloud height, cloud depth, cloud top temperature)</p></li>
-<li><p>microphysical properties of the cloud (e.g., cloud partical sizes)</p></li>
+<li><p>When and where do clouds exist in the atmosphere?</p></li>
+<li><p>Physical properties of clouds (e.g., cloud height, cloud depth, cloud top temperature).</p></li>
+<li><p>Microphysical properties of clouds (e.g., cloud partical sizes).</p></li>
 </ul>
-<p>These cloud properties are not only results of human activities and climate change but also further regulate and affect the climate change. In fact, cloud is one of the major source of uncertainty in future climate projection. Therefore, satellite data can help us better understand cloud process to improve our future climate projection.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## This code can be hidden from the students.</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="n">Image</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">'./asset/img/t1_modis_cloud.gif'</span><span class="p">,</span><span class="s1">'rb'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-</pre></div>
+<p>Clouds are one of the major sources of uncertainty in future climate projections. Satellite data is valuable to help us deepen our understanding of cloud processes to better incorporate the effects of clouds in climate models.</p>
+<p><img alt="modis_cloud" src="tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/asset/img/t1_modis_cloud.gif"/></p>
+<p>Cloud fraction, or the portion of a pixel covered by clouds. Credit: <a class="reference external" href="https://earthobservatory.nasa.gov/global-maps/MODAL2_M_CLD_FR">NASA</a></p>
 </div>
-</div>
-</div>
-<p>##<strong>Section 2.4: Atmosphere – Rainfall</strong></p>
-<p>In addition to temperature change, rainfall is another important aspects of climate change which has notable imact on the society and natural systems, such as drought and flooding.</p>
+<div class="section" id="section-2-4-atmosphere-rainfall">
+<h2><strong>Section 2.4: Atmosphere – Rainfall</strong><a class="headerlink" href="#section-2-4-atmosphere-rainfall" title="Permalink to this headline">¶</a></h2>
+<p>In addition to temperature change, rainfall is another important aspect of climate change which has notable impacts on society and natural systems, for example through droughts and floods.</p>
 <p>We can use remote sensing data to:</p>
 <ul class="simple">
-<li><p>Quantify the change of rainfall rate over the years for different regions. This can support the water resource planning to support local communities.</p></li>
-<li><p>Study the frequency and potential causes of extreme rainfall events and their impacts on the society and natural systems (e.g., hurricans, extreme rainfall).</p></li>
+<li><p>Quantify the variations in rainfall rates across different regions over time. This information can support water resource planning and management to meet the needs of local communities.</p></li>
+<li><p>Investigate the frequency and potential causes of extreme rainfall events and examine their impacts on societal and natural systems. Examples include studying hurricanes and extreme rainfall events.</p></li>
 </ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## This code can be hidden from the students.</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="n">Image</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">'./asset/img/t1_gpm_imerg_rainfall.gif'</span><span class="p">,</span><span class="s1">'rb'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-</pre></div>
+<p><img alt="rainfall" src="tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/asset/img/t1_gpm_imerg_rainfall.gif"/></p>
+<p>Credit: <a class="reference external" href="https://earthobservatory.nasa.gov/global-maps/GPM_3IMERGM">NASA</a></p>
 </div>
-</div>
-</div>
-<p>##<strong>Section 2.5: Ocean – Sea Surface Temperature</strong></p>
-<p>As more than 70% of Earth is covered by the ocean, ocean plays a critical role in the entire Earth system. With remotely sensed data, we can study the change of the physcial ocean system and understand its impact on other systems.</p>
+<div class="section" id="section-2-5-ocean-sea-surface-temperature">
+<h2><strong>Section 2.5: Ocean – Sea Surface Temperature</strong><a class="headerlink" href="#section-2-5-ocean-sea-surface-temperature" title="Permalink to this headline">¶</a></h2>
+<p>Given that over 70% of the Earth’s surface is covered by the ocean, the ocean plays a vital role in the functioning of the entire Earth system. Utilizing remotely sensed data, we can investigate changes in the physical ocean system and comprehend its impact on other interconnected systems.</p>
+<p>Here are some key points regarding the significance of sea surface temperature (SST) in this context:</p>
 <ul class="simple">
-<li><p>Sea surface temperature (SST) is a key indicator for the global surface temperature change.</p></li>
-<li><p>SST is also critical to monitor large scale circulation and climate variability like El Nino -southern oscillation (ENSO).</p></li>
-<li><p>SST also plays an important role in the study and prediction of tropical cyclones.</p></li>
+<li><p>SST serves as a crucial indicator for monitoring global surface temperature changes. By analyzing SST data, we can gain insights into the overall warming or cooling trends of the Earth’s surface.</p></li>
+<li><p>Monitoring SST is essential for studying large-scale ocean circulation and climate variability, such as the El Niño-Southern Oscillation (ENSO). Changes in SST patterns can provide valuable information about the occurrence and strength of ENSO events, which have significant impacts on global weather patterns.</p></li>
+<li><p>SST plays a pivotal role in the study and prediction of tropical cyclones. Warm SST provides the necessary energy for the formation and intensification of tropical cyclones, making SST data critical for understanding and forecasting these powerful storm systems.</p></li>
 </ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## This code can be hidden from the students.</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="n">Image</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">'./asset/img/t1_modis_sst.gif'</span><span class="p">,</span><span class="s1">'rb'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-</pre></div>
+<p><img alt="modis_sst" src="tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/asset/img/t1_modis_sst.gif"/></p>
+<p>Credit: <a class="reference external" href="https://earthobservatory.nasa.gov/global-maps/MYD28M">NASA</a></p>
 </div>
-</div>
-</div>
-<p>##<strong>Section 2.6: Ocean/Marine Ecosystem – Chlorophyll</strong></p>
-<p>Similar to terrestrial ecosystems, remotely sensed data can also be used to monitor and study the marine ecosystems. Phytoplanktans, a large group of micro-organisms, play a critical role in marine food web thus affecting marine ecosystems and many human activities (e.g., fisheries).</p>
-<p>Satellite data can monitor the change of concerntration of chlorophyll, a measure that can be used as a proxy value of the abundance of phytoplanktans. This data can be used to explore questions like:</p>
+<div class="section" id="section-2-6-ocean-marine-ecosystem-chlorophyll">
+<h2><strong>Section 2.6: Ocean/Marine Ecosystem – Chlorophyll</strong><a class="headerlink" href="#section-2-6-ocean-marine-ecosystem-chlorophyll" title="Permalink to this headline">¶</a></h2>
+<p>Similar to terrestrial ecosystems, remotely sensed data can be harnessed to monitor and study marine ecosystems. Within these ecosystems, <strong>phytoplankton</strong>, a diverse group of microorganisms, play a critical role in marine food webs, thus significantly impacting marine ecosystems and various human activities, including fisheries.</p>
+<p>Satellite data allows us to monitor changes in chlorophyll concentration, which serves as a proxy for the abundance of phytoplankton. This data enables exploration of important questions such as:</p>
 <ul class="simple">
-<li><p>How has the phytoplanktans changed in response to the changing sea surface temperature in different ocean basins?</p></li>
-<li><p>If we can combine the phytoplantan data with other socioeconomic data, can we understand how the changing climate affects the fisheries industry and communities who rely on fishery industries?</p></li>
+<li><p>How have phytoplankton populations changed in response to shifting sea surface temperatures in different ocean basins?</p></li>
+<li><p>By combining phytoplankton data with socioeconomic information, can we gain a comprehensive understanding of how the changing climate affects the fishing industry and the communities reliant on it.</p></li>
 </ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## This code can be hidden from the students.</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="n">Image</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">'./asset/img/t1_modis_chl.gif'</span><span class="p">,</span><span class="s1">'rb'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-</pre></div>
+<p><img alt="modis_chl" src="tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/asset/img/t1_modis_chl.gif"/></p>
+<p>Credit: <a class="reference external" href="https://earthobservatory.nasa.gov/global-maps/MY1DMM_CHLORA">NASA</a></p>
 </div>
 </div>
-</div>
-<p>#<strong>Summary</strong></p>
-<p>In this tutorial, we learned about the basic concepts in satellite remote sensing that will help you choose proper remote sensing data for your climate applications (e.g., spatial resolution, revisiting frequency).</p>
-<p>You also see the potential of different use cases of satellite remote sensing for climate applications in land, ocean, and atmosphere.</p>
-</div>
-</div>
-</div>
-</div>
+<div class="section" id="summary">
+<h1><strong>Summary</strong><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial, you’ve explored the fundamental concepts of satellite remote sensing, equipping you with the knowledge to select appropriate remote sensing data for climate applications. Considerations such as spatial resolution and revisiting frequency were highlighted to ensure the optimal choice of data.</p>
+<p>You also delved into the potential applications of satellite remote sensing for climate studies across land, ocean, and atmosphere. Specifically, you examined how satellite data can be utilized to monitor and analyze snow coverage, vegetation health, cloud, temperature changes, rainfall patterns, sea surface temperature, and phytoplankton abundance.</p>
+<p>By understanding the capabilities and applications of satellite remote sensing, you are better equipped to leverage this technology for climate-related research, monitoring, and decision-making processes. This tutorial has laid the foundation for utilizing remote sensing data effectively in climate studies and emphasizes the vast potential it holds in advancing our understanding of Earth’s climate system.</p>
 </div>
 <script type="text/x-thebe-config">
     {
@@ -1173,7 +1355,7 @@ Satellite images of NOAA’s GOES-West (on the left) and GOES-East (on the right
 <a class="right-next" href="W1D3_Tutorial2.html" id="next-link" title="next page">
 <div class="prev-next-info">
 <p class="prev-next-subtitle">next</p>
-<p class="prev-next-title">Figure settings</p>
+<p class="prev-next-title"><strong>Tutorial 2: Exploring Satellite Climate Data Records</strong></p>
 </div>
 <i class="fas fa-angle-right"></i>
 </a>

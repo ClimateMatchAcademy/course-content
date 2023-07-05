@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Tutorial 2: A lot of weather makes climate - exploring the ERA5 Reanalysis — Climatematch Academy: Computational Climate Science</title>
+<title>Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis — Climatematch Academy: Computational Climate Science</title>
 <!-- Loaded before other Sphinx assets -->
 <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
@@ -38,10 +38,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-<link href="../../../genindex.html" rel="index" title="Index">
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+<link href="../../../_static/cma-logo-square-4xp.png" rel="shortcut icon">
+<link href="../../../genindex.html" rel="index" title="Index"/>
 <link href="../../../search.html" rel="search" title="Search"/>
-<link href="W1D2_Tutorial3.html" rel="next" title="Tutorial 3: Atmospheric wind driven circulation"/>
-<link href="W1D2_Tutorial1.html" rel="prev" title="Calculating ENSO with Xarray"/>
+<link href="W1D2_Tutorial3.html" rel="next" title="Tutorial 3: Atmospheric Circulation"/>
+<link href="W1D2_Tutorial1.html" rel="prev" title="Tutorial 1: Calculating ENSO with Xarray"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="None" name="docsearch:language"/>
 <!-- Google Analytics -->
@@ -68,6 +71,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="bd-sidebar__content">
 <div class="bd-sidebar__top"><div class="navbar-brand-box">
 <a class="navbar-brand text-wrap" href="../../../index.html">
+<!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+<img alt="logo" class="logo" src="../../../_static/cma-logo-square-4xp.png"/>
 <h1 class="site-logo" id="site-title">Climatematch Academy: Computational Climate Science</h1>
 </a>
 </div><form action="../../../search.html" class="bd-search d-flex align-items-center" method="get">
@@ -305,33 +310,45 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current">
 <li class="toctree-l2">
 <a class="reference internal" href="W1D2_Tutorial1.html">
-     Calculating ENSO with Xarray
-    </a>
+<strong>
+      Tutorial 1: Calculating ENSO with Xarray
+     </strong>
+</a>
 </li>
 <li class="toctree-l2 current active">
 <a class="current reference internal" href="#">
-     Tutorial 2: A lot of weather makes climate - exploring the ERA5 Reanalysis
-    </a>
+<strong>
+      Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D2_Tutorial3.html">
-     Tutorial 3: Atmospheric wind driven circulation
-    </a>
+<strong>
+      Tutorial 3: Atmospheric  Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D2_Tutorial4.html">
-     Tutorial 4: Ocean wind driven circulation
-    </a>
+<strong>
+      Tutorial 4: Oceanic Wind-driven Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D2_Tutorial5.html">
-     Tutorial 5: Thermohaline circulation
-    </a>
+<strong>
+      Tutorial 5: Thermohaline Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D2_Tutorial6.html">
-     Tutorial 6: Ocean heat content
-    </a>
+<strong>
+      Tutorial 6: Ocean Heat Content
+     </strong>
+</a>
 </li>
 </ul>
 </li>
@@ -347,13 +364,17 @@ const thebe_selector_output = ".output, .cell_output"
 <ul>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.html">
-     Video 1: What is Remote Sensing
-    </a>
+<strong>
+      Tutorial 1: Introduction to Remote Sensing
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.html">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 2: Exploring Satellite Climate Data Records
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial3.html">
@@ -362,13 +383,17 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial4.html">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 4: Understanding Climatology Through Precipitation Data
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial5.html">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 5: Calculating Anomalies Using Precipitation Data
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial6.html">
@@ -488,18 +513,24 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial2.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 2 : Energy Balance
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial3.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 3 : A Zero-Dimensional Energy Balance Model
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial4.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 4: Climate Feedbacks
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial5.html">
@@ -841,259 +872,148 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#">
-   Tutorial 2: A lot of weather makes climate - exploring the ERA5 Reanalysis
-  </a>
-<ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#tutorial-slides">
-     Tutorial slides
-    </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id1">
-       Tutorial slides
-      </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id2">
-         Tutorial slides
-        </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id3">
-           Tutorial slides
-          </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h6 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id4">
-             Tutorial slides
-            </a>
+<strong>
+    Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis
+   </strong>
+</a>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-objectives">
+<strong>
+    Tutorial Objectives
+   </strong>
+</a>
 </li>
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#setup">
-   Setup
-  </a>
+<strong>
+    Setup
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
 <a class="reference internal nav-link" href="#figure-settings">
      Figure settings
     </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id5">
-       Figure settings
-      </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id6">
-         Figure settings
-        </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id7">
-           Figure settings
-          </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h6 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id8">
-             Figure settings
-            </a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#plotting-functions">
-     Plotting functions
+<a class="reference internal nav-link" href="#video-1-video-1-name">
+     Video 1: Video 1 Name
     </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id9">
-       Plotting functions
-      </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id10">
-         Plotting functions
-        </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id11">
-           Plotting functions
-          </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h6 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id12">
-             Plotting functions
-            </a>
 </li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-what-is-reanalysis-data">
+<strong>
+    Section 1: What is Reanalysis Data?
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#helper-functions">
-     Helper functions
-    </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id13">
-       Helper functions
-      </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id14">
-         Helper functions
-        </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id15">
-           Helper functions
-          </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h6 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id16">
-             Helper functions
-            </a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#introduction-what-are-reanalysis-data">
-     Introduction: What are Reanalysis data?
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#part-i-accessing-era5-data">
-     Part I: Accessing ERA5 data
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#part-ii-selecting-regions-and-plotting-data">
-     Part II: Selecting regions and plotting data
-    </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#note-about-the-geographic-coordinate-system-and-the-coodinates-used-in-this-data-set">
-       Note about the geographic coordinate system and the coodinates used in this data set:
-      </a>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#part-iii-plotting-spatial-maps">
-     Part III: Plotting spatial maps
-    </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#making-a-first-plot">
-       1. Making a first plot
-      </a>
-</li>
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#exercise">
-<em>
-        Exercise:
-       </em>
+<a class="reference internal nav-link" href="#section-1-1-accessing-era5-data">
+<strong>
+      Section 1.1: Accessing ERA5 Data
+     </strong>
 </a>
 </li>
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#synoptic-variabilty">
-       2. Synoptic Variabilty
-      </a>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-2-selecting-regions-of-interest">
+<strong>
+      Section 1.2: Selecting Regions of Interest
+     </strong>
+</a>
 </li>
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id17">
-       Exercise:
-      </a>
+</ul>
 </li>
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#durinal-cycle-coastel-clouds-at-the-coast-on-a-sunny-day">
-       3. Durinal cycle - Coastel clouds at the coast on a sunny day?
-      </a>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-plotting-spatial-maps-of-reanalysis-data">
+<strong>
+    Section 2: Plotting Spatial Maps of Reanalysis Data
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#question-2">
+<strong>
+      Question 2
+     </strong>
+</a>
 </li>
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#discussion-questions">
-<em>
-        Discussion Questions:
-       </em>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-3-plotting-timeseries-of-reanalysis-data">
+<strong>
+    Section 3: Plotting Timeseries of Reanalysis Data
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-3-1-surface-air-temperature-timeseries">
+<strong>
+      Section 3.1: Surface Air Temperature Timeseries
+     </strong>
 </a>
 <ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry">
-<a class="reference internal nav-link" href="#short-answers">
-         short answers:
-        </a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#part-4-another-way-to-look-at-variabilty-creating-time-series">
-     Part 4: Another way to look at variabilty: Creating time series
-    </a>
-<ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#questions">
-<em>
-        Questions
-       </em>
+<a class="reference internal nav-link" href="#questions-3-1">
+<strong>
+        Questions 3.1
+       </strong>
 </a>
 </li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id18">
-<em>
-      Exercise
-     </em>
-     :
-    </a>
+<a class="reference internal nav-link" href="#section-3-2-comparing-timeseries-of-multiple-variables">
+<strong>
+      Section 3.2: Comparing Timeseries of Multiple Variables
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-3-2">
+<strong>
+        Questions 3.2
+       </strong>
+</a>
 </li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id19">
-<em>
-      Questions
-     </em>
-     :
-    </a>
+</ul>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
+<strong>
+    Summary
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#bonus-section-1-selecting-a-different-spatial-region">
+<strong>
+      Bonus Section 1: Selecting a Different Spatial Region
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#bonus-section-1-1-note-about-the-geographic-coordinate-system-and-the-coordinates-used-in-this-dataset">
+<strong>
+        Bonus Section 1.1: Note About the Geographic Coordinate System and the Coordinates Used in This Dataset
+       </strong>
+</a>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#bonus-extending-the-timeseries-analysis-to-long-timeperiods">
-   Bonus: Extending the timeseries analysis to long timeperiods
-  </a>
+<a class="reference internal nav-link" href="#resources">
+<strong>
+    Resources
+   </strong>
+</a>
 </li>
 </ul>
 </nav>
@@ -1103,7 +1023,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="col pl-md-3 pl-lg-5 content-container">
 <!-- Table of contents that is only displayed when printing the page -->
 <div class="onlyprint" id="jb-print-docs-body">
-<h1>Tutorial 2: A lot of weather makes climate - exploring the ERA5 Reanalysis</h1>
+<h1>Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis</h1>
 <!-- Table of contents -->
 <div id="print-main-content">
 <div id="jb-print-toc">
@@ -1114,259 +1034,148 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#">
-   Tutorial 2: A lot of weather makes climate - exploring the ERA5 Reanalysis
-  </a>
-<ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#tutorial-slides">
-     Tutorial slides
-    </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id1">
-       Tutorial slides
-      </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id2">
-         Tutorial slides
-        </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id3">
-           Tutorial slides
-          </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h6 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id4">
-             Tutorial slides
-            </a>
+<strong>
+    Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis
+   </strong>
+</a>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-objectives">
+<strong>
+    Tutorial Objectives
+   </strong>
+</a>
 </li>
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#setup">
-   Setup
-  </a>
+<strong>
+    Setup
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
 <a class="reference internal nav-link" href="#figure-settings">
      Figure settings
     </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id5">
-       Figure settings
-      </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id6">
-         Figure settings
-        </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id7">
-           Figure settings
-          </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h6 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id8">
-             Figure settings
-            </a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#plotting-functions">
-     Plotting functions
+<a class="reference internal nav-link" href="#video-1-video-1-name">
+     Video 1: Video 1 Name
     </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id9">
-       Plotting functions
-      </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id10">
-         Plotting functions
-        </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id11">
-           Plotting functions
-          </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h6 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id12">
-             Plotting functions
-            </a>
 </li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-what-is-reanalysis-data">
+<strong>
+    Section 1: What is Reanalysis Data?
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#helper-functions">
-     Helper functions
-    </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id13">
-       Helper functions
-      </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id14">
-         Helper functions
-        </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id15">
-           Helper functions
-          </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h6 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id16">
-             Helper functions
-            </a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#introduction-what-are-reanalysis-data">
-     Introduction: What are Reanalysis data?
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#part-i-accessing-era5-data">
-     Part I: Accessing ERA5 data
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#part-ii-selecting-regions-and-plotting-data">
-     Part II: Selecting regions and plotting data
-    </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#note-about-the-geographic-coordinate-system-and-the-coodinates-used-in-this-data-set">
-       Note about the geographic coordinate system and the coodinates used in this data set:
-      </a>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#part-iii-plotting-spatial-maps">
-     Part III: Plotting spatial maps
-    </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#making-a-first-plot">
-       1. Making a first plot
-      </a>
-</li>
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#exercise">
-<em>
-        Exercise:
-       </em>
+<a class="reference internal nav-link" href="#section-1-1-accessing-era5-data">
+<strong>
+      Section 1.1: Accessing ERA5 Data
+     </strong>
 </a>
 </li>
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#synoptic-variabilty">
-       2. Synoptic Variabilty
-      </a>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-2-selecting-regions-of-interest">
+<strong>
+      Section 1.2: Selecting Regions of Interest
+     </strong>
+</a>
 </li>
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id17">
-       Exercise:
-      </a>
+</ul>
 </li>
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#durinal-cycle-coastel-clouds-at-the-coast-on-a-sunny-day">
-       3. Durinal cycle - Coastel clouds at the coast on a sunny day?
-      </a>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-plotting-spatial-maps-of-reanalysis-data">
+<strong>
+    Section 2: Plotting Spatial Maps of Reanalysis Data
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#question-2">
+<strong>
+      Question 2
+     </strong>
+</a>
 </li>
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#discussion-questions">
-<em>
-        Discussion Questions:
-       </em>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-3-plotting-timeseries-of-reanalysis-data">
+<strong>
+    Section 3: Plotting Timeseries of Reanalysis Data
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-3-1-surface-air-temperature-timeseries">
+<strong>
+      Section 3.1: Surface Air Temperature Timeseries
+     </strong>
 </a>
 <ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry">
-<a class="reference internal nav-link" href="#short-answers">
-         short answers:
-        </a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#part-4-another-way-to-look-at-variabilty-creating-time-series">
-     Part 4: Another way to look at variabilty: Creating time series
-    </a>
-<ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#questions">
-<em>
-        Questions
-       </em>
+<a class="reference internal nav-link" href="#questions-3-1">
+<strong>
+        Questions 3.1
+       </strong>
 </a>
 </li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id18">
-<em>
-      Exercise
-     </em>
-     :
-    </a>
+<a class="reference internal nav-link" href="#section-3-2-comparing-timeseries-of-multiple-variables">
+<strong>
+      Section 3.2: Comparing Timeseries of Multiple Variables
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-3-2">
+<strong>
+        Questions 3.2
+       </strong>
+</a>
 </li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id19">
-<em>
-      Questions
-     </em>
-     :
-    </a>
+</ul>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
+<strong>
+    Summary
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#bonus-section-1-selecting-a-different-spatial-region">
+<strong>
+      Bonus Section 1: Selecting a Different Spatial Region
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#bonus-section-1-1-note-about-the-geographic-coordinate-system-and-the-coordinates-used-in-this-dataset">
+<strong>
+        Bonus Section 1.1: Note About the Geographic Coordinate System and the Coordinates Used in This Dataset
+       </strong>
+</a>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#bonus-extending-the-timeseries-analysis-to-long-timeperiods">
-   Bonus: Extending the timeseries analysis to long timeperiods
-  </a>
+<a class="reference internal nav-link" href="#resources">
+<strong>
+    Resources
+   </strong>
+</a>
 </li>
 </ul>
 </nav>
@@ -1375,710 +1184,350 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <main id="main-content" role="main">
 <div>
+<p><a class="reference external" href="https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial2.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/></a>   <a href="https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/{ORG}/course-content/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial2.ipynb" target="_blank"><img alt="Open in Kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg"/></a></p>
 <div class="section" id="tutorial-2-a-lot-of-weather-makes-climate-exploring-the-era5-reanalysis">
-<h1>Tutorial 2: A lot of weather makes climate - exploring the ERA5 Reanalysis<a class="headerlink" href="#tutorial-2-a-lot-of-weather-makes-climate-exploring-the-era5-reanalysis" title="Permalink to this headline">¶</a></h1>
-<p>**Week 1, Day 2(?): Introduce atmospheric reanalysis (ERA5) **</p>
-<p><strong>By Neuromatch Academy</strong></p>
-<p><strong>Content creators:</strong> Hell, Momme, Name Surname, Day Lead’s Name</p>
-<p><strong>Content reviewers:</strong> Name Surname, Name Surname</p>
-<p><strong>Content editors:</strong> Name Surname, Name Surname</p>
-<p><strong>Production editors:</strong> Name Surname, Name Surname</p>
-<p><strong>Our 2023 Sponsors</strong></p>
-<!-- <p align='center'><img src='https://github.com/NeuromatchAcademy/widgets/blob/master/sponsors.png?raw=True'/></p> --><hr class="docutils"/>
-<p>#<strong>Tutorial Objectives</strong></p>
-<p>In the previous section we learned about ENSO, which as an atmosphere-ocean dynamical phenomena. We will now examine the atmosphere and the ocean systems more generally.</p>
-<p>In this tutorial you will learn how to handle reanalysis data and how they derive weather and climate varaivles of interest. We will begin with two ways to access the ECMWF ERA5 renalysis, either through Poodac, or alternatively through the web copernicus api. You will learn how to pick and mask a region on interest, and see how important climate variables will change within on short timescales between days, months.</p>
-<p>By the end of this tutorial you will be able to:</p>
+<h1><strong>Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis</strong><a class="headerlink" href="#tutorial-2-a-lot-of-weather-makes-climate-exploring-the-era5-reanalysis" title="Permalink to this headline">¶</a></h1>
+<p><strong>Week 1, Day 2, Ocean-Atmosphere Reanalysis</strong></p>
+<p><strong>Content creators:</strong> Momme Hell</p>
+<p><strong>Content reviewers:</strong> Katrina Dobson, Danika Gupta, Maria Gonzalez, Will Gregory, Nahid Hasan, Sherry Mi, Beatriz Cosenza Muralles, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Content editors:</strong> Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Production editors:</strong> Wesley Banfield, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Our 2023 Sponsors:</strong> NASA TOPS</p>
+</div>
+<div class="section" id="tutorial-objectives">
+<h1><strong>Tutorial Objectives</strong><a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">¶</a></h1>
+<p>In the previous tutorial, we learned about ENSO, which is a specific atmosphere-ocean dynamical phenomena. You will now examine the atmosphere and the ocean systems more generally.</p>
+<p>In this tutorial, you will learn to work with reanalysis data. These data combine observations and models of the Earth system, and are a critical tool for weather and climate science. You will first utilize two methods to access a specific reanalysis dataset (ECMWF’s ERA5; through <a class="reference external" href="https://podaac.jpl.nasa.gov/">PO.DAAC</a> and through the web Copernicus API). You will then select and mask a region of interest, investigating how important climate variables change on medium length timescales (hours to months) within this region.</p>
+<p>By the end of this tutorial, you will be able to:</p>
 <ul class="simple">
-<li><p>a) access and select reanalysis data of interest</p></li>
-<li><p>b) plot variables so that you can see changes in on different time scales.</p></li>
-<li><p>c) derive timeseries of these variables.</p></li>
+<li><p>Access and select reanalysis data of cliamtically-important variables</p></li>
+<li><p>Plot maps to explore changes on various time scales.</p></li>
+<li><p>Compute and compare timeseries of different variables from reanalysis data.</p></li>
 </ul>
-<div class="section" id="tutorial-slides">
-<h2>Tutorial slides<a class="headerlink" href="#tutorial-slides" title="Permalink to this headline">¶</a></h2>
-<p>These are the slides for the videos in all tutorials today</p>
-<div class="section" id="id1">
-<h3>Tutorial slides<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>These are the slides for the videos in all tutorials today</p>
-<div class="section" id="id2">
-<h4>Tutorial slides<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
-<p>These are the slides for the videos in all tutorials today</p>
-<div class="section" id="id3">
-<h5>Tutorial slides<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h5>
-<p>These are the slides for the videos in all tutorials today</p>
-<div class="section" id="id4">
-<h6>Tutorial slides<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h6>
-<p>These are the slides for the videos in all tutorials today</p>
-<p>#######  Tutorial slides</p>
-<p>These are the slides for the videos in all tutorials today</p>
-<p>########  Tutorial slides</p>
-<p>These are the slides for the videos in all tutorials today</p>
-<p>#########  Tutorial slides</p>
-<p>These are the slides for the videos in all tutorials today</p>
-<p>##########  Tutorial slides</p>
-<p>These are the slides for the videos in all tutorials today</p>
-<p>###########  Tutorial slides</p>
-<p>These are the slides for the videos in all tutorials today</p>
-<p>############  Tutorial slides</p>
-<p>These are the slides for the videos in all tutorials today</p>
-<p>#############  Tutorial slides</p>
-<p>These are the slides for the videos in all tutorials today</p>
-<p>##############  Tutorial slides</p>
-<p>These are the slides for the videos in all tutorials today</p>
-<p>###############  Tutorial slides</p>
-<p>These are the slides for the videos in all tutorials today</p>
-<p>################  Tutorial slides</p>
-<p>These are the slides for the videos in all tutorials today</p>
-<p>#################  Tutorial slides</p>
-<p>These are the slides for the videos in all tutorials today</p>
-<div class="cell tag_remove-input docutils container">
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<hr class="docutils"/>
 <div class="section" id="setup">
-<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
-<p>In this section, we have:</p>
-<ol class="simple">
-<li><p><strong>Import cell</strong>: imports all libraries you use in the tutorial.</p></li>
-<li><p><strong>Hidden Figure settings cell</strong>: sets up the plotting style (copy exactly).</p></li>
-<li><p><strong>Hidden Plotting functions cell</strong>: contains all functions used to create plots throughout the tutorial (so students don’t waste time looking at boilerplate matplotlib but can here if they wish to). Please use only matplotlib for plotting for consistency.</p></li>
-<li><p><strong>Hidden Helper functions cell</strong>: This should contain functions that students have previously used or that are very simple. Any helper functions that are being used for the first time and are important should be placed directly above the relevant text or exercise (see Section 1.1 for an example).</p></li>
-</ol>
+<h1><strong>Setup</strong><a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
+<div class="cell tag_colab docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># !pip install pythia_datasets</span>
+<span class="c1"># !pip install cartopy</span>
+<span class="c1"># !pip install geoviews</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">intake</span> <span class="kn">import</span> <span class="n">open_catalog</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># imports</span>
+<span class="kn">from</span> <span class="nn">intake</span> <span class="kn">import</span> <span class="n">open_catalog</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">matplotlib</span>
-
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">fsspec</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="kn">import</span> <span class="nn">warnings</span>
-<span class="kn">from</span> <span class="nn">cartopy</span> <span class="kn">import</span> <span class="n">crs</span> <span class="k">as</span> <span class="n">ccrs</span><span class="p">,</span> <span class="n">feature</span> <span class="k">as</span> <span class="n">cfeature</span>
-<span class="c1">#  Suppress warnings issued by Cartopy when downloading data files</span>
-<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">'ignore'</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">boto3</span>
+<span class="kn">import</span> <span class="nn">botocore</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pooch</span>
+<span class="kn">import</span> <span class="nn">geoviews</span> <span class="k">as</span> <span class="nn">gv</span>
+<span class="kn">import</span> <span class="nn">holoviews</span>
+<span class="kn">from</span> <span class="nn">geoviews</span> <span class="kn">import</span> <span class="n">Dataset</span> <span class="k">as</span> <span class="n">gvDataset</span>
+<span class="kn">import</span> <span class="nn">geoviews.feature</span> <span class="k">as</span> <span class="nn">gf</span>
+<span class="kn">from</span> <span class="nn">geoviews</span> <span class="kn">import</span> <span class="n">Image</span> <span class="k">as</span> <span class="n">gvImage</span>
+
+<span class="kn">from</span> <span class="nn">cartopy</span> <span class="kn">import</span> <span class="n">crs</span> <span class="k">as</span> <span class="n">ccrs</span>
+<span class="kn">from</span> <span class="nn">cartopy</span> <span class="kn">import</span> <span class="n">feature</span> <span class="k">as</span> <span class="n">cfeature</span>
+
+<span class="c1"># import warnings</span>
+<span class="c1"># #  Suppress warnings issued by Cartopy when downloading data files</span>
+<span class="c1"># warnings.filterwarnings('ignore')</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="figure-settings">
 <h2>Figure settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id5">
-<h3>Figure settings<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id6">
-<h4>Figure settings<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="id7">
-<h5>Figure settings<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h5>
-<div class="section" id="id8">
-<h6>Figure settings<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h6>
-<p>#######  Figure settings</p>
-<p>########  Figure settings</p>
-<p>#########  Figure settings</p>
-<p>##########  Figure settings</p>
-<p>###########  Figure settings</p>
-<p>############  Figure settings</p>
-<p>#############  Figure settings</p>
-<p>##############  Figure settings</p>
-<p>###############  Figure settings</p>
-<p>################  Figure settings</p>
-<p>#################  Figure settings</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Figure settings</span>
 <span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>       <span class="c1"># interactive display</span>
 <span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = 'retina'
 <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">"https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/cma.mplstyle"</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">font_for_print</span><span class="p">():</span>
-
-    <span class="n">SMALL_SIZE</span> <span class="o">=</span> <span class="mi">8</span>
-    <span class="n">MEDIUM_SIZE</span> <span class="o">=</span> <span class="mi">8</span>
-    <span class="n">BIGGER_SIZE</span> <span class="o">=</span> <span class="mi">10</span>
-    <span class="n">legend_properties</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'weight'</span><span class="p">:</span><span class="s1">'bold'</span><span class="p">}</span>
-
-    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'font'</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">SMALL_SIZE</span><span class="p">,</span> <span class="n">serif</span><span class="o">=</span><span class="s1">'Helvetica Neue'</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="s1">'normal'</span><span class="p">)</span>          <span class="c1"># controls default text sizes</span>
-    <span class="c1">#plt.rc('font', size=SMALL_SIZE, serif='DejaVu Sans', weight='light')</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'text'</span><span class="p">,</span> <span class="n">usetex</span><span class="o">=</span><span class="s1">'false'</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'axes'</span><span class="p">,</span> <span class="n">titlesize</span><span class="o">=</span><span class="n">MEDIUM_SIZE</span><span class="p">,</span> <span class="n">labelweight</span><span class="o">=</span><span class="s1">'normal'</span><span class="p">)</span>     <span class="c1"># fontsize of the axes title</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'axes'</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="n">SMALL_SIZE</span><span class="p">,</span> <span class="n">labelweight</span><span class="o">=</span><span class="s1">'normal'</span><span class="p">)</span> <span class="c1">#, family='bold')    # fontsize of the x and y labels</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'xtick'</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="n">SMALL_SIZE</span><span class="p">)</span>    <span class="c1"># fontsize of the tick labels</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'ytick'</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="n">SMALL_SIZE</span><span class="p">)</span>    <span class="c1"># fontsize of the tick labels</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'legend'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="n">SMALL_SIZE</span><span class="p">,</span> <span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>    <span class="c1"># legend fontsize</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'figure'</span><span class="p">,</span> <span class="n">titlesize</span><span class="o">=</span><span class="n">MEDIUM_SIZE</span><span class="p">,</span> <span class="n">titleweight</span><span class="o">=</span><span class="s1">'bold'</span><span class="p">,</span> <span class="n">autolayout</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#, family='bold')  # fontsize of the figure title</span>
-
-    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'axes'</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span> <span class="n">SMALL_SIZE</span><span class="p">,</span> <span class="n">labelweight</span><span class="o">=</span><span class="s1">'normal'</span><span class="p">)</span>
-
-<span class="n">font_for_print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="video-1-video-1-name">
+<h2>Video 1: Video 1 Name<a class="headerlink" href="#video-1-video-1-name" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Video 1: Video 1 Name</span>
+<span class="c1">#Tech team will add code to format and display the video</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="plotting-functions">
-<h2>Plotting functions<a class="headerlink" href="#plotting-functions" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id9">
-<h3>Plotting functions<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id10">
-<h4>Plotting functions<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="id11">
-<h5>Plotting functions<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h5>
-<div class="section" id="id12">
-<h6>Plotting functions<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h6>
-<p>#######  Plotting functions</p>
-<p>########  Plotting functions</p>
-<p>#########  Plotting functions</p>
-<p>##########  Plotting functions</p>
-<p>###########  Plotting functions</p>
-<p>############  Plotting functions</p>
-<p>#############  Plotting functions</p>
-<p>##############  Plotting functions</p>
-<p>###############  Plotting functions</p>
-<p>################  Plotting functions</p>
-<p>#################  Plotting functions</p>
-<div class="cell tag_hide-input docutils container">
+<div class="section" id="section-1-what-is-reanalysis-data">
+<h1><strong>Section 1: What is Reanalysis Data?</strong><a class="headerlink" href="#section-1-what-is-reanalysis-data" title="Permalink to this headline">¶</a></h1>
+<p><strong>Reanalysis</strong> refers to the process of combining historical observations from a variety of sources, such as weather stations, satellite measurments, and ocean buoys, with numerical models to create a comprehensive and consistent record of past weather and climate conditions. Reanalysis data is a useful tool to examine the Earth’s climate system over a wide range of time scales, from seasonal through decadal to century-scale changes.</p>
+<p>There are multiple Earth system reanalysis products (e.g. MERRA-2, NCEP-NCAR, JRA-55C, <a class="reference external" href="https://climatedataguide.ucar.edu/climate-data/atmospheric-reanalysis-overview-comparison-tables">see extensive list here</a>), and no single product fits all needs. For the purposes of this tutorial you will be using a product from the European Centre for Medium-Range Weather Forecasts (ECMWF) called <strong>ECMWF Reanalysis v5 (ERA5)</strong>. <a class="reference external" href="https://climate.copernicus.eu/climate-reanalysis">This video</a> from the ECMWF provides you with a brief introduction to the ERA5 product.</p>
+<div class="section" id="section-1-1-accessing-era5-data">
+<h2><strong>Section 1.1: Accessing ERA5 Data</strong><a class="headerlink" href="#section-1-1-accessing-era5-data" title="Permalink to this headline">¶</a></h2>
+<p>You will access the data through the an AWS S3 bucket of the data: <a class="reference external" href="https://registry.opendata.aws/ecmwf-era5/">ECMWF ERA5 Reanalysis</a>. To do this you need the name of the bucket “era5-pds”, and the file location in the bucket. <em>Note: you can open the <a class="reference external" href="https://registry.opendata.aws/ecmwf-era5/">AWS link</a> and find a guided tutorial on how to explore the S3 bucket.</em></p>
+<p>Let’s select a specific year and month to work with, March of 2018:</p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Plotting functions</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">era5_bucket</span> <span class="o">=</span> <span class="s1">'era5-pds'</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">'s3'</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">botocore</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">Config</span><span class="p">(</span><span class="n">signature_version</span><span class="o">=</span><span class="n">botocore</span><span class="o">.</span><span class="n">UNSIGNED</span><span class="p">))</span> <span class="c1"># initialize aws s3 bucket client</span>
+<span class="n">date_sel</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># select a desired date and hours (midnight is zero)</span>
+<span class="n">prefix</span> <span class="o">=</span> <span class="n">date_sel</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">'%Y/%m/'</span><span class="p">)</span> <span class="c1">#format the date to match the s3 bucket</span>
+<span class="n">metadata_file</span> <span class="o">=</span> <span class="s1">'main.nc'</span> <span class="c1">#filename on the s3 bucket</span>
+<span class="n">metadata_key</span> <span class="o">=</span> <span class="n">prefix</span> <span class="o">+</span> <span class="n">metadata_file</span> <span class="c1"># file location and name on the s3 bucket</span>
 
-<span class="k">def</span> <span class="nf">format_axes</span><span class="p">(</span><span class="n">ax</span><span class="p">):</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">COASTLINE</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">LAKES</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">'None'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span> <span class="p">)</span>
-    <span class="n">gl</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">(</span><span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">)</span>
-    <span class="n">gl</span><span class="o">.</span><span class="n">xlocator</span> <span class="o">=</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">ticker</span><span class="o">.</span><span class="n">MaxNLocator</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-    <span class="n">gl</span><span class="o">.</span><span class="n">ylocator</span> <span class="o">=</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">ticker</span><span class="o">.</span><span class="n">MaxNLocator</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-    <span class="n">gl</span><span class="o">.</span><span class="n">xlabels_top</span>  <span class="o">=</span> <span class="kc">False</span>
-    <span class="n">gl</span><span class="o">.</span><span class="n">ylabels_left</span> <span class="o">=</span> <span class="kc">False</span>
-    <span class="c1">#gl.xlines = False</span>
+<span class="n">ds_meta</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">((</span><span class="s1">'http://s3.amazonaws.com/'</span><span class="o">+</span><span class="n">era5_bucket</span><span class="o">+</span><span class="s2">"/"</span><span class="o">+</span> <span class="n">metadata_key</span><span class="p">),</span>
+                                         <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span> <span class="p">))</span> <span class="c1"># open the file</span>
+<span class="n">ds_meta</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You just loaded an <code class="docutils literal notranslate"><span class="pre">xarray</span></code> dataset, as introduced at the first day. This dataset contains 19 variables covering the whole globe (-90 to +90 degrees in latitude, 0 to 360 degrees on longitude) along with their respective coordinates. With this dataset you have access to our best estimates of climate parameters with a temporal resolution of 1 hour and a spatial resolution of 1/4 degree (i.e. grid points near the Equator represent a ~25 km x 25 km region). This is a lot of data, but still just a fraction the data available through the <a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#%21/dataset/reanalysis-era5-land?tab=overview">full ERA5 dataset</a>.</p>
+</div>
+<div class="section" id="section-1-2-selecting-regions-of-interest">
+<h2><strong>Section 1.2: Selecting Regions of Interest</strong><a class="headerlink" href="#section-1-2-selecting-regions-of-interest" title="Permalink to this headline">¶</a></h2>
+<p>The global ERA5 data over the entire time range is so large that even just one variable would be too large to store on your computer. Here you will apply a method to load a region (i.e., a spatial subset) of the data. In this first example, you will load <em>air surface temperature at 2 meters</em> data for a small region in the Northeastern United States. In later tutorials you will have the opportunity to select a region of your choice and to explore other climate variables.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># the order of the lat lon range has to follow the convention of the data set.</span>
+<span class="c1"># for this dataset, longitude ranges from 0 to 360 degrees and</span>
+<span class="c1"># latitude ranges from 90 degrees Northto 90 degrees South .</span>
 
-<span class="k">def</span> <span class="nf">plot_variable_Facet</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">var</span><span class="p">,</span> <span class="n">time_dim</span> <span class="o">=</span> <span class="s2">"time"</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="n">time_dim</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">Warning</span><span class="p">(</span><span class="s2">"too many time steps selected, please select less then 6"</span><span class="p">)</span>
-        <span class="k">return</span>
-
-    <span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span> <span class="k">if</span> <span class="n">cmap</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">cmap</span>
-
-    <span class="n">data_sel_plot</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
-        <span class="n">aspect</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">,</span>
-        <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span>
-        <span class="n">col</span><span class="o">=</span><span class="n">time_dim</span><span class="p">,</span>
-        <span class="n">subplot_kws</span><span class="o">=</span><span class="p">{</span><span class="s2">"projection"</span><span class="p">:</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">Orthographic</span><span class="p">(</span><span class="o">-</span><span class="mi">80</span><span class="p">,</span> <span class="mi">35</span><span class="p">)},</span>
-        <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">,</span>
-        <span class="n">add_colorbar</span> <span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="c1">#,col_wrap=1 )</span>
-
-    <span class="k">for</span> <span class="n">ax</span> <span class="ow">in</span> <span class="n">data_sel_plot</span><span class="o">.</span><span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
-        <span class="n">format_axes</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">title</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">title_name</span><span class="o">=</span> <span class="n">title</span>
+<span class="c1"># northeastern United States</span>
+<span class="n">lat_range</span> <span class="o">=</span> <span class="p">[</span><span class="mf">55.2</span><span class="p">,</span> <span class="mf">30.2</span><span class="p">]</span> <span class="c1"># from north to south</span>
+<span class="n">lon_range</span> <span class="o">=</span> <span class="p">[</span><span class="mi">270</span><span class="p">,</span> <span class="mi">295</span><span class="p">]</span> <span class="c1"># from west to east</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># note this can take several minutes to download</span>
+<span class="n">selected_vars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'air_temperature_at_2_metres'</span><span class="p">,</span> <span class="s1">'northward_wind_at_10_metres'</span><span class="p">,</span> <span class="s1">'eastward_wind_at_10_metres'</span><span class="p">,</span>
+        <span class="s1">'surface_air_pressure'</span><span class="p">,</span><span class="s1">'sea_surface_temperature'</span><span class="p">]</span> <span class="c1"># the variables we want</span>
+<span class="n">s3_data_ptrn</span> <span class="o">=</span> <span class="s1">'</span><span class="si">{year}</span><span class="s1">/</span><span class="si">{month}</span><span class="s1">/data/</span><span class="si">{var}</span><span class="s1">.nc'</span> <span class="c1"># path and filename format for this S3 bucket</span>
+<span class="n">year_s3</span> <span class="o">=</span> <span class="n">date_sel</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">'%Y'</span><span class="p">)</span> <span class="c1"># extract the year</span>
+<span class="n">month_s3</span> <span class="o">=</span> <span class="n">date_sel</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">'%m'</span><span class="p">)</span> <span class="c1"># extract the month</span>
+<span class="n">ERA5_select</span><span class="o">=</span><span class="p">[]</span> <span class="c1"># initialize the dataset, will save a complicated check later</span>
+<span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">selected_vars</span><span class="p">:</span> <span class="c1">#this will download 5 files of 500Mb each.</span>
+    <span class="n">s3_data_key</span> <span class="o">=</span> <span class="n">s3_data_ptrn</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="n">year_s3</span><span class="p">,</span> <span class="n">month</span><span class="o">=</span><span class="n">month_s3</span><span class="p">,</span> <span class="n">var</span><span class="o">=</span><span class="n">var</span><span class="p">)</span> <span class="c1"># variable specific  key</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Downloading </span><span class="si">%s</span><span class="s2"> from S3..."</span> <span class="o">%</span> <span class="n">s3_data_key</span><span class="p">)</span>
+    <span class="n">ds_temp</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">((</span><span class="s1">'http://s3.amazonaws.com/'</span><span class="o">+</span><span class="n">era5_bucket</span><span class="o">+</span><span class="s2">"/"</span><span class="o">+</span> <span class="n">s3_data_key</span><span class="p">),</span>
+                                             <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span> <span class="p">))</span> <span class="c1">#retrieve the variable from the bucket</span>
+    <span class="k">if</span> <span class="n">ERA5_select</span><span class="p">:</span> <span class="c1">#check if the dataset is empty or not (first iteration of the loop)</span>
+        <span class="n">ERA5_select</span><span class="o">=</span><span class="n">xr</span><span class="o">.</span><span class="n">merge</span><span class="p">([</span><span class="n">ERA5_select</span><span class="p">,</span><span class="n">ds_temp</span><span class="p">])</span> <span class="c1"># if not empty, merge the new file</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">title_name</span> <span class="o">=</span> <span class="n">ERA5_durinal_cycle</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">'long_name'</span><span class="p">]</span>
-        <span class="k">except</span><span class="p">:</span>
-            <span class="n">title_name</span> <span class="o">=</span> <span class="kc">None</span>
-            <span class="k">pass</span>
+        <span class="n">ERA5_select</span><span class="o">=</span><span class="n">ds_temp</span> <span class="c1">#if empty, just assign the new file</span>
 
-    <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="n">title_name</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">1.01</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">data_sel_plot</span>
-
-<span class="k">def</span> <span class="nf">cbar_label</span><span class="p">(</span><span class="n">DD</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">DD</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">'long_name'</span><span class="p">]</span> <span class="o">+</span> <span class="s1">' ['</span> <span class="o">+</span> <span class="n">DD</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">'units'</span><span class="p">]</span><span class="o">+</span> <span class="s1">']'</span>
+<span class="n">ERA5_allvars</span> <span class="o">=</span> <span class="n">ERA5_select</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lon</span><span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="n">lon_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">,</span> <span class="n">lon_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lat</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="n">lat_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">,</span> <span class="n">lat_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="helper-functions">
-<h2>Helper functions<a class="headerlink" href="#helper-functions" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id13">
-<h3>Helper functions<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id14">
-<h4>Helper functions<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="id15">
-<h5>Helper functions<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h5>
-<div class="section" id="id16">
-<h6>Helper functions<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h6>
-<p>#######  Helper functions</p>
-<p>########  Helper functions</p>
-<p>#########  Helper functions</p>
-<p>##########  Helper functions</p>
-<p>###########  Helper functions</p>
-<p>############  Helper functions</p>
-<p>#############  Helper functions</p>
-<p>##############  Helper functions</p>
-<p>###############  Helper functions</p>
-<p>################  Helper functions</p>
-<p>#################  Helper functions</p>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Helper functions</span>
-
-<span class="k">def</span> <span class="nf">set_region_figure</span><span class="p">(</span><span class="n">lon_range</span><span class="p">,</span> <span class="n">lat_range</span><span class="p">,</span> <span class="n">projection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">figsize</span> <span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">)</span> <span class="p">):</span>
-    <span class="c1"># source:https://foundations.projectpythia.org/core/cartopy/cartopy.html</span>
-
-    <span class="n">lonE</span><span class="p">,</span> <span class="n">lonW</span> <span class="o">=</span> <span class="n">lon_range</span>
-    <span class="n">latN</span><span class="p">,</span> <span class="n">latS</span> <span class="o">=</span> <span class="n">lat_range</span>
-
-    <span class="n">cLat</span> <span class="o">=</span> <span class="p">(</span><span class="n">latN</span> <span class="o">+</span> <span class="n">latS</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
-    <span class="n">cLon</span> <span class="o">=</span> <span class="p">(</span><span class="n">lonW</span> <span class="o">+</span> <span class="n">lonE</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
-    <span class="n">projLccNY</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">LambertConformal</span><span class="p">(</span><span class="n">central_longitude</span><span class="o">=</span><span class="n">cLon</span><span class="p">,</span> <span class="n">central_latitude</span><span class="o">=</span><span class="n">cLat</span><span class="p">)</span>
-
-    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">)</span>
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">projLccNY</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_extent</span><span class="p">([</span><span class="n">lonW</span><span class="p">,</span> <span class="n">lonE</span><span class="p">,</span> <span class="n">latS</span><span class="p">,</span> <span class="n">latN</span><span class="p">])</span><span class="c1">#, crs=projPC)</span>
-
-    <span class="c1">#ax.set_facecolor(cfeature.COLORS['water'])</span>
-    <span class="c1">#ax.add_feature(cfeature.LAND)</span>
-    <span class="c1">#ax.add_feature(cfeature.COASTLINE)</span>
-    <span class="c1">#ax.add_feature(cfeature.BORDERS, linestyle='--')</span>
-
-    <span class="c1">#ax.add_feature(cfeature.NaturalEarthFeature('physical', 'land', '50m', edgecolor='black', alpha = 0.2, facecolor='gray'))</span>
-    <span class="c1">#ax.add_feature(cfeature.LAKES, facecolor='white', alpha=0.5 )</span>
-
-    <span class="c1"># gl = ax.gridlines(</span>
-    <span class="c1">#     draw_labels=True, linewidth=1, color='black', alpha=0.5, linestyle='--'</span>
-    <span class="c1"># )</span>
-
-    <span class="n">format_axes</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
-    <span class="c1">#ax.add_feature(cfeature.STATES)</span>
-    <span class="c1">#ax.add_feature(cfeature.RIVERS)</span>
-    <span class="k">return</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span>
-
-<span class="k">def</span> <span class="nf">get_time_compared_to_UTC</span><span class="p">(</span><span class="n">longitude</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Converts a longitude value to the corresponding local time and offset from UTC.</span>
-
-<span class="sd">    Parameters:</span>
-<span class="sd">    longitude (float): The longitude value in degrees.</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">    numpy.datetime64: The current local time at the given longitude.</span>
-<span class="sd">    datetime.timedelta: The offset from UTC in hours and minutes.</span>
-<span class="sd">    """</span>
-    <span class="c1"># Calculate the time offset from UTC based on the longitude</span>
-    <span class="n">offset_hours</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">longitude</span> <span class="o">/</span> <span class="mi">15</span><span class="p">)</span>
-    <span class="n">offset_minutes</span> <span class="o">=</span> <span class="nb">round</span><span class="p">((</span><span class="n">longitude</span> <span class="o">/</span> <span class="mi">15</span> <span class="o">-</span> <span class="n">offset_hours</span><span class="p">)</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
-    <span class="n">offset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="n">offset_hours</span><span class="p">,</span> <span class="s1">'h'</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="n">offset_minutes</span><span class="p">,</span> <span class="s1">'m'</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">offset</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'m8[h]'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="introduction-what-are-reanalysis-data">
-<h2>Introduction: What are Reanalysis data?<a class="headerlink" href="#introduction-what-are-reanalysis-data" title="Permalink to this headline">¶</a></h2>
-<p>We know that earth is warming. But how do we know that, and how do we know how that changes weather and climate? These are very hard questions, but thanks to work of many scientist, we now have data that allows to pick at any place of the planet and look how weather and cliamte has changes since 1979. This data is called <strong>Reanalysis data</strong>, and refers to the process of combining historical observations from a variety of sources, such as weather stations, satellites, and buoys, with numerical models to create a comprehensive and consistent record of past weather and climate conditions. Reanalysis data is then used to study the Earth’s climate system over a wide range of time scales, from seasonal to decadal to century-scale changes. By providing a complete picture of the Earth’s climate history, reanalysis data is great tool to understand the causes and effects of climate change.</p>
-<p><a class="reference external" href="https://climate.copernicus.eu/climate-reanalysis">This video</a> from the European Centre for Medium-Range Weather Forecasts (ECMWF) provides you with a brief introdution about their reanalysis, called <strong>ERA5</strong>. Note that there is not one reanalysis product that that fits all needs, such that there are many earth reanalysis like MERRA-2, NCEP-NCAR, JRA-55C, and many others <a class="reference external" href="https://climatedataguide.ucar.edu/climate-data/atmospheric-reanalysis-overview-comparison-tables">see extensive list here</a></p>
-</div>
-<div class="section" id="part-i-accessing-era5-data">
-<h2>Part I: Accessing ERA5 data<a class="headerlink" href="#part-i-accessing-era5-data" title="Permalink to this headline">¶</a></h2>
-<p>For this tutorial we stick with ERA5.
-There are multiple way to accesss ERA5 data. You can browse the <a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#%21/search?text=ERA5%20back%20extension&amp;type=dataset">Copernicus ERA5 storage</a>, use the <a class="reference external" href="https://cds.climate.copernicus.eu/api-how-to">copernicus client</a>, or the <a class="reference external" href="https://era5cli.readthedocs.io/en/stable/">era5cli package</a>. Here are futher instruction <a class="reference external" href="https://towardsdatascience.com/read-era5-directly-into-memory-with-python-511a2740bba0">how to use it directly in your jupyter notebook</a>.</p>
-<p>However, for the this tutorial we will access the data through the pangeo cloud storage. For that we just need the link to the atmosphere catalog at pangeo and the correct string to select the product:</p>
+<p>The magnitude of the wind vector represents the wind speed</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e370b0cc-222a-40e5-9ad7-10e11d2587b0">
+<span class="eqno">(1)<a class="headerlink" href="#equation-e370b0cc-222a-40e5-9ad7-10e11d2587b0" title="Permalink to this equation">¶</a></span>\[\begin{align}
+||u|| = \sqrt{u^2 + v^2}
+\end{align}\]</div>
+<p>which you will use later in the tutorial and discuss in more detail in tutorial 4. We will calculate that here and add it to our dataset.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># not needed/nor working in stand-alone version</span>
-<span class="c1"># cat = open_catalog("https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/atmosphere.yaml")</span>
-<span class="c1"># ERA5  = cat["era5_hourly_reanalysis_single_levels_sa"].to_dask()</span>
-<span class="c1"># ERA5</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># compute ten meter wind speed</span>
+<span class="n">ERA5_allvars</span><span class="p">[</span><span class="s1">'wind_speed'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">ERA5_allvars</span><span class="p">[</span><span class="s1">'northward_wind_at_10_metres'</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span>
+                                    <span class="n">ERA5_allvars</span><span class="p">[</span><span class="s1">'eastward_wind_at_10_metres'</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># calculate the wind speed from the vectors</span>
+<span class="c1"># name and units in the DataArray:</span>
+<span class="n">ERA5_allvars</span><span class="p">[</span><span class="s1">'wind_speed'</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">'long_name'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"10-meter wind speed"</span> <span class="c1"># assigning long name to the windspeed</span>
+<span class="n">ERA5_allvars</span><span class="p">[</span><span class="s1">'wind_speed'</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">'units'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"m/s"</span> <span class="c1"># assigning units</span>
+<span class="n">ERA5_allvars</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>You can see the available variables here if you like</p>
+</div>
+</div>
+<div class="section" id="section-2-plotting-spatial-maps-of-reanalysis-data">
+<h1><strong>Section 2: Plotting Spatial Maps of Reanalysis Data</strong><a class="headerlink" href="#section-2-plotting-spatial-maps-of-reanalysis-data" title="Permalink to this headline">¶</a></h1>
+<p>First, let’s plot the region’s surface temperature for the first time step of the reanalysis dataset. To do this let’s extract the air temperatre data from the dataset containing all the variables.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># not needed/nor working in stand-alone version</span>
-<span class="c1"># for k in list(set(ERA5.variables.keys()) - set(ERA5.coords.keys()) ) :</span>
-<span class="c1">#     print('variable name:' , k, ':')</span>
-<span class="c1">#     print('long name:' ,ERA5[k].attrs['long_name'])</span>
-<span class="c1">#     print('units:', ERA5[k].attrs['units'] )</span>
-<span class="c1">#     print('--------')</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds_surface_temp_2m</span> <span class="o">=</span> <span class="n">ERA5_allvars</span><span class="o">.</span><span class="n">air_temperature_at_2_metres</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>You see here an xarray dataset as introduced at the first day, with its coordinates and 17 variables covering the whole globe (-90 to +90 degrees in latitude, 0 to 360 degrees on longitude) and 30 years from 1979 to 2018. With this dataser you have access to our best guesses of variables on the earth surface with a spatial resolution 1/4 degree, that means each grid point represents about 25 km x 25 km, and a temporal resolution of 1 hour (!). That is a lot of data, but still just a fraction the data available trough the ERA5 web api (LINK). See the end of the tutorial for more information which variables are available.</p>
-</div>
-<div class="section" id="part-ii-selecting-regions-and-plotting-data">
-<h2>Part II: Selecting regions and plotting data<a class="headerlink" href="#part-ii-selecting-regions-and-plotting-data" title="Permalink to this headline">¶</a></h2>
-<p>Because the available data is so large, infact certainly too large to store it on your computer, we here just use subsets of this data to illustrate its use. Select one of the regions below to work with.</p>
-<p>Alternatively you can also define your own region (where you live for example), eventhough coastal regions work best for this exercise. For that please define a longitude and latitude range of a size between 10 and 50 degrees of a coastal region.
-To find the longitude and latitude coodinates of your region, you can use <a class="reference external" href="https://earth.google.com/">google earth view</a>, and read the position of your cursor in lower right corner.</p>
-<div class="section" id="note-about-the-geographic-coordinate-system-and-the-coodinates-used-in-this-data-set">
-<h3>Note about the geographic coordinate system and the coodinates used in this data set:<a class="headerlink" href="#note-about-the-geographic-coordinate-system-and-the-coodinates-used-in-this-data-set" title="Permalink to this headline">¶</a></h3>
-<p>A point on earth is reference in latitude-longitude coodinates relative to the zero meridian going through the Greenwich UK (longitude = 0 degree) and the equator (latitude = 0 degrees). That means points east of Greenwich up to the dateline on the other side of the globe are referencedas 0 to +180 and point to the west are 0 to -180. -180 and +180 refer to the same longitude, the so called “dateline” in the central pacific. However, Our data is referenced in an alternative way: Starting at the dateline, at 180 degrees longitude and then counting eastward to 360.
-The conversion between both reference systems is given in the fuctions below:</p>
+<p>We will be plotting this a little bit differently that you have previously plotted a map (and differently to how you will plot in most tutorials) so we can look at a few times steps interactively later. To do this we are using the package <a class="reference external" href="https://geoviews.org">geoviews</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># helping functions:</span>
-<span class="k">def</span> <span class="nf">geographic_lon_to_360</span><span class="p">(</span><span class="n">lon</span><span class="p">):</span>
-    <span class="k">return</span> <span class="mi">360</span> <span class="o">+</span> <span class="n">lon</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">holoviews</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">'bokeh'</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">inverted_geographic_lon_to_360</span><span class="p">(</span><span class="n">lon</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">lon</span> <span class="o">-</span> <span class="mi">180</span>
+<span class="n">dataset_plot</span> <span class="o">=</span> <span class="n">gvDataset</span><span class="p">(</span><span class="n">ds_surface_temp_2m</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time0</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span> <span class="c1"># select the first time step</span>
+
+<span class="c1"># create the image</span>
+<span class="n">images</span> <span class="o">=</span> <span class="n">dataset_plot</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">gvImage</span><span class="p">,</span> <span class="p">[</span><span class="s1">'longitude'</span><span class="p">,</span> <span class="s1">'latitude'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'air_temperature_at_2_metres'</span><span class="p">],</span> <span class="s1">'hour'</span><span class="p">)</span>
+
+<span class="c1"># aesthetics, add coastlines etc.</span>
+<span class="n">images</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s1">'coolwarm'</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span><span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span><span class="n">clabel</span><span class="o">=</span><span class="s1">'2m Air Temperature [K]'</span><span class="p">)</span> <span class="o">*</span> <span class="n">gf</span><span class="o">.</span><span class="n">coastline</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Note I: The order of range has to follow the convention of the data set.</span>
-<span class="c1"># For this dataset, the longitude range goes from 0 to 360 degrees and</span>
-<span class="c1"># the latitude range from 90 degrees North to 90 South.</span>
-
-<span class="c1">## Regions:</span>
-
-<span class="c1"># North eastern United States</span>
-<span class="n">lat_range</span> <span class="o">=</span> <span class="p">[</span><span class="mf">55.2</span><span class="p">,</span> <span class="mf">30.2</span><span class="p">]</span> <span class="c1"># From north to south</span>
-<span class="n">lon_range</span> <span class="o">=</span> <span class="p">[</span><span class="n">geographic_lon_to_360</span><span class="p">(</span><span class="o">-</span><span class="mf">90.0</span><span class="p">),</span> <span class="n">geographic_lon_to_360</span><span class="p">(</span><span class="o">-</span><span class="mi">65</span><span class="p">)]</span> <span class="c1"># from west to east</span>
-
-<span class="c1"># Coast of Brazil</span>
-
-<span class="c1"># Coast western Africa</span>
-
-<span class="c1"># Coast South Andes</span>
-
-<span class="c1"># Coast of India</span>
-
-<span class="c1"># Coast of South East Asia</span>
-
-<span class="c1"># !!! add more examples here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>next select a year and month that you want to work with. We recommend using a spring or summer month in the respective hemisphere:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### for pangeo access:</span>
-<span class="c1"># date = '2018-03'</span>
-
-<span class="c1"># # select the longitude-latitude box</span>
-<span class="c1"># ERA5_select = ERA5.sel(longitude= slice(lon_range[0] , lon_range[1])).sel(latitude = slice(lat_range[0] , lat_range[1]))</span>
-
-<span class="c1"># # select the month and the 3 variables we are intersted in</span>
-<span class="c1"># ERA5_select = ERA5_select.sel(time =date)[['t2m', 'u10', 'v10', 'tcc']]</span>
-<span class="c1"># #ERA5_select = ERA5_select.isel(time =slice(0, 72))</span>
-
-<span class="c1">### stand-alone version:</span>
-<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
-<span class="n">ERA5_select</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">'ERA5_select_example.nc'</span><span class="p">)</span>
-<span class="n">ERA5_select</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now lets plot data in this selected month. To understand the variable of the data we do that in 3 three different ways.</p>
+<p>In the above figure, coastlines are shown as black lines. Most of the selected region is land, with some ocean (lower left) and a lake (top middle).</p>
+<p>Next, we will examine variability at two different frequencies using interactive plots:</p>
 <ol class="simple">
-<li><p>Durinal cycle: We plot the mean of the 2-meter temperature, cloud cover, and surface wind speed at 0,6,12,18h of the local time (!)</p></li>
-<li><p>Synoptic variability: We plot the same variables at noon local time every 5th day.</p></li>
-<li><p>Monthly climatology: we plot the monthly climatology of the same variables</p></li>
+<li><p><strong>Hourly variability</strong></p></li>
+<li><p><strong>Daily variability</strong></p></li>
 </ol>
-<p>To get he surface wind speed we need to combine the zonald and meridional wind to an new variable “u_speed” in the data set:</p>
+<p>Note that in the previous tutorial you computed the monthly variability, or <em>climatology</em>, but here you only have one month of data loaded (March 2018). If you are curious about longer timescales you will visit this in the next tutorial!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ERA5_select</span><span class="p">[</span><span class="s1">'u_speed'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">ERA5_select</span><span class="p">[</span><span class="s1">'u10'</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">ERA5_select</span><span class="p">[</span><span class="s1">'v10'</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-<span class="c1"># for having the right name and units in the DataArray:</span>
-<span class="n">ERA5_select</span><span class="p">[</span><span class="s1">'u_speed'</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">'long_name'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"10-meter wind speed"</span>
-<span class="n">ERA5_select</span><span class="p">[</span><span class="s1">'u_speed'</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">'units'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"m/s"</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="part-iii-plotting-spatial-maps">
-<h2>Part III: Plotting spatial maps<a class="headerlink" href="#part-iii-plotting-spatial-maps" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="making-a-first-plot">
-<h3>1. Making a first plot<a class="headerlink" href="#making-a-first-plot" title="Permalink to this headline">¶</a></h3>
-<p>Let plot some data! Pick any day wihtin the month you selected before and plot the 2-meter temperature, the wind speed and the total cloud cover.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">date</span> <span class="o">=</span> <span class="s2">"2018-03"</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># interactive plot of hourly frequency of surface temperature</span>
+<span class="c1"># this cell may take a little longer as it contains several maps in a single plotting function</span>
+<span class="n">ds_surface_temp_2m_hour</span><span class="o">=</span><span class="n">ds_surface_temp_2m</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'time0.hour'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">dataset_plot</span> <span class="o">=</span> <span class="n">gvDataset</span><span class="p">(</span><span class="n">ds_surface_temp_2m_hour</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">hour</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">12</span><span class="p">)))</span> <span class="c1"># only the first 12 time steps, as it is a time consuming task</span>
+<span class="n">images</span> <span class="o">=</span> <span class="n">dataset_plot</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">gvImage</span><span class="p">,</span> <span class="p">[</span><span class="s1">'longitude'</span><span class="p">,</span> <span class="s1">'latitude'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'air_temperature_at_2_metres'</span><span class="p">],</span> <span class="s1">'hour'</span><span class="p">)</span>
+<span class="n">images</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s1">'coolwarm'</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span><span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span><span class="n">clabel</span><span class="o">=</span><span class="s1">'2m Air Temperature [K]'</span><span class="p">)</span> <span class="o">*</span> <span class="n">gf</span><span class="o">.</span><span class="n">coastline</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ERA5_one_day = ERA5_select.isel(time = 29)</span>
-<span class="c1"># or alternatively, you can speficy the data of the day</span>
-<span class="n">day_string</span> <span class="o">=</span> <span class="n">date</span> <span class="o">+</span><span class="s1">'-02'</span>
-<span class="n">ERA5_one_day</span> <span class="o">=</span> <span class="n">ERA5_select</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span> <span class="o">=</span> <span class="n">day_string</span> <span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">'time'</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># interactive plot of hourly frequency of surface temperature</span>
+<span class="c1"># this cell may take a little longer as it contains several maps in a single plotting function holoviews.extension('bokeh')</span>
+<span class="n">ds_surface_temp_2m_day</span><span class="o">=</span><span class="n">ds_surface_temp_2m</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'time0.day'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">dataset_plot</span> <span class="o">=</span> <span class="n">gvDataset</span><span class="p">(</span><span class="n">ds_surface_temp_2m_day</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">day</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)))</span> <span class="c1"># only the first 10 time steps, as it is a time consuming task</span>
+<span class="n">images</span> <span class="o">=</span> <span class="n">dataset_plot</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">gvImage</span><span class="p">,</span> <span class="p">[</span><span class="s1">'longitude'</span><span class="p">,</span> <span class="s1">'latitude'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'air_temperature_at_2_metres'</span><span class="p">],</span> <span class="s1">'day'</span><span class="p">)</span>
+<span class="n">images</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s1">'coolwarm'</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span><span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span><span class="n">clabel</span><span class="o">=</span><span class="s1">'Air Temperature [K]'</span><span class="p">)</span> <span class="o">*</span> <span class="n">gf</span><span class="o">.</span><span class="n">coastline</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="question-2">
+<h2><strong>Question 2</strong><a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>What differences do you notice between the hourly and daily interactive plots, and are there any interesting spatial patterns of these temperature changes?</p></li>
+</ol>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/solutions/W1D2_Tutorial2_Solution_64cd961b.py"><em>Click for solution</em></a></p>
+</div>
+</div>
+<div class="section" id="section-3-plotting-timeseries-of-reanalysis-data">
+<h1><strong>Section 3: Plotting Timeseries of Reanalysis Data</strong><a class="headerlink" href="#section-3-plotting-timeseries-of-reanalysis-data" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="section-3-1-surface-air-temperature-timeseries">
+<h2><strong>Section 3.1: Surface Air Temperature Timeseries</strong><a class="headerlink" href="#section-3-1-surface-air-temperature-timeseries" title="Permalink to this headline">¶</a></h2>
+<p>You have demonstrated that there are a lot of changes in surface temperature within a day and between days. It is crucial to understand this <em>temporal variability</em> in the data when performing climate analysis.</p>
+<p>Rather than plotting interactive spatial maps for different timescales, in this last section you will create a timeseries of surface air temperature from the data you have already examined to look at variability on longer than daily timescales. Instead of taking the mean in <em><strong>time</strong></em> to create <em>maps</em>, you will now take the mean in <em><strong>space</strong></em> to create <em>timeseries</em>.</p>
+<p><em>Note that the spatially-averaged data will now only have a time coordinate coordinate, making it a timeseries (ts).</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># find weights (this is a regular grid so we can use cos(lat))</span>
+<span class="n">weights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">ds_surface_temp_2m</span><span class="o">.</span><span class="n">lat</span><span class="p">))</span>
+<span class="n">weights</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">"weights"</span>
 
-<span class="k">for</span> <span class="n">var</span> <span class="ow">in</span>  <span class="p">[</span><span class="s1">'t2m'</span><span class="p">,</span> <span class="s1">'tcc'</span><span class="p">,</span> <span class="s1">'u_speed'</span><span class="p">]:</span>
-    <span class="n">F</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">set_region_figure</span><span class="p">(</span><span class="n">lon_range</span><span class="p">,</span> <span class="n">lat_range</span><span class="p">)</span>
+<span class="c1"># take the weighted spatial mean since the latitude range of the region of interest is large</span>
+<span class="n">ds_surface_temp_2m_ts</span> <span class="o">=</span> <span class="n">ds_surface_temp_2m</span><span class="o">.</span><span class="n">weighted</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">([</span><span class="s1">'lon'</span><span class="p">,</span> <span class="s1">'lat'</span><span class="p">])</span>
+<span class="n">ds_surface_temp_2m_ts</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot the timeseries of surface temperature</span>
 
-    <span class="c1">#format_axes(ax)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Example Region | '</span><span class="o">+</span> <span class="n">var</span> <span class="o">+</span><span class="s1">' | '</span><span class="o">+</span> <span class="n">day_string</span><span class="p">)</span>
-    <span class="n">dataplot</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">ERA5_select</span><span class="o">.</span><span class="n">longitude</span><span class="p">,</span> <span class="n">ERA5_select</span><span class="o">.</span><span class="n">latitude</span><span class="p">,</span> <span class="n">ERA5_one_day</span><span class="p">[</span><span class="n">var</span><span class="p">],</span> <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">dataplot</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">'vertical'</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="n">cbar_label</span><span class="p">(</span><span class="n">ERA5_select</span><span class="p">[</span><span class="n">var</span><span class="p">])</span> <span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="exercise">
-<h3><em>Exercise:</em><a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Change the day you plot and try to observe how the temperature and the other two variables change betwee the days. We will look at the more carefully below</p></li>
-</ul>
-</div>
-<div class="section" id="synoptic-variabilty">
-<h3>2. Synoptic Variabilty<a class="headerlink" href="#synoptic-variabilty" title="Permalink to this headline">¶</a></h3>
-<p>Lets explore how the temperature, ccloud cover and surface wind speed change in this region due to changes in weather. In most regions of the world the weather changes about every 5 days. Such that it will be helpful to look at the daily data every 5th day.</p>
-</div>
-<div class="section" id="id17">
-<h3>Exercise:<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
-<p>To select dailyt means every 5 days, use the data in the selected region ‘ERA5_select’ an the function xr.resample. Then take the daily mean and then select the 0, 5, 10, and 15th day.
-In a last step create the monthly mean of the data and subtract it from the select 5 days such that we can plot the anomalies from the monthly mean:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># annswer</span>
-<span class="n">ERA5_synoptic</span><span class="o">=</span> <span class="n">ERA5_select</span><span class="o">.</span><span class="n">resample</span><span class="p">({</span><span class="s1">'time'</span><span class="p">:</span> <span class="s1">'1D'</span><span class="p">})</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">'time'</span><span class="p">)</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">])</span>
-<span class="n">ERA5_select_mm</span> <span class="o">=</span> <span class="n">ERA5_select</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">'time'</span><span class="p">)</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
-<span class="n">ERA5_synoptic</span> <span class="o">=</span> <span class="p">(</span><span class="n">ERA5_synoptic</span> <span class="o">-</span> <span class="n">ERA5_select</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">'time'</span><span class="p">))</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Lets then plot the monthly mean and the 4 days foreach variable. Use the framework from the last section for the monthly mean and the function <em>plot_variable_Facet</em> like this:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot_variable_Facet(dataset, # the calculated data with only 4 selected timesteps</span>
-<span class="c1">#                     var_name, #the name of the variable you want to plot (string)</span>
-<span class="c1">#                     time_dim, "time", #the dimension along the facets of plots will be made, use "time" here</span>
-<span class="c1">#                     title # optional string to give the plot a title</span>
-<span class="c1">#                    )</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer, most compact version</span>
-<span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'t2m'</span><span class="p">,</span> <span class="s1">'u_speed'</span><span class="p">,</span> <span class="s1">'tcc'</span><span class="p">]:</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>  <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-    <span class="n">F</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">set_region_figure</span><span class="p">(</span><span class="n">lon_range</span><span class="p">,</span> <span class="n">lat_range</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Monthly mean of '</span><span class="o">+</span> <span class="n">var</span> <span class="p">)</span>
-    <span class="n">dataplot</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">ERA5_select_mm</span><span class="o">.</span><span class="n">longitude</span><span class="p">,</span> <span class="n">ERA5_select_mm</span><span class="o">.</span><span class="n">latitude</span><span class="p">,</span> <span class="n">ERA5_select_mm</span><span class="p">[</span><span class="n">var</span><span class="p">],</span> <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">dataplot</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">'vertical'</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="n">cbar_label</span><span class="p">(</span><span class="n">ERA5_select</span><span class="p">[</span><span class="n">var</span><span class="p">])</span> <span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ds_surface_temp_2m_ts</span><span class="o">.</span><span class="n">time0</span><span class="p">,</span> <span class="n">ds_surface_temp_2m_ts</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'2m Air </span><span class="se">\n</span><span class="s1">Temperature (K)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">45</span><span class="p">)</span>
 
-    <span class="n">title_str</span> <span class="o">=</span>  <span class="n">ERA5_select</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">'long_name'</span><span class="p">]</span> <span class="o">+</span> <span class="s2">" | daily anomalie from the monthly mean "</span>
-    <span class="n">aa</span> <span class="o">=</span> <span class="n">plot_variable_Facet</span><span class="p">(</span><span class="n">ERA5_synoptic</span><span class="p">,</span> <span class="n">var</span><span class="p">,</span> <span class="n">time_dim</span> <span class="o">=</span><span class="s2">"time"</span><span class="p">,</span> <span class="n">title</span> <span class="o">=</span><span class="n">title_str</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>you should see 4 panels for each variable. Each panel shows the difference, the anomalie, to the monthly mean, and each panel is 5 days appart. You see that indeed the</p>
-</div>
-<div class="section" id="durinal-cycle-coastel-clouds-at-the-coast-on-a-sunny-day">
-<h3>3. Durinal cycle - Coastel clouds at the coast on a sunny day?<a class="headerlink" href="#durinal-cycle-coastel-clouds-at-the-coast-on-a-sunny-day" title="Permalink to this headline">¶</a></h3>
-<p>There is more the synoptic variability (~5 days) in the data. Lets think about how our data varying within 24 hours, but for that we have to look at the hourly data, rather then the daily mean.
-During the day, the sun warms the surface and effect many other variables, like winds and cloud cover, eventhough that really depends on the region and the month you choose. To see the durinal cycle in the data we want to select timestamps in the morning (6 am), at noon (12pm), in the evening (6pm), at midnight (12 am).</p>
-<p>However, the ERA5 data is saved with the UTC (Coordinated Universal Time), such that we have to shift the time axis to the local time. Here we take a shortcut use the longitudinal coordinate as proxi for the local time:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># this functionn takes a longitudinal coodinate and returns the timezone difference compared to UTC.</span>
-<span class="c1"># lets use here the center between the longitude boundaries of the domain and express it in the -180 to 180 coordinates again</span>
-<span class="n">time_shift</span> <span class="o">=</span> <span class="n">get_time_compared_to_UTC</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">lon_range</span><span class="p">)</span> <span class="o">-</span> <span class="mi">360</span><span class="p">)</span>
-<span class="c1"># define a new coodinate "local_time" and add it to the coordinates of the dataset</span>
-<span class="n">ERA5_select</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="s1">'local_time'</span><span class="p">]</span> <span class="o">=</span> <span class="n">ERA5_select</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="s1">'time'</span><span class="p">]</span> <span class="o">+</span> <span class="n">time_shift</span>
-
-<span class="c1">#this provides us with two time coorinates, one in UTC "time" and one in local time "local time"</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"UTC time   "</span><span class="p">,</span> <span class="n">ERA5_select</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="s1">'time'</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"local time "</span><span class="p">,</span> <span class="n">ERA5_select</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="s1">'local_time'</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now we want to calculate the typical durinal cycle for the year and the month we chose before. For that, we can group the data by hour of the day, andthen take the mean for each hour of the day over the whole month, and then select hour 0 (midnight), 6, 12, and 24:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ERA5_durinal_cycle</span><span class="o">=</span> <span class="n">ERA5_select</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'local_time.hour'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">'time'</span><span class="p">)</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">hour</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span><span class="mi">18</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>It is often better to show the data as the anomalie from a mean value, to see the differences in the data better. For that, we here just take the mean over the whole month and subtract it. The remaining data is the anomalous data, i.e. the anomalie of the durinal cyle from the monthly mean:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ERA5_durinal_cycle_anomalie</span> <span class="o">=</span> <span class="n">ERA5_durinal_cycle</span> <span class="o">-</span> <span class="n">ERA5_select</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">'time'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># here we take the anomalie value because the spatial temperature difference can be quiet large.</span>
-<span class="n">var</span><span class="o">=</span> <span class="s1">'t2m'</span>
-<span class="n">plot_variable_Facet</span><span class="p">(</span><span class="n">ERA5_durinal_cycle_anomalie</span><span class="p">,</span> <span class="n">var</span><span class="p">,</span> <span class="n">time_dim</span> <span class="o">=</span><span class="s2">"hour"</span><span class="p">,</span> <span class="n">title</span> <span class="o">=</span> <span class="s2">"2-meter temperature Anomalie from monthly mean at hour:"</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="n">var</span><span class="o">=</span> <span class="s1">'u_speed'</span>
-<span class="n">plot_variable_Facet</span><span class="p">(</span><span class="n">ERA5_durinal_cycle_anomalie</span><span class="p">,</span> <span class="n">var</span><span class="p">,</span> <span class="n">time_dim</span> <span class="o">=</span><span class="s2">"hour"</span><span class="p">,</span> <span class="n">title</span> <span class="o">=</span> <span class="s2">"typical Wind Speed Anomalie at hour:"</span><span class="p">)</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="n">var</span><span class="o">=</span> <span class="s1">'tcc'</span>
-<span class="n">plot_variable_Facet</span><span class="p">(</span><span class="n">ERA5_durinal_cycle_anomalie</span><span class="p">,</span> <span class="n">var</span><span class="p">,</span> <span class="n">time_dim</span> <span class="o">=</span><span class="s2">"hour"</span><span class="p">,</span> <span class="n">title</span> <span class="o">=</span> <span class="s2">"Total Cloud Cover Anomalie at hour"</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Purples</span><span class="p">)</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="discussion-questions">
-<h3><em>Discussion Questions:</em><a class="headerlink" href="#discussion-questions" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Where in your choosen region do you see the largest typical temperature changes over the course of the day? Where do see the smallest changes? Is that what you expected?</p></li>
-<li><p>Look at the wind speed and the surface temperature. Where do you see the strongest wind anomalies over the course of a day, why?</p></li>
-<li><p>Where do you see the most cloud cover? how is that related to the winds and the temperature?</p></li>
-</ul>
-<div class="section" id="short-answers">
-<h4>short answers:<a class="headerlink" href="#short-answers" title="Permalink to this headline">¶</a></h4>
-<ul class="simple">
-<li><p>Where in your choosen region do you see the largest typical temperature changes over the course of the day? Where do see the smallest changes? Is that what you expected?
-the largest changes are over land, because the land repsonses quickly to solar radiation. the changes over the ocean are small, because the ocean need much longer to heat up by the sun.</p></li>
-<li><p>Look at the wind speed and the surface temperature. Where do you see the strongest wind anomalies over the course of a day, why?
-The winds are stronger over land when the solar radiation is highest and the surface the warmest. The changes in the durinal cycle of winds over the ocean however is small (that doesn’t mean the winds are generally weak).</p></li>
-<li><p>Where do you see the most cloud cover? how is that related to the winds and the temperature?
-the largest cloud cover is along the coast line because of the sea-breeze phenomonen. it advects cold air from the ocean over to the land and leads to clouds.</p></li>
-</ul>
-<p>have a look here:
-https://www.youtube.com/watch?v=X2Wfp2rPvMY
-and read here:
-https://resources.eumetrain.org/satmanu/CMs/SB/print.htm</p>
+<div class="section" id="questions-3-1">
+<h3><strong>Questions 3.1</strong><a class="headerlink" href="#questions-3-1" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>What is the dominant source of the high frequency (short timescale) variability?</p></li>
+<li><p>What drives the lower frequency variability?</p></li>
+<li><p>Would the ENSO variablity that you computed in the previous tutorial show up here? Why or why not?</p></li>
+</ol>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/solutions/W1D2_Tutorial2_Solution_edb98043.py"><em>Click for solution</em></a></p>
 </div>
 </div>
-</div>
-<div class="section" id="part-4-another-way-to-look-at-variabilty-creating-time-series">
-<h2>Part 4: Another way to look at variabilty: Creating time series<a class="headerlink" href="#part-4-another-way-to-look-at-variabilty-creating-time-series" title="Permalink to this headline">¶</a></h2>
-<p>By not you might have realized that there are a lot of change in the data on many time scale, ranging from changes wihtin a day to, changes from day to day and from month to month. This <em>variability</em> in the data important to understand when we do climate analysis.</p>
-<p>Rather then plotting spatial maps for different time steps or time scale, in this last part of the tutorial we will create timeseries from the same data you look at already. That is staight foreward. Instead of taking the mean in time, we take the mean in space.</p>
+<div class="section" id="section-3-2-comparing-timeseries-of-multiple-variables">
+<h2><strong>Section 3.2: Comparing Timeseries of Multiple Variables</strong><a class="headerlink" href="#section-3-2-comparing-timeseries-of-multiple-variables" title="Permalink to this headline">¶</a></h2>
+<p>Below you will calculate the timeseries of the surface air temperature which we just plotted, alongside timeseries of several other ERA5 variables for the same period and region: 10-meter wind speed, atmospheric surface pressure, and sea surface temperature.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ERA5_ts</span> <span class="o">=</span> <span class="n">ERA5_select</span><span class="o">.</span><span class="n">mean</span><span class="p">([</span><span class="s1">'longitude'</span><span class="p">,</span> <span class="s1">'latitude'</span><span class="p">])</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ERA5_allvars_ts</span> <span class="o">=</span> <span class="n">ERA5_allvars</span><span class="o">.</span><span class="n">weighted</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">([</span><span class="s1">'lon'</span><span class="p">,</span> <span class="s1">'lat'</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax_list</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mf">6.6</span><span class="p">),</span>  <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_vars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'air_temperature_at_2_metres'</span><span class="p">,</span> <span class="s1">'wind_speed'</span><span class="p">,</span>
+                <span class="s1">'surface_air_pressure'</span><span class="p">,</span><span class="s1">'sea_surface_temperature'</span><span class="p">]</span>
 
-<span class="k">for</span> <span class="n">var</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span>  <span class="nb">zip</span><span class="p">([</span><span class="s1">'t2m'</span><span class="p">,</span> <span class="s1">'tcc'</span><span class="p">,</span> <span class="s1">'u_speed'</span><span class="p">],</span> <span class="n">ax_list</span> <span class="p">):</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax_list</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">plot_vars</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">13</span><span class="p">),</span>  <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ERA5_ts</span><span class="o">.</span><span class="n">time</span><span class="p">,</span> <span class="n">ERA5_ts</span><span class="p">[</span><span class="n">var</span><span class="p">])</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">cbar_label</span><span class="p">(</span><span class="n">ERA5_select</span><span class="p">[</span><span class="n">var</span><span class="p">]),</span> <span class="n">loc</span><span class="o">=</span><span class="s1">'left'</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">var</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span>  <span class="nb">zip</span><span class="p">(</span><span class="n">plot_vars</span><span class="p">,</span> <span class="n">ax_list</span> <span class="p">):</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ERA5_allvars_ts</span><span class="o">.</span><span class="n">time0</span><span class="p">,</span> <span class="n">ERA5_allvars_ts</span><span class="p">[</span><span class="n">var</span><span class="p">])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">ERA5_allvars</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">'long_name'</span><span class="p">]</span><span class="o">+</span><span class="s1">': '</span><span class="o">+</span><span class="n">ERA5_allvars</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">'units'</span><span class="p">],</span>
+                  <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">45</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="questions">
-<h3><em>Questions</em><a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Which variable is dominated by the durinal cycle?</p></li>
-<li><p>which variable by the synoptic scale (~ 5 day)?</p></li>
-</ul>
-</div>
-</div>
-<div class="section" id="id18">
-<h2><em>Exercise</em>:<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
-<p>In this final exercise, let’s compare the effect of spatial averaging and temporal avering on the data.
-For that, focus on the surface wind speed ‘u_speed’ and make four different time series that represent the wind speed in the region</p>
-<ul class="simple">
-<li><ol class="simple">
-<li><p>ERA5_ts_spatial_average  - <em>this is the timeseries of the spatial average of data for each timestep (as above)</em></p></li>
+<div class="section" id="questions-3-2">
+<h3><strong>Questions 3.2</strong><a class="headerlink" href="#questions-3-2" title="Permalink to this headline">¶</a></h3>
+<p>Which variable shows variability that is dominated by:</p>
+<ol class="simple">
+<li><p>The diurnal cycle?</p></li>
+<li><p>The synoptic [~5 day] scale?</p></li>
+<li><p>A mix of these two timescales?</p></li>
+<li><p>Longer timescales?</p></li>
 </ol>
-</li>
-<li><ol class="simple">
-<li><p>ERA5_ts_point - <em>this is the hourly timeseries on data at one grid point in the center of your domain</em></p></li>
-</ol>
-</li>
-<li><ol class="simple">
-<li><p>ERA5_ts_point_daily  - <em>this is the timeseries of the point data but resamples the daily values</em></p></li>
-</ol>
-</li>
-<li><ol class="simple">
-<li><p>ERA5_ts_spatial_average_daily  - <em>this is the timeseries of the spatially averaged data but also resamples the daily values</em></p></li>
-</ol>
-</li>
-</ul>
-<p>plot the data!</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># answers:</span>
-<span class="n">var</span> <span class="o">=</span> <span class="s1">'u_speed'</span>
-<span class="n">ERA5_ts_spatial_average</span> <span class="o">=</span> <span class="n">ERA5_select</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">([</span><span class="s1">'longitude'</span><span class="p">,</span> <span class="s1">'latitude'</span><span class="p">])</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
-<span class="n">ERA5_ts_point</span>           <span class="o">=</span> <span class="n">ERA5_select</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span> <span class="n">longitude</span> <span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">lon_range</span><span class="p">)</span> <span class="p">,</span> <span class="n">latitude</span> <span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">lat_range</span><span class="p">),</span> <span class="n">method</span> <span class="o">=</span><span class="s1">'nearest'</span> <span class="p">)</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
-
-<span class="n">ERA5_ts_point_daily</span>     <span class="o">=</span> <span class="n">ERA5_ts_point</span><span class="o">.</span><span class="n">resample</span><span class="p">({</span><span class="s1">'time'</span> <span class="p">:</span><span class="s1">'1D'</span><span class="p">},</span> <span class="n">offset</span><span class="o">=</span> <span class="s1">'12h'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="n">ERA5_ts_spatial_average_daily</span> <span class="o">=</span> <span class="n">ERA5_ts_spatial_average</span><span class="o">.</span><span class="n">resample</span><span class="p">({</span><span class="s1">'time'</span> <span class="p">:</span><span class="s1">'1D'</span><span class="p">},</span> <span class="n">offset</span><span class="o">=</span> <span class="s1">'12h'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</pre></div>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/solutions/W1D2_Tutorial2_Solution_86cbd94f.py"><em>Click for solution</em></a></p>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer part II:</span>
-<span class="n">ERA5_ts_point</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span> <span class="s1">'gray'</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'point data'</span><span class="p">)</span>
-<span class="n">ERA5_ts_point_daily</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span> <span class="s1">'black'</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">'*'</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'daily average point data'</span><span class="p">)</span>
-
-<span class="n">ERA5_ts_spatial_average</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span> <span class="s1">'darkblue'</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'spatial average'</span><span class="p">)</span>
-<span class="n">ERA5_ts_spatial_average_daily</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span> <span class="s1">'blue'</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">'*'</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'daily and spatial average'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="id19">
-<h2><em>Questions</em>:<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>What is the difference in these 4 four time series?</p></li>
-<li><p>What version represents the wind speed in the region the best way?</p></li>
-</ul>
-<p>#comments:</p>
-<p>All four timeseries are different represenations on the wind variability in the region.
-The spatial averaging acts as a smothing of the data and hene has less varaiblity the the point data. However, we often don’t have all the data all the time and instead just some <em>sample</em> of the wind speed, as for example in the point data.
-But that point data shows a different variability than then spatial average, regardless if we resample to 1 day or not. Be aware that the resolution of the data and the way it is averaged and sampled matters!</p>
-</div>
-</div>
-<hr class="docutils"/>
 <div class="section" id="summary">
-<h1>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h1>
-<p>In this tutorial you learned how to access and navigaate ERA5 renanlysis data. You can now select subregions in the renalysis and take averages or subsamples in space and time.
-You have seen how averaging data reduces the variabilty and that any dataset, ranging from timeseries to spatial maps has a resolution and a timestep that are important to know when understanding the data.</p>
+<h1><strong>Summary</strong><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial, you learned how to access and process ERA5 reanalysis data. You are able to select specific regions within the reanalysis dataset and perform operations such as taking spatial and temporal averages.</p>
+<p>You also looked at different climate variables to distinguish idenitfy the variability present at different timescales.</p>
+<div class="section" id="bonus-section-1-selecting-a-different-spatial-region">
+<h2><strong>Bonus Section 1: Selecting a Different Spatial Region</strong><a class="headerlink" href="#bonus-section-1-selecting-a-different-spatial-region" title="Permalink to this headline">¶</a></h2>
+<p>Define another spatial region, such as where you live, by selecting a longitude and latitude range of of your choosing. To find the longitude and latitude coordinates of your region, you can use <a class="reference external" href="https://earth.google.com/">Google Earth view</a>, and read the position of your cursor in the lower right corner.</p>
+<div class="section" id="bonus-section-1-1-note-about-the-geographic-coordinate-system-and-the-coordinates-used-in-this-dataset">
+<h3><strong>Bonus Section 1.1: Note About the Geographic Coordinate System and the Coordinates Used in This Dataset</strong><a class="headerlink" href="#bonus-section-1-1-note-about-the-geographic-coordinate-system-and-the-coordinates-used-in-this-dataset" title="Permalink to this headline">¶</a></h3>
+<p>A point on Earth is described by latitude-longitude coordinates relative to the zero-meridian line going through Greenwich in London, UK (longitude = 0 degree) and the xero-latitude line along the equator (latitude = 0 degrees). Points east of Greenwich up to the <em>dateline</em> on the opposite side of the globe are referenced as 0 to +180 and points to the west of Greenwich are 0 to -180. -180 and +180 refer to the same longitude, the so-called <em>dateline</em> in the central pacific.</p>
+<p>However, our data is referenced in a slightly different way where longitude runs from 0 to 360 rather than -180 to +180. Longitude increases as you move east of Greenwich, until you reach Greenwich again (0 or 360 degrees), rather than stopping at the <em>dateline</em>.</p>
 </div>
-<hr class="docutils"/>
-<div class="section" id="bonus-extending-the-timeseries-analysis-to-long-timeperiods">
-<h1>Bonus: Extending the timeseries analysis to long timeperiods<a class="headerlink" href="#bonus-extending-the-timeseries-analysis-to-long-timeperiods" title="Permalink to this headline">¶</a></h1>
-<p>Use the tools provided above and make a timeseries of the surface temperature und and surface wind over the 30 years of the ERA5 data. First select the region in ERA5 as before but know use all time steps. Then resample to daily means and plot each variable in a single planel or figure.</p>
+</div>
+</div>
+<div class="section" id="resources">
+<h1><strong>Resources</strong><a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h1>
+<p>Data for this tutorial can be accessed <a class="reference external" href="https://registry.opendata.aws/ecmwf-era5/">here</a>.</p>
 </div>
 <script type="text/x-thebe-config">
     {
@@ -2089,16 +1538,16 @@ You have seen how averaging data reduces the variabilty and that any dataset, ra
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "pangeo"
+            mode: "climatematch"
         },
         kernelOptions: {
-            kernelName: "pangeo",
+            kernelName: "climatematch",
             path: "./tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student"
         },
         predefinedOutput: true
     }
     </script>
-<script>kernelName = 'pangeo'</script>
+<script>kernelName = 'climatematch'</script>
 </div>
 </main>
 <footer class="footer-article noprint">
@@ -2108,13 +1557,13 @@ You have seen how averaging data reduces the variabilty and that any dataset, ra
 <i class="fas fa-angle-left"></i>
 <div class="prev-next-info">
 <p class="prev-next-subtitle">previous</p>
-<p class="prev-next-title">Calculating ENSO with Xarray</p>
+<p class="prev-next-title"><strong>Tutorial 1: Calculating ENSO with Xarray</strong></p>
 </div>
 </a>
 <a class="right-next" href="W1D2_Tutorial3.html" id="next-link" title="next page">
 <div class="prev-next-info">
 <p class="prev-next-subtitle">next</p>
-<p class="prev-next-title">Tutorial 3: Atmospheric wind driven circulation</p>
+<p class="prev-next-title"><strong>Tutorial 3: Atmospheric  Circulation</strong></p>
 </div>
 <i class="fas fa-angle-right"></i>
 </a>

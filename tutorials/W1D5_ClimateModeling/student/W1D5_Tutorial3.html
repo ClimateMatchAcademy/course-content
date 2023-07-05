@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Setup — Climatematch Academy: Computational Climate Science</title>
+<title>Tutorial 3 : A Zero-Dimensional Energy Balance Model — Climatematch Academy: Computational Climate Science</title>
 <!-- Loaded before other Sphinx assets -->
 <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
@@ -40,10 +40,11 @@ const thebe_selector_output = ".output, .cell_output"
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
 <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-<link href="../../../genindex.html" rel="index" title="Index">
+<link href="../../../_static/cma-logo-square-4xp.png" rel="shortcut icon">
+<link href="../../../genindex.html" rel="index" title="Index"/>
 <link href="../../../search.html" rel="search" title="Search"/>
-<link href="W1D5_Tutorial4.html" rel="next" title="Setup"/>
-<link href="W1D5_Tutorial2.html" rel="prev" title="Setup"/>
+<link href="W1D5_Tutorial4.html" rel="next" title="Tutorial 4: Climate Feedbacks"/>
+<link href="W1D5_Tutorial2.html" rel="prev" title="Tutorial 2 : Energy Balance"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="None" name="docsearch:language"/>
 <!-- Google Analytics -->
@@ -70,6 +71,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="bd-sidebar__content">
 <div class="bd-sidebar__top"><div class="navbar-brand-box">
 <a class="navbar-brand text-wrap" href="../../../index.html">
+<!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+<img alt="logo" class="logo" src="../../../_static/cma-logo-square-4xp.png"/>
 <h1 class="site-logo" id="site-title">Climatematch Academy: Computational Climate Science</h1>
 </a>
 </div><form action="../../../search.html" class="bd-search d-flex align-items-center" method="get">
@@ -307,33 +310,45 @@ const thebe_selector_output = ".output, .cell_output"
 <ul>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial1.html">
-     Calculating ENSO with Xarray
-    </a>
+<strong>
+      Tutorial 1: Calculating ENSO with Xarray
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial2.html">
-     Tutorial 2: A lot of weather makes climate - exploring the ERA5 Reanalysis
-    </a>
+<strong>
+      Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial3.html">
-     Tutorial 3: Atmospheric wind driven circulation
-    </a>
+<strong>
+      Tutorial 3: Atmospheric  Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial4.html">
-     Tutorial 4: Ocean wind driven circulation
-    </a>
+<strong>
+      Tutorial 4: Oceanic Wind-driven Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial5.html">
-     Tutorial 5: Thermohaline circulation
-    </a>
+<strong>
+      Tutorial 5: Thermohaline Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial6.html">
-     Tutorial 6: Ocean heat content
-    </a>
+<strong>
+      Tutorial 6: Ocean Heat Content
+     </strong>
+</a>
 </li>
 </ul>
 </li>
@@ -349,13 +364,17 @@ const thebe_selector_output = ".output, .cell_output"
 <ul>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.html">
-     Video 1: What is Remote Sensing
-    </a>
+<strong>
+      Tutorial 1: Introduction to Remote Sensing
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.html">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 2: Exploring Satellite Climate Data Records
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial3.html">
@@ -364,13 +383,17 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial4.html">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 4: Understanding Climatology Through Precipitation Data
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial5.html">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 5: Calculating Anomalies Using Precipitation Data
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial6.html">
@@ -490,18 +513,24 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D5_Tutorial2.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 2 : Energy Balance
+     </strong>
+</a>
 </li>
 <li class="toctree-l2 current active">
 <a class="current reference internal" href="#">
-     Setup
-    </a>
+<strong>
+      Tutorial 3 : A Zero-Dimensional Energy Balance Model
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D5_Tutorial4.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 4: Climate Feedbacks
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D5_Tutorial5.html">
@@ -843,71 +872,139 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#">
-   Setup
-  </a>
-<ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#package-imports">
-     Package Imports
-    </a>
+<strong>
+    Tutorial 3 : A Zero-Dimensional Energy Balance Model
+   </strong>
+</a>
 </li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-objectives">
+<strong>
+    Tutorial Objectives
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#setup">
+<strong>
+    Setup
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
 <a class="reference internal nav-link" href="#figure-settings">
-     Figure Settings
+     Figure settings
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#video-1-a-zero-dimensional-energy-balance-model">
+     Video 1: A Zero-Dimensional Energy Balance Model
     </a>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-1-heat-capacity">
-   Section 1 : Heat Capacity
-  </a>
+<a class="reference internal nav-link" href="#section-1-building-the-model">
+<strong>
+    Section 1 : Building the Model
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#questions">
-     Questions
-    </a>
+<a class="reference internal nav-link" href="#section-1-1-moving-forward-in-time">
+<strong>
+      Section 1.1 : Moving Forward in Time
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#coding-exercises-1-1">
+<strong>
+        Coding Exercises 1.1
+       </strong>
+</a>
+</li>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-1-climate-connection">
+<strong>
+        Questions 1.1: Climate Connection
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#coding-exercises">
-     Coding Exercises
-    </a>
+<a class="reference internal nav-link" href="#section-1-2-the-numerical-model">
+<strong>
+      Section 1.2 : The Numerical Model
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-2">
+<strong>
+        Questions 1.2
+       </strong>
+</a>
+</li>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#coding-exercise-1-2">
+<strong>
+        Coding Exercise 1.2
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-2-add-time-dependency-to-the-model">
-   Section 2 : Add Time Dependency to the Model
-  </a>
+<a class="reference internal nav-link" href="#section-2-revisiting-the-climate-change-scenario-from-tutorial-2">
+<strong>
+    Section 2: Revisiting the Climate Change Scenario from Tutorial 2
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id1">
-     Questions
-    </a>
+<a class="reference internal nav-link" href="#section-2-1-enhanced-greenhouse-effect">
+<strong>
+      Section 2.1: Enhanced Greenhouse Effect
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-2-1">
+<strong>
+        Questions 2.1
+       </strong>
+</a>
 </li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id2">
-     Coding Exercises
-    </a>
+</ul>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-3-revisiting-the-climate-change-scenario-from-tutorial-2">
-   Section 3 : Revisiting the Climate Change Scenario from Tutorial 2
-  </a>
+<a class="reference internal nav-link" href="#bonus-coding-exercise-equilibrium-climate-sensitivity">
+<strong>
+    Bonus Coding Exercise: Equilibrium Climate Sensitivity
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id3">
-     Questions
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id4">
-     Coding Exercises
-    </a>
+<a class="reference internal nav-link" href="#bonus-questions-climate-connection">
+<strong>
+      Bonus Questions: Climate Connection
+     </strong>
+</a>
 </li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#summary">
+<strong>
+    Summary
+   </strong>
+</a>
 </li>
 </ul>
 </nav>
@@ -917,7 +1014,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="col pl-md-3 pl-lg-5 content-container">
 <!-- Table of contents that is only displayed when printing the page -->
 <div class="onlyprint" id="jb-print-docs-body">
-<h1>Setup</h1>
+<h1>Tutorial 3 : A Zero-Dimensional Energy Balance Model</h1>
 <!-- Table of contents -->
 <div id="print-main-content">
 <div id="jb-print-toc">
@@ -928,71 +1025,139 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#">
-   Setup
-  </a>
-<ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#package-imports">
-     Package Imports
-    </a>
+<strong>
+    Tutorial 3 : A Zero-Dimensional Energy Balance Model
+   </strong>
+</a>
 </li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-objectives">
+<strong>
+    Tutorial Objectives
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#setup">
+<strong>
+    Setup
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
 <a class="reference internal nav-link" href="#figure-settings">
-     Figure Settings
+     Figure settings
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#video-1-a-zero-dimensional-energy-balance-model">
+     Video 1: A Zero-Dimensional Energy Balance Model
     </a>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-1-heat-capacity">
-   Section 1 : Heat Capacity
-  </a>
+<a class="reference internal nav-link" href="#section-1-building-the-model">
+<strong>
+    Section 1 : Building the Model
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#questions">
-     Questions
-    </a>
+<a class="reference internal nav-link" href="#section-1-1-moving-forward-in-time">
+<strong>
+      Section 1.1 : Moving Forward in Time
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#coding-exercises-1-1">
+<strong>
+        Coding Exercises 1.1
+       </strong>
+</a>
+</li>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-1-climate-connection">
+<strong>
+        Questions 1.1: Climate Connection
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#coding-exercises">
-     Coding Exercises
-    </a>
+<a class="reference internal nav-link" href="#section-1-2-the-numerical-model">
+<strong>
+      Section 1.2 : The Numerical Model
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-2">
+<strong>
+        Questions 1.2
+       </strong>
+</a>
+</li>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#coding-exercise-1-2">
+<strong>
+        Coding Exercise 1.2
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-2-add-time-dependency-to-the-model">
-   Section 2 : Add Time Dependency to the Model
-  </a>
+<a class="reference internal nav-link" href="#section-2-revisiting-the-climate-change-scenario-from-tutorial-2">
+<strong>
+    Section 2: Revisiting the Climate Change Scenario from Tutorial 2
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id1">
-     Questions
-    </a>
+<a class="reference internal nav-link" href="#section-2-1-enhanced-greenhouse-effect">
+<strong>
+      Section 2.1: Enhanced Greenhouse Effect
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-2-1">
+<strong>
+        Questions 2.1
+       </strong>
+</a>
 </li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id2">
-     Coding Exercises
-    </a>
+</ul>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-3-revisiting-the-climate-change-scenario-from-tutorial-2">
-   Section 3 : Revisiting the Climate Change Scenario from Tutorial 2
-  </a>
+<a class="reference internal nav-link" href="#bonus-coding-exercise-equilibrium-climate-sensitivity">
+<strong>
+    Bonus Coding Exercise: Equilibrium Climate Sensitivity
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id3">
-     Questions
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id4">
-     Coding Exercises
-    </a>
+<a class="reference internal nav-link" href="#bonus-questions-climate-connection">
+<strong>
+      Bonus Questions: Climate Connection
+     </strong>
+</a>
 </li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#summary">
+<strong>
+    Summary
+   </strong>
+</a>
 </li>
 </ul>
 </nav>
@@ -1001,40 +1166,45 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <main id="main-content" role="main">
 <div>
-<p>#<strong>Tutorial # 3 : A Zero-Dimensional Energy Balance Model</strong></p>
+<p><a class="reference external" href="https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial3.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/></a>   <a href="https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/{ORG}/course-content/main/tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial3.ipynb" target="_blank"><img alt="Open in Kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg"/></a></p>
+<div class="section" id="tutorial-3-a-zero-dimensional-energy-balance-model">
+<h1><strong>Tutorial 3 : A Zero-Dimensional Energy Balance Model</strong><a class="headerlink" href="#tutorial-3-a-zero-dimensional-energy-balance-model" title="Permalink to this headline">¶</a></h1>
 <p><strong>Week 1, Day 5, Climate Modeling</strong></p>
-<p><strong>Content creators:</strong> Jenna Pearson, Brodie Pearson, and Abigail Bodner</p>
-<p><strong>Content reviewers:</strong> Draco Xu</p>
-<p><strong>Content editors:</strong> TBD</p>
-<p><strong>Production editors:</strong> TBD</p>
-<p><strong>Our 2023 Sponsors:</strong> TBD</p>
-<p>#<strong>Tutorial Objectives</strong></p>
+<p><strong>Content creators:</strong> Jenna Pearson</p>
+<p><strong>Content reviewers:</strong> Younkap Nina Duplex, Zahra Khodakaramimaghsoud, Will Gregory, Peter Ohue, Agustina Pesce, Derick Temfack, Yunlong Xu, Peizhen Yang, Chi Zhang, Ohad Zivan</p>
+<p><strong>Content editors:</strong> Brodie Pearson, Abigail Bodner, Ohad Zivan, Chi Zhang</p>
+<p><strong>Production editors:</strong> Wesley Banfield, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Our 2023 Sponsors:</strong> NASA TOPS</p>
+</div>
+<div class="section" id="tutorial-objectives">
+<h1><strong>Tutorial Objectives</strong><a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">¶</a></h1>
 <p>In this tutorial students will learn about the heat capacity of the atmosphere and oceans, how this related to temperature changes over time, and set up their first climate model.</p>
 <p>By the end of this tutorial students will be able to:</p>
 <ul class="simple">
-<li><p>Calculate the heat capacity of the ocean and atmospehre.</p></li>
-<li><p>Create and run a time-dependent model of the change in global mean surfact temperture.</p></li>
+<li><p>Calculate the heat capacity of the ocean and atmosphere.</p></li>
+<li><p>Create and run a time-dependent model of the change in global mean surface temperature in response to energy imbalances.</p></li>
 <li><p>Describe the influence of transmissivity and albedo on the equilibrium temperature from this model.</p></li>
+<li><p>Bonus: What equilibrium climate sensitivity is and how to find it using the model.</p></li>
 </ul>
+</div>
 <div class="section" id="setup">
-<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="package-imports">
-<h2>Package Imports<a class="headerlink" href="#package-imports" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
+<h1><strong>Setup</strong><a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
+<div class="cell tag_colab docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>                     <span class="c1"># used to manipulate data and open datasets</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># imports</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>                     <span class="c1"># used to manipulate data and open datasets</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>                      <span class="c1"># used for algeba and array operations</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>         <span class="c1"># used for plotting</span>
 </pre></div>
 </div>
 </div>
 </div>
-</div>
 <div class="section" id="figure-settings">
-<h2>Figure Settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
+<h2>Figure settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>       <span class="c1"># interactive display</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Figure settings</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>       <span class="c1"># interactive display</span>
 <span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = 'retina'
 <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">"https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/cma.mplstyle"</span><span class="p">)</span>
 </pre></div>
@@ -1042,23 +1212,38 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
+<div class="section" id="video-1-a-zero-dimensional-energy-balance-model">
+<h2>Video 1: A Zero-Dimensional Energy Balance Model<a class="headerlink" href="#video-1-a-zero-dimensional-energy-balance-model" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Video 1: A Zero-Dimensional Energy Balance Model</span>
+<span class="c1">#Tech team will add code to format and display the video</span>
+</pre></div>
 </div>
-<div class="section" id="section-1-heat-capacity">
-<h1>Section 1 : Heat Capacity<a class="headerlink" href="#section-1-heat-capacity" title="Permalink to this headline">¶</a></h1>
-<p>One of the crucial things missing from the simple model we have looked at so far is it’s ability to change with time. As the composition of the atmosphere (among other things) changes with time, in response, so does the energy balance and global mean surface temperature.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="section-1-building-the-model">
+<h1><strong>Section 1 : Building the Model</strong><a class="headerlink" href="#section-1-building-the-model" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="section-1-1-moving-forward-in-time">
+<h2><strong>Section 1.1 : Moving Forward in Time</strong><a class="headerlink" href="#section-1-1-moving-forward-in-time" title="Permalink to this headline">¶</a></h2>
+<p>One of the crucial things missing from the simple model we have looked at so far is it’s ability to change with time. As the composition of the atmosphere (among other things) changes with time, in response, so does the energy balance and global mean surface temperature. This is shown by the thick black lines in the figure below, where the time series of observed global mean surface air temperature change from the 1850-1900 reference period is plotted. Figures like this are called ‘hockey stick’ figures due to their shape: a relatively stable period followed by a steep increase. In order to incorporate this into our model, we need to include a mathetmatical representation of how the change in energy relates to a change in temperature over time.</p>
+<p><img alt="Observerd and simulated change in temparture" src="https://www.ipcc.ch/report/ar6/wg1/downloads/figures/IPCC_AR6_WGI_Figure_3_4.png"/>
+Figure 3.4 | Observed and simulated time series of the anomalies in annual and global mean surface air temperature (GSAT). All anomalies are differences from the 1850–1900 time-mean of each individual time series. The reference period 1850–1900 is indicated by grey shading. (a) Single simulations from CMIP6 models (thin lines) and the multi-model mean (thick red line). Observational data (thick black lines) are from the Met Office Hadley Centre/Climatic Research Unit dataset (HadCRUT5), and are blended surface temperature (2 m air temperature over land and sea surface temperature over the ocean). All models have been subsampled using the HadCRUT5 observational data mask. Vertical lines indicate large historical volcanic eruptions. CMIP6 models which are marked with an asterisk are either tuned to reproduce observed warming directly, or indirectly by tuning equilibrium climate sensitivity. Inset: GSAT for each model over the reference period, not masked to any observations. (b) Multi-model means of CMIP5 (blue line) and CMIP6 (red line) ensembles and associated 5th to 95th percentile ranges (shaded regions). Observational data are HadCRUT5, Berkeley Earth, National Oceanic and Atmospheric Administration NOAAGlobalTemp-Interim and Kadow et al. (2020). Masking was done as in (a). CMIP6 historical simulations were extended with SSP2-4.5 simulations for the period 2015–2020 and CMIP5 simulations were extended with RCP4.5 simulations for the period 2006–2020. All available ensemble members were used (see Section 3.2). The multi-model means and percentiles were calculated solely from simulations available for the whole time span (1850–2020). Figure is updated from Bock et al. (2020), their Figures 1 and 2. CC BY 4.0https://creativecommons.org/licenses/by/4.0/. Further details on data sources and processing are available in the chapter data table (Table 3.SM.1). (Credit <a class="reference external" href="https://www.ipcc.ch/report/ar6/wg1/downloads/figures/IPCC_AR6_WGI_Figure_3_4.png">IPCC Report AR6</a>)</p>
 <p>We can represent the change in temperature over time as the net heat input or loss from radiation (<span class="math notranslate nohighlight">\(ASR-OLR\)</span>) multiplied by the heat capacity of the Earth system.</p>
-<p>The heat capacity of a medium is it’s ability to increase in temperture given an input of heat. Not all components of the Earth system (for example land, ocean, atmosphere) have the same heat capacity.</p>
-<p>Mathematically the rate of change of global mean surface temperature (<span class="math notranslate nohighlight">\(T\)</span>) over time is given as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b265b12a-846d-40ad-9ca4-57b8ac6cecf9">
-<span class="eqno">(11)<a class="headerlink" href="#equation-b265b12a-846d-40ad-9ca4-57b8ac6cecf9" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<p>As we learned in Day 2 of this week, the heat capacity of a medium is its ability to increase in temperature given an input of heat. Not all components of the Earth system (for example land, ocean, atmosphere) have the same heat capacity.</p>
+<p>Mathematically, the rate of change of global mean surface temperature (<span class="math notranslate nohighlight">\(T\)</span>) over time is given as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-cc204bd6-2bd3-4fe3-9493-d1ec88ca8f2c">
+<span class="eqno">(13)<a class="headerlink" href="#equation-cc204bd6-2bd3-4fe3-9493-d1ec88ca8f2c" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \text{rate of change of }T = \frac{1}{\text{heat capacity}}\cdot (\text{energy flux in - energy flux out}) = \frac{1}{C} \cdot ASR - OLR
 \end{align}\]</div>
-<p>where <span class="math notranslate nohighlight">\(C\)</span> is the heat capacity of the Earth system. Note here that when <span class="math notranslate nohighlight">\(ASR &gt; OLR\)</span>, then the system is gaining heat. Conversly when <span class="math notranslate nohighlight">\(ASR &lt; OLR\)</span>, then the system is losing heat over time.</p>
-<p>To calculate the heat capacity for the Earth system, we will assume the it is a combination of atmophere and ocean only, that is <span class="math notranslate nohighlight">\(C = C_{oc} + C_{atmo}\)</span>.</p>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> is the heat capacity of the Earth system. Note here that when <span class="math notranslate nohighlight">\(ASR &gt; OLR\)</span>, then the system is gaining heat. Conversely when <span class="math notranslate nohighlight">\(ASR &lt; OLR\)</span>, then the system is losing heat over time.</p>
+<p>To calculate the heat capacity for the Earth system, we will assume the it is a combination of atmosphere and ocean only, that is <span class="math notranslate nohighlight">\(C = C_{oc} + C_{atmo}\)</span>.</p>
 <p>Generally, the heat capacity of a medium is the specific heat of that medium times the total mass.</p>
 <p>For the atmosphere we have <span class="math notranslate nohighlight">\(C_{atm} = c_{atm} \cdot \frac{W_{atm}}{g} \)</span> where <span class="math notranslate nohighlight">\(c_{atm}\)</span> is the specific heat of the atmosphere, <span class="math notranslate nohighlight">\(W_{atm}\)</span> is the weight of a column of air, and <span class="math notranslate nohighlight">\(g\)</span> is the acceleration due to gravity.</p>
-<p>For the ocean we have <span class="math notranslate nohighlight">\(C_{oc} = c_{oc} \cdot \rho_{oc} \cdot d_{oc}\)</span> where <span class="math notranslate nohighlight">\(c_{oc}\)</span> is the specific heat of the ocean, <span class="math notranslate nohighlight">\(\rho_{oc}\)</span> is the density of seawater, and <span class="math notranslate nohighlight">\(d_{oc}\)</span> is a representive depth of the ocean.</p>
-<p>We will use this definition to find the heat capactities of the atmosphere and ocean.</p>
+<p>For the ocean we have <span class="math notranslate nohighlight">\(C_{oc} = c_{oc} \cdot \rho_{oc} \cdot d_{oc}\)</span> where <span class="math notranslate nohighlight">\(c_{oc}\)</span> is the specific heat of the ocean, <span class="math notranslate nohighlight">\(\rho_{oc}\)</span> is the density of seawater, and <span class="math notranslate nohighlight">\(d_{oc}\)</span> is a representative depth of the ocean.</p>
+<p>We will use these definitions to find the heat capacities of the atmosphere and ocean and to refresh what we learned in Day 2.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># heat capacity of the ocean</span>
@@ -1085,16 +1270,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="section" id="questions">
-<h2>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>Does the ocean or atmosphere have a higher heat capacity?</p></li>
-<li><p>For an equivalent heat input, will the ocean or atmosphere warm more?</p></li>
-<li><p>What do you think this means for warming of the climate system?</p></li>
-</ol>
-</div>
-<div class="section" id="coding-exercises">
-<h2>Coding Exercises<a class="headerlink" href="#coding-exercises" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="coding-exercises-1-1">
+<h3><strong>Coding Exercises 1.1</strong><a class="headerlink" href="#coding-exercises-1-1" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>Calculate the depth of the ocean needed for the ocean to have the same heat capacity at the atmosphere.</p></li>
 </ol>
@@ -1116,69 +1293,86 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial3_Solution_2dfdf179.py"><em>Click for solution</em></a></p>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial3_Solution_2dfdf179.py"><em>Click for solution</em></a></p>
+</div>
+<div class="section" id="questions-1-1-climate-connection">
+<h3><strong>Questions 1.1: Climate Connection</strong><a class="headerlink" href="#questions-1-1-climate-connection" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>In your own words, describe what the answer to your coding exercise means.</p></li>
+</ol>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial3_Solution_e2b68dd6.py"><em>Click for solution</em></a></p>
 </div>
 </div>
-<div class="section" id="section-2-add-time-dependency-to-the-model">
-<h1>Section 2 : Add Time Dependency to the Model<a class="headerlink" href="#section-2-add-time-dependency-to-the-model" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="section-1-2-the-numerical-model">
+<h2><strong>Section 1.2 : The Numerical Model</strong><a class="headerlink" href="#section-1-2-the-numerical-model" title="Permalink to this headline">¶</a></h2>
 <p>Knowing the heat capacity, and the descriptions of <span class="math notranslate nohighlight">\(OLR\)</span> and <span class="math notranslate nohighlight">\(ASR\)</span> from previous tutorials, we can write the equation</p>
-<div class="amsmath math notranslate nohighlight" id="equation-814c2e55-1a70-422b-b747-ef9d9e89f802">
-<span class="eqno">(12)<a class="headerlink" href="#equation-814c2e55-1a70-422b-b747-ef9d9e89f802" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f0dd5203-eb51-4023-8d74-b1074204a941">
+<span class="eqno">(14)<a class="headerlink" href="#equation-f0dd5203-eb51-4023-8d74-b1074204a941" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \text{rate of change }T = \frac{\text{change in }T}{\text{change in time}}=\frac{dT}{dt}= \frac{1}{C}(ASR - OLR)
 \end{align}\]</div>
-<p>Numerically, we can use this equation to compute the global mean surface temprature after a small interval of time by adding on the amount of energy gained or lost multiplied by the time interval itself.</p>
-<p>The particular method of numerically defining the time and temperature intervals (changes) is called <strong>discretization</strong>, and the way we have chosen to do this is called the <strong>Euler method</strong>.The exact details of this method are beyond the scope of this tutorial, and we will use the method without further elaboration.</p>
+<p>Numerically, we can use this equation to compute the global mean surface temperature after a small interval of time by adding on the amount of energy gained or lost multiplied by the time interval itself.</p>
+<p>The particular method of numerically defining the time and temperature intervals (changes) is called <strong>discretization</strong>, and the way we have chosen to do this is called the <strong>Euler method</strong>. The exact details of this method are beyond the scope of this tutorial, and we will use the method without further elaboration.</p>
 <p>The Euler method assumes we can use <span class="math notranslate nohighlight">\(\text{change in }T = T_{n+1} - T_{n}\)</span> and <span class="math notranslate nohighlight">\(\text{change in t} = t_{n+1} - t_{n}\)</span> where <span class="math notranslate nohighlight">\(t\)</span> is time. Thus, if we know the time interval and the current temperature (<span class="math notranslate nohighlight">\(T_n\)</span>), we can predict the temperature at the end of our time interval, (<span class="math notranslate nohighlight">\(T_{n+1}\)</span>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define albedo</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the time interval, currently one year expressed in seconds</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">60.</span> <span class="o">*</span> <span class="mf">60.</span> <span class="o">*</span> <span class="mf">24.</span> <span class="o">*</span> <span class="mf">365.</span>
+
+<span class="c1"># define albedo</span>
 <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2941</span> <span class="c1"># unitless number between 0 and 1 (calculated previously from observations in tutorial 2)</span>
 
 <span class="c1"># define transmissivity (calculated previously from observations in tutorial 1)</span>
 <span class="n">tau</span> <span class="o">=</span> <span class="mf">0.6127</span> <span class="c1"># unitless number between 0 and 1</span>
 
+
+<span class="c1"># define a function for absorbed shortwave radiation (ASR)</span>
+<span class="k">def</span> <span class="nf">ASR</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span><span class="n">Q</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">alpha</span><span class="p">)</span><span class="o">*</span><span class="n">Q</span>
+
+<span class="c1"># define a function for outgoing longwave raditation (OLR)</span>
+<span class="k">def</span> <span class="nf">OLR</span><span class="p">(</span><span class="n">tau</span><span class="p">,</span><span class="n">T</span><span class="p">):</span>
+    <span class="c1"># define the Stefan-Boltzmann Constant, noting we are using 'e' for scientific notation</span>
+    <span class="n">sigma</span> <span class="o">=</span> <span class="mf">5.67e-8</span> <span class="c1"># W m^-2 K^-4</span>
+
+    <span class="k">return</span> <span class="n">tau</span> <span class="o">*</span> <span class="n">sigma</span> <span class="o">*</span> <span class="n">T</span><span class="o">**</span><span class="mi">4</span>
+
 <span class="c1"># create a function to find the new tempeature based on the previous using Euler's method.</span>
-<span class="k">def</span> <span class="nf">step_forward</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">tau</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">step_forward</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">tau</span><span class="p">,</span><span class="n">dt</span><span class="p">):</span>
 
     <span class="c1"># define the observed insolation based on observations from the IPCC AR6 Figure 7.2</span>
     <span class="n">Q</span> <span class="o">=</span> <span class="mi">340</span> <span class="c1"># W m^-2</span>
 
-    <span class="c1"># define the Stefan-Boltzmann Constant, noting we are using 'e' for scientific notation</span>
-    <span class="n">sigma</span> <span class="o">=</span> <span class="mf">5.67e-8</span> <span class="c1"># W m^-2 K^-4</span>
-
-    <span class="n">ASR</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">alpha</span><span class="p">)</span><span class="o">*</span><span class="n">Q</span>
-    <span class="n">OLR</span> <span class="o">=</span> <span class="n">tau</span> <span class="o">*</span> <span class="n">sigma</span> <span class="o">*</span> <span class="n">T</span><span class="o">**</span><span class="mi">4</span>
-
-    <span class="n">T_new</span> <span class="o">=</span> <span class="n">T</span> <span class="o">+</span> <span class="n">dt</span> <span class="o">/</span> <span class="n">C</span> <span class="o">*</span> <span class="p">(</span> <span class="n">ASR</span> <span class="o">-</span> <span class="n">OLR</span> <span class="p">)</span>
+    <span class="c1"># find the new temperature using forward Euler method</span>
+    <span class="n">T_new</span> <span class="o">=</span> <span class="n">T</span> <span class="o">+</span> <span class="n">dt</span> <span class="o">/</span> <span class="n">C</span> <span class="o">*</span> <span class="p">(</span> <span class="n">ASR</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span><span class="n">Q</span><span class="p">)</span> <span class="o">-</span> <span class="n">OLR</span><span class="p">(</span><span class="n">tau</span><span class="p">,</span><span class="n">T</span><span class="p">)</span> <span class="p">)</span>
 
     <span class="k">return</span> <span class="n">T_new</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>We can now use a loop to apply this function many times over by specifying an initial temperature and a time interval.</p>
+<p>We can now use a loop to apply this function many times over by specifying an initial temperature and a time interval. Note we will be using <a class="reference external" href="https://docs.python.org/3/tutorial/datastructures.html">lists</a> to do so.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the time interval, one year expressed in seconds</span>
-<span class="n">dt</span> <span class="o">=</span> <span class="mf">60.</span> <span class="o">*</span> <span class="mf">60.</span> <span class="o">*</span> <span class="mf">24.</span> <span class="o">*</span> <span class="mf">365.</span>
-
-<span class="c1"># define the number of timesteps (years) to run the model</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the number of timesteps (currently years) to run the model</span>
 <span class="n">numtsteps</span> <span class="o">=</span> <span class="mi">15</span>
 
 <span class="c1"># for converting number of seconds in a year</span>
 <span class="n">sec_2_yr</span> <span class="o">=</span> <span class="mf">3.154e7</span>
 
-<span class="c1"># define empty arrays to store the time series of temperature and the corresponding years</span>
-<span class="n">T_series</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">numtsteps</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
-<span class="n">t_series</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">numtsteps</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+<span class="c1"># set the intial temperature (initial condition)</span>
+<span class="n">T_series</span> <span class="o">=</span> <span class="p">[</span><span class="mi">288</span><span class="p">]</span>
 
-<span class="c1"># define the intial temperature</span>
-<span class="n">T_series</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">288.</span>
+<span class="c1"># set the initial time to 0</span>
+<span class="n">t_series</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="c1"># run the model</span>
 <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numtsteps</span><span class="p">):</span>
-    <span class="n">t_series</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span><span class="o">/</span><span class="n">sec_2_yr</span>
-    <span class="n">T_series</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">step_forward</span><span class="p">(</span> <span class="n">T_series</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">tau</span> <span class="o">=</span> <span class="n">tau</span> <span class="p">)</span>
+
+    <span class="c1"># calculate and append the time since running the model, dependent on dt and the numtsteps</span>
+    <span class="n">t_series</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span><span class="o">/</span><span class="n">sec_2_yr</span><span class="p">)</span>
+
+    <span class="c1"># calculate and append the new temperature using our pre-defined function</span>
+    <span class="n">T_series</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">step_forward</span><span class="p">(</span> <span class="n">T_series</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">tau</span> <span class="o">=</span> <span class="n">tau</span><span class="p">,</span> <span class="n">dt</span> <span class="o">=</span> <span class="n">dt</span> <span class="p">))</span>
 
 <span class="c1"># display the temeprature time series</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">T_series</span><span class="p">)</span>
@@ -1188,7 +1382,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">t_series</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dispay the time series</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t_series</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1203,90 +1398,92 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="section" id="id1">
-<h2>Questions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="questions-1-2">
+<h3><strong>Questions 1.2</strong><a class="headerlink" href="#questions-1-2" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
-<li><p>What impact do you think the time interval (<span class="math notranslate nohighlight">\(dt\)</span>) has on the accuracy of the model results?</p></li>
-<li><p>Do you think a smaller or larger time interval than one year would provide more accurate results?</p></li>
+<li><p>Do you think the time step (interval) we have used will affect the solution? If so, how?</p></li>
 </ol>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial3_Solution_ebecb32e.py"><em>Click for solution</em></a></p>
 </div>
-<div class="section" id="id2">
-<h2>Coding Exercises<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="coding-exercise-1-2">
+<h3><strong>Coding Exercise 1.2</strong><a class="headerlink" href="#coding-exercise-1-2" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
-<li><p>Using a for loop, run the model for 200 years with two different three intervals (<span class="math notranslate nohighlight">\(dt\)</span>) of a half year, 1 year and 5 years and plot the results.</p></li>
+<li><p>Using a for loop, run the model for 15 years with two different three intervals (<span class="math notranslate nohighlight">\(dt\)</span>) of a half year, 1 year and 5 years and plot the results. Note you will have to change the number of timesteps used when changing dt so that the model runs for the same amount of time. Plot your results on the same figure.</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># # one year expressed in seconds</span>
-<span class="c1"># one_yr = 60. * 60. * 24. * 365.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># one year expressed in seconds</span>
+<span class="n">one_yr</span> <span class="o">=</span> <span class="mf">60.</span> <span class="o">*</span> <span class="mf">60.</span> <span class="o">*</span> <span class="mf">24.</span> <span class="o">*</span> <span class="mf">365.</span>
 
-<span class="c1"># # legend labels</span>
-<span class="c1"># labels = ['dt = half-year','dt = one year','dt = five years']</span>
+<span class="c1"># legend labels</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'dt = half-year'</span><span class="p">,</span><span class="s1">'dt = one year'</span><span class="p">,</span><span class="s1">'dt = five years'</span><span class="p">]</span>
 
-<span class="c1"># # define the number of timesteps (years) to run the model</span>
-<span class="c1"># numtsteps = np.array([10,5,1])*3</span>
+<span class="c1"># define the number of timesteps (years) to run the model</span>
+<span class="n">numtsteps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span><span class="o">*</span><span class="mi">3</span>
 
-<span class="c1">#  # for converting number of seconds in a year</span>
-<span class="c1"># sec_2_yr = 3.154e7</span>
+<span class="c1"># for converting number of seconds in a year</span>
+<span class="n">sec_2_yr</span> <span class="o">=</span> <span class="o">...</span>
 
-<span class="c1"># # loop through each choice of time step</span>
-<span class="c1"># for dd,dt ...</span>
+<span class="c1"># loop through each choice of time step</span>
+<span class="k">for</span> <span class="n">dd</span><span class="p">,</span><span class="n">dt_2</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="n">one_yr</span><span class="o">*</span><span class="mf">0.5</span><span class="p">,</span><span class="n">one_yr</span><span class="p">,</span><span class="n">one_yr</span><span class="o">*</span><span class="mi">5</span><span class="p">]):</span>
 
-<span class="c1">#   # define empty arrays to store the time series of temperature and the corresponding years</span>
-<span class="c1">#   T_series = np.zeros((numtsteps[dd]+1))</span>
-<span class="c1">#   t_series = np.zeros((numtsteps[dd]+1))</span>
+    <span class="c1"># set the intial temperature (initial condition)</span>
+    <span class="o">...</span>
 
-<span class="c1">#   # define the intial temperature</span>
-<span class="c1">#   T_series[0] = 288.</span>
+    <span class="c1"># set the initial time to 0</span>
+    <span class="o">...</span>
 
-<span class="c1">#   # run the model</span>
-<span class="c1">#   for n in range(numtsteps[dd]):</span>
-<span class="c1">#       t_series[n+1] = (n+1)*dt/sec_2_yr</span>
-<span class="c1">#       T_series[n+1] = step_forward( T_series[n], alpha = alpha, tau = tau )</span>
+    <span class="c1"># run the model</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numtsteps</span><span class="p">[</span><span class="n">dd</span><span class="p">]):</span>
 
-<span class="c1">#   plt.plot(t_series, T_series, label = labels[dd])</span>
+        <span class="c1"># calculate and append the time since running the model, dependent on dt and the numtsteps</span>
+        <span class="o">...</span>
 
-<span class="c1"># plt.xlabel('Years')</span>
-<span class="c1"># plt.ylabel('Global mean temperature (K)');</span>
-<span class="c1"># plt.legend()</span>
+        <span class="c1"># calculate and append the new temperature using our pre-defined function</span>
+        <span class="o">...</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_series</span><span class="p">,</span> <span class="n">T_series</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="n">labels</span><span class="p">[</span><span class="n">dd</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Years'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Global mean temperature (K)'</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial3_Solution_e46a8b27.py"><em>Click for solution</em></a></p>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial3_Solution_61c465f1.py"><em>Click for solution</em></a></p>
+<p><em>Example output:</em></p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D5_ClimateModeling/static/W1D5_Tutorial3_Solution_61c465f1_1.png"><img align="center" alt="Solution hint" class="align-center" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D5_ClimateModeling/static/W1D5_Tutorial3_Solution_61c465f1_1.png" style="width: 775.0px; height: 575.0px;"/></a>
 </div>
 </div>
-<div class="section" id="section-3-revisiting-the-climate-change-scenario-from-tutorial-2">
-<h1>Section 3 : Revisiting the Climate Change Scenario from Tutorial 2<a class="headerlink" href="#section-3-revisiting-the-climate-change-scenario-from-tutorial-2" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="section-2-revisiting-the-climate-change-scenario-from-tutorial-2">
+<h1><strong>Section 2: Revisiting the Climate Change Scenario from Tutorial 2</strong><a class="headerlink" href="#section-2-revisiting-the-climate-change-scenario-from-tutorial-2" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="section-2-1-enhanced-greenhouse-effect">
+<h2><strong>Section 2.1: Enhanced Greenhouse Effect</strong><a class="headerlink" href="#section-2-1-enhanced-greenhouse-effect" title="Permalink to this headline">¶</a></h2>
 <p>In tutorial 2 we looked at how changing the transmissivity (<span class="math notranslate nohighlight">\(\tau\)</span>) affected the equilibrium temperature. Now we can use our time-dependent model to investigate this more fully. Reuse the model, this time setting <span class="math notranslate nohighlight">\(\tau=0.57\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define albedo</span>
-<span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2941</span> <span class="c1"># unitless number between 0 and 1 (calculated previously from observations in tutorial 2)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define transmissivity (calculated previously from observations)</span>
+<span class="n">tau_2</span> <span class="o">=</span> <span class="mf">0.57</span> <span class="c1"># unitless number between 0 and 1</span>
 
-<span class="c1"># define transmissivity (calculated previously from observations)</span>
-<span class="n">tau</span> <span class="o">=</span> <span class="mf">0.57</span> <span class="c1"># unitless number between 0 and 1</span>
-
-<span class="c1"># define the time interval, one year expressed in seconds</span>
-<span class="n">dt</span> <span class="o">=</span> <span class="mf">60.</span> <span class="o">*</span> <span class="mf">60.</span> <span class="o">*</span> <span class="mf">24.</span> <span class="o">*</span> <span class="mf">365.</span>
-
-<span class="c1"># define the number of timesteps (years) to run the model</span>
+<span class="c1"># define the number of timesteps (currently years) to run the model</span>
 <span class="n">numtsteps</span> <span class="o">=</span> <span class="mi">15</span>
 
-<span class="c1"># for converting number of seconds in a year</span>
-<span class="n">sec_2_yr</span> <span class="o">=</span> <span class="mf">3.154e7</span>
+<span class="c1"># set the intial temperature (initial condition)</span>
+<span class="n">T_series</span> <span class="o">=</span> <span class="p">[</span><span class="mi">288</span><span class="p">]</span>
 
-<span class="c1"># define empty arrays to store the time series of temperature and the corresponding years</span>
-<span class="n">T_series</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">numtsteps</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
-<span class="n">t_series</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">numtsteps</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
-
-<span class="c1"># define the intial temperature</span>
-<span class="n">T_series</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">288.</span>
+<span class="c1"># set the initial time to 0</span>
+<span class="n">t_series</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="c1"># run the model</span>
 <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numtsteps</span><span class="p">):</span>
-    <span class="n">t_series</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span><span class="o">/</span><span class="n">sec_2_yr</span>
-    <span class="n">T_series</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">step_forward</span><span class="p">(</span> <span class="n">T_series</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">tau</span> <span class="o">=</span> <span class="n">tau</span> <span class="p">)</span>
+
+    <span class="c1"># calculate and append the time since running the model, dependent on dt and the numtsteps</span>
+    <span class="n">t_series</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span><span class="o">/</span><span class="n">sec_2_yr</span><span class="p">)</span>
+
+    <span class="c1"># calculate and append the new temperature using our pre-defined function</span>
+    <span class="n">T_series</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">step_forward</span><span class="p">(</span> <span class="n">T_series</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">tau</span> <span class="o">=</span> <span class="n">tau_2</span><span class="p">,</span> <span class="n">dt</span> <span class="o">=</span> <span class="n">dt</span> <span class="p">))</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_series</span><span class="p">,</span> <span class="n">T_series</span><span class="p">)</span>
 
@@ -1296,26 +1493,222 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="section" id="id3">
-<h2>Questions<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="questions-2-1">
+<h3><strong>Questions 2.1</strong><a class="headerlink" href="#questions-2-1" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>How does the long-term temperature here compare to the value you found from tutorial 2?</p></li>
 </ol>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial3_Solution_325a6a9b.py"><em>Click for solution</em></a></p>
 </div>
-<div class="section" id="id4">
-<h2>Coding Exercises<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+<div class="section" id="bonus-coding-exercise-equilibrium-climate-sensitivity">
+<h1><strong>Bonus Coding Exercise: Equilibrium Climate Sensitivity</strong><a class="headerlink" href="#bonus-coding-exercise-equilibrium-climate-sensitivity" title="Permalink to this headline">¶</a></h1>
+<p>Here we define the <strong><a class="reference external" href="https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_AnnexVII.pdf">equilibrium climate sensitivity</a></strong> as the long-term global warming (equilibrium temperature increase) caused by a doubling of carbon dioxide above its pre-industrial concentration. The impact of a doubling of carbon dioxide on these energy flows is measured by a <a class="reference external" href="https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_AnnexVII.pdf">radiative forcing</a>. Here a positive radiation forcing leads to warming, and a negative radiative forcing leads to cooling.</p>
+<p>The equilibrium climate sensitivity depends on a number of things, including physics and feedbacks of the model used. In the following exercise, you will calculate the equilibrium climate sensitivity of <em>our</em> model.</p>
 <ol class="simple">
-<li><p>Run the model again keeping the original <span class="math notranslate nohighlight">\(\tau=0.6114\)</span> but now change <span class="math notranslate nohighlight">\(\alpha=0.2\)</span>.</p></li>
+<li><p>Write a function called step_forward() as from above, and then create another function that adds in a radiative forcing to the difference between ASR and OLR and call it step_forward_forced(). Make sure both functions output the energy balance of the model. Consistent with the <a class="reference external" href="https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-7/#Effective">IPCC AR6</a>, use an effective radiative forcing of 3.93 <span class="math notranslate nohighlight">\(Wm^2\)</span>, where <em>effective</em> means the climate system, but not the surface temperature, has been allowed to adjust.</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#insert code</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define your functions and constants</span>
+
+<span class="c1"># define albedo</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2941</span> <span class="c1"># unitless number between 0 and 1 (calculated previously from observations in tutorial 2)</span>
+
+<span class="c1"># define transmissivity (calculated previously from observations in tutorial 1)</span>
+<span class="n">tau</span> <span class="o">=</span> <span class="mf">0.6127</span> <span class="c1"># unitless number between 0 and 1</span>
+
+<span class="c1"># effective radiative forcing for a doubling of CO2</span>
+<span class="n">F</span> <span class="o">=</span> <span class="mf">3.93</span> <span class="c1"># W/m^2</span>
+
+<span class="c1"># define the time interval, one year expressed in seconds</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">60.</span> <span class="o">*</span> <span class="mf">60.</span> <span class="o">*</span> <span class="mf">24.</span> <span class="o">*</span> <span class="mf">365.</span>
+
+<span class="c1"># for converting number of seconds in a year</span>
+<span class="n">sec_2_yr</span> <span class="o">=</span> <span class="mf">3.154e7</span>
+
+
+<span class="c1"># create a function to find the new tempeature based on the previous using Euler's method.</span>
+<span class="k">def</span> <span class="nf">step_forward</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">tau</span><span class="p">,</span><span class="n">dt</span><span class="p">):</span>
+
+    <span class="c1"># define the observed insolation based on observations from the IPCC AR6 Figure 7.2</span>
+    <span class="o">...</span>
+
+    <span class="c1"># define the Stefan-Boltzmann Constant, noting we are using 'e' for scientific notation</span>
+    <span class="o">...</span>
+
+    <span class="n">Ftoa</span> <span class="o">=</span> <span class="o">...</span>
+
+    <span class="n">T_new</span> <span class="o">=</span> <span class="o">...</span>
+
+    <span class="k">return</span> <span class="o">...</span>
+
+<span class="c1"># create a function to find the new tempeature based on the previous using Euler's method.</span>
+<span class="k">def</span> <span class="nf">step_forward_forced</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">tau</span><span class="p">,</span><span class="n">dt</span><span class="p">):</span>
+
+    <span class="c1"># define the observed insolation based on observations from the IPCC AR6 Figure 7.2</span>
+    <span class="o">...</span>
+
+    <span class="c1"># define the Stefan-Boltzmann Constant, noting we are using 'e' for scientific notation</span>
+    <span class="o">...</span>
+
+    <span class="n">Ftoa</span> <span class="o">=</span> <span class="o">...</span>
+
+    <span class="n">T_new</span> <span class="o">=</span> <span class="o">...</span>
+
+    <span class="k">return</span> <span class="o">...</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial3_Solution_d6319fd3.py"><em>Click for solution</em></a></p>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial3_Solution_3f10cb98.py"><em>Click for solution</em></a></p>
+<ol class="simple">
+<li><p>Using an initial temperature of 288K, run the model to equilibrium. Make sure your model is in equilbrium by checking that the energy balance is near zero.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># run the model to equilibrium without forcing and begining with T(0) = 288K</span>
+
+<span class="c1"># define the number of timesteps (years) to run the model</span>
+<span class="n">numtsteps</span> <span class="o">=</span> <span class="mi">40</span>
+
+<span class="c1"># set the intial temperature (initial condition)</span>
+<span class="n">T_series</span> <span class="o">=</span> <span class="p">[</span><span class="mi">288</span><span class="p">]</span>
+
+<span class="c1"># set the initial time to 0</span>
+<span class="n">t_series</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># run the model</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numtsteps</span><span class="p">):</span>
+
+    <span class="c1"># calculate and append the time since running the model, dependent on dt and the numtsteps</span>
+    <span class="n">t_series</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+
+    <span class="c1"># calculate and append the new temperature using our pre-defined function and get energy balance</span>
+    <span class="o">...</span>
+    <span class="n">T_series</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
 </div>
+</div>
+</div>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial3_Solution_e64ca9b3.py"><em>Click for solution</em></a></p>
+<ol class="simple">
+<li><p>Run the forced model equilibrium using the unforced equilibrium temperature as your inital condition and the step_forward_forced() function you wrote above.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the number of timesteps (years) to run the model</span>
+<span class="n">numtsteps</span> <span class="o">=</span> <span class="mi">40</span>
+
+<span class="c1"># set initial condition (temperature) to the equilibrium value from the last run without forcing</span>
+<span class="n">T_series_forced</span> <span class="o">=</span> <span class="p">[</span><span class="n">T_series</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+
+<span class="c1"># set the initial time to 0</span>
+<span class="n">t_series_forced</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># run the model</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numtsteps</span><span class="p">):</span>
+
+    <span class="c1"># calculate and append the time since running the model, dependent on dt and the numtsteps</span>
+    <span class="n">t_series_forced</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+
+    <span class="c1"># calculate and append the new temperature using our pre-defined function and get energy balance</span>
+    <span class="o">...</span>
+    <span class="n">T_series_forced</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># run the model to equilibrium without forcing and begining with T(0) = 288K</span>
+
+<span class="c1"># define the number of timesteps (years) to run the model</span>
+<span class="n">numtsteps</span> <span class="o">=</span> <span class="mi">40</span>
+
+<span class="c1"># set initial condition (temperature) to the equilibrium value from the last run without forcing</span>
+<span class="n">T_series_forced</span> <span class="o">=</span> <span class="p">[</span><span class="n">T_series</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+
+<span class="c1"># set the initial time to 0</span>
+<span class="n">t_series_forced</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># run the model</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numtsteps</span><span class="p">):</span>
+
+    <span class="c1"># calculate and append the time since running the model, dependent on dt and the numtsteps</span>
+    <span class="n">t_series_forced</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span><span class="o">/</span><span class="n">sec_2_yr</span><span class="p">)</span>
+
+    <span class="c1"># calculate and append the new temperature using our pre-defined function and get energy balance</span>
+    <span class="n">T_new_forced</span><span class="p">,</span><span class="n">Ftoa_forced</span> <span class="o">=</span> <span class="n">step_forward_forced</span><span class="p">(</span> <span class="n">T_series_forced</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">tau</span> <span class="o">=</span> <span class="n">tau</span><span class="p">,</span> <span class="n">dt</span> <span class="o">=</span> <span class="n">dt</span> <span class="p">)</span>
+    <span class="n">T_series_forced</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">T_new_forced</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">Ftoa_forced</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Plot the temperature curve from the forced simulation as a function of time.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot the time series</span>
+<span class="o">...</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Years'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Global mean temperature (K)'</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot the time series</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_series_forced</span><span class="p">,</span> <span class="n">T_series_forced</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Years'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Global mean temperature (K)'</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Subtract the intial temperature used for your forced simulation from the final temperature after running to equilibrium to get the equilibrium climate sensitivty.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># calculate equilibrium climate sensitivity</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Equilibrium Climate Sensitivity: '</span><span class="p">,</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># calculate equilibrium climate sensitivity</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Equilibrium Climate Sensitivity: '</span><span class="p">,</span><span class="n">T_series_forced</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">T_series_forced</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="bonus-questions-climate-connection">
+<h2><strong>Bonus Questions: Climate Connection</strong><a class="headerlink" href="#bonus-questions-climate-connection" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>How does this compare to the IPCC AR6 estimate of <a class="reference external" href="https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-7/#Climate">equilibrium climate sensitivity of 2-5 K</a>? Is it higher or lower? Note here it is a temperature difference, so the units of C in the report and K found here are interchangeable.</p></li>
+<li><p>In your own words, describes what this implies with respect to global mean temperatures in our models versus those in used in the IPCC report.</p></li>
+<li><p>What do you think could be missing in our model?</p></li>
+</ol>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial3_Solution_7805150d.py"><em>Click for solution</em></a></p>
+</div>
+</div>
+<div class="section" id="summary">
+<h1><strong>Summary</strong><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial, you explored the relationship between the heat capacity of the atmosphere and oceans and temperature changes over time. You learned how to calculate the heat capacity of these components and used this knowledge to develop a climate model. This model simulates the change in global mean surface temperature in response to energy imbalances. You explored the effects of transmissivity on the equilibrium temperature and discussed equilibrium climate sensitivity.</p>
 </div>
 <script type="text/x-thebe-config">
     {
@@ -1326,16 +1719,16 @@ const thebe_selector_output = ".output, .cell_output"
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "pangeo"
+            mode: "climatematch"
         },
         kernelOptions: {
-            kernelName: "pangeo",
+            kernelName: "climatematch",
             path: "./tutorials/W1D5_ClimateModeling/student"
         },
         predefinedOutput: true
     }
     </script>
-<script>kernelName = 'pangeo'</script>
+<script>kernelName = 'climatematch'</script>
 </div>
 </main>
 <footer class="footer-article noprint">
@@ -1345,13 +1738,13 @@ const thebe_selector_output = ".output, .cell_output"
 <i class="fas fa-angle-left"></i>
 <div class="prev-next-info">
 <p class="prev-next-subtitle">previous</p>
-<p class="prev-next-title">Setup</p>
+<p class="prev-next-title"><strong>Tutorial 2 : Energy Balance</strong></p>
 </div>
 </a>
 <a class="right-next" href="W1D5_Tutorial4.html" id="next-link" title="next page">
 <div class="prev-next-info">
 <p class="prev-next-subtitle">next</p>
-<p class="prev-next-title">Setup</p>
+<p class="prev-next-title"><strong>Tutorial 4: Climate Feedbacks</strong></p>
 </div>
 <i class="fas fa-angle-right"></i>
 </a>

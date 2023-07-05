@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Figure settings — Climatematch Academy: Computational Climate Science</title>
+<title>Tutorial 4: Understanding Climatology Through Precipitation Data — Climatematch Academy: Computational Climate Science</title>
 <!-- Loaded before other Sphinx assets -->
 <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
@@ -38,9 +38,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-<link href="../../../genindex.html" rel="index" title="Index">
+<link href="../../../_static/cma-logo-square-4xp.png" rel="shortcut icon">
+<link href="../../../genindex.html" rel="index" title="Index"/>
 <link href="../../../search.html" rel="search" title="Search"/>
-<link href="W1D3_Tutorial5.html" rel="next" title="Figure settings"/>
+<link href="W1D3_Tutorial5.html" rel="next" title="Tutorial 5: Calculating Anomalies Using Precipitation Data"/>
 <link href="W1D3_Tutorial3.html" rel="prev" title="Figure settings"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="None" name="docsearch:language"/>
@@ -68,6 +69,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="bd-sidebar__content">
 <div class="bd-sidebar__top"><div class="navbar-brand-box">
 <a class="navbar-brand text-wrap" href="../../../index.html">
+<!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+<img alt="logo" class="logo" src="../../../_static/cma-logo-square-4xp.png"/>
 <h1 class="site-logo" id="site-title">Climatematch Academy: Computational Climate Science</h1>
 </a>
 </div><form action="../../../search.html" class="bd-search d-flex align-items-center" method="get">
@@ -305,33 +308,45 @@ const thebe_selector_output = ".output, .cell_output"
 <ul>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial1.html">
-     Calculating ENSO with Xarray
-    </a>
+<strong>
+      Tutorial 1: Calculating ENSO with Xarray
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial2.html">
-     Tutorial 2: A lot of weather makes climate - exploring the ERA5 Reanalysis
-    </a>
+<strong>
+      Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial3.html">
-     Tutorial 3: Atmospheric wind driven circulation
-    </a>
+<strong>
+      Tutorial 3: Atmospheric  Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial4.html">
-     Tutorial 4: Ocean wind driven circulation
-    </a>
+<strong>
+      Tutorial 4: Oceanic Wind-driven Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial5.html">
-     Tutorial 5: Thermohaline circulation
-    </a>
+<strong>
+      Tutorial 5: Thermohaline Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial6.html">
-     Tutorial 6: Ocean heat content
-    </a>
+<strong>
+      Tutorial 6: Ocean Heat Content
+     </strong>
+</a>
 </li>
 </ul>
 </li>
@@ -347,13 +362,17 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current">
 <li class="toctree-l2">
 <a class="reference internal" href="W1D3_Tutorial1.html">
-     Video 1: What is Remote Sensing
-    </a>
+<strong>
+      Tutorial 1: Introduction to Remote Sensing
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D3_Tutorial2.html">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 2: Exploring Satellite Climate Data Records
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D3_Tutorial3.html">
@@ -362,13 +381,17 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2 current active">
 <a class="current reference internal" href="#">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 4: Understanding Climatology Through Precipitation Data
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D3_Tutorial5.html">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 5: Calculating Anomalies Using Precipitation Data
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D3_Tutorial6.html">
@@ -488,18 +511,24 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial2.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 2 : Energy Balance
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial3.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 3 : A Zero-Dimensional Energy Balance Model
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial4.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 4: Climate Feedbacks
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial5.html">
@@ -841,74 +870,73 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#">
-   Figure settings
-  </a>
+<strong>
+    Tutorial 4: Understanding Climatology Through Precipitation Data
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-objectives">
+<strong>
+    Tutorial Objectives
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#setup">
+<strong>
+    Setup
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id1">
+<a class="reference internal nav-link" href="#figure-settings">
      Figure settings
     </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id2">
-       Figure settings
-      </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id3">
-         Figure settings
-        </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id4">
-           Figure settings
-          </a>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#video-1-video-1-name">
+     Video 1: Video 1 Name
+    </a>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#video-1-video-1-name">
-   Video 1: Video 1 Name
-  </a>
+<a class="reference internal nav-link" href="#section-1-obtain-monthly-precipitation-data">
+<strong>
+    Section 1: Obtain Monthly Precipitation Data
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id5">
-     Video 1: Video 1 Name
-    </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id6">
-       Video 1: Video 1 Name
-      </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id7">
-         Video 1: Video 1 Name
-        </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id8">
-           Video 1: Video 1 Name
-          </a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#exercise-1-2-how-big-is-the-error">
+<a class="reference internal nav-link" href="#section-1-1-access-gpcp-monthly-cdr-data-on-aws">
 <strong>
-      Exercise 1.2: How big is the error?
+      Section 1.1: Access GPCP Monthly CDR Data on AWS
      </strong>
 </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-2-visualize-gpcp-data-using-cartopy">
+<strong>
+      Section 1.2: Visualize GPCP Data Using Cartopy
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#coding-exercises-1-2">
+<strong>
+        Coding Exercises 1.2
+       </strong>
+</a>
+</li>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-2-climate-connection">
+<strong>
+        Questions 1.2: Climate Connection
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -916,6 +944,52 @@ const thebe_selector_output = ".output, .cell_output"
 <a class="reference internal nav-link" href="#section-2-climatology">
 <strong>
     Section 2: Climatology
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-1-plot-time-series-of-data-at-a-specific-location">
+<strong>
+      Section 2.1: Plot Time Series of Data at a Specific Location
+     </strong>
+</a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-2-calculate-the-climatology">
+<strong>
+      Section 2.2: Calculate the Climatology
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-2-2-climate-connection">
+<strong>
+        Questions 2.2: Climate Connection
+       </strong>
+</a>
+</li>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#coding-exercises-2-1">
+<strong>
+        Coding Exercises 2.1
+       </strong>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#summary">
+<strong>
+    Summary
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#resources">
+<strong>
+    Resources
    </strong>
 </a>
 </li>
@@ -927,7 +1001,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="col pl-md-3 pl-lg-5 content-container">
 <!-- Table of contents that is only displayed when printing the page -->
 <div class="onlyprint" id="jb-print-docs-body">
-<h1>Figure settings</h1>
+<h1>Tutorial 4: Understanding Climatology Through Precipitation Data</h1>
 <!-- Table of contents -->
 <div id="print-main-content">
 <div id="jb-print-toc">
@@ -938,74 +1012,73 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#">
-   Figure settings
-  </a>
+<strong>
+    Tutorial 4: Understanding Climatology Through Precipitation Data
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-objectives">
+<strong>
+    Tutorial Objectives
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#setup">
+<strong>
+    Setup
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id1">
+<a class="reference internal nav-link" href="#figure-settings">
      Figure settings
     </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id2">
-       Figure settings
-      </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id3">
-         Figure settings
-        </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id4">
-           Figure settings
-          </a>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#video-1-video-1-name">
+     Video 1: Video 1 Name
+    </a>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#video-1-video-1-name">
-   Video 1: Video 1 Name
-  </a>
+<a class="reference internal nav-link" href="#section-1-obtain-monthly-precipitation-data">
+<strong>
+    Section 1: Obtain Monthly Precipitation Data
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id5">
-     Video 1: Video 1 Name
-    </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id6">
-       Video 1: Video 1 Name
-      </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id7">
-         Video 1: Video 1 Name
-        </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id8">
-           Video 1: Video 1 Name
-          </a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#exercise-1-2-how-big-is-the-error">
+<a class="reference internal nav-link" href="#section-1-1-access-gpcp-monthly-cdr-data-on-aws">
 <strong>
-      Exercise 1.2: How big is the error?
+      Section 1.1: Access GPCP Monthly CDR Data on AWS
      </strong>
 </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-2-visualize-gpcp-data-using-cartopy">
+<strong>
+      Section 1.2: Visualize GPCP Data Using Cartopy
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#coding-exercises-1-2">
+<strong>
+        Coding Exercises 1.2
+       </strong>
+</a>
+</li>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-2-climate-connection">
+<strong>
+        Questions 1.2: Climate Connection
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -1013,6 +1086,52 @@ const thebe_selector_output = ".output, .cell_output"
 <a class="reference internal nav-link" href="#section-2-climatology">
 <strong>
     Section 2: Climatology
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-1-plot-time-series-of-data-at-a-specific-location">
+<strong>
+      Section 2.1: Plot Time Series of Data at a Specific Location
+     </strong>
+</a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-2-calculate-the-climatology">
+<strong>
+      Section 2.2: Calculate the Climatology
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-2-2-climate-connection">
+<strong>
+        Questions 2.2: Climate Connection
+       </strong>
+</a>
+</li>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#coding-exercises-2-1">
+<strong>
+        Coding Exercises 2.1
+       </strong>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#summary">
+<strong>
+    Summary
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#resources">
+<strong>
+    Resources
    </strong>
 </a>
 </li>
@@ -1023,48 +1142,34 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <main id="main-content" role="main">
 <div>
-<p>#<strong>Tutorial 4: Understanding Climatology - Precipitation</strong></p>
-<blockquote>
-<div><p>Indented block</p>
-</div></blockquote>
-<blockquote>
-<div><p>Indented block</p>
-</div></blockquote>
-<p><strong>Week 1, Day 4, Remote Sensing</strong></p>
+<p><a class="reference external" href="https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial4.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/></a>   <a href="https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/{ORG}/course-content/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial4.ipynb" target="_blank"><img alt="Open in Kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg"/></a></p>
+<div class="section" id="tutorial-4-understanding-climatology-through-precipitation-data">
+<h1><strong>Tutorial 4: Understanding Climatology Through Precipitation Data</strong><a class="headerlink" href="#tutorial-4-understanding-climatology-through-precipitation-data" title="Permalink to this headline">¶</a></h1>
+<p><strong>Week 1, Day 3, Remote Sensing</strong></p>
 <p><strong>Content creators:</strong> Douglas Rao</p>
-<p><strong>Content reviewers:</strong> TBD</p>
-<p><strong>Content editors:</strong> TBD</p>
-<p><strong>Production editors:</strong> TBD</p>
-<p><strong>Our 2023 Sponsors:</strong> TBD</p>
-<p>#<strong>Tutorial Objectives</strong></p>
-<p>In this tutorial, you will learn what is climatology and how to calculate climatology from satellite climate data.</p>
-<p>By the end of this tutorial you will be able to:</p>
+<p><strong>Content reviewers:</strong> Katrina Dobson, Younkap Nina Duplex, Maria Gonzalez, Will Gregory, Nahid Hasan, Sherry Mi, Beatriz Cosenza Muralles, Jenna Pearson, Agustina Pesce, Chi Zhang, Ohad Zivan</p>
+<p><strong>Content editors:</strong> Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Production editors:</strong> Wesley Banfield, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Our 2023 Sponsors:</strong> NASA TOPS</p>
+</div>
+<div class="section" id="tutorial-objectives">
+<h1><strong>Tutorial Objectives</strong><a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial, you will explore the concept of a climatology, and learn how to leverage it using satellite precipitation data. You have already practiced how to calcuate a climatology using temperature data in the overview of the climate system day. That data spanned only 14 years, and typically you would want your data to span at least 30 years to calculate a climatology. Here you will use data spanning several decades to explore the seasonal cycle of precpitation at a specific location.</p>
+<p>Upon completing this tutorial, you’ll be able to:</p>
 <ul class="simple">
-<li><p>Understand the concept of climatology</p></li>
-<li><p>Calculate the climatology using long term satellite climate data</p></li>
-<li><p>Create meaningful maps including projection, coastlines, and other advanced features</p></li>
+<li><p>Comprehend the fundamentals of climatologies.</p></li>
+<li><p>Compute a climatology utilizing long-term satellite precipitation data.</p></li>
+<li><p>Create informative maps including features such as projections, coastlines, and other advanced plotting components.</p></li>
 </ul>
-<p>#<strong>Setup</strong></p>
-<p>In this section, we have:</p>
-<ol class="simple">
-<li><p><strong>Import cell:</strong> imports all libraries you use in the tutorial.</p></li>
-<li><p><strong>Hidden Figure settings cell:</strong> sets up the plotting style (copy exactly)</p></li>
-<li><p><strong>Hidden Plotting functions cell:</strong> contains all functions used to create plots throughout the tutorial (so students don’t waste time looking at boilerplate matplotlib but can here if they wish to). Please use only matplotlib for plotting for consistency.</p></li>
-<li><p><strong>Hidden Helper functions cell:</strong> This should contain functions that students have previously used or that are very simple. Any helper functions that are being used for the first time and are important should be placed directly above the relevant text or exercise (see Section 1.1 for an example).</p></li>
-</ol>
+<p>Throughout this tutorial, you’ll employ NOAA’s monthly precipitation climate data records as the primary resource to demonstrate the process of calculating a long-term climatology for climate analysis. Specifically, you’ll use the <a class="reference external" href="https://www.ncei.noaa.gov/products/climate-data-records/precipitation-gpcp-monthly">Global Precipitation Climatology Project (GPCP) Monthly Precipitation Climate Data Record (CDR)</a>. As part of your investigation, you’ll focus on a specific location, observing its data across the entire time duration covered by the GPCP monthly dataset.</p>
+</div>
+<div class="section" id="setup">
+<h1><strong>Setup</strong><a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
 <div class="cell tag_colab docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Imports</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># !pip install s3fs --quiet</span>
 
-<span class="c1"># Import only the libraries/objects that you use in this tutorial.</span>
-
-<span class="c1"># If any external library has to be installed, !pip install library --quiet</span>
-<span class="c1"># follow this order: numpy&gt;matplotlib.</span>
-<span class="c1"># import widgets in hidden Figure settings cell</span>
-
-<span class="c1"># !pip install s3fs --quiet</span>
-
-<span class="c1"># Properly install cartopy in colab to avoid session crash</span>
+<span class="c1"># properly install cartopy in colab to avoid session crash</span>
 <span class="c1"># !apt-get install libproj-dev proj-data proj-bin --quiet</span>
 <span class="c1"># !apt-get install libgeos-dev --quiet</span>
 <span class="c1"># !pip install cython --quiet</span>
@@ -1079,35 +1184,21 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">s3fs</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># imports</span>
+<span class="kn">import</span> <span class="nn">s3fs</span>
 <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">cartopy</span><span class="o">,</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+<span class="kn">import</span> <span class="nn">cartopy</span>
+<span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+<span class="kn">import</span> <span class="nn">boto3</span>
+<span class="kn">import</span> <span class="nn">botocore</span>
+<span class="kn">import</span> <span class="nn">pooch</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="figure-settings">
-<h1>Figure settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2>Figure settings<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id2">
-<h3>Figure settings<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id3">
-<h4>Figure settings<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="id4">
-<h5>Figure settings<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h5>
-<p>#######  Figure settings</p>
-<p>########  Figure settings</p>
-<p>#########  Figure settings</p>
-<p>##########  Figure settings</p>
-<p>###########  Figure settings</p>
-<p>############  Figure settings</p>
-<p>#############  Figure settings</p>
-<p>##############  Figure settings</p>
-<p>###############  Figure settings</p>
-<p>################  Figure settings</p>
-<p>#################  Figure settings</p>
+<h2>Figure settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">¶</a></h2>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Figure settings</span>
@@ -1118,33 +1209,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>#<strong>Section 1: Access Monthly Precipitation Data</strong></p>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="section" id="video-1-video-1-name">
-<h1>Video 1: Video 1 Name<a class="headerlink" href="#video-1-video-1-name" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id5">
-<h2>Video 1: Video 1 Name<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id6">
-<h3>Video 1: Video 1 Name<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id7">
-<h4>Video 1: Video 1 Name<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="id8">
-<h5>Video 1: Video 1 Name<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h5>
-<p>#######  Video 1: Video 1 Name</p>
-<p>########  Video 1: Video 1 Name</p>
-<p>#########  Video 1: Video 1 Name</p>
-<p>##########  Video 1: Video 1 Name</p>
-<p>###########  Video 1: Video 1 Name</p>
-<p>############  Video 1: Video 1 Name</p>
-<p>#############  Video 1: Video 1 Name</p>
-<p>##############  Video 1: Video 1 Name</p>
-<p>###############  Video 1: Video 1 Name</p>
-<p>################  Video 1: Video 1 Name</p>
-<p>#################  Video 1: Video 1 Name</p>
+<h2>Video 1: Video 1 Name<a class="headerlink" href="#video-1-video-1-name" title="Permalink to this headline">¶</a></h2>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Video 1: Video 1 Name</span>
@@ -1153,17 +1220,22 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>In this tutorial, we will use the monthly precipitation climate data records data from NOAA to demonstrate how to calculate the long term climatology for climate analysis.</p>
-<p>The data we are using is the <a class="reference external" href="https://www.ncei.noaa.gov/products/climate-data-records/precipitation-gpcp-monthly">Global Precipitation Climatology Project (GPCP) Monthly Precipitation Climate Data Record (CDR)</a>. It provides monthly satellite-gauge and associated precipitation error estimates taken from January 1979–present on a 2.5°×2.5° grid. The CDR is created by combining the precipitation information from several satellite and in situ sources into a final merged product that uses the strengths of each data type to create a more accurate record.</p>
-<p>There is also a higher spatial resolution (1°×1°) at daily resolution for different applications. Due to computational concerns, we are only using the coarser resolution monthly data. You are encouraged to explore the use of the daily higher resolution data for your project.</p>
-<p>##<strong>Section 1.1: Access GPCP Monthly CDR data on AWS</strong></p>
+</div>
+</div>
+<div class="section" id="section-1-obtain-monthly-precipitation-data">
+<h1><strong>Section 1: Obtain Monthly Precipitation Data</strong><a class="headerlink" href="#section-1-obtain-monthly-precipitation-data" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial, the objective is to demonstrate how to calculate the long-term precipitation climatology using monthly precipitation climate data records from NOAA.</p>
+<p>You’ll be utilizing the <a class="reference external" href="https://www.ncei.noaa.gov/products/climate-data-records/precipitation-gpcp-monthly">Global Precipitation Climatology Project (GPCP) Monthly Precipitation Climate Data Record (CDR)</a>. This dataset contains monthly satellite-gauge data and corresponding precipitation error estimates from January 1979 to the present, gridded at a 2.5°×2.5° resolution. <em>Satellite-gauge</em> means that the climate data record (CDR) is a compilation of precipitation data from multiple satellites and in-situ sources, combined into a final product that optimizes the advantages of each type of data.</p>
+<p>While a higher spatial resolution (1°×1°) at daily resolution exists for varied applications, we will restrict ourselves to the coarser resolution monthly data due to computational limitations. However, you are encouraged to delve into the daily higher resolution data for your specific project needs.</p>
+<div class="section" id="section-1-1-access-gpcp-monthly-cdr-data-on-aws">
+<h2><strong>Section 1.1: Access GPCP Monthly CDR Data on AWS</strong><a class="headerlink" href="#section-1-1-access-gpcp-monthly-cdr-data-on-aws" title="Permalink to this headline">¶</a></h2>
 <p>To perform analysis, we will need to access the monthly data files from AWS first. We will use the skills that we learned from last tutorial on accessing data from an AWS S3 bucket.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Connect to the AWS S3 bucket for the GPCP Monthly Precipitation CDR data</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># connect to the AWS S3 bucket for the GPCP Monthly Precipitation CDR data</span>
 <span class="n">fs</span> <span class="o">=</span> <span class="n">s3fs</span><span class="o">.</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="n">anon</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="c1"># Get the list of all data files in the AWS S3 bucket fit the data file pattern.</span>
+<span class="c1"># get the list of all data files in the AWS S3 bucket fit the data file pattern.</span>
 <span class="n">file_pattern</span> <span class="o">=</span> <span class="s1">'noaa-cdr-precip-gpcp-monthly-pds/data/*/gpcp_v02r03_monthly_*.nc'</span>
 <span class="n">file_location</span> <span class="o">=</span> <span class="n">fs</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">file_pattern</span><span class="p">)</span>
 </pre></div>
@@ -1178,84 +1250,99 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>We have 528 GPCP monthly precipitation CDR data files in the AWS S3 buckect. Each data file contains the data of each month globally starting from January 1979. Now, let’s open single data file to look at the data strcuture before we open all data files.</p>
+<p>We have more than 500 GPCP monthly precipitation CDR data files in the AWS S3 bucket. Each data file contains the data of each month globally starting from January 1979. Now, let’s open a single data file to look at the data structure before we open all data files.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># First, open connection to all data files</span>
-<span class="n">file_ob</span> <span class="o">=</span> <span class="p">[</span><span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">file</span><span class="p">)</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">file_location</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># first, open a client connection</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">'s3'</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">botocore</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">Config</span><span class="p">(</span><span class="n">signature_version</span><span class="o">=</span><span class="n">botocore</span><span class="o">.</span><span class="n">UNSIGNED</span><span class="p">))</span> <span class="c1"># initialize aws s3 bucket client</span>
 
-<span class="c1"># Read single data file to understand the file structure</span>
-<span class="n">ds_single</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">file_ob</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check how many variables are inluded in one data file</span>
+<span class="c1"># read single data file to understand the file structure</span>
+<span class="n">ds_single</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s1">'http://s3.amazonaws.com/'</span><span class="o">+</span><span class="n">file_location</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span> <span class="p">))</span> <span class="c1"># open the file</span>
+
+<span class="c1"># check how many variables are inluded in one data file</span>
 <span class="n">ds_single</span><span class="o">.</span><span class="n">data_vars</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>From the information provided by <code class="docutils literal notranslate"><span class="pre">xarray</span></code>, there are totally five data variables in this monthly data file, including <code class="docutils literal notranslate"><span class="pre">precip</span></code> for the monthly precipitation and <code class="docutils literal notranslate"><span class="pre">precip_error</span></code> for the monthly precipitation error.</p>
+<p>From the information provided by <code class="docutils literal notranslate"><span class="pre">xarray</span></code>, there are a total of five data variables in this monthly data file, including <code class="docutils literal notranslate"><span class="pre">precip</span></code> for the monthly precipitation and <code class="docutils literal notranslate"><span class="pre">precip_error</span></code> for the monthly precipitation error.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check the coordinates for the data file</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># check the coordinates for the data file</span>
 <span class="n">ds_single</span><span class="o">.</span><span class="n">coords</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>All data is organised in three dimensions: <code class="docutils literal notranslate"><span class="pre">latitude</span></code>, <code class="docutils literal notranslate"><span class="pre">longitude</span></code>, and <code class="docutils literal notranslate"><span class="pre">time</span></code>. If we want to create a three-dimensional data array for the monthly precipitation data across the entire data period (from January 1979 until present).</p>
+<p>All data is organized in three dimensions: <code class="docutils literal notranslate"><span class="pre">latitude</span></code>, <code class="docutils literal notranslate"><span class="pre">longitude</span></code>, and <code class="docutils literal notranslate"><span class="pre">time</span></code>. We want to create a three-dimensional data array for the monthly precipitation data across the entire data period (from January 1979 until present) so we must open all the available files</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Open all the monthly data files and concatenate them along the time dimension.</span>
-<span class="c1"># This process will take ~ 1 minute to complete due to the number of data files.</span>
-<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="n">file_ob</span><span class="p">,</span> <span class="n">combine</span><span class="o">=</span><span class="s1">'nested'</span><span class="p">,</span> <span class="n">concat_dim</span><span class="o">=</span><span class="s1">'time'</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># open all the monthly data files</span>
+<span class="c1"># this process will take ~ 5 minute to complete due to the number of data files.</span>
+
+<span class="n">file_ob</span> <span class="o">=</span> <span class="p">[</span><span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s1">'http://s3.amazonaws.com/'</span><span class="o">+</span><span class="n">file</span><span class="p">,</span><span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span> <span class="p">)</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">file_location</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Since we are mostly interested in the precipitation data globally at this moment, let’s extract the data array of precipitation from the entire dataset.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Examine the precipitation data variable</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># using this function instead of 'open_dataset' will concatenate the data along the dimension we specify</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="n">file_ob</span><span class="p">,</span> <span class="n">combine</span><span class="o">=</span><span class="s1">'nested'</span><span class="p">,</span> <span class="n">concat_dim</span><span class="o">=</span><span class="s1">'time'</span><span class="p">)</span>
+<span class="n">ds</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the above code, we used <code class="docutils literal notranslate"><span class="pre">combine='nested',</span> <span class="pre">concat_dim='time'</span></code> to combine all monthly precipitation data into one data array along the dimension of <code class="docutils literal notranslate"><span class="pre">time</span></code>. This command is very useful when reading in multiple data files of the same structure but covering different parts of the full data record.</p>
+<p>Since we are interested in the precipitation data globally at this moment, let’s extract the entire data array of precipitation from the entire dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># examine the precipitation data variable</span>
 <span class="n">precip</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">precip</span>
 <span class="n">precip</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>As you can see, the data array has the dimension of <code class="docutils literal notranslate"><span class="pre">time=528</span></code> <code class="docutils literal notranslate"><span class="pre">longitude=144</span></code> <code class="docutils literal notranslate"><span class="pre">latitude=72</span></code>. Let’s visualize the precipitation data to better understand it before further analysis.</p>
-<p>##<strong>Section 1.2: Visualize GPCP Data with Additional Map Features</strong></p>
-<p>In previous tutorials, we learned how to make simple visualization using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> using <code class="docutils literal notranslate"><span class="pre">latitude</span></code> and <code class="docutils literal notranslate"><span class="pre">longitude</span></code> as the y-axis and x-axis.</p>
+<p>As you can see, the data array has the dimensions of <code class="docutils literal notranslate"><span class="pre">time</span></code> <code class="docutils literal notranslate"><span class="pre">longitude</span></code> <code class="docutils literal notranslate"><span class="pre">latitude</span></code>. Before delving into further analysis, let’s visualize the precipitation data to gain a better understanding of its patterns and characteristics.</p>
+</div>
+<div class="section" id="section-1-2-visualize-gpcp-data-using-cartopy">
+<h2><strong>Section 1.2: Visualize GPCP Data Using Cartopy</strong><a class="headerlink" href="#section-1-2-visualize-gpcp-data-using-cartopy" title="Permalink to this headline">¶</a></h2>
+<p>In previous tutorials, we’ve learned how to make simple visualization using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> using <code class="docutils literal notranslate"><span class="pre">latitude</span></code> and <code class="docutils literal notranslate"><span class="pre">longitude</span></code> as the y-axis and x-axis.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create simple map of the GPCP precipitation data using matplotlib</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create simple map of the GPCP precipitation data using matplotlib</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
-<span class="c1"># Use the first month of data as an example</span>
+
+<span class="c1"># use the first month of data as an example</span>
 <span class="n">precip</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">'1979-01-01'</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>From the figure, you can vaguely see the boundary of land and ocean. Particularly for the North and South America. But this is not an ideal situation for visualize the data since we don’t want to put any guess work in where we are looking at. So, we will now use <code class="docutils literal notranslate"><span class="pre">cartopy</span></code> to create the visualization with more advanced map features, such as, adding coastal lines, major grid marking, and creating maps with a specific projection for better science communication and climate applications.</p>
+<p>From the figure, the boundary between land and ocean, especially for North and South America, can be observed vaguely. However, this visualization is not ideal as it requires some guesswork in identifying the specific regions. To overcome this limitation and enhance the visualization, we will employ <code class="docutils literal notranslate"><span class="pre">cartopy</span></code>, a library that offers advanced mapping features. With <code class="docutils literal notranslate"><span class="pre">cartopy</span></code>, we can incorporate additional elements such as coastlines, major grid markings, and specific map projections.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Visualize the precipitation data of a selected month using cartopy</span>
-<span class="c1"># Select data for the month of interest</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># visualize the precipitation data of a selected month using cartopy</span>
+
+<span class="c1"># select data for the month of interest</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">precip</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">'1979-01-01'</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">'nearest'</span><span class="p">)</span>
-<span class="c1"># Initate plot with the specific figure size</span>
+
+<span class="c1"># initate plot with the specific figure size</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
-<span class="c1"># Set base map projection</span>
+
+<span class="c1"># set base map projection</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">Robinson</span><span class="p">())</span>
-<span class="c1"># Add coastal lines to indicate land/ocean</span>
+
+<span class="c1"># add coastal lines to indicate land/ocean</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">()</span>
-<span class="c1"># Add major grid lines for latitude and longitute</span>
+
+<span class="c1"># add major grid lines for latitude and longitute</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">()</span>
-<span class="c1"># Add the precipitation data with map projection transformation</span>
-<span class="c1"># Also specify the maximum and minumum value show on the map to increase the</span>
+
+<span class="c1"># add the precipitation data with map projection transformation</span>
+<span class="c1"># also specify the maximum and minumum value show on the map to increase the</span>
 <span class="c1"># contrast in the map.</span>
 <span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span>
           <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">cbar_kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">shrink</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'GPCP Monthly Precipitation </span><span class="se">\n</span><span class="s1">(mm/day)'</span><span class="p">))</span>
@@ -1263,113 +1350,101 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>The new map is much improved and gives us more information to better understand the GPCP monthly precipitation data. As we can see, Amazon rainforest, northern part of Australia, other tropical regions show higher amount of monthly precipitation during the month of January in 1979, which fits our basic knowledge of geography.</p>
+<p>The updated map provides significant improvements, offering us a wealth of information to enhance our understanding of the GPCP monthly precipitation data. From the visualization, we can observe that regions such as the Amazon rainforest, the northern part of Australia, and other tropical areas exhibit higher levels of monthly precipitation in January 1979. These patterns align with our basic geographical knowledge, reinforcing the validity of the data and representation.</p>
+<div class="section" id="coding-exercises-1-2">
+<h3><strong>Coding Exercises 1.2</strong><a class="headerlink" href="#coding-exercises-1-2" title="Permalink to this headline">¶</a></h3>
+<p>Remember the GPCP also offers a data variable that documents the error of the monthly precipitation data used above. This error information is valuable for understanding the level of confidence we can place on the data.</p>
+<ol class="simple">
+<li><p>Generate the precipitation error for the same month (1979-01-01) using the examples provided above.</p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select data for the month of interest</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">precip_error</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">'2000-01-01'</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">'nearest'</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># select data for the month of interest</span>
+<span class="n">data</span> <span class="o">=</span> <span class="o">...</span>
 
-<span class="c1"># Initate plot</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
-<span class="c1"># Set map projection</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">Robinson</span><span class="p">())</span>
-<span class="c1"># Add coastal lines to indicate land/ocean</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">()</span>
-<span class="c1"># Add grid lines for latitude and longitute</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">()</span>
-<span class="c1"># Add the precipitation data for</span>
-<span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span>
-          <span class="n">cbar_kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">shrink</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'GPCP Monthly Precipitation Error</span><span class="se">\n</span><span class="s1">(mm/day)'</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="exercise-1-2-how-big-is-the-error">
-<h2><strong>Exercise 1.2: How big is the error?</strong><a class="headerlink" href="#exercise-1-2-how-big-is-the-error" title="Permalink to this headline">¶</a></h2>
-<p>Remember GPCP also offers a data variable that document the error of the estimated monthly precipitation data. The error information can be very helpful information for us to understand how confident should we be about for this data.</p>
-<p>In this exercise, can you generate the precipitation error for the same month (1979-01-01) use the examples above?</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">################################################################################</span>
-<span class="c1"># Exercise: create precipitation error map for the month of January 1979       #</span>
-<span class="c1">#           using GPCP monthly data.                                           #</span>
-<span class="c1">################################################################################</span>
-
-<span class="c1"># Step 1: Select data for the month of interest using '.sel'</span>
-<span class="n">error</span> <span class="o">=</span> <span class="o">...</span>
-<span class="c1"># Step 2: Initate plot</span>
+<span class="c1"># initate plot</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="o">...</span>
-<span class="c1"># Step 3: Set map projection</span>
+
+<span class="c1"># set map projection</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="o">...</span>
-<span class="c1"># Step 4: Add coastal lines to indicate land/ocean</span>
+
+<span class="c1"># add coastal lines to indicate land/ocean</span>
 <span class="o">...</span>
-<span class="c1"># Step 5: Add grid lines for latitude and longitute</span>
+
+<span class="c1"># add grid lines for latitude and longitute</span>
 <span class="o">...</span>
-<span class="c1"># Step 6: Plot the precipitation error with a reasonable data range</span>
-<span class="o">...</span>
+
+<span class="c1"># add the precipitation data for</span>
+<span class="n">_</span> <span class="o">=</span> <span class="o">...</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Can you comment on the spatial pattern of the precipitation error provided by GPCP CDR data for this specific month?</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Please write about the error information based on the map above.</span>
-<span class="sd">'''</span>
-<span class="sd">Write you comments here</span>
-<span class="sd">'''</span>
-</pre></div>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/solutions/W1D3_Tutorial4_Solution_fd76addd.py"><em>Click for solution</em></a></p>
+<p><em>Example output:</em></p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/static/W1D3_Tutorial4_Solution_fd76addd_0.png"><img align="center" alt="Solution hint" class="align-center" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/static/W1D3_Tutorial4_Solution_fd76addd_0.png" style="width: 829.0px; height: 394.0px;"/></a>
 </div>
-</div>
+<div class="section" id="questions-1-2-climate-connection">
+<h3><strong>Questions 1.2: Climate Connection</strong><a class="headerlink" href="#questions-1-2-climate-connection" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Comment on the spatial pattern of the precipitation error provided by GPCP CDR data for this specific month.</p></li>
+<li><p>Which areas have the highest errors? Why do you think this might be?</p></li>
+</ol>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/solutions/W1D3_Tutorial4_Solution_9c9e9995.py"><em>Click for solution</em></a></p>
 </div>
 </div>
 </div>
 <div class="section" id="section-2-climatology">
 <h1><strong>Section 2: Climatology</strong><a class="headerlink" href="#section-2-climatology" title="Permalink to this headline">¶</a></h1>
-<p>We have more than 40 years of monthly precipitation data. Let’s take a look at a specific location about the entire time duration that we have the GPCP monthly data. Randomly, we are looking at the data point at (0°N, 0°E).</p>
+<div class="section" id="section-2-1-plot-time-series-of-data-at-a-specific-location">
+<h2><strong>Section 2.1: Plot Time Series of Data at a Specific Location</strong><a class="headerlink" href="#section-2-1-plot-time-series-of-data-at-a-specific-location" title="Permalink to this headline">¶</a></h2>
+<p>We have over 40 years of monthly precipitation data. Let’s examine a specific location throughout the entire time span covered by the GPCP monthly data. For this purpose, we will focus on the data point located at (0°N, 0°E).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># select the entire time series for the grid that contains the location of (0N, 0E)</span>
 <span class="n">grid</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">precip</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">latitude</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">longitude</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">'nearest'</span><span class="p">)</span>
-<span class="c1"># Initate plot</span>
+
+<span class="c1"># initate plot</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># plot the data</span>
 <span class="n">grid</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+
+<span class="c1"># remove the automatically generated title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>From the time series plot, it looks like we have a repeating pattern with seasonal cycle. When we talk about climatology, we often mean the pattern that is averaged over a long time period (e.g., typically 30 years). Climatology can tell us what the weather will typically be like in certain time of the year.</p>
-<p>For example, for a given location, we know summer will be the hottest season of the year. This can also apply to rainy/dry seasons. Now let’s calculate the monthly climatology of precipitation using GPCP monthly data.</p>
+<p>From the time series plot, note a repeating pattern with a seasonal cycle (roughly the same ups and downs over the course of a year, for each year). In previous tutorials during the climate system overview you learned how to calculate climatology. We can apply this same calculation to the precipitation CDR data to investigate the annual cycle of precipitation at this location.</p>
+</div>
+<div class="section" id="section-2-2-calculate-the-climatology">
+<h2><strong>Section 2.2: Calculate the Climatology</strong><a class="headerlink" href="#section-2-2-calculate-the-climatology" title="Permalink to this headline">¶</a></h2>
+<p>As a refresher, a climatology typically employs a 30-year time period to use for the calculation. In this case, let’s use the reference period of 1981-2010.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># First, let's extract the data for the time period that we want to use to</span>
-<span class="c1"># calulate climatology (1981-2010)</span>
-<span class="n">precip_30yr</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">precip</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="s1">'1981-01-01'</span><span class="p">,</span> <span class="s1">'2010-12-01'</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># first, let's extract the data for the time period that we want (1981-2010)</span>
+<span class="n">precip_30yr</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">precip</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="s1">'1981-01-01'</span><span class="p">,</span> <span class="s1">'2010-12-30'</span><span class="p">))</span>
 <span class="n">precip_30yr</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>We now have a defined time period 1981–2010 that we want to calculate climatology with. We can use <code class="docutils literal notranslate"><span class="pre">xarray</span></code> package’s <code class="docutils literal notranslate"><span class="pre">groupby</span></code> functionality to easily calculate the monthly climatology.</p>
-<p><code class="docutils literal notranslate"><span class="pre">groupby</span></code> basically split the data based on a specific criteria (in this case, month of the year) and then perform the process (in our case, calculating mean value across 30 years for that specific month) to each group and recombine data together.</p>
+<p>Now we can use Xarray’s <code class="docutils literal notranslate"><span class="pre">.groupby()</span></code> functionality to calculate the monthly climatology.</p>
+<p>Recall that <code class="docutils literal notranslate"><span class="pre">.groupby()</span></code> splits the data based on a specific criterion (in this case, the month of the year) and then applies a process (in our case, calculating the mean value across 30 years for that specific month) to each group before recombining the data together.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use groupby to calculate monthly climatology (1981-2010)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># use groupby to calculate monthly climatology (1981-2010)</span>
 <span class="n">precip_clim</span> <span class="o">=</span> <span class="n">precip_30yr</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'time.month'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">'time'</span><span class="p">)</span>
 <span class="n">precip_clim</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>As you can see, the resulting outcome is a data array with the time dimension of <strong>12</strong> – the exact value for the number of months in a year. We now have the monthly climatology for precipitation for 1981-2010 using GPCP monthly data.</p>
-<p>Let’s make a set of map to visualize the monthly climatology from four different seasons.</p>
+<p>With the resulting climatology data array, we can make a set of maps to visualize the monthly climatology from four different seasons.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the figure and each axis for the 2 rows and 2 columns</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the figure and each axis for the 2 rows and 2 columns</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
                         <span class="n">subplot_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">'projection'</span><span class="p">:</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">Robinson</span><span class="p">()},</span>
                         <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
@@ -1377,7 +1452,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="c1"># axs is a 2 dimensional array of `GeoAxes`.  We will flatten it into a 1-D array</span>
 <span class="n">axs</span><span class="o">=</span><span class="n">axs</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
 
-<span class="c1">#Loop over selected months (Jan, Apr, Jul, Oct)</span>
+<span class="c1"># loop over selected months (Jan, Apr, Jul, Oct)</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">month</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">10</span><span class="p">]):</span>
 
         <span class="c1"># Draw the coastines and major gridline for each subplot</span>
@@ -1392,53 +1467,77 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>In the seasonal collection of the climatology map, we can see a clear pattern of precipitation across the globe. The tropics show higher amount of precipitation comparing to other regions. You can also see the seasonal patterns of the precipitation change across different region of the globe (e.g., moonsoon imapcted areas).</p>
-<p>Now let’s look at the climatology of the point that we examined its entire time series earlier (i.e., (0°N, 0°E)).</p>
+<p>In the seasonal collection of the climatology map, we can observe a clear pattern of precipitation across the globe. The tropics exhibit a higher amount of precipitation compared to other regions. Additionally, the map illustrates the seasonal patterns of precipitation changes across different regions of the globe, including areas influenced by monsoons.</p>
+<div class="section" id="questions-2-2-climate-connection">
+<h3><strong>Questions 2.2: Climate Connection</strong><a class="headerlink" href="#questions-2-2-climate-connection" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Do the tropics or high-latitudes recieve more precipitation all year round? Why do you think this is? Think back to the climate system overview tutorials on atmospheric circulation to help form your answer.</p></li>
+<li><p>In the climate system overview tutorials you learned about Monsoon systems in places such as India, South-east Asia and East Africa where there are notable wet and dry seasons. Do you see evidence of say, the Indian monsoon, in these maps?</p></li>
+</ol>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/solutions/W1D3_Tutorial4_Solution_c390720b.py"><em>Click for solution</em></a></p>
+<p>Now let’s examine the climatology of the location we previously analyzed throughout the entire time series, specifically at (0°N, 0°E).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">precip_clim</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">latitude</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">longitude</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">'nearest'</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="c1"># Remove the automatically generated title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>The monthly climatology time series for the point of interest demonstrate a notable seasonal pattern of dry and rainy months for the region with more precipitation between December and May while August is the driest of the year.</p>
-<p>Climatology tells us about how the weather typically is like. When we compare the weather of a specific day/month against the climatology, we will know how much it is different from the climatology, or the norm. This will be the content for our next tutorial - anomaly!</p>
-<p>###<strong>Coding Exercise 2.1: Calculate Climatology Change</strong></p>
-<p>As the climate change, the climatology may also change. In fact, climate researchers recalculate climatology every 10 years. This allow climate scientists to monitor how the norm of our climate system changes.</p>
-<p>In this exercise, can you calculate the climatology of a different time period (1991-2020) and comparing it to the climatology that we just generated in this tutorail?</p>
+<p>The monthly climatology time series for the point of interest demonstrates a noticeable seasonal pattern, with dry and rainy months observed in the region. Precipitation is typically more abundant between December and May, while August experiences the driest conditions throughout the year.</p>
+</div>
+<div class="section" id="coding-exercises-2-1">
+<h3><strong>Coding Exercises 2.1</strong><a class="headerlink" href="#coding-exercises-2-1" title="Permalink to this headline">¶</a></h3>
+<p>As climate changes, the climatology of precipitation may also change. In fact, climate researchers recalculate climatology every 10 years. This allows climate scientists to monitor how the norms of our climate system change. In this exercise, you will visualize how the climatology of our dataset changes depending on the reference period used.</p>
+<ol class="simple">
+<li><p>Calculate the climatology for a different reference period (1991-2020) and compare it to the climatology that we just generated with reference period (1981-2010). Be sure to compare the two and note differences. Can you see why it is important to re-calculate this climatology?</p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">################################################################################</span>
-<span class="c1"># Exercise: Calculate precipitation climatology for 1991-2020 and comparing    #</span>
-<span class="c1">#           the climatology with the 1981-2010.                                #</span>
-<span class="c1">################################################################################</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># extract 30 year data for 1991-2020</span>
+<span class="n">precip_30yr_exercise</span> <span class="o">=</span> <span class="o">...</span>
 
-<span class="c1"># Step 1: Extract 30 year data for 1991-2020</span>
+<span class="c1"># calculate climatology for 1991-2020</span>
+<span class="n">precip_clim_exercise</span> <span class="o">=</span> <span class="o">...</span>
 
-<span class="c1"># Step 2: Calculate climatology for 1991-2020</span>
+<span class="c1"># find difference in climatologies: (1981-2010) minues (1991-2020)</span>
+<span class="n">precip_diff_exercise</span> <span class="o">=</span> <span class="o">...</span>
 
-<span class="c1"># Step 3: Comparing the climatology for four different seasons by generating the</span>
-<span class="c1">#         difference maps for January, April, July, and October</span>
+<span class="c1"># Compare the climatology for four different seasons by generating the</span>
+<span class="c1">#         difference maps for January, April, July, and October with colorbar max and min = 1,-1</span>
 
+<span class="c1"># Define the figure and each axis for the 2 rows and 2 columns</span>
+<span class="o">...</span>
 
+<span class="c1"># axs is a 2 dimensional array of `GeoAxes`.  We will flatten it into a 1-D array</span>
+<span class="n">axs</span> <span class="o">=</span> <span class="o">...</span>
 
-<span class="sd">'''</span>
-
-<span class="sd">Please briefly describe the difference between two climatologies using GPCP</span>
-<span class="sd">monthly data for two different</span>
-
-<span class="sd">'''</span>
+<span class="c1">#Loop over selected months (Jan, Apr, Jul, Oct)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">month</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">10</span><span class="p">]):</span>
+    <span class="o">...</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>#<strong>Summary</strong></p>
-<p>In this tutorial, we learned about what is climatology.</p>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/solutions/W1D3_Tutorial4_Solution_f1211a35.py"><em>Click for solution</em></a></p>
+<p><em>Example output:</em></p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/static/W1D3_Tutorial4_Solution_f1211a35_0.png"><img align="center" alt="Solution hint" class="align-center" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/static/W1D3_Tutorial4_Solution_f1211a35_0.png" style="width: 1176.0px; height: 575.0px;"/></a>
+</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h1><strong>Summary</strong><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h1>
+<p>Climatologies provide valuable insight into typical weather patterns of a region. Key takeaways from the tutorial include:</p>
 <ul class="simple">
-<li><p>Climatology often refers to the average state of the system (e.g., mean temperature, precipitation, etc) over a long period of time (typically 30 years).</p></li>
-<li><p>Satellite climate data records can be used to calculate climatology at global scale.</p></li>
+<li><p>A climatology pertains to the long-term average of various system attributes, such as temperature and precipitation, often spanning a duration of 30 years.</p></li>
+<li><p>Satellite climate data records offer valuable insights for calculating climatology on a global scale.</p></li>
 </ul>
-<p>We will use the climatology skill learned from this tutorial in the next tutorial on anomaly.</p>
+<p>By comparing the weather conditions of a specific day or month to the climatology, we can determine the extent to which they deviate from the norm. This concept of comparing against the climatology, or the norm, will be the focus of our next tutorial - the anomaly!</p>
+</div>
+<div class="section" id="resources">
+<h1><strong>Resources</strong><a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h1>
+<p>Data from this tutorial can be accessed <a class="reference external" href="https://noaa-cdr-precip-gpcp-monthly-pds.s3.amazonaws.com/index.html#data/">here</a>.</p>
 </div>
 <script type="text/x-thebe-config">
     {
@@ -1449,16 +1548,16 @@ const thebe_selector_output = ".output, .cell_output"
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "pangeo"
+            mode: "climatematch"
         },
         kernelOptions: {
-            kernelName: "pangeo",
+            kernelName: "climatematch",
             path: "./tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student"
         },
         predefinedOutput: true
     }
     </script>
-<script>kernelName = 'pangeo'</script>
+<script>kernelName = 'climatematch'</script>
 </div>
 </main>
 <footer class="footer-article noprint">
@@ -1474,7 +1573,7 @@ const thebe_selector_output = ".output, .cell_output"
 <a class="right-next" href="W1D3_Tutorial5.html" id="next-link" title="next page">
 <div class="prev-next-info">
 <p class="prev-next-subtitle">next</p>
-<p class="prev-next-title">Figure settings</p>
+<p class="prev-next-title"><strong>Tutorial 5: Calculating Anomalies Using Precipitation Data</strong></p>
 </div>
 <i class="fas fa-angle-right"></i>
 </a>

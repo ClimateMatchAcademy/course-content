@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Calculating ENSO with Xarray — Climatematch Academy: Computational Climate Science</title>
+<title>Tutorial 1: Calculating ENSO with Xarray — Climatematch Academy: Computational Climate Science</title>
 <!-- Loaded before other Sphinx assets -->
 <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
@@ -40,9 +40,10 @@ const thebe_selector_output = ".output, .cell_output"
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
 <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-<link href="../../../genindex.html" rel="index" title="Index">
+<link href="../../../_static/cma-logo-square-4xp.png" rel="shortcut icon">
+<link href="../../../genindex.html" rel="index" title="Index"/>
 <link href="../../../search.html" rel="search" title="Search"/>
-<link href="W1D2_Tutorial2.html" rel="next" title="Tutorial 2: A lot of weather makes climate - exploring the ERA5 Reanalysis"/>
+<link href="W1D2_Tutorial2.html" rel="next" title="Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis"/>
 <link href="../chapter_title.html" rel="prev" title="State of the Climate Ocean and Atmosphere Reanalysis"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="None" name="docsearch:language"/>
@@ -70,6 +71,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="bd-sidebar__content">
 <div class="bd-sidebar__top"><div class="navbar-brand-box">
 <a class="navbar-brand text-wrap" href="../../../index.html">
+<!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+<img alt="logo" class="logo" src="../../../_static/cma-logo-square-4xp.png"/>
 <h1 class="site-logo" id="site-title">Climatematch Academy: Computational Climate Science</h1>
 </a>
 </div><form action="../../../search.html" class="bd-search d-flex align-items-center" method="get">
@@ -307,33 +310,45 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current">
 <li class="toctree-l2 current active">
 <a class="current reference internal" href="#">
-     Calculating ENSO with Xarray
-    </a>
+<strong>
+      Tutorial 1: Calculating ENSO with Xarray
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D2_Tutorial2.html">
-     Tutorial 2: A lot of weather makes climate - exploring the ERA5 Reanalysis
-    </a>
+<strong>
+      Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D2_Tutorial3.html">
-     Tutorial 3: Atmospheric wind driven circulation
-    </a>
+<strong>
+      Tutorial 3: Atmospheric  Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D2_Tutorial4.html">
-     Tutorial 4: Ocean wind driven circulation
-    </a>
+<strong>
+      Tutorial 4: Oceanic Wind-driven Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D2_Tutorial5.html">
-     Tutorial 5: Thermohaline circulation
-    </a>
+<strong>
+      Tutorial 5: Thermohaline Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D2_Tutorial6.html">
-     Tutorial 6: Ocean heat content
-    </a>
+<strong>
+      Tutorial 6: Ocean Heat Content
+     </strong>
+</a>
 </li>
 </ul>
 </li>
@@ -349,13 +364,17 @@ const thebe_selector_output = ".output, .cell_output"
 <ul>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.html">
-     Video 1: What is Remote Sensing
-    </a>
+<strong>
+      Tutorial 1: Introduction to Remote Sensing
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.html">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 2: Exploring Satellite Climate Data Records
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial3.html">
@@ -364,13 +383,17 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial4.html">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 4: Understanding Climatology Through Precipitation Data
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial5.html">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 5: Calculating Anomalies Using Precipitation Data
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial6.html">
@@ -490,18 +513,24 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial2.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 2 : Energy Balance
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial3.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 3 : A Zero-Dimensional Energy Balance Model
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial4.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 4: Climate Feedbacks
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial5.html">
@@ -841,59 +870,125 @@ const thebe_selector_output = ".output, .cell_output"
     </div>
 <nav aria-label="Page" id="bd-toc-nav">
 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#">
+<strong>
+    Tutorial 1: Calculating ENSO with Xarray
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-objectives">
+<strong>
+    Tutorial Objectives
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#setup">
+<strong>
+    Setup
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#overview">
-   Overview
-  </a>
+<a class="reference internal nav-link" href="#video-1">
+     Video 1:
+    </a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-introduction-to-el-nino-southern-oscillation-enso">
+<strong>
+    Section 1: Introduction to El Niño Southern Oscillation (ENSO)
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-1-tropical-pacific-climate-processes">
+<strong>
+      Section 1.1: Tropical Pacific Climate Processes
+     </strong>
+</a>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#prerequisites">
-   Prerequisites
-  </a>
+<a class="reference internal nav-link" href="#section-1-2-ocean-atmosphere-interactions-during-el-nino-and-la-nina">
+<strong>
+      Section 1.2: Ocean-Atmosphere Interactions During El Niño and La Niña
+     </strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-calculate-the-oceanic-nino-index">
+<strong>
+    Section 2: Calculate the Oceanic Niño Index
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-1-open-the-sst-data">
+<strong>
+      Section 2.1: Open the SST Data
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#interactive-demo-2-1">
+<strong>
+        Interactive Demo 2.1
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#tropical-pacific-climate-processes">
-   Tropical Pacific Climate Processes
-  </a>
+<a class="reference internal nav-link" href="#section-2-2-select-the-nino-3-4-region">
+<strong>
+      Section 2.2: Select the Niño 3.4 Region
+     </strong>
+</a>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#ocean-atmosphere-interactions-during-el-nino-and-la-nina">
-   Ocean-Atmosphere Interactions during El Niño and La Niña
-  </a>
+<a class="reference internal nav-link" href="#section-2-3-compute-the-climatology-and-anomalies">
+<strong>
+      Section 2.3: Compute the Climatology and Anomalies
+     </strong>
+</a>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#imports">
-   Imports
-  </a>
+<a class="reference internal nav-link" href="#section-2-4-smooth-the-anomaly-time-series">
+<strong>
+      Section 2.4: Smooth the Anomaly Time Series
+     </strong>
+</a>
 </li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#the-nino-3-4-index">
-   The Niño 3.4 Index
-  </a>
+</ul>
 </li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-3-identify-el-nino-and-la-nina-events">
+<strong>
+    Section 3: Identify El Niño and La Niña Events
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#select-the-nino-3-4-region">
-   Select the Niño 3.4 region
-  </a>
+<a class="reference internal nav-link" href="#questions-3">
+     Questions 3:
+    </a>
 </li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#compute-the-anomalies">
-   Compute the anomalies
-  </a>
+</ul>
 </li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#visualize-the-computed-nino-3-4-index">
-   Visualize the computed Niño 3.4 index
-  </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
+<li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#summary">
    Summary
   </a>
 </li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#resources-and-references">
-   Resources and References
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#resources">
+   Resources
   </a>
 </li>
 </ul>
@@ -904,7 +999,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="col pl-md-3 pl-lg-5 content-container">
 <!-- Table of contents that is only displayed when printing the page -->
 <div class="onlyprint" id="jb-print-docs-body">
-<h1>Calculating ENSO with Xarray</h1>
+<h1>Tutorial 1: Calculating ENSO with Xarray</h1>
 <!-- Table of contents -->
 <div id="print-main-content">
 <div id="jb-print-toc">
@@ -913,59 +1008,125 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <nav aria-label="Page">
 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#">
+<strong>
+    Tutorial 1: Calculating ENSO with Xarray
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-objectives">
+<strong>
+    Tutorial Objectives
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#setup">
+<strong>
+    Setup
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#overview">
-   Overview
-  </a>
+<a class="reference internal nav-link" href="#video-1">
+     Video 1:
+    </a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-introduction-to-el-nino-southern-oscillation-enso">
+<strong>
+    Section 1: Introduction to El Niño Southern Oscillation (ENSO)
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-1-tropical-pacific-climate-processes">
+<strong>
+      Section 1.1: Tropical Pacific Climate Processes
+     </strong>
+</a>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#prerequisites">
-   Prerequisites
-  </a>
+<a class="reference internal nav-link" href="#section-1-2-ocean-atmosphere-interactions-during-el-nino-and-la-nina">
+<strong>
+      Section 1.2: Ocean-Atmosphere Interactions During El Niño and La Niña
+     </strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-calculate-the-oceanic-nino-index">
+<strong>
+    Section 2: Calculate the Oceanic Niño Index
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-1-open-the-sst-data">
+<strong>
+      Section 2.1: Open the SST Data
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#interactive-demo-2-1">
+<strong>
+        Interactive Demo 2.1
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#tropical-pacific-climate-processes">
-   Tropical Pacific Climate Processes
-  </a>
+<a class="reference internal nav-link" href="#section-2-2-select-the-nino-3-4-region">
+<strong>
+      Section 2.2: Select the Niño 3.4 Region
+     </strong>
+</a>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#ocean-atmosphere-interactions-during-el-nino-and-la-nina">
-   Ocean-Atmosphere Interactions during El Niño and La Niña
-  </a>
+<a class="reference internal nav-link" href="#section-2-3-compute-the-climatology-and-anomalies">
+<strong>
+      Section 2.3: Compute the Climatology and Anomalies
+     </strong>
+</a>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#imports">
-   Imports
-  </a>
+<a class="reference internal nav-link" href="#section-2-4-smooth-the-anomaly-time-series">
+<strong>
+      Section 2.4: Smooth the Anomaly Time Series
+     </strong>
+</a>
 </li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#the-nino-3-4-index">
-   The Niño 3.4 Index
-  </a>
+</ul>
 </li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-3-identify-el-nino-and-la-nina-events">
+<strong>
+    Section 3: Identify El Niño and La Niña Events
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#select-the-nino-3-4-region">
-   Select the Niño 3.4 region
-  </a>
+<a class="reference internal nav-link" href="#questions-3">
+     Questions 3:
+    </a>
 </li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#compute-the-anomalies">
-   Compute the anomalies
-  </a>
+</ul>
 </li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#visualize-the-computed-nino-3-4-index">
-   Visualize the computed Niño 3.4 index
-  </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
+<li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#summary">
    Summary
   </a>
 </li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#resources-and-references">
-   Resources and References
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#resources">
+   Resources
   </a>
 </li>
 </ul>
@@ -975,321 +1136,366 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <main id="main-content" role="main">
 <div>
-<div class="section" id="calculating-enso-with-xarray">
-<h1>Calculating ENSO with Xarray<a class="headerlink" href="#calculating-enso-with-xarray" title="Permalink to this headline">¶</a></h1>
-<hr class="docutils"/>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>In this notebook (adapted from Project Pythia), we will:</p>
+<p><a class="reference external" href="https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial1.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/></a>   <a href="https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/{ORG}/course-content/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial1.ipynb" target="_blank"><img alt="Open in Kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg"/></a></p>
+<div class="section" id="tutorial-1-calculating-enso-with-xarray">
+<h1><strong>Tutorial 1: Calculating ENSO with Xarray</strong><a class="headerlink" href="#tutorial-1-calculating-enso-with-xarray" title="Permalink to this headline">¶</a></h1>
+<p><strong>Week 1, Day 2, Ocean-Atmosphere Reanalysis</strong></p>
+<p><strong>Content creators:</strong> Abigail Bodner, Momme Hell, Aurora Basinski</p>
+<p><strong>Content reviewers:</strong> Yosemley Bermúdez, Katrina Dobson, Danika Gupta, Maria Gonzalez, Will Gregory, Nahid Hasan, Sherry Mi, Beatriz Cosenza Muralles, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Content editors:</strong> Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Production editors:</strong> Wesley Banfield, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Our 2023 Sponsors:</strong> NASA TOPS and Google deepmind</p>
+</div>
+<div class="section" id="tutorial-objectives">
+<h1><strong>Tutorial Objectives</strong><a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">¶</a></h1>
+<p>In this notebook (adapted from <a class="reference external" href="https://foundations.projectpythia.org/core/xarray/enso-xarray.html">Project Pythia</a>), you will practice using multiple tools to examine sea surface temperature (SST) and explore variations in the climate system that occur during El Nino and La Nina events. You will learn to:</p>
 <ol class="simple">
-<li><p>Load SST data from the CESM2 model</p></li>
+<li><p>Load Sea Surface Temprature data from the CESM2 model</p></li>
 <li><p>Mask data using <code class="docutils literal notranslate"><span class="pre">.where()</span></code></p></li>
 <li><p>Compute climatologies and anomalies using <code class="docutils literal notranslate"><span class="pre">.groupby()</span></code></p></li>
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">.rolling()</span></code> to compute moving average</p></li>
-<li><p>Compute, normalize, and plot the Niño 3.4 Index</p></li>
+<li><p>Compute, normalize, and plot the Oceanic Niño Index</p></li>
 </ol>
+<p>After completing the tasks above, you should be able to plot <a class="reference external" href="https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni">Oceanic Niño Index</a> that looks similar to the figure below. The red and blue regions correspond to the phases of El Niño and La Niña respectively.</p>
+<p><img alt="ONI index plot from NCAR Climate Data Guide" src="https://climatedataguide.ucar.edu/sites/default/files/styles/extra_large/public/2022-03/indices_oni_2_2_lg.png"/></p>
+<p>Credit: <a class="reference external" href="https://climatedataguide.ucar.edu/sites/default/files/styles/extra_large/public/2022-03/indices_oni_2_2_lg.png">NCAR</a></p>
+<p>Pythia credit: Rose, B. E. J., Kent, J., Tyle, K., Clyne, J., Banihirwe, A., Camron, D., May, R., Grover, M., Ford, R. R., Paul, K., Morley, J., Eroglu, O., Kailyn, L., &amp; Zacharias, A. (2023). Pythia Foundations (Version v2023.05.01) https://zenodo.org/record/8065851</p>
 </div>
-<div class="section" id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Concepts</p></th>
-<th class="head"><p>Importance</p></th>
-<th class="head"><p>Notes</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><span class="xref myst">Introduction to Xarray</span></p></td>
-<td><p>Necessary</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><span class="xref myst">Computation and Masking</span></p></td>
-<td><p>Necessary</p></td>
-<td><p></p></td>
-</tr>
-</tbody>
-</table>
-<ul class="simple">
-<li><p><strong>Time to learn</strong>: 20 minutes</p></li>
-</ul>
-<p>##Introduction to El Niño Southern Oscillation (ENSO)
-During many of the tutorials yesterday, we practiced using Xarray packages to plot and interpret monthly global sea surface temperature (SST) data from the Community Earth System Model v2 (CESM2). With this data, we:</p>
-<ul class="simple">
-<li><p>Applied arithmetic and aggregation methods</p></li>
-<li><p>Explored climatology</p></li>
-<li><p>Computed climate anaomalies running averages</p></li>
-<li><p>Masked data with one and multiple conditions</p></li>
-</ul>
-<p>During the final tutorial yesterday, we learned how to mask data using multiple conditions. In particular, we used <code class="docutils literal notranslate"><span class="pre">.where()</span></code> to isolate SST data between 5ºN-5ºS and 190ºW-240ºW. This geographic region, known as the Niño 3.4 region, is in the tropical Pacific Ocean and is commonly used as a metric for determining the phase of the El Niño-Southern Oscillation (ENSO). ENSO is a recurring climate pattern involving changes in SST in the central and eastern tropical Pacific Ocean, which two alternating phases:</p>
-<ul class="simple">
-<li><p><strong>El Niño:</strong> the phase of ENSO characterized by warmer than average SSTs in the central and eastern tropical Pacific Ocean, weakened east to west equatorial winds and increased rainfall in the eastern tropical Pacific.</p></li>
-<li><p><strong>La Niña:</strong> the phase of ENSO is characterized by cooler than average SSTs in the central and eastern tropical Pacific Ocean, stronger east to west equatorial winds and decreased rainfall in the eastern tropical Pacific.</p></li>
-</ul>
-</div>
-<div class="section" id="tropical-pacific-climate-processes">
-<h2>Tropical Pacific Climate Processes<a class="headerlink" href="#tropical-pacific-climate-processes" title="Permalink to this headline">¶</a></h2>
-<p>To better understand the climate system processes that result in El Nino and La Nina events, let’s first consider typical climate conditions in the tropical Pacific Ocean. Recall from W1D1, <strong>trade winds</strong> are winds that blow east to west just north and south of the equator (these are sometimes referred to as “easterly” winds since the winds are originating from the east and blowing toward the west). And as we discussed yesterday, the reason that the trade winds blow from east to west is related to Earth’s rotation, which causes the winds in the Northern Hemisphere to curve to the right and winds in the Southern Hemisphere curves to the left. This is known as the <strong>Coriolis effect</strong>.</p>
-<p>If Earth’s rotation affects air movement, do you think it also influences surface ocean water movement? It does! As trade winds blow across the tropical Pacific Ocean, they move water because of friction at the ocean surface. But because of the Coriolis effect, surface water moves to the right of the wind direction in the Northern Hemisphere and to the left of the wind direction in the Southern Hemisphere. However, the speed and direction of water movement changes with depth. Ocean surface water moves at an angle to the wind, and the water under the surface water moves at a slightly larger angle, and the water below that turns at an even larger angle. The average direction of all this turning water is about a right angle from the wind direction. This average is known as <strong>Ekman transport</strong>. Since this process is driven by the trade winds, the strength of this ocean water transport varies in response to changes in the the srength of the trade winds.</p>
-</div>
-<div class="section" id="ocean-atmosphere-interactions-during-el-nino-and-la-nina">
-<h2>Ocean-Atmosphere Interactions during El Niño and La Niña<a class="headerlink" href="#ocean-atmosphere-interactions-during-el-nino-and-la-nina" title="Permalink to this headline">¶</a></h2>
-<p>So, how does all of this relate to El Niño and La Niña? Changes in the strength of Pacific Ocean trade winds and the resulting impact on Ekman transport create variations in the tropical Pacific Ocean SST, which further results in changes to atmospheric circulation patterns and rainfall.</p>
-<p>During an El Niño event, <em><strong>easterly trade winds are weaker</strong></em>. As a result, less warm surface water is  transported to the west via Ekman transport, which causes a build-up of warm surface water in the eastern equatorial Pacific. This creates warmer than avrage SSTs in the eastern equatorial Pacific Ocean. The atmosphere responds to this warming with increased rising air motion and above-average rainfall in the eastern Pacific. In contrast, during a La Niña event, <em><strong>easterly trade winds are stronger</strong></em>. As a result, more warm surface water is transported to the west via Ekman transport, and cool water from deeper in the ocean rises up in the eastern Pacific during a process known as upwelling. This creates cooler than avrage SSTs in the eastern equatorial Pacific Ocean. This cooling decreases rising air movement in the eastern Pacific, resulting in drier than average cdonsitions.</p>
-<p>In this tutorial, we’ll examine SST temperature to further explore variations in the climate system that occur during El Nino and La Nina events. Specifically, we will plot and interpet CESM2 SST data from the Niño 3.4 region.</p>
+<div class="section" id="setup">
+<h1><strong>Setup</strong><a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
 <div class="cell tag_colab docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># #&lt;Yosmely Bermúdez&gt; comments</span>
-<span class="c1"># #Install the dependencies</span>
-<span class="c1"># !pip install pythia_datasets</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># !pip install pythia_datasets</span>
 <span class="c1"># !pip install cartopy</span>
-<span class="c1"># !pip install xarray</span>
+<span class="c1"># !pip install geoviews</span>
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<hr class="docutils"/>
-<div class="section" id="imports">
-<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># imports</span>
+<span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 <span class="kn">from</span> <span class="nn">pythia_datasets</span> <span class="kn">import</span> <span class="n">DATASETS</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="the-nino-3-4-index">
-<h2>The Niño 3.4 Index<a class="headerlink" href="#the-nino-3-4-index" title="Permalink to this headline">¶</a></h2>
-<p>In this notebook, we are going to combine several topics we’ve covered so far to compute the <a class="reference external" href="https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni">Niño 3.4 Index</a> for the CESM2 submission for the <a class="reference external" href="https://esgf-node.llnl.gov/projects/cmip6/">CMIP6 project</a>.</p>
-<blockquote>
-<div><p>Niño 3.4 (5N-5S, 170W-120W): The Niño 3.4 anomalies may be thought of as representing the average equatorial SSTs across the Pacific from about the dateline to the South American coast. The Niño 3.4 index typically uses a 5-month running mean, and El Niño or La Niña events are defined when the Niño 3.4 SSTs exceed +/- 0.4C for a period of six months or more.</p>
-</div></blockquote>
-<blockquote>
-<div><p>Nino X Index computation: (a) Compute area averaged total SST from Niño X region; (b) Compute monthly climatology (e.g., 1950-1979) for area averaged total SST from Niño X region, and subtract climatology from area averaged total SST time series to obtain anomalies; (c) Smooth the anomalies with a 5-month running mean; (d) Normalize the smoothed values by its standard deviation over the climatological period.</p>
-</div></blockquote>
-<p><img alt="" src="https://www.ncdc.noaa.gov/monitoring-content/teleconnections/nino-regions.gif"/></p>
-<p>At the end of this notebook, you should be able to produce a plot that looks similar to this <a class="reference external" href="https://climatedataguide.ucar.edu/sites/default/files/styles/extra_large/public/2022-03/indices_oni_2_2_lg.png">Oceanic Niño Index plot</a>:</p>
-<p><img alt="ONI index plot from NCAR Climate Data Guide" src="https://climatedataguide.ucar.edu/sites/default/files/styles/extra_large/public/2022-03/indices_oni_2_2_lg.png"/></p>
-<p>Open the SST and areacello datasets, and use Xarray’s <code class="docutils literal notranslate"><span class="pre">merge</span></code> method to combine them into a single dataset:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">filepath</span> <span class="o">=</span> <span class="n">DATASETS</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s1">'CESM2_sst_data.nc'</span><span class="p">)</span>
-<span class="c1"># &lt;Yosmely Bermúdez&gt; comments</span>
-<span class="c1"># decode_times=False fix up the time variable "manually".</span>
-<span class="c1"># You can use xr.decode_cf() or simply assign a new pandas time index to your time variable.</span>
-<span class="c1"># Is better assign a new pandas time index because after you need a groupby with month and this is the solution.</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span><span class="n">decode_times</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">data</span><span class="p">[</span><span class="s1">'time'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">'time'</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
-<span class="n">filepath2</span> <span class="o">=</span> <span class="n">DATASETS</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s1">'CESM2_grid_variables.nc'</span><span class="p">)</span>
-<span class="n">areacello</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">filepath2</span><span class="p">)</span><span class="o">.</span><span class="n">areacello</span>
-
-<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">merge</span><span class="p">([</span><span class="n">data</span><span class="p">,</span> <span class="n">areacello</span><span class="p">])</span>
-<span class="n">ds</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_colab docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># # Sloane Garelick comments</span>
-<span class="c1"># # When I ran this cell it caused the rest of the notebook to crash. I think maybe we should remove this cell?</span>
-
-<span class="c1"># # &lt;Yosmely Bermúdez&gt; comments</span>
-<span class="c1">#    # You have to be careful with shapely as it has problems with cartopy, so you have to install other dependencies</span>
-<span class="c1"># !apt-get install libproj-dev proj-data proj-bin</span>
-<span class="c1"># !apt-get install libgeos-dev</span>
-<span class="c1"># !pip install cython</span>
-<span class="c1"># !apt-get -qq install python-cartopy python3-cartopy</span>
-<span class="c1"># !pip uninstall -y shapely    # cartopy and shapely aren't friends (early 2020)</span>
-<span class="c1"># !pip install shapely --no-binary shapely</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sloane Garelick comments</span>
-<span class="c1"># When I ran this cell it caused the rest of the notebook to crash. I think maybe we should remove this cell?</span>
-
-
-<span class="c1"># &lt;Yosmely Bermúdez&gt; comments</span>
-   <span class="c1">#This library is needed to be able to graph with cartopy</span>
 <span class="kn">import</span> <span class="nn">cartopy.io.shapereader</span> <span class="k">as</span> <span class="nn">shapereader</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.dates</span> <span class="k">as</span> <span class="nn">mdates</span>
+<span class="kn">import</span> <span class="nn">geoviews</span> <span class="k">as</span> <span class="nn">gv</span>
+<span class="kn">import</span> <span class="nn">geoviews.feature</span> <span class="k">as</span> <span class="nn">gf</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Visualize the first time slice to make sure the data looks as expected:</p>
+<div class="section" id="video-1">
+<h2>Video 1:<a class="headerlink" href="#video-1" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Video 1:</span>
+<span class="c1"># tech team will add code to format and display the video</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="section-1-introduction-to-el-nino-southern-oscillation-enso">
+<h1><strong>Section 1: Introduction to El Niño Southern Oscillation (ENSO)</strong><a class="headerlink" href="#section-1-introduction-to-el-nino-southern-oscillation-enso" title="Permalink to this headline">¶</a></h1>
+<p>In W1D1 you practiced using <code class="docutils literal notranslate"><span class="pre">Xarray</span></code> to calculate a monthly climatology, climate anomalies, and a running average on monthly global Sea Surface Temperature (SST) data from the Community Earth System Model v2 (CESM2). You also used the <code class="docutils literal notranslate"><span class="pre">.where()</span></code> method to isolate SST data between <strong>5ºN-5ºS and 190ºE-240ºE (or 170ºW-120ºW)</strong>. This geographic region, known as the <strong>Niño 3.4 region</strong>, is in the tropical Pacific Ocean and is commonly used as a metric for determining the phase of the El Niño-Southern Oscillation (ENSO). ENSO is a recurring climate pattern involving changes in SST in the central and eastern tropical Pacific Ocean, which has two alternating phases:</p>
+<ul class="simple">
+<li><p><strong>El Niño:</strong> the phase of ENSO characterized by warmer than average SSTs in the central and eastern tropical Pacific Ocean, weakened east to west equatorial winds and increased rainfall in the eastern tropical Pacific.</p></li>
+<li><p><strong>La Niña:</strong> the phase of ENSO which is characterized by cooler than average SSTs in the central and eastern tropical Pacific Ocean, stronger east to west equatorial winds and decreased rainfall in the eastern tropical Pacific.</p></li>
+</ul>
+<div class="section" id="section-1-1-tropical-pacific-climate-processes">
+<h2><strong>Section 1.1: Tropical Pacific Climate Processes</strong><a class="headerlink" href="#section-1-1-tropical-pacific-climate-processes" title="Permalink to this headline">¶</a></h2>
+<p>To better understand the climate system processes that result in El Niño and La Niña events, let’s first consider typical climate conditions in the tropical Pacific Ocean. Recall from W1D1, <strong>trade winds</strong> are winds that blow east to west just north and south of the equator (these are sometimes referred to as “easterly” winds since the winds are originating from the east and blowing toward the west). And as we discussed yesterday, the reason that the trade winds blow from east to west is related to Earth’s rotation, which causes the winds in the Northern Hemisphere to curve to the right and winds in the Southern Hemisphere to curve to the left. This is known as the <strong>Coriolis effect</strong>.</p>
+<p>If Earth’s rotation affects air movement, do you think it also influences surface ocean water movement? It does! As trade winds blow across the tropical Pacific Ocean, they move water because of friction at the ocean surface. But because of the Coriolis effect, surface water moves to the right of the wind direction in the Northern Hemisphere and to the left of the wind direction in the Southern Hemisphere. However, the speed and direction of water movement changes with depth. Ocean surface water moves at an angle to the wind, and the water under the surface water moves at a slightly larger angle, and the water below that turns at an even larger angle. The average direction of all this turning water is about a right angle from the wind direction. This average is known as <strong>Ekman transport</strong>. Since this process is driven by the trade winds, the strength of this ocean water transport varies in response to changes in the strength of the trade winds.</p>
+</div>
+<div class="section" id="section-1-2-ocean-atmosphere-interactions-during-el-nino-and-la-nina">
+<h2><strong>Section 1.2: Ocean-Atmosphere Interactions During El Niño and La Niña</strong><a class="headerlink" href="#section-1-2-ocean-atmosphere-interactions-during-el-nino-and-la-nina" title="Permalink to this headline">¶</a></h2>
+<p>So, how does all of this relate to El Niño and La Niña? Changes in the strength of Pacific Ocean trade winds and the resulting impact on Ekman transport create variations in the tropical Pacific Ocean SST, which further results in changes to atmospheric circulation patterns and rainfall.</p>
+<p>During an El Niño event, <em><strong>easterly trade winds are weaker</strong></em>. As a result, less warm surface water is  transported to the west via Ekman transport, which causes a build-up of warm surface water in the eastern equatorial Pacific. This creates warmer than average SSTs in the eastern equatorial Pacific Ocean. The atmosphere responds to this warming with increased rising air motion and above-average rainfall in the eastern Pacific. In contrast, during a La Niña event, <em><strong>easterly trade winds are stronger</strong></em>. As a result, more warm surface water is transported to the west via Ekman transport, and cool water from deeper in the ocean rises up in the eastern Pacific during a process known as upwelling. This creates cooler than average SSTs in the eastern equatorial Pacific Ocean. This cooling decreases rising air movement in the eastern Pacific, resulting in drier than average conditions.</p>
+<p>In this tutorial, we’ll examine SST temperatures to explore variations in the climate system that occur during El Niño and La Niña events. Specifically, we will plot and interpret CESM2 SST data from the Niño 3.4 region.</p>
+</div>
+</div>
+<div class="section" id="section-2-calculate-the-oceanic-nino-index">
+<h1><strong>Section 2: Calculate the Oceanic Niño Index</strong><a class="headerlink" href="#section-2-calculate-the-oceanic-nino-index" title="Permalink to this headline">¶</a></h1>
+<p>In this notebook, we are going to combine several topics and methods you’ve covered so far to compute the <a class="reference external" href="https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni">Oceanic Niño Index</a> using SST from the CESM2 submission to the <a class="reference external" href="https://esgf-node.llnl.gov/projects/cmip6/">CMIP6 project</a>.</p>
+<p>To calculate the Oceanic Niño Index you will:</p>
+<ol class="simple">
+<li><p>Select SST data from Niño 3.4 region of 5ºN-5ºS and 190ºE-240ºE (or 170ºW-120ºW) shown in the figure below.</p></li>
+</ol>
+<p><img alt="" src="https://www.ncdc.noaa.gov/monitoring-content/teleconnections/nino-regions.gif"/></p>
+<ol class="simple">
+<li><p>Compute the climatology (here from 2000-2014) for the Niño 3.4 region.</p></li>
+<li><p>Compute the monthly anomaly for the Niño 3.4 region.</p></li>
+<li><p>Compute the area-weighted mean of the anomalies for the Niño 3.4 region to obtain a time series.</p></li>
+<li><p>Smooth the time series of anomalies with a 3-month running mean.</p></li>
+</ol>
+<p>Here we will briefly move through each of these steps, and tomorrow you will learn about them in more detail.</p>
+<div class="section" id="section-2-1-open-the-sst-data">
+<h2><strong>Section 2.1: Open the SST Data</strong><a class="headerlink" href="#section-2-1-open-the-sst-data" title="Permalink to this headline">¶</a></h2>
+<p>First, open the SST and areacello datasets, and use Xarray’s <code class="docutils literal notranslate"><span class="pre">merge</span></code> method to combine them into a single dataset:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># retrive (fetch) the SST data we are going to be working on</span>
+<span class="n">SST_path</span> <span class="o">=</span> <span class="n">DATASETS</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s1">'CESM2_sst_data.nc'</span><span class="p">)</span>
+
+<span class="c1"># open the file we acquired with xarray</span>
+<span class="n">SST_data</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">SST_path</span><span class="p">)</span>
+
+<span class="c1"># remember that one degree spatial cell is not constant around the globe, each is a different size in square km.</span>
+<span class="c1"># we need to account for this when taking averages for example</span>
+
+<span class="c1"># fetch the weight for each grid cell</span>
+<span class="n">gridvars_path</span> <span class="o">=</span> <span class="n">DATASETS</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s1">'CESM2_grid_variables.nc'</span><span class="p">)</span>
+
+<span class="c1"># open and save only the gridcell weights whose variable name is 'areacello'</span>
+<span class="c1"># here the 'o' at the end refers to the area cells of the 'ocean' grid</span>
+<span class="n">areacello_data</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">gridvars_path</span><span class="p">)</span><span class="o">.</span><span class="n">areacello</span>
+
+<span class="c1"># merge the SST and weights into one easy to use dataset - ds stands for dataset</span>
+<span class="n">ds_SST</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">merge</span><span class="p">([</span><span class="n">SST_data</span><span class="p">,</span> <span class="n">areacello_data</span><span class="p">])</span>
+<span class="n">ds_SST</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Visualize the first time point in the early 2000s. You can check this on the indexes of the variable ‘time’ from the ds_SST above. Note that using the <code class="docutils literal notranslate"><span class="pre">plot</span></code> function of our dataarray will automatically include this as a title when we select just the first time index.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the plot size</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># asssign axis and define the projection -  for a round plot</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">Robinson</span><span class="p">(</span><span class="n">central_longitude</span><span class="o">=</span><span class="mi">180</span><span class="p">))</span>
+
+<span class="c1">#add coastlines - this will issue a download warning but that is ok</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">()</span>
+
+<span class="c1"># add gridlines (lon and lat)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">()</span>
-<span class="n">ds</span><span class="o">.</span><span class="n">tos</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
-    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">vmin</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">'coolwarm'</span>
-<span class="p">);</span>
+
+<span class="c1"># plots the first time index (0) of SST (variable name 'tos') at the first time</span>
+<span class="n">ds_SST</span><span class="o">.</span><span class="n">tos</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="c1"># give our axis a map projection</span>
+    <span class="n">vmin</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>                    <span class="c1"># define the temp range of the colorbarfrom -2 to 30C</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s1">'coolwarm'</span>                      <span class="c1"># choose a colormap</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="interactive-demo-2-1">
+<h3><strong>Interactive Demo 2.1</strong><a class="headerlink" href="#interactive-demo-2-1" title="Permalink to this headline">¶</a></h3>
+<p>You can visualize what the next few times look like in the model by using the interactive sliderbar below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># a bit more complicated code that allows interactive plots</span>
+<span class="n">gv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">'bokeh'</span><span class="p">)</span> <span class="c1">#load Bokeh</span>
+<span class="n">dataset_plot</span> <span class="o">=</span> <span class="n">gv</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">ds_SST</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)))</span> <span class="c1"># slice only the first 10 timepoint, as it is a time consuming task</span>
+<span class="n">images</span> <span class="o">=</span> <span class="n">dataset_plot</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">gv</span><span class="o">.</span><span class="n">Image</span><span class="p">,</span> <span class="p">[</span><span class="s1">'longitude'</span><span class="p">,</span> <span class="s1">'latitude'</span><span class="p">],</span> <span class="s1">'tos'</span><span class="p">,</span> <span class="s1">'time'</span><span class="p">)</span>
+<span class="n">images</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s1">'coolwarm'</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span><span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">Robinson</span><span class="p">(),</span><span class="n">clabel</span><span class="o">=</span><span class="s1">'Sea Surface Temperature [˚C]'</span><span class="p">)</span> <span class="o">*</span> <span class="n">gf</span><span class="o">.</span><span class="n">coastline</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="select-the-nino-3-4-region">
-<h2>Select the Niño 3.4 region<a class="headerlink" href="#select-the-nino-3-4-region" title="Permalink to this headline">¶</a></h2>
-<p>There are a couple ways to select the Niño 3.4 region:</p>
+</div>
+<div class="section" id="section-2-2-select-the-nino-3-4-region">
+<h2><strong>Section 2.2: Select the Niño 3.4 Region</strong><a class="headerlink" href="#section-2-2-select-the-nino-3-4-region" title="Permalink to this headline">¶</a></h2>
+<p>You may have noticed that the <code class="docutils literal notranslate"><span class="pre">lon</span></code> for the SST data is organized between 0°–360°E.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds_SST</span><span class="o">.</span><span class="n">lon</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is different from how we typically use <code class="docutils literal notranslate"><span class="pre">longitude</span></code> (-180°–180°). How do we covert the value of longitude between two systems (0-360° v.s. -180°–180°)?</p>
+<p>Let’s use <code class="docutils literal notranslate"><span class="pre">lon2</span></code> refer to the longitude system of <code class="docutils literal notranslate"><span class="pre">0°-360°</span></code> while <code class="docutils literal notranslate"><span class="pre">lon</span></code> refers to the system of <code class="docutils literal notranslate"><span class="pre">-180°–180°</span></code>. <code class="docutils literal notranslate"><span class="pre">0°-360°</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">0–180°,</span> <span class="pre">-180°–0°</span></code>.</p>
+<p>In other words, <code class="docutils literal notranslate"><span class="pre">lon2=181°</span></code> is same as <code class="docutils literal notranslate"><span class="pre">lon=-179°</span></code>. Hence, in the western hemisphere, <code class="docutils literal notranslate"><span class="pre">lon2=lon+360</span></code>.</p>
+<p>Therefore, the Niño 3.4 region should be (-5°–5°, 190–240°) using the <code class="docutils literal notranslate"><span class="pre">lon2</span></code> system.</p>
+<p>Now that we have identified the longitude values we need to select, there are a couple ways to select the Niño 3.4 region. We will demonstrate how to use both below.</p>
 <ol class="simple">
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">sel()</span></code> or <code class="docutils literal notranslate"><span class="pre">isel()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sel()</span></code></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># select just the Nino 3.4 region (note our longitude values are in degrees east) by slicing</span>
+<span class="n">tos_nino34_op1</span> <span class="o">=</span> <span class="n">ds_SST</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">lon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">190</span><span class="p">,</span> <span class="mi">240</span><span class="p">))</span>
+<span class="n">tos_nino34_op1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">where()</span></code> and select all values within the bounds of interest</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tos_nino34</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">lon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">190</span><span class="p">,</span> <span class="mi">240</span><span class="p">))</span>
-<span class="n">tos_nino34</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># select just the Nino 3.4 region (note our longitude values are in degrees east) by boolean conditioning</span>
+<span class="n">tos_nino34_op2</span> <span class="o">=</span> <span class="n">ds_SST</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
+    <span class="p">(</span><span class="n">ds_SST</span><span class="o">.</span><span class="n">lat</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">ds_SST</span><span class="o">.</span><span class="n">lat</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">5</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">ds_SST</span><span class="o">.</span><span class="n">lon</span> <span class="o">&gt;</span> <span class="mi">190</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">ds_SST</span><span class="o">.</span><span class="n">lon</span> <span class="o">&lt;</span> <span class="mi">240</span><span class="p">),</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span> <span class="c1"># use dataset where function. use boolean commands</span>
+<span class="n">tos_nino34_op2</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>The other option for selecting our region of interest is to use</p>
+<p>You can verify that <code class="docutils literal notranslate"><span class="pre">tos_nino34_op1</span></code> and <code class="docutils literal notranslate"><span class="pre">tos_nino34_op2</span></code> are the same by comparing the lat and lon indexes.</p>
+<p>We only need one of these, so let us choose the second option and set that to the variable we will use moving forward.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tos_nino34</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
-    <span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">lat</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">lat</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">5</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">lon</span> <span class="o">&gt;</span> <span class="mi">190</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">lon</span> <span class="o">&lt;</span> <span class="mi">240</span><span class="p">),</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span>
-<span class="p">)</span>
-<span class="n">tos_nino34</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># SST in just the Nino 3.4 region</span>
+<span class="n">tos_nino34</span><span class="o">=</span><span class="n">tos_nino34_op2</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Let’s plot the selected region to make sure we are doing the right thing.</p>
+<p>Let’s utilize the same code we used to plot the entire Earth, but this time focusing on the Niño 3.4 region slice only.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the figure size</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># assign axis and projection</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">Robinson</span><span class="p">(</span><span class="n">central_longitude</span><span class="o">=</span><span class="mi">180</span><span class="p">))</span>
+
+<span class="c1"># add coastlines</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">()</span>
+
+<span class="c1"># add gridlines (lon and lat)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">()</span>
+
+<span class="c1"># plot as above</span>
 <span class="n">tos_nino34</span><span class="o">.</span><span class="n">tos</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
     <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">vmin</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">'coolwarm'</span>
 <span class="p">)</span>
+
+<span class="c1"># make sure we see more areas of the earth and not only the square around Niño 3.4</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_extent</span><span class="p">((</span><span class="mi">120</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="compute-the-anomalies">
-<h2>Compute the anomalies<a class="headerlink" href="#compute-the-anomalies" title="Permalink to this headline">¶</a></h2>
-<p>We first group by month and subtract the mean SST at each point in the Niño 3.4 region. We then compute the weighted average over the region to obtain the anomalies:</p>
+<div class="section" id="section-2-3-compute-the-climatology-and-anomalies">
+<h2><strong>Section 2.3: Compute the Climatology and Anomalies</strong><a class="headerlink" href="#section-2-3-compute-the-climatology-and-anomalies" title="Permalink to this headline">¶</a></h2>
+<p>Now that we have selected our area, we can compute the monthly anomaly by first grouping all the data by month, then substracting the monthly climatology from each month.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gb</span> <span class="o">=</span> <span class="n">tos_nino34</span><span class="o">.</span><span class="n">tos</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'time.month'</span><span class="p">)</span>
-<span class="n">tos_nino34_anom</span> <span class="o">=</span> <span class="n">gb</span> <span class="o">-</span> <span class="n">gb</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">'time'</span><span class="p">)</span>
-<span class="n">index_nino34</span> <span class="o">=</span> <span class="n">tos_nino34_anom</span><span class="o">.</span><span class="n">weighted</span><span class="p">(</span><span class="n">tos_nino34</span><span class="o">.</span><span class="n">areacello</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s1">'lat'</span><span class="p">,</span> <span class="s1">'lon'</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now, smooth the anomalies with a 5-month running mean:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">index_nino34_rolling_mean</span> <span class="o">=</span> <span class="n">index_nino34</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">index_nino34</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
-<span class="n">index_nino34_rolling_mean</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">'anomaly'</span><span class="p">,</span> <span class="s1">'5-month running mean anomaly'</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'SST anomaly over the Niño 3.4 region'</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>#<strong>Sloane’s ideas of climate content to add:</strong></p>
-<p>Looking at the time series of SST anomaly over the Nino 3.4 region, consider the following questions:</p>
-<ol class="simple">
-<li><p>If the SST anomaly is greater that zero, would that be an El Nino event or a La Nina event?</p></li>
-<li><p>Based on this data, how frequently do El Nino and La Nina events occur?</p></li>
-</ol>
-<p>Compute the standard deviation of the SST in the Nino 3.4 region, over the entire time period of the data array:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">std_dev</span> <span class="o">=</span> <span class="n">tos_nino34</span><span class="o">.</span><span class="n">tos</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
-<span class="n">std_dev</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Then we’ll normalize the values by dividing the rolling mean by the standard deviation of the SST in the Niño 3.4 region:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">normalized_index_nino34_rolling_mean</span> <span class="o">=</span> <span class="n">index_nino34_rolling_mean</span> <span class="o">/</span> <span class="n">std_dev</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># group the dataset by month</span>
+<span class="n">tos_nino34_mon</span> <span class="o">=</span> <span class="n">tos_nino34</span><span class="o">.</span><span class="n">tos</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'time.month'</span><span class="p">)</span>
+
+<span class="c1"># find the monthly climatology in the Nino 3.4 region</span>
+<span class="n">tos_nino34_clim</span> <span class="o">=</span> <span class="n">tos_nino34_mon</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">'time'</span><span class="p">)</span>
+
+<span class="c1"># find the monthly anomaly in the Nino 3.4 region</span>
+<span class="n">tos_nino34_anom</span> <span class="o">=</span> <span class="n">tos_nino34_mon</span> <span class="o">-</span> <span class="n">tos_nino34_clim</span>
+
+<span class="c1"># take the area weighted average of anomalies in the Nino 3.4 region</span>
+<span class="n">tos_nino34_anom_mean</span> <span class="o">=</span> <span class="n">tos_nino34_anom</span><span class="o">.</span><span class="n">weighted</span><span class="p">(</span><span class="n">tos_nino34</span><span class="o">.</span><span class="n">areacello</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s1">'lat'</span><span class="p">,</span> <span class="s1">'lon'</span><span class="p">])</span>
+<span class="n">tos_nino34_anom_mean</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="visualize-the-computed-nino-3-4-index">
-<h2>Visualize the computed Niño 3.4 index<a class="headerlink" href="#visualize-the-computed-nino-3-4-index" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="section-2-4-smooth-the-anomaly-time-series">
+<h2><strong>Section 2.4: Smooth the Anomaly Time Series</strong><a class="headerlink" href="#section-2-4-smooth-the-anomaly-time-series" title="Permalink to this headline">¶</a></h2>
+<p>ENSO occurs on interannual timescales (a few years or more). To isolate the variability of this longer-term phenomenon on the Niño 3.4 region, we can smooth out the fluctuations due to variability on shorter timescales. To achieve this, we will apply a 3-month running mean to our time series of SST anomalies.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># smooth using a centered 3 month running mean</span>
+<span class="n">oni_index</span> <span class="o">=</span> <span class="n">tos_nino34_anom_mean</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the plot size</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># assign axis</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">()</span>
+
+<span class="c1"># plot the monhtly data on the assigned axis</span>
+<span class="n">tos_nino34_anom_mean</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+
+<span class="c1"># plot the smoothed data on the assigned axis</span>
+<span class="n">oni_index</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+
+<span class="c1"># add legend</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">'monthly'</span><span class="p">,</span> <span class="s1">'3-month running mean'</span><span class="p">])</span>
+
+<span class="c1"># add ylabel</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'temprature anomalies'</span><span class="p">)</span>
+
+<span class="c1">#add xlabel</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'Year'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="section-3-identify-el-nino-and-la-nina-events">
+<h1><strong>Section 3: Identify El Niño and La Niña Events</strong><a class="headerlink" href="#section-3-identify-el-nino-and-la-nina-events" title="Permalink to this headline">¶</a></h1>
 <p>We will highlight values in excess of <span class="math notranslate nohighlight">\(\pm\)</span>0.5, roughly corresponding to El Niño (warm) and La Niña (cold) events.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span> <span class="c1"># assing figure size</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span>
-    <span class="n">normalized_index_nino34_rolling_mean</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
-    <span class="n">normalized_index_nino34_rolling_mean</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
-        <span class="n">normalized_index_nino34_rolling_mean</span> <span class="o">&gt;=</span> <span class="mf">0.4</span>
-    <span class="p">)</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
-    <span class="mf">0.4</span><span class="p">,</span>
-    <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span>
-    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span> <span class="c1">#plot with color in between</span>
+    <span class="n">oni_index</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>  <span class="c1">#x values</span>
+    <span class="n">oni_index</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
+        <span class="n">oni_index</span> <span class="o">&gt;=</span> <span class="mf">0.5</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="c1"># top boundary - y values above 0.5</span>
+    <span class="mf">0.5</span><span class="p">,</span> <span class="c1"># bottom boundary - 0.5</span>
+    <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="c1">#color</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="c1">#transparency value</span>
 <span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span>
-    <span class="n">normalized_index_nino34_rolling_mean</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
-    <span class="n">normalized_index_nino34_rolling_mean</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
-        <span class="n">normalized_index_nino34_rolling_mean</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mf">0.4</span>
+    <span class="n">oni_index</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
+    <span class="n">oni_index</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
+        <span class="n">oni_index</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mf">0.5</span>
     <span class="p">)</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
-    <span class="o">-</span><span class="mf">0.4</span><span class="p">,</span>
+    <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span>
     <span class="n">color</span><span class="o">=</span><span class="s1">'blue'</span><span class="p">,</span>
     <span class="n">alpha</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="n">normalized_index_nino34_rolling_mean</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'black'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'dotted'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'dotted'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Niño 3.4 Index'</span><span class="p">);</span>
+<span class="n">oni_index</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'black'</span><span class="p">)</span> <span class="c1">#plot the smoothed data</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span> <span class="c1"># add a black line at x=0</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'dotted'</span><span class="p">)</span> <span class="c1"># add a black line at x=0.5</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'dotted'</span><span class="p">)</span> <span class="c1"># add a black line at x=-0.5</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Oceanic Niño Index (ONI)'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>#<strong>Sloane’s ideas of climate content to add:</strong></p>
+<div class="section" id="questions-3">
+<h2>Questions 3:<a class="headerlink" href="#questions-3" title="Permalink to this headline">¶</a></h2>
+<!-- Sloane's ideas of climate content to add: -->
 <p>Now that we’ve normalized the data and highlighted SST anomalies that correspond to El Niño (warm) and La Niña (cold) events, consider the following questions:</p>
 <ol class="simple">
-<li><p>When were the strongest El Nino and La Nina events over this time period?</p></li>
-<li><p>Considering the ocean-atmosphere interactions that cause El Nino and La Nina events, can you hypothesize potential reasons one El Nino or La Nina event may be stronger than others?</p></li>
+<li><p>How frequently do El Niño and La Niña events occur over the period of time studied here?</p></li>
+<li><p>When were the strongest El Niño and La Niña events over this time period?</p></li>
+<li><p>Considering the ocean-atmosphere interactions that cause El Niño and La Niña events, can you hypothesize potential reasons one El Niño or La Niña event may be stronger than others?</p></li>
 </ol>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/solutions/W1D2_Tutorial1_Solution_0527b248.py"><em>Click for solution</em></a></p>
 </div>
-<hr class="docutils"/>
+</div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
-<p>We have applied a variety of Xarray’s selection, grouping, and statistical functions to compute and visualize an important climate index.</p>
+<h1>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial, we have learned to utilize a variety of Xarray tools to examine variations in SST during El Niño and La Niña events. We’ve practiced loading SST data from the CESM2 model, and masking data using the <code class="docutils literal notranslate"><span class="pre">.where()</span></code> function for focused analysis. We have also computed climatologies and anomalies using the <code class="docutils literal notranslate"><span class="pre">.groupby()</span></code> function, and learned to compute moving averages using the <code class="docutils literal notranslate"><span class="pre">.rolling()</span></code> function. Finally, we have calculated, normalized, and plotted the Oceanic Niño Index (ONI), enhancing our understanding of the El Niño Southern Oscillation (ENSO) and its impacts on global climate patterns.</p>
 </div>
-<div class="section" id="resources-and-references">
-<h2>Resources and References<a class="headerlink" href="#resources-and-references" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni">Niño 3.4 index</a></p></li>
-<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.fill_between.html">Matplotlib’s <code class="docutils literal notranslate"><span class="pre">fill_between</span></code> method</a></p></li>
-<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.axhline.html">Matplotlib’s <code class="docutils literal notranslate"><span class="pre">axhline</span></code> method</a> (see also its analogous <code class="docutils literal notranslate"><span class="pre">axvline</span></code> method)</p></li>
-</ul>
-</div>
+<div class="section" id="resources">
+<h1>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h1>
+<p>Data from this tutorial can be accessed <a class="reference external" href="https://github.com/ProjectPythia/pythia-datasets">here</a>.</p>
 </div>
 <script type="text/x-thebe-config">
     {
@@ -1300,16 +1506,16 @@ During many of the tutorials yesterday, we practiced using Xarray packages to pl
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "pangeo"
+            mode: "python"
         },
         kernelOptions: {
-            kernelName: "pangeo",
+            kernelName: "python3",
             path: "./tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student"
         },
         predefinedOutput: true
     }
     </script>
-<script>kernelName = 'pangeo'</script>
+<script>kernelName = 'python3'</script>
 </div>
 </main>
 <footer class="footer-article noprint">
@@ -1325,7 +1531,7 @@ During many of the tutorials yesterday, we practiced using Xarray packages to pl
 <a class="right-next" href="W1D2_Tutorial2.html" id="next-link" title="next page">
 <div class="prev-next-info">
 <p class="prev-next-subtitle">next</p>
-<p class="prev-next-title">Tutorial 2: A lot of weather makes climate - exploring the ERA5 Reanalysis</p>
+<p class="prev-next-title"><strong>Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis</strong></p>
 </div>
 <i class="fas fa-angle-right"></i>
 </a>

@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Setup — Climatematch Academy: Computational Climate Science</title>
+<title>Tutorial 2 : Energy Balance — Climatematch Academy: Computational Climate Science</title>
 <!-- Loaded before other Sphinx assets -->
 <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
@@ -40,9 +40,10 @@ const thebe_selector_output = ".output, .cell_output"
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
 <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-<link href="../../../genindex.html" rel="index" title="Index">
+<link href="../../../_static/cma-logo-square-4xp.png" rel="shortcut icon">
+<link href="../../../genindex.html" rel="index" title="Index"/>
 <link href="../../../search.html" rel="search" title="Search"/>
-<link href="W1D5_Tutorial3.html" rel="next" title="Setup"/>
+<link href="W1D5_Tutorial3.html" rel="next" title="Tutorial 3 : A Zero-Dimensional Energy Balance Model"/>
 <link href="W1D5_Tutorial1.html" rel="prev" title="Tutorial 1 : A Simple Greenhouse Model"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="None" name="docsearch:language"/>
@@ -70,6 +71,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="bd-sidebar__content">
 <div class="bd-sidebar__top"><div class="navbar-brand-box">
 <a class="navbar-brand text-wrap" href="../../../index.html">
+<!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+<img alt="logo" class="logo" src="../../../_static/cma-logo-square-4xp.png"/>
 <h1 class="site-logo" id="site-title">Climatematch Academy: Computational Climate Science</h1>
 </a>
 </div><form action="../../../search.html" class="bd-search d-flex align-items-center" method="get">
@@ -307,33 +310,45 @@ const thebe_selector_output = ".output, .cell_output"
 <ul>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial1.html">
-     Calculating ENSO with Xarray
-    </a>
+<strong>
+      Tutorial 1: Calculating ENSO with Xarray
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial2.html">
-     Tutorial 2: A lot of weather makes climate - exploring the ERA5 Reanalysis
-    </a>
+<strong>
+      Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial3.html">
-     Tutorial 3: Atmospheric wind driven circulation
-    </a>
+<strong>
+      Tutorial 3: Atmospheric  Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial4.html">
-     Tutorial 4: Ocean wind driven circulation
-    </a>
+<strong>
+      Tutorial 4: Oceanic Wind-driven Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial5.html">
-     Tutorial 5: Thermohaline circulation
-    </a>
+<strong>
+      Tutorial 5: Thermohaline Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial6.html">
-     Tutorial 6: Ocean heat content
-    </a>
+<strong>
+      Tutorial 6: Ocean Heat Content
+     </strong>
+</a>
 </li>
 </ul>
 </li>
@@ -349,13 +364,17 @@ const thebe_selector_output = ".output, .cell_output"
 <ul>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.html">
-     Video 1: What is Remote Sensing
-    </a>
+<strong>
+      Tutorial 1: Introduction to Remote Sensing
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.html">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 2: Exploring Satellite Climate Data Records
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial3.html">
@@ -364,13 +383,17 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial4.html">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 4: Understanding Climatology Through Precipitation Data
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial5.html">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 5: Calculating Anomalies Using Precipitation Data
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial6.html">
@@ -490,18 +513,24 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2 current active">
 <a class="current reference internal" href="#">
-     Setup
-    </a>
+<strong>
+      Tutorial 2 : Energy Balance
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D5_Tutorial3.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 3 : A Zero-Dimensional Energy Balance Model
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D5_Tutorial4.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 4: Climate Feedbacks
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D5_Tutorial5.html">
@@ -843,78 +872,136 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#">
-   Setup
-  </a>
-<ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#package-imports">
-     Package Imports
-    </a>
+<strong>
+    Tutorial 2 : Energy Balance
+   </strong>
+</a>
 </li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-objectives">
+<strong>
+    Tutorial Objectives
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#setup">
+<strong>
+    Setup
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
 <a class="reference internal nav-link" href="#figure-settings">
-     Figure Settings
+     Figure settings
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#video-1-energy-balance">
+     Video 1: Energy Balance
     </a>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-1-insolation-and-albedo">
-   Section 1 : Insolation and Albedo
-  </a>
+<a class="reference internal nav-link" href="#section-1-a-radiating-sun">
+<strong>
+    Section 1 : A Radiating Sun
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#questions">
-     Questions
-    </a>
+<a class="reference internal nav-link" href="#section-1-1-incoming-solar-radiation-insolation-and-albedo-alpha">
+<strong>
+      Section 1.1: Incoming Solar Radiation (Insolation) and Albedo (
+      <span class="math notranslate nohighlight">
+       \(\alpha\)
+      </span>
+      )
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-1-climate-connection">
+<strong>
+        Questions 1.1: Climate Connection
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#coding-exercises">
-     Coding Exercises
-    </a>
+<a class="reference internal nav-link" href="#section-1-2-absorbed-shortwave-radiation-asr">
+<strong>
+      Section 1.2 : Absorbed Shortwave Radiation (ASR)
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-2-climate-connection">
+<strong>
+        Questions 1.2: Climate Connection
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-2-absorbed-shortwave-radiation">
-   Section 2 : Absorbed Shortwave Radiation
-  </a>
+<a class="reference internal nav-link" href="#section-2-energy-balance">
+<strong>
+    Section 2 : Energy Balance
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id1">
-     Questions
-    </a>
+<a class="reference internal nav-link" href="#section-2-1-equilibrium-temperature">
+<strong>
+      Section 2.1: Equilibrium Temperature
+     </strong>
+</a>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-3-equilibrium-temperature">
-   Section 3 : Equilibrium Temperature
-  </a>
+<a class="reference internal nav-link" href="#section-3-climate-change-scenario">
+<strong>
+    Section 3 : Climate Change Scenario
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id2">
-     Questions
-    </a>
+<a class="reference internal nav-link" href="#section-3-1-increasing-greenhouse-gas-concentrations">
+<strong>
+      Section 3.1: Increasing Greenhouse Gas Concentrations
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-3-1-climate-connection">
+<strong>
+        Questions 3.1: Climate Connection
+       </strong>
+</a>
+</li>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#coding-exercises-3-1">
+<strong>
+        Coding Exercises 3.1
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-4-climate-change-scenario">
-   Section 4 : Climate Change Scenario
-  </a>
-<ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id3">
-     Questions
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id4">
-     Coding Exercises
-    </a>
-</li>
-</ul>
+<a class="reference internal nav-link" href="#summary">
+<strong>
+    Summary
+   </strong>
+</a>
 </li>
 </ul>
 </nav>
@@ -924,7 +1011,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="col pl-md-3 pl-lg-5 content-container">
 <!-- Table of contents that is only displayed when printing the page -->
 <div class="onlyprint" id="jb-print-docs-body">
-<h1>Setup</h1>
+<h1>Tutorial 2 : Energy Balance</h1>
 <!-- Table of contents -->
 <div id="print-main-content">
 <div id="jb-print-toc">
@@ -935,78 +1022,136 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#">
-   Setup
-  </a>
-<ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#package-imports">
-     Package Imports
-    </a>
+<strong>
+    Tutorial 2 : Energy Balance
+   </strong>
+</a>
 </li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-objectives">
+<strong>
+    Tutorial Objectives
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#setup">
+<strong>
+    Setup
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
 <a class="reference internal nav-link" href="#figure-settings">
-     Figure Settings
+     Figure settings
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#video-1-energy-balance">
+     Video 1: Energy Balance
     </a>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-1-insolation-and-albedo">
-   Section 1 : Insolation and Albedo
-  </a>
+<a class="reference internal nav-link" href="#section-1-a-radiating-sun">
+<strong>
+    Section 1 : A Radiating Sun
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#questions">
-     Questions
-    </a>
+<a class="reference internal nav-link" href="#section-1-1-incoming-solar-radiation-insolation-and-albedo-alpha">
+<strong>
+      Section 1.1: Incoming Solar Radiation (Insolation) and Albedo (
+      <span class="math notranslate nohighlight">
+       \(\alpha\)
+      </span>
+      )
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-1-climate-connection">
+<strong>
+        Questions 1.1: Climate Connection
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#coding-exercises">
-     Coding Exercises
-    </a>
+<a class="reference internal nav-link" href="#section-1-2-absorbed-shortwave-radiation-asr">
+<strong>
+      Section 1.2 : Absorbed Shortwave Radiation (ASR)
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-2-climate-connection">
+<strong>
+        Questions 1.2: Climate Connection
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-2-absorbed-shortwave-radiation">
-   Section 2 : Absorbed Shortwave Radiation
-  </a>
+<a class="reference internal nav-link" href="#section-2-energy-balance">
+<strong>
+    Section 2 : Energy Balance
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id1">
-     Questions
-    </a>
+<a class="reference internal nav-link" href="#section-2-1-equilibrium-temperature">
+<strong>
+      Section 2.1: Equilibrium Temperature
+     </strong>
+</a>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-3-equilibrium-temperature">
-   Section 3 : Equilibrium Temperature
-  </a>
+<a class="reference internal nav-link" href="#section-3-climate-change-scenario">
+<strong>
+    Section 3 : Climate Change Scenario
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id2">
-     Questions
-    </a>
+<a class="reference internal nav-link" href="#section-3-1-increasing-greenhouse-gas-concentrations">
+<strong>
+      Section 3.1: Increasing Greenhouse Gas Concentrations
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-3-1-climate-connection">
+<strong>
+        Questions 3.1: Climate Connection
+       </strong>
+</a>
+</li>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#coding-exercises-3-1">
+<strong>
+        Coding Exercises 3.1
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-4-climate-change-scenario">
-   Section 4 : Climate Change Scenario
-  </a>
-<ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id3">
-     Questions
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id4">
-     Coding Exercises
-    </a>
-</li>
-</ul>
+<a class="reference internal nav-link" href="#summary">
+<strong>
+    Summary
+   </strong>
+</a>
 </li>
 </ul>
 </nav>
@@ -1015,39 +1160,44 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <main id="main-content" role="main">
 <div>
-<p>#<strong>Tutorial # 2 : Energy Balance</strong></p>
+<p><a class="reference external" href="https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial2.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/></a>   <a href="https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/{ORG}/course-content/main/tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial2.ipynb" target="_blank"><img alt="Open in Kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg"/></a></p>
+<div class="section" id="tutorial-2-energy-balance">
+<h1><strong>Tutorial 2 : Energy Balance</strong><a class="headerlink" href="#tutorial-2-energy-balance" title="Permalink to this headline">¶</a></h1>
 <p><strong>Week 1, Day 5, Climate Modeling</strong></p>
-<p><strong>Content creators:</strong> Jenna Pearson, Brodie Pearson, and Abigail Bodner</p>
-<p><strong>Content reviewers:</strong> Draco Xu</p>
-<p><strong>Content editors:</strong> TBD</p>
-<p><strong>Production editors:</strong> TBD</p>
-<p><strong>Our 2023 Sponsors:</strong> TBD</p>
-<p>#<strong>Tutorial Objectives</strong></p>
+<p><strong>Content creators:</strong> Jenna Pearson</p>
+<p><strong>Content reviewers:</strong> Dionessa Biton, Younkap Nina Duplex, Zahra Khodakaramimaghsoud, Will Gregory, Peter Ohue, Derick Temfack,  Yunlong Xu, Peizhen Yang, Chi Zhang, Ohad Zivan</p>
+<p><strong>Content editors:</strong> Brodie Pearson, Abigail Bodner, Ohad Zivan, Chi Zhang</p>
+<p><strong>Production editors:</strong> Wesley Banfield, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Our 2023 Sponsors:</strong> NASA TOPS</p>
+</div>
+<div class="section" id="tutorial-objectives">
+<h1><strong>Tutorial Objectives</strong><a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">¶</a></h1>
 <p>In this tutorial students will learn about the components that define energy balance, including insolation and albedo.</p>
 <p>By the end of this tutorial students will be able to:</p>
 <ul class="simple">
 <li><p>Calculate the albedo of Earth based on observations.</p></li>
 <li><p>Define and find the equilibrium temperature under the assumption of energy balance.</p></li>
+<li><p>Understand the relationship between transmissivity and equilibrium temperature.</p></li>
 </ul>
+</div>
 <div class="section" id="setup">
-<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="package-imports">
-<h2>Package Imports<a class="headerlink" href="#package-imports" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
+<h1><strong>Setup</strong><a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
+<div class="cell tag_colab docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>                     <span class="c1"># used to manipulate data and open datasets</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># imports</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>                     <span class="c1"># used to manipulate data and open datasets</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>                      <span class="c1"># used for algebra and array operations</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>         <span class="c1"># used for plotting</span>
 </pre></div>
 </div>
 </div>
 </div>
-</div>
 <div class="section" id="figure-settings">
-<h2>Figure Settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
+<h2>Figure settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>       <span class="c1"># interactive display</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Figure settings</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>       <span class="c1"># interactive display</span>
 <span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = 'retina'
 <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">"https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/cma.mplstyle"</span><span class="p">)</span>
 </pre></div>
@@ -1055,16 +1205,33 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
+<div class="section" id="video-1-energy-balance">
+<h2>Video 1: Energy Balance<a class="headerlink" href="#video-1-energy-balance" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Video 1: Energy Balance</span>
+<span class="c1">#Tech team will add code to format and display the video</span>
+</pre></div>
 </div>
-<div class="section" id="section-1-insolation-and-albedo">
-<h1>Section 1 : Insolation and Albedo<a class="headerlink" href="#section-1-insolation-and-albedo" title="Permalink to this headline">¶</a></h1>
-<p>Just as Earth emits radiation, so does the sun. The incoming solar radiation, called <strong>insolation</strong>, is observed to be <span class="math notranslate nohighlight">\(Q = 340 W m^{-2}\)</span>.</p>
-<p>Some of this radiation is reflected back to space (for example off of ice and snow). From observations the amount reflected back is <span class="math notranslate nohighlight">\(F_{ref} = 100 W m^{-2}\)</span>. The <em>fraction</em> of reflected radiation is captured by the <strong>albedo (</strong><span class="math notranslate nohighlight">\(\mathbf{\alpha}\)</span><strong>)</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-867d1890-8426-4575-a6ff-c40ffce60e88">
-<span class="eqno">(6)<a class="headerlink" href="#equation-867d1890-8426-4575-a6ff-c40ffce60e88" title="Permalink to this equation">¶</a></span>\[\begin{align}
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="section-1-a-radiating-sun">
+<h1><strong>Section 1 : A Radiating Sun</strong><a class="headerlink" href="#section-1-a-radiating-sun" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="section-1-1-incoming-solar-radiation-insolation-and-albedo-alpha">
+<h2><strong>Section 1.1: Incoming Solar Radiation (Insolation) and Albedo (<span class="math notranslate nohighlight">\(\alpha\)</span>)</strong><a class="headerlink" href="#section-1-1-incoming-solar-radiation-insolation-and-albedo-alpha" title="Permalink to this headline">¶</a></h2>
+<p>Just as Earth emits radiation, so does the sun. The incoming solar radiation, called <strong><a class="reference external" href="https://glossary.ametsoc.org/wiki/Insolation">insolation</a></strong>. From the ‘All Sky’ Energy budget shown below, this is observed to be <span class="math notranslate nohighlight">\(Q = 340 W m^{-2}\)</span>.</p>
+<p>Some of this radiation is reflected back to space (for example off of ice and snow or clouds).</p>
+<p>From the ‘All Sky’ energy budget below, the amount reflected back is <span class="math notranslate nohighlight">\(F_{ref} = 100 W m^{-2}\)</span>.</p>
+<p><img alt="Global Mean Energy Budget" src="https://www.ipcc.ch/report/ar6/wg1/downloads/figures/IPCC_AR6_WGI_Figure_7_2.png"/>
+Figure 7.2 | Schematic representation of the global mean energy budget of the Earth (upper panel), and its equivalent without considerations of cloud effects (lower panel). Numbers indicate best estimates for the magnitudes of the globally averaged energy balance components in W m–2 together with their uncertainty ranges in parentheses (5–95% confidence range), representing climate conditions at the beginning of the 21st century. Note that the cloud-free energy budget shown in the lower panel is not the one that Earth would achieve in equilibrium when no clouds could form. It rather represents the global mean fluxes as determined solely by removing the clouds but otherwise retaining the entire atmospheric structure. This enables the quantification of the effects of clouds on the Earth energy budget and corresponds to the way clear-sky fluxes are calculated in climate models. Thus, the cloud-free energy budget is not closed and therefore the sensible and latent heat fluxes are not quantified in the lower panel. Figure adapted from Wild et al. (2015, 2019). (Credit: <a class="reference external" href="https://www.ipcc.ch/report/ar6/wg1/downloads/figures/IPCC_AR6_WGI_Figure_7_2.png">IPCC AR6 Report</a>)</p>
+<p>The <em>fraction</em> of reflected radiation is captured by the <strong>albedo (</strong><span class="math notranslate nohighlight">\(\mathbf{\alpha}\)</span><strong>)</strong></p>
+<div class="amsmath math notranslate nohighlight" id="equation-53e10588-5162-42f8-ab4b-74e47b73447d">
+<span class="eqno">(8)<a class="headerlink" href="#equation-53e10588-5162-42f8-ab4b-74e47b73447d" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \alpha = \frac{F_{ref}}{Q}
 \end{align}\]</div>
-<p>Albedo is a unitless number between 0 and 1. We can use this formula and python to find the albedo of Earth.</p>
+<p>Albedo is a unitless number between 0 and 1. We can use this formula to find the albedo of Earth.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the observed insolation based on observations from the IPCC AR6 Figure 7.2</span>
@@ -1082,41 +1249,26 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="section" id="questions">
-<h2>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="questions-1-1-climate-connection">
+<h3><strong>Questions 1.1: Climate Connection</strong><a class="headerlink" href="#questions-1-1-climate-connection" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
-<li><p>What does a low albedo imply? What about a high albedo?</p></li>
+<li><p>Keeping insolation (<span class="math notranslate nohighlight">\(Q\)</span>) constant, what does a low albedo imply? What about a high albedo?</p></li>
+<li><p>There are two components to albedo, the reflected radiation in the numerator and the insolation in the denomenator. Do you think one or both of these have changed over Earth’s history?</p></li>
 </ol>
-</div>
-<div class="section" id="coding-exercises">
-<h2>Coding Exercises<a class="headerlink" href="#coding-exercises" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>By using a for loop, calculate and print the <span class="math notranslate nohighlight">\(\alpha\)</span> for three values of <span class="math notranslate nohighlight">\(OLR = 300,340,380\)</span>.</p></li>
-</ol>
-<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial2_Solution_967ac98a.py"><em>Click for solution</em></a></p>
-<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial2_Solution_da65b884.py"><em>Click for solution</em></a></p>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial2_Solution_94090198.py"><em>Click for solution</em></a></p>
 </div>
 </div>
-<div class="section" id="section-2-absorbed-shortwave-radiation">
-<h1>Section 2 : Absorbed Shortwave Radiation<a class="headerlink" href="#section-2-absorbed-shortwave-radiation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="section-1-2-absorbed-shortwave-radiation-asr">
+<h2><strong>Section 1.2 : Absorbed Shortwave Radiation (ASR)</strong><a class="headerlink" href="#section-1-2-absorbed-shortwave-radiation-asr" title="Permalink to this headline">¶</a></h2>
 <p>The <strong>absorbed shortwave radiation (ASR)</strong> is the amount of this isolation that is <em>not</em> reflected, and actually makes it to Earth’s surface. Thus,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3f7ac94b-f7f0-454a-a90b-ad055c667ad9">
-<span class="eqno">(7)<a class="headerlink" href="#equation-3f7ac94b-f7f0-454a-a90b-ad055c667ad9" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2a9c5964-a889-4f6a-96a5-f1844c6cb34a">
+<span class="eqno">(9)<a class="headerlink" href="#equation-2a9c5964-a889-4f6a-96a5-f1844c6cb34a" title="Permalink to this equation">¶</a></span>\[\begin{align}
 ASR = Q-F_{ref} = (1-\alpha)Q
 \end{align}\]</div>
-<p>Using observations and python we can esimate the absorbed shortwave radiation.</p>
+<p>From observations, we can esimate the absorbed shortwave radiation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the observed insolation based on observations from the IPCC AR6 Figure 7.2</span>
-<span class="n">Q</span> <span class="o">=</span> <span class="mi">340</span> <span class="c1"># W m^-2</span>
-
-<span class="c1"># define the observed reflected radiation based on observations from the IPCC AR6 Figure 7.2</span>
-<span class="n">F_ref</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># W m^-2</span>
-
-<span class="c1"># plug into equation</span>
-<span class="n">alpha</span> <span class="o">=</span> <span class="p">(</span><span class="n">F_ref</span><span class="o">/</span><span class="n">Q</span><span class="p">)</span> <span class="c1"># unitless number between 0 and 1</span>
-
-<span class="c1"># plug into equation</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plug into equation</span>
 <span class="n">ASR</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">alpha</span><span class="p">)</span><span class="o">*</span><span class="n">Q</span>
 
 <span class="c1"># display answer</span>
@@ -1125,45 +1277,40 @@ ASR = Q-F_{ref} = (1-\alpha)Q
 </div>
 </div>
 </div>
-<div class="section" id="id1">
-<h2>Questions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="questions-1-2-climate-connection">
+<h3><strong>Questions 1.2: Climate Connection</strong><a class="headerlink" href="#questions-1-2-climate-connection" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
-<li><p>Compare the value of ASR to the observed OLR of <span class="math notranslate nohighlight">\(239 W m^{-2}\)</span>. Is it more or less?</p></li>
-<li><p>Does this model take into account any effects of gases in that atmosphere? Are there any you might think are impotant that should be included in more complex models?</p></li>
+<li><p>Compare the value of ASR to the observed OLR of <span class="math notranslate nohighlight">\(239 W m^{-2}\)</span>. Is it more or less? What do you think this means?</p></li>
+<li><p>Does this model take into account any effects of gases in that atmosphere on the incoming shortwave radiation that makes it to Earth’s surface? Are there any greenhouse gases you think are important and should be included in more complex models?</p></li>
 </ol>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial2_Solution_d879cd19.py"><em>Click for solution</em></a></p>
 </div>
 </div>
-<div class="section" id="section-3-equilibrium-temperature">
-<h1>Section 3 : Equilibrium Temperature<a class="headerlink" href="#section-3-equilibrium-temperature" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="section-2-energy-balance">
+<h1><strong>Section 2 : Energy Balance</strong><a class="headerlink" href="#section-2-energy-balance" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="section-2-1-equilibrium-temperature">
+<h2><strong>Section 2.1: Equilibrium Temperature</strong><a class="headerlink" href="#section-2-1-equilibrium-temperature" title="Permalink to this headline">¶</a></h2>
 <p>Energy Balance is achieved when radiation absorbed by Earth’s surface (ASR) is equal to longwave radiation going out to space (OLR). That is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e3921822-f61d-4fa0-9c3a-291aea722cd2">
-<span class="eqno">(8)<a class="headerlink" href="#equation-e3921822-f61d-4fa0-9c3a-291aea722cd2" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-220fa30a-432f-4218-9f50-42d55cea99bd">
+<span class="eqno">(10)<a class="headerlink" href="#equation-220fa30a-432f-4218-9f50-42d55cea99bd" title="Permalink to this equation">¶</a></span>\[\begin{align}
 ASR = OLR
 \end{align}\]</div>
-<p>By substituting in the equations from previous sections, we can find the surface temperature of Earth needed to maintain this balance. This is called the <strong>equilibrium temperature (</strong> <span class="math notranslate nohighlight">\(\mathbf{T_{eq}}\)</span> <strong>)</strong>.</p>
+<p>By substituting into the equations from previous sections, we can find the surface temperature of Earth needed to maintain this balance. This is called the <strong>equilibrium temperature (</strong> <span class="math notranslate nohighlight">\(\mathbf{T_{eq}}\)</span> <strong>)</strong>.</p>
 <p>Recall <span class="math notranslate nohighlight">\(OLR = \tau\sigma T^4\)</span> and <span class="math notranslate nohighlight">\(ASR = (1-\alpha)Q\)</span>. The <strong>equilibrium temperature</strong> is the temperature the system would have if energy balance was perfectly reached. Assuming energy balance, we will call the emission temperature denoted previously the equilibrium temperature (<span class="math notranslate nohighlight">\(T_{eq}\)</span>) instead. Thus,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9d35f20c-1944-4bb5-b52a-ddfc38f44dab">
-<span class="eqno">(9)<a class="headerlink" href="#equation-9d35f20c-1944-4bb5-b52a-ddfc38f44dab" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-51ddf90e-0636-4ed3-a26d-df11f7e718c1">
+<span class="eqno">(11)<a class="headerlink" href="#equation-51ddf90e-0636-4ed3-a26d-df11f7e718c1" title="Permalink to this equation">¶</a></span>\[\begin{align}
 (1-\alpha)Q = ASR = OLR = \tau\sigma T_{eq}^4
 \end{align}\]</div>
 <p>Solving for <span class="math notranslate nohighlight">\(T_{eq}\)</span> we find</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bcf772d8-4ba6-4dd5-9561-43380a0f6341">
-<span class="eqno">(10)<a class="headerlink" href="#equation-bcf772d8-4ba6-4dd5-9561-43380a0f6341" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5f27715d-fb42-4e10-9142-2bcd029abb2f">
+<span class="eqno">(12)<a class="headerlink" href="#equation-5f27715d-fb42-4e10-9142-2bcd029abb2f" title="Permalink to this equation">¶</a></span>\[\begin{align}
 T_{eq} = \sqrt[4]{\frac{(1-\alpha)Q}{\tau\sigma}}
 \end{align}\]</div>
-<p>We can implement this equation in python to find the numeric value.</p>
+<p>Let’s calculate what this should be for Earth using observations:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the observed insolation based on observations from the IPCC AR6 Figure 7.2</span>
-<span class="n">Q</span> <span class="o">=</span> <span class="mi">340</span> <span class="c1"># W m^-2</span>
-
-<span class="c1"># define the observed reflected radiation based on observations from the IPCC AR6 Figure 7.2</span>
-<span class="n">F_ref</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># W m^-2</span>
-
-<span class="c1"># define albedo</span>
-<span class="n">alpha</span> <span class="o">=</span> <span class="p">(</span><span class="n">F_ref</span><span class="o">/</span><span class="n">Q</span><span class="p">)</span> <span class="c1"># unitless number between 0 and 1</span>
-
-<span class="c1"># define the Stefan-Boltzmann Constant, noting we are using 'e' for scientific notation</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the Stefan-Boltzmann Constant, noting we are using 'e' for scientific notation</span>
 <span class="n">sigma</span> <span class="o">=</span> <span class="mf">5.67e-8</span> <span class="c1"># W m^-2 K^-4</span>
 
 <span class="c1"># define transmissivity (calculated previously from observations in tutorial 1)</span>
@@ -1178,112 +1325,82 @@ T_{eq} = \sqrt[4]{\frac{(1-\alpha)Q}{\tau\sigma}}
 </div>
 </div>
 </div>
-<div class="section" id="id2">
-<h2>Questions<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>Is the calculated equilibrium temperature warmer or cooler than the observed surface temperature of <span class="math notranslate nohighlight">\(288 K\)</span>?</p></li>
-<li><p>What do you think is responsible for the difference? Refer to previous sections if needed.</p></li>
-</ol>
 </div>
 </div>
-<div class="section" id="section-4-climate-change-scenario">
-<h1>Section 4 : Climate Change Scenario<a class="headerlink" href="#section-4-climate-change-scenario" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="section-3-climate-change-scenario">
+<h1><strong>Section 3 : Climate Change Scenario</strong><a class="headerlink" href="#section-3-climate-change-scenario" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="section-3-1-increasing-greenhouse-gas-concentrations">
+<h2><strong>Section 3.1: Increasing Greenhouse Gas Concentrations</strong><a class="headerlink" href="#section-3-1-increasing-greenhouse-gas-concentrations" title="Permalink to this headline">¶</a></h2>
 <p>Assume due to the increasing presence of greenhouse gases in the the atmosphere, that <span class="math notranslate nohighlight">\(\tau\)</span> decreases to <span class="math notranslate nohighlight">\(0.57\)</span>.</p>
 <p>We can then use our climate model and python to find the new equilibrium temperature.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the observed insolation based on observations from the IPCC AR6 Figure 7.2</span>
-<span class="n">Q</span> <span class="o">=</span> <span class="mi">340</span> <span class="c1"># W m^-2</span>
-
-<span class="c1"># define the observed reflected radiation based on observations from the IPCC AR6 Figure 7.2</span>
-<span class="n">F_ref</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># W m^-2</span>
-
-<span class="c1"># define albedo</span>
-<span class="n">alpha</span> <span class="o">=</span> <span class="p">(</span><span class="n">F_ref</span><span class="o">/</span><span class="n">Q</span><span class="p">)</span> <span class="c1"># unitless number between 0 and 1</span>
-
-<span class="c1"># define the Stefan-Boltzmann Constant, noting we are using 'e' for scientific notation</span>
-<span class="n">sigma</span> <span class="o">=</span> <span class="mf">5.67e-8</span> <span class="c1"># W m^-2 K^-4</span>
-
-<span class="c1"># define transmissivity (assupmtion in this case)</span>
-<span class="n">tau</span> <span class="o">=</span> <span class="mf">0.57</span> <span class="c1"># unitless number between 0 and 1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define transmissivity (assupmtion in this case)</span>
+<span class="n">tau_2</span> <span class="o">=</span> <span class="mf">0.57</span> <span class="c1"># unitless number between 0 and 1</span>
 
 <span class="c1"># plug into equation</span>
-<span class="n">T_eq</span> <span class="o">=</span> <span class="p">(((</span><span class="mi">1</span><span class="o">-</span><span class="n">alpha</span><span class="p">)</span><span class="o">*</span><span class="n">Q</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">tau</span> <span class="o">*</span> <span class="n">sigma</span><span class="p">))</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">T_eq_2</span> <span class="o">=</span> <span class="p">(((</span><span class="mi">1</span><span class="o">-</span><span class="n">alpha</span><span class="p">)</span><span class="o">*</span><span class="n">Q</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">tau_2</span> <span class="o">*</span> <span class="n">sigma</span><span class="p">))</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span>
 
 <span class="c1"># display answer</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'New Equilibrium Temperature: '</span><span class="p">,</span><span class="n">T_eq</span><span class="p">,</span><span class="s1">'K or'</span><span class="p">,</span><span class="n">T_eq</span> <span class="o">-</span> <span class="mi">273</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'New Equilibrium Temperature: '</span><span class="p">,</span><span class="n">T_eq_2</span><span class="p">,</span><span class="s1">'K or'</span><span class="p">,</span><span class="n">T_eq_2</span> <span class="o">-</span> <span class="mi">273</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="id3">
-<h2>Questions<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="questions-3-1-climate-connection">
+<h3><strong>Questions 3.1: Climate Connection</strong><a class="headerlink" href="#questions-3-1-climate-connection" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>Does a reduction in the transmissivity, <span class="math notranslate nohighlight">\(\tau\)</span>, imply a decrease or increase in OLR?</p></li>
-<li><p>How does the new equilibrium temperature compare to that calculated previously?</p></li>
+<li><p>How does the new equilibrium temperature compare to that calculated previously? Why do you think this is?</p></li>
 </ol>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial2_Solution_f766d310.py"><em>Click for solution</em></a></p>
 </div>
-<div class="section" id="id4">
-<h2>Coding Exercises<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="coding-exercises-3-1">
+<h3><strong>Coding Exercises 3.1</strong><a class="headerlink" href="#coding-exercises-3-1" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
-<li><p>Using a for loop, calculate the equilibrium temperatures for <span class="math notranslate nohighlight">\(\tau = 0.2,0.4,0.8\)</span>.</p></li>
+<li><p>Plot the equilibrium temperature as a function of <span class="math notranslate nohighlight">\(\tau\)</span>, for <span class="math notranslate nohighlight">\(\tau\)</span> ranging from zero to one.</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the observed insolation based on observations from the IPCC AR6 Figure 7.2</span>
-<span class="n">Q</span> <span class="o">=</span> <span class="mi">340</span> <span class="c1"># W m^-2</span>
+<span class="n">Q</span> <span class="o">=</span> <span class="o">...</span>
 
 <span class="c1"># define the observed reflected radiation based on observations from the IPCC AR6 Figure 7.2</span>
-<span class="n">F_ref</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># W m^-2</span>
+<span class="n">F_ref</span> <span class="o">=</span> <span class="o">...</span>
 
 <span class="c1"># define albedo</span>
-<span class="n">alpha</span> <span class="o">=</span> <span class="p">(</span><span class="n">F_ref</span><span class="o">/</span><span class="n">Q</span><span class="p">)</span> <span class="c1"># unitless number between 0 and 1</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="o">...</span>
 
 <span class="c1"># define the Stefan-Boltzmann Constant, noting we are using 'e' for scientific notation</span>
-<span class="n">sigma</span> <span class="o">=</span> <span class="mf">5.67e-8</span> <span class="c1"># W m^-2 K^-4</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="o">...</span>
 
-<span class="c1"># loop through values of tau</span>
-<span class="c1"># Uncomment this line</span>
-<span class="c1"># for tau in ...:</span>
+<span class="c1"># define a function that returns the equilibrium temperature and takes argument tau</span>
+<span class="k">def</span> <span class="nf">get_eqT</span><span class="p">(</span><span class="n">tau</span><span class="p">):</span>
+  <span class="k">return</span> <span class="o">...</span>
 
-  <span class="c1"># plug into equation</span>
-  <span class="c1"># Uncomment this line</span>
-  <span class="c1"># T_eq = ...</span>
+<span class="c1"># define tau as an array extending from 0 to 1 with spacing interval 0.01</span>
+<span class="n">tau</span> <span class="o">=</span> <span class="o">...</span>
 
-  <span class="c1"># display answer</span>
-  <span class="c1"># Uncomment this line</span>
-  <span class="c1"># print('Transmissivity:',tau,',     ' 'Equilibrium Temperature: ' ,T_eq, 'K')</span>
+<span class="c1"># use list comprehension to obtain the equilibrium temperature as a function of tau</span>
+<span class="n">eqT</span> <span class="o">=</span> <span class="o">...</span>
+
+
+<span class="n">_</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the observed insolation based on observations from the IPCC AR6 Figure 7.2</span>
-<span class="n">Q</span> <span class="o">=</span> <span class="mi">340</span> <span class="c1"># W m^-2</span>
-
-<span class="c1"># define the observed reflected radiation based on observations from the IPCC AR6 Figure 7.2</span>
-<span class="n">F_ref</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># W m^-2</span>
-
-<span class="c1"># define albedo</span>
-<span class="n">alpha</span> <span class="o">=</span> <span class="p">(</span><span class="n">F_ref</span><span class="o">/</span><span class="n">Q</span><span class="p">)</span> <span class="c1"># unitless number between 0 and 1</span>
-
-<span class="c1"># define the Stefan-Boltzmann Constant, noting we are using 'e' for scientific notation</span>
-<span class="n">sigma</span> <span class="o">=</span> <span class="mf">5.67e-8</span> <span class="c1"># W m^-2 K^-4</span>
-
-<span class="c1"># loop through values of tau</span>
-<span class="k">for</span> <span class="n">tau</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.8</span><span class="p">]:</span>
-
-  <span class="c1"># plug into equation</span>
-  <span class="n">T_eq</span> <span class="o">=</span> <span class="p">(((</span><span class="mi">1</span><span class="o">-</span><span class="n">alpha</span><span class="p">)</span><span class="o">*</span><span class="n">Q</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">tau</span> <span class="o">*</span> <span class="n">sigma</span><span class="p">))</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span>
-
-  <span class="c1"># display answer</span>
-  <span class="nb">print</span><span class="p">(</span><span class="s1">'Transmissivity:'</span><span class="p">,</span><span class="n">tau</span><span class="p">,</span><span class="s1">',     '</span> <span class="s1">'Equilibrium Temperature: '</span> <span class="p">,</span><span class="n">T_eq</span><span class="p">,</span> <span class="s1">'K'</span><span class="p">)</span>
-</pre></div>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial2_Solution_dc349906.py"><em>Click for solution</em></a></p>
+<p><em>Example output:</em></p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D5_ClimateModeling/static/W1D5_Tutorial2_Solution_dc349906_1.png"><img align="center" alt="Solution hint" class="align-center" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D5_ClimateModeling/static/W1D5_Tutorial2_Solution_dc349906_1.png" style="width: 775.0px; height: 575.0px;"/></a>
 </div>
 </div>
 </div>
-</div>
+<div class="section" id="summary">
+<h1><strong>Summary</strong><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial, you explored the fundamentals of Earth’s energy balance.  You learned how to calculate Earth’s albedo <span class="math notranslate nohighlight">\(\mathbf{\alpha}\)</span> and how absorbed shortwave radiation contributes to energy balance. You also discovered the concept of equilibrium temperature and it’s relationship to energy balance. The tutorial also highlighted the impact of increasing greenhouse gases on the equilibrium temperature.</p>
 </div>
 <script type="text/x-thebe-config">
     {
@@ -1294,16 +1411,16 @@ T_{eq} = \sqrt[4]{\frac{(1-\alpha)Q}{\tau\sigma}}
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "pangeo"
+            mode: "climatematch"
         },
         kernelOptions: {
-            kernelName: "pangeo",
+            kernelName: "climatematch",
             path: "./tutorials/W1D5_ClimateModeling/student"
         },
         predefinedOutput: true
     }
     </script>
-<script>kernelName = 'pangeo'</script>
+<script>kernelName = 'climatematch'</script>
 </div>
 </main>
 <footer class="footer-article noprint">
@@ -1319,7 +1436,7 @@ T_{eq} = \sqrt[4]{\frac{(1-\alpha)Q}{\tau\sigma}}
 <a class="right-next" href="W1D5_Tutorial3.html" id="next-link" title="next page">
 <div class="prev-next-info">
 <p class="prev-next-subtitle">next</p>
-<p class="prev-next-title">Setup</p>
+<p class="prev-next-title"><strong>Tutorial 3 : A Zero-Dimensional Energy Balance Model</strong></p>
 </div>
 <i class="fas fa-angle-right"></i>
 </a>

@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Setup — Climatematch Academy: Computational Climate Science</title>
+<title>Tutorial 4: Climate Feedbacks — Climatematch Academy: Computational Climate Science</title>
 <!-- Loaded before other Sphinx assets -->
 <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
@@ -40,10 +40,11 @@ const thebe_selector_output = ".output, .cell_output"
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
 <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-<link href="../../../genindex.html" rel="index" title="Index">
+<link href="../../../_static/cma-logo-square-4xp.png" rel="shortcut icon">
+<link href="../../../genindex.html" rel="index" title="Index"/>
 <link href="../../../search.html" rel="search" title="Search"/>
 <link href="W1D5_Tutorial5.html" rel="next" title="Tutorial 5: Radiative Equilibrium"/>
-<link href="W1D5_Tutorial3.html" rel="prev" title="Setup"/>
+<link href="W1D5_Tutorial3.html" rel="prev" title="Tutorial 3 : A Zero-Dimensional Energy Balance Model"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="None" name="docsearch:language"/>
 <!-- Google Analytics -->
@@ -70,6 +71,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="bd-sidebar__content">
 <div class="bd-sidebar__top"><div class="navbar-brand-box">
 <a class="navbar-brand text-wrap" href="../../../index.html">
+<!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+<img alt="logo" class="logo" src="../../../_static/cma-logo-square-4xp.png"/>
 <h1 class="site-logo" id="site-title">Climatematch Academy: Computational Climate Science</h1>
 </a>
 </div><form action="../../../search.html" class="bd-search d-flex align-items-center" method="get">
@@ -307,33 +310,45 @@ const thebe_selector_output = ".output, .cell_output"
 <ul>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial1.html">
-     Calculating ENSO with Xarray
-    </a>
+<strong>
+      Tutorial 1: Calculating ENSO with Xarray
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial2.html">
-     Tutorial 2: A lot of weather makes climate - exploring the ERA5 Reanalysis
-    </a>
+<strong>
+      Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial3.html">
-     Tutorial 3: Atmospheric wind driven circulation
-    </a>
+<strong>
+      Tutorial 3: Atmospheric  Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial4.html">
-     Tutorial 4: Ocean wind driven circulation
-    </a>
+<strong>
+      Tutorial 4: Oceanic Wind-driven Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial5.html">
-     Tutorial 5: Thermohaline circulation
-    </a>
+<strong>
+      Tutorial 5: Thermohaline Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial6.html">
-     Tutorial 6: Ocean heat content
-    </a>
+<strong>
+      Tutorial 6: Ocean Heat Content
+     </strong>
+</a>
 </li>
 </ul>
 </li>
@@ -349,13 +364,17 @@ const thebe_selector_output = ".output, .cell_output"
 <ul>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.html">
-     Video 1: What is Remote Sensing
-    </a>
+<strong>
+      Tutorial 1: Introduction to Remote Sensing
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.html">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 2: Exploring Satellite Climate Data Records
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial3.html">
@@ -364,13 +383,17 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial4.html">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 4: Understanding Climatology Through Precipitation Data
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial5.html">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 5: Calculating Anomalies Using Precipitation Data
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial6.html">
@@ -490,18 +513,24 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D5_Tutorial2.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 2 : Energy Balance
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D5_Tutorial3.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 3 : A Zero-Dimensional Energy Balance Model
+     </strong>
+</a>
 </li>
 <li class="toctree-l2 current active">
 <a class="current reference internal" href="#">
-     Setup
-    </a>
+<strong>
+      Tutorial 4: Climate Feedbacks
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D5_Tutorial5.html">
@@ -843,73 +872,141 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#">
-   Setup
-  </a>
+<strong>
+    Tutorial 4: Climate Feedbacks
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-objectives">
+<strong>
+    Tutorial Objectives
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#setup">
+<strong>
+    Setup
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#package-imports">
-     Package Imports
+<a class="reference internal nav-link" href="#figure-ettings">
+     Figure ettings
     </a>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#figure-settings">
-     Figure Settings
+<a class="reference internal nav-link" href="#video-1-climate-feedbacks">
+     Video 1: Climate Feedbacks
     </a>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-1-temperature-dependent-albedo">
-   Section 1 : Temperature Dependent Albedo
-  </a>
+<a class="reference internal nav-link" href="#section-1-ice-albedo-feedback">
+<strong>
+    Section 1: Ice-Albedo Feedback
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#questions">
-     Questions
-    </a>
+<a class="reference internal nav-link" href="#section-1-1-temperature-dependent-albedo">
+<strong>
+      Section 1.1: Temperature Dependent Albedo
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-1-climate-connection">
+<strong>
+        Questions 1.1: Climate Connection
+       </strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-2-multiple-equilibria-from-graphs">
+<strong>
+      Section 1.2: Multiple Equilibria From Graphs
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-2">
+<strong>
+        Questions 1.2
+       </strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-3-finding-equilibria-numerically-determining-convergence-or-divergence">
+<strong>
+      Section 1.3: Finding Equilibria Numerically &amp; Determining Convergence or Divergence
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-3">
+<strong>
+        Questions 1.3
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-2-multiple-equilibria-from-graphs">
-   Section 2 : Multiple Equilibria From Graphs
-  </a>
+<a class="reference internal nav-link" href="#section-2-changing-insolation">
+<strong>
+    Section 2: Changing Insolation
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id1">
-     Questions
-    </a>
+<a class="reference internal nav-link" href="#section-2-1-effect-on-the-number-equilibrium-solutions">
+<strong>
+      Section 2.1: Effect on the Number Equilibrium Solutions
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-2-1">
+<strong>
+        Questions 2.1
+       </strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-2-effect-on-equilibrium-temperatures">
+<strong>
+      Section 2.2: Effect on Equilibrium Temperatures
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-2-2-climate-connection">
+<strong>
+        Questions 2.2: Climate Connection
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-3-finding-equilibria-numerically-determining-convergence-or-divergence">
-   Section 3: Finding Equilibria Numerically, Determining Convergence or Divergence
-  </a>
-<ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id2">
-     Questions
-    </a>
-</li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-4-changing-insolation">
-   Section 4 : Changing Insolation
-  </a>
-<ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id3">
-     Questions
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#coding-exercises">
-     Coding Exercises
-    </a>
-</li>
-</ul>
+<a class="reference internal nav-link" href="#summary">
+<strong>
+    Summary
+   </strong>
+</a>
 </li>
 </ul>
 </nav>
@@ -919,7 +1016,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="col pl-md-3 pl-lg-5 content-container">
 <!-- Table of contents that is only displayed when printing the page -->
 <div class="onlyprint" id="jb-print-docs-body">
-<h1>Setup</h1>
+<h1>Tutorial 4: Climate Feedbacks</h1>
 <!-- Table of contents -->
 <div id="print-main-content">
 <div id="jb-print-toc">
@@ -930,73 +1027,141 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#">
-   Setup
-  </a>
+<strong>
+    Tutorial 4: Climate Feedbacks
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-objectives">
+<strong>
+    Tutorial Objectives
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#setup">
+<strong>
+    Setup
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#package-imports">
-     Package Imports
+<a class="reference internal nav-link" href="#figure-ettings">
+     Figure ettings
     </a>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#figure-settings">
-     Figure Settings
+<a class="reference internal nav-link" href="#video-1-climate-feedbacks">
+     Video 1: Climate Feedbacks
     </a>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-1-temperature-dependent-albedo">
-   Section 1 : Temperature Dependent Albedo
-  </a>
+<a class="reference internal nav-link" href="#section-1-ice-albedo-feedback">
+<strong>
+    Section 1: Ice-Albedo Feedback
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#questions">
-     Questions
-    </a>
+<a class="reference internal nav-link" href="#section-1-1-temperature-dependent-albedo">
+<strong>
+      Section 1.1: Temperature Dependent Albedo
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-1-climate-connection">
+<strong>
+        Questions 1.1: Climate Connection
+       </strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-2-multiple-equilibria-from-graphs">
+<strong>
+      Section 1.2: Multiple Equilibria From Graphs
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-2">
+<strong>
+        Questions 1.2
+       </strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-3-finding-equilibria-numerically-determining-convergence-or-divergence">
+<strong>
+      Section 1.3: Finding Equilibria Numerically &amp; Determining Convergence or Divergence
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-3">
+<strong>
+        Questions 1.3
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-2-multiple-equilibria-from-graphs">
-   Section 2 : Multiple Equilibria From Graphs
-  </a>
+<a class="reference internal nav-link" href="#section-2-changing-insolation">
+<strong>
+    Section 2: Changing Insolation
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id1">
-     Questions
-    </a>
+<a class="reference internal nav-link" href="#section-2-1-effect-on-the-number-equilibrium-solutions">
+<strong>
+      Section 2.1: Effect on the Number Equilibrium Solutions
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-2-1">
+<strong>
+        Questions 2.1
+       </strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-2-effect-on-equilibrium-temperatures">
+<strong>
+      Section 2.2: Effect on Equilibrium Temperatures
+     </strong>
+</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-2-2-climate-connection">
+<strong>
+        Questions 2.2: Climate Connection
+       </strong>
+</a>
+</li>
+</ul>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-3-finding-equilibria-numerically-determining-convergence-or-divergence">
-   Section 3: Finding Equilibria Numerically, Determining Convergence or Divergence
-  </a>
-<ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id2">
-     Questions
-    </a>
-</li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-4-changing-insolation">
-   Section 4 : Changing Insolation
-  </a>
-<ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id3">
-     Questions
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#coding-exercises">
-     Coding Exercises
-    </a>
-</li>
-</ul>
+<a class="reference internal nav-link" href="#summary">
+<strong>
+    Summary
+   </strong>
+</a>
 </li>
 </ul>
 </nav>
@@ -1005,30 +1170,32 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <main id="main-content" role="main">
 <div>
-<p>#<strong>Tutorial # 4 : Ice-Albedo Feedback</strong></p>
+<p><a class="reference external" href="https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial4.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/></a>   <a href="https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/{ORG}/course-content/main/tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial4.ipynb" target="_blank"><img alt="Open in Kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg"/></a></p>
+<div class="section" id="tutorial-4-climate-feedbacks">
+<h1><strong>Tutorial 4: Climate Feedbacks</strong><a class="headerlink" href="#tutorial-4-climate-feedbacks" title="Permalink to this headline">¶</a></h1>
 <p><strong>Week 1, Day 5, Climate Modeling</strong></p>
 <p><strong>Content creators:</strong> Jenna Pearson, Brodie Pearson, and Abigail Bodner</p>
-<p><strong>Content reviewers:</strong> Draco Xu</p>
-<p><strong>Content editors:</strong> TBD</p>
-<p><strong>Production editors:</strong> TBD</p>
-<p><strong>Our 2023 Sponsors:</strong> TBD</p>
-<p>Link to paleo climate and also to brodie’s speaker slides on tipping points.</p>
-<p>add colorbar to last plots</p>
-<p>fill in objectives</p>
-<p>#<strong>Tutorial Objectives</strong></p>
-<p>In this tutorial students will learn about the temperature dependent albedo, and how changing the insolation affects the equilibrium temperature.</p>
+<p><strong>Content reviewers:</strong> Younkap Nina Duplex, Zahra Khodakaramimaghsoud, Will Gregory, Peter Ohue, Agustina Pesce, Derick Temfack, Yunlong Xu, Peizhen Yang, Chi Zhang, Ohad Zivan</p>
+<p><strong>Content editors:</strong> Brodie Pearson, Abigail Bodner, Ohad Zivan, Chi Zhang</p>
+<p><strong>Production editors:</strong> Wesley Banfield, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Our 2023 Sponsors:</strong> NASA TOPS</p>
+</div>
+<div class="section" id="tutorial-objectives">
+<h1><strong>Tutorial Objectives</strong><a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial students will learn about climate feedbacks, in particular the Planck and ice-albedo feedbacks. Students will also learn about how variations in the insolation over time can affect the equilibrium temperature of Earth.</p>
 <p>By the end of this tutorial students will be able to:</p>
 <ul class="simple">
-<li><p>Apply a function of temeperature dependent albedo to their existing climate model.</p></li>
-<li><p>Understand the impact of insolation on the equilibrium temperature, and how this relates to snowball and hothouse Earth.</p></li>
+<li><p>Apply a temperature-dependent albedo within their existing climate model.</p></li>
+<li><p>Understand the impact of insolation changes on the equilibrium temperature of Earth.</p></li>
 </ul>
+</div>
 <div class="section" id="setup">
-<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="package-imports">
-<h2>Package Imports<a class="headerlink" href="#package-imports" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
+<h1><strong>Setup</strong><a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
+<div class="cell tag_colab docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>                     <span class="c1"># used to manipulate data and open datasets</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># imports</span>
+
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>                     <span class="c1"># used to manipulate data and open datasets</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>                      <span class="c1"># used for algeba and array operations</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>         <span class="c1"># used for plotting</span>
 <span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">brentq</span>       <span class="c1"># used for numerical root-finding to get the equilibria</span>
@@ -1036,12 +1203,12 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="figure-settings">
-<h2>Figure Settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
+<div class="section" id="figure-ettings">
+<h2>Figure ettings<a class="headerlink" href="#figure-ettings" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>       <span class="c1"># interactive display</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Figure ettings</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>       <span class="c1"># interactive display</span>
 <span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = 'retina'
 <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">"https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/cma.mplstyle"</span><span class="p">)</span>
 </pre></div>
@@ -1049,31 +1216,43 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
+<div class="section" id="video-1-climate-feedbacks">
+<h2>Video 1: Climate Feedbacks<a class="headerlink" href="#video-1-climate-feedbacks" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Video 1: Climate Feedbacks</span>
+<span class="c1">#Tech team will add code to format and display the video</span>
+</pre></div>
 </div>
-<div class="section" id="section-1-temperature-dependent-albedo">
-<h1>Section 1 : Temperature Dependent Albedo<a class="headerlink" href="#section-1-temperature-dependent-albedo" title="Permalink to this headline">¶</a></h1>
-<p>When earth’s surface warms, snow and ice melt. This decreases the amount of solar radiation that is reflected off Earth’s surface, and lowers the <strong>albedo (</strong><span class="math notranslate nohighlight">\(\mathbf{\alpha}\)</span><strong>)</strong>. This in turn warms the climate and more snow and ice melt. This is referred to as a <strong>postive feedback</strong>. Positive feedbacks amplify the changes that are already occurring. This particular feedback is referred to as the <strong>ice-albedo feedback</strong>.</p>
-<p>A simple introduction of this feature is through a temperature dependent albedo defined by a ramp function (see lecture slides).</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a77f2c15-7d62-4a95-a338-44c742798075">
-<span class="eqno">(13)<a class="headerlink" href="#equation-a77f2c15-7d62-4a95-a338-44c742798075" title="Permalink to this equation">¶</a></span>\[\begin{align}
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="section-1-ice-albedo-feedback">
+<h1><strong>Section 1: Ice-Albedo Feedback</strong><a class="headerlink" href="#section-1-ice-albedo-feedback" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="section-1-1-temperature-dependent-albedo">
+<h2><strong>Section 1.1: Temperature Dependent Albedo</strong><a class="headerlink" href="#section-1-1-temperature-dependent-albedo" title="Permalink to this headline">¶</a></h2>
+<p>Our current model only contains one feedback, the ‘Planck feedback’ also called the ‘Planck temperature response’. This feedback encapsulates that a warming of Earth leads to the planet emitting more energy (see Planck’s law from Tutorial 1). In reality, there are many  <a class="reference external" href="https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_AnnexVII.pdf">climate feedbacks</a> that contribute to the Earth’s net temperature change due to an energy imbalance. In this tutorial we will focus on incorporating an <strong>ice-albedo feedback</strong> into our model.</p>
+<p>When earth’s surface warms, snow and ice melt. This lowers the <strong>albedo (</strong><span class="math notranslate nohighlight">\(\mathbf{\alpha}\)</span><strong>)</strong>, because less solar radiation is reflected off Earth’s surface. This lower albedo causes the climate to warm even more than if the albedo had stayed the same, increasing the snow and ice melt. This is referred to as a <strong>positive feedback</strong>. Positive feedbacks amplify the changes that are already occurring. This particular feedback is referred to as the <strong>ice-albedo feedback</strong>.</p>
+<p>A simple way to parameterize ice-albedo feedback in our model is through a temperature dependent albedo, such as the one defined below (see the tutorial lecture slides for an explanation of why we use this function).</p>
+<div class="amsmath math notranslate nohighlight" id="equation-651dbe2a-459b-4325-86a6-8646b5452bc6">
+<span class="eqno">(15)<a class="headerlink" href="#equation-651dbe2a-459b-4325-86a6-8646b5452bc6" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \alpha = \left\{
         \begin{array}{cl}
-        0.3 &amp; T \gt 280 K \\
-        0.3 + m \cdot (280-T) &amp; 250 \le T \le 280 \\
-        0.7 &amp; T \lt 250
+        0.1 &amp; T \gt 300 K \\
+        0.1 + (0.7-0.1) \cdot \frac{(T-300)^2}{(240-300)^2} &amp; 240 \le T \le 300 \\
+        0.7 &amp; T \lt 240
         \end{array}
         \right.
 \end{align}\]</div>
-<p>where <span class="math notranslate nohighlight">\(m = (0.7-0.3)/(280-250) = 0.013\)</span>.</p>
-<p>With the new albedo definition, we can plot the graphs of ASR and OLR. Notice how ASR has a similar ramp shape to the albedo, as it is proportional to it.</p>
+<p>Using this new temperature-dependent albedo, we can plot the graphs of absorbed shortwave radiation (ASR) and outgoing longwave radiation (OLR):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a array ot temperatures to evaluates the ASR and OLR at</span>
-<span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">220</span><span class="p">,</span><span class="mi">320</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">360</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
 
 <span class="c1">#create empty arrays to fill with values later</span>
-<span class="n">ASR</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
-<span class="n">OLR</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
+<span class="n">ASR_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
 
 <span class="c1"># define the slope of the ramp function</span>
 <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.7</span><span class="o">-</span><span class="mf">0.3</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">280</span><span class="o">-</span><span class="mi">250</span><span class="p">)</span>
@@ -1084,26 +1263,34 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="c1"># define transmissivity (calculated previously from observations in tutorial 1)</span>
 <span class="n">tau</span> <span class="o">=</span> <span class="mf">0.6127</span> <span class="c1"># unitless number between 0 and 1</span>
 
-<span class="c1"># define the Stefan-Boltzmann Constant, noting we are using 'e' for scientific notation</span>
-<span class="n">sigma</span> <span class="o">=</span> <span class="mf">5.67e-8</span> <span class="c1"># W m^-2 K^-4</span>
-
-<span class="c1"># calculate ASR and OLR for different values of T</span>
-<span class="k">for</span> <span class="n">tt</span><span class="p">,</span> <span class="n">temp</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
-
-    <span class="c1"># define the ramp function for albedo</span>
-    <span class="k">if</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mi">280</span><span class="p">:</span>
-        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span>
-    <span class="k">elif</span> <span class="n">temp</span><span class="o">&gt;=</span><span class="mi">250</span><span class="p">:</span>
-        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="o">+</span><span class="n">m</span><span class="o">*</span><span class="p">(</span><span class="mi">280</span><span class="o">-</span><span class="n">temp</span><span class="p">)</span>
+<span class="c1"># define a function for absorbed shortwave radiation (ASR)</span>
+<span class="k">def</span> <span class="nf">ASR</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span><span class="n">T</span><span class="p">):</span>
+    <span class="c1"># define function for albedo</span>
+    <span class="k">if</span> <span class="n">T</span> <span class="o">&gt;=</span> <span class="mi">300</span><span class="p">:</span>                <span class="c1"># temperature of very warm and ice free earth.</span>
+        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span>                  <span class="c1"># average albedo of land and sea without ice</span>
+    <span class="k">elif</span> <span class="n">T</span><span class="o">&gt;</span><span class="mi">240</span><span class="p">:</span>                 <span class="c1"># temperature of Earth to sustain permafrost and sea ice everywhere.</span>
+        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span> <span class="o">+</span> <span class="p">(</span><span class="mf">0.7</span><span class="o">-</span><span class="mf">0.1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">T</span><span class="o">-</span><span class="mi">300</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="mi">240</span><span class="o">-</span><span class="mi">300</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span>
+        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span>                   <span class="c1"># average albedo of land and sea ice</span>
+    <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">alpha</span><span class="p">)</span><span class="o">*</span><span class="n">Q</span>
 
-    <span class="n">ASR</span><span class="p">[</span><span class="n">tt</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">alpha</span><span class="p">)</span><span class="o">*</span><span class="n">Q</span>
-    <span class="n">OLR</span><span class="p">[</span><span class="n">tt</span><span class="p">]</span> <span class="o">=</span> <span class="n">tau</span> <span class="o">*</span> <span class="n">sigma</span> <span class="o">*</span> <span class="n">temp</span><span class="o">**</span><span class="mi">4</span>
+<span class="c1"># define a function for outgoing longwave raditation (OLR)</span>
+<span class="k">def</span> <span class="nf">OLR</span><span class="p">(</span><span class="n">tau</span><span class="p">,</span><span class="n">T</span><span class="p">):</span>
+    <span class="c1"># define the Stefan-Boltzmann Constant, noting we are using 'e' for scientific notation</span>
+    <span class="n">sigma</span> <span class="o">=</span> <span class="mf">5.67e-8</span> <span class="c1"># W m^-2 K^-4</span>
+
+    <span class="k">return</span> <span class="n">tau</span> <span class="o">*</span> <span class="n">sigma</span> <span class="o">*</span> <span class="n">T</span><span class="o">**</span><span class="mi">4</span>
+
+<span class="c1"># calculate OLR for different values of T</span>
+<span class="n">OLR_vals</span> <span class="o">=</span> <span class="n">OLR</span><span class="p">(</span><span class="n">tau</span><span class="p">,</span><span class="n">T</span><span class="p">)</span>
+
+<span class="c1"># calculate ASR for different values of T</span>
+<span class="k">for</span> <span class="n">tt</span><span class="p">,</span> <span class="n">temp</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+    <span class="n">ASR_vals</span><span class="p">[</span><span class="n">tt</span><span class="p">]</span> <span class="o">=</span> <span class="n">ASR</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span><span class="n">temp</span><span class="p">)</span>
 
 <span class="c1"># make plots</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="n">ASR</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'ASR'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="n">OLR</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'OLR'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="n">ASR_vals</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'Absorbed Shortwave Radiation (ASR)'</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="n">OLR_vals</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'Outgoing Longwave Radiation (OLR)'</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Temperature (K)'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
@@ -1113,99 +1300,66 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="section" id="questions">
-<h2>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="questions-1-1-climate-connection">
+<h3><strong>Questions 1.1: Climate Connection</strong><a class="headerlink" href="#questions-1-1-climate-connection" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>How many times do the graphs of ASR and OLR intersect?</p></li>
+<li><p>What does this intersection mean in terms of Earth’s energy (im)balance?</p></li>
 </ol>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial4_Solution_62453f2c.py"><em>Click for solution</em></a></p>
 </div>
 </div>
-<div class="section" id="section-2-multiple-equilibria-from-graphs">
-<h1>Section 2 : Multiple Equilibria From Graphs<a class="headerlink" href="#section-2-multiple-equilibria-from-graphs" title="Permalink to this headline">¶</a></h1>
-<p><strong>Equilibria</strong> are solutions to the model equation when the rate of change of tempearture is zero. Graphically, equilibria represent the long-term behavior of the temperature curves.</p>
-<p>A <em>stable equilibrium</em> temperature is what the model converges to (moves towards) after a long time. An <em>unstable equilibrium</em> temperature is a solution to the equation that the model diverges (moves away) from over time.</p>
-<p>We can now include this temperature dependent albedo into the time dependent model we created in Tutorial # 3 and investigate the long-term behavior of our temperature curves.</p>
+<div class="section" id="section-1-2-multiple-equilibria-from-graphs">
+<h2><strong>Section 1.2: Multiple Equilibria From Graphs</strong><a class="headerlink" href="#section-1-2-multiple-equilibria-from-graphs" title="Permalink to this headline">¶</a></h2>
+<p><strong>Equilibrium temperatures</strong> are solutions to the model equation when the rate of change of temperature is zero. There are two types of equilibrium solutions: <em>stable</em> and <em>unstable</em>.</p>
+<ul class="simple">
+<li><p>A <em>stable equilibrium</em> temperature is a solution that the model asymptotes to (moves towards) over time.</p></li>
+<li><p>An <em>unstable equilibrium</em> temperature is a solution that the model diverges (moves away) from over time. The only time the model will stay at this equilibrium is if it starts <em>exactly</em> at the unstable equilibrium temperature.</p></li>
+</ul>
+<p>We can now incorporate the temperature-dependent albedo we defined above into our time-dependent model from Tutorial 3, to investigate the impact of the ice-albedo feedback on the long-term behavior temperature.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define transmissivity (calculated previously from observations in tutorial 1)</span>
-<span class="n">tau</span> <span class="o">=</span> <span class="mf">0.6127</span> <span class="c1"># unitless number between 0 and 1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a function to find the new temperature based on the previous using Euler's method.</span>
+<span class="k">def</span> <span class="nf">step_forward</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="n">tau</span><span class="p">,</span><span class="n">Q</span><span class="p">,</span><span class="n">dt</span><span class="p">):</span>
 
-<span class="c1"># define the observed insolation based on observations from the IPCC AR6 Figure 7.2</span>
-<span class="n">Q</span> <span class="o">=</span> <span class="mi">340</span> <span class="c1"># W m^-2</span>
-
-<span class="c1"># create a function to find the new tempeature based on the previous using Euler's method.</span>
-<span class="k">def</span> <span class="nf">step_forward</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="n">tau</span><span class="p">,</span><span class="n">Q</span><span class="p">):</span>
-
-    <span class="c1"># define the heat capacity (previous calcuated)</span>
+    <span class="c1"># define the heat capacity (calculated in Tutorial 3)</span>
     <span class="n">C</span> <span class="o">=</span> <span class="mf">286471954.64</span> <span class="c1"># J m^-2K^-2</span>
 
-    <span class="c1"># define the slope of the ramp function</span>
-    <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.7</span><span class="o">-</span><span class="mf">0.3</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">280</span><span class="o">-</span><span class="mi">250</span><span class="p">)</span>
-
-    <span class="c1"># define the ramp function for albedo</span>
-    <span class="k">if</span> <span class="n">T</span> <span class="o">&gt;</span> <span class="mi">280</span><span class="p">:</span>
-        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span>
-    <span class="k">elif</span> <span class="n">T</span><span class="o">&gt;=</span><span class="mi">250</span><span class="p">:</span>
-        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="o">+</span><span class="n">m</span><span class="o">*</span><span class="p">(</span><span class="mi">280</span><span class="o">-</span><span class="n">T</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span>
-
-    <span class="c1"># define the Stefan-Boltzmann Constant, noting we are using 'e' for scientific notation</span>
-    <span class="n">sigma</span> <span class="o">=</span> <span class="mf">5.67e-8</span> <span class="c1"># W m^-2 K^-4</span>
-
-    <span class="n">ASR</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">alpha</span><span class="p">)</span><span class="o">*</span><span class="n">Q</span>
-    <span class="n">OLR</span> <span class="o">=</span> <span class="n">tau</span> <span class="o">*</span> <span class="n">sigma</span> <span class="o">*</span> <span class="n">T</span><span class="o">**</span><span class="mi">4</span>
-
-    <span class="n">T_new</span> <span class="o">=</span> <span class="n">T</span> <span class="o">+</span> <span class="n">dt</span> <span class="o">/</span> <span class="n">C</span> <span class="o">*</span> <span class="p">(</span> <span class="n">ASR</span> <span class="o">-</span> <span class="n">OLR</span> <span class="p">)</span>
+    <span class="n">T_new</span> <span class="o">=</span> <span class="n">T</span> <span class="o">+</span> <span class="n">dt</span> <span class="o">/</span> <span class="n">C</span> <span class="o">*</span> <span class="p">(</span> <span class="n">ASR</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span><span class="n">T</span><span class="p">)</span> <span class="o">-</span> <span class="n">OLR</span><span class="p">(</span><span class="n">tau</span><span class="p">,</span><span class="n">T</span><span class="p">)</span> <span class="p">)</span>
 
     <span class="k">return</span> <span class="n">T_new</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Let us explore how our model behaves under a variety of intial temperatures. We can use a for loop to help us use our model funtion interatively.</p>
+<p>Let us explore how our model behaves under a variety of initial temperatures. We can use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop compare different initial temperatures.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># these are the intial tempeartures we will use</span>
-<span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">220</span><span class="p">,</span><span class="mi">300</span><span class="p">,</span><span class="mi">49</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dt = 60. * 60. * 24. * 365.   # time interval, one year expressed in seconds</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dt</span> <span class="o">=</span> <span class="mf">60.</span> <span class="o">*</span> <span class="mf">60.</span> <span class="o">*</span> <span class="mf">24.</span> <span class="o">*</span> <span class="mf">365.</span>   <span class="c1"># time interval, one year expressed in seconds</span>
 
-<span class="c1"># for init_temp in np.linspace(220,300,49):  # suite of intial temperatures in K</span>
-<span class="c1">#   numtsteps = 40     #  number of years to run the model</span>
+<span class="k">for</span> <span class="n">init_temp</span> <span class="ow">in</span> <span class="n">T</span><span class="p">:</span>      <span class="c1"># suite of intial temperatures in K</span>
+      <span class="n">numtsteps</span> <span class="o">=</span> <span class="mi">40</span>     <span class="c1">#  number of years to run the model</span>
 
-<span class="c1">#   # for converting number of seconds in a year</span>
-<span class="c1">#   sec_2_yr = 3.154e7</span>
+      <span class="c1"># for converting number of seconds in a year</span>
+      <span class="n">sec_2_yr</span> <span class="o">=</span> <span class="mf">3.154e7</span>
 
-<span class="c1">#   # define empty arrays to store the time series of temperature and the corresponding years</span>
-<span class="c1">#   T_series = np.zeros((numtsteps+1))</span>
-<span class="c1">#   t_series = np.zeros((numtsteps+1))</span>
+      <span class="c1"># set the intial temperature (initial condition)</span>
+      <span class="n">T_series</span> <span class="o">=</span> <span class="p">[</span><span class="n">init_temp</span><span class="p">]</span>
 
-<span class="c1">#   # define the intial temperature</span>
-<span class="c1">#   T_series[0] = init_temp</span>
+      <span class="c1"># set the initial time to 0</span>
+      <span class="n">t_series</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
-<span class="c1">#   # run the model</span>
-<span class="c1">#   for n in range(numtsteps):</span>
-<span class="c1">#       t_series[n+1] = (n+1)*dt/sec_2_yr</span>
-<span class="c1">#       T_series[n+1] = step_forward( T_series[n],tau, Q )</span>
+      <span class="c1"># run the model</span>
+      <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numtsteps</span><span class="p">):</span>
 
-<span class="c1">#   # make plot</span>
-<span class="c1">#   plt.plot(t_series,T_series)</span>
+          <span class="c1"># calculate and append the time since running the model, dependent on dt and the numtsteps</span>
+          <span class="n">t_series</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span><span class="o">/</span><span class="n">sec_2_yr</span><span class="p">)</span>
 
+          <span class="c1"># calculate and append the new temperature using our pre-defined function</span>
+          <span class="n">T_series</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">step_forward</span><span class="p">(</span> <span class="n">T_series</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">tau</span> <span class="o">=</span> <span class="n">tau</span><span class="p">,</span><span class="n">Q</span> <span class="o">=</span> <span class="n">Q</span> <span class="p">,</span> <span class="n">dt</span> <span class="o">=</span> <span class="n">dt</span> <span class="p">))</span>
 
-<span class="c1"># Ohad "cleaner" version:</span>
-<span class="n">dt</span> <span class="o">=</span> <span class="mf">60.</span> <span class="o">*</span> <span class="mf">60.</span> <span class="o">*</span> <span class="mf">24.</span> <span class="o">*</span> <span class="mf">365.</span>   <span class="c1"># time interval, one year expressed in seconds</span>
-<span class="k">for</span> <span class="n">init_temp</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">220</span><span class="p">,</span><span class="mi">300</span><span class="p">,</span><span class="mi">2</span><span class="p">):</span>
-  <span class="n">numyears</span><span class="o">=</span><span class="mi">40</span>
-  <span class="n">T_series</span><span class="o">=</span><span class="p">[</span><span class="n">init_temp</span><span class="p">]</span>
-  <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numyears</span><span class="p">):</span>
-    <span class="n">T_series</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">step_forward</span><span class="p">(</span> <span class="n">T_series</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="n">tau</span><span class="p">,</span> <span class="n">Q</span> <span class="p">))</span>
-  <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">numyears</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span><span class="n">T_series</span><span class="p">)</span>
+      <span class="c1"># make plot</span>
+      <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_series</span><span class="p">,</span><span class="n">T_series</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Time Evolution of Temperature'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Time (years)'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
@@ -1214,90 +1368,47 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="section" id="id1">
-<h2>Questions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="questions-1-2">
+<h3><strong>Questions 1.2</strong><a class="headerlink" href="#questions-1-2" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>How many stable equilibria can you find on the figure above? Estimate their values.</p></li>
-<li><p>Can you spot the single unstable equilibria? Estimate it’s value.</p></li>
-<li><p>What do these values represent on the figure you made from Part 1?</p></li>
+<li><p>What do these values represent on the figure you made in Part 1?</p></li>
+<li><p>There is an unstable equilibrium state within this model. What is it’s value?</p></li>
 </ol>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial4_Solution_3004ccb5.py"><em>Click for solution</em></a></p>
 </div>
 </div>
-<div class="section" id="section-3-finding-equilibria-numerically-determining-convergence-or-divergence">
-<h1>Section 3: Finding Equilibria Numerically, Determining Convergence or Divergence<a class="headerlink" href="#section-3-finding-equilibria-numerically-determining-convergence-or-divergence" title="Permalink to this headline">¶</a></h1>
-<p>To verify the equilibria identified graphically in the previous section, we can use python to find the solutions to the equation when the rate of change in temeparture is zero. That is find the solution to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9596e54d-ac4e-475c-946f-65796d3707d1">
-<span class="eqno">(14)<a class="headerlink" href="#equation-9596e54d-ac4e-475c-946f-65796d3707d1" title="Permalink to this equation">¶</a></span>\[\begin{align}
-0 = ASR-OLR
+<div class="section" id="section-1-3-finding-equilibria-numerically-determining-convergence-or-divergence">
+<h2><strong>Section 1.3: Finding Equilibria Numerically &amp; Determining Convergence or Divergence</strong><a class="headerlink" href="#section-1-3-finding-equilibria-numerically-determining-convergence-or-divergence" title="Permalink to this headline">¶</a></h2>
+<p>To verify the equilibrium solutions we identified graphically in the previous section, we can use python to find the exact values (i.e., where the rate of change in temperature is zero). That is find the temperatures that satisfy</p>
+<div class="amsmath math notranslate nohighlight" id="equation-746f589b-1263-4783-9545-9e17cce37a49">
+<span class="eqno">(16)<a class="headerlink" href="#equation-746f589b-1263-4783-9545-9e17cce37a49" title="Permalink to this equation">¶</a></span>\[\begin{align}
+0 = ASR-OLR.
 \end{align}\]</div>
-<p>To aid us, we will use a ‘root-finding function’ from the scipy package.</p>
+<p>To aid us, we will use <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.brentq.html#scipy-optimize-brentq"><code class="docutils literal notranslate"><span class="pre">brentq</span></code></a>, a <em>root-finding function</em> from the scipy package.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### below we have modified things a bit to use a root solver</span>
-<span class="k">def</span> <span class="nf">ASR</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">S</span><span class="o">=</span><span class="mf">341.3</span><span class="p">):</span>
-    <span class="c1"># define the slope of the ramp function</span>
-    <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.7</span><span class="o">-</span><span class="mf">0.3</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">280</span><span class="o">-</span><span class="mi">250</span><span class="p">)</span>
-
-    <span class="c1"># define the ramp function</span>
-    <span class="k">if</span> <span class="n">T</span> <span class="o">&gt;</span> <span class="mi">280</span><span class="p">:</span>
-        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span>
-    <span class="k">elif</span> <span class="n">T</span><span class="o">&gt;=</span><span class="mi">250</span><span class="p">:</span>
-        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="o">+</span><span class="n">m</span><span class="o">*</span><span class="p">(</span><span class="mi">280</span><span class="o">-</span><span class="n">T</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span>
-
-    <span class="k">return</span> <span class="n">S</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">alpha</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">OLR</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">5.67E-8</span><span class="p">,</span> <span class="n">tau</span><span class="o">=</span><span class="mf">0.6127</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">tau</span> <span class="o">*</span> <span class="n">sigma</span> <span class="o">*</span> <span class="n">T</span><span class="o">**</span><span class="mi">4</span>
-
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create function to find the forcing at the top of the atmosphere</span>
 <span class="k">def</span> <span class="nf">Ftoa</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">ASR</span><span class="p">(</span><span class="n">T</span><span class="p">)</span> <span class="o">-</span> <span class="n">OLR</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ASR</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span><span class="n">T</span><span class="p">)</span> <span class="o">-</span> <span class="n">OLR</span><span class="p">(</span><span class="n">tau</span><span class="p">,</span><span class="n">T</span><span class="p">)</span>
 
 <span class="c1">#  it requires a function and two end-points be input as arguments</span>
 <span class="c1">#  it will look for a zero of the function between those end-points</span>
-<span class="n">Teq1</span> <span class="o">=</span> <span class="n">brentq</span><span class="p">(</span><span class="n">Ftoa</span><span class="p">,</span> <span class="mf">200.</span><span class="p">,</span> <span class="mf">260.</span><span class="p">)</span> <span class="c1"># these ranges are from the intersections of the graphs of ASR and OLR</span>
-<span class="n">Teq2</span> <span class="o">=</span> <span class="n">brentq</span><span class="p">(</span><span class="n">Ftoa</span><span class="p">,</span> <span class="mf">260.</span><span class="p">,</span> <span class="mf">280.</span><span class="p">)</span>
-<span class="n">Teq3</span> <span class="o">=</span> <span class="n">brentq</span><span class="p">(</span><span class="n">Ftoa</span><span class="p">,</span> <span class="mf">280.</span><span class="p">,</span> <span class="mf">300.</span><span class="p">)</span>
+<span class="n">Teq1</span> <span class="o">=</span> <span class="n">brentq</span><span class="p">(</span><span class="n">Ftoa</span><span class="p">,</span> <span class="mf">200.</span><span class="p">,</span> <span class="mf">240.</span><span class="p">)</span> <span class="c1"># these ranges are from the intersections of the graphs of ASR and OLR</span>
+<span class="n">Teq2</span> <span class="o">=</span> <span class="n">brentq</span><span class="p">(</span><span class="n">Ftoa</span><span class="p">,</span> <span class="mf">240.</span><span class="p">,</span> <span class="mf">280.</span><span class="p">)</span>
+<span class="n">Teq3</span> <span class="o">=</span> <span class="n">brentq</span><span class="p">(</span><span class="n">Ftoa</span><span class="p">,</span> <span class="mf">280.</span><span class="p">,</span> <span class="mf">320.</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span> <span class="n">Teq1</span><span class="p">,</span> <span class="n">Teq2</span><span class="p">,</span> <span class="n">Teq3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>To asess the stability of these equilibria, we can plot the difference in ASR and OSR. This is the same function we used the brentq package on to find the temperatures at which the energy difference was zero. Thus, when the graph here is zero, those are the equilibrium values.</p>
+<p>To assess the stability of these equilibria, we can plot the difference in ASR and OSR. This is the same function (<code class="docutils literal notranslate"><span class="pre">Ftoa</span></code>) that we calculated in the previous cell, but we will recaclulate it below for plotting purposes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">220</span><span class="p">,</span><span class="mi">320</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">ASR</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
-<span class="n">OLR</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we've already calculated ASR and OLR above</span>
 
-<span class="c1"># define the slope of the ramp function</span>
-<span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.7</span><span class="o">-</span><span class="mf">0.3</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">280</span><span class="o">-</span><span class="mi">250</span><span class="p">)</span>
-
-<span class="c1"># define the observed insolation based on observations from the IPCC AR6 Figure 7.2</span>
-<span class="n">Q</span> <span class="o">=</span> <span class="mi">340</span> <span class="c1"># W m^-2</span>
-
-<span class="c1"># define transmissivity (calculated previously from observations in tutorial 1)</span>
-<span class="n">tau</span> <span class="o">=</span> <span class="mf">0.6127</span> <span class="c1"># unitless number between 0 and 1</span>
-
-<span class="c1"># define the Stefan-Boltzmann Constant, noting we are using 'e' for scientific notation</span>
-<span class="n">sigma</span> <span class="o">=</span> <span class="mf">5.67e-8</span> <span class="c1"># W m^-2 K^-4</span>
-
-<span class="k">for</span> <span class="n">tt</span><span class="p">,</span> <span class="n">temp</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
-
-    <span class="c1"># define the ramp function</span>
-    <span class="k">if</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mi">280</span><span class="p">:</span>
-        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span>
-    <span class="k">elif</span> <span class="n">temp</span><span class="o">&gt;=</span><span class="mi">250</span><span class="p">:</span>
-        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="o">+</span><span class="n">m</span><span class="o">*</span><span class="p">(</span><span class="mi">280</span><span class="o">-</span><span class="n">temp</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span>
-
-    <span class="n">ASR</span><span class="p">[</span><span class="n">tt</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">alpha</span><span class="p">)</span><span class="o">*</span><span class="n">Q</span>
-    <span class="n">OLR</span><span class="p">[</span><span class="n">tt</span><span class="p">]</span> <span class="o">=</span> <span class="n">tau</span> <span class="o">*</span> <span class="n">sigma</span> <span class="o">*</span> <span class="n">temp</span><span class="o">**</span><span class="mi">4</span>
-
-<span class="n">F</span> <span class="o">=</span> <span class="n">ASR</span><span class="o">-</span><span class="n">OLR</span>
+<span class="n">F</span> <span class="o">=</span> <span class="n">ASR_vals</span><span class="o">-</span><span class="n">OLR_vals</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="n">F</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">'k'</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
 
 <span class="c1"># find positive values and fill with red</span>
@@ -1307,129 +1418,164 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="n">pos_ind2</span> <span class="o">=</span> <span class="p">(</span><span class="n">T</span><span class="o">&gt;=</span><span class="n">Teq2</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">T</span><span class="o">&lt;=</span><span class="n">Teq3</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="n">pos_ind2</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="n">F</span><span class="p">[</span><span class="n">pos_ind2</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">)</span>
 
-<span class="c1"># find negative values and fill with red</span>
+<span class="c1"># find negative values and fill with blue</span>
 <span class="n">neg_ind1</span> <span class="o">=</span> <span class="p">(</span><span class="n">T</span><span class="o">&gt;=</span><span class="n">Teq1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">T</span><span class="o">&lt;=</span><span class="n">Teq2</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="n">neg_ind1</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="n">F</span><span class="p">[</span><span class="n">neg_ind1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">'blue'</span><span class="p">)</span>
 
 <span class="n">neg_ind2</span> <span class="o">=</span> <span class="n">T</span><span class="o">&gt;=</span><span class="n">Teq3</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="n">neg_ind2</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="n">F</span><span class="p">[</span><span class="n">neg_ind2</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">'blue'</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'ASR-OLR'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="c1"># plot vertical lines/names at equilibrium temperatures</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Teq1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">'k'</span><span class="p">,</span> <span class="n">ls</span> <span class="o">=</span> <span class="s1">':'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Teq2</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">'k'</span><span class="p">,</span> <span class="n">ls</span> <span class="o">=</span> <span class="s1">':'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Teq3</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">'k'</span><span class="p">,</span> <span class="n">ls</span> <span class="o">=</span> <span class="s1">':'</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">'$T_</span><span class="si">{eq1}</span><span class="s1">$'</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">Teq1</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">340</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">Teq1</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="o">-</span><span class="mi">340</span><span class="p">),</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">90</span><span class="p">,</span> <span class="n">annotation_clip</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">'$T_</span><span class="si">{eq2}</span><span class="s1">$'</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">Teq2</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">340</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">Teq2</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="o">-</span><span class="mi">340</span><span class="p">),</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">90</span><span class="p">,</span> <span class="n">annotation_clip</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">'$T_</span><span class="si">{eq3}</span><span class="s1">$'</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">Teq3</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">340</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">Teq3</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="o">-</span><span class="mi">340</span><span class="p">),</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">90</span><span class="p">,</span> <span class="n">annotation_clip</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># plot arrows/text to show stability of equilibrium points</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">232</span><span class="p">,</span> <span class="o">-</span><span class="mi">50</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="o">-</span><span class="mi">50</span><span class="p">),</span>
+            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">'-|&gt;'</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">242.5</span><span class="p">,</span> <span class="o">-</span><span class="mi">50</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">233</span><span class="p">,</span><span class="o">-</span><span class="mi">50</span><span class="p">),</span>
+            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">'&lt;|-'</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">305.5</span><span class="p">,</span> <span class="o">-</span><span class="mi">50</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">243.5</span><span class="p">,</span><span class="o">-</span><span class="mi">50</span><span class="p">),</span>
+            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">'-|&gt;'</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">358</span><span class="p">,</span> <span class="o">-</span><span class="mi">50</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">307</span><span class="p">,</span><span class="o">-</span><span class="mi">50</span><span class="p">),</span>
+            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">'&lt;|-'</span><span class="p">))</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">'convergence'</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">358</span><span class="p">,</span> <span class="o">-</span><span class="mi">160</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">307</span><span class="p">,</span><span class="o">-</span><span class="mi">160</span><span class="p">),</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">90</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">'divergence'</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">305.5</span><span class="p">,</span> <span class="o">-</span><span class="mi">160</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">243.5</span><span class="p">,</span><span class="o">-</span><span class="mi">160</span><span class="p">),</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">90</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">'convergence'</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">242.5</span><span class="p">,</span> <span class="o">-</span><span class="mi">160</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">233</span><span class="p">,</span><span class="o">-</span><span class="mi">160</span><span class="p">),</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">90</span><span class="p">)</span>
+
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Temperature (K)'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'ASR-OLR'</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The red regions represent conditions where the Earth would warm, because the energy absorbed by the Earth system is greater than the energy emitted or reflected back into space.</p>
+<p>The blue regions represent conditions where the Earth would cool, because the outgoing radiation is larger than the absorbed radiation.</p>
+<p>For example, if Earth started at an initial temperature below <span class="math notranslate nohighlight">\(T_{eq1}\)</span> (in the left red region), it will move to the right on the <span class="math notranslate nohighlight">\(x\)</span>-axis, towards the <span class="math notranslate nohighlight">\(T_{eq1}\)</span> equilibrium state. Conversely, if Earth started between <span class="math notranslate nohighlight">\(T_{eq1}\)</span> and <span class="math notranslate nohighlight">\(T_{eq1}\)</span> (the left blue region), the temperature would decrease, moving left on the <span class="math notranslate nohighlight">\(x\)</span>-axis until it reaches <span class="math notranslate nohighlight">\(T_{eq1}\)</span>. Thus <span class="math notranslate nohighlight">\(T_{eq1}\)</span> is a <em>stable</em> equilibrium as the temperature curves will tend to this point after a long time.</p>
+<div class="section" id="questions-1-3">
+<h3><strong>Questions 1.3</strong><a class="headerlink" href="#questions-1-3" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Identify the stable and unstable equilibria from this graph. Do these agree with the figure you made in Section 1.2?</p></li>
+</ol>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial4_Solution_9c698981.py"><em>Click for solution</em></a></p>
+</div>
+</div>
+</div>
+<div class="section" id="section-2-changing-insolation">
+<h1><strong>Section 2: Changing Insolation</strong><a class="headerlink" href="#section-2-changing-insolation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="section-2-1-effect-on-the-number-equilibrium-solutions">
+<h2><strong>Section 2.1: Effect on the Number Equilibrium Solutions</strong><a class="headerlink" href="#section-2-1-effect-on-the-number-equilibrium-solutions" title="Permalink to this headline">¶</a></h2>
+<p>During Day 1 of this week, you learned that insolation (the amount of radiation Earth receives from the sun at the top of the atmosphere) fluctuates with time. Over Earth’s history, the insolation has sometimes been lower, and sometimes been higher, than the currently observed <span class="math notranslate nohighlight">\(340 W m^{-2}\)</span>.</p>
+<p>These insolation changes directly affect the ASR, causing Earth to warm or cool depending on whether it receives more or less insolation respectively. To look at the effect that changing insolation has on Earth’s equilibrium state(s), we can re-plot ASR as a function of temperature for several different insolation values (including the temperature-dependent albedo), alongside the OLR.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the observed insolation</span>
+<span class="n">Q_vals</span> <span class="o">=</span> <span class="p">[</span><span class="mi">220</span><span class="p">,</span><span class="mi">340</span><span class="p">,</span><span class="mi">420</span><span class="p">]</span><span class="c1"># W m^-2</span>
+
+
+<span class="k">for</span> <span class="n">Q_2</span> <span class="ow">in</span> <span class="n">Q_vals</span><span class="p">:</span>
+  <span class="c1"># calculate ASR and OLR for different values of T</span>
+  <span class="k">for</span> <span class="n">tt</span><span class="p">,</span> <span class="n">temp</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+
+    <span class="n">ASR_vals</span><span class="p">[</span><span class="n">tt</span><span class="p">]</span> <span class="o">=</span> <span class="n">ASR</span><span class="p">(</span><span class="n">Q_2</span><span class="p">,</span><span class="n">temp</span><span class="p">)</span>
+
+  <span class="c1"># make plots</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="n">ASR_vals</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span><span class="n">label</span> <span class="o">=</span> <span class="s1">'ASR for Q = '</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">Q_2</span><span class="p">)</span> <span class="o">+</span> <span class="s1">' $W$ $m^{-2}$'</span><span class="p">)</span>
+
+<span class="c1"># note we calculated OLR previously, and it does not depend on Q</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="n">OLR_vals</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span><span class="n">label</span> <span class="o">=</span> <span class="s1">'OLR'</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Temperature (K)'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Radiative Flux'</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>The red regions represent when incoming energy is greater than that released to space from Earth’s surface. Thus, the temperature is increasing. The blue regions represent temperatures where the outgoing radiation is larger than the incoming radiation, and so Earth is cooling.</p>
-<p>If for example, starting from an initial temperature below <span class="math notranslate nohighlight">\(T_{eq1}\)</span> (which is in a red region), it will move to the right on the X axis, towards this equilibrium point. Conversely if starting between <span class="math notranslate nohighlight">\(T_{eq1}\)</span> and <span class="math notranslate nohighlight">\(T_{eq1}\)</span>, (which is a blue region), the temperature is dropping and it will move to the left on the x axis towards <span class="math notranslate nohighlight">\(T_{eq1}\)</span>. Thus <span class="math notranslate nohighlight">\(T_{eq1}\)</span> is a convergent, or stable equilibrium and the temperature curves will tend to this point after a long time.</p>
-<div class="section" id="id2">
-<h2>Questions<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>As we increase or decrease the insolation, the number of intersections between ASR and OLR can change! This means the number of equilibrium solutions for our model will also change.</p>
+<div class="section" id="questions-2-1">
+<h3><strong>Questions 2.1</strong><a class="headerlink" href="#questions-2-1" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
-<li><p>Identify the stable and unstable equilibria from this graph. Do these agree with the figure you made in Part 2?</p></li>
+<li><p>How many stable equilibrium solutions are there when <span class="math notranslate nohighlight">\(Q=220\)</span> <span class="math notranslate nohighlight">\(W\)</span> <span class="math notranslate nohighlight">\(m^{-2}\)</span>? Warm (ice-free) or cold (completely-frozen) state(s)?</p></li>
+<li><p>For <span class="math notranslate nohighlight">\(Q=420\)</span> <span class="math notranslate nohighlight">\(W\)</span> <span class="math notranslate nohighlight">\(m^{-2}\)</span>? Warm or cold equilibrium state(s)?</p></li>
 </ol>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial4_Solution_66fe91b4.py"><em>Click for solution</em></a></p>
 </div>
 </div>
-<div class="section" id="section-4-changing-insolation">
-<h1>Section 4 : Changing Insolation<a class="headerlink" href="#section-4-changing-insolation" title="Permalink to this headline">¶</a></h1>
-<p>Insolation (the amount of radiation Earth receives from the sun) is a fluctuating value. Sometimes it is lower, and sometimes it is higher than the currently observed <span class="math notranslate nohighlight">\(340 W m^{-2}\)</span>.</p>
-<p>We can use our model to look at the long term temperature behavior, or equilibria, when insolation varies.</p>
+<div class="section" id="section-2-2-effect-on-equilibrium-temperatures">
+<h2><strong>Section 2.2: Effect on Equilibrium Temperatures</strong><a class="headerlink" href="#section-2-2-effect-on-equilibrium-temperatures" title="Permalink to this headline">¶</a></h2>
+<p>To understand how this effect translates to different equilibrium temperatures of our model over time, we will apply a range of insolation values to our model. Let us first start off with a very cold Earth, at 220 K, and warm the Earth by steadily increasing the insolation above our present day 340 <span class="math notranslate nohighlight">\(W\)</span> <span class="math notranslate nohighlight">\(m^{-2}\)</span> value.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># these are the values of insolation we will use</span>
-<span class="n">insolation_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">280</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">insolation_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">340</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 
-<span class="c1">#initial temperature we will use</span>
+<span class="c1"># initial temperature we will use</span>
 <span class="n">init_temp</span> <span class="o">=</span> <span class="mi">220</span> <span class="c1"># K</span>
 
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">insolation</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">insolation_vals</span><span class="p">):</span>  <span class="c1"># suite of intial temperatures in K</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">insolation</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">insolation_vals</span><span class="p">):</span>  <span class="c1"># suite of initial temperatures in K</span>
 
-  <span class="n">numtsteps</span> <span class="o">=</span> <span class="mi">100</span>     <span class="c1">#  number of years to run the model</span>
+    <span class="n">numtsteps</span> <span class="o">=</span> <span class="mi">100</span>     <span class="c1">#  number of years to run the model</span>
 
-  <span class="c1"># for converting number of seconds in a year</span>
-  <span class="n">sec_2_yr</span> <span class="o">=</span> <span class="mf">3.154e7</span>
+    <span class="c1"># for converting number of seconds in a year</span>
+    <span class="n">sec_2_yr</span> <span class="o">=</span> <span class="mf">3.154e7</span>
 
-  <span class="c1"># define empty arrays to store the time series of temperature and the corresponding years</span>
-  <span class="n">T_series</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">numtsteps</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
-  <span class="n">t_series</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">numtsteps</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+    <span class="c1"># set the intial temperature (initial condition)</span>
+    <span class="n">T_series</span> <span class="o">=</span> <span class="p">[</span><span class="n">init_temp</span><span class="p">]</span>
 
-  <span class="c1"># define the intial temperature</span>
-  <span class="n">T_series</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">init_temp</span>
+    <span class="c1"># set the initial time to 0</span>
+    <span class="n">t_series</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
-  <span class="c1"># run the model</span>
-  <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numtsteps</span><span class="p">):</span>
-      <span class="n">t_series</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span><span class="o">/</span><span class="n">sec_2_yr</span>
-      <span class="n">T_series</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">step_forward</span><span class="p">(</span> <span class="n">T_series</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="n">tau</span><span class="p">,</span> <span class="n">Q</span><span class="o">=</span><span class="n">insolation</span> <span class="p">)</span>
+    <span class="c1"># run the model</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numtsteps</span><span class="p">):</span>
 
-  <span class="c1"># make plot</span>
-  <span class="n">colors</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">insolation_vals</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-  <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_series</span><span class="p">,</span><span class="n">T_series</span><span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="c1"># calculate and append the time since running the model, dependent on dt and the numtsteps</span>
+        <span class="n">t_series</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span><span class="o">/</span><span class="n">sec_2_yr</span><span class="p">)</span>
+
+        <span class="c1"># calculate and append the new temperature using our pre-defined function</span>
+        <span class="n">T_series</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">step_forward</span><span class="p">(</span> <span class="n">T_series</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">tau</span> <span class="o">=</span> <span class="n">tau</span><span class="p">,</span> <span class="n">Q</span> <span class="o">=</span> <span class="n">insolation</span><span class="p">,</span> <span class="n">dt</span> <span class="o">=</span> <span class="n">dt</span> <span class="p">))</span>
+
+    <span class="c1"># make plot</span>
+    <span class="n">colors</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">insolation_vals</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+    <span class="k">if</span> <span class="n">insolation</span><span class="o">==</span><span class="mi">385</span><span class="p">:</span> <span class="c1"># This is just to highlight a particularly interesting insolation value</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_series</span><span class="p">,</span><span class="n">T_series</span><span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">'dashed'</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_series</span><span class="p">,</span><span class="n">T_series</span><span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Temperature (K)'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Years'</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Now let’s try starting at a higher intial temperature</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># these are the values of insolation we will use</span>
-<span class="n">insolation_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">280</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-
-<span class="c1">#initial temperature we will use</span>
-<span class="n">init_temp</span> <span class="o">=</span> <span class="mi">320</span> <span class="c1"># K</span>
-
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">insolation</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">insolation_vals</span><span class="p">):</span>  <span class="c1"># suite of intial temperatures in K</span>
-
-  <span class="n">numtsteps</span> <span class="o">=</span> <span class="mi">100</span>     <span class="c1">#  number of years to run the model</span>
-
-  <span class="c1"># for converting number of seconds in a year</span>
-  <span class="n">sec_2_yr</span> <span class="o">=</span> <span class="mf">3.154e7</span>
-
-  <span class="c1"># define empty arrays to store the time series of temperature and the corresponding years</span>
-  <span class="n">T_series</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">numtsteps</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
-  <span class="n">t_series</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">numtsteps</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
-
-  <span class="c1"># define the intial temperature</span>
-  <span class="n">T_series</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">init_temp</span>
-
-  <span class="c1"># run the model</span>
-  <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numtsteps</span><span class="p">):</span>
-      <span class="n">t_series</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">dt</span><span class="o">/</span><span class="n">sec_2_yr</span>
-      <span class="n">T_series</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">step_forward</span><span class="p">(</span> <span class="n">T_series</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="n">tau</span><span class="p">,</span> <span class="n">Q</span><span class="o">=</span><span class="n">insolation</span> <span class="p">)</span>
-
-  <span class="c1"># make plot</span>
-  <span class="n">colors</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">insolation_vals</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-  <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_series</span><span class="p">,</span><span class="n">T_series</span><span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Temperature (K)'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Years'</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="id3">
-<h2>Questions<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="questions-2-2-climate-connection">
+<h3><strong>Questions 2.2: Climate Connection</strong><a class="headerlink" href="#questions-2-2-climate-connection" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
-<li><p>Does the insolation affect the number and value of the equilibrium solutions?</p></li>
-<li><p>What does the big gap in equilibrium solutions mean as the solar constant varies over time?</p></li>
-<li><p>At what temperatures do you note the rapid transitions from cold to warm in the first figure and warm to cold states in the second figure? How do these compare to your equation for albedo?</p></li>
-<li><p>How do you think this relates to snowball and hothouse paleoclimates?</p></li>
+<li><p>Noting the dashed blue lines, at approximately what temperature do you note a rapid transition from cold to warm equilibrium states? How do these compare to your equation for albedo?</p></li>
+<li><p>How would you interpret the rapid transition in equilibrium temperatures with changing insolation (the big gap in the figure) using the ASR &amp; OLR vs. temperature plot that you made in Section 2.1?</p></li>
+<li><p>BONUS: How does the time-varying behavior of the reddest (warm-state) lines relate to the ice-albedo feedback?</p></li>
 </ol>
-</div>
-<div class="section" id="coding-exercises">
-<h2>Coding Exercises<a class="headerlink" href="#coding-exercises" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>Using a for loop, plot the graph of <span class="math notranslate nohighlight">\(ASR-OLR\)</span> for <span class="math notranslate nohighlight">\(Q=305, 340, 450, 500\)</span>. Make sure to label the lines as you plot them.</p></li>
-</ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># insert code here</span>
-</pre></div>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial4_Solution_8600cb05.py"><em>Click for solution</em></a></p>
 </div>
 </div>
 </div>
-<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial4_Solution_6f02e793.py"><em>Click for solution</em></a></p>
-</div>
+<div class="section" id="summary">
+<h1><strong>Summary</strong><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial, you learned about stable and unstable equilibria, identifying them from graphs and preciselt calculating them.  You also incorporated an ice-albedo feedback into your model to observe its effects on equilibrium solutions under varying insolation.</p>
 </div>
 <script type="text/x-thebe-config">
     {
@@ -1440,16 +1586,16 @@ const thebe_selector_output = ".output, .cell_output"
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "pangeo"
+            mode: "climatematch"
         },
         kernelOptions: {
-            kernelName: "pangeo",
+            kernelName: "climatematch",
             path: "./tutorials/W1D5_ClimateModeling/student"
         },
         predefinedOutput: true
     }
     </script>
-<script>kernelName = 'pangeo'</script>
+<script>kernelName = 'climatematch'</script>
 </div>
 </main>
 <footer class="footer-article noprint">
@@ -1459,7 +1605,7 @@ const thebe_selector_output = ".output, .cell_output"
 <i class="fas fa-angle-left"></i>
 <div class="prev-next-info">
 <p class="prev-next-subtitle">previous</p>
-<p class="prev-next-title">Setup</p>
+<p class="prev-next-title"><strong>Tutorial 3 : A Zero-Dimensional Energy Balance Model</strong></p>
 </div>
 </a>
 <a class="right-next" href="W1D5_Tutorial5.html" id="next-link" title="next page">

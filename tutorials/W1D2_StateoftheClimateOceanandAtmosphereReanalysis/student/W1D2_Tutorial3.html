@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Tutorial 3: Atmospheric wind driven circulation — Climatematch Academy: Computational Climate Science</title>
+<title>Tutorial 3: Atmospheric Circulation — Climatematch Academy: Computational Climate Science</title>
 <!-- Loaded before other Sphinx assets -->
 <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
@@ -40,10 +40,11 @@ const thebe_selector_output = ".output, .cell_output"
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
 <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-<link href="../../../genindex.html" rel="index" title="Index">
+<link href="../../../_static/cma-logo-square-4xp.png" rel="shortcut icon">
+<link href="../../../genindex.html" rel="index" title="Index"/>
 <link href="../../../search.html" rel="search" title="Search"/>
-<link href="W1D2_Tutorial4.html" rel="next" title="Tutorial 4: Ocean wind driven circulation"/>
-<link href="W1D2_Tutorial2.html" rel="prev" title="Tutorial 2: A lot of weather makes climate - exploring the ERA5 Reanalysis"/>
+<link href="W1D2_Tutorial4.html" rel="next" title="Tutorial 4: Oceanic Wind-driven Circulation"/>
+<link href="W1D2_Tutorial2.html" rel="prev" title="Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="None" name="docsearch:language"/>
 <!-- Google Analytics -->
@@ -70,6 +71,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="bd-sidebar__content">
 <div class="bd-sidebar__top"><div class="navbar-brand-box">
 <a class="navbar-brand text-wrap" href="../../../index.html">
+<!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+<img alt="logo" class="logo" src="../../../_static/cma-logo-square-4xp.png"/>
 <h1 class="site-logo" id="site-title">Climatematch Academy: Computational Climate Science</h1>
 </a>
 </div><form action="../../../search.html" class="bd-search d-flex align-items-center" method="get">
@@ -307,33 +310,45 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current">
 <li class="toctree-l2">
 <a class="reference internal" href="W1D2_Tutorial1.html">
-     Calculating ENSO with Xarray
-    </a>
+<strong>
+      Tutorial 1: Calculating ENSO with Xarray
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D2_Tutorial2.html">
-     Tutorial 2: A lot of weather makes climate - exploring the ERA5 Reanalysis
-    </a>
+<strong>
+      Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis
+     </strong>
+</a>
 </li>
 <li class="toctree-l2 current active">
 <a class="current reference internal" href="#">
-     Tutorial 3: Atmospheric wind driven circulation
-    </a>
+<strong>
+      Tutorial 3: Atmospheric  Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D2_Tutorial4.html">
-     Tutorial 4: Ocean wind driven circulation
-    </a>
+<strong>
+      Tutorial 4: Oceanic Wind-driven Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D2_Tutorial5.html">
-     Tutorial 5: Thermohaline circulation
-    </a>
+<strong>
+      Tutorial 5: Thermohaline Circulation
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="W1D2_Tutorial6.html">
-     Tutorial 6: Ocean heat content
-    </a>
+<strong>
+      Tutorial 6: Ocean Heat Content
+     </strong>
+</a>
 </li>
 </ul>
 </li>
@@ -349,13 +364,17 @@ const thebe_selector_output = ".output, .cell_output"
 <ul>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.html">
-     Video 1: What is Remote Sensing
-    </a>
+<strong>
+      Tutorial 1: Introduction to Remote Sensing
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.html">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 2: Exploring Satellite Climate Data Records
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial3.html">
@@ -364,13 +383,17 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial4.html">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 4: Understanding Climatology Through Precipitation Data
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial5.html">
-     Figure settings
-    </a>
+<strong>
+      Tutorial 5: Calculating Anomalies Using Precipitation Data
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial6.html">
@@ -490,18 +513,24 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial2.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 2 : Energy Balance
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial3.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 3 : A Zero-Dimensional Energy Balance Model
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial4.html">
-     Setup
-    </a>
+<strong>
+      Tutorial 4: Climate Feedbacks
+     </strong>
+</a>
 </li>
 <li class="toctree-l2">
 <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial5.html">
@@ -843,143 +872,134 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#">
-   Tutorial 3: Atmospheric wind driven circulation
-  </a>
+<strong>
+    Tutorial 3: Atmospheric  Circulation
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-objectives">
+<strong>
+    Tutorial Objectives
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#setup">
+<strong>
+    Setup
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#tutorial-objectives">
-     Tutorial Objectives
+<a class="reference internal nav-link" href="#plot-helping-function">
+     plot helping function
     </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#tutorial-slides">
-       Tutorial slides
-      </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id1">
-         Tutorial slides
-        </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id2">
-           Tutorial slides
-          </a>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry">
+<li class="toc-h2 nav-item toc-entry">
 <a class="reference internal nav-link" href="#figure-settings">
-       Figure settings
-      </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id3">
-         Figure settings
-        </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id4">
-           Figure settings
-          </a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#surface-winds-driven-by-the-general-circulation-of-the-atmosphere">
-     Surface winds driven by the general circulation of the atmosphere.
+     Figure settings
     </a>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#part-i-plotting-global-surface-winds">
-     Part I: Plotting global surface winds
+<a class="reference internal nav-link" href="#video-1-speaker-introduction">
+     Video 1: Speaker Introduction
     </a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-surface-winds">
+<strong>
+    Section 1: Surface Winds
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-1-annual-mean-wind-speed">
+<strong>
+      Section 1.1: Annual Mean Wind Speed
+     </strong>
+</a>
 <ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#discussion-questions">
-<em>
-        Discussion Questions:
-       </em>
+<a class="reference internal nav-link" href="#coding-exercise-1-1">
+<strong>
+        Coding Exercise 1.1
+       </strong>
+</a>
+</li>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-1">
+<strong>
+        Questions 1.1
+       </strong>
 </a>
 </li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#extra-tropical-storms">
-     Extra-tropical Storms
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#part-ii-annual-climatology-of-wind-speed">
-     Part II: Annual climatology of wind speed:
-    </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#note">
-<em>
-        Note:
-       </em>
-</a>
-</li>
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#answer">
-       Answer:
-      </a>
-</li>
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#questions">
-<em>
-        Questions:
-       </em>
-</a>
-</li>
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id5">
-       Answer:
-      </a>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#part-iii-seasonal-climatology">
-     Part III: Seasonal Climatology
-    </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#task">
-<em>
-        Task:
-       </em>
+<a class="reference internal nav-link" href="#section-1-2-zonal-mean-wind-speed">
+<strong>
+      Section 1.2 : Zonal-mean Wind Speed
+     </strong>
 </a>
 <ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry">
-<a class="reference internal nav-link" href="#a-few-note">
-<em>
-          A few note:
-         </em>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-2">
+<strong>
+        Questions 1.2
+       </strong>
 </a>
-</li>
-</ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
+<a class="reference internal nav-link" href="#section-2-monthly-climatology">
+<strong>
+    Section 2: Monthly Climatology
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#bonus">
-     Bonus:
+<a class="reference internal nav-link" href="#coding-exercises-2">
+<strong>
+      Coding Exercises 2
+     </strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#summary">
+<strong>
+    Summary
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#bonus-exercise">
+<strong>
+      Bonus exercise
+     </strong>
+     :
     </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#additional-reading-extra-tropical-storms">
+<strong>
+      Additional Reading: Extra-tropical Storms
+     </strong>
+</a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#resources">
+<strong>
+      Resources
+     </strong>
+</a>
 </li>
 </ul>
 </li>
@@ -991,7 +1011,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="col pl-md-3 pl-lg-5 content-container">
 <!-- Table of contents that is only displayed when printing the page -->
 <div class="onlyprint" id="jb-print-docs-body">
-<h1>Tutorial 3: Atmospheric wind driven circulation</h1>
+<h1>Tutorial 3: Atmospheric  Circulation</h1>
 <!-- Table of contents -->
 <div id="print-main-content">
 <div id="jb-print-toc">
@@ -1002,143 +1022,134 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#">
-   Tutorial 3: Atmospheric wind driven circulation
-  </a>
+<strong>
+    Tutorial 3: Atmospheric  Circulation
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-objectives">
+<strong>
+    Tutorial Objectives
+   </strong>
+</a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#setup">
+<strong>
+    Setup
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#tutorial-objectives">
-     Tutorial Objectives
+<a class="reference internal nav-link" href="#plot-helping-function">
+     plot helping function
     </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#tutorial-slides">
-       Tutorial slides
-      </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id1">
-         Tutorial slides
-        </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id2">
-           Tutorial slides
-          </a>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry">
+<li class="toc-h2 nav-item toc-entry">
 <a class="reference internal nav-link" href="#figure-settings">
-       Figure settings
-      </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id3">
-         Figure settings
-        </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id4">
-           Figure settings
-          </a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#surface-winds-driven-by-the-general-circulation-of-the-atmosphere">
-     Surface winds driven by the general circulation of the atmosphere.
+     Figure settings
     </a>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#part-i-plotting-global-surface-winds">
-     Part I: Plotting global surface winds
+<a class="reference internal nav-link" href="#video-1-speaker-introduction">
+     Video 1: Speaker Introduction
     </a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-surface-winds">
+<strong>
+    Section 1: Surface Winds
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-1-annual-mean-wind-speed">
+<strong>
+      Section 1.1: Annual Mean Wind Speed
+     </strong>
+</a>
 <ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#discussion-questions">
-<em>
-        Discussion Questions:
-       </em>
+<a class="reference internal nav-link" href="#coding-exercise-1-1">
+<strong>
+        Coding Exercise 1.1
+       </strong>
+</a>
+</li>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-1">
+<strong>
+        Questions 1.1
+       </strong>
 </a>
 </li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#extra-tropical-storms">
-     Extra-tropical Storms
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#part-ii-annual-climatology-of-wind-speed">
-     Part II: Annual climatology of wind speed:
-    </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#note">
-<em>
-        Note:
-       </em>
-</a>
-</li>
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#answer">
-       Answer:
-      </a>
-</li>
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#questions">
-<em>
-        Questions:
-       </em>
-</a>
-</li>
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#id5">
-       Answer:
-      </a>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#part-iii-seasonal-climatology">
-     Part III: Seasonal Climatology
-    </a>
-<ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry">
-<a class="reference internal nav-link" href="#task">
-<em>
-        Task:
-       </em>
+<a class="reference internal nav-link" href="#section-1-2-zonal-mean-wind-speed">
+<strong>
+      Section 1.2 : Zonal-mean Wind Speed
+     </strong>
 </a>
 <ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry">
-<a class="reference internal nav-link" href="#a-few-note">
-<em>
-          A few note:
-         </em>
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-2">
+<strong>
+        Questions 1.2
+       </strong>
 </a>
-</li>
-</ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
+<a class="reference internal nav-link" href="#section-2-monthly-climatology">
+<strong>
+    Section 2: Monthly Climatology
+   </strong>
+</a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#bonus">
-     Bonus:
+<a class="reference internal nav-link" href="#coding-exercises-2">
+<strong>
+      Coding Exercises 2
+     </strong>
+</a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#summary">
+<strong>
+    Summary
+   </strong>
+</a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#bonus-exercise">
+<strong>
+      Bonus exercise
+     </strong>
+     :
     </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#additional-reading-extra-tropical-storms">
+<strong>
+      Additional Reading: Extra-tropical Storms
+     </strong>
+</a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#resources">
+<strong>
+      Resources
+     </strong>
+</a>
 </li>
 </ul>
 </li>
@@ -1149,75 +1160,51 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <main id="main-content" role="main">
 <div>
+<p><a class="reference external" href="https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial3.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/></a>   <a href="https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/{ORG}/course-content/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial3.ipynb" target="_blank"><img alt="Open in Kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg"/></a></p>
+<div class="section" id="tutorial-3-atmospheric-circulation">
+<h1><strong>Tutorial 3: Atmospheric  Circulation</strong><a class="headerlink" href="#tutorial-3-atmospheric-circulation" title="Permalink to this headline">¶</a></h1>
+<p><strong>Week 1, Day 2, Ocean-Atmosphere Reanalysis</strong></p>
+<p><strong>Content creators:</strong> Momme Hell</p>
+<p><strong>Content reviewers:</strong> Katrina Dobson, Danika Gupta, Maria Gonzalez, Will Gregory, Nahid Hasan, Sherry Mi, Beatriz Cosenza Muralles, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Content editors:</strong> Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Production editors:</strong> Wesley Banfield, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Our 2023 Sponsors:</strong> NASA TOPS</p>
+</div>
+<div class="section" id="tutorial-objectives">
+<h1><strong>Tutorial Objectives</strong><a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">¶</a></h1>
+<p>In the previous tutorial you examined atmospheric surface temperatures. Spatial variations in surface temperature created by uneven solar radiation (e.g., between the Equator and poles), are one of the main drivers of global-scale air movement. Other processes such as the Earth’s rotation, storm tracks, and surface topography can also influence global wind patterns.</p>
+<p>By the end of this tutorial, you will be able to:</p>
 <ul class="simple">
-<li><p>brief slides on large-scale atmospheric dynamics (&lt;5min slides)</p></li>
+<li><p>Describe the seasonal variations in surface winds.</p></li>
+<li><p>Calculate seasonal climatologies and create global maps.</p></li>
+<li><p>Compare statistics derived from these climatologies.</p></li>
 </ul>
-<hr class="docutils"/>
-<div class="section" id="tutorial-3-atmospheric-wind-driven-circulation">
-<h1>Tutorial 3: Atmospheric wind driven circulation<a class="headerlink" href="#tutorial-3-atmospheric-wind-driven-circulation" title="Permalink to this headline">¶</a></h1>
-<p><strong>Week 1, Day 2: State of the Climate - Ocean and Atmospheric Reanalysis</strong>
-<strong>By Neuromatch Academy</strong></p>
-<p><strong>Content creators:</strong>   Momme Hell,   Day Lead’s Name</p>
-<p><strong>Content reviewers:</strong>  Name Surname, Name Surname</p>
-<p><strong>Content editors:</strong>    Name Surname, Name Surname</p>
-<p><strong>Production editors:</strong> Name Surname, Name Surname</p>
-<p><strong>Our 2023 Sponsors</strong></p>
-<!-- <p align='center'><img src='https://github.com/NeuromatchAcademy/widgets/blob/master/sponsors.png?raw=True'/></p> --><div class="section" id="tutorial-objectives">
-<h2>Tutorial Objectives<a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">¶</a></h2>
-<p>NOTES: I used this intro is better suited for the next tutorial and here we should include some general intro for atmospheric large scale circulation</p>
-<p>The ocean is driven by radiation from the sun, winds, and various sources of fresh water  (precipitation, rivers, melting and freezing ice). This tutorial focuses on the global atmospheric wind pattern and how these drive the large scale ocean current, i.e. the so called “wind driven circulation”. The wind driven circulation is important for coastel communities and climates. It impacts the ocean temperature and upwelling systems along many coast lines and influences weather on many timescales. At the end of this tutorial you will be able to</p>
-<ul class="simple">
-<li><p>Understand the seasonal changes of the surface winds</p></li>
-<li><p>compute seasonal climatologies and plot global maps.</p></li>
-<li><p>compare statistics of these climatologies.</p></li>
-</ul>
-<p>For this tutorial we will use again the ERA5 dataset, first we will use some example data of 1-hour snapshots each day, and then we will use monthly means over the period of 30 years.</p>
-<div class="section" id="tutorial-slides">
-<h3>Tutorial slides<a class="headerlink" href="#tutorial-slides" title="Permalink to this headline">¶</a></h3>
-<p>These are the slides for the videos in all tutorials today</p>
-<div class="section" id="id1">
-<h4>Tutorial slides<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
-<p>These are the slides for the videos in all tutorials today</p>
-<div class="section" id="id2">
-<h5>Tutorial slides<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h5>
-<p>These are the slides for the videos in all tutorials today</p>
-<p>#######  Tutorial slides</p>
-<p>These are the slides for the videos in all tutorials today</p>
-<p>########  Tutorial slides</p>
-<p>These are the slides for the videos in all tutorials today</p>
-<p>#########  Tutorial slides</p>
-<p>These are the slides for the videos in all tutorials today</p>
-<p>##########  Tutorial slides</p>
-<p>These are the slides for the videos in all tutorials today</p>
-<p>###########  Tutorial slides</p>
-<p>These are the slides for the videos in all tutorials today</p>
-<p>############  Tutorial slides</p>
-<p>These are the slides for the videos in all tutorials today</p>
-<p>#############  Tutorial slides</p>
-<p>These are the slides for the videos in all tutorials today</p>
-<p>##############  Tutorial slides</p>
-<p>These are the slides for the videos in all tutorials today</p>
-<p>###############  Tutorial slides</p>
-<p>These are the slides for the videos in all tutorials today</p>
-<p>################  Tutorial slides</p>
-<p>These are the slides for the videos in all tutorials today</p>
-<p>#################  Tutorial slides</p>
-<p>These are the slides for the videos in all tutorials today</p>
-<p>##################  Tutorial slides</p>
-<p>These are the slides for the videos in all tutorials today</p>
-<p>###################  Tutorial slides</p>
-<p>These are the slides for the videos in all tutorials today</p>
-<div class="cell tag_remove-input docutils container">
+<p>In this tutorial, you will again utilize the monthly-mean surface wind fields from ERA5 over a 30-year period.</p>
+</div>
+<div class="section" id="setup">
+<h1><strong>Setup</strong><a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
+<div class="cell tag_colab docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># !pip install pythia_datasets</span>
+<span class="c1"># !pip install cartopy</span>
+<span class="c1"># !pip install geoviews</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">intake</span> <span class="kn">import</span> <span class="n">open_catalog</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">matplotlib</span>
-
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pooch</span>
+<span class="kn">import</span> <span class="nn">boto3</span>
+<span class="kn">import</span> <span class="nn">botocore</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 <span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
 <span class="kn">from</span> <span class="nn">cartopy</span> <span class="kn">import</span> <span class="n">crs</span> <span class="k">as</span> <span class="n">ccrs</span><span class="p">,</span> <span class="n">feature</span> <span class="k">as</span> <span class="n">cfeature</span>
 <span class="c1">#  Suppress warnings issued by Cartopy when downloading data files</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">'ignore'</span><span class="p">)</span>
@@ -1225,9 +1212,11 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="section" id="plot-helping-function">
+<h2>plot helping function<a class="headerlink" href="#plot-helping-function" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot helping function</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title plot helping function</span>
 
 <span class="k">def</span> <span class="nf">set_projection_figure</span><span class="p">(</span><span class="n">projection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">figsize</span> <span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">)</span> <span class="p">):</span>
     <span class="c1"># source:https://foundations.projectpythia.org/core/cartopy/cartopy.html</span>
@@ -1266,301 +1255,162 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="section" id="figure-settings">
-<h3>Figure settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id3">
-<h4>Figure settings<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="id4">
-<h5>Figure settings<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h5>
-<p>#######  Figure settings</p>
-<p>########  Figure settings</p>
-<p>#########  Figure settings</p>
-<p>##########  Figure settings</p>
-<p>###########  Figure settings</p>
-<p>############  Figure settings</p>
-<p>#############  Figure settings</p>
-<p>##############  Figure settings</p>
-<p>###############  Figure settings</p>
-<p>################  Figure settings</p>
-<p>#################  Figure settings</p>
-<p>##################  Figure settings</p>
-<p>###################  Figure settings</p>
+<h2>Figure settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">¶</a></h2>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Figure settings</span>
 <span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>       <span class="c1"># interactive display</span>
 <span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = 'retina'
 <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">"https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/cma.mplstyle"</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">font_for_print</span><span class="p">():</span>
-
-    <span class="n">SMALL_SIZE</span> <span class="o">=</span> <span class="mi">8</span>
-    <span class="n">MEDIUM_SIZE</span> <span class="o">=</span> <span class="mi">10</span>
-    <span class="n">BIGGER_SIZE</span> <span class="o">=</span> <span class="mi">11</span>
-    <span class="n">legend_properties</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'weight'</span><span class="p">:</span><span class="s1">'bold'</span><span class="p">}</span>
-
-    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'font'</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">SMALL_SIZE</span><span class="p">,</span> <span class="n">serif</span><span class="o">=</span><span class="s1">'Helvetica Neue'</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="s1">'normal'</span><span class="p">)</span>          <span class="c1"># controls default text sizes</span>
-    <span class="c1">#plt.rc('font', size=SMALL_SIZE, serif='DejaVu Sans', weight='light')</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'text'</span><span class="p">,</span> <span class="n">usetex</span><span class="o">=</span><span class="s1">'false'</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'axes'</span><span class="p">,</span> <span class="n">titlesize</span><span class="o">=</span><span class="n">MEDIUM_SIZE</span><span class="p">,</span> <span class="n">labelweight</span><span class="o">=</span><span class="s1">'normal'</span><span class="p">)</span>     <span class="c1"># fontsize of the axes title</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'axes'</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="n">SMALL_SIZE</span><span class="p">,</span> <span class="n">labelweight</span><span class="o">=</span><span class="s1">'normal'</span><span class="p">)</span> <span class="c1">#, family='bold')    # fontsize of the x and y labels</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'xtick'</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="n">SMALL_SIZE</span><span class="p">)</span>    <span class="c1"># fontsize of the tick labels</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'ytick'</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="n">SMALL_SIZE</span><span class="p">)</span>    <span class="c1"># fontsize of the tick labels</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'legend'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="n">SMALL_SIZE</span><span class="p">,</span> <span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>    <span class="c1"># legend fontsize</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'figure'</span><span class="p">,</span> <span class="n">titlesize</span><span class="o">=</span><span class="n">MEDIUM_SIZE</span><span class="p">,</span> <span class="n">titleweight</span><span class="o">=</span><span class="s1">'bold'</span><span class="p">,</span> <span class="n">autolayout</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#, family='bold')  # fontsize of the figure title</span>
-
-    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'axes'</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span> <span class="n">SMALL_SIZE</span><span class="p">,</span> <span class="n">labelweight</span><span class="o">=</span><span class="s1">'normal'</span><span class="p">)</span>
-
-<span class="n">font_for_print</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Load data from Pangeo catalog</p>
-<div class="cell docutils container">
+</div>
+<div class="section" id="video-1-speaker-introduction">
+<h2>Video 1: Speaker Introduction<a class="headerlink" href="#video-1-speaker-introduction" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># cat  = open_catalog("https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/atmosphere.yaml")</span>
-<span class="c1"># CCMP = cat["nasa_CCMP_wind_vectors"].to_dask()</span>
-<span class="c1"># CCMP = CCMP.sel(time=slice('1990', '1992'))#.plot()</span>
-<span class="c1"># print(ERA5)</span>
-
-<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">pooch</span>
-<span class="n">fname</span> <span class="o">=</span> <span class="s1">'ERA5_surface_winds_2020-2021_dd_short.nc'</span>
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s2">"https://osf.io/mfztd/download"</span>
-    <span class="n">fname</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fname</span><span class="o">=</span><span class="n">fname</span><span class="p">)</span>
-
-<span class="n">ERA5</span><span class="o">=</span><span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
-<span class="n">ERA5</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'The time range is:'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span> <span class="n">ERA5</span><span class="o">.</span><span class="n">time</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'M8[h]'</span><span class="p">)</span> <span class="p">,</span> <span class="s1">'to'</span><span class="p">,</span> <span class="n">ERA5</span><span class="o">.</span><span class="n">time</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'M8[h]'</span><span class="p">)</span> <span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Video 1: Speaker Introduction</span>
+<span class="c1">#Tech team will add code to format and display the video</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="surface-winds-driven-by-the-general-circulation-of-the-atmosphere">
-<h2>Surface winds driven by the general circulation of the atmosphere.<a class="headerlink" href="#surface-winds-driven-by-the-general-circulation-of-the-atmosphere" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="section-1-surface-winds">
+<h1><strong>Section 1: Surface Winds</strong><a class="headerlink" href="#section-1-surface-winds" title="Permalink to this headline">¶</a></h1>
+<p>The large-scale atmospheric circulation significantly influences the climate we experience at different latitudes. The global atmospheric circulation is often depicted as a three-cell structure, as visualized <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Earth_Global_Circulation_-_en.svg">in this figure showing the surface winds</a>:</p>
+<p><img alt="Earth Global Circulation - en.svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Earth_Global_Circulation_-_en.svg/740px-Earth_Global_Circulation_-_en.svg.png?20190829153037"/>.</p>
+<p>This schematic of atmospheric circulation cells reveal meridional (north-south) and zonal (east-west) components of the large-scale surface winds.</p>
+<p>Let’s see if you are able to detect these large-scale patterns in reanalysis data!
+For this you will load ERA5 wind data from <a class="reference external" href="https://pangeo.io/catalog.html">Pangeo catalog</a></p>
+<div class="section" id="section-1-1-annual-mean-wind-speed">
+<h2><strong>Section 1.1: Annual Mean Wind Speed</strong><a class="headerlink" href="#section-1-1-annual-mean-wind-speed" title="Permalink to this headline">¶</a></h2>
+<p>You should start investigating this data by examining the global surface winds. These winds are represented as vectors, consisting of a zonal component denoted as <code class="docutils literal notranslate"><span class="pre">u10</span></code> and a meridional component denoted as <code class="docutils literal notranslate"><span class="pre">v10</span></code>.</p>
+<p>Recall from the previous tutorial that the magnitude of the wind vector represents the wind speed you will use later in the tutorial, given by:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-3a05edd2-6456-49bf-b4f3-7888d56a231f">
+<span class="eqno">(2)<a class="headerlink" href="#equation-3a05edd2-6456-49bf-b4f3-7888d56a231f" title="Permalink to this equation">¶</a></span>\[\begin{align}
+||u|| = \sqrt{u^2 + v^2}
+\end{align}\]</div>
+<p>To examine long-term changes in the wind field you should visualize the zonal wind component <span class="math notranslate nohighlight">\(u\)</span> and the meridional wind component <span class="math notranslate nohighlight">\(v\)</span> with monthly-mean data. With the help of <code class="docutils literal notranslate"><span class="pre">xarray</span></code>, you can derive monthly means from higher-resolution data (such as those used in tutorial 2) using the <code class="docutils literal notranslate"><span class="pre">xr.resample('1M').mean('time')</span></code> function.</p>
+<p>For your convenience, we have already performed this step, and you can load the data using the following instructions:</p>
 <ul class="simple">
-<li><p>Slides about three cell structure and how they lead to surface winds</p></li>
+<li><p>The variable <code class="docutils literal notranslate"><span class="pre">si10</span></code> represents the wind speed in this dataset.</p></li>
+<li><p>To calculate the long-term mean, we selected 30 years of data ranging from 1980 to 2010.</p></li>
 </ul>
-</div>
-<div class="section" id="part-i-plotting-global-surface-winds">
-<h2>Part I: Plotting global surface winds<a class="headerlink" href="#part-i-plotting-global-surface-winds" title="Permalink to this headline">¶</a></h2>
-<p>Lets have a first look at the data and look at a single day of global surface winds. Surface winds are vectors, with a zonal component ‘u10’ and meridional component ‘v10’. The length of this vector is the wind speed.</p>
-<p>The wind speed is defined as
-$<span class="math notranslate nohighlight">\(|u| = u_{speed} = \sqrt{u^2 + v^2}\)</span>$</p>
-<p>Lets look how <span class="math notranslate nohighlight">\(u,v\)</span>, and <span class="math notranslate nohighlight">\(u_{speed}\)</span> look like for single timestep:
-Here is the zonal wind component:</p>
+<p>Let’s grab the reanalysis data from before that we have prepocessed (noting naming convention changes):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pick a day in January 2020. Just make sure you make the same format.</span>
-<span class="n">date</span> <span class="o">=</span> <span class="s1">'2020-01-02'</span>
-
-<span class="n">ERA5_snapshot</span><span class="o">=</span> <span class="n">ERA5</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">date</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
-<span class="c1"># we define contours levels that will be used in all plots the compare them better</span>
-<span class="n">colorlevels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">25</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-
-<span class="n">var</span> <span class="o">=</span> <span class="s1">'u10'</span>
-<span class="n">F</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">set_projection_figure</span><span class="p">(</span><span class="n">projection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">)</span> <span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Snapshot '</span><span class="o">+</span><span class="n">date</span> <span class="o">+</span><span class="s1">' | '</span><span class="o">+</span> <span class="n">var</span> <span class="p">,</span> <span class="n">loc</span> <span class="o">=</span><span class="s1">'left'</span><span class="p">)</span>
-<span class="n">dataplot</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">ERA5_snapshot</span><span class="o">.</span><span class="n">longitude</span><span class="p">,</span> <span class="n">ERA5_snapshot</span><span class="o">.</span><span class="n">latitude</span><span class="p">,</span> <span class="n">ERA5_snapshot</span><span class="p">[</span><span class="n">var</span><span class="p">],</span> <span class="n">levels</span> <span class="o">=</span> <span class="n">colorlevels</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">cmap</span><span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">dataplot</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">'vertical'</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'m/s'</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span> <span class="mf">0.55</span> <span class="p">,</span> <span class="n">pad</span> <span class="o">=</span> <span class="mf">0.08</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Can you make plots for <span class="math notranslate nohighlight">\(v_{10}\)</span> and <span class="math notranslate nohighlight">\(u_{speed}\)</span> as well?</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># answer:</span>
-
-<span class="c1"># plotting v components</span>
-<span class="n">var</span> <span class="o">=</span> <span class="s1">'v10'</span>
-<span class="n">F</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">set_projection_figure</span><span class="p">(</span><span class="n">projection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">)</span> <span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Snapshot '</span><span class="o">+</span><span class="n">date</span> <span class="o">+</span><span class="s1">' | '</span><span class="o">+</span> <span class="n">var</span> <span class="p">,</span> <span class="n">loc</span> <span class="o">=</span><span class="s1">'left'</span><span class="p">)</span>
-<span class="n">dataplot</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">ERA5_snapshot</span><span class="o">.</span><span class="n">longitude</span><span class="p">,</span> <span class="n">ERA5_snapshot</span><span class="o">.</span><span class="n">latitude</span><span class="p">,</span> <span class="n">ERA5_snapshot</span><span class="p">[</span><span class="n">var</span><span class="p">],</span> <span class="n">levels</span> <span class="o">=</span> <span class="n">colorlevels</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">cmap</span><span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">dataplot</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">'vertical'</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'m/s'</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span> <span class="mf">0.55</span> <span class="p">,</span> <span class="n">pad</span> <span class="o">=</span> <span class="mf">0.08</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="c1"># computing u_speed</span>
-<span class="n">ERA5_snapshot</span><span class="p">[</span><span class="s1">'u_speed'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">ERA5_snapshot</span><span class="p">[</span><span class="s1">'u10'</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">ERA5_snapshot</span><span class="p">[</span><span class="s1">'v10'</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-
-<span class="c1"># plotting u_speed components</span>
-<span class="n">var</span> <span class="o">=</span> <span class="s1">'u_speed'</span>
-<span class="n">F</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">set_projection_figure</span><span class="p">(</span><span class="n">projection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">)</span> <span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Snapshot '</span><span class="o">+</span><span class="n">date</span> <span class="o">+</span><span class="s1">' | '</span><span class="o">+</span> <span class="n">var</span> <span class="p">,</span> <span class="n">loc</span> <span class="o">=</span><span class="s1">'left'</span><span class="p">)</span>
-<span class="n">dataplot</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">ERA5_snapshot</span><span class="o">.</span><span class="n">longitude</span><span class="p">,</span> <span class="n">ERA5_snapshot</span><span class="o">.</span><span class="n">latitude</span><span class="p">,</span> <span class="n">ERA5_snapshot</span><span class="p">[</span><span class="n">var</span><span class="p">],</span> <span class="n">levels</span> <span class="o">=</span> <span class="n">colorlevels</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">cmap</span><span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">dataplot</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">'vertical'</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'m/s'</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span> <span class="mf">0.55</span> <span class="p">,</span> <span class="n">pad</span> <span class="o">=</span> <span class="mf">0.08</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="discussion-questions">
-<h3><em>Discussion Questions:</em><a class="headerlink" href="#discussion-questions" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>What do you observe for the zonal wind component? Where do you see the strongest winds and the most variability?</p></li>
-<li><p>How does that compare to the meridional winds?</p></li>
-</ul>
-</div>
-</div>
-<div class="section" id="extra-tropical-storms">
-<h2>Extra-tropical Storms<a class="headerlink" href="#extra-tropical-storms" title="Permalink to this headline">¶</a></h2>
-<p>You see should observe in the last wind speed figure, are strong wind patches over the southern ocean, North Pacific and North Atlantic which come from strong zonal and meridional winds. These strong winds are created by extra-tropical storms. They are also known as mid-latitude cyclones and occur in the middle latitudes, between 30 and 60 degrees North or South of the equator, and are the strongest over the Southern Ocean and over Northern Hemisphere Oceans in Winter.</p>
-<p>They are formed by the interaction of warm and cold air masses and are characterized by a low-pressure center, with winds that circulate in a counter-clockwise direction in the Northern Hemisphere and clockwise in the Southern Hemisphere. These storms can be powerful and destructive, with strong winds, heavy rain, snow, and sleet, and can cause widespread flooding, power outages, and transportation disruptions. The strength of these storms varies depending on factors such as the temperature difference between the air masses, the speed of the jet stream, and the moisture content of the air.</p>
-<p>To learn more about extra-tropical storms, you can look at standard text books in Meteorology and Atmospheric dycnamics, or, for example here:</p>
-<p>https://en.wikipedia.org/wiki/Extratropical_cyclone</p>
-<p>http://pressbooks-dev.oer.hawaii.edu/atmo/chapter/chapter-13-extratropical-cyclones/</p>
-<p>One Storm may last for a few days and is too weak to create currents in the ocean. However continous winds andmany storms over a year will create oceancurrents as a response to the wind forcing. Now look at more data to understand these longer timescale impacts.</p>
-</div>
-<div class="section" id="part-ii-annual-climatology-of-wind-speed">
-<h2>Part II: Annual climatology of wind speed:<a class="headerlink" href="#part-ii-annual-climatology-of-wind-speed" title="Permalink to this headline">¶</a></h2>
-<p>Now we will use monthly mean data because we want to look at longterm changes of wind field.
-With xarray you can derive this monthly mean data form higher-resolution data with xr.resample(‘1M’).mean(‘time’).
-For convience we did that step already such that you can load the data with</p>
-<ul class="simple">
-<li><p>‘si10’ is the wind speed in this dataset.</p></li>
-<li><p>to calcualte the long-term mean we select 30 years of data, let’s say 1980 to 2010:</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fname</span> <span class="o">=</span> <span class="s1">'ERA5_surface_winds_mm.nc'</span>
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s2">"https://osf.io/3q4vs/download"</span>
-    <span class="n">fname</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fname</span><span class="o">=</span><span class="n">fname</span><span class="p">)</span>
-
-<span class="n">ERA5_mm</span><span class="o">=</span><span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="s1">'1980'</span><span class="p">,</span> <span class="s1">'2010'</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># note this can take a few minutes to download</span>
+<span class="n">url_era5_mm</span> <span class="o">=</span> <span class="s2">"https://osf.io/3q4vs/download"</span> <span class="c1"># contains only one file: 'ERA5_surface_winds_mm.nc'</span>
+<span class="n">ERA5_mm</span><span class="o">=</span><span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">url_era5_mm</span><span class="p">,</span>
+                                       <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">))</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="s1">'1980'</span><span class="p">,</span> <span class="s1">'2010'</span><span class="p">))</span> <span class="c1"># select the timeslice during loading</span>
 <span class="n">ERA5_mm</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="note">
-<h3><em>Note:</em><a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h3>
-<p>Monthly mean ERA5 data is also avaiable through the Copernicus Portal:</p>
-<p><a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#%21/dataset/reanalysis-era5-single-levels-monthly-means?tab=overview">Monthly mean on single levels</a>,
-<a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#%21/dataset/reanalysis-era5-pressure-levels-monthly-means?tab=overview">Monthly mean on pressure levels</a></p>
-<hr class="docutils"/>
-<p>Let start with the climatology of zonal wind</p>
+<p>Now take the annual mean zonal surface wind speed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ERA5_ANN</span> <span class="o">=</span> <span class="n">ERA5_mm</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">'time'</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># take the time mean</span>
+<span class="n">ERA5_ANN</span> <span class="o">=</span> <span class="n">ERA5_mm</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">'time'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>To visualize this data, we will be using some helper functions defined in the beginning of the tutorial just to set the map features and aesthetics. Please take a look at them if you are interested in seeing how they work.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># adjust colorlevels to weaker amplitudes</span>
 <span class="n">colorlevels_clim</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
-<span class="n">var</span> <span class="o">=</span> <span class="s1">'u10'</span>
-<span class="n">F</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">set_projection_figure</span><span class="p">(</span><span class="n">projection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">)</span> <span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Snapshot '</span><span class="o">+</span><span class="n">date</span> <span class="o">+</span><span class="s1">' | '</span><span class="o">+</span> <span class="n">var</span> <span class="p">,</span> <span class="n">loc</span> <span class="o">=</span><span class="s1">'left'</span><span class="p">)</span>
+<span class="n">var</span> <span class="o">=</span> <span class="s1">'u10'</span> <span class="c1"># select our variable</span>
+<span class="n">F</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">set_projection_figure</span><span class="p">(</span><span class="n">projection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">)</span> <span class="p">)</span> <span class="c1"># same plot function as Part I</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Annual Mean '</span><span class="o">+</span> <span class="n">var</span> <span class="p">,</span> <span class="n">loc</span> <span class="o">=</span><span class="s1">'left'</span><span class="p">)</span>
 <span class="n">dataplot</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">ERA5_ANN</span><span class="o">.</span><span class="n">longitude</span><span class="p">,</span> <span class="n">ERA5_ANN</span><span class="o">.</span><span class="n">latitude</span><span class="p">,</span> <span class="n">ERA5_ANN</span><span class="p">[</span><span class="n">var</span><span class="p">],</span>
                        <span class="n">levels</span> <span class="o">=</span> <span class="n">colorlevels_clim</span><span class="p">,</span>
                        <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">cmap</span><span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">dataplot</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">'vertical'</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'m/s'</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span> <span class="mf">0.55</span> <span class="p">,</span> <span class="n">pad</span> <span class="o">=</span> <span class="mf">0.08</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the zonal wind speed figure you created, there are two distinct wind bands between 35 to 65 degrees both north and south of the equator that blow from west to east (red, positive wind speeds). These mid-latitude wind bands are known as the <em>westerlies</em>. Additionally, you can see that winds predominantly blow from the east to the west (blue, negative wind speeds) in the tropics (less than 30° N/S), and are referred to as the <em>easterlies</em>.</p>
+<div class="section" id="coding-exercise-1-1">
+<h3><strong>Coding Exercise 1.1</strong><a class="headerlink" href="#coding-exercise-1-1" title="Permalink to this headline">¶</a></h3>
+<p>Reproduce the previous figure, but modify it to plot <strong>meridional wind</strong> rather than <strong>zonal wind</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">F</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">set_projection_figure</span><span class="p">(</span><span class="n">projection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">loc</span> <span class="o">=</span><span class="s1">'left'</span><span class="p">)</span>
+<span class="n">dataplot</span> <span class="o">=</span> <span class="o">...</span>
+
+<span class="n">_</span> <span class="o">=</span> <span class="o">...</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>You see two strong wind bands between 35 to 65 degrees North or South, which are the socalled <em>westerlies</em> in the mid-latitudes. Then you also see dominantly <em>easterly</em> winds in the tropic (<span class="math notranslate nohighlight">\(&lt; 30^\circ\)</span> N/S).
-These two wind regimes, one in the tropics and one in the extra-tropics, are weirdly linked through the so-called large-scale circulation of the atmosphere. This circulation is often described as 3-cell struture, which you see here:</p>
-<p><img alt="948px-Earth_Global_Circulation_-_en.svg.png" src="tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/attachment:ff181dda-cb5d-4e71-b48d-59807d848c81.png"/></p>
-<p>https://commons.wikimedia.org/wiki/File:Earth_Global_Circulation_-_en.svg</p>
-<p>These large-scale circulation are a major contributer to the climate we expierene in differnent lattitudes.</p>
-<p><em>Discussion questions:</em></p>
-<ul class="simple">
-<li><ol class="simple">
-<li><p>Which of the three “cells” (Hadley Cell, Farrell Cell, and Polar Cell) in the figure belong to the zonal wind band that we plotted above?</p></li>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/solutions/W1D2_Tutorial3_Solution_f5dc66b2.py"><em>Click for solution</em></a></p>
+<p><em>Example output:</em></p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/static/W1D2_Tutorial3_Solution_f5dc66b2_0.png"><img align="center" alt="Solution hint" class="align-center" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/static/W1D2_Tutorial3_Solution_f5dc66b2_0.png" style="width: 827.0px; height: 393.0px;"/></a>
+<p>There are strong southward winds in the subtropics of the Northern Hemisphere (blue, negative wind speed), and northward winds in the subtropics of the Southern Hemisphere (red, positive wind speed). The meridional winds are strongest on the western side of the continents.</p>
+</div>
+<div class="section" id="questions-1-1">
+<h3><strong>Questions 1.1</strong><a class="headerlink" href="#questions-1-1" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Among the three atmospheric “cells” (the Hadley Cell, Ferrel Cell, and Polar Cell) depicted in the figure from Section 1 above, which ones correspond to the zonal wind bands that we visualized in the first plot above?</p></li>
+<li><p>How do the zonal and meridional winds compare in magnitude, longitude, and latitude?</p></li>
 </ol>
-</li>
-</ul>
-<p>The circulation cells in the schematic also show a meridional (north-south) component of the surface winds, but we onnly plotted the zonal wind climatology. Let’s also make the meridional wind climatology and see how that looks like:</p>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/solutions/W1D2_Tutorial3_Solution_a6c5b304.py"><em>Click for solution</em></a></p>
+</div>
+</div>
+<div class="section" id="section-1-2-zonal-mean-wind-speed">
+<h2><strong>Section 1.2 : Zonal-mean Wind Speed</strong><a class="headerlink" href="#section-1-2-zonal-mean-wind-speed" title="Permalink to this headline">¶</a></h2>
+<p>To examine the latitudinal variation in the surface winds, you can plot the zonal mean of the annual mean zonal and meridional winds:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># put code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># answer:</span>
-<span class="n">var</span> <span class="o">=</span> <span class="s1">'v10'</span>
-<span class="n">F</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">set_projection_figure</span><span class="p">(</span><span class="n">projection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">)</span> <span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Snapshot '</span><span class="o">+</span><span class="n">date</span> <span class="o">+</span><span class="s1">' | '</span><span class="o">+</span> <span class="n">var</span> <span class="p">,</span> <span class="n">loc</span> <span class="o">=</span><span class="s1">'left'</span><span class="p">)</span>
-<span class="n">dataplot</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">ERA5_ANN</span><span class="o">.</span><span class="n">longitude</span><span class="p">,</span> <span class="n">ERA5_ANN</span><span class="o">.</span><span class="n">latitude</span><span class="p">,</span> <span class="n">ERA5_ANN</span><span class="p">[</span><span class="n">var</span><span class="p">],</span>
-                       <span class="n">levels</span> <span class="o">=</span> <span class="n">colorlevels_clim</span><span class="p">,</span>
-                       <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">cmap</span><span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">dataplot</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">'vertical'</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'m/s'</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span> <span class="mf">0.55</span> <span class="p">,</span> <span class="n">pad</span> <span class="o">=</span> <span class="mf">0.08</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>You see the are strong southward winds in the Northern Hemisphere subtropic (blue) and northward wind in the Southern hemisphere, also in the subtropic. What else do you see when you compare the zonal with the meridional wind climatology?</p>
-</div>
-<div class="section" id="answer">
-<h3>Answer:<a class="headerlink" href="#answer" title="Permalink to this headline">¶</a></h3>
-<p>The meridional winds seam to be strongest on the western side of the continents.
-The reasons for that are hard to explain here, but want to look at their overall effect. For that, we can plot the zonal mean of the zonal and meridional winds:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ERA5_ANN</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">'longitude'</span><span class="p">)[</span><span class="s1">'u10'</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">'zonal wind'</span><span class="p">)</span>
-<span class="n">ERA5_ANN</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">'longitude'</span><span class="p">)[</span><span class="s1">'v10'</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">'meridional wind'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Annual mean, zonal mean winds'</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span> <span class="s1">'left'</span> <span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ERA5_ANN</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">'longitude'</span><span class="p">)[</span><span class="s1">'u10'</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">'zonal wind'</span><span class="p">)</span> <span class="c1"># find the u10 mean value over the latitude</span>
+<span class="n">ERA5_ANN</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">'longitude'</span><span class="p">)[</span><span class="s1">'v10'</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">'meridional wind'</span><span class="p">)</span> <span class="c1"># find the v10 mean value over the latitude</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span> <span class="c1"># add legend</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Annual mean, zonal mean winds'</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span> <span class="s1">'left'</span> <span class="p">)</span> <span class="c1"># add title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'wind speed (m/s)'</span><span class="p">)</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">'black'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">'black'</span><span class="p">)</span> <span class="c1"># add a black line at x=0</span>
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="questions">
-<h3><em>Questions:</em><a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>With the figure above in mind, why do you see these large differences in the nothern and Southern Hemisphere?</p></li>
-</ul>
-</div>
-<div class="section" id="id5">
-<h3>Answer:<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<p>The continents influence the strength of the winds, and since the continents are so unevenly positioned on on the planet, the winds are weaker in the North then in the South. The strongest winds occur in the Southenr Ocean, where we nearly ahve no continents, and the winds must get very strong to create the same amount of drag as over the large land masses in the Northern Hemisphere.</p>
+<div class="section" id="questions-1-2">
+<h3><strong>Questions 1.2</strong><a class="headerlink" href="#questions-1-2" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Considering the zonal-mean wind speed figure provided, what factors contribute to the noticeable disparities between the Northern and Southern Hemispheres in terms of wind patterns?</p></li>
+</ol>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/solutions/W1D2_Tutorial3_Solution_851dc1bb.py"><em>Click for solution</em></a></p>
 </div>
 </div>
-<div class="section" id="part-iii-seasonal-climatology">
-<h2>Part III: Seasonal Climatology<a class="headerlink" href="#part-iii-seasonal-climatology" title="Permalink to this headline">¶</a></h2>
-<p>Lets finalluy look at how the zonal mean winds change with season. We do that here for zonal and meridional winds seperatly.
-Let start with the zonal component. For that we create a so-called Hoffmöller diagram, that has latitude on the horizonal axis and time in the vertical axis.
-That will show us how the zonal mean winds differ with season and how the seasons differ over the years:</p>
+</div>
+<div class="section" id="section-2-monthly-climatology">
+<h1><strong>Section 2: Monthly Climatology</strong><a class="headerlink" href="#section-2-monthly-climatology" title="Permalink to this headline">¶</a></h1>
+<p>Now, you should examine how the zonal mean winds vary throughout the seasons. You will focus on the zonal wind component and create a special type of diagram called a Hoffmöller diagram. In this diagram, the horizontal axis represents latitude, while the vertical axis represents time.</p>
+<p>By using the Hoffmöller diagram, you can visualize how the average east-west winds change with each season.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># the groupby command regroups the data by month, such that all Januarys, all Februaries, .. and so on are taken the mean over</span>
+<span class="c1"># note how we use several commands in one line. python perfom them by order. slice (long, u10), groupby, mean and lastely plot.</span>
 <span class="n">ERA5_mm</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">'longitude'</span><span class="p">)[</span><span class="s1">'u10'</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'time.month'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="task">
-<h3><em>Task:</em><a class="headerlink" href="#task" title="Permalink to this headline">¶</a></h3>
-<p>Now its on you to make the same disagram for the meridinal winds:</p>
+<div class="section" id="coding-exercises-2">
+<h2><strong>Coding Exercises 2</strong><a class="headerlink" href="#coding-exercises-2" title="Permalink to this headline">¶</a></h2>
+<p>Extend the above analysis to create a Hoffmöller diagram of the meridional winds.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ERA5_mm</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">'longitude'</span><span class="p">)[</span><span class="s1">'v10'</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'time.month'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
@@ -1568,36 +1418,24 @@ That will show us how the zonal mean winds differ with season and how the season
 </div>
 </div>
 </div>
-<div class="section" id="a-few-note">
-<h4><em>A few note:</em><a class="headerlink" href="#a-few-note" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/solutions/W1D2_Tutorial3_Solution_ade8a79b.py"><em>Click for solution</em></a></p>
+<p><em>Example output:</em></p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/static/W1D2_Tutorial3_Solution_ade8a79b_1.png"><img align="center" alt="Solution hint" class="align-center" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/static/W1D2_Tutorial3_Solution_ade8a79b_1.png" style="width: 758.0px; height: 574.0px;"/></a>
+<p><em>Note:</em></p>
 <ul class="simple">
-<li><p>The winds in the Southern Hemisphere seam to be generally stronger then in the Northern Hemisphere.</p></li>
-<li><p>The strong meridional winds between June and September come from the variation if the Hadley cell with season.
-The Hadley cell in the repspective winter hemisphers is much stronger.</p></li>
-<li><p>the zonal winds are about twice as astrong as the meridional component (look at the colorbars). Does that align with the Cell structure shown above?</p></li>
+<li><p>The winds in the Southern Hemisphere appear to be generally stronger compared to the Northern Hemisphere.</p></li>
+<li><p>The period between June and September shows strong meridional winds. These winds result from the seasonal variation of the Hadley cell. During the winter hemisphere in each respective hemisphere, the Hadley cell becomes much stronger, leading to the intensification of meridional winds.</p></li>
 </ul>
 </div>
 </div>
-</div>
-</div>
-<hr class="docutils"/>
 <div class="section" id="summary">
-<h1>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h1>
-<p>In this Tutorial you learned about about the atmopsheric circulation by just analysing at surface winds. By using the ERA5 reanlysis you now have a basic understanding of</p>
+<h1><strong>Summary</strong><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h1>
+<p>Within this tutorial, you analysed the global atmospheric circulation by using ERA5 reanalysis data. You explored the distribution of westerlies and easterlies across the globe, observed their seasonal variations. You observed that the strongest winds were found to occur over the Southern Ocean.</p>
+<div class="section" id="bonus-exercise">
+<h2><strong>Bonus exercise</strong>:<a class="headerlink" href="#bonus-exercise" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>the westerlies and Easterlies on the globe, how they vary with season, and that they are statistics over many individual storms that can create strong winds locally.</p></li>
-<li><p>You observed that the strongest winds appear over the Southern Ocean.</p></li>
-</ul>
-<p>You learned</p>
-<ul class="simple">
-<li><p>how to make climatology over different dimensions of the dataset, and</p></li>
-<li><p>how to regroup ata by a timestamp, in this case month.</p></li>
-</ul>
-<div class="section" id="bonus">
-<h2>Bonus:<a class="headerlink" href="#bonus" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>plot the global map for DJF and JJA of the zonal wind. What do you see when you compare the mid-latitudes? (you can also plot their differnce(!)</p></li>
-<li><p>plot trend of the zonal mean zonal wind in DJF</p></li>
+<li><p>Plot the global map for DJF and JJA of the zonal wind. What do you see when you compare the mid-latitudes? (you can also plot their difference!)</p></li>
+<li><p>Plot trend of the zonal mean zonal wind in DJF</p></li>
 </ul>
 <p>That is because the solar insulation leads to varying circulation patterns with seasons.
 More about this you can find in <a class="reference external" href="https://www.atmos.washington.edu/~dennis/gpc.html">Global Physical Climatology</a>,
@@ -1605,45 +1443,59 @@ More about this you can find in <a class="reference external" href="https://www.
 or the first few chapters of this evolving draft <a class="reference external" href="https://climate-dynamics.org/wp-content/uploads/2017/04/Climate_Book.pdf">Physics of Earth’s Climate</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># answer:</span>
-<span class="n">ERA5_season</span> <span class="o">=</span> <span class="n">ERA5_mm</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'time.season'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># note, this codes takes a while to run</span>
+<span class="n">ERA5_season</span> <span class="o">=</span> <span class="o">...</span>
 
 <span class="n">var</span><span class="o">=</span><span class="s1">'u10'</span>
 <span class="n">season</span><span class="o">=</span><span class="s1">'DJF'</span>
 <span class="n">F</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">set_projection_figure</span><span class="p">(</span><span class="n">projection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">)</span> <span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Zonal Wind DJF climatology | '</span><span class="o">+</span> <span class="n">var</span> <span class="p">,</span> <span class="n">loc</span> <span class="o">=</span><span class="s1">'left'</span><span class="p">)</span>
-<span class="n">dataplot</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">ERA5_season</span><span class="o">.</span><span class="n">longitude</span><span class="p">,</span> <span class="n">ERA5_season</span><span class="o">.</span><span class="n">latitude</span><span class="p">,</span> <span class="n">ERA5_season</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">season</span><span class="o">=</span><span class="n">season</span><span class="p">)[</span><span class="n">var</span><span class="p">],</span>
-                       <span class="n">levels</span> <span class="o">=</span> <span class="n">colorlevels_clim</span><span class="p">,</span>
-                       <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">cmap</span><span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">dataplot</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">'vertical'</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'m/s'</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span> <span class="mf">0.55</span> <span class="p">,</span> <span class="n">pad</span> <span class="o">=</span> <span class="mf">0.08</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Zonal Wind DJF mean | '</span><span class="o">+</span> <span class="n">var</span> <span class="p">,</span> <span class="n">loc</span> <span class="o">=</span><span class="s1">'left'</span><span class="p">)</span>
+<span class="n">dataplot</span> <span class="o">=</span>  <span class="o">...</span>
+<span class="n">_</span> <span class="o">=</span> <span class="o">...</span>  <span class="c1"># colorbar</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
 
 <span class="n">var</span><span class="o">=</span><span class="s1">'u10'</span>
 <span class="n">season</span><span class="o">=</span><span class="s1">'JJA'</span>
 <span class="n">F</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">set_projection_figure</span><span class="p">(</span><span class="n">projection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">)</span> <span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Meridional Wind DJF climatology | '</span><span class="o">+</span> <span class="n">var</span> <span class="p">,</span> <span class="n">loc</span> <span class="o">=</span><span class="s1">'left'</span><span class="p">)</span>
-<span class="n">dataplot</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">ERA5_season</span><span class="o">.</span><span class="n">longitude</span><span class="p">,</span> <span class="n">ERA5_season</span><span class="o">.</span><span class="n">latitude</span><span class="p">,</span> <span class="n">ERA5_season</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">season</span><span class="o">=</span><span class="n">season</span><span class="p">)[</span><span class="n">var</span><span class="p">],</span>
-                       <span class="n">levels</span> <span class="o">=</span> <span class="n">colorlevels_clim</span><span class="p">,</span>
-                       <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">cmap</span><span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">dataplot</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">'vertical'</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'m/s'</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span> <span class="mf">0.55</span> <span class="p">,</span> <span class="n">pad</span> <span class="o">=</span> <span class="mf">0.08</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Zonal Wind DJF mean | '</span><span class="o">+</span> <span class="n">var</span> <span class="p">,</span> <span class="n">loc</span> <span class="o">=</span><span class="s1">'left'</span><span class="p">)</span>
+<span class="n">dataplot</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">_</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># colorbar</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
 <span class="c1"># difference:</span>
 <span class="n">var</span><span class="o">=</span><span class="s1">'u10'</span>
-<span class="n">pdata</span> <span class="o">=</span><span class="n">ERA5_season</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">season</span><span class="o">=</span><span class="s1">'DJF'</span><span class="p">)[</span><span class="n">var</span><span class="p">]</span> <span class="o">-</span> <span class="n">ERA5_season</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">season</span><span class="o">=</span><span class="s1">'JJA'</span><span class="p">)[</span><span class="n">var</span><span class="p">]</span>
+<span class="n">pdata</span> <span class="o">=</span> <span class="o">...</span>
 
 <span class="n">F</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">set_projection_figure</span><span class="p">(</span><span class="n">projection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">)</span> <span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Meridional Wind DJF climatology | '</span><span class="o">+</span> <span class="n">var</span> <span class="p">,</span> <span class="n">loc</span> <span class="o">=</span><span class="s1">'left'</span><span class="p">)</span>
-<span class="n">dataplot</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">ERA5_season</span><span class="o">.</span><span class="n">longitude</span><span class="p">,</span> <span class="n">ERA5_season</span><span class="o">.</span><span class="n">latitude</span><span class="p">,</span><span class="n">pdata</span> <span class="p">,</span>
-                       <span class="n">levels</span> <span class="o">=</span> <span class="n">colorlevels_clim</span><span class="p">,</span>
-                       <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">cmap</span><span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">dataplot</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">'vertical'</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'m/s'</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span> <span class="mf">0.55</span> <span class="p">,</span> <span class="n">pad</span> <span class="o">=</span> <span class="mf">0.08</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="o">...</span> <span class="p">,</span> <span class="n">loc</span> <span class="o">=</span><span class="s1">'left'</span><span class="p">)</span>
+<span class="n">dataplot</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">_</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># colorbar</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p><a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/tree/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/solutions/W1D2_Tutorial3_Solution_0184088c.py"><em>Click for solution</em></a></p>
+<p><em>Example output:</em></p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/static/W1D2_Tutorial3_Solution_0184088c_0.png"><img align="center" alt="Solution hint" class="align-center" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/static/W1D2_Tutorial3_Solution_0184088c_0.png" style="width: 827.0px; height: 393.0px;"/></a>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/static/W1D2_Tutorial3_Solution_0184088c_1.png"><img align="center" alt="Solution hint" class="align-center" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/static/W1D2_Tutorial3_Solution_0184088c_1.png" style="width: 827.0px; height: 393.0px;"/></a>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/static/W1D2_Tutorial3_Solution_0184088c_2.png"><img align="center" alt="Solution hint" class="align-center" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/static/W1D2_Tutorial3_Solution_0184088c_2.png" style="width: 827.0px; height: 393.0px;"/></a>
+</div>
+<div class="section" id="additional-reading-extra-tropical-storms">
+<h2><strong>Additional Reading: Extra-tropical Storms</strong><a class="headerlink" href="#additional-reading-extra-tropical-storms" title="Permalink to this headline">¶</a></h2>
+<p>In the wind speed figure, you can notice areas of strong winds over the Southern Ocean, North Pacific, and North Atlantic. These powerful winds are caused by weather systems known as extratropical storms or mid-latitude cyclones. These storms occur in the middle latitudes, between 30 and 60 degrees north or south of the equator. During winter, they are particularly strong over the Southern Ocean and the oceans in the Northern Hemisphere.</p>
+<p>Extratropical storms form when warm and cold air masses interact. They have a low-pressure center and produce winds that circulate counterclockwise in the Northern Hemisphere and clockwise in the Southern Hemisphere. These storms can be intense, bringing strong winds, heavy rain, snow, and sleet. They often lead to problems like flooding, power outages, and disruptions in transportation.</p>
+<p>The strength of these storms depends on factors such as the temperature difference between air masses, the speed of the jet stream, and the amount of moisture in the air. If you want to learn more about extratropical storms, you can refer to basic meteorology and atmospheric dynamics resources, or you can explore online sources such as the following:</p>
+<ul class="simple">
+<li><p>Wikipedia: <a class="reference external" href="https://en.wikipedia.org/wiki/Extratropical_cyclone">Extratropical Cyclone</a></p></li>
+<li><p>Pressbooks: <a class="reference external" href="http://pressbooks-dev.oer.hawaii.edu/atmo/chapter/chapter-13-extratropical-cyclones/">Chapter 13 - Extratropical Cyclones</a></p></li>
+</ul>
+<p>Although an individual storm may last only a few days and doesn’t create significant ocean currents, the continuous winds and the occurrence of multiple storms over a year can influence the development of ocean currents. These currents are a response to the persistent wind patterns.</p>
+</div>
+<div class="section" id="resources">
+<h2><strong>Resources</strong><a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<p>Data from this tutorial can be accessed <a class="reference external" href="https://registry.opendata.aws/ecmwf-era5/">here</a>.</p>
 </div>
 </div>
 <script type="text/x-thebe-config">
@@ -1655,16 +1507,16 @@ or the first few chapters of this evolving draft <a class="reference external" h
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "py37"
+            mode: "climatematch"
         },
         kernelOptions: {
-            kernelName: "py37",
+            kernelName: "climatematch",
             path: "./tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student"
         },
         predefinedOutput: true
     }
     </script>
-<script>kernelName = 'py37'</script>
+<script>kernelName = 'climatematch'</script>
 </div>
 </main>
 <footer class="footer-article noprint">
@@ -1674,13 +1526,13 @@ or the first few chapters of this evolving draft <a class="reference external" h
 <i class="fas fa-angle-left"></i>
 <div class="prev-next-info">
 <p class="prev-next-subtitle">previous</p>
-<p class="prev-next-title">Tutorial 2: A lot of weather makes climate - exploring the ERA5 Reanalysis</p>
+<p class="prev-next-title"><strong>Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis</strong></p>
 </div>
 </a>
 <a class="right-next" href="W1D2_Tutorial4.html" id="next-link" title="next page">
 <div class="prev-next-info">
 <p class="prev-next-subtitle">next</p>
-<p class="prev-next-title">Tutorial 4: Ocean wind driven circulation</p>
+<p class="prev-next-title"><strong>Tutorial 4: Oceanic Wind-driven Circulation</strong></p>
 </div>
 <i class="fas fa-angle-right"></i>
 </a>
