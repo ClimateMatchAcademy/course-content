@@ -38,11 +38,11 @@
   name: Future Climate - IPCC II & III Socio-Economic Basis
   playlist: https://youtube.com/playlist?list=PLkBQOLLbi18Mrt88BY4gRsMXPURDEwGjS
   tutorials: 4
-# - day: W2D4
-#   category: Climate Response
-#   name: Climate Response - Extremes & Variability
-#   playlist: https://youtube.com/playlist?list=PLkBQOLLbi18NxPWEE9T5KxomLaslXXD2E
-#   tutorials: 9
+- day: W2D4
+  category: Climate Response
+  name: Climate Response - Extremes & Variability
+  playlist: https://youtube.com/playlist?list=PLkBQOLLbi18NxPWEE9T5KxomLaslXXD2E
+  tutorials: 9
 - day: W2D5
   category: Climate Response
   name: Climate Response - Adaptation Impact
