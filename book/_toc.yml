@@ -143,7 +143,7 @@
         land'
     - file: projects/project-notebooks/Wildfires_and_burnt_areas.ipynb
       title: Monitoring and mapping wildfires using satellite data
-    - file: projects/project-notebooks/Surface_albedo_and-land_use.ipynb
+    - file: projects/project-notebooks/Surface_albedo_and_land_use.ipynb
       title: Change in Earth's albedo and its dependence on land cover changes in
         the past 20 years
     title: Project materials
