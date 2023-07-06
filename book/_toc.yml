@@ -114,6 +114,18 @@
     title: Future Climate - IPCC II & III Socio-Economic Basis (W2D3)
   part: Climate Future
 - chapters:
+  - file: tutorials/W2D4_ClimateResponse-Extremes&Variability/chapter_title.md
+    sections:
+    - file: tutorials/W2D4_ClimateResponse-Extremes&Variability/student/W2D4_Tutorial1.ipynb
+    - file: tutorials/W2D4_ClimateResponse-Extremes&Variability/student/W2D4_Tutorial2.ipynb
+    - file: tutorials/W2D4_ClimateResponse-Extremes&Variability/student/W2D4_Tutorial3.ipynb
+    - file: tutorials/W2D4_ClimateResponse-Extremes&Variability/student/W2D4_Tutorial4.ipynb
+    - file: tutorials/W2D4_ClimateResponse-Extremes&Variability/student/W2D4_Tutorial5.ipynb
+    - file: tutorials/W2D4_ClimateResponse-Extremes&Variability/student/W2D4_Tutorial6.ipynb
+    - file: tutorials/W2D4_ClimateResponse-Extremes&Variability/student/W2D4_Tutorial7.ipynb
+    - file: tutorials/W2D4_ClimateResponse-Extremes&Variability/student/W2D4_Tutorial8.ipynb
+    - file: tutorials/W2D4_ClimateResponse-Extremes&Variability/further_reading.md
+    title: Climate Response - Extremes & Variability (W2D4)
   - file: tutorials/W2D5_ClimateResponse-AdaptationImpact/chapter_title.md
     sections:
     - file: tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial1.ipynb
