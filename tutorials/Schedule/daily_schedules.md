@@ -568,12 +568,6 @@ A series of professional development events (viewing and discussing four Impact 
    <td>Pod farewell
    </td>
   </tr>
-  <tr>
-   <td>6:30-7:15*
-   </td>
-   <td>Closing ceremony / Graduation
-   </td>
-  </tr>
 </table>
 
 
@@ -583,5 +577,5 @@ Course feedback survey: We will have a course completion survey for both student
 
 Pod farewell: This is just a chance for your pod to say goodbye to each other. No structure imposed here!
 
-Closing Ceremony / Graduation: We will do this all together on crowdcast.
+Closing Ceremony / Graduation: We will do this all together on crowdcast on the Saturday after the course.
 
