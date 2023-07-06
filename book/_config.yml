@@ -5,7 +5,7 @@
 
 #######################################################################################
 # Book settings
-title                       : "Climatematch Academy: Computational Climate Science"  # The title of the book. Will be placed in the left navbar.
+title                       : "Climatematch Academy: Computational Tools for Climate Science"  # The title of the book. Will be placed in the left navbar.
 author                      : Climatematch  # The author of the book
 copyright                   : "2023"  # Copyright year to be placed in the footer
 logo                        : tutorials/static/cma-logo-square-4xp.png  # A path to the book logo
