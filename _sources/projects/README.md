@@ -15,7 +15,7 @@ By working together with 4-6 peers from your pod, you will learn to
 
 Everything you need to know about projects -- from the daily schedule and tasks to useful tips and resources -- can be found in the  **[Daily Guide for Projects](./docs/project_guidance.md)**.
 
-We are also providing a range of **[project materials](./docs/dataset_overview.md)** to help you get started.
+We are also providing a range of **[project materials](./docs/datasets_overview.md)** to help you get started.
 
 Together with other professional development activities, projects will also give you the space to start connecting your new knowledge, skills, ideas, and personal and professional connections to **your life after the course**.
 
