@@ -1,9 +1,10 @@
 book/_build/
 *.nc
 *.csv
-.DS_Store
 .ipynb_checkpoints/
+euro2k_data
 pages2k_data
+euro2k_data.unzip/
 pages2k_data.unzip/
 *.pyc
 **/.DS_Store
@@ -73,3 +74,17 @@ euro2k_data.unzip/__MACOSX/Euro2k/._Ocn-AqabaJordanAQ18.Heiss.1999.lpd
 euro2k_data.unzip/__MACOSX/Euro2k/._Ocn-AqabaJordanAQ19.Heiss.1999.lpd
 euro2k_data.unzip/__MACOSX/Euro2k/._Ocn-RedSea.Felis.2000.lpd
 euro2k_data
+tutorials/.DS_Store
+tutorials/.DS_Store
+tutorials/.DS_Store
+tutorials/.DS_Store
+environment copy.yml
+tutorials/.DS_Store
+*.lpd
+tutorials/W1D4_Paleoclimate/euro2k_data
+tutorials/.DS_Store
+*.DS_Store
+ci/
+tutorials/W1D4_Paleoclimate/euro2k_data
+*.lpd
+*.icloud

@@ -1,7 +1,7 @@
 # Climate System Overview
 
- ````{div} full-width 
- <img src='../Art/W1D1_ModelTypes-Daniela_Buchwald.png' alt='art relevant to chapter contents' width='100%'> 
+ ````{div} full-height 
+ <img src='../Art/W1D1_ClimateSystemOverview-Sloane_Garelick.png' alt='art relevant to chapter contents' width='100%'> 
 ```` 
 
-*Artwork by Daniela Buchwald*
+*Artwork by Sloane Garelick*
