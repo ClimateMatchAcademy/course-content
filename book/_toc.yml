@@ -17,7 +17,7 @@
 - chapters:
   - file: tutorials/TechnicalHelp/Links_Policy.md
 - chapters:
-  - file: prereqs/ClimateScience.md
+  - file: tutorials/prereqs/ClimateScience.md
 - chapters:
   - file: tutorials/W1D1_ClimateSystemOverview/chapter_title.md
     sections:
