@@ -1,7 +1,7 @@
 # Climate Response - Extremes & Variability
 
- ````{div} full-width 
- <img src='../Art/W2D4.png' alt='W2D4 artwork by Sloane Garelick' width='100%'> 
+ ````{div} full-height 
+ <img src='../Art/W2D4_ExtremesVulnerability-Sloane_Garelick.svg' alt='art relevant to chapter contents' width='100%'> 
 ```` 
 
 *Artwork by Sloane Garelick*
