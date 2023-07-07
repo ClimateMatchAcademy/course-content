@@ -163,14 +163,14 @@
     title: Continuing your project after the course
   part: Project Booklet
 - chapters:
-  - file: professional_development/README.md
+  - file: projects/professional_development/README.md
     title: Introduction
-  - file: professional_development/impact_talks.ipynb
+  - file: projects/professional_development/impact_talks.ipynb
     title: Impact Talks
-  - file: professional_development/mentors.md
+  - file: projects/professional_development/mentors.md
     title: Mentor Meetings
-  - file: professional_development/career_features.md
+  - file: projects/professional_development/career_features.md
     title: Career Features
-  - file: professional_development/career_panels.md
+  - file: projects/professional_development/career_panels.md
     title: Career Panels
   part: Professional Development
