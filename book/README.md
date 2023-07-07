@@ -18,7 +18,7 @@ In order to build the book locally, you will need to do the following:
 
 3. Install dependencies
 
-`cd course-climatemacth`
+`cd course-climatematch`
 
 `pip install -r ../nmaci-main/requirements.txt`
 
