@@ -1,6 +1,6 @@
 # Using Kaggle
 
-If you are in China or another region with difficult access to JupyterHub and Google Colab, you can use Kaggle as a substitute for launching an interactive coding environment where you can write and run code. Please note that we recommend JupyterHub if you can access it.
+If you are in China or another region with difficult access to JupyterHub and Google Colab, you can use Kaggle as a substitute for launching an interactive coding environment where you can write and run code. **Please note that we recommend JupyterHub if you can access it.**
 
 ## First use
 
@@ -20,7 +20,8 @@ If you are in China or another region with difficult access to JupyterHub and Go
 ![Step 4](../static/kaggle_step4.png)
 
 ## Accessing course notebooks
-Click the kaggle button found on top of every page containing a jupyter notebook, such as [tutorials](https://comptools.climatematch.io/tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.html) and [project pages](https://comptools.climatematch.io/projects/project-notebooks/Regional_precipitation_variability.html).
+Click the kaggle button found on top of every page containing a jupyter notebook, such as [tutorial pages](https://comptools.climatematch.io/tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.html).
+
 ![Step 5](../static/kaggle_step5.png)
 >**NOTE:** If you receive an error asocociated with `!pip install`, follow [this workaround](https://www.kaggle.com/product-feedback/63544).
 
