@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ocean acidification &#8212; Climatematch Academy: Computational Tools for Climate Science</title>
+    <title>Ocean Acidification &#8212; Climatematch Academy: Computational Tools for Climate Science</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -19,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -32,7 +32,7 @@
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -40,8 +40,8 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
@@ -50,8 +50,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/cma-logo-square-4xp.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="The impact of ENSO on precipitation and temperature" href="ENSO_impact_on_precipitation_and_temperature.html" />
-    <link rel="prev" title="Sea level rise" href="Sea_level_rise.html" />
+    <link rel="next" title="The Impact of ENSO on Precipitation and Temperature" href="ENSO_impact_on_precipitation_and_temperature.html" />
+    <link rel="prev" title="Sea Level Rise" href="Sea_level_rise.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -127,6 +127,11 @@ const thebe_selector_output = ".output, .cell_output"
      General Schedule
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/Schedule/shared_calendars.html">
+     Shared calendars
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -185,7 +190,14 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<p class="caption">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../tutorials/prereqs/ClimateScience.html">
+   Prerequisites and preparatory materials for Computational Tools for Climate Science
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Fundamentals
  </span>
@@ -335,7 +347,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Climate Data
  </span>
@@ -531,7 +543,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Climate Future
  </span>
@@ -610,32 +622,44 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial1.html">
-     Figure settings
+     <strong>
+      Tutorial 1: Creating Maps of CMIP6 Earth System Model (ESM) Projections
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial2.html">
-     Figure settings
+     <strong>
+      Tutorial 2: Time Series, Global Averages, and Scenario Comparison
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial3.html">
-     Figure settings
+     <strong>
+      Tutorial 3: Multi-model Ensembles
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial4.html">
-     Figure settings
+     <strong>
+      Tutorial 4: Quantifying Uncertainty in Projections
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial5.html">
-     Figure settings
+     <strong>
+      Tutorial 5: Internal Climate Variability
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial6.html">
-     Figure settings
+     <strong>
+      Tutorial 6: Synthesising &amp; Interpreting Diverse Data Sources
+     </strong>
     </a>
    </li>
   </ul>
@@ -681,7 +705,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Climate Response
  </span>
@@ -698,23 +722,59 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial1.html">
+     <strong>
+      Tutorial 1: Distributions
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial2.html">
-     Data investigation
+     <strong>
+      Tutorial 2: What is an Extreme Event? Empirical Return Levels
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial3.html">
+     <strong>
+      Tutorial 3: Extreme Value Analysis - the GEV Distribution
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial4.html">
+     <strong>
+      Tutorial 4: Return Levels Using Normal and GEV Distributions
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial5.html">
-     Fit Moments using a different method
+     <strong>
+      Tutorial 5: Non-stationarity in Historical Records
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial6.html">
+     <strong>
+      Tutorial 6: Scenario-dependence of Future Changes in Extremes
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial7.html">
-     Load CMIP6 data
+     <strong>
+      Tutorial 7: Non-Stationarity in the EVT-framework
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial8.html">
-     scale as function of time
+     <strong>
+      Tutorial 8: Thresholds
+     </strong>
     </a>
    </li>
   </ul>
@@ -760,7 +820,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Project Booklet
  </span>
@@ -789,50 +849,46 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="Sea_level_rise.html">
      <strong>
-      Sea level rise
+      Sea Level Rise
      </strong>
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      <strong>
-      Ocean acidification
+      Ocean Acidification
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="ENSO_impact_on_precipitation_and_temperature.html">
      <strong>
-      The impact of ENSO on precipitation and temperature
+      The Impact of ENSO on Precipitation and Temperature
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Regional_precipitation_variability.html">
-     <strong>
-      Regional precipitation variability and extreme events
-     </strong>
+     Regional Precipitation Variability and Extreme Events
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Heatwaves.html">
      <strong>
-      Heatwaves: Assessing the dynamic interactions of the atmosphere and land
+      Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Wildfires_and_burnt_areas.html">
      <strong>
-      Monitoring and mapping wildfires using satellite data
+      Monitoring and Mapping Wildfires Using Satellite Data
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Surface_albedo_and_land_use.html">
-     <strong>
-      Change in Earth’s albedo and its dependence on land cover changes in the past 20 years
-     </strong>
+    <a class="reference internal" href="Surface_albedo_and_land_cover.html">
+     Changes in Land Cover: Albedo and Carbon Sequestration
     </a>
    </li>
   </ul>
@@ -840,6 +896,38 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../docs/continuing_your_project_after_the_course.html">
    Continuing your project after the course
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Professional Development
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../professional_development/README.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../professional_development/impact_talks.html">
+   Impact Talks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../professional_development/mentors.html">
+   Mentor Meetings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../professional_development/career_features.html">
+   Career Features
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../professional_development/career_panels.html">
+   Career Panels
   </a>
  </li>
 </ul>
@@ -1051,52 +1139,40 @@ title="Print to PDF"
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
    <strong>
-    Ocean acidification
+    Ocean Acidification
    </strong>
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#project-template">
-   <strong>
-    Project template
-   </strong>
+   Project Template
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-exploration-notebook">
-   <strong>
-    Data exploration notebook
-   </strong>
+   Data Exploration Notebook
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#project-setup">
-     <strong>
-      Project setup
-     </strong>
+     Project Setup
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#noaa-ocean-ph-and-acidity">
-     <strong>
-      NOAA ocean pH, and acidity
-     </strong>
+     NOAA Ocean pH and Acidity
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#global-surface-ocean-acidification-indicators-from-1750-to-2100-ncei-accession-0259391">
-       <strong>
-        Global surface ocean acidification indicators from 1750 to 2100 (NCEI Accession 0259391)
-       </strong>
+       Global surface ocean acidification indicators from 1750 to 2100 (NCEI Accession 0259391)
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#copernicus">
-     <strong>
-      Copernicus
-     </strong>
+     Copernicus
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
@@ -1112,6 +1188,11 @@ title="Print to PDF"
    </li>
   </ul>
  </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#further-reading">
+   Further Reading
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -1121,7 +1202,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Ocean acidification</h1>
+                <h1>Ocean Acidification</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1134,52 +1215,40 @@ title="Print to PDF"
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
    <strong>
-    Ocean acidification
+    Ocean Acidification
    </strong>
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#project-template">
-   <strong>
-    Project template
-   </strong>
+   Project Template
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-exploration-notebook">
-   <strong>
-    Data exploration notebook
-   </strong>
+   Data Exploration Notebook
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#project-setup">
-     <strong>
-      Project setup
-     </strong>
+     Project Setup
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#noaa-ocean-ph-and-acidity">
-     <strong>
-      NOAA ocean pH, and acidity
-     </strong>
+     NOAA Ocean pH and Acidity
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#global-surface-ocean-acidification-indicators-from-1750-to-2100-ncei-accession-0259391">
-       <strong>
-        Global surface ocean acidification indicators from 1750 to 2100 (NCEI Accession 0259391)
-       </strong>
+       Global surface ocean acidification indicators from 1750 to 2100 (NCEI Accession 0259391)
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#copernicus">
-     <strong>
-      Copernicus
-     </strong>
+     Copernicus
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
@@ -1195,6 +1264,11 @@ title="Print to PDF"
    </li>
   </ul>
  </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#further-reading">
+   Further Reading
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -1206,33 +1280,78 @@ title="Print to PDF"
               <div>
                 
   <div class="section" id="ocean-acidification">
-<h1><strong>Ocean acidification</strong><a class="headerlink" href="#ocean-acidification" title="Permalink to this headline">¶</a></h1>
-<p><strong>Content creators:</strong> C. Gabriela Mayorga Adame</p>
-<p><strong>Content reviewers:</strong> Jenna Pearson, Abigail Bodner</p>
+<h1><strong>Ocean Acidification</strong><a class="headerlink" href="#ocean-acidification" title="Permalink to this headline">#</a></h1>
+<p><strong>Content creators:</strong> C. Gabriela Mayorga Adame, Lidia Krinova</p>
+<p><strong>Content reviewers:</strong> Jenna Pearson, Abigail Bodner, Ohad Zivan, Chi Zhang</p>
 <p><strong>Content editors:</strong> Zane Mitrevica, Natalie Steinemann, Ohad Zivan, Chi Zhang, Jenna Pearson</p>
-<p><strong>Production editors:</strong> TBD</p>
-<p><strong>Our 2023 Sponsors:</strong> NASA TOPS, Google Deepmind</p>
+<p><strong>Production editors:</strong> Wesley Banfield, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Our 2023 Sponsors:</strong> NASA TOPS, Google DeepMind</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title #**Project background** </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Project Background</span>
 <span class="c1">#This will be a short video introducing the content creator(s) and motivating the research direction of the template.</span>
-<span class="c1">#The Tech team will add code to format and display the video</span>
+
+<span class="c1"># @markdown</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">widgets</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
+
+
+<span class="k">class</span> <span class="nc">PlayVideo</span><span class="p">(</span><span class="n">IFrame</span><span class="p">):</span>
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">page</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">id</span>
+    <span class="k">if</span> <span class="n">source</span> <span class="o">==</span> <span class="s1">&#39;Bilibili&#39;</span><span class="p">:</span>
+      <span class="n">src</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;https://player.bilibili.com/player.html?bvid=</span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s1">&amp;page=</span><span class="si">{</span><span class="n">page</span><span class="si">}</span><span class="s1">&#39;</span>
+    <span class="k">elif</span> <span class="n">source</span> <span class="o">==</span> <span class="s1">&#39;Osf&#39;</span><span class="p">:</span>
+      <span class="n">src</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;https://mfr.ca-1.osf.io/render?url=https://osf.io/download/</span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s1">/?direct%26mode=render&#39;</span>
+    <span class="nb">super</span><span class="p">(</span><span class="n">PlayVideo</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">display_videos</span><span class="p">(</span><span class="n">video_ids</span><span class="p">,</span> <span class="n">W</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">H</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+  <span class="n">tab_contents</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">video_id</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">video_ids</span><span class="p">):</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">()</span>
+    <span class="k">with</span> <span class="n">out</span><span class="p">:</span>
+      <span class="k">if</span> <span class="n">video_ids</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Youtube&#39;</span><span class="p">:</span>
+        <span class="n">video</span> <span class="o">=</span> <span class="n">YouTubeVideo</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">video_ids</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">width</span><span class="o">=</span><span class="n">W</span><span class="p">,</span>
+                             <span class="n">height</span><span class="o">=</span><span class="n">H</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span> <span class="n">rel</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Video available at https://youtube.com/watch?v=</span><span class="si">{</span><span class="n">video</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+      <span class="k">else</span><span class="p">:</span>
+        <span class="n">video</span> <span class="o">=</span> <span class="n">PlayVideo</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">video_ids</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">source</span><span class="o">=</span><span class="n">video_ids</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">width</span><span class="o">=</span><span class="n">W</span><span class="p">,</span>
+                          <span class="n">height</span><span class="o">=</span><span class="n">H</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span> <span class="n">autoplay</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">video_ids</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Bilibili&#39;</span><span class="p">:</span>
+          <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Video available at https://www.bilibili.com/video/</span><span class="si">{</span><span class="n">video</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">video_ids</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Osf&#39;</span><span class="p">:</span>
+          <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Video available at https://osf.io/</span><span class="si">{</span><span class="n">video</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+      <span class="n">display</span><span class="p">(</span><span class="n">video</span><span class="p">)</span>
+    <span class="n">tab_contents</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">tab_contents</span>
+
+
+<span class="n">video_ids</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;Youtube&#39;</span><span class="p">,</span> <span class="s1">&#39;W5o_HTsef0I&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Bilibili&#39;</span><span class="p">,</span> <span class="s1">&#39;BV1ho4y1C7Eo&#39;</span><span class="p">)]</span>
+<span class="n">tab_contents</span> <span class="o">=</span> <span class="n">display_videos</span><span class="p">(</span><span class="n">video_ids</span><span class="p">,</span> <span class="n">W</span><span class="o">=</span><span class="mi">730</span><span class="p">,</span> <span class="n">H</span><span class="o">=</span><span class="mi">410</span><span class="p">)</span>
+<span class="n">tabs</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Tab</span><span class="p">()</span>
+<span class="n">tabs</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="n">tab_contents</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tab_contents</span><span class="p">)):</span>
+  <span class="n">tabs</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">video_ids</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">display</span><span class="p">(</span><span class="n">tabs</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>In this project, you will analyse ocean model and observational data from global databases to extract variables like pH, CO<sub>2</sub>, and temperature, and to investigate ocean acidification process in your region of interest. This project will also be an opportunity to investigate the relationships between these variables as well as their impact on the marine ecosystems.</p>
+<p><strong>In this project</strong>, you will analyse ocean model and observational data from global databases to extract variables like pH, CO<sub>2</sub>, and temperature, and to investigate ocean acidification process in your region of interest. This project will also be an opportunity to investigate the relationships between these variables as well as their impact on the marine ecosystems.</p>
 </div>
 <div class="section" id="project-template">
-<h1><strong>Project template</strong><a class="headerlink" href="#project-template" title="Permalink to this headline">¶</a></h1>
-<p><img alt="template" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/projects/template-images/ocean_acidification_template_map.svg" /></p>
+<h1>Project Template<a class="headerlink" href="#project-template" title="Permalink to this headline">#</a></h1>
+<p><img alt="Project Template" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/projects/template-images/ocean_acidification_template_map.svg" /></p>
+<p><em>Note: The dashed boxes are socio-economic questions.</em></p>
 </div>
 <div class="section" id="data-exploration-notebook">
-<h1><strong>Data exploration notebook</strong><a class="headerlink" href="#data-exploration-notebook" title="Permalink to this headline">¶</a></h1>
+<h1>Data Exploration Notebook<a class="headerlink" href="#data-exploration-notebook" title="Permalink to this headline">#</a></h1>
 <div class="section" id="project-setup">
-<h2><strong>Project setup</strong><a class="headerlink" href="#project-setup" title="Permalink to this headline">¶</a></h2>
-<p>Please run the following cells!</p>
-<div class="cell docutils container">
+<h2>Project Setup<a class="headerlink" href="#project-setup" title="Permalink to this headline">#</a></h2>
+<div class="cell tag_colab docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># google colab installs</span>
 
@@ -1243,7 +1362,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imports</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># imports</span>
 
 <span class="kn">import</span> <span class="nn">random</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -1257,9 +1376,9 @@ title="Print to PDF"
 </div>
 </div>
 <div class="section" id="noaa-ocean-ph-and-acidity">
-<h2><strong>NOAA ocean pH, and acidity</strong><a class="headerlink" href="#noaa-ocean-ph-and-acidity" title="Permalink to this headline">¶</a></h2>
+<h2>NOAA Ocean pH and Acidity<a class="headerlink" href="#noaa-ocean-ph-and-acidity" title="Permalink to this headline">#</a></h2>
 <div class="section" id="global-surface-ocean-acidification-indicators-from-1750-to-2100-ncei-accession-0259391">
-<h3><strong>Global surface ocean acidification indicators from 1750 to 2100 (NCEI Accession 0259391)</strong><a class="headerlink" href="#global-surface-ocean-acidification-indicators-from-1750-to-2100-ncei-accession-0259391" title="Permalink to this headline">¶</a></h3>
+<h3>Global surface ocean acidification indicators from 1750 to 2100 (NCEI Accession 0259391)<a class="headerlink" href="#global-surface-ocean-acidification-indicators-from-1750-to-2100-ncei-accession-0259391" title="Permalink to this headline">#</a></h3>
 <p>This data package contains a hybrid surface OA data product that is produced based on three recent observational data products: (a) the Surface Ocean CO2 Atlas (SOCAT, version 2022), (b) the Global Ocean Data Analysis Product version 2 (GLODAPv2, version 2022), and (c) the Coastal Ocean Data Analysis Product in North America (CODAP-NA, version 2021), and 14 Earth System Models from the sixth phase of the Coupled Model Intercomparison Project (CMIP6). The trajectories of ten OA indicators, including fugacity of carbon dioxide, pH on Total Scale, total hydrogen ion content, free hydrogen ion content, carbonate ion content, aragonite saturation state, calcite saturation state, Revelle Factor, total dissolved inorganic carbon content, and total alkalinity content are provided under preindustrial conditions, historical conditions, and future Shared Socioeconomic Pathways: SSP1-19, SSP1-26, SSP2-45, SSP3-70, and SSP5-85 from 1750 to 2100 on a global surface ocean grid. These OA trajectories are improved relative to previous OA data products with respect to data quantity, spatial and temporal coverage, diversity of the underlying data and model simulations, and the provided SSPs over the 21st century.</p>
 <p><strong>Citation:</strong>
 Jiang, L.-Q., Dunne, J., Carter, B. R., Tjiputra, J. F., Terhaar, J., Sharp, J. D., et al. (2023). Global surface ocean acidification indicators from 1750 to 2100. Journal of Advances in Modeling Earth Systems, 15, e2022MS003563. https://doi.org/10.1029/2022MS003563</p>
@@ -1267,7 +1386,7 @@ Jiang, L.-Q., Dunne, J., Carter, B. R., Tjiputra, J. F., Terhaar, J., Sharp, J. 
 <p>We can load and visualize the <strong>surface pH</strong> as follows:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Code to retrieve and load the data</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># code to retrieve and load the data</span>
 <span class="c1"># url_SurfacepH= &#39;https://www.ncei.noaa.gov/data/oceans/ncei/ocads/data/0206289/Surface_pH_1770_2100/Surface_pH_1770_2000.nc&#39; $ old CMIP5 dataset</span>
 <span class="n">url_SurfacepH</span><span class="o">=</span><span class="s1">&#39;https://www.ncei.noaa.gov/data/oceans/ncei/ocads/data/0259391/nc/median/pHT_median_historical.nc&#39;</span>
 <span class="n">ds_pH</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">url_SurfacepH</span><span class="p">,</span><span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">))</span>
@@ -1275,454 +1394,6 @@ Jiang, L.-Q., Dunne, J., Carter, B. R., Tjiputra, J. F., Terhaar, J., Sharp, J. 
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://www.ncei.noaa.gov/data/oceans/ncei/ocads/data/0259391/nc/median/pHT_median_historical.nc&#39; to file &#39;/Users/chi/Library/Caches/pooch/d89a28d8467fff924634e3fda18b3a3d-pHT_median_historical.nc&#39;.
-SHA256 hash of downloaded file: 5a88450b240954e1db5771e06c54278d0dd3e1edbdfcd7b05f25bec3b2c47f1f
-Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
-</pre></div>
-</div>
-<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
-<defs>
-<symbol id="icon-database" viewBox="0 0 32 32">
-<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
-<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
-<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
-</symbol>
-<symbol id="icon-file-text2" viewBox="0 0 32 32">
-<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
-<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
-<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
-<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
-</symbol>
-</defs>
-</svg>
-<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
- *
- */
-
-:root {
-  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
-  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
-  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
-  --xr-border-color: var(--jp-border-color2, #e0e0e0);
-  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
-  --xr-background-color: var(--jp-layout-color0, white);
-  --xr-background-color-row-even: var(--jp-layout-color1, white);
-  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
-}
-
-html[theme=dark],
-body[data-theme=dark],
-body.vscode-dark {
-  --xr-font-color0: rgba(255, 255, 255, 1);
-  --xr-font-color2: rgba(255, 255, 255, 0.54);
-  --xr-font-color3: rgba(255, 255, 255, 0.38);
-  --xr-border-color: #1F1F1F;
-  --xr-disabled-color: #515151;
-  --xr-background-color: #111111;
-  --xr-background-color-row-even: #111111;
-  --xr-background-color-row-odd: #313131;
-}
-
-.xr-wrap {
-  display: block !important;
-  min-width: 300px;
-  max-width: 700px;
-}
-
-.xr-text-repr-fallback {
-  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
-  display: none;
-}
-
-.xr-header {
-  padding-top: 6px;
-  padding-bottom: 6px;
-  margin-bottom: 4px;
-  border-bottom: solid 1px var(--xr-border-color);
-}
-
-.xr-header > div,
-.xr-header > ul {
-  display: inline;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.xr-obj-type,
-.xr-array-name {
-  margin-left: 2px;
-  margin-right: 10px;
-}
-
-.xr-obj-type {
-  color: var(--xr-font-color2);
-}
-
-.xr-sections {
-  padding-left: 0 !important;
-  display: grid;
-  grid-template-columns: 150px auto auto 1fr 20px 20px;
-}
-
-.xr-section-item {
-  display: contents;
-}
-
-.xr-section-item input {
-  display: none;
-}
-
-.xr-section-item input + label {
-  color: var(--xr-disabled-color);
-}
-
-.xr-section-item input:enabled + label {
-  cursor: pointer;
-  color: var(--xr-font-color2);
-}
-
-.xr-section-item input:enabled + label:hover {
-  color: var(--xr-font-color0);
-}
-
-.xr-section-summary {
-  grid-column: 1;
-  color: var(--xr-font-color2);
-  font-weight: 500;
-}
-
-.xr-section-summary > span {
-  display: inline-block;
-  padding-left: 0.5em;
-}
-
-.xr-section-summary-in:disabled + label {
-  color: var(--xr-font-color2);
-}
-
-.xr-section-summary-in + label:before {
-  display: inline-block;
-  content: '►';
-  font-size: 11px;
-  width: 15px;
-  text-align: center;
-}
-
-.xr-section-summary-in:disabled + label:before {
-  color: var(--xr-disabled-color);
-}
-
-.xr-section-summary-in:checked + label:before {
-  content: '▼';
-}
-
-.xr-section-summary-in:checked + label > span {
-  display: none;
-}
-
-.xr-section-summary,
-.xr-section-inline-details {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-.xr-section-inline-details {
-  grid-column: 2 / -1;
-}
-
-.xr-section-details {
-  display: none;
-  grid-column: 1 / -1;
-  margin-bottom: 5px;
-}
-
-.xr-section-summary-in:checked ~ .xr-section-details {
-  display: contents;
-}
-
-.xr-array-wrap {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 20px auto;
-}
-
-.xr-array-wrap > label {
-  grid-column: 1;
-  vertical-align: top;
-}
-
-.xr-preview {
-  color: var(--xr-font-color3);
-}
-
-.xr-array-preview,
-.xr-array-data {
-  padding: 0 5px !important;
-  grid-column: 2;
-}
-
-.xr-array-data,
-.xr-array-in:checked ~ .xr-array-preview {
-  display: none;
-}
-
-.xr-array-in:checked ~ .xr-array-data,
-.xr-array-preview {
-  display: inline-block;
-}
-
-.xr-dim-list {
-  display: inline-block !important;
-  list-style: none;
-  padding: 0 !important;
-  margin: 0;
-}
-
-.xr-dim-list li {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-}
-
-.xr-dim-list:before {
-  content: '(';
-}
-
-.xr-dim-list:after {
-  content: ')';
-}
-
-.xr-dim-list li:not(:last-child):after {
-  content: ',';
-  padding-right: 5px;
-}
-
-.xr-has-index {
-  font-weight: bold;
-}
-
-.xr-var-list,
-.xr-var-item {
-  display: contents;
-}
-
-.xr-var-item > div,
-.xr-var-item label,
-.xr-var-item > .xr-var-name span {
-  background-color: var(--xr-background-color-row-even);
-  margin-bottom: 0;
-}
-
-.xr-var-item > .xr-var-name:hover span {
-  padding-right: 5px;
-}
-
-.xr-var-list > li:nth-child(odd) > div,
-.xr-var-list > li:nth-child(odd) > label,
-.xr-var-list > li:nth-child(odd) > .xr-var-name span {
-  background-color: var(--xr-background-color-row-odd);
-}
-
-.xr-var-name {
-  grid-column: 1;
-}
-
-.xr-var-dims {
-  grid-column: 2;
-}
-
-.xr-var-dtype {
-  grid-column: 3;
-  text-align: right;
-  color: var(--xr-font-color2);
-}
-
-.xr-var-preview {
-  grid-column: 4;
-}
-
-.xr-index-preview {
-  grid-column: 2 / 5;
-  color: var(--xr-font-color2);
-}
-
-.xr-var-name,
-.xr-var-dims,
-.xr-var-dtype,
-.xr-preview,
-.xr-attrs dt {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding-right: 10px;
-}
-
-.xr-var-name:hover,
-.xr-var-dims:hover,
-.xr-var-dtype:hover,
-.xr-attrs dt:hover {
-  overflow: visible;
-  width: auto;
-  z-index: 1;
-}
-
-.xr-var-attrs,
-.xr-var-data,
-.xr-index-data {
-  display: none;
-  background-color: var(--xr-background-color) !important;
-  padding-bottom: 5px !important;
-}
-
-.xr-var-attrs-in:checked ~ .xr-var-attrs,
-.xr-var-data-in:checked ~ .xr-var-data,
-.xr-index-data-in:checked ~ .xr-index-data {
-  display: block;
-}
-
-.xr-var-data > table {
-  float: right;
-}
-
-.xr-var-name span,
-.xr-var-data,
-.xr-index-name div,
-.xr-index-data,
-.xr-attrs {
-  padding-left: 25px !important;
-}
-
-.xr-attrs,
-.xr-var-attrs,
-.xr-var-data,
-.xr-index-data {
-  grid-column: 1 / -1;
-}
-
-dl.xr-attrs {
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: 125px auto;
-}
-
-.xr-attrs dt,
-.xr-attrs dd {
-  padding: 0;
-  margin: 0;
-  float: left;
-  padding-right: 10px;
-  width: auto;
-}
-
-.xr-attrs dt {
-  font-weight: normal;
-  grid-column: 1;
-}
-
-.xr-attrs dt:hover span {
-  display: inline-block;
-  background: var(--xr-background-color);
-  padding-right: 10px;
-}
-
-.xr-attrs dd {
-  grid-column: 2;
-  white-space: pre-wrap;
-  word-break: break-all;
-}
-
-.xr-icon-database,
-.xr-icon-file-text2,
-.xr-no-icon {
-  display: inline-block;
-  vertical-align: middle;
-  width: 1em;
-  height: 1.5em !important;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
-}
-</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
-Dimensions:    (time: 18, lat: 180, lon: 360)
-Coordinates:
-  * time       (time) float64 1.75e+03 1.85e+03 1.86e+03 ... 2e+03 2.01e+03
-Dimensions without coordinates: lat, lon
-Data variables:
-    pHT        (time, lat, lon) float64 ...
-    longitude  (lat, lon) float64 ...
-    latitude   (lat, lon) float64 ...
-Attributes:
-    title:               Global surface ocean pH on total hydrogen ion scale ...
-    comment:             This gridded data product contains pH on total hydro...
-    reference:           Jiang, L-Q., J. Dunne, B. R. Carter, J. Tjiputra,\n ...
-    Fair_use_statement:  This data product is made freely available\n   to th...
-    created_by:          Li-Qing Jiang
-    institution:         (a) Cooperative Institute for Satellite Earth System...
-    contact:             &lt;Liqing.Jiang@noaa.gov&gt;
-    creation_date:       August 14, 2022</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-f29bb145-bd6d-4255-ad05-529d2c485ec9' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-f29bb145-bd6d-4255-ad05-529d2c485ec9' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 18</li><li><span>lat</span>: 180</li><li><span>lon</span>: 360</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-e66ffa63-4827-4785-b092-fa75ee7162dd' class='xr-section-summary-in' type='checkbox'  checked><label for='section-e66ffa63-4827-4785-b092-fa75ee7162dd' class='xr-section-summary' >Coordinates: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>1.75e+03 1.85e+03 ... 2.01e+03</div><input id='attrs-a00d01d9-6664-476a-a22a-98d2b1fa38c3' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-a00d01d9-6664-476a-a22a-98d2b1fa38c3' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-626f0faf-96db-4065-b2a7-2aff83ee41fd' class='xr-var-data-in' type='checkbox'><label for='data-626f0faf-96db-4065-b2a7-2aff83ee41fd' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long name :</span></dt><dd>The decade of 1750, and all decades from 1850 to 2010, i.e., 1750, 1850, 1860, 1870, 1880, 1890, 1900, 1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010</dd><dt><span>CF_name :</span></dt><dd>time</dd><dt><span>unit :</span></dt><dd>year</dd></dl></div><div class='xr-var-data'><pre>array([1750., 1850., 1860., 1870., 1880., 1890., 1900., 1910., 1920., 1930.,
-       1940., 1950., 1960., 1970., 1980., 1990., 2000., 2010.])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-1b2e4819-f562-4579-b9cd-50f0ee46df17' class='xr-section-summary-in' type='checkbox'  checked><label for='section-1b2e4819-f562-4579-b9cd-50f0ee46df17' class='xr-section-summary' >Data variables: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>pHT</span></div><div class='xr-var-dims'>(time, lat, lon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-a9399299-9cf7-44ca-bf86-b2bc96aaf8e9' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-a9399299-9cf7-44ca-bf86-b2bc96aaf8e9' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-dc6bf35d-058f-4ced-9d0c-59194dfec867' class='xr-var-data-in' type='checkbox'><label for='data-dc6bf35d-058f-4ced-9d0c-59194dfec867' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long name :</span></dt><dd>pH on total hydrogen ion scale</dd><dt><span>CF_name :</span></dt><dd>sea_water_ph_reported_on_total_scale</dd><dt><span>units :</span></dt><dd>N/A</dd></dl></div><div class='xr-var-data'><pre>[1166400 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>longitude</span></div><div class='xr-var-dims'>(lat, lon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-2e2e490c-d662-4e8f-aef2-2d25b1794cec' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-2e2e490c-d662-4e8f-aef2-2d25b1794cec' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-8f87fbd7-8e7d-4cb5-8250-9ab9b6d154f1' class='xr-var-data-in' type='checkbox'><label for='data-8f87fbd7-8e7d-4cb5-8250-9ab9b6d154f1' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long name :</span></dt><dd>Longitude on the 1 x 1 degree global grid (20.5 to 379.5 degrees).</dd><dt><span>CF_name :</span></dt><dd>grid_longitude</dd><dt><span>units :</span></dt><dd>decimal degrees</dd></dl></div><div class='xr-var-data'><pre>[64800 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>latitude</span></div><div class='xr-var-dims'>(lat, lon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-7ed89632-fef3-4dd9-b915-e2d0e54fd9c6' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-7ed89632-fef3-4dd9-b915-e2d0e54fd9c6' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-bfd3226a-6a1c-42e4-9185-01bac5fa5193' class='xr-var-data-in' type='checkbox'><label for='data-bfd3226a-6a1c-42e4-9185-01bac5fa5193' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long name :</span></dt><dd>Latitude on the 1 x 1 degree grid (-89.5 to 89.5 degrees) at this depth level.</dd><dt><span>CF_name :</span></dt><dd>grid_latitude</dd><dt><span>units :</span></dt><dd>decimal degrees</dd></dl></div><div class='xr-var-data'><pre>[64800 values with dtype=float64]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-ef455058-76ac-4904-b927-e58d3d6ec2ba' class='xr-section-summary-in' type='checkbox'  ><label for='section-ef455058-76ac-4904-b927-e58d3d6ec2ba' class='xr-section-summary' >Indexes: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-8d6a5249-b1bd-4c87-92dc-b238c9ae3531' class='xr-index-data-in' type='checkbox'/><label for='index-8d6a5249-b1bd-4c87-92dc-b238c9ae3531' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([1750.0, 1850.0, 1860.0, 1870.0, 1880.0, 1890.0, 1900.0, 1910.0, 1920.0,
-       1930.0, 1940.0, 1950.0, 1960.0, 1970.0, 1980.0, 1990.0, 2000.0, 2010.0],
-      dtype=&#x27;float64&#x27;, name=&#x27;time&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-fa574738-de3e-451f-bacc-c825f0499cf5' class='xr-section-summary-in' type='checkbox'  checked><label for='section-fa574738-de3e-451f-bacc-c825f0499cf5' class='xr-section-summary' >Attributes: <span>(8)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>title :</span></dt><dd>Global surface ocean pH on total hydrogen ion scale (unit: N/A) on a 1 x 1 grid
-   in 1750, and all decades from 1850 to 2010.</dd><dt><span>comment :</span></dt><dd>This gridded data product contains pH on total hydrogen ion scale
-   [median of 14 Earth System Models from the sixth phase of the Coupled Model
-   Intercomparison Project (CMIP6)] on a global [20.5:1:379.5] degree longitude
-   x [-89.5:1:89.75] degree latitude grid in the global surface ocean in 1750 and
-   all decades from 1850 to 2010, i.e., 1750, 1850, 1860, 1870, 1880, 1890, 1900,
-   1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010.
-
-   At each grid point, temperature, salinity, DIC, and TA were estimated based on
-   their temporal changes out of fourteen Earth System Models of the
-   sixth phase of the Coupled Model Intercomparison Project (CMIP6):
-   (1) ACCESS-ESM1-5, Ziehn et al., 2020, https://doi.org/10.1071/es19035,
-   (2) CanESM5, Swart et al., 2019, https://doi.org/10.5194/gmd-12-4823-2019,
-   (3) CESM2, Danabasoglu et al., 2020, https://doi.org/10.1029/2019ms001916,
-   (4) CMCC-ESM2, Lovato et al., 2022, https://doi.org/10.1029/2021ms002814,
-   (5) CNRM-ESM-2, Séférian et al., 2019, https://doi.org/10.1029/2019ms001791,
-   (6) EC-Earth3-CC, Döscher et al., 2021, https://doi.org/10.5194/gmd-2020-446,
-   (7) GFDL-CM4, Held et al., 2019, https://doi.org/10.1029/2019MS001829,
-   (8) GFDL-ESM4, Dunne et al., 2020, https://doi.org/10.1029/2019MS002015,
-   (9) IPSL-CM6A-LR, Boucher et al., 2020, https://doi.org/10.1029/2019ms002010,
-   (10) MIROC-ES2L, Hajima et al., 2020, https://doi.org/10.5194/gmd-13-2197-2020,
-   (11) MPI-ESM1-2-LR, Mauritsen et al., 2019, https://doi.org/10.1029/2018ms001400,
-   (12) MRI-ESM2-0, Yukimoto et al., 2019, https://doi.org/10.2151/jmsj.2019-051,
-   (13) NorESM2-LM, Seland et al., 2020, https://doi.org/10.5194/gmd-13-6165-2020,
-   (14) UKESM1-0-LL), Sellar et al., 2019, https://doi.org/10.1029/2019ms001739,
-
-   with bias corrections based on three latest observational data products:
-   (1) the Surface Ocean CO2 Atlas (SOCAT, version 2021, Bakker et al., 2016,
-   https://doi.org/10.5194/essd-8-383-2016),
-   (2) the Global Ocean Data Analysis Product Version 2 (GLODAPv2, version 2021, Lauvset et al., 2021,
-   https://doi.org/10.5194/essd-13-5565-2021), and
-   (3) the Coastal Ocean Data Analysis Product in North America (CODAP-NA, version 2021, Jiang et al., 2021,
-   https://doi.org/10.5194/essd-13-2777-2021).
-
-   Once temperature, salinity, DIC, and TA at that decade were calculated,
-   they were then used to calculate the rest of the OA indicators. The CO2 system
-   calculation was conducted using CO2System.jl (Humphreys et al., 2022) with the
-   dissociation constants and parameter as recommended by Jiang et al. (2022),
-   i.e., dissociation constants for carbonic acid of Lueker et al. (2000),
-   potassium bisulfate (KHSO4–) of Dickson (1990), hydrofluoric acid (HF) of
-   Perez and Fraga (1987), and the total borate concentration equations of
-   Lee et al. (2010). The values reported in this NetCDF are the median values
-   among all 14 ESMs at each of the grid point</dd><dt><span>reference :</span></dt><dd>Jiang, L-Q., J. Dunne, B. R. Carter, J. Tjiputra,
-   J. Terhaar, J. D. Sharp, A. Olsen, R. A. Feely, R. Wanninkhof, P. Hogan,
-   S. Alin, T. Ilyina, N. Lange, S. K. Lauvset, T. Lovato, Julien Palmieri,
-   Y. Santana-Falcón, J. Schwinger, R. Séférian, G Strand, N. Swart, T. Tanhua,
-   H. Tsujino, M. Watanabe, A. Yamamoto, T. Ziehn. (2022). Global surface ocean
-   acidification indicators: past, present, and future. Global Biogeochemical
-   Cycles, under review.</dd><dt><span>Fair_use_statement :</span></dt><dd>This data product is made freely available
-   to the public and the scientific community. If it is used in scientific
-   publications, please cite the paper on GBC, so that readers can access all of the
-   detailed information about this data product. If these data are essential to
-   the work, or if an important result or conclusion depends on these data,
-   co-authorship may be appropriate. This should be discussed at an early stage
-   in the work.</dd><dt><span>created_by :</span></dt><dd>Li-Qing Jiang</dd><dt><span>institution :</span></dt><dd>(a) Cooperative Institute for Satellite Earth System Studies, Earth System
-   Science Interdisciplinary Center, University of Maryland, College Park, Maryland
-   20740, United States, and
-   (b) National Centers for Environmental Information, National Oceanic and
-   Atmospheric Administration, Silver Spring, Maryland 20910, United States</dd><dt><span>contact :</span></dt><dd>&lt;Liqing.Jiang@noaa.gov&gt;</dd><dt><span>creation_date :</span></dt><dd>August 14, 2022</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <p>These are the files of the climate change projections under various scenarios (SSP1-19, SSP1-26, SSP2-45, SSP3-70, and SSP5-85, recall W2D1 tutorials) for those feeling adventurous:</p>
 <ul class="simple">
@@ -1736,13 +1407,13 @@ Attributes:
 </div>
 </div>
 <div class="section" id="copernicus">
-<h2><strong>Copernicus</strong><a class="headerlink" href="#copernicus" title="Permalink to this headline">¶</a></h2>
+<h2>Copernicus<a class="headerlink" href="#copernicus" title="Permalink to this headline">#</a></h2>
 <p>Copernicus is the Earth observation component of the European Union’s Space programme, looking at our planet and its environment to benefit all European citizens. It offers information services that draw from satellite Earth Observation and in-situ (non-space) data.</p>
 <p>The European Commission manages the Programme. It is implemented in partnership with the Member States, the European Space Agency (ESA), the European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT), the European Centre for Medium-Range Weather Forecasts (ECMWF), EU Agencies and Mercator Océan.</p>
 <p>Vast amounts of global data from satellites and ground-based, airborne, and seaborne measurement systems provide information to help service providers, public authorities, and other international organisations improve European citizens’ quality of life and beyond. The information services provided are free and openly accessible to users.</p>
 <p><strong>Source</strong>: https://www.copernicus.eu/en/about-copernicus</p>
 <div class="section" id="ecmwf-atmospheric-composition-reanalysis-carbon-dioxide-co-sub-2-sub">
-<h3>ECMWF Atmospheric Composition Reanalysis: Carbon Dioxide (CO<sub>2</sub>)<a class="headerlink" href="#ecmwf-atmospheric-composition-reanalysis-carbon-dioxide-co-sub-2-sub" title="Permalink to this headline">¶</a></h3>
+<h3>ECMWF Atmospheric Composition Reanalysis: Carbon Dioxide (CO<sub>2</sub>)<a class="headerlink" href="#ecmwf-atmospheric-composition-reanalysis-carbon-dioxide-co-sub-2-sub" title="Permalink to this headline">#</a></h3>
 <p>From this dataset we will use <strong>CO<sub>2</sub> column-mean molar fraction</strong> from the Single-level chemical vertical integrals variables &amp; <strong>Sea Surface Temperature</strong> from the Single-level meteorological variables (in case you need to download them direclty from the catalog).</p>
 <p>This dataset is part of the <a class="reference external" href="https://www.copernicus.eu/en/access-data/copernicus-services-catalogue/cams-global-ghg-reanalysis-egg4-monthly">ECMWF Atmospheric Composition Reanalysis focusing on long-lived greenhouse gases: carbon dioxide (CO<sub>2</sub>) and methane (CH<sub>4</sub>)</a>. The emissions and natural fluxes at the surface are crucial for the evolution of the long-lived greenhouse gases in the atmosphere. In this dataset the CO<sub>2</sub> fluxes from terrestrial vegetation are modelled in order to simulate the variability across a wide range of scales from diurnal to inter-annual. The CH<sub>4</sub> chemical loss is represented by a climatological loss rate and the emissions at the surface are taken from a range of datasets.</p>
 <p>Reanalysis combines model data with observations from across the world into a globally complete and consistent dataset using a model of the atmosphere based on the laws of physics and chemistry. This principle, called data assimilation, is based on the method used by numerical weather prediction centres and air quality forecasting centres, where every so many hours (12 hours at ECMWF) a previous forecast is combined with newly available observations in an optimal way to produce a new best estimate of the state of the atmosphere, called analysis, from which an updated, improved forecast is issued. Reanalysis works in the same way to allow for the provision of a dataset spanning back more than a decade. Reanalysis does not have the constraint of issuing timely forecasts, so there is more time to collect observations, and when going further back in time, to allow for the ingestion of improved versions of the original observations, which all benefit the quality of the reanalysis product.</p>
@@ -1757,149 +1428,6 @@ Attributes:
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>year</th>
-      <th>month</th>
-      <th>decimal</th>
-      <th>average</th>
-      <th>average_unc</th>
-      <th>trend</th>
-      <th>trend_unc</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1979</td>
-      <td>1</td>
-      <td>1979.042</td>
-      <td>336.56</td>
-      <td>0.10</td>
-      <td>335.92</td>
-      <td>0.09</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1979</td>
-      <td>2</td>
-      <td>1979.125</td>
-      <td>337.29</td>
-      <td>0.09</td>
-      <td>336.25</td>
-      <td>0.09</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1979</td>
-      <td>3</td>
-      <td>1979.208</td>
-      <td>337.88</td>
-      <td>0.10</td>
-      <td>336.51</td>
-      <td>0.09</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1979</td>
-      <td>4</td>
-      <td>1979.292</td>
-      <td>338.32</td>
-      <td>0.11</td>
-      <td>336.72</td>
-      <td>0.09</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1979</td>
-      <td>5</td>
-      <td>1979.375</td>
-      <td>338.26</td>
-      <td>0.04</td>
-      <td>336.71</td>
-      <td>0.10</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>526</th>
-      <td>2022</td>
-      <td>11</td>
-      <td>2022.875</td>
-      <td>417.72</td>
-      <td>0.10</td>
-      <td>417.94</td>
-      <td>0.06</td>
-    </tr>
-    <tr>
-      <th>527</th>
-      <td>2022</td>
-      <td>12</td>
-      <td>2022.958</td>
-      <td>418.75</td>
-      <td>0.10</td>
-      <td>418.15</td>
-      <td>0.06</td>
-    </tr>
-    <tr>
-      <th>528</th>
-      <td>2023</td>
-      <td>1</td>
-      <td>2023.042</td>
-      <td>419.37</td>
-      <td>0.10</td>
-      <td>418.26</td>
-      <td>0.06</td>
-    </tr>
-    <tr>
-      <th>529</th>
-      <td>2023</td>
-      <td>2</td>
-      <td>2023.125</td>
-      <td>419.72</td>
-      <td>0.10</td>
-      <td>418.30</td>
-      <td>0.06</td>
-    </tr>
-    <tr>
-      <th>530</th>
-      <td>2023</td>
-      <td>3</td>
-      <td>2023.208</td>
-      <td>420.13</td>
-      <td>0.10</td>
-      <td>418.49</td>
-      <td>0.06</td>
-    </tr>
-  </tbody>
-</table>
-<p>531 rows × 7 columns</p>
-</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1915,415 +1443,15 @@ Attributes:
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
-<defs>
-<symbol id="icon-database" viewBox="0 0 32 32">
-<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
-<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
-<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
-</symbol>
-<symbol id="icon-file-text2" viewBox="0 0 32 32">
-<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
-<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
-<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
-<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
-</symbol>
-</defs>
-</svg>
-<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
- *
- */
-
-:root {
-  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
-  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
-  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
-  --xr-border-color: var(--jp-border-color2, #e0e0e0);
-  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
-  --xr-background-color: var(--jp-layout-color0, white);
-  --xr-background-color-row-even: var(--jp-layout-color1, white);
-  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
-}
-
-html[theme=dark],
-body[data-theme=dark],
-body.vscode-dark {
-  --xr-font-color0: rgba(255, 255, 255, 1);
-  --xr-font-color2: rgba(255, 255, 255, 0.54);
-  --xr-font-color3: rgba(255, 255, 255, 0.38);
-  --xr-border-color: #1F1F1F;
-  --xr-disabled-color: #515151;
-  --xr-background-color: #111111;
-  --xr-background-color-row-even: #111111;
-  --xr-background-color-row-odd: #313131;
-}
-
-.xr-wrap {
-  display: block !important;
-  min-width: 300px;
-  max-width: 700px;
-}
-
-.xr-text-repr-fallback {
-  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
-  display: none;
-}
-
-.xr-header {
-  padding-top: 6px;
-  padding-bottom: 6px;
-  margin-bottom: 4px;
-  border-bottom: solid 1px var(--xr-border-color);
-}
-
-.xr-header > div,
-.xr-header > ul {
-  display: inline;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.xr-obj-type,
-.xr-array-name {
-  margin-left: 2px;
-  margin-right: 10px;
-}
-
-.xr-obj-type {
-  color: var(--xr-font-color2);
-}
-
-.xr-sections {
-  padding-left: 0 !important;
-  display: grid;
-  grid-template-columns: 150px auto auto 1fr 20px 20px;
-}
-
-.xr-section-item {
-  display: contents;
-}
-
-.xr-section-item input {
-  display: none;
-}
-
-.xr-section-item input + label {
-  color: var(--xr-disabled-color);
-}
-
-.xr-section-item input:enabled + label {
-  cursor: pointer;
-  color: var(--xr-font-color2);
-}
-
-.xr-section-item input:enabled + label:hover {
-  color: var(--xr-font-color0);
-}
-
-.xr-section-summary {
-  grid-column: 1;
-  color: var(--xr-font-color2);
-  font-weight: 500;
-}
-
-.xr-section-summary > span {
-  display: inline-block;
-  padding-left: 0.5em;
-}
-
-.xr-section-summary-in:disabled + label {
-  color: var(--xr-font-color2);
-}
-
-.xr-section-summary-in + label:before {
-  display: inline-block;
-  content: '►';
-  font-size: 11px;
-  width: 15px;
-  text-align: center;
-}
-
-.xr-section-summary-in:disabled + label:before {
-  color: var(--xr-disabled-color);
-}
-
-.xr-section-summary-in:checked + label:before {
-  content: '▼';
-}
-
-.xr-section-summary-in:checked + label > span {
-  display: none;
-}
-
-.xr-section-summary,
-.xr-section-inline-details {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-.xr-section-inline-details {
-  grid-column: 2 / -1;
-}
-
-.xr-section-details {
-  display: none;
-  grid-column: 1 / -1;
-  margin-bottom: 5px;
-}
-
-.xr-section-summary-in:checked ~ .xr-section-details {
-  display: contents;
-}
-
-.xr-array-wrap {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 20px auto;
-}
-
-.xr-array-wrap > label {
-  grid-column: 1;
-  vertical-align: top;
-}
-
-.xr-preview {
-  color: var(--xr-font-color3);
-}
-
-.xr-array-preview,
-.xr-array-data {
-  padding: 0 5px !important;
-  grid-column: 2;
-}
-
-.xr-array-data,
-.xr-array-in:checked ~ .xr-array-preview {
-  display: none;
-}
-
-.xr-array-in:checked ~ .xr-array-data,
-.xr-array-preview {
-  display: inline-block;
-}
-
-.xr-dim-list {
-  display: inline-block !important;
-  list-style: none;
-  padding: 0 !important;
-  margin: 0;
-}
-
-.xr-dim-list li {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-}
-
-.xr-dim-list:before {
-  content: '(';
-}
-
-.xr-dim-list:after {
-  content: ')';
-}
-
-.xr-dim-list li:not(:last-child):after {
-  content: ',';
-  padding-right: 5px;
-}
-
-.xr-has-index {
-  font-weight: bold;
-}
-
-.xr-var-list,
-.xr-var-item {
-  display: contents;
-}
-
-.xr-var-item > div,
-.xr-var-item label,
-.xr-var-item > .xr-var-name span {
-  background-color: var(--xr-background-color-row-even);
-  margin-bottom: 0;
-}
-
-.xr-var-item > .xr-var-name:hover span {
-  padding-right: 5px;
-}
-
-.xr-var-list > li:nth-child(odd) > div,
-.xr-var-list > li:nth-child(odd) > label,
-.xr-var-list > li:nth-child(odd) > .xr-var-name span {
-  background-color: var(--xr-background-color-row-odd);
-}
-
-.xr-var-name {
-  grid-column: 1;
-}
-
-.xr-var-dims {
-  grid-column: 2;
-}
-
-.xr-var-dtype {
-  grid-column: 3;
-  text-align: right;
-  color: var(--xr-font-color2);
-}
-
-.xr-var-preview {
-  grid-column: 4;
-}
-
-.xr-index-preview {
-  grid-column: 2 / 5;
-  color: var(--xr-font-color2);
-}
-
-.xr-var-name,
-.xr-var-dims,
-.xr-var-dtype,
-.xr-preview,
-.xr-attrs dt {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding-right: 10px;
-}
-
-.xr-var-name:hover,
-.xr-var-dims:hover,
-.xr-var-dtype:hover,
-.xr-attrs dt:hover {
-  overflow: visible;
-  width: auto;
-  z-index: 1;
-}
-
-.xr-var-attrs,
-.xr-var-data,
-.xr-index-data {
-  display: none;
-  background-color: var(--xr-background-color) !important;
-  padding-bottom: 5px !important;
-}
-
-.xr-var-attrs-in:checked ~ .xr-var-attrs,
-.xr-var-data-in:checked ~ .xr-var-data,
-.xr-index-data-in:checked ~ .xr-index-data {
-  display: block;
-}
-
-.xr-var-data > table {
-  float: right;
-}
-
-.xr-var-name span,
-.xr-var-data,
-.xr-index-name div,
-.xr-index-data,
-.xr-attrs {
-  padding-left: 25px !important;
-}
-
-.xr-attrs,
-.xr-var-attrs,
-.xr-var-data,
-.xr-index-data {
-  grid-column: 1 / -1;
-}
-
-dl.xr-attrs {
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: 125px auto;
-}
-
-.xr-attrs dt,
-.xr-attrs dd {
-  padding: 0;
-  margin: 0;
-  float: left;
-  padding-right: 10px;
-  width: auto;
-}
-
-.xr-attrs dt {
-  font-weight: normal;
-  grid-column: 1;
-}
-
-.xr-attrs dt:hover span {
-  display: inline-block;
-  background: var(--xr-background-color);
-  padding-right: 10px;
-}
-
-.xr-attrs dd {
-  grid-column: 2;
-  white-space: pre-wrap;
-  word-break: break-all;
-}
-
-.xr-icon-database,
-.xr-icon-file-text2,
-.xr-no-icon {
-  display: inline-block;
-  vertical-align: middle;
-  width: 1em;
-  height: 1.5em !important;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
-}
-</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
-Dimensions:  (time: 499, lat: 720, lon: 1440)
-Coordinates:
-  * time     (time) datetime64[ns] 1981-09-01 1981-10-01 ... 2023-03-01
-  * lat      (lat) float32 -89.88 -89.62 -89.38 -89.12 ... 89.38 89.62 89.88
-  * lon      (lon) float32 0.125 0.375 0.625 0.875 ... 359.1 359.4 359.6 359.9
-Data variables:
-    sst      (time, lat, lon) float32 ...
-Attributes:
-    Conventions:    CF-1.5
-    title:          NOAA/NCEI 1/4 Degree Daily Optimum Interpolation Sea Surf...
-    institution:    NOAA/National Centers for Environmental Information
-    source:         NOAA/NCEI https://www.ncei.noaa.gov/data/sea-surface-temp...
-    References:     https://www.psl.noaa.gov/data/gridded/data.noaa.oisst.v2....
-    dataset_title:  NOAA Daily Optimum Interpolation Sea Surface Temperature
-    version:        Version 2.1
-    comment:        Reynolds, et al.(2007) Daily High-Resolution-Blended Anal...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-f7179d8b-8b7c-49b2-90f7-12e1142a8625' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-f7179d8b-8b7c-49b2-90f7-12e1142a8625' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 499</li><li><span class='xr-has-index'>lat</span>: 720</li><li><span class='xr-has-index'>lon</span>: 1440</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-39dacd34-7527-48e6-843a-fe2f97281612' class='xr-section-summary-in' type='checkbox'  checked><label for='section-39dacd34-7527-48e6-843a-fe2f97281612' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>1981-09-01 ... 2023-03-01</div><input id='attrs-b3c8c6b6-92c6-4043-b3f0-31b992f666c0' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-b3c8c6b6-92c6-4043-b3f0-31b992f666c0' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d8549407-5164-4e32-9375-3513cee958f8' class='xr-var-data-in' type='checkbox'><label for='data-d8549407-5164-4e32-9375-3513cee958f8' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Time</dd><dt><span>delta_t :</span></dt><dd>0000-01-00 00:00:00</dd><dt><span>avg_period :</span></dt><dd>0000-01-00 00:00:00</dd><dt><span>axis :</span></dt><dd>T</dd><dt><span>actual_range :</span></dt><dd>[66352. 81508.]</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;1981-09-01T00:00:00.000000000&#x27;, &#x27;1981-10-01T00:00:00.000000000&#x27;,
-       &#x27;1981-11-01T00:00:00.000000000&#x27;, ..., &#x27;2023-01-01T00:00:00.000000000&#x27;,
-       &#x27;2023-02-01T00:00:00.000000000&#x27;, &#x27;2023-03-01T00:00:00.000000000&#x27;],
-      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-89.88 -89.62 ... 89.62 89.88</div><input id='attrs-4efc0b09-5284-4150-ad0a-45806071bdd6' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-4efc0b09-5284-4150-ad0a-45806071bdd6' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-893e850f-46d0-46e3-bd5e-242df9191203' class='xr-var-data-in' type='checkbox'><label for='data-893e850f-46d0-46e3-bd5e-242df9191203' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>actual_range :</span></dt><dd>[-89.875  89.875]</dd><dt><span>axis :</span></dt><dd>Y</dd></dl></div><div class='xr-var-data'><pre>array([-89.875, -89.625, -89.375, ...,  89.375,  89.625,  89.875],
-      dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.125 0.375 0.625 ... 359.6 359.9</div><input id='attrs-a51de0ec-ff6e-42d1-ab48-dd08756cb1f9' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-a51de0ec-ff6e-42d1-ab48-dd08756cb1f9' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-20c1d038-386f-4841-8331-2e61c8d40fc3' class='xr-var-data-in' type='checkbox'><label for='data-20c1d038-386f-4841-8331-2e61c8d40fc3' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>actual_range :</span></dt><dd>[1.25000e-01 3.59875e+02]</dd><dt><span>axis :</span></dt><dd>X</dd></dl></div><div class='xr-var-data'><pre>array([1.25000e-01, 3.75000e-01, 6.25000e-01, ..., 3.59375e+02, 3.59625e+02,
-       3.59875e+02], dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-2db629b2-d483-4a10-8720-721dcaf31e25' class='xr-section-summary-in' type='checkbox'  checked><label for='section-2db629b2-d483-4a10-8720-721dcaf31e25' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>sst</span></div><div class='xr-var-dims'>(time, lat, lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-93cfc99b-4d66-4c05-bed1-b00a83e1031d' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-93cfc99b-4d66-4c05-bed1-b00a83e1031d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-dbe95ca9-5cdb-447d-b3ad-8b30e04082d4' class='xr-var-data-in' type='checkbox'><label for='data-dbe95ca9-5cdb-447d-b3ad-8b30e04082d4' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Monthly Mean of Sea Surface Temperature</dd><dt><span>units :</span></dt><dd>degC</dd><dt><span>valid_range :</span></dt><dd>[-3. 45.]</dd><dt><span>precision :</span></dt><dd>2.0</dd><dt><span>dataset :</span></dt><dd>NOAA High-resolution Blended Analysis</dd><dt><span>var_desc :</span></dt><dd>Sea Surface Temperature</dd><dt><span>level_desc :</span></dt><dd>Surface</dd><dt><span>statistic :</span></dt><dd>Monthly Mean</dd><dt><span>parent_stat :</span></dt><dd>Individual Observations</dd><dt><span>actual_range :</span></dt><dd>[-1.8  32.14]</dd><dt><span>standard_name :</span></dt><dd>sea_surface_temperature</dd></dl></div><div class='xr-var-data'><pre>[517363200 values with dtype=float32]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-4014e5f1-4330-4c37-8b56-172a44041f20' class='xr-section-summary-in' type='checkbox'  ><label for='section-4014e5f1-4330-4c37-8b56-172a44041f20' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-cd30fbd4-3f12-40f6-8daf-044ce59dd8c5' class='xr-index-data-in' type='checkbox'/><label for='index-cd30fbd4-3f12-40f6-8daf-044ce59dd8c5' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;1981-09-01&#x27;, &#x27;1981-10-01&#x27;, &#x27;1981-11-01&#x27;, &#x27;1981-12-01&#x27;,
-               &#x27;1982-01-01&#x27;, &#x27;1982-02-01&#x27;, &#x27;1982-03-01&#x27;, &#x27;1982-04-01&#x27;,
-               &#x27;1982-05-01&#x27;, &#x27;1982-06-01&#x27;,
-               ...
-               &#x27;2022-06-01&#x27;, &#x27;2022-07-01&#x27;, &#x27;2022-08-01&#x27;, &#x27;2022-09-01&#x27;,
-               &#x27;2022-10-01&#x27;, &#x27;2022-11-01&#x27;, &#x27;2022-12-01&#x27;, &#x27;2023-01-01&#x27;,
-               &#x27;2023-02-01&#x27;, &#x27;2023-03-01&#x27;],
-              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time&#x27;, length=499, freq=None))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lat</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-056baae3-3de8-48d6-8af3-a4c71130b07c' class='xr-index-data-in' type='checkbox'/><label for='index-056baae3-3de8-48d6-8af3-a4c71130b07c' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([-89.875, -89.625, -89.375, -89.125, -88.875, -88.625, -88.375, -88.125,
-       -87.875, -87.625,
-       ...
-        87.625,  87.875,  88.125,  88.375,  88.625,  88.875,  89.125,  89.375,
-        89.625,  89.875],
-      dtype=&#x27;float32&#x27;, name=&#x27;lat&#x27;, length=720))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lon</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-9d66261a-2e57-4aae-9795-5cf055e849df' class='xr-index-data-in' type='checkbox'/><label for='index-9d66261a-2e57-4aae-9795-5cf055e849df' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([  0.125,   0.375,   0.625,   0.875,   1.125,   1.375,   1.625,   1.875,
-         2.125,   2.375,
-       ...
-       357.625, 357.875, 358.125, 358.375, 358.625, 358.875, 359.125, 359.375,
-       359.625, 359.875],
-      dtype=&#x27;float32&#x27;, name=&#x27;lon&#x27;, length=1440))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-70e7cb65-d517-468f-b561-463fd5925c5a' class='xr-section-summary-in' type='checkbox'  checked><label for='section-70e7cb65-d517-468f-b561-463fd5925c5a' class='xr-section-summary' >Attributes: <span>(8)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.5</dd><dt><span>title :</span></dt><dd>NOAA/NCEI 1/4 Degree Daily Optimum Interpolation Sea Surface Temperature (OISST) Analysis, Version 2.1</dd><dt><span>institution :</span></dt><dd>NOAA/National Centers for Environmental Information</dd><dt><span>source :</span></dt><dd>NOAA/NCEI https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/</dd><dt><span>References :</span></dt><dd>https://www.psl.noaa.gov/data/gridded/data.noaa.oisst.v2.highres.html</dd><dt><span>dataset_title :</span></dt><dd>NOAA Daily Optimum Interpolation Sea Surface Temperature</dd><dt><span>version :</span></dt><dd>Version 2.1</dd><dt><span>comment :</span></dt><dd>Reynolds, et al.(2007) Daily High-Resolution-Blended Analyses for Sea Surface Temperature (available at https://doi.org/10.1175/2007JCLI1824.1). Banzon, et al.(2016) A long-term record of blended satellite and in situ sea-surface temperature for climate monitoring, modeling and environmental studies (available at https://doi.org/10.5194/essd-8-165-2016). Huang, B., C. Liu, V. Banzon, E. Freeman, G. Graham, B. Hankins, T. Smith, and H.-M. Zhang, 2021: Improvements of the Daily Optimum Interpolation Sea Surface Temperature (DOISST) Version 2.1 (available at https://doi.org/10.1175/JCLI-D-20-0166.1). Anomaly is based on 1971-2000 OI.v2 SST. Satellite data: multi-satellite sensor (AVHRR+VIIRS) data. Ice data: NCEP Ice and GSFC Ice. Data less than 15 days old may be subject to revision.</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <p><strong>Hint for question 4:</strong></p>
 <p>Use the attached image (figure 5 in this <a class="reference external" href="https://coastadapt.com.au/ocean-acidification-and-its-effects">website</a>) and this <a class="reference external" href="https://mapper.obis.org/">mapping tool</a>. Search for each species on the mapping tool to see the spatial global distribution.</p>
 <p><img alt="effects of ocean acidifaction" src="https://coastadapt.com.au/sites/default/files/coastadapt_image/T2I3_Figure%205.jpg" /></p>
 </div>
 </div>
+</div>
+<div class="section" id="further-reading">
+<h1>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">#</a></h1>
 </div>
 
     <script type="text/x-thebe-config">
@@ -2357,13 +1485,13 @@ Attributes:
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><strong>Sea level rise</strong></p>
+            <p class="prev-next-title"><strong>Sea Level Rise</strong></p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="ENSO_impact_on_precipitation_and_temperature.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>The impact of ENSO on precipitation and temperature</strong></p>
+        <p class="prev-next-title"><strong>The Impact of ENSO on Precipitation and Temperature</strong></p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

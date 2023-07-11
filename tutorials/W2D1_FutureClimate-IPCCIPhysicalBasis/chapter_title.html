@@ -19,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -32,7 +32,7 @@
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -40,8 +40,8 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
@@ -50,7 +50,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/cma-logo-square-4xp.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Figure settings" href="student/W2D1_Tutorial1.html" />
+    <link rel="next" title="Tutorial 1: Creating Maps of CMIP6 Earth System Model (ESM) Projections" href="student/W2D1_Tutorial1.html" />
     <link rel="prev" title="&lt;no title&gt;" href="../W1D5_ClimateModeling/further_reading.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -127,6 +127,11 @@ const thebe_selector_output = ".output, .cell_output"
      General Schedule
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Schedule/shared_calendars.html">
+     Shared calendars
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -185,7 +190,14 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<p class="caption">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../prereqs/ClimateScience.html">
+   Prerequisites and preparatory materials for Computational Tools for Climate Science
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Fundamentals
  </span>
@@ -335,7 +347,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Climate Data
  </span>
@@ -531,7 +543,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Climate Future
  </span>
@@ -610,32 +622,44 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="student/W2D1_Tutorial1.html">
-     Figure settings
+     <strong>
+      Tutorial 1: Creating Maps of CMIP6 Earth System Model (ESM) Projections
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="student/W2D1_Tutorial2.html">
-     Figure settings
+     <strong>
+      Tutorial 2: Time Series, Global Averages, and Scenario Comparison
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="student/W2D1_Tutorial3.html">
-     Figure settings
+     <strong>
+      Tutorial 3: Multi-model Ensembles
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="student/W2D1_Tutorial4.html">
-     Figure settings
+     <strong>
+      Tutorial 4: Quantifying Uncertainty in Projections
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="student/W2D1_Tutorial5.html">
-     Figure settings
+     <strong>
+      Tutorial 5: Internal Climate Variability
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="student/W2D1_Tutorial6.html">
-     Figure settings
+     <strong>
+      Tutorial 6: Synthesising &amp; Interpreting Diverse Data Sources
+     </strong>
     </a>
    </li>
   </ul>
@@ -681,7 +705,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Climate Response
  </span>
@@ -698,23 +722,59 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial1.html">
+     <strong>
+      Tutorial 1: Distributions
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial2.html">
-     Data investigation
+     <strong>
+      Tutorial 2: What is an Extreme Event? Empirical Return Levels
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial3.html">
+     <strong>
+      Tutorial 3: Extreme Value Analysis - the GEV Distribution
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial4.html">
+     <strong>
+      Tutorial 4: Return Levels Using Normal and GEV Distributions
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial5.html">
-     Fit Moments using a different method
+     <strong>
+      Tutorial 5: Non-stationarity in Historical Records
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial6.html">
+     <strong>
+      Tutorial 6: Scenario-dependence of Future Changes in Extremes
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial7.html">
-     Load CMIP6 data
+     <strong>
+      Tutorial 7: Non-Stationarity in the EVT-framework
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial8.html">
-     scale as function of time
+     <strong>
+      Tutorial 8: Thresholds
+     </strong>
     </a>
    </li>
   </ul>
@@ -760,7 +820,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Project Booklet
  </span>
@@ -789,50 +849,46 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../projects/project-notebooks/Sea_level_rise.html">
      <strong>
-      Sea level rise
+      Sea Level Rise
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../projects/project-notebooks/Ocean_acidification.html">
      <strong>
-      Ocean acidification
+      Ocean Acidification
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.html">
      <strong>
-      The impact of ENSO on precipitation and temperature
+      The Impact of ENSO on Precipitation and Temperature
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../projects/project-notebooks/Regional_precipitation_variability.html">
-     <strong>
-      Regional precipitation variability and extreme events
-     </strong>
+     Regional Precipitation Variability and Extreme Events
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../projects/project-notebooks/Heatwaves.html">
      <strong>
-      Heatwaves: Assessing the dynamic interactions of the atmosphere and land
+      Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../projects/project-notebooks/Wildfires_and_burnt_areas.html">
      <strong>
-      Monitoring and mapping wildfires using satellite data
+      Monitoring and Mapping Wildfires Using Satellite Data
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../projects/project-notebooks/Surface_albedo_and_land_use.html">
-     <strong>
-      Change in Earth’s albedo and its dependence on land cover changes in the past 20 years
-     </strong>
+    <a class="reference internal" href="../../projects/project-notebooks/Surface_albedo_and_land_cover.html">
+     Changes in Land Cover: Albedo and Carbon Sequestration
     </a>
    </li>
   </ul>
@@ -840,6 +896,38 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../../projects/docs/continuing_your_project_after_the_course.html">
    Continuing your project after the course
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Professional Development
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../projects/professional_development/README.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../projects/professional_development/impact_talks.html">
+   Impact Talks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../projects/professional_development/mentors.html">
+   Mentor Meetings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../projects/professional_development/career_features.html">
+   Career Features
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../projects/professional_development/career_panels.html">
+   Career Panels
   </a>
  </li>
 </ul>
@@ -1022,9 +1110,9 @@ title="Print to PDF"
               <div>
                 
   <div class="section" id="future-climate-ipcc-i-physical-basis">
-<h1>Future Climate - IPCC I Physical Basis<a class="headerlink" href="#future-climate-ipcc-i-physical-basis" title="Permalink to this headline">¶</a></h1>
-<div class="full-width docutils">
-<a class="reference internal image-reference" href="../../_images/W2D1_IPCC-Sloane_Garelick.png"><img alt="art relevant to chapter contents" src="../../_images/W2D1_IPCC-Sloane_Garelick.png" style="width: 100%;" /></a>
+<h1>Future Climate - IPCC I Physical Basis<a class="headerlink" href="#future-climate-ipcc-i-physical-basis" title="Permalink to this headline">#</a></h1>
+<div class="full-height docutils">
+<a class="reference internal image-reference" href="../../_images/W2D1_IPCC-Sloane_Garelick.svg"><img alt="art relevant to chapter contents" src="../../_images/W2D1_IPCC-Sloane_Garelick.svg" width="100%" /></a>
 </div>
 <p><em>Artwork by Sloane Garelick</em></p>
 <div class="toctree-wrapper compound">
@@ -1068,7 +1156,7 @@ title="Print to PDF"
     <a class='right-next' id="next-link" href="student/W2D1_Tutorial1.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Figure settings</p>
+        <p class="prev-next-title"><strong>Tutorial 1: Creating Maps of CMIP6 Earth System Model (ESM) Projections</strong></p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

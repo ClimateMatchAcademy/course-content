@@ -19,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -32,7 +32,7 @@
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -40,8 +40,8 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
@@ -127,6 +127,11 @@ const thebe_selector_output = ".output, .cell_output"
      General Schedule
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Schedule/shared_calendars.html">
+     Shared calendars
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -185,7 +190,14 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<p class="caption">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../prereqs/ClimateScience.html">
+   Prerequisites and preparatory materials for Computational Tools for Climate Science
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Fundamentals
  </span>
@@ -335,7 +347,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Climate Data
  </span>
@@ -531,7 +543,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Climate Future
  </span>
@@ -610,32 +622,44 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial1.html">
-     Figure settings
+     <strong>
+      Tutorial 1: Creating Maps of CMIP6 Earth System Model (ESM) Projections
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial2.html">
-     Figure settings
+     <strong>
+      Tutorial 2: Time Series, Global Averages, and Scenario Comparison
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial3.html">
-     Figure settings
+     <strong>
+      Tutorial 3: Multi-model Ensembles
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial4.html">
-     Figure settings
+     <strong>
+      Tutorial 4: Quantifying Uncertainty in Projections
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial5.html">
-     Figure settings
+     <strong>
+      Tutorial 5: Internal Climate Variability
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial6.html">
-     Figure settings
+     <strong>
+      Tutorial 6: Synthesising &amp; Interpreting Diverse Data Sources
+     </strong>
     </a>
    </li>
   </ul>
@@ -681,7 +705,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Climate Response
  </span>
@@ -698,23 +722,59 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial1.html">
+     <strong>
+      Tutorial 1: Distributions
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial2.html">
-     Data investigation
+     <strong>
+      Tutorial 2: What is an Extreme Event? Empirical Return Levels
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial3.html">
+     <strong>
+      Tutorial 3: Extreme Value Analysis - the GEV Distribution
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial4.html">
+     <strong>
+      Tutorial 4: Return Levels Using Normal and GEV Distributions
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial5.html">
-     Fit Moments using a different method
+     <strong>
+      Tutorial 5: Non-stationarity in Historical Records
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial6.html">
+     <strong>
+      Tutorial 6: Scenario-dependence of Future Changes in Extremes
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial7.html">
-     Load CMIP6 data
+     <strong>
+      Tutorial 7: Non-Stationarity in the EVT-framework
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial8.html">
-     scale as function of time
+     <strong>
+      Tutorial 8: Thresholds
+     </strong>
     </a>
    </li>
   </ul>
@@ -760,7 +820,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Project Booklet
  </span>
@@ -789,50 +849,46 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../projects/project-notebooks/Sea_level_rise.html">
      <strong>
-      Sea level rise
+      Sea Level Rise
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../projects/project-notebooks/Ocean_acidification.html">
      <strong>
-      Ocean acidification
+      Ocean Acidification
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.html">
      <strong>
-      The impact of ENSO on precipitation and temperature
+      The Impact of ENSO on Precipitation and Temperature
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../projects/project-notebooks/Regional_precipitation_variability.html">
-     <strong>
-      Regional precipitation variability and extreme events
-     </strong>
+     Regional Precipitation Variability and Extreme Events
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../projects/project-notebooks/Heatwaves.html">
      <strong>
-      Heatwaves: Assessing the dynamic interactions of the atmosphere and land
+      Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../projects/project-notebooks/Wildfires_and_burnt_areas.html">
      <strong>
-      Monitoring and mapping wildfires using satellite data
+      Monitoring and Mapping Wildfires Using Satellite Data
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../projects/project-notebooks/Surface_albedo_and_land_use.html">
-     <strong>
-      Change in Earth’s albedo and its dependence on land cover changes in the past 20 years
-     </strong>
+    <a class="reference internal" href="../../projects/project-notebooks/Surface_albedo_and_land_cover.html">
+     Changes in Land Cover: Albedo and Carbon Sequestration
     </a>
    </li>
   </ul>
@@ -840,6 +896,38 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../../projects/docs/continuing_your_project_after_the_course.html">
    Continuing your project after the course
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Professional Development
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../projects/professional_development/README.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../projects/professional_development/impact_talks.html">
+   Impact Talks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../projects/professional_development/mentors.html">
+   Mentor Meetings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../projects/professional_development/career_features.html">
+   Career Features
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../projects/professional_development/career_panels.html">
+   Career Panels
   </a>
  </li>
 </ul>
@@ -1020,8 +1108,28 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#steps">
-   STEPS:
+  <a class="reference internal nav-link" href="#first-use">
+   First use
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#accessing-course-notebooks">
+   Accessing course notebooks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enabling-internet-access-on-kernels">
+   Enabling internet access on kernels
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enabling-gpu-access-on-kernels">
+   Enabling GPU access on kernels
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#collaborating-in-kaggle">
+   Collaborating in kaggle
   </a>
  </li>
 </ul>
@@ -1044,8 +1152,28 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#steps">
-   STEPS:
+  <a class="reference internal nav-link" href="#first-use">
+   First use
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#accessing-course-notebooks">
+   Accessing course notebooks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enabling-internet-access-on-kernels">
+   Enabling internet access on kernels
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enabling-gpu-access-on-kernels">
+   Enabling GPU access on kernels
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#collaborating-in-kaggle">
+   Collaborating in kaggle
   </a>
  </li>
 </ul>
@@ -1059,27 +1187,55 @@ title="Print to PDF"
               <div>
                 
   <div class="section" id="using-kaggle">
-<h1>Using Kaggle<a class="headerlink" href="#using-kaggle" title="Permalink to this headline">¶</a></h1>
-<p>If you are in China or another region with difficult  access to Google Colab, you can use Kaggle as a substitute for launching an interactive coding environment where you can write and run code. Please note that we recommend Google colab if you can access it.</p>
-<div class="section" id="steps">
-<h2>STEPS:<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h2>
-<p><strong>1.</strong> First, <a class="reference external" href="https://www.kaggle.com/account/login">sign in</a> to your Kaggle account. If you don’t have a Kaggle account, create one by registering for it by clicking <a class="reference external" href="https://www.kaggle.com/account/login?phase=startRegisterTab&amp;returnUrl=%2F">here</a>.
-<img alt="Step 1" src="../../_images/kaggle_step1.png" /></p>
-<p><strong>2.</strong> Once you’re logged into your account, click the kaggle button found on top of every page containing a tutorial.
-<img alt="Step 2" src="../../_images/kaggle_step2.png" /></p>
+<h1>Using Kaggle<a class="headerlink" href="#using-kaggle" title="Permalink to this headline">#</a></h1>
+<p>If you are in China or another region with difficult access to JupyterHub and Google Colab, you can use Kaggle as a substitute for launching an interactive coding environment where you can write and run code. <strong>Please note that we recommend JupyterHub if you can access it.</strong></p>
+<div class="section" id="first-use">
+<h2>First use<a class="headerlink" href="#first-use" title="Permalink to this headline">#</a></h2>
+<p><strong>1.</strong> First, <a class="reference external" href="https://www.kaggle.com/account/login">sign in</a> to your Kaggle account. If you don’t have a Kaggle account, create one by registering <a class="reference external" href="https://www.kaggle.com/account/login?phase=startRegisterTab&amp;returnUrl=%2F">here</a>.</p>
+<p><img alt="Step 1" src="../../_images/kaggle_step1.png" /></p>
+<p><strong>2.</strong> Get your account phone-verified. This is necessary for accessing GPU/internet on kernels, as well as for collaborative work. To do this:</p>
+<ul class="simple">
+<li><p>click on your profile icon in the top right corner</p></li>
+</ul>
+<p><img alt="Step 2" src="../../_images/kaggle_step2.png" /></p>
+<ul class="simple">
+<li><p>select <code class="docutils literal notranslate"><span class="pre">Settings</span></code> and scroll down to the <code class="docutils literal notranslate"><span class="pre">Phone</span> <span class="pre">verification</span></code> section</p></li>
+</ul>
+<p><img alt="Step 3" src="../../_images/kaggle_step3.png" /></p>
+<ul class="simple">
+<li><p>enter your phone number and subsequently the code verification code received in a text message</p></li>
+</ul>
+<p><img alt="Step 4" src="../../_images/kaggle_step4.png" /></p>
+</div>
+<div class="section" id="accessing-course-notebooks">
+<h2>Accessing course notebooks<a class="headerlink" href="#accessing-course-notebooks" title="Permalink to this headline">#</a></h2>
+<p>Click the kaggle button found on top of every page containing a jupyter notebook, such as <a class="reference external" href="https://comptools.climatematch.io/tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.html">tutorial pages</a>.</p>
+<p><img alt="Step 5" src="../../_images/kaggle_step5.png" /></p>
 <blockquote>
-<div><p><strong>NOTE:-</strong> In case that you inspect an error asocociated with <code class="docutils literal notranslate"><span class="pre">!pip</span> <span class="pre">install</span></code> then follow <a class="reference external" href="https://www.kaggle.com/product-feedback/63544">this workaround</a>.</p>
+<div><p><strong>NOTE:</strong> If you receive an error asocociated with <code class="docutils literal notranslate"><span class="pre">!pip</span> <span class="pre">install</span></code>, follow <a class="reference external" href="https://www.kaggle.com/product-feedback/63544">this workaround</a>.</p>
 </div></blockquote>
-<p><strong>3.</strong>  First time users have get their phone numbers verified. In order to have GPU/internet access, on the left sidebar of the notebook under the settings panel, go to <strong>Get phone verified</strong> link and enter your credentials.</p>
-<p><img alt="Step 3.1" src="../../_images/kaggle_step6_1.png" /></p>
-<p>Go to <em>Settings</em> -&gt; <em>Internet</em> and select <em>Internet connected</em>. Your Kernels session restarts and the newly started session is enabled to access the Internet. If after the installation you experience any error when trying to import an installed module, make sure to restart the kernel after installing the module and then it should work.</p>
-<p><img alt="Step 3.2" src="../../_images/kaggle_internet_enabled.png" /></p>
+</div>
+<div class="section" id="enabling-internet-access-on-kernels">
+<h2>Enabling internet access on kernels<a class="headerlink" href="#enabling-internet-access-on-kernels" title="Permalink to this headline">#</a></h2>
+<p>To enable this, click on <code class="docutils literal notranslate"><span class="pre">Notebook</span> <span class="pre">options</span></code> in the right side bar of the kaggle notebook editor. Scroll down and toggle <code class="docutils literal notranslate"><span class="pre">Internet</span> <span class="pre">on</span></code>.
+This will let you fetch data from an external online source or install a custom python package. If after the installation you experience any error when trying to import an installed module, make sure to restart the kernel after installing the module and then it should work.</p>
+<p><img alt="Step 3.2" src="../../_images/kaggle_step6.png" /></p>
+</div>
+<div class="section" id="enabling-gpu-access-on-kernels">
+<h2>Enabling GPU access on kernels<a class="headerlink" href="#enabling-gpu-access-on-kernels" title="Permalink to this headline">#</a></h2>
+<p>Click on <code class="docutils literal notranslate"><span class="pre">Notebook</span> <span class="pre">options</span></code> in the right side bar of the kaggle notebook editor as above. Change <code class="docutils literal notranslate"><span class="pre">Accelerator</span></code> from <strong>None</strong> to <strong>GPU</strong>.</p>
 <blockquote>
-<div><p><strong>NOTE:-</strong> The last step, that is <strong>step 4</strong> grants you access to GPU in Kaggle. It is <strong>NOT</strong> required for Computational Neuroscience course and is only required for Deep Learning course</p>
+<div><p><strong>NOTE:</strong> A GPU is <strong>NOT</strong> required in the <em>Computational Tools for Climate Science</em> course! However, some advanced groups might design projects that benefit from GPU use.</p>
 </div></blockquote>
-<p><strong>4.</strong> (Optional) The last and final step about how to leverage <strong>GPU</strong> accelerator in the kaggle kernel. You should not need to do this ever for the comp neuro course tutorials. You may want it for project work and especially for the deep learning course.</p>
-<p>Once your phone number has been verified, on the left sidebar under <strong>Settings</strong> panel, select <strong>Accelerator</strong> to <strong>GPU</strong> from <strong>None</strong> using the drop down menu.</p>
-<p><img alt="Step 4.1" src="../../_images/kaggle_step6_2.png" /></p>
+</div>
+<div class="section" id="collaborating-in-kaggle">
+<h2>Collaborating in kaggle<a class="headerlink" href="#collaborating-in-kaggle" title="Permalink to this headline">#</a></h2>
+<p>To share a notebook with your project teammates, add them as <strong>collaborators</strong> by clicking <code class="docutils literal notranslate"><span class="pre">Share</span></code> in the top right corner of the notebook editor when you have the notebook of interest open. Keep the notebook as <em>Private</em> and search your teammates by their kaggle username. You can give them access to <code class="docutils literal notranslate"><span class="pre">view</span></code> or <code class="docutils literal notranslate"><span class="pre">edit</span></code> your work. This is also where you can <strong>enable comments</strong> for your notebook.</p>
+<p><img alt="Step 7" src="../../_images/kaggle_step7.png" /></p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Unlike in Colab, collaborators <strong>CANNOT</strong> edit the same version of a notebook simultaneously! Your edits will be accessible to collaborators only after you <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">version</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">&amp;</span> <span class="pre">Run</span> <span class="pre">All</span> <span class="pre">(Commit)</span></code>, but they will not get merged into <em>their</em> working version of the notebook automatically. Commits from separate notebook versions must be merged manually!</p>
+</div></blockquote>
+<p>To view your collaborators’ work, open the <strong>version history</strong> by clicking on the number next to <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">Version</span></code> in the top right corner. Clicking on the three dots next to a specific version lets you view, rename, and pin it, as well as revert to it or compare it to another version.</p>
 </div>
 </div>
 

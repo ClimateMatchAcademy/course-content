@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The impact of ENSO on precipitation and temperature &#8212; Climatematch Academy: Computational Tools for Climate Science</title>
+    <title>The Impact of ENSO on Precipitation and Temperature &#8212; Climatematch Academy: Computational Tools for Climate Science</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -19,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -32,7 +32,7 @@
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -40,8 +40,8 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
@@ -50,8 +50,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/cma-logo-square-4xp.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Regional precipitation variability and extreme events" href="Regional_precipitation_variability.html" />
-    <link rel="prev" title="Ocean acidification" href="Ocean_acidification.html" />
+    <link rel="next" title="Regional Precipitation Variability and Extreme Events" href="Regional_precipitation_variability.html" />
+    <link rel="prev" title="Ocean Acidification" href="Ocean_acidification.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -127,6 +127,11 @@ const thebe_selector_output = ".output, .cell_output"
      General Schedule
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/Schedule/shared_calendars.html">
+     Shared calendars
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -185,7 +190,14 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<p class="caption">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../tutorials/prereqs/ClimateScience.html">
+   Prerequisites and preparatory materials for Computational Tools for Climate Science
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Fundamentals
  </span>
@@ -335,7 +347,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Climate Data
  </span>
@@ -531,7 +543,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Climate Future
  </span>
@@ -610,32 +622,44 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial1.html">
-     Figure settings
+     <strong>
+      Tutorial 1: Creating Maps of CMIP6 Earth System Model (ESM) Projections
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial2.html">
-     Figure settings
+     <strong>
+      Tutorial 2: Time Series, Global Averages, and Scenario Comparison
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial3.html">
-     Figure settings
+     <strong>
+      Tutorial 3: Multi-model Ensembles
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial4.html">
-     Figure settings
+     <strong>
+      Tutorial 4: Quantifying Uncertainty in Projections
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial5.html">
-     Figure settings
+     <strong>
+      Tutorial 5: Internal Climate Variability
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial6.html">
-     Figure settings
+     <strong>
+      Tutorial 6: Synthesising &amp; Interpreting Diverse Data Sources
+     </strong>
     </a>
    </li>
   </ul>
@@ -681,7 +705,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Climate Response
  </span>
@@ -698,23 +722,59 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial1.html">
+     <strong>
+      Tutorial 1: Distributions
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial2.html">
-     Data investigation
+     <strong>
+      Tutorial 2: What is an Extreme Event? Empirical Return Levels
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial3.html">
+     <strong>
+      Tutorial 3: Extreme Value Analysis - the GEV Distribution
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial4.html">
+     <strong>
+      Tutorial 4: Return Levels Using Normal and GEV Distributions
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial5.html">
-     Fit Moments using a different method
+     <strong>
+      Tutorial 5: Non-stationarity in Historical Records
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial6.html">
+     <strong>
+      Tutorial 6: Scenario-dependence of Future Changes in Extremes
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial7.html">
-     Load CMIP6 data
+     <strong>
+      Tutorial 7: Non-Stationarity in the EVT-framework
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial8.html">
-     scale as function of time
+     <strong>
+      Tutorial 8: Thresholds
+     </strong>
     </a>
    </li>
   </ul>
@@ -760,7 +820,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Project Booklet
  </span>
@@ -789,50 +849,46 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="Sea_level_rise.html">
      <strong>
-      Sea level rise
+      Sea Level Rise
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Ocean_acidification.html">
      <strong>
-      Ocean acidification
+      Ocean Acidification
      </strong>
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      <strong>
-      The impact of ENSO on precipitation and temperature
+      The Impact of ENSO on Precipitation and Temperature
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Regional_precipitation_variability.html">
-     <strong>
-      Regional precipitation variability and extreme events
-     </strong>
+     Regional Precipitation Variability and Extreme Events
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Heatwaves.html">
      <strong>
-      Heatwaves: Assessing the dynamic interactions of the atmosphere and land
+      Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Wildfires_and_burnt_areas.html">
      <strong>
-      Monitoring and mapping wildfires using satellite data
+      Monitoring and Mapping Wildfires Using Satellite Data
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Surface_albedo_and_land_use.html">
-     <strong>
-      Change in Earth’s albedo and its dependence on land cover changes in the past 20 years
-     </strong>
+    <a class="reference internal" href="Surface_albedo_and_land_cover.html">
+     Changes in Land Cover: Albedo and Carbon Sequestration
     </a>
    </li>
   </ul>
@@ -840,6 +896,38 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../docs/continuing_your_project_after_the_course.html">
    Continuing your project after the course
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Professional Development
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../professional_development/README.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../professional_development/impact_talks.html">
+   Impact Talks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../professional_development/mentors.html">
+   Mentor Meetings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../professional_development/career_features.html">
+   Career Features
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../professional_development/career_panels.html">
+   Career Panels
   </a>
  </li>
 </ul>
@@ -1051,53 +1139,53 @@ title="Print to PDF"
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
    <strong>
-    The impact of ENSO on precipitation and temperature
+    The Impact of ENSO on Precipitation and Temperature
    </strong>
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#project-quesions">
-   <strong>
-    Project quesions
-   </strong>
+  <a class="reference internal nav-link" href="#project-template">
+   Project Template
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-exploration-notebook">
-   <strong>
-    Data exploration notebook
-   </strong>
+   Data Exploration Notebook
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#project-setup">
-     <strong>
-      Project setup
-     </strong>
+     Project Setup
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#dataset-1-load-cmip6-model-of-your-choice">
-     <strong>
-      Dataset 1: Load CMIP6 Model of your choice
-     </strong>
+     Dataset 1: Load CMIP6 Model of Your Choice
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#dataset-2-load-observations">
-     <strong>
-      Dataset 2: Load Observations
-     </strong>
+     Dataset 2: Load Observations
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#dataset-3-nino-3-4-index">
-     <strong>
-      Dataset 3: Nino 3.4 Index:
-     </strong>
+     Dataset 3: Nino 3.4 Index
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#further-reading">
+   Further Reading
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resources">
+   <strong>
+    Resources
+   </strong>
+  </a>
  </li>
 </ul>
 
@@ -1108,7 +1196,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>The impact of ENSO on precipitation and temperature</h1>
+                <h1>The Impact of ENSO on Precipitation and Temperature</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1121,53 +1209,53 @@ title="Print to PDF"
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
    <strong>
-    The impact of ENSO on precipitation and temperature
+    The Impact of ENSO on Precipitation and Temperature
    </strong>
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#project-quesions">
-   <strong>
-    Project quesions
-   </strong>
+  <a class="reference internal nav-link" href="#project-template">
+   Project Template
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-exploration-notebook">
-   <strong>
-    Data exploration notebook
-   </strong>
+   Data Exploration Notebook
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#project-setup">
-     <strong>
-      Project setup
-     </strong>
+     Project Setup
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#dataset-1-load-cmip6-model-of-your-choice">
-     <strong>
-      Dataset 1: Load CMIP6 Model of your choice
-     </strong>
+     Dataset 1: Load CMIP6 Model of Your Choice
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#dataset-2-load-observations">
-     <strong>
-      Dataset 2: Load Observations
-     </strong>
+     Dataset 2: Load Observations
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#dataset-3-nino-3-4-index">
-     <strong>
-      Dataset 3: Nino 3.4 Index:
-     </strong>
+     Dataset 3: Nino 3.4 Index
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#further-reading">
+   Further Reading
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resources">
+   <strong>
+    Resources
+   </strong>
+  </a>
  </li>
 </ul>
 
@@ -1180,33 +1268,25 @@ title="Print to PDF"
               <div>
                 
   <div class="section" id="the-impact-of-enso-on-precipitation-and-temperature">
-<h1><strong>The impact of ENSO on precipitation and temperature</strong><a class="headerlink" href="#the-impact-of-enso-on-precipitation-and-temperature" title="Permalink to this headline">¶</a></h1>
+<h1><strong>The Impact of ENSO on Precipitation and Temperature</strong><a class="headerlink" href="#the-impact-of-enso-on-precipitation-and-temperature" title="Permalink to this headline">#</a></h1>
 <p><strong>Content creators:</strong> Olawale Ikuyajolu &amp; Patrick Orenstein</p>
 <p><strong>Content reviewers:</strong> Marguerite Brown, Yuxin Zhou</p>
-<p><strong>Content editors:</strong> Zane Mitrevica, Natalie Steinemann, Ohad Zivan, Chi Zhang , Jenna Pearson</p>
-<p><strong>Production editors:</strong> TBD</p>
-<p><strong>Our 2023 Sponsors:</strong> NASA TOPS, Google deepmind</p>
-<p>To understand the historical and future impacts of El Niño Southern Oscillation (ENSO) events on rainfall and temperature, you will work with climate model output, reanalysis data, and Niño 3.4 indices from CMIP5/6, ERA5, NOAA, and HadISST, focusing on variables like sea surface temperature, surface air temperature, and precipitation. You will also be able to investigate the relationships between these variables and how they affect community efforts to prepare for the impacts of El Niño phases.</p>
-<p>Recall W2D1 (Week 2 Day 1) tutorials on CMIP6 and read more about the different CMIP6 <a class="reference external" href="https://www.dkrz.de/en/communication/climate-simulations/cmip6-en/the-ssp-scenarios">here</a>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Video 1: Speaker Introduction</span>
-<span class="c1">#Tech team will add code to format and display the video</span>
-</pre></div>
+<p><strong>Content editors:</strong> Zane Mitrevica, Natalie Steinemann, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Production editors:</strong> Wesley Banfield, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Our 2023 Sponsors:</strong> NASA TOPS, Google DeepMind, and CMIP</p>
+<p><strong>In this project</strong>  you will work with climate model output, reanalysis data, and Niño 3.4 indices from CMIP5/6, ERA5, NOAA, and HadISST to understand the historical and future impacts of El Niño Southern Oscillation (ENSO) events on rainfall and temperature. You will focus on variables like sea surface temperature, surface air temperature, and precipitation. You will also be able to investigate the relationships between these variables and how they affect community efforts to prepare for the impacts of El Niño phases.</p>
+<p>Recall W1D5, W2D1, and W2D4 tutorials on CMIP6 and read more about the different CMIP6 scenarios <a class="reference external" href="https://www.dkrz.de/en/communication/climate-simulations/cmip6-en/the-ssp-scenarios">here</a>. Please see the Resources section at the bottom of this notebook for more information.</p>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="project-quesions">
-<h1><strong>Project quesions</strong><a class="headerlink" href="#project-quesions" title="Permalink to this headline">¶</a></h1>
-<p><img alt="Project quuesions" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/1642e41798d4c7522ce45cc554d616da264ef5dc/projects/template-images/ENSO_template_map.svg" /></p>
+<div class="section" id="project-template">
+<h1>Project Template<a class="headerlink" href="#project-template" title="Permalink to this headline">#</a></h1>
+<p><img alt="Project Template" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/projects/template-images/ENSO_template_map.svg" /></p>
+<p><em>Note: The dashed boxes are socio-economic questions.</em></p>
 </div>
 <div class="section" id="data-exploration-notebook">
-<h1><strong>Data exploration notebook</strong><a class="headerlink" href="#data-exploration-notebook" title="Permalink to this headline">¶</a></h1>
+<h1>Data Exploration Notebook<a class="headerlink" href="#data-exploration-notebook" title="Permalink to this headline">#</a></h1>
 <div class="section" id="project-setup">
-<h2><strong>Project setup</strong><a class="headerlink" href="#project-setup" title="Permalink to this headline">¶</a></h2>
-<p>Please run the following cells!</p>
-<div class="cell docutils container">
+<h2>Project Setup<a class="headerlink" href="#project-setup" title="Permalink to this headline">#</a></h2>
+<div class="cell tag_colab docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#google colab installs</span>
 
@@ -1214,7 +1294,7 @@ title="Print to PDF"
 <span class="c1"># import condacolab</span>
 <span class="c1"># condacolab.install()</span>
 
-<span class="c1"># # Install all packages in one call (+ use mamba instead of conda)</span>
+<span class="c1"># nstall all packages in one call (+ use mamba instead of conda)</span>
 <span class="c1"># !mamba install xarray-datatree intake-esm gcsfs xmip aiohttp cartopy nc-time-axis cf_xarray xarrayutils &quot;esmf&lt;=8.3.1&quot; xesmf &amp;&gt; /dev/null</span>
 </pre></div>
 </div>
@@ -1222,7 +1302,8 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#imports </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># imports </span>
+
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="n">tic</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 
@@ -1243,7 +1324,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Functions</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># functions</span>
 
 <span class="o">%</span><span class="k">matplotlib</span> inline
 
@@ -1275,7 +1356,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="section" id="dataset-1-load-cmip6-model-of-your-choice">
-<h2><strong>Dataset 1: Load CMIP6 Model of your choice</strong><a class="headerlink" href="#dataset-1-load-cmip6-model-of-your-choice" title="Permalink to this headline">¶</a></h2>
+<h2>Dataset 1: Load CMIP6 Model of Your Choice<a class="headerlink" href="#dataset-1-load-cmip6-model-of-your-choice" title="Permalink to this headline">#</a></h2>
 <p>Following W2D1 (Week 2 Day 1) tutorial notebooks</p>
 <ul class="simple">
 <li><p>We use <em>r4i1p1f1 and CESM2</em> as the template, but you are free to select any model. Make sure the member_id selected is available for your model</p></li>
@@ -1294,215 +1375,10 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; The keys in the returned dictionary of datasets are constructed as follows:
-	&#39;source_id/experiment_id&#39;
-</pre></div>
-</div>
-<div class="output text_html">
-<style>
-    /* Turns off some styling */
-    progress {
-        /* gets rid of default border in Firefox and Opera. */
-        border: none;
-        /* Needs to be in here for Safari polyfill so background images work as expected. */
-        background-size: auto;
-    }
-    progress:not([value]), progress:not([value])::-webkit-progress-bar {
-        background: repeating-linear-gradient(45deg, #7e7e7e, #7e7e7e 10px, #5c5c5c 10px, #5c5c5c 20px);
-    }
-    .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {
-        background: #F44336;
-    }
-</style>
-</div><div class="output text_html">
-<div>
-  <progress value='4' class='' max='4' style='width:300px; height:20px; vertical-align: middle;'></progress>
-  100.00% [4/4 00:00&lt;00:00]
-</div>
-</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; The keys in the returned dictionary of datasets are constructed as follows:
-	&#39;source_id/experiment_id&#39;
-</pre></div>
-</div>
-<div class="output text_html">
-<style>
-    /* Turns off some styling */
-    progress {
-        /* gets rid of default border in Firefox and Opera. */
-        border: none;
-        /* Needs to be in here for Safari polyfill so background images work as expected. */
-        background-size: auto;
-    }
-    progress:not([value]), progress:not([value])::-webkit-progress-bar {
-        background: repeating-linear-gradient(45deg, #7e7e7e, #7e7e7e 10px, #5c5c5c 10px, #5c5c5c 20px);
-    }
-    .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {
-        background: #F44336;
-    }
-</style>
-</div><div class="output text_html">
-<div>
-  <progress value='4' class='' max='4' style='width:300px; height:20px; vertical-align: middle;'></progress>
-  100.00% [4/4 00:01&lt;00:00]
-</div>
-</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; The keys in the returned dictionary of datasets are constructed as follows:
-	&#39;source_id/experiment_id&#39;
-</pre></div>
-</div>
-<div class="output text_html">
-<style>
-    /* Turns off some styling */
-    progress {
-        /* gets rid of default border in Firefox and Opera. */
-        border: none;
-        /* Needs to be in here for Safari polyfill so background images work as expected. */
-        background-size: auto;
-    }
-    progress:not([value]), progress:not([value])::-webkit-progress-bar {
-        background: repeating-linear-gradient(45deg, #7e7e7e, #7e7e7e 10px, #5c5c5c 10px, #5c5c5c 20px);
-    }
-    .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {
-        background: #F44336;
-    }
-</style>
-</div><div class="output text_html">
-<div>
-  <progress value='4' class='' max='4' style='width:300px; height:20px; vertical-align: middle;'></progress>
-  100.00% [4/4 00:01&lt;00:00]
-</div>
-</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KeysView(DataTree(&#39;None&#39;, parent=None)
-└── DataTree(&#39;CESM2&#39;)
-    ├── DataTree(&#39;ssp245&#39;)
-    │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 192,
-    │                            x: 288, nbnd: 2)
-    │       Coordinates:
-    │         * y               (y) float64 -90.0 -89.06 -88.12 -87.17 ... 88.12 89.06 90.0
-    │         * x               (x) float64 0.0 1.25 2.5 3.75 ... 355.0 356.2 357.5 358.8
-    │         * time            (time) object 2015-01-15 12:00:00 ... 2100-12-15 12:00:00
-    │           lon_bounds      (x, nbnd, y) float64 dask.array&lt;chunksize=(288, 2, 192), meta=np.ndarray&gt;
-    │           time_bounds     (time, nbnd) object dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
-    │           lat_bounds      (y, nbnd, x) float64 dask.array&lt;chunksize=(192, 2, 288), meta=np.ndarray&gt;
-    │         * nbnd            (nbnd) int64 0 1
-    │           lon             (x, y) float64 360.0 360.0 360.0 360.0 ... 358.8 358.8 358.8
-    │           lat             (x, y) float64 -90.0 -89.06 -88.12 ... 88.12 89.06 90.0
-    │         * member_id       (member_id) object &#39;r4i1p1f1&#39;
-    │         * dcpp_init_year  (dcpp_init_year) float64 nan
-    │       Data variables:
-    │           tas             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 408, 192, 288), meta=np.ndarray&gt;
-    │       Attributes: (12/61)
-    │           Conventions:                      CF-1.7 CMIP-6.2
-    │           activity_id:                      ScenarioMIP
-    │           branch_method:                    standard
-    │           branch_time_in_child:             735110.0
-    │           branch_time_in_parent:            735110.0
-    │           case_id:                          1732
-    │           ...                               ...
-    │           intake_esm_attrs:variable_id:     tas
-    │           intake_esm_attrs:grid_label:      gn
-    │           intake_esm_attrs:zstore:          gs://cmip6/CMIP6/ScenarioMIP/NCAR/CESM2...
-    │           intake_esm_attrs:version:         20200528
-    │           intake_esm_attrs:_data_format_:   zarr
-    │           intake_esm_dataset_key:           CESM2/ssp245
-    ├── DataTree(&#39;historical&#39;)
-    │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1980, y: 192,
-    │                            x: 288, nbnd: 2)
-    │       Coordinates:
-    │         * y               (y) float64 -90.0 -89.06 -88.12 -87.17 ... 88.12 89.06 90.0
-    │         * x               (x) float64 0.0 1.25 2.5 3.75 ... 355.0 356.2 357.5 358.8
-    │         * time            (time) object 1850-01-15 12:00:00 ... 2014-12-15 12:00:00
-    │           lon_bounds      (x, nbnd, y) float64 dask.array&lt;chunksize=(288, 2, 192), meta=np.ndarray&gt;
-    │           time_bounds     (time, nbnd) object dask.array&lt;chunksize=(1980, 2), meta=np.ndarray&gt;
-    │           lat_bounds      (y, nbnd, x) float64 dask.array&lt;chunksize=(192, 2, 288), meta=np.ndarray&gt;
-    │         * nbnd            (nbnd) int64 0 1
-    │           lon             (x, y) float64 360.0 360.0 360.0 360.0 ... 358.8 358.8 358.8
-    │           lat             (x, y) float64 -90.0 -89.06 -88.12 ... 88.12 89.06 90.0
-    │         * member_id       (member_id) object &#39;r4i1p1f1&#39;
-    │         * dcpp_init_year  (dcpp_init_year) float64 nan
-    │       Data variables:
-    │           tas             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 600, 192, 288), meta=np.ndarray&gt;
-    │       Attributes: (12/61)
-    │           Conventions:                      CF-1.7 CMIP-6.2
-    │           activity_id:                      CMIP
-    │           branch_method:                    standard
-    │           branch_time_in_child:             674885.0
-    │           branch_time_in_parent:            182500.0
-    │           case_id:                          18
-    │           ...                               ...
-    │           intake_esm_attrs:variable_id:     tas
-    │           intake_esm_attrs:grid_label:      gn
-    │           intake_esm_attrs:zstore:          gs://cmip6/CMIP6/CMIP/NCAR/CESM2/histor...
-    │           intake_esm_attrs:version:         20190308
-    │           intake_esm_attrs:_data_format_:   zarr
-    │           intake_esm_dataset_key:           CESM2/historical
-    ├── DataTree(&#39;ssp585&#39;)
-    │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 192,
-    │                            x: 288, nbnd: 2)
-    │       Coordinates:
-    │         * y               (y) float64 -90.0 -89.06 -88.12 -87.17 ... 88.12 89.06 90.0
-    │         * x               (x) float64 0.0 1.25 2.5 3.75 ... 355.0 356.2 357.5 358.8
-    │         * time            (time) object 2015-01-15 12:00:00 ... 2100-12-15 12:00:00
-    │           lon_bounds      (x, nbnd, y) float64 dask.array&lt;chunksize=(288, 2, 192), meta=np.ndarray&gt;
-    │           time_bounds     (time, nbnd) object dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
-    │           lat_bounds      (y, nbnd, x) float64 dask.array&lt;chunksize=(192, 2, 288), meta=np.ndarray&gt;
-    │         * nbnd            (nbnd) int64 0 1
-    │           lon             (x, y) float64 360.0 360.0 360.0 360.0 ... 358.8 358.8 358.8
-    │           lat             (x, y) float64 -90.0 -89.06 -88.12 ... 88.12 89.06 90.0
-    │         * member_id       (member_id) object &#39;r4i1p1f1&#39;
-    │         * dcpp_init_year  (dcpp_init_year) float64 nan
-    │       Data variables:
-    │           tas             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 408, 192, 288), meta=np.ndarray&gt;
-    │       Attributes: (12/61)
-    │           Conventions:                      CF-1.7 CMIP-6.2
-    │           activity_id:                      ScenarioMIP
-    │           branch_method:                    standard
-    │           branch_time_in_child:             735110.0
-    │           branch_time_in_parent:            735110.0
-    │           case_id:                          1735
-    │           ...                               ...
-    │           intake_esm_attrs:variable_id:     tas
-    │           intake_esm_attrs:grid_label:      gn
-    │           intake_esm_attrs:zstore:          gs://cmip6/CMIP6/ScenarioMIP/NCAR/CESM2...
-    │           intake_esm_attrs:version:         20200528
-    │           intake_esm_attrs:_data_format_:   zarr
-    │           intake_esm_dataset_key:           CESM2/ssp585
-    └── DataTree(&#39;ssp126&#39;)
-            Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 192,
-                                 x: 288, nbnd: 2)
-            Coordinates:
-              * y               (y) float64 -90.0 -89.06 -88.12 -87.17 ... 88.12 89.06 90.0
-              * x               (x) float64 0.0 1.25 2.5 3.75 ... 355.0 356.2 357.5 358.8
-              * time            (time) object 2015-01-15 12:00:00 ... 2100-12-15 12:00:00
-                lon_bounds      (x, nbnd, y) float64 dask.array&lt;chunksize=(288, 2, 192), meta=np.ndarray&gt;
-                time_bounds     (time, nbnd) object dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
-                lat_bounds      (y, nbnd, x) float64 dask.array&lt;chunksize=(192, 2, 288), meta=np.ndarray&gt;
-              * nbnd            (nbnd) int64 0 1
-                lon             (x, y) float64 360.0 360.0 360.0 360.0 ... 358.8 358.8 358.8
-                lat             (x, y) float64 -90.0 -89.06 -88.12 ... 88.12 89.06 90.0
-              * member_id       (member_id) object &#39;r4i1p1f1&#39;
-              * dcpp_init_year  (dcpp_init_year) float64 nan
-            Data variables:
-                tas             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 408, 192, 288), meta=np.ndarray&gt;
-            Attributes: (12/61)
-                Conventions:                      CF-1.7 CMIP-6.2
-                activity_id:                      ScenarioMIP
-                branch_method:                    standard
-                branch_time_in_child:             735110.0
-                branch_time_in_parent:            735110.0
-                case_id:                          1729
-                ...                               ...
-                intake_esm_attrs:variable_id:     tas
-                intake_esm_attrs:grid_label:      gn
-                intake_esm_attrs:zstore:          gs://cmip6/CMIP6/ScenarioMIP/NCAR/CESM2...
-                intake_esm_attrs:version:         20200528
-                intake_esm_attrs:_data_format_:   zarr
-                intake_esm_dataset_key:           CESM2/ssp126)
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load cell areas for computing ocean surface temparuters means</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load cell areas for computing ocean surface temparuters means</span>
 
 <span class="n">dt_ocean_area</span> <span class="o">=</span> <span class="n">load_cmip6</span><span class="p">(</span><span class="n">source_ids</span><span class="p">,</span> <span class="s1">&#39;areacello&#39;</span><span class="p">,</span> <span class="s1">&#39;r4i1p1f1&#39;</span><span class="p">,</span> <span class="s1">&#39;Ofx&#39;</span> <span class="p">)</span>
 <span class="n">dt_atmos_area</span> <span class="o">=</span> <span class="n">load_cmip6</span><span class="p">(</span><span class="n">source_ids</span><span class="p">,</span> <span class="s1">&#39;areacella&#39;</span><span class="p">,</span> <span class="s1">&#39;r4i1p1f1&#39;</span><span class="p">,</span> <span class="s1">&#39;fx&#39;</span> <span class="p">)</span>
@@ -1522,230 +1398,24 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; The keys in the returned dictionary of datasets are constructed as follows:
-	&#39;source_id/experiment_id&#39;
-</pre></div>
-</div>
-<div class="output text_html">
-<style>
-    /* Turns off some styling */
-    progress {
-        /* gets rid of default border in Firefox and Opera. */
-        border: none;
-        /* Needs to be in here for Safari polyfill so background images work as expected. */
-        background-size: auto;
-    }
-    progress:not([value]), progress:not([value])::-webkit-progress-bar {
-        background: repeating-linear-gradient(45deg, #7e7e7e, #7e7e7e 10px, #5c5c5c 10px, #5c5c5c 20px);
-    }
-    .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {
-        background: #F44336;
-    }
-</style>
-</div><div class="output text_html">
-<div>
-  <progress value='4' class='' max='4' style='width:300px; height:20px; vertical-align: middle;'></progress>
-  100.00% [4/4 00:01&lt;00:00]
-</div>
-</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; The keys in the returned dictionary of datasets are constructed as follows:
-	&#39;source_id/experiment_id&#39;
-</pre></div>
-</div>
-<div class="output text_html">
-<style>
-    /* Turns off some styling */
-    progress {
-        /* gets rid of default border in Firefox and Opera. */
-        border: none;
-        /* Needs to be in here for Safari polyfill so background images work as expected. */
-        background-size: auto;
-    }
-    progress:not([value]), progress:not([value])::-webkit-progress-bar {
-        background: repeating-linear-gradient(45deg, #7e7e7e, #7e7e7e 10px, #5c5c5c 10px, #5c5c5c 20px);
-    }
-    .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {
-        background: #F44336;
-    }
-</style>
-</div><div class="output text_html">
-<div>
-  <progress value='4' class='' max='4' style='width:300px; height:20px; vertical-align: middle;'></progress>
-  100.00% [4/4 00:00&lt;00:00]
-</div>
-</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KeysView(DataTree(&#39;None&#39;, parent=None)
-└── DataTree(&#39;CESM2&#39;)
-    ├── DataTree(&#39;historical&#39;)
-    │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1980, y: 384,
-    │                            x: 320, bnds: 2, vertex: 4)
-    │       Coordinates: (12/13)
-    │           lat             (y, x) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
-    │           lon             (y, x) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
-    │         * time            (time) object 1850-01-15 12:59:59.999997 ... 2014-12-15 1...
-    │           time_bounds     (time, bnds) object dask.array&lt;chunksize=(1980, 2), meta=np.ndarray&gt;
-    │           lon_verticies   (y, x, vertex) float32 dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
-    │           lat_verticies   (y, x, vertex) float32 dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
-    │           ...              ...
-    │         * x               (x) int64 0 1 2 3 4 5 6 7 ... 313 314 315 316 317 318 319
-    │           lon_bounds      (bnds, y, x) float32 dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
-    │           lat_bounds      (bnds, y, x) float32 dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
-    │         * member_id       (member_id) object &#39;r4i1p1f1&#39;
-    │         * dcpp_init_year  (dcpp_init_year) float64 nan
-    │           areacello       (member_id, dcpp_init_year, y, x) float32 dask.array&lt;chunksize=(1, 1, 384, 320), meta=np.ndarray&gt;
-    │       Dimensions without coordinates: bnds, vertex
-    │       Data variables:
-    │           tos             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 403, 384, 320), meta=np.ndarray&gt;
-    │       Attributes: (12/61)
-    │           Conventions:                      CF-1.7 CMIP-6.2
-    │           activity_id:                      CMIP
-    │           branch_method:                    standard
-    │           branch_time_in_child:             674885.0
-    │           branch_time_in_parent:            182500.0
-    │           case_id:                          18
-    │           ...                               ...
-    │           intake_esm_attrs:variable_id:     tos
-    │           intake_esm_attrs:grid_label:      gn
-    │           intake_esm_attrs:zstore:          gs://cmip6/CMIP6/CMIP/NCAR/CESM2/histor...
-    │           intake_esm_attrs:version:         20190308
-    │           intake_esm_attrs:_data_format_:   zarr
-    │           intake_esm_dataset_key:           CESM2/historical
-    ├── DataTree(&#39;ssp245&#39;)
-    │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 384,
-    │                            x: 320, bnds: 2, vertex: 4)
-    │       Coordinates: (12/13)
-    │           lat             (y, x) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
-    │           lon             (y, x) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
-    │         * time            (time) object 2015-01-15 13:00:00 ... 2100-12-15 12:00:00
-    │           time_bounds     (time, bnds) object dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
-    │           lon_verticies   (y, x, vertex) float32 dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
-    │           lat_verticies   (y, x, vertex) float32 dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
-    │           ...              ...
-    │         * x               (x) int64 0 1 2 3 4 5 6 7 ... 313 314 315 316 317 318 319
-    │           lon_bounds      (bnds, y, x) float32 dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
-    │           lat_bounds      (bnds, y, x) float32 dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
-    │         * member_id       (member_id) object &#39;r4i1p1f1&#39;
-    │         * dcpp_init_year  (dcpp_init_year) float64 nan
-    │           areacello       (member_id, dcpp_init_year, y, x) float32 dask.array&lt;chunksize=(1, 1, 384, 320), meta=np.ndarray&gt;
-    │       Dimensions without coordinates: bnds, vertex
-    │       Data variables:
-    │           tos             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 199, 384, 320), meta=np.ndarray&gt;
-    │       Attributes: (12/61)
-    │           Conventions:                      CF-1.7 CMIP-6.2
-    │           activity_id:                      ScenarioMIP
-    │           branch_method:                    standard
-    │           branch_time_in_child:             735110.0
-    │           branch_time_in_parent:            735110.0
-    │           case_id:                          1732
-    │           ...                               ...
-    │           intake_esm_attrs:variable_id:     tos
-    │           intake_esm_attrs:grid_label:      gn
-    │           intake_esm_attrs:zstore:          gs://cmip6/CMIP6/ScenarioMIP/NCAR/CESM2...
-    │           intake_esm_attrs:version:         20200528
-    │           intake_esm_attrs:_data_format_:   zarr
-    │           intake_esm_dataset_key:           CESM2/ssp245
-    ├── DataTree(&#39;ssp585&#39;)
-    │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 384,
-    │                            x: 320, bnds: 2, vertex: 4)
-    │       Coordinates: (12/13)
-    │           lat             (y, x) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
-    │           lon             (y, x) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
-    │         * time            (time) object 2015-01-15 13:00:00 ... 2100-12-15 12:00:00
-    │           time_bounds     (time, bnds) object dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
-    │           lon_verticies   (y, x, vertex) float32 dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
-    │           lat_verticies   (y, x, vertex) float32 dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
-    │           ...              ...
-    │         * x               (x) int64 0 1 2 3 4 5 6 7 ... 313 314 315 316 317 318 319
-    │           lon_bounds      (bnds, y, x) float32 dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
-    │           lat_bounds      (bnds, y, x) float32 dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
-    │         * member_id       (member_id) object &#39;r4i1p1f1&#39;
-    │         * dcpp_init_year  (dcpp_init_year) float64 nan
-    │           areacello       (member_id, dcpp_init_year, y, x) float32 dask.array&lt;chunksize=(1, 1, 384, 320), meta=np.ndarray&gt;
-    │       Dimensions without coordinates: bnds, vertex
-    │       Data variables:
-    │           tos             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 199, 384, 320), meta=np.ndarray&gt;
-    │       Attributes: (12/61)
-    │           Conventions:                      CF-1.7 CMIP-6.2
-    │           activity_id:                      ScenarioMIP
-    │           branch_method:                    standard
-    │           branch_time_in_child:             735110.0
-    │           branch_time_in_parent:            735110.0
-    │           case_id:                          1735
-    │           ...                               ...
-    │           intake_esm_attrs:variable_id:     tos
-    │           intake_esm_attrs:grid_label:      gn
-    │           intake_esm_attrs:zstore:          gs://cmip6/CMIP6/ScenarioMIP/NCAR/CESM2...
-    │           intake_esm_attrs:version:         20200528
-    │           intake_esm_attrs:_data_format_:   zarr
-    │           intake_esm_dataset_key:           CESM2/ssp585
-    └── DataTree(&#39;ssp126&#39;)
-            Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 384,
-                                 x: 320, bnds: 2, vertex: 4)
-            Coordinates: (12/13)
-                lat             (y, x) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
-                lon             (y, x) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
-              * time            (time) object 2015-01-15 13:00:00 ... 2100-12-15 12:00:00
-                time_bounds     (time, bnds) object dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
-                lon_verticies   (y, x, vertex) float32 dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
-                lat_verticies   (y, x, vertex) float32 dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
-                ...              ...
-              * x               (x) int64 0 1 2 3 4 5 6 7 ... 313 314 315 316 317 318 319
-                lon_bounds      (bnds, y, x) float32 dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
-                lat_bounds      (bnds, y, x) float32 dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
-              * member_id       (member_id) object &#39;r4i1p1f1&#39;
-              * dcpp_init_year  (dcpp_init_year) float64 nan
-                areacello       (member_id, dcpp_init_year, y, x) float32 dask.array&lt;chunksize=(1, 1, 384, 320), meta=np.ndarray&gt;
-            Dimensions without coordinates: bnds, vertex
-            Data variables:
-                tos             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 199, 384, 320), meta=np.ndarray&gt;
-            Attributes: (12/61)
-                Conventions:                      CF-1.7 CMIP-6.2
-                activity_id:                      ScenarioMIP
-                branch_method:                    standard
-                branch_time_in_child:             735110.0
-                branch_time_in_parent:            735110.0
-                case_id:                          1729
-                ...                               ...
-                intake_esm_attrs:variable_id:     tos
-                intake_esm_attrs:grid_label:      gn
-                intake_esm_attrs:zstore:          gs://cmip6/CMIP6/ScenarioMIP/NCAR/CESM2...
-                intake_esm_attrs:version:         20200528
-                intake_esm_attrs:_data_format_:   zarr
-                intake_esm_dataset_key:           CESM2/ssp126)
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="dataset-2-load-observations">
-<h2><strong>Dataset 2: Load Observations</strong><a class="headerlink" href="#dataset-2-load-observations" title="Permalink to this headline">¶</a></h2>
+<h2>Dataset 2: Load Observations<a class="headerlink" href="#dataset-2-load-observations" title="Permalink to this headline">#</a></h2>
 <p>We use the NOAA Extended Reconstructed Sea Surface Temperature (ERSST) v5 product, a widely used and trusted gridded compilation of of historical data going back to 1854.Since the data is provided via an OPeNDAP server, we can load it directly without downloading anything</p>
 <p>We use CPC Merged Analysis of Precipitation (CMAP) for precipitation. We download this dataset from NOAA PSL, Boulder, Colorado, USA website at https://psl.noaa.gov</p>
 <p>For air temperature, we are using anomalies from NASA GISS Surface Temperature Analysis. Also from from NOAA PSL, Boulder, Colorado, USA website at https://psl.noaa.gov</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ocean surface temprature </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ocean surface temperature </span>
 <span class="n">url_SST</span> <span class="o">=</span> <span class="s1">&#39;http://www.esrl.noaa.gov/psd/thredds/dodsC/Datasets/noaa.ersst.v5/sst.mnmean.nc&#39;</span>
 <span class="n">do_sst</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">url_SST</span><span class="p">,</span> <span class="n">drop_variables</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;time_bnds&#39;</span><span class="p">])</span>
 
-<span class="c1"># Precipitation rate (notice the units in the plot below)</span>
+<span class="c1"># precipitation rate (notice the units in the plot below)</span>
 <span class="n">do_pr</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s1">&#39;https://downloads.psl.noaa.gov/Datasets/cmap/enh/precip.mon.mean.nc&#39;</span><span class="p">,</span> <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">))</span>
 
-<span class="c1"># Air Temperature Anomalies</span>
+<span class="c1"># air temperature anomalies</span>
 <span class="n">do_tas</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s1">&#39;https://downloads.psl.noaa.gov/Datasets/gistemp/combined/1200km/air.2x2.1200.mon.anom.comb.nc&#39;</span><span class="p">,</span> <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Ocean surface temprature </span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">url_SST</span> <span class="o">=</span> <span class="s1">&#39;http://www.esrl.noaa.gov/psd/thredds/dodsC/Datasets/noaa.ersst.v5/sst.mnmean.nc&#39;</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">do_sst</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">url_SST</span><span class="p">,</span> <span class="n">drop_variables</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;time_bnds&#39;</span><span class="p">])</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Precipitation rate (notice the units in the plot below)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">do_pr</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s1">&#39;https://downloads.psl.noaa.gov/Datasets/cmap/enh/precip.mon.mean.nc&#39;</span><span class="p">,</span> <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">))</span>
-
-<span class="ne">NameError</span>: name &#39;xr&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1753,7 +1423,7 @@ title="Print to PDF"
 <p>We can now visualize the content of the dataset.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Code to print the shape, array names, etc of the dataset</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># code to print the shape, array names, etc of the dataset</span>
 
 <span class="c1"># select just a single model and experiment</span>
 <span class="n">hist_precip</span> <span class="o">=</span> <span class="n">dm_pr</span><span class="p">[</span><span class="s1">&#39;CESM2&#39;</span><span class="p">][</span><span class="s1">&#39;historical&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">ds</span><span class="o">.</span><span class="n">pr</span>
@@ -1770,12 +1440,6 @@ title="Print to PDF"
 <span class="n">ax_july2000</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;July 2000&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;July 2000&#39;)
-</pre></div>
-</div>
-<img alt="../../_images/ENSO_impact_on_precipitation_and_temperature_14_1.png" src="../../_images/ENSO_impact_on_precipitation_and_temperature_14_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1796,16 +1460,10 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.geocollection.GeoQuadMesh at 0x7f2b862898d0&gt;
-</pre></div>
-</div>
-<img alt="../../_images/ENSO_impact_on_precipitation_and_temperature_15_1.png" src="../../_images/ENSO_impact_on_precipitation_and_temperature_15_1.png" />
-</div>
 </div>
 </div>
 <div class="section" id="dataset-3-nino-3-4-index">
-<h2><strong>Dataset 3: Nino 3.4 Index:</strong><a class="headerlink" href="#dataset-3-nino-3-4-index" title="Permalink to this headline">¶</a></h2>
+<h2>Dataset 3: Nino 3.4 Index<a class="headerlink" href="#dataset-3-nino-3-4-index" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get El Nino data from W1D3 tutorial 7</span>
@@ -1815,20 +1473,17 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KeysView(&lt;xarray.Dataset&gt;
-Dimensions:  (time: 499)
-Coordinates:
-  * time     (time) datetime64[ns] 1981-09-01 1981-10-01 ... 2023-03-01
-    month    (time) int32 ...
-Data variables:
-    sst      (time) float32 ...)
-</pre></div>
 </div>
 </div>
 </div>
-<p>Now that you have loaded and visualized the data, we are all set to find and answer a meaningful research question!</p>
+<div class="section" id="further-reading">
+<h1>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">#</a></h1>
 </div>
+<div class="section" id="resources">
+<h1><strong>Resources</strong><a class="headerlink" href="#resources" title="Permalink to this headline">#</a></h1>
+<p>This tutorial uses data from the simulations conducted as part of the <a class="reference external" href="https://wcrp-cmip.org/">CMIP6</a> multi-model ensemble.</p>
+<p>For examples on how to access and analyze data, please visit the <a class="reference external" href="https://gallery.pangeo.io/repos/pangeo-gallery/cmip6/index.html">Pangeo Cloud CMIP6 Gallery</a></p>
+<p>For more information on what CMIP is and how to access the data, please see this <a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/blob/main/tutorials/CMIP/CMIP_resource_bank.md">page</a>.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -1862,13 +1517,13 @@ Data variables:
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><strong>Ocean acidification</strong></p>
+            <p class="prev-next-title"><strong>Ocean Acidification</strong></p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Regional_precipitation_variability.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>Regional precipitation variability and extreme events</strong></p>
+        <p class="prev-next-title">Regional Precipitation Variability and Extreme Events</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

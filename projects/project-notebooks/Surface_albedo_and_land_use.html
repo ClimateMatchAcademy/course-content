@@ -19,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -32,7 +32,7 @@
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -40,8 +40,8 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
@@ -127,6 +127,11 @@ const thebe_selector_output = ".output, .cell_output"
      General Schedule
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/Schedule/shared_calendars.html">
+     Shared calendars
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -185,7 +190,14 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<p class="caption">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../tutorials/prereqs/ClimateScience.html">
+   Prerequisites and preparatory materials for Computational Tools for Climate Science
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Fundamentals
  </span>
@@ -335,7 +347,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Climate Data
  </span>
@@ -531,7 +543,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Climate Future
  </span>
@@ -610,32 +622,44 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial1.html">
-     Figure settings
+     <strong>
+      Tutorial 1: Creating Maps of CMIP6 Earth System Model (ESM) Projections
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial2.html">
-     Figure settings
+     <strong>
+      Tutorial 2: Time Series, Global Averages, and Scenario Comparison
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial3.html">
-     Figure settings
+     <strong>
+      Tutorial 3: Multi-model Ensembles
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial4.html">
-     Figure settings
+     <strong>
+      Tutorial 4: Quantifying Uncertainty in Projections
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial5.html">
-     Figure settings
+     <strong>
+      Tutorial 5: Internal Climate Variability
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial6.html">
-     Figure settings
+     <strong>
+      Tutorial 6: Synthesising &amp; Interpreting Diverse Data Sources
+     </strong>
     </a>
    </li>
   </ul>
@@ -681,7 +705,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Climate Response
  </span>
@@ -698,23 +722,59 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial1.html">
+     <strong>
+      Tutorial 1: Distributions
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial2.html">
-     Data investigation
+     <strong>
+      Tutorial 2: What is an Extreme Event? Empirical Return Levels
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial3.html">
+     <strong>
+      Tutorial 3: Extreme Value Analysis - the GEV Distribution
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial4.html">
+     <strong>
+      Tutorial 4: Return Levels Using Normal and GEV Distributions
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial5.html">
-     Fit Moments using a different method
+     <strong>
+      Tutorial 5: Non-stationarity in Historical Records
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial6.html">
+     <strong>
+      Tutorial 6: Scenario-dependence of Future Changes in Extremes
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial7.html">
-     Load CMIP6 data
+     <strong>
+      Tutorial 7: Non-Stationarity in the EVT-framework
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial8.html">
-     scale as function of time
+     <strong>
+      Tutorial 8: Thresholds
+     </strong>
     </a>
    </li>
   </ul>
@@ -760,7 +820,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Project Booklet
  </span>
@@ -840,6 +900,38 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../docs/continuing_your_project_after_the_course.html">
    Continuing your project after the course
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Professional Development
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../professional_development/README.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../professional_development/impact_talks.html">
+   Impact Talks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../professional_development/mentors.html">
+   Mentor Meetings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../professional_development/career_features.html">
+   Career Features
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../professional_development/career_panels.html">
+   Career Panels
   </a>
  </li>
 </ul>
@@ -1258,7 +1350,7 @@ title="Print to PDF"
               <div>
                 
   <div class="section" id="change-in-earth-s-albedo-and-its-dependence-on-land-cover-changes-in-the-past-20-years">
-<h1><strong>Change in Earth’s albedo and its dependence on land cover changes in the past 20 years</strong><a class="headerlink" href="#change-in-earth-s-albedo-and-its-dependence-on-land-cover-changes-in-the-past-20-years" title="Permalink to this headline">¶</a></h1>
+<h1><strong>Change in Earth’s albedo and its dependence on land cover changes in the past 20 years</strong><a class="headerlink" href="#change-in-earth-s-albedo-and-its-dependence-on-land-cover-changes-in-the-past-20-years" title="Permalink to this headline">#</a></h1>
 <p><strong>Content creators:</strong> Oz Kira, Julius Bamah</p>
 <p><strong>Content reviewers:</strong> Yuhan Douglas Rao, Abigail Bodner</p>
 <p><strong>Content editors:</strong> Zane Mitrevica, Natalie Steinemann, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
@@ -1278,13 +1370,13 @@ title="Print to PDF"
 <p><strong>In this project</strong>, you will have the opportunity to explore terrestrial remote sensing (recall our W1D3 tutorial on <strong>remote sensing</strong>) and meteorological data from GLASS and ERA5. The datasets will provide information on reflectance, albedo, meteorological variables, and land cover changes in your region of interest. We encourage you to investigate the relationships between these variables and their impact on the global radiative budget. Moreover, you can track agricultural land abandonment and analyze its potential connection to climate change. This project aligns well with the topics covered in W2D3, which you are encouraged to explore further.</p>
 </div>
 <div class="section" id="project-template">
-<h1><strong>Project template</strong><a class="headerlink" href="#project-template" title="Permalink to this headline">¶</a></h1>
+<h1><strong>Project template</strong><a class="headerlink" href="#project-template" title="Permalink to this headline">#</a></h1>
 <p><img alt="template" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/projects/template-images/albedo_template_map.svg" /></p>
 </div>
 <div class="section" id="data-exploration-notebook">
-<h1><strong>Data exploration notebook</strong><a class="headerlink" href="#data-exploration-notebook" title="Permalink to this headline">¶</a></h1>
+<h1><strong>Data exploration notebook</strong><a class="headerlink" href="#data-exploration-notebook" title="Permalink to this headline">#</a></h1>
 <div class="section" id="project-setup">
-<h2>Project setup<a class="headerlink" href="#project-setup" title="Permalink to this headline">¶</a></h2>
+<h2>Project setup<a class="headerlink" href="#project-setup" title="Permalink to this headline">#</a></h2>
 <p>Please run the following cells to install the necessary libarries into your Jupyter notebook!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1318,7 +1410,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="section" id="global-land-surface-satellite-glass-dataset">
-<h1><strong>Global Land Surface Satellite (GLASS) Dataset</strong><a class="headerlink" href="#global-land-surface-satellite-glass-dataset" title="Permalink to this headline">¶</a></h1>
+<h1><strong>Global Land Surface Satellite (GLASS) Dataset</strong><a class="headerlink" href="#global-land-surface-satellite-glass-dataset" title="Permalink to this headline">#</a></h1>
 <p>The Global Land Surface Satellite (GLASS) datasets primarily based on NASA’s Advanced Very High Resolution Radiometer (AVHRR) long-term data record <a class="reference external" href="https://ltdr.modaps.eosdis.nasa.gov">(LTDR)</a> and Moderate Resolution Imaging Spectroradiometer (MODIS) data, in conjunction with other satellite data and ancillary information.</p>
 <p>Currently, there are more than dozens of GLASS products are officially released, including leaf area index, fraction of green vegetation coverage, gross primary production, broadband albedo, land surface temperature, evapotranspiration, and so on.</p>
 <p>Here we provide you the datasets of GLASS from 1982 to 2015, a 34-year long annual dynamics of global land cover (GLASS-GLC) at 5 km resolution. In this datasets, there are 7 classes, including cropland, forest, grassland, shrubland, tundra, barren land, and snow/ice.
@@ -1366,7 +1458,7 @@ The annual global land cover map (5 km) is presented in a GeoTIFF file format na
 </div>
 <div class="cell_output docutils container">
 <div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/home/runner/work/course-content/course-content/book/projects/project-notebooks/Surface_albedo_and_land_use.ipynb</span>, line 1)</p>
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/home/wesley/Repos/climatematch/course-content/book/projects/project-notebooks/Surface_albedo_and_land_use.ipynb</span>, line 1)</p>
 <p>Non-consecutive header level increase; 0 to 3 [myst.header]</p>
 </div>
 <div class="output text_html"><table border="1" class="dataframe">
@@ -1515,7 +1607,7 @@ The annual global land cover map (5 km) is presented in a GeoTIFF file format na
 </table></div></div>
 </div>
 <div class="section" id="alternative-approach-to-obtain-land-cover-data-and-net-primary-production-npp-data-from-modis">
-<h2><strong>Alternative Approach to Obtain Land Cover Data and Net Primary Production (NPP) Data from MODIS</strong><a class="headerlink" href="#alternative-approach-to-obtain-land-cover-data-and-net-primary-production-npp-data-from-modis" title="Permalink to this headline">¶</a></h2>
+<h2><strong>Alternative Approach to Obtain Land Cover Data and Net Primary Production (NPP) Data from MODIS</strong><a class="headerlink" href="#alternative-approach-to-obtain-land-cover-data-and-net-primary-production-npp-data-from-modis" title="Permalink to this headline">#</a></h2>
 <p>MODIS (Moderate Resolution Imaging Spectroradiometer) is a key instrument aboard the Terra (originally known as EOS AM-1) and Aqua (originally known as EOS PM-1) satellites. Terra’s orbit around the Earth is timed so that it passes from north to south across the equator in the morning, while Aqua passes south to north over the equator in the afternoon. Terra MODIS and Aqua MODIS are viewing the entire Earth’s surface every 1 to 2 days, acquiring data in 36 spectral bands, or groups of wavelengths (see MODIS Technical Specifications). These data will improve our understanding of global dynamics and processes occurring on the land, in the oceans, and in the lower atmosphere. MODIS is playing a vital role in the development of validated, global, interactive Earth system models able to predict global change accurately enough to assist policy makers in making sound decisions concerning the protection of our environment (https://modis.gsfc.nasa.gov/data/).</p>
 <p>The following procedures must be ensured:</p>
 <ol class="simple">
@@ -1577,7 +1669,7 @@ The annual global land cover map (5 km) is presented in a GeoTIFF file format na
 </div>
 </div>
 <div class="section" id="gross-primary-production-gpp-datasets">
-<h1><strong>Gross Primary Production (GPP) Datasets</strong><a class="headerlink" href="#gross-primary-production-gpp-datasets" title="Permalink to this headline">¶</a></h1>
+<h1><strong>Gross Primary Production (GPP) Datasets</strong><a class="headerlink" href="#gross-primary-production-gpp-datasets" title="Permalink to this headline">#</a></h1>
 <p>In the tutorial, you learned about Net primary production (NPP). Another similar key ecosystem process is Gross Primary Production (GPP), which is the total amount of carbon compounds produced by photosynthesis of plants in an ecosystem in a given period of time. NPP is equal to GPP minus energy used by primary producers for respiration. GPP is the amount of energy from light converted to chemical energy per unit of time, while NPP is a measure of the net CO2 sequestered by vegetation.</p>
 <p>Here we provide you the GPP datasets <strong>VODCA2GPP</strong> via <a class="reference external" href="https://researchdata.tuwien.ac.at/records/1k7aj-bdz35">here</a> and this <a class="reference external" href="https://essd.copernicus.org/articles/14/1063/2022/#section6">paper</a>. This dataset estimates GPP based on VOD (Microwave Vegetation Optical Depth (VOD), a measure of the attenuation of microwave radiation caused by vegetation and thus relates to the total vegetation water content) using Generalized Additive Models. This VODCA2GPP is based on the period from 2007 to 2015 and uses VOD data from C-, X- and Ku-band and various GPP data sets. The data sets have different temporal coverage, which is summarized for VOD and GPP data in Table 2.</p>
 <div class="cell docutils container">
@@ -1619,7 +1711,7 @@ The annual global land cover map (5 km) is presented in a GeoTIFF file format na
 </div>
 <div class="cell_output docutils container">
 <div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/home/runner/work/course-content/course-content/book/projects/project-notebooks/Surface_albedo_and_land_use.ipynb</span>, line 1)</p>
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/home/wesley/Repos/climatematch/course-content/book/projects/project-notebooks/Surface_albedo_and_land_use.ipynb</span>, line 1)</p>
 <p>Non-consecutive header level increase; 0 to 3 [myst.header]</p>
 </div>
 <div class="output text_html"><table border="1" class="dataframe">
@@ -1711,7 +1803,7 @@ The annual global land cover map (5 km) is presented in a GeoTIFF file format na
 </table></div></div>
 </div>
 <div class="section" id="net-primary-production-npp-datasets">
-<h2><strong>Net Primary Production (NPP) Datasets</strong><a class="headerlink" href="#net-primary-production-npp-datasets" title="Permalink to this headline">¶</a></h2>
+<h2><strong>Net Primary Production (NPP) Datasets</strong><a class="headerlink" href="#net-primary-production-npp-datasets" title="Permalink to this headline">#</a></h2>
 <p>Alternatively, you can access the NPP data by downloading the MCD12Q1.061 MODIS Land Cover Type Yearly Global 500m using the instruction provided earlier. The description of this dataset can be viewed <a class="reference external" href="https://lpdaac.usgs.gov/products/mcd12q1v061/">here</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2137,15 +2229,15 @@ Attributes: (12/20)
 </div>
 </div>
 <div class="section" id="era5-land-monthly-averaged-data-from-1950-to-present">
-<h1><strong>ERA5-Land monthly averaged data from 1950 to present</strong><a class="headerlink" href="#era5-land-monthly-averaged-data-from-1950-to-present" title="Permalink to this headline">¶</a></h1>
+<h1><strong>ERA5-Land monthly averaged data from 1950 to present</strong><a class="headerlink" href="#era5-land-monthly-averaged-data-from-1950-to-present" title="Permalink to this headline">#</a></h1>
 <p><strong><a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#%21/dataset/reanalysis-era5-land-monthly-means?tab=overview">ERA5-Land</a></strong> is a reanalysis dataset that offers an enhanced resolution compared to <a class="reference external" href="https://www.ecmwf.int/en/forecasts/dataset/ecmwf-reanalysis-v5">ERA5</a>, providing a consistent view of land variables over several decades. It is created by replaying the land component of the ECMWF ERA5 climate reanalysis, which combines model data and global observations to generate a complete and reliable dataset using the laws of physics.</p>
 <p>ERA5-Land focuses on the water and energy cycles at the surface level, offering a detailed record starting from 1950. The data used here is a post-processed subset of the complete ERA5-Land dataset. Monthly-mean averages have been pre-calculated to facilitate quick and convenient access to the data, particularly for applications that do not require sub-monthly fields. The native spatial resolution of the ERA5-Land reanalysis dataset is 9km on a reduced Gaussian grid (TCo1279). The data in the CDS has been regridded to a regular lat-lon grid of 0.1x0.1 degrees.</p>
 <div class="section" id="to-calculate-albedo-using-era5-land">
-<h2><strong>To calculate albedo using ERA5-Land</strong><a class="headerlink" href="#to-calculate-albedo-using-era5-land" title="Permalink to this headline">¶</a></h2>
+<h2><strong>To calculate albedo using ERA5-Land</strong><a class="headerlink" href="#to-calculate-albedo-using-era5-land" title="Permalink to this headline">#</a></h2>
 <p>ERA5 parameter <a class="reference external" href="https://codes.ecmwf.int/grib/param-db/?id=243"><code class="docutils literal notranslate"><span class="pre">Forecast</span> <span class="pre">albedo</span></code></a> provides is the measure of the reflectivity of the Earth’s surface. It is the fraction of solar (shortwave) radiation reflected by Earth’s surface, across the solar spectrum, for both direct and diffuse radiation. Values are between 0 and 1. Typically, snow and ice have high reflectivity with albedo values of 0.8 and above, land has intermediate values between about 0.1 and 0.4 and the ocean has low values of 0.1 or less. Radiation from the Sun (solar, or shortwave, radiation) is partly reflected back to space by clouds and particles in the atmosphere (aerosols) and some of it is absorbed. The rest is incident on the Earth’s surface, where some of it is reflected. The portion that is reflected by the Earth’s surface depends on the albedo. In the ECMWF Integrated Forecasting System (IFS), a climatological background albedo (observed values averaged over a period of several years) is used, modified by the model over water, ice and snow. Albedo is often shown as a percentage (%).</p>
 </div>
 <div class="section" id="alternative-approach-to-obtain-albedo-data-from-merra-2">
-<h2><strong>Alternative Approach to Obtain Albedo Data from MERRA-2</strong><a class="headerlink" href="#alternative-approach-to-obtain-albedo-data-from-merra-2" title="Permalink to this headline">¶</a></h2>
+<h2><strong>Alternative Approach to Obtain Albedo Data from MERRA-2</strong><a class="headerlink" href="#alternative-approach-to-obtain-albedo-data-from-merra-2" title="Permalink to this headline">#</a></h2>
 <p>MERRA-2 is a NASA satellite dataset that incorporates advances that facilitate the assimilation of modern hyperspectral radiance, microwave observations, and GPS-Radio Occultation datasets. It also includes NASA’s ozone profile observations starting from late 2004, and improvements in the GEOS model and the GSI assimilation system. MERRA-2 maintains a similar spatial resolution to its predecessor, approximately 50 km in the latitudinal direction. It provides different kinds of information at different spatial resolutions than MODIS. MERRA-2 has a coarser spatial resolution than MODIS. While MODIS provides land cover data at a resolution of 500 meters, MERRA-2 offers meteorological data at a much coarser resolution of approximately 50 kilometers.</p>
 <p>Further background on the dataset could be found <a class="reference external" href="https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/">here</a>.</p>
 <p>Extra help on downloading MERRA-2 datasets:</p>
@@ -3805,7 +3897,7 @@ Attributes:
 </div>
 </div>
 <div class="section" id="further-reading">
-<h1><strong>Further Reading</strong><a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h1>
+<h1><strong>Further Reading</strong><a class="headerlink" href="#further-reading" title="Permalink to this headline">#</a></h1>
 <ul class="simple">
 <li><p>Zhao, X., Wu, T., Wang, S., Liu, K., Yang,  J. Cropland abandonment mapping at sub-pixel scales using crop phenological information and MODIS time-series images, Computers and Electronics in Agriculture, Volume 208,
 2023,107763, ISSN 0168-1699,https://doi.org/10.1016/j.compag.2023.107763</p></li>
