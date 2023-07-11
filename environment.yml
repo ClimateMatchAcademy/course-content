@@ -47,6 +47,7 @@ dependencies:
  - ipywidgets
  - jupyter-panel-proxy
  - jupyter-resource-usage
+ - jupyter-collaboration
  - kerchunk
  - lxml
  - lz4
