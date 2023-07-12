@@ -59,6 +59,6 @@ What makes a great mentee?
 * They take initiatives and look out for advancing their career and upgrading their skills.
 * They cherish the advice and time of their mentors, demonstrate respect by being punctual and show appreciation for their mentor’s guidance and support.
 * Great mentees respect limits while acting professionally when speaking with mentors. 
-* They typically behave morally and honestly, acting with integrity.
+* They behave morally and honestly, acting with integrity.
 
-Don’t forget to pay attention, ask lots of questions and stay in touch with your mentors after the course. Enjoy your time with the mentors!
+We suggest that you ask lots of questions, enjoy your time with your mentors and stay in touch with them after the course!
