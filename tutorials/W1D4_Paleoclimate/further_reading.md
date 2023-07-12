@@ -13,3 +13,6 @@ Major climate variations in earth’s history:
 Modern climate changes in the context of paleoclimate: 
 - https://www.ncei.noaa.gov/news/climate-change-context-paleoclimate 
 - https://pubs.usgs.gov/fs/2010/3021/pdf/fs2010-3021.pdf 
+
+Delta-18O information:
+- https://earthobservatory.nasa.gov/features/Paleoclimatology_OxygenBalance
