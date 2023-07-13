@@ -1,0 +1,54 @@
+# @title #**Project background** 
+#This will be a short video introducing the content creator(s) and motivating the research direction of the template.
+#The Tech team will add code to format and display the video
+
+# Imports
+
+import random
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Dataset-specific imports
+
+!pip install netCDF4
+import netCDF4 as nc
+
+# Code to retrieve and load the data
+!wget https://www.ncei.noaa.gov/data/oceans/ncei/ocads/data/0206289/Surface_pH_1770_2100/Surface_pH_1770_2000.nc
+
+
+
+from google.colab import drive
+drive.mount('/content/drive')
+
+# Code to print the shape, array names, etc of the dataset
+with nc.Dataset('Surface_pH_1770_2000.nc', 'r') as nc_fid:
+   vnames = nc_fid.variables.keys()
+   print(vnames)
+   lat = nc_fid['Latitude'][:] # note here you need [:] after to extract the data
+   lon = nc_fid['Longitude'][:]
+   ph = nc_fid['pH'][:]
+   yrs=nc_fid['Year']
+   #Month is just 1 to 12 so there is no nead to retrive it as a variable
+   print(ph.shape, lat.shape, lon.shape, yrs.shape)
+
+import xarray as xr
+ds1 = xr.open_dataset('Surface_pH_1770_2000.nc')
+ds1
+
+# Some how the SSTyCO2_CAMS_Copernicus_data.nc datafile needs to be read!!!
+
+with nc.Dataset('SSTyCO2_CAMS_Copernicus_data.nc', 'r') as nc_fid2:
+   vnames2 = nc_fid2.variables.keys()
+   print(vnames2)
+   lat2 = nc_fid2['latitude'][:] # note here you need [:] after to extract the data
+   lon2 = nc_fid2['longitude'][:]  
+   time2=nc_fid['time']
+   co2 = nc_fid2['tcco2'][:]
+   sst = nc_fid2['sst'][:]
+ 
+
+   print(co2.shape, sst.shape, lat2.shape, lon2.shape, time2.shape)
+
+ds2 = xr.open_dataset('SSTyCO2_CAMS_Copernicus_data.nc')
+ds2

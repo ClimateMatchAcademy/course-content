@@ -1,0 +1,313 @@
+# @title #**Project background** 
+#This will be a short video introducing the content creator(s) and motivating the research direction of the template.
+#The Tech team will add code to format and display the video
+
+# installs
+!pip install gdal
+!pip install pandas
+!pip install geopandas
+
+# Imports
+import random
+import numpy
+import matplotlib.pyplot as plt
+import pandas as pd
+import geopandas as gpd
+import os
+import glob
+import matplotlib
+
+# Data source-specific imports
+#Mount Google Drive to find dataset
+
+from google.colab import drive
+drive.mount('/content/gdrive/', force_remount=True)
+
+# Dataset-specific imports - file peth
+Dataset_file_path = glob.glob("/content/gdrive/MyDrive/Wildfires & burnt areas (Brittany)/Climate_Action_Dataset/*.shp")[0]
+
+# Code to retrieve and load the data
+Dataset = gpd.read_file(Dataset_file_path)
+
+# Code to print the shape, array names, etc of the dataset
+Dataset.head()
+
+# Plot the dataset
+Dataset.plot()
+
+# view image
+def showImage(Output):
+    plt.imshow(Output)
+    plt.show()
+
+# Data source-specific imports
+
+# Root folder location of where the imagery is currently saved
+# rootFolder = "gdrive/MyDrive/Sentinel2_Vegetation_Health_Burnt_Areas/"
+# Edit Natalie 23-05-09
+rootFolder = "drive/Shareddrives/Academy/Courses/Climate/Climatematch/06-Projects/01-Resources/Data exploration notebooks/Wildfires & burnt areas (Brittany)/Sentinel2_Vegetation_Health_Burnt_Areas/"
+
+continet ="Asia"
+id = "_22993322"
+# Import pre images 
+pre_fire_paths = glob.glob(rootFolder + continet + id +"/pre_fire_*.npy")
+pre_fires_numpy = [numpy.load(x).astype(int) for x in pre_fire_paths]
+
+# Import post images 
+post_fire = glob.glob(rootFolder + continet + id + "/post_fire_*.npy")
+post_fires_numpy = [numpy.load(x).astype(int) for x in post_fire]
+
+# Import Pre-SCL Mask for cloud coverage
+scl_fires = glob.glob(rootFolder + continet + id +  "/scl_pre_fire_*.npy")
+scl_fires_numpy = [numpy.load(x) for x in scl_fires]
+
+# Import Post-SCL Mask for cloud coverage
+scl_fires_post = glob.glob(rootFolder + continet + id +  "/scl_post_fire_*.npy")
+scl_fires_post_numpy = [numpy.load(x) for x in scl_fires_post]
+
+# Print list of pre_fires
+print("\n".join(pre_fire_paths))
+
+# Print list of post_fire
+print("\n".join(post_fire))
+
+# Print list of SCL
+print("\n".join(scl_fires))
+
+# view pre-fire satellite image that was taken right before the fire start date
+showImage(numpy.clip(pre_fires_numpy[2][:,:,[3,2,1]]/10000*3.5,0,1)) # RGB bands for Sentinel 2 are Bands: 4,3,2
+
+# view post-fire satellite image that was taken right before the fire start date
+showImage(numpy.clip(post_fires_numpy[0][:,:,[3,2,1]]/10000*3.5,0,1)) # RGB bands for Sentinel 2 are Bands: 4,3,2
+
+
+#compute SCL Mask to 0s and 1s, masking out clouds and bad pixels
+def computeSCLMask(image):
+    rImage,cImage = image.shape
+    sclOutput = numpy.zeros((rImage,cImage))
+    for x in range(cImage):
+        for y in range(rImage):
+            sclOutput[y,x] = 1 if image[y,x] in [0,1,3,8,9,11] else 0
+    
+    return sclOutput
+
+#Create Pre-fire and post-fire SCL masks
+print(scl_fires_numpy[5])
+pre_SCL_Mask = computeSCLMask(scl_fires_numpy[5])
+post_SCL_Mask = computeSCLMask(scl_fires_post_numpy[0])
+
+#view SCL imagery for image closests to the start fire date
+# -------  Save SCL as colored image based on SCL classification
+
+# No Data (0) = black
+# Saturated / Defective (1) = red
+# Dark Area Pixels (2) = chocolate
+# Cloud Shadows (3) = brown
+# Vegetation (4) = lime
+# Bare Soils (5) = yellow
+# Water (6) = blue
+# Clouds low probability / Unclassified (7) = aqua 
+# clouds medium probability (8) = darkgrey
+# Clouds high probability (9) light grey
+# Cirrus (10) = deepskyblue
+# Snow / Ice (11) = magenta
+#  colors: https://matplotlib.org/3.1.1/gallery/color/named_colors.html#sphx-glr-gallery-color-named-colors-py
+
+def showSCL(image):
+    cmap = matplotlib.colors.ListedColormap(
+        ["black", "red", "chocolate", "brown", "lime", "yellow", "blue","aqua","darkgrey","lightgrey","deepskyblue", "magenta"]) 
+    plt.imshow(image, cmap=cmap)
+    plt.show()
+
+showSCL(scl_fires_numpy[5])
+
+
+# This code computes the NDVI for an image
+'The NDVI can be computed on any image (pre or post).'
+'Compute the NDVI on the pre-fire image'
+
+#compute NDVI
+def computeNDVI(image, mask):
+    r,c,ch = image.shape
+    ndviOutput = numpy.zeros((r,c))
+    for x in range(c):
+        for y in range(r):
+            if (image[y,x,7] ==0 and image[y,x,3] == 0) or mask[y,x] == 1: 
+                ndviOutput[y,x] = numpy.nan
+            else: 
+                ndviOutput[y,x] = (image[y,x,7] - image[y,x,3]) / (image[y,x,7] + image[y,x,3])
+    
+    return ndviOutput
+
+#TA Code
+computeNDVI_value = computeNDVI(pre_fires_numpy[2],pre_SCL_Mask)
+
+#plot NDVI without remap
+showImage(computeNDVI_value)
+
+# Use this code to remap the NDVI to specific colors for values
+def remapNDVI(NDVI):
+    remapped = numpy.zeros((NDVI.shape[0], NDVI.shape[1]))
+    for x in range(remapped.shape[0]):
+        for y in range(remapped.shape[1]):
+            if numpy.isnan(NDVI[x, y]):
+                remapped[x, y] = numpy.nan
+            elif NDVI[x, y] <= -0.2:
+                remapped[x, y] = 1
+            elif NDVI[x, y] <= 0:
+                remapped[x, y] = 2
+            elif NDVI[x, y] <= .1:
+                remapped[x, y] = 3
+            elif NDVI[x, y] <= 0.2:
+                remapped[x, y] = 4
+            elif NDVI[x, y] <= 0.3:
+                remapped[x, y] = 5
+            elif NDVI[x, y] <= 0.4:
+                remapped[x, y] = 6
+            elif NDVI[x, y] <= 0.5:
+                remapped[x, y] = 7
+            elif NDVI[x, y] <= 0.6:
+                remapped[x, y] = 8
+            elif NDVI[x, y] <= 0.7:
+                remapped[x, y] = 9
+            elif NDVI[x, y] <= 0.8:
+                remapped[x, y] = 10
+            elif NDVI[x, y] <= 0.9:
+                remapped[x, y] = 11
+            elif NDVI[x, y] <= 1:
+                remapped[x, y] = 12
+            else :
+                remapped[x,y] = 13
+    return remapped
+
+#TA Code
+NDVI_remap = remapNDVI(computeNDVI_value)
+
+#View remapped NDVI
+def showNDVI(image):
+    cmap = matplotlib.colors.ListedColormap(
+        ["#000000", "#a50026", "#d73027", "#f46d43", "#fdae61", "#fee08b", "#ffffbf","#d9ef8b","#a6d96a","#66bd63","#1a9850", "#006837"]) 
+    plt.imshow(image, cmap=cmap)
+    plt.show()
+
+showNDVI(NDVI_remap)
+
+# Compute the SCL mask for all the SCLs and apply it to the pre_fire_NDVIs
+pre_fires_scl = [computeSCLMask(x) for x in scl_fires_numpy]
+pre_fires_NDVI = [computeNDVI(x[0],x[1]) for x in zip(pre_fires_numpy,pre_fires_scl)]
+
+#Compute for VCI
+def computeVCI(for_ndvi_image, ndvi_dataset ):
+    rImage,cImage =for_ndvi_image.shape
+    vciOutput = numpy.zeros((rImage,cImage))
+    ndvi_dataset.append(for_ndvi_image)
+    for x in range(cImage):
+        for y in range(rImage):
+            pixels = [z[y,x] for z in ndvi_dataset]
+            filtered_pixels = [f for f in pixels if not numpy.isnan(f)]
+            if len(filtered_pixels) == 0 or len(filtered_pixels) == 1:
+                vciOutput[y,x] = 1
+            elif numpy.isnan(for_ndvi_image[y,x]):
+                vciOutput[y,x] = 1
+            else:
+                max_val = max(filtered_pixels)
+                min_val = min(filtered_pixels)
+                if max_val == min_val:
+                    vciOutput[y,x] = 1
+                else:
+                    vciOutput[y,x] = (for_ndvi_image[y,x] - min_val)/(max_val-min_val)
+    
+    return vciOutput
+
+# Compute the VCI for the last pre-fire to view the drought over the time period
+last_pre_fire_NDVI = pre_fires_NDVI.pop(2)
+last_pre_fire_vci = computeVCI(last_pre_fire_NDVI, pre_fires_NDVI)
+
+# View the non-thresholded VCI
+showImage(last_pre_fire_vci)
+
+# Map specific colors to values to show the severity of the droughts
+def remapVCI(vci):
+    remapped = numpy.zeros(vci.shape)
+    for x in range(remapped.shape[0]):
+        for y in range(remapped.shape[1]):
+            if vci[x,y] < 0.35:
+                remapped[x,y] = 1
+            elif vci[x,y] <= 0.50:
+                remapped[x,y] = 2
+            else:
+                remapped[x,y] = 3
+    return remapped
+
+#Define the VCI mapped/thresholded values
+def showVCI(vci_image):
+    cmap = matplotlib.colors.ListedColormap(
+        ["red","yellow","green"]
+    )
+    plt.imshow(remapVCI(vci_image), cmap=cmap)
+    plt.show()
+
+# View the mapped VCI values
+showVCI(last_pre_fire_vci)
+
+# This code creates the NBR for each image then uses the NBR to create the dNBR. It can easily be updated for other burnt area indices
+
+def computeFireMasks(pre_fire, post_fire):
+
+    rows, columns, channels = pre_fire.shape
+    nbrPost = numpy.zeros((rows, columns))
+    nbrPre = numpy.zeros((rows, columns))
+    dnbr = numpy.zeros((rows,columns))
+
+    for x in range(columns):
+        for y in range(rows):
+          nbrPost[y, x] = (post_fire[y, x, 7] - post_fire[y, x, 11])/(post_fire[y, x, 7] + post_fire[y, x, 11])
+          nbrPre[y, x] = (pre_fire[y, x, 7] - pre_fire[y, x, 11])/(pre_fire[y, x, 7] + pre_fire[y, x, 11])
+          dnbr[y, x] = nbrPre[y, x] - nbrPost[y, x]         
+
+    return dnbr
+
+
+# TA Code 
+#run computeFireMasks
+dnbr = computeFireMasks(pre_fires_numpy[2], post_fires_numpy[0])
+
+# This code applies a threshold to the dNBR to show the level of burn intensity (unburned, low severity, moderate severity, or high severity)
+
+def remapDNBR(dnbr):
+    remapped = numpy.zeros((dnbr.shape[0], dnbr.shape[1]))
+    for x in range(remapped.shape[0]):
+        for y in range(remapped.shape[1]):
+            if numpy.isnan(dnbr[x, y]):
+                remapped[x, y] = numpy.nan
+            elif dnbr[x, y] <= -0.251:
+                remapped[x, y] = 1
+            elif dnbr[x, y] <= -0.101:
+                remapped[x, y] = 2
+            elif dnbr[x, y] <= 0.099:
+                remapped[x, y] = 3
+            elif dnbr[x, y] <= 0.269:
+                remapped[x, y] = 4
+            elif dnbr[x, y] <= 0.439:
+                remapped[x, y] = 5
+            elif dnbr[x, y] <= 0.659:
+                remapped[x, y] = 6
+            elif dnbr[x, y] <= 1.3:
+                remapped[x, y] = 7
+            else :
+                remapped[x,y] = 8
+    return remapped
+
+#TA Code
+dnbr_remapped = remapDNBR(dnbr)
+
+#This code takes the above function (remapDNBR) where the dNBR threshold has been applied to the image'
+#and applies a color coded map to each threshold as shown in the image above'
+
+def showDNBR(dnbr):
+    cmap = matplotlib.colors.ListedColormap(
+        ["blue", "teal", "green", "yellow", "orange", "red", "purple",]
+    )
+    plt.imshow(remapDNBR(dnbr), cmap=cmap)
+
+showDNBR(dnbr_remapped)

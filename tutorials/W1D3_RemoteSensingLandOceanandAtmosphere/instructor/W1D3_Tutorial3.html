@@ -1,0 +1,1754 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figure settings &#8212; Climatematch Academy: Computational Tools for Climate Science</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../../_static/cma-logo-square-4xp.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Tutorial 4: Understanding Climatology Through Precipitation Data" href="W1D3_Tutorial4.html" />
+    <link rel="prev" title="Tutorial 2: Exploring Satellite Climate Data Records" href="W1D3_Tutorial2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/cma-logo-square-4xp.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Climatematch Academy: Computational Tools for Climate Science</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../Schedule/schedule_intro.html">
+   Schedule
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Schedule/daily_schedules.html">
+     General Schedule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Schedule/shared_calendars.html">
+     Shared calendars
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../TechnicalHelp/tech_intro.html">
+   Technical Help
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../TechnicalHelp/Jupyterbook.html">
+     Using jupyterbook
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../TechnicalHelp/Tutorial_jupyterhub.html">
+       <strong>
+        Using JupyterHub
+       </strong>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../TechnicalHelp/Tutorial_colab.html">
+       Using Google Colab
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../TechnicalHelp/Tutorial_kaggle.html">
+       Using Kaggle
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../TechnicalHelp/Discord.html">
+     Using discord
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../TechnicalHelp/Links_Policy.html">
+   Quick links and policies
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../prereqs/ClimateScience.html">
+   Prerequisites and preparatory materials for Computational Tools for Climate Science
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Fundamentals
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../W1D1_ClimateSystemOverview/chapter_title.html">
+   Climate System Overview (W1D1)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial1.html">
+     <strong>
+      Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial2.html">
+     <strong>
+      Tutorial 2: Selection, Interpolation and Slicing
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial3.html">
+     <strong>
+      Tutorial 3: Opening and Plotting netCDF Data
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial4.html">
+     <strong>
+      Tutorial 4: Arithmetic and Aggregation Methods
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial5.html">
+     <strong>
+      Tutorial 5: Xarray Data Analysis and Climatology
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial6.html">
+     <strong>
+      Tutorial 6: Compute and Plot Temperature Anomalies
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial7.html">
+     <strong>
+      Tutorial 7: Other Computational Tools in Xarray
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial8.html">
+     <strong>
+      Tutorial 8: Masking with One Condition
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial9.html">
+     <strong>
+      Tutorial 9: Masking with Multiple Conditions
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../W2D2_GoodResearchPractices/chapter_title.html">
+   Good Research Practices (W2D2)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D2_GoodResearchPractices/instructor/W2D2_Tutorial1.html">
+     <strong>
+      Tutorial 1: Finding a Phenomenon and Asking a Question About It
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D2_GoodResearchPractices/instructor/W2D2_Tutorial2.html">
+     <strong>
+      Tutorial 2: Doing a Literature Review
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D2_GoodResearchPractices/instructor/W2D2_Tutorial3.html">
+     <strong>
+      Tutorial 3: Identifying the Basic Ingredients
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D2_GoodResearchPractices/instructor/W2D2_Tutorial4.html">
+     <strong>
+      Tutorial 4: Formulating a Hypothesis
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D2_GoodResearchPractices/instructor/W2D2_Tutorial5.html">
+     <strong>
+      Tutorial 5: Drafting the Analysis
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D2_GoodResearchPractices/instructor/W2D2_Tutorial6.html">
+     <strong>
+      Tutorial 6: Implementing the Analysis
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D2_GoodResearchPractices/instructor/W2D2_Tutorial7.html">
+     <strong>
+      Tutorial 7: Interpreting the Results
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D2_GoodResearchPractices/instructor/W2D2_Tutorial8.html">
+     <strong>
+      Tutorial 8: Communicating Your Conclusions
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Climate Data
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/chapter_title.html">
+   State of the Climate Ocean and Atmosphere Reanalysis (W1D2)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial1.html">
+     <strong>
+      Tutorial 1: Calculating ENSO with Xarray
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial2.html">
+     <strong>
+      Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial3.html">
+     <strong>
+      Tutorial 3: Atmospheric  Circulation
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial4.html">
+     <strong>
+      Tutorial 4: Oceanic Wind-driven Circulation
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial5.html">
+     <strong>
+      Tutorial 5: Thermohaline Circulation
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial6.html">
+     <strong>
+      Tutorial 6: Ocean Heat Content
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../chapter_title.html">
+   Remote Sensing Land Ocean and Atmosphere (W1D3)
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="W1D3_Tutorial1.html">
+     <strong>
+      Tutorial 1: Introduction to Remote Sensing
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="W1D3_Tutorial2.html">
+     <strong>
+      Tutorial 2: Exploring Satellite Climate Data Records
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="W1D3_Tutorial4.html">
+     <strong>
+      Tutorial 4: Understanding Climatology Through Precipitation Data
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="W1D3_Tutorial5.html">
+     <strong>
+      Tutorial 5: Calculating Anomalies Using Precipitation Data
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="W1D3_Tutorial6.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="W1D3_Tutorial7.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="W1D3_Tutorial8.html">
+     Figure settings
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../W1D4_Paleoclimate/chapter_title.html">
+   Paleoclimate (W1D4)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D4_Paleoclimate/instructor/W1D4_Tutorial1.html">
+     <strong>
+      Tutorial 1: Paleoclimate Proxies
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D4_Paleoclimate/instructor/W1D4_Tutorial2.html">
+     <strong>
+      Tutorial 2: Reconstructing Past Changes in Ocean Climate
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D4_Paleoclimate/instructor/W1D4_Tutorial3.html">
+     <strong>
+      Tutorial 3: Reconstructing Past Changes in Terrestrial Climate
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D4_Paleoclimate/instructor/W1D4_Tutorial4.html">
+     <strong>
+      Tutorial 4: Reconstructing Past Changes in Atmospheric Climate
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D4_Paleoclimate/instructor/W1D4_Tutorial5.html">
+     <strong>
+      Tutorial 5: Paleoclimate Data Analysis Tools
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D4_Paleoclimate/instructor/W1D4_Tutorial6.html">
+     <strong>
+      Tutorial 6: Spectral Analysis of Paleoclimate Data
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D4_Paleoclimate/instructor/W1D4_Tutorial7.html">
+     <strong>
+      Tutorial 7: Assessing Climate Forcings
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D4_Paleoclimate/instructor/W1D4_Tutorial8.html">
+     <strong>
+      Tutorial 8: Paleoclimate Models
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D4_Paleoclimate/instructor/W1D4_Tutorial9.html">
+     <strong>
+      Tutorial 9: Paleoclimate Reanalysis Products
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Climate Future
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../W1D5_ClimateModeling/chapter_title.html">
+   Climate Modeling (W1D5)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D5_ClimateModeling/instructor/W1D5_Tutorial1.html">
+     <strong>
+      Tutorial 1 : A Simple Greenhouse Model
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D5_ClimateModeling/instructor/W1D5_Tutorial2.html">
+     <strong>
+      Tutorial 2 : Energy Balance
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D5_ClimateModeling/instructor/W1D5_Tutorial3.html">
+     <strong>
+      Tutorial 3 : A Zero-Dimensional Energy Balance Model
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D5_ClimateModeling/instructor/W1D5_Tutorial4.html">
+     <strong>
+      Tutorial 4: Climate Feedbacks
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D5_ClimateModeling/instructor/W1D5_Tutorial5.html">
+     <strong>
+      Tutorial 5: Radiative Equilibrium
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D5_ClimateModeling/instructor/W1D5_Tutorial6.html">
+     <strong>
+      Tutorial 6: Radiative Convective Equilibrium
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D5_ClimateModeling/instructor/W1D5_Tutorial7.html">
+     <strong>
+      Tutorial 7: Introduction to Earth System Models
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/chapter_title.html">
+   Future Climate - IPCC I Physical Basis (W2D1)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/instructor/W2D1_Tutorial1.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/instructor/W2D1_Tutorial2.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/instructor/W2D1_Tutorial3.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/instructor/W2D1_Tutorial4.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/instructor/W2D1_Tutorial5.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/instructor/W2D1_Tutorial6.html">
+     Figure settings
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/chapter_title.html">
+   Future Climate - IPCC II &amp; III Socio-Economic Basis (W2D3)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/instructor/W2D3_Tutorial1.html">
+     <strong>
+      Tutorial Objectives
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/instructor/W2D3_Tutorial2.html">
+     <strong>
+      Tutorial 2: Transition Goals and Integrated Assessment Models
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/instructor/W2D3_Tutorial3.html">
+     <strong>
+      Tutorial 3: IAMs and SSPs
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/instructor/W2D3_Tutorial4.html">
+     <strong>
+      Tutorial 4: Public Opinion on the Climate Emergency and Why it Matters
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/further_reading.html">
+     <strong>
+      Tutorial 2 Further Reading
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Climate Response
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/chapter_title.html">
+   Climate Response - Extremes &amp; Variability (W2D4)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/instructor/W2D4_Tutorial1.html">
+     <strong>
+      Tutorial 1: Distributions
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/instructor/W2D4_Tutorial2.html">
+     <strong>
+      Tutorial 2: What is an Extreme Event? Empirical Return Levels
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/instructor/W2D4_Tutorial3.html">
+     <strong>
+      Tutorial 3: Extreme Value Analysis - the GEV Distribution
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/instructor/W2D4_Tutorial4.html">
+     <strong>
+      Tutorial 4: Return Levels Using Normal and GEV Distributions
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/instructor/W2D4_Tutorial5.html">
+     <strong>
+      Tutorial 5: Non-stationarity in Historical Records
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/instructor/W2D4_Tutorial6.html">
+     <strong>
+      Tutorial 6: Scenario-dependence of Future Changes in Extremes
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/instructor/W2D4_Tutorial7.html">
+     <strong>
+      Tutorial 7: Non-Stationarity in the EVT-framework
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/instructor/W2D4_Tutorial8.html">
+     <strong>
+      Tutorial 8: Thresholds
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/chapter_title.html">
+   Climate Response - Adaptation Impact (W2D5)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/instructor/W2D5_Tutorial1.html">
+     <strong>
+      Tutorial 1: Linear and Logistic Regression
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/instructor/W2D5_Tutorial2.html">
+     <strong>
+      Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/instructor/W2D5_Tutorial3.html">
+     <strong>
+      Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/instructor/W2D5_Tutorial4.html">
+     <strong>
+      Tutorial 4:  Exploring other applications
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Project Booklet
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../projects/README.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../projects/docs/project_guidance.html">
+   Daily guide for projects
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../projects/docs/datasets_overview.html">
+   Project materials
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Sea_level_rise.html">
+     <strong>
+      Sea Level Rise
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Ocean_acidification.html">
+     <strong>
+      Ocean Acidification
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.html">
+     <strong>
+      The Impact of ENSO on Precipitation and Temperature
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Regional_precipitation_variability.html">
+     Regional Precipitation Variability and Extreme Events
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
+     <strong>
+      Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Wildfires_and_burnt_areas.html">
+     <strong>
+      Monitoring and Mapping Wildfires Using Satellite Data
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Surface_albedo_and_land_cover.html">
+     Changes in Land Cover: Albedo and Carbon Sequestration
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../projects/docs/continuing_your_project_after_the_course.html">
+   Continuing your project after the course
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Professional Development
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../projects/professional_development/README.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../projects/professional_development/impact_talks.html">
+   Impact Talks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../projects/professional_development/mentors.html">
+   Mentor Meetings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../projects/professional_development/career_features.html">
+   Career Features
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../projects/professional_development/career_panels.html">
+   Career Panels
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&urlpath=lab/tree/course-content/book/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/instructor/W1D3_Tutorial3.ipynb&branch=main"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on JupyterHub"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="headerbtn__text-container">JupyterHub</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/ClimatematchAcademy/course-content"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/ClimatematchAcademy/course-content/issues/new?title=Issue%20on%20page%20%2Ftutorials/W1D3_RemoteSensingLandOceanandAtmosphere/instructor/W1D3_Tutorial3.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/instructor/W1D3_Tutorial3.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Figure settings
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Figure settings
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#video-1-video-1-name">
+   Video 1: Video 1 Name
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Video 1: Video 1 Name
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#code-exercise-1-1-finding-the-data-of-your-interest">
+     <strong>
+      Code exercise 1.1: Finding the data of your interest
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Figure settings</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Figure settings
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Figure settings
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#video-1-video-1-name">
+   Video 1: Video 1 Name
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Video 1: Video 1 Name
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#code-exercise-1-1-finding-the-data-of-your-interest">
+     <strong>
+      Code exercise 1.1: Finding the data of your interest
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <p>#<strong>Tutorial 3: Visualizing satellite CDR - Global Vegetation Mapping</strong></p>
+<blockquote>
+<div><p>Indented block</p>
+</div></blockquote>
+<blockquote>
+<div><p>Indented block</p>
+</div></blockquote>
+<p><strong>Week 1, Day 3, Remote Sensing</strong></p>
+<p><strong>Content creators:</strong> Douglas Rao</p>
+<p><strong>Content reviewers:</strong> TBD</p>
+<p><strong>Content editors:</strong> TBD</p>
+<p><strong>Production editors:</strong> TBD</p>
+<p><strong>Our 2023 Sponsors:</strong> TBD</p>
+<p>#<strong>Tutorial Objectives</strong></p>
+<p>In this tutorial, you will learn the skills of how to access and analyze satellite remote sensing products for climate applications. We will be using vegetation mapping as an example and use the long-term vegetation greeness data to demonstrate these skills.</p>
+<p>By the end of this tutorial you will be able to:</p>
+<ul class="simple">
+<li><p>Locate, access, and visulize vegetation greeness data (NDVI) from cloud using <code class="docutils literal notranslate"><span class="pre">xarray</span></code> and <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.</p></li>
+<li><p>Understand how to use quality flag information from remote sensing dataset to filter data that is proper for climate analysis.</p></li>
+</ul>
+<p>#<strong>Setup</strong></p>
+<p>In this section, we have:</p>
+<ol class="simple">
+<li><p><strong>Import cell:</strong> imports all libraries you use in the tutorial.</p></li>
+<li><p><strong>Hidden Figure settings cell:</strong> sets up the plotting style (copy exactly)</p></li>
+<li><p><strong>Hidden Plotting functions cell:</strong> contains all functions used to create plots throughout the tutorial (so students don’t waste time looking at boilerplate matplotlib but can here if they wish to). Please use only matplotlib for plotting for consistency.</p></li>
+<li><p><strong>Hidden Helper functions cell:</strong> This should contain functions that students have previously used or that are very simple. Any helper functions that are being used for the first time and are important should be placed directly above the relevant text or exercise (see Section 1.1 for an example).</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Imports</span>
+
+<span class="c1"># Import only the libraries/objects that you use in this tutorial.</span>
+
+<span class="c1"># If any external library has to be installed, !pip install library --quiet</span>
+<span class="c1"># follow this order: numpy&gt;matplotlib.</span>
+<span class="c1"># import widgets in hidden Figure settings cell</span>
+
+<span class="c1">#!pip install s3fs --quiet</span>
+<span class="c1">#!pip install cartopy --quiet</span>
+
+<span class="kn">import</span> <span class="nn">s3fs</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">cartopy</span><span class="o">,</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="figure-settings">
+<h1>Figure settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">#</a></h1>
+<div class="section" id="id1">
+<h2>Figure settings<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Figure settings</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>       <span class="c1"># interactive display</span>
+<span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = &#39;retina&#39;
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/cma.mplstyle&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>#<strong>Section 1: Satellite monitoring of vegetation status</strong></p>
+<p>As we learned in the previous tutorial, all NOAA CDR datasets are available both at NOAA NCEI and commercial cloud platforms. Here, we are accessing the data directly via Amazon Web Service (AWS). You can find out the NOAA CDR data on AWS’s Open Data Registry.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://registry.opendata.aws/noaa-cdr-fundamental/">NOAA Fundamental CDR on AWS</a></p></li>
+<li><p><a class="reference external" href="https://registry.opendata.aws/noaa-cdr-terrestrial/">NOAA Terrestrial CDR on AWS</a></p></li>
+<li><p><a class="reference external" href="https://registry.opendata.aws/noaa-cdr-atmospheric/">NOAA Atmospheric CDR on AWS</a></p></li>
+<li><p><a class="reference external" href="https://registry.opendata.aws/noaa-cdr-oceanic/">NOAA Oceanic CDR on AWS</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="video-1-video-1-name">
+<h1>Video 1: Video 1 Name<a class="headerlink" href="#video-1-video-1-name" title="Permalink to this headline">#</a></h1>
+<div class="section" id="id2">
+<h2>Video 1: Video 1 Name<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Video 1: Video 1 Name</span>
+<span class="c1">#Tech team will add code to format and display the video</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Normalized Difference Vegetation Index (NDVI)</strong> is one of the most commonly used remotely sensed indices to measure the “greeness” of vegetation and is useful in understanding vegetation density and assessing changes in plant health. NDVI can be used to study the impact of drought, heatwave, and insect infestation on the plants at scale.</p>
+<p>##<strong>Section 1.1: Access NOAA NDVI CDR data from AWS</strong></p>
+<p>If we go to the <a class="reference external" href="https://noaa-cdr-ndvi-pds.s3.amazonaws.com/index.html#data/">cloud storage space (or a S3 bucket)</a> that host NOAA NDVI CDR data, you can find the pattern of how the NOAA NDVI CDR is stored:</p>
+<p><code class="docutils literal notranslate"><span class="pre">s3://noaa-cdr-ndvi-pds/data/1981/AVHRR-Land_v005_AVH13C1_NOAA-07_19810624_c20170610041337.nc</span></code></p>
+<p>As you can see, there is a clear pattern on how the data is organized. We can take advantage of the pattern to search for the data file programaticaly.</p>
+<blockquote>
+<div><p>Parent directory: <code class="docutils literal notranslate"><span class="pre">s3://noaa-cdr-ndvi-pds/data/</span></code><br />
+Sub-directory for each year: <code class="docutils literal notranslate"><span class="pre">1981/</span></code><br />
+File name of each day: <code class="docutils literal notranslate"><span class="pre">AVHRR-Land_v005_AVH13C1_NOAA-07_19810624_c20170610041337.nc</span></code></p>
+</div></blockquote>
+<p>The file name also has a clear pattern:</p>
+<blockquote>
+<div><p>Sensor name: <code class="docutils literal notranslate"><span class="pre">AVHRR</span></code><br />
+Product category: <code class="docutils literal notranslate"><span class="pre">Land</span></code><br />
+Product version: <code class="docutils literal notranslate"><span class="pre">v005</span></code><br />
+Product code: <code class="docutils literal notranslate"><span class="pre">AVH13C1</span></code><br />
+Satellite platform: <code class="docutils literal notranslate"><span class="pre">NOAA-07</span></code><br />
+Date of the data: <code class="docutils literal notranslate"><span class="pre">19810624</span></code><br />
+Processing time: <code class="docutils literal notranslate"><span class="pre">c20170610041337</span></code> (<em>This will change for each file based on when the file are processed</em>)<br />
+File format: <code class="docutils literal notranslate"><span class="pre">.nc</span></code> (<em>netCDR-4 format</em>)</p>
+</div></blockquote>
+<p>In other words, if we are looking for the data of a specific day, we can easily locate where the file might be.</p>
+<p>For example, if we want to find the AVHRR data for the day of <em>2002-03-12 (or March 12, 2002)</em>, we will be looking at something like this:</p>
+<p><code class="docutils literal notranslate"><span class="pre">s3://noaa-cdr-ndvi-pds/data/2002/AVHRR-Land_v005_AVH13C1_*_20020312_c*.nc</span></code></p>
+<p>The reasaon that we put <code class="docutils literal notranslate"><span class="pre">*</span></code> in the above directory is because we are not sure about what satellite platform this data is from and when the data is being processed. But with this pattern we can still check if the file exist.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># To access the NDVI data from AWS S3 bucket, we first need to connect to s3 bucket</span>
+<span class="n">fs</span> <span class="o">=</span> <span class="n">s3fs</span><span class="o">.</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="n">anon</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># We can now check to see if the file exist in this cloud storage bucket using the</span>
+<span class="c1"># file name pattern we just described</span>
+<span class="n">file_location</span> <span class="o">=</span> <span class="n">fs</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;s3://noaa-cdr-ndvi-pds/data/2002/AVHRR-Land_v005_AVH13C1_*_20020312_c*.nc&#39;</span><span class="p">)</span>
+
+<span class="c1"># Now let&#39;s check if there is a file match the pattern of the date that we are</span>
+<span class="c1"># interested in.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">file_location</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="code-exercise-1-1-finding-the-data-of-your-interest">
+<h2><strong>Code exercise 1.1: Finding the data of your interest</strong><a class="headerlink" href="#code-exercise-1-1-finding-the-data-of-your-interest" title="Permalink to this headline">#</a></h2>
+<p>Looks like we find the daily data that we are looking for earlier. Can you try to find the data of a specific date that you want to check?</p>
+<p><strong>Hint:</strong> NDVI CDR data switched sensors on 2014 from AVHRR (the older generation sensor) to VIIRS (the newest generation sensor). So if you are trying to find the data after 2013, you may want to adjust the code to locate the data properly.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">################################################################################</span>
+<span class="c1">## Choose a data of your interest and identify the location of the NDVI CDR   ##</span>
+<span class="c1">## data on Amazon Web Service                                                 ##</span>
+<span class="c1">################################################################################</span>
+<span class="c1"># exercise_file = fs.glob(...)</span>
+<span class="c1"># print(exercise_file)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>##<strong>Section 1.2: Read NDVI CDR Data</strong></p>
+<p>Now we have the location of the NDVI data for a specific date. We can read in the data using the python library <code class="docutils literal notranslate"><span class="pre">xarray</span></code> to open the netCDF-4 file, a common data format used to store satellite and climate datasets.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## First, we need to open the connection to the file object of the selected date.</span>
+<span class="c1">## We are still using the date of 2002-03-12 as the example here.</span>
+<span class="n">file_obj</span> <span class="o">=</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">file_location</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># this provide a link to the data on AWS</span>
+
+<span class="c1">## With the link to the file object, we can open the NDVI data file on AWS</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">file_obj</span><span class="p">)</span>
+
+<span class="c1">## Now let&#39;s look at what this data look like</span>
+<span class="n">ds</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The output from the code block tells us that the NDVI data file of 2002-03-12 has the dimention of <code class="docutils literal notranslate"><span class="pre">3600x7200</span></code>. This makes sense for a dataset with the spatial resolution of 0.5°×0.5°. There is another dimension of the dataset named <code class="docutils literal notranslate"><span class="pre">time</span></code>. Since it is a daily data file, it only contains one value in its dimension.</p>
+<p>Two main data variables in this dataset are <code class="docutils literal notranslate"><span class="pre">NDVI</span></code> and <code class="docutils literal notranslate"><span class="pre">QA</span></code>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">NDVI</span></code> is the variable that contains the value of NDVI (ranges between -1 and 1) that can be used to measure the vegetation greeness.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">QA</span></code> is the variable that indicates the quality of the NDVI values for each corresponding grid. It reflects whether the data is of high quality or should be discarded because of various reasons (e.g., bad sensor data, potentially contanminated by cloud).</p></li>
+</ul>
+<p>##<strong>Section 1.3: Visualize NDVI CDR data</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Now let&#39;s only looking at the NDVI values from the dataset</span>
+<span class="n">ndvi</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">NDVI</span>
+<span class="n">ndvi</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## As this is a gridded dataset, we can plot the data of this day directly to</span>
+<span class="c1">## visually understand the data.</span>
+<span class="c1">## Figure settings:</span>
+<span class="c1">## vmin &amp; vmax: minimum and maximum values for the legend</span>
+<span class="c1">## aspect: setting the aspect ratio of the figure, must be combined with `size`</span>
+<span class="c1">## size: setting the overall size of th figure</span>
+<span class="n">ndvi</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vmin</span><span class="o">=-</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mf">1.8</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>##<strong>Section 1.4: Mask NDVI Data Using Quality Flag</strong></p>
+<p>As stated earlier, there is also a variable <code class="docutils literal notranslate"><span class="pre">QA</span></code> that indicates the quality of the NDVI value for each grid cell. This quality information is very important when using satellite data to ensure the climate analysis is only done using the highest quality data that are appropirate for the application.</p>
+<p>For NDVI CDR data, it has a complex quality flag system that is represented using 16-bit system. Although when you reach in the QA, it appears to be normal numeric values, the QA value need to be converted to binary values of 16 bits and recognize the quality flag based on the information listed in the table below.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:right head"><p>Bit No.</p></th>
+<th class="text-align:left head"><p>Description</p></th>
+<th class="text-align:center head"><p>Value=1</p></th>
+<th class="text-align:center head"><p>Value=0</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:right"><p>15</p></td>
+<td class="text-align:left"><p>Flag to indicate if the pixel is in polar region</p></td>
+<td class="text-align:center"><p>Yes</p></td>
+<td class="text-align:center"><p>No</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>14</p></td>
+<td class="text-align:left"><p>Flag to indicate BRDF-correction issues</p></td>
+<td class="text-align:center"><p>Yes</p></td>
+<td class="text-align:center"><p>No</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>13</p></td>
+<td class="text-align:left"><p>Flag to indicate RH03 value is invalid</p></td>
+<td class="text-align:center"><p>Yes</p></td>
+<td class="text-align:center"><p>No</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>12</p></td>
+<td class="text-align:left"><p>Flag to indicate AVHRR Channel 5 value is invalid</p></td>
+<td class="text-align:center"><p>Yes</p></td>
+<td class="text-align:center"><p>No</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>11</p></td>
+<td class="text-align:left"><p>Flag to indicate AVHRR Channel 4 value is invalid</p></td>
+<td class="text-align:center"><p>Yes</p></td>
+<td class="text-align:center"><p>No</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>10</p></td>
+<td class="text-align:left"><p>Flag to indicate AVHRR Channel 3 value is invalid</p></td>
+<td class="text-align:center"><p>Yes</p></td>
+<td class="text-align:center"><p>No</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>9</p></td>
+<td class="text-align:left"><p>Flag to indicate AVHRR Channel 2 value is invalid</p></td>
+<td class="text-align:center"><p>Yes</p></td>
+<td class="text-align:center"><p>No</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>8</p></td>
+<td class="text-align:left"><p>Flag to indicate AVHRR Channel 1 value is invalid</p></td>
+<td class="text-align:center"><p>Yes</p></td>
+<td class="text-align:center"><p>No</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>7</p></td>
+<td class="text-align:left"><p>Flag to indicate all 5 AVHRR Channels are valid</p></td>
+<td class="text-align:center"><p>Yes</p></td>
+<td class="text-align:center"><p>No</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>6</p></td>
+<td class="text-align:left"><p>Flag to indicate the pixel is at night (no visible channel data)</p></td>
+<td class="text-align:center"><p>Yes</p></td>
+<td class="text-align:center"><p>No</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>5</p></td>
+<td class="text-align:left"><p>Flag to indicate the pixel is over dense dark vegetation</p></td>
+<td class="text-align:center"><p>Yes</p></td>
+<td class="text-align:center"><p>No</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>4</p></td>
+<td class="text-align:left"><p>Flag to indicate the pixel is over sunglint (over ocean)</p></td>
+<td class="text-align:center"><p>Yes</p></td>
+<td class="text-align:center"><p>No</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>3</p></td>
+<td class="text-align:left"><p>Flag to indicate the pixel is over water</p></td>
+<td class="text-align:center"><p>Yes</p></td>
+<td class="text-align:center"><p>No</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>2</p></td>
+<td class="text-align:left"><p>Flag to indicate the pixel contains cloud shadow</p></td>
+<td class="text-align:center"><p>Yes</p></td>
+<td class="text-align:center"><p>No</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>1</p></td>
+<td class="text-align:left"><p>Flag to indicate the pixel is cloudy</p></td>
+<td class="text-align:center"><p>Yes</p></td>
+<td class="text-align:center"><p>No</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>0</p></td>
+<td class="text-align:left"><p>(Unused)</p></td>
+<td class="text-align:center"><p>Yes</p></td>
+<td class="text-align:center"><p>No</p></td>
+</tr>
+</tbody>
+</table>
+<p>This shows the complex system to ensure that satellite CDR data is of high quality for climate applications. But how can we decifer the quality of a given pixel?</p>
+<p>Assuming that we have a grid with <code class="docutils literal notranslate"><span class="pre">QA=18</span></code>, when converted into binary value with the length of 16 bits is <code class="docutils literal notranslate"><span class="pre">0000000000010010</span></code>. So it can be interpreted as</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:right head"><p>Bit15</p></th>
+<th class="text-align:right head"><p>Bit14</p></th>
+<th class="text-align:right head"><p>Bit13</p></th>
+<th class="text-align:right head"><p>Bit12</p></th>
+<th class="text-align:right head"><p>Bit11</p></th>
+<th class="text-align:right head"><p>Bit10</p></th>
+<th class="text-align:right head"><p>Bit9</p></th>
+<th class="text-align:right head"><p>Bit8</p></th>
+<th class="text-align:right head"><p>Bit7</p></th>
+<th class="text-align:right head"><p>Bit6</p></th>
+<th class="text-align:right head"><p>Bit5</p></th>
+<th class="text-align:right head"><p>Bit4</p></th>
+<th class="text-align:right head"><p>Bit3</p></th>
+<th class="text-align:right head"><p>Bit2</p></th>
+<th class="text-align:right head"><p>Bit1</p></th>
+<th class="text-align:right head"><p>Bit0</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:right"><p>0</p></td>
+<td class="text-align:right"><p>0</p></td>
+<td class="text-align:right"><p>0</p></td>
+<td class="text-align:right"><p>0</p></td>
+<td class="text-align:right"><p>0</p></td>
+<td class="text-align:right"><p>0</p></td>
+<td class="text-align:right"><p>0</p></td>
+<td class="text-align:right"><p>0</p></td>
+<td class="text-align:right"><p>1</p></td>
+<td class="text-align:right"><p>0</p></td>
+<td class="text-align:right"><p>0</p></td>
+<td class="text-align:right"><p>1</p></td>
+<td class="text-align:right"><p>0</p></td>
+<td class="text-align:right"><p>0</p></td>
+<td class="text-align:right"><p>1</p></td>
+<td class="text-align:right"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>No</p></td>
+<td class="text-align:right"><p>No</p></td>
+<td class="text-align:right"><p>No</p></td>
+<td class="text-align:right"><p>No</p></td>
+<td class="text-align:right"><p>No</p></td>
+<td class="text-align:right"><p>No</p></td>
+<td class="text-align:right"><p>No</p></td>
+<td class="text-align:right"><p>No</p></td>
+<td class="text-align:right"><p>Yes</p></td>
+<td class="text-align:right"><p>No</p></td>
+<td class="text-align:right"><p>No</p></td>
+<td class="text-align:right"><p>Yes</p></td>
+<td class="text-align:right"><p>No</p></td>
+<td class="text-align:right"><p>No</p></td>
+<td class="text-align:right"><p>Yes</p></td>
+<td class="text-align:right"><p>No</p></td>
+</tr>
+</tbody>
+</table>
+<p>This means that the NDVI of the value is retrieved from valid values of AVHRR channels (<code class="docutils literal notranslate"><span class="pre">Bit7=1</span></code>) and the grid is over dense dark vegetation (<code class="docutils literal notranslate"><span class="pre">Bit5=1</span></code>), but the gird is cloudy (<code class="docutils literal notranslate"><span class="pre">Bit1=1</span></code>). Therefore, the QA tells us that we should not use this grid since it is covered the by cloud and cannot reflect the vegetation information on the land surface.</p>
+<p>Now let’s define a function to create the cloud mask.</p>
+<p><em>Run this cell to define the function to extract high quality NDVI data <code class="docutils literal notranslate"><span class="pre">get_quality_info()</span></code></em></p>
+<p><em>Run this cell to define the function to extract high quality NDVI data <code class="docutils literal notranslate"><span class="pre">get_quality_info()</span></code></em></p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@markdown *Run this cell to define the function to extract high quality NDVI data `get_quality_info()`*</span>
+<span class="k">def</span> <span class="nf">get_quality_info</span><span class="p">(</span><span class="n">QA</span><span class="p">):</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  QA: the QA value read in from the NDVI data</span>
+
+<span class="sd">  High quality NDVI should meet the following criteria:</span>
+<span class="sd">  Bit 7: 1 (All AVHRR channels have valid values)</span>
+<span class="sd">  Bit 2: 0 (The pixel is not covered by cloud shadow)</span>
+<span class="sd">  Bit 1: 0 (The pixel is not covered by cloud)</span>
+
+<span class="sd">  Output:</span>
+<span class="sd">  True: high quality</span>
+<span class="sd">  False: low quality</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="c1">## Unpack quality assurance flag for cloud (byte: 1)</span>
+  <span class="n">cld_flag</span> <span class="o">=</span> <span class="p">(</span><span class="n">QA</span> <span class="o">%</span> <span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span> <span class="o">//</span> <span class="mi">2</span><span class="p">;</span>
+  <span class="c1">## Unpack quality assurance flag for cloud shadow (byte: 2)</span>
+  <span class="n">cld_shadow</span> <span class="o">=</span> <span class="p">(</span><span class="n">QA</span> <span class="o">%</span> <span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">3</span><span class="p">))</span> <span class="o">//</span> <span class="mi">2</span><span class="o">**</span><span class="mi">2</span><span class="p">;</span>
+  <span class="c1">## Unpack quality assurance flag for AVHRR values (byte: 7)</span>
+  <span class="n">value_valid</span> <span class="o">=</span> <span class="p">(</span><span class="n">QA</span> <span class="o">%</span> <span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">8</span><span class="p">))</span> <span class="o">//</span> <span class="mi">2</span><span class="o">**</span><span class="mi">7</span><span class="p">;</span>
+
+  <span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">cld_flag</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">cld_shadow</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">value_valid</span> <span class="o">==</span><span class="mi">1</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="n">mask</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><em>Run this cell to extract the mask indicates high quality NDVI grid using <code class="docutils literal notranslate"><span class="pre">get_quality_info()</span></code></em></p>
+<p><em>Run this cell to extract the mask indicates high quality NDVI grid using <code class="docutils literal notranslate"><span class="pre">get_quality_info()</span></code></em></p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@markdown *Run this cell to extract the mask indicates high quality NDVI grid using `get_quality_info()`*</span>
+
+<span class="c1">## Get the quality assurance value from NDVI data</span>
+<span class="n">QA</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">QA</span>
+<span class="c1">## Create the high quality information mask</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">get_quality_info</span><span class="p">(</span><span class="n">QA</span><span class="p">)</span>
+<span class="c1">## Check the quality flag mask information</span>
+<span class="n">mask</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The output of the previous operation gives us a data array with logical values to indicate if a grid has high quality NDVI values or not. Now let’s mask out the NDVI data array with this quality information to see if this will make a difference in the final map.</p>
+<p>Run this cell to use <code class="docutils literal notranslate"><span class="pre">.where</span></code> to only keep the NDVI values with high quality flag.</p>
+<p>Run this cell to use <code class="docutils literal notranslate"><span class="pre">.where</span></code> to only keep the NDVI values with high quality flag.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@markdown Run this cell to use `.where` to only keep the NDVI values with high quality flag.</span>
+<span class="n">ndvi_masked</span> <span class="o">=</span> <span class="n">ndvi</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
+<span class="n">ndvi_masked</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you may have noticed, a lot of the NDVI values in the masked data array becomes <code class="docutils literal notranslate"><span class="pre">nan</span></code> which means <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">a</span> <span class="pre">number</span></code>. This means that the grid does not have a high quality NDVI value based on the QA value. Now, let’s plot the map one more time to see the difference after the quality masking.</p>
+<p>Run this cell to re-plot the NDVI map using masked data</p>
+<p>Run this cell to re-plot the NDVI map using masked data</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@markdown Run this cell to re-plot the NDVI map using masked data</span>
+<span class="n">ndvi_masked</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vmin</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">vmax</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mf">1.8</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can clearly see the difference after the quality mask for NDVI value. This is largely because of the cloud effect. Since NDVI value is calculated using the reflectance values of the red and near-infrared spectral band, this value is only useful for vegetation and surface monitoring when there is no cloud present. Thus, we always need to remove the grid with cloud in the data.</p>
+<p>###<strong>Code Exercise 1.4: Read and Visualize the NDVI data of your choice</strong></p>
+<p>Now we learned how to use <code class="docutils literal notranslate"><span class="pre">xarray</span></code> and <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> to access NDVI CDR data from AWS and visualize it. Can you find a different date that you are interested in and visualize the high quality NDVI data of that day?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Step 1: Define the date of your interest YYYYMMDD (e.g., 20030701)</span>
+
+<span class="c1">### Step 2: Locate the data in the AWS S3 bucket</span>
+<span class="c1">### Hint: use the file pattern that we described</span>
+
+<span class="c1">### Step 3: Open file connection to the file in AWS S3 bucket</span>
+<span class="c1">### Hint: use s3fs to open the connection</span>
+
+<span class="c1">### Step 4: Use xarray to open the NDVI CDR file</span>
+<span class="c1">### Hint: use xarry open_dataset</span>
+
+<span class="c1">### Step 5: Get the QA value and extract the high quality data mask</span>
+<span class="c1">### Hint: reuse the get_quality_info helper function we defined</span>
+
+<span class="c1">### Step 6: Mask NDVI data to keep only high quality value</span>
+<span class="c1">### Hint: use the quality info flag</span>
+
+<span class="c1">### Step 7: Plot high quality NDVI data</span>
+<span class="c1">### Hint: use plot() function</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>#<strong>Summary</strong></p>
+<p>In this tutorial, you successfully accessed and visualized one of the most commonly used remotely sensed climate data set for land applications! This is an important first step to the climate analysis. Please make sure you</p>
+<ul class="simple">
+<li><p>Understand the file organization pattern to help you identify the data that you are interested in.</p></li>
+<li><p>Understand the dataset, particularly the quality information, to only use the proper dataset for your analysis.</p></li>
+<li><p>Remotely sensed data often have user guider or algorithm document that will provide detailed information of the dataset.</p></li>
+</ul>
+<p>In next tutorial, we will explore how to perform time series analysis, including calculating climatology and anomaly with precipitation data.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "pangeo"
+        },
+        kernelOptions: {
+            kernelName: "pangeo",
+            path: "./tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/instructor"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'pangeo'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="W1D3_Tutorial2.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><strong>Tutorial 2: Exploring Satellite Climate Data Records</strong></p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="W1D3_Tutorial4.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>Tutorial 4: Understanding Climatology Through Precipitation Data</strong></p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Climatematch<br/>
+  
+    <div class="extra_footer">
+      <div>
+<a href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>
+<a href="https://opensource.org/licenses/BSD-3-Clause"><img src="https://camo.githubusercontent.com/9b9ea65d95c9ef878afa1987df65731d47681336/68747470733a2f2f696d672e736869656c64732e696f2f707970692f6c2f736561626f726e2e737667"></a>
+The contents of this repository are shared under the <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+Software elements are additionally licensed under the <a href="https://opensource.org/licenses/BSD-3-Clause">BSD (3-Clause) License</a>.
+</div>
+
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
