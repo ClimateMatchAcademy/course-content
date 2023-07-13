@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> &#8212; Climatematch Academy: Computational Tools for Climate Science</title>
+    <title>Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data &#8212; Climatematch Academy: Computational Tools for Climate Science</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -220,6 +220,9 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
+     <strong>
+      Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
@@ -1292,11 +1295,20 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
+   <strong>
+    Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
+   </strong>
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cmip-png">
-  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#project-pythia">
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cmip-png">
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tutorial-objectives">
@@ -1312,37 +1324,16 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#figure-settings">
      Figure Settings
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       Figure Settings
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#video-1-introduction-to-climate">
      Video 1: Introduction to Climate
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id2">
-       Video 1: Introduction to Climate
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tutorial-slides">
      Tutorial slides
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id3">
-       Tutorial slides
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
@@ -1503,7 +1494,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1></h1>
+                <h1>Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1515,11 +1506,20 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
+   <strong>
+    Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
+   </strong>
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cmip-png">
-  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#project-pythia">
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cmip-png">
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tutorial-objectives">
@@ -1535,37 +1535,16 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#figure-settings">
      Figure Settings
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       Figure Settings
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#video-1-introduction-to-climate">
      Video 1: Introduction to Climate
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id2">
-       Video 1: Introduction to Climate
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tutorial-slides">
      Tutorial slides
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id3">
-       Tutorial slides
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
@@ -1727,7 +1706,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <p><a class="reference external" href="https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a>   <a href="https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.ipynb" target="_blank"><img alt="Open in Kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg" /></a># <strong>Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data</strong></p>
+  <p><a class="reference external" href="https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a>   <a href="https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.ipynb" target="_blank"><img alt="Open in Kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg" /></a></p>
+<div class="section" id="tutorial-1-creating-dataarrays-and-datasets-to-assess-global-climate-data">
+<h1><strong>Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data</strong><a class="headerlink" href="#tutorial-1-creating-dataarrays-and-datasets-to-assess-global-climate-data" title="Permalink to this headline">#</a></h1>
 <p><strong>Week 1, Day 1, Climate System Overview</strong></p>
 <p><strong>Content creators:</strong> Sloane Garelick, Julia Kent</p>
 <p><strong>Content reviewers:</strong> Yosmely Bermúdez, Katrina Dobson, Younkap Nina Duplex, Danika Gupta, Maria Gonzalez, Will Gregory, Nahid Hasan, Sherry Mi, Beatriz Cosenza Muralles, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
@@ -1735,11 +1716,12 @@ title="Print to PDF"
 <p><strong>Production editors:</strong> Wesley Banfield, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
 <p><strong>Our 2023 Sponsors:</strong> NASA TOPS and Google DeepMind</p>
 <div class="section" id="project-pythia">
-<h1><img alt="project pythia" src="https://projectpythia.org/_static/images/logos/pythia_logo-blue-rtext.svg" /><a class="headerlink" href="#project-pythia" title="Permalink to this headline">#</a></h1>
+<h2><img alt="project pythia" src="https://projectpythia.org/_static/images/logos/pythia_logo-blue-rtext.svg" /><a class="headerlink" href="#project-pythia" title="Permalink to this headline">#</a></h2>
 <p>Pythia credit: Rose, B. E. J., Kent, J., Tyle, K., Clyne, J., Banihirwe, A., Camron, D., May, R., Grover, M., Ford, R. R., Paul, K., Morley, J., Eroglu, O., Kailyn, L., &amp; Zacharias, A. (2023). Pythia Foundations (Version v2023.05.01) https://zenodo.org/record/8065851</p>
 </div>
 <div class="section" id="cmip-png">
-<h1><img alt="CMIP.png" src="https://github.com/ClimateMatchAcademy/course-content/blob/main/tutorials/Art/CMIP.png?raw=true" /><a class="headerlink" href="#cmip-png" title="Permalink to this headline">#</a></h1>
+<h2><img alt="CMIP.png" src="https://github.com/ClimateMatchAcademy/course-content/blob/main/tutorials/Art/CMIP.png?raw=true" /><a class="headerlink" href="#cmip-png" title="Permalink to this headline">#</a></h2>
+</div>
 </div>
 <div class="section" id="tutorial-objectives">
 <h1>Tutorial Objectives<a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">#</a></h1>
@@ -1763,8 +1745,6 @@ title="Print to PDF"
 </div>
 <div class="section" id="figure-settings">
 <h2>Figure Settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">#</a></h2>
-<div class="section" id="id1">
-<h3>Figure Settings<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Figure Settings</span>
@@ -1779,23 +1759,15 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
 <div class="section" id="video-1-introduction-to-climate">
 <h2>Video 1: Introduction to Climate<a class="headerlink" href="#video-1-introduction-to-climate" title="Permalink to this headline">#</a></h2>
-<div class="section" id="id2">
-<h3>Video 1: Introduction to Climate<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_remove-input docutils container">
-</div>
 </div>
 </div>
 <div class="section" id="tutorial-slides">
 <h2>Tutorial slides<a class="headerlink" href="#tutorial-slides" title="Permalink to this headline">#</a></h2>
 <p>These are the slides for the videos in all tutorials today</p>
-<div class="section" id="id3">
-<h3>Tutorial slides<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
-<p>These are the slides for the videos in all tutorials today</p>
 <div class="cell tag_remove-input docutils container">
-</div>
 </div>
 </div>
 </div>

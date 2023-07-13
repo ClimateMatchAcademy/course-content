@@ -222,6 +222,9 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.html">
+     <strong>
+      Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
@@ -1313,25 +1316,11 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#video-1-ocean-wind-driven-circulation">
      Video 1: Ocean Wind-driven Circulation
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       Video 1: Ocean Wind-driven Circulation
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tutorial-slides">
      Tutorial slides
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id2">
-       Tutorial slides
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
@@ -1421,25 +1410,11 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#video-1-ocean-wind-driven-circulation">
      Video 1: Ocean Wind-driven Circulation
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       Video 1: Ocean Wind-driven Circulation
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tutorial-slides">
      Tutorial slides
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id2">
-       Tutorial slides
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
@@ -1552,17 +1527,11 @@ title="Print to PDF"
 </div>
 <div class="section" id="video-1-ocean-wind-driven-circulation">
 <h2>Video 1: Ocean Wind-driven Circulation<a class="headerlink" href="#video-1-ocean-wind-driven-circulation" title="Permalink to this headline">#</a></h2>
-<div class="section" id="id1">
-<h3>Video 1: Ocean Wind-driven Circulation<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_remove-input docutils container">
-</div>
 </div>
 </div>
 <div class="section" id="tutorial-slides">
 <h2>Tutorial slides<a class="headerlink" href="#tutorial-slides" title="Permalink to this headline">#</a></h2>
-<p>These are the slides for the videos in all tutorials today</p>
-<div class="section" id="id2">
-<h3>Tutorial slides<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <p>These are the slides for the videos in all tutorials today</p>
 <div class="cell tag_remove-input docutils container">
 </div>
@@ -1587,7 +1556,6 @@ title="Print to PDF"
 
     <span class="k">return</span> <span class="n">file</span>
 </pre></div>
-</div>
 </div>
 </div>
 </div>
@@ -1693,8 +1661,8 @@ title="Print to PDF"
 <p>You are now almost ready to plot!</p>
 <p>However, you currently have seperate zonal and meridional wind velocity components <span class="math notranslate nohighlight">\((u,v)\)</span>. An effective way of visualizing the total surface wind stress is to create a global map of the <em>magnitude</em> and <em>direction</em> of the wind velocity vector. This type of plot is known as a vector field. A <a class="reference external" href="https://glossary.ametsoc.org/wiki/Vector">vector</a> is a special mathematical quantity that has both magnitude and direction, just like the wind! The velocity components describe the intensity of wind blowing in the zonal (<span class="math notranslate nohighlight">\(u\)</span>) or meridional (<span class="math notranslate nohighlight">\(v\)</span>) directions. Specifically, wind can blow eastward (positive <span class="math notranslate nohighlight">\(u\)</span>) or westward (negative <span class="math notranslate nohighlight">\(u\)</span>), as well as northward (positive <span class="math notranslate nohighlight">\(v\)</span>) or southward (negative <span class="math notranslate nohighlight">\(v\)</span>).</p>
 <p>The total velocity vector is the <em>vector sum</em> of these two components and exhibits varying magnitude and direction. The magnitude (<span class="math notranslate nohighlight">\(||u||\)</span>) and direction (<span class="math notranslate nohighlight">\(θ\)</span>) of the total velocity vector can be determined using the following equations:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-af0a7235-06d0-4ff7-869a-09b7e784802c">
-<span class="eqno">(3)<a class="headerlink" href="#equation-af0a7235-06d0-4ff7-869a-09b7e784802c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6dd2787a-98ef-42b0-86f8-616027e0b5cb">
+<span class="eqno">(3)<a class="headerlink" href="#equation-6dd2787a-98ef-42b0-86f8-616027e0b5cb" title="Permalink to this equation">#</a></span>\[\begin{align}
 ||u|| = \sqrt{u^2 + v^2},  \ \  \ \ \theta = tan^{-1}(\frac{v}{u})
 \end{align}\]</div>
 <p>When plotting a vector field using a computer, it is commonly referred to as a quiver plot. In our case, we will utilize a <a class="reference external" href="https://rabernat.github.io/intro_to_physical_oceanography/07_ekman.html">quiver function created by Ryan Abernathey</a> that calculates the magnitude and direction of the total velocity vector based on the given zonal and meridional components.</p>
