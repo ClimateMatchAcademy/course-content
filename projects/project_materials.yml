@@ -6,18 +6,18 @@
   title: Project materials
   sections:
   - file: projects/project-notebooks/Sea_level_rise.ipynb
-    title: Sea level rise
+    title: Sea Level Rise
   - file: projects/project-notebooks/Ocean_acidification.ipynb
-    title: Ocean acidification
+    title: Ocean Acidification
   - file: projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.ipynb
-    title: The impact of ENSO on precipitation and temperature
+    title: The Impact of ENSO on Precipitation and Temperature
   - file: projects/project-notebooks/Regional_precipitation_variability.ipynb
-    title: Regional precipitation variability and extreme events
+    title: Regional Precipitation Variability and Extreme events
   - file: projects/project-notebooks/Heatwaves.ipynb
-    title: "Heatwaves: Assessing the dynamic interactions of the atmosphere and land"
+    title: "Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land"
   - file: projects/project-notebooks/Wildfires_and_burnt_areas.ipynb
-    title: Monitoring and mapping wildfires using satellite data
-  - file: projects/project-notebooks/Surface_albedo_and_land_use.ipynb
-    title: Change in Earth's albedo and its dependence on land cover changes in the past 20 years
+    title: Monitoring and Mapping Wildfires Using Satellite Data
+  - file: projects/project-notebooks/Surface_albedo_and_land_cover.ipynb
+    title: "Changes in Land Cover: Albedo and Carbon Sequestration"
 - file: projects/docs/continuing_your_project_after_the_course.md
   title: Continuing your project after the course

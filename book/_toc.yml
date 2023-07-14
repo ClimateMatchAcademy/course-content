@@ -32,18 +32,18 @@
     - file: tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial9.ipynb
     - file: tutorials/W1D1_ClimateSystemOverview/further_reading.md
     title: Climate System Overview (W1D1)
-  - file: tutorials/W2D2_GoodResearchPractices/chapter_title.md
+  - file: tutorials/Projects_GoodResearchPractices/chapter_title.md
     sections:
-    - file: tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial1.ipynb
-    - file: tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial2.ipynb
-    - file: tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial3.ipynb
-    - file: tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial4.ipynb
-    - file: tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial5.ipynb
-    - file: tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial6.ipynb
-    - file: tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial7.ipynb
-    - file: tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial8.ipynb
-    - file: tutorials/W2D2_GoodResearchPractices/further_reading.md
-    title: Good Research Practices (W2D2)
+    - file: tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial1.ipynb
+    - file: tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial2.ipynb
+    - file: tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial3.ipynb
+    - file: tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial4.ipynb
+    - file: tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial5.ipynb
+    - file: tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial6.ipynb
+    - file: tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial7.ipynb
+    - file: tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial8.ipynb
+    - file: tutorials/Projects_GoodResearchPractices/further_reading.md
+    title: Good Research Practices (Projects)
   part: Fundamentals
 - chapters:
   - file: tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/chapter_title.md
@@ -143,21 +143,20 @@
   - file: projects/docs/datasets_overview.md
     sections:
     - file: projects/project-notebooks/Sea_level_rise.ipynb
-      title: Sea level rise
+      title: Sea Level Rise
     - file: projects/project-notebooks/Ocean_acidification.ipynb
-      title: Ocean acidification
+      title: Ocean Acidification
     - file: projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.ipynb
-      title: The impact of ENSO on precipitation and temperature
+      title: The Impact of ENSO on Precipitation and Temperature
     - file: projects/project-notebooks/Regional_precipitation_variability.ipynb
-      title: Regional precipitation variability and extreme events
+      title: Regional Precipitation Variability and Extreme events
     - file: projects/project-notebooks/Heatwaves.ipynb
-      title: 'Heatwaves: Assessing the dynamic interactions of the atmosphere and
-        land'
+      title: 'Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and
+        Land'
     - file: projects/project-notebooks/Wildfires_and_burnt_areas.ipynb
-      title: Monitoring and mapping wildfires using satellite data
-    - file: projects/project-notebooks/Surface_albedo_and_land_use.ipynb
-      title: Change in Earth's albedo and its dependence on land cover changes in
-        the past 20 years
+      title: Monitoring and Mapping Wildfires Using Satellite Data
+    - file: projects/project-notebooks/Surface_albedo_and_land_cover.ipynb
+      title: 'Changes in Land Cover: Albedo and Carbon Sequestration'
     title: Project materials
   - file: projects/docs/continuing_your_project_after_the_course.md
     title: Continuing your project after the course
