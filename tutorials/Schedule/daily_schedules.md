@@ -336,8 +336,10 @@ Tutorials, Projects and Professional Development activities will take place betw
    <td bgcolor="#F9EEDA" align="center" ><font color="black"> Impact Talk: </font>
 <p>
 <font color="black"> Open Climate Science</font>
+<p>
+<font color="black"> Career Panel</font>
    </td>
-   <td bgcolor="#F9EEDA" align="center" ><font color="black"> Career Panel </font>
+   <td bgcolor="#F9EEDA" align="center" >
    </td>
    <td bgcolor="#F9EEDA" align="center" ><font color="black"> Impact Talk: </font>
 <p>
