@@ -36,12 +36,12 @@ runs:
       with:
         force_env_update: 'false'
     
-    - name: Get changed files
-      if: ${{ inputs.runall != 'true' }}
-      id: changes
-      uses: trilom/file-changes-action@v1.2.4
-      with:
-        output: " "
+    # - name: Get changed files
+    #   if: ${{ inputs.runall != 'true' }}
+    #   id: changes
+    #   uses: trilom/file-changes-action@v1.2.4
+    #   with:
+    #     output: " "
 
     - name: Get notebooks
       run: |
