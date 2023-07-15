@@ -50,6 +50,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          pip install numpy
           pip install -r requirements.txt
           pip install jupyter-book==0.10.2 ghp-import
 
