@@ -32,6 +32,10 @@ jobs:
         with:
           python-version: 3.7
           
+      - name: Install dependencies
+        run: |
+          sudo apt-get install -y libgeos-dev libproj-dev
+          
         # BRANCH=`python -c 'import os, re; m = re.search(r"nmaci:([\w-]+)", os.environ["COMMIT_MESSAGE"]); print("main" if m is None else m.group(1))'`
       - name: Install CI tools
         run: |
