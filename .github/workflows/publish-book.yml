@@ -48,9 +48,12 @@ jobs:
           rm -r $BRANCH.tar.gz
           echo ci/ >> .gitignore
 
-      - name: Install dependencies
+      - name: Install numpy
         run: |
           pip install numpy
+
+      - name: Install dependencies
+        run: |
           pip install -r requirements.txt
           pip install jupyter-book==0.10.2 ghp-import
 
