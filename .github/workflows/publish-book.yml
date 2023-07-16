@@ -83,14 +83,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-jupyter-
 
-      - name: Build student book
-        run: |
-          python ci/generate_book_climate.py student
-          ln -s ../tutorials book/tutorials
-          ln -s ../projects book/projects
-          ln -s ../prereqs book/prereqs
-          jupyter-book build book
-          python ci/parse_html_for_errors.py student
+      # - name: Build student book
+      #   run: |
+      #     python ci/generate_book_climate.py student
+      #     ln -s ../tutorials book/tutorials
+      #     ln -s ../projects book/projects
+      #     ln -s ../prereqs book/prereqs
+      #     jupyter-book build book
+      #     python ci/parse_html_for_errors.py student
 
       # NOTE: we may be able to push striaght from here. ie skip the last flow
       - name: Commit book
