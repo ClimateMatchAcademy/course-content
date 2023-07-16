@@ -6,18 +6,18 @@ scikit-learn
 torch
 ipywidgets
 decorator==5.0.9
-pythia_datasets
-cartopy
-pooch
-pyleoclim
-climlab
-intake
-seaborn
-netCDF4
-h5netcdf
-nc-time-axis
-geoviews
-boto3
-cmocean
-jinja2==2.11.3
-markupsafe==1.1.1
+# pythia_datasets
+# cartopy
+# pooch
+# pyleoclim
+# climlab
+# intake
+# seaborn
+# netCDF4
+# h5netcdf
+# nc-time-axis
+# geoviews
+# boto3
+# cmocean
+# jinja2==2.11.3
+# markupsafe==1.1.1

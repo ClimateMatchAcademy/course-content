@@ -53,12 +53,12 @@ runs:
         echo "NBS=$nbs" >> $GITHUB_ENV
       shell: bash -l {0}
 
-    # - name: Install XKCD fonts
-    #   run: |
-    #     sudo apt-get update -yq
-    #     sudo sh -c "echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections"
-    #     sudo apt-get install msttcorefonts -qq
-    #     rm -f $HOME/.matplotlib/fontList.cache
+    - name: Install XKCD fonts
+      run: |
+        sudo apt-get update -yq
+        sudo sh -c "echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections"
+        sudo apt-get install msttcorefonts -qq
+        rm -f $HOME/.matplotlib/fontList.cache
 
     - name: Process notebooks
       id: process_notebooks

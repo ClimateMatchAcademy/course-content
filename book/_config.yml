@@ -15,7 +15,7 @@ only_build_toc_files        : true
 #######################################################################################
 # Execution settings
 execute:
-  execute_notebooks         : force # Whether to execute notebooks at build time. Must be one of ("auto", "force", "cache", "off")
+  execute_notebooks         : off # Whether to execute notebooks at build time. Must be one of ("auto", "force", "cache", "off")
   cache                     : ""    # A path to the jupyter cache that will be used to store execution artifacts. Defaults to `_build/.jupyter_cache/`
   exclude_patterns          : []    # A list of patterns to *skip* in execution (e.g. a notebook that takes a really long time)
   timeout                   : 60    # The maximum time (in seconds) each notebook cell is allowed to run.
@@ -37,7 +37,7 @@ parse:
     - smartquotes
 sphinx:
   config:
-    jupyter_execute_notebooks: "auto"
+    # jupyter_execute_notebooks: "auto"
     html_show_copyright: false
     myst_substitutions:
      open_access: "<img alt='Open Access publication' src='../static/Open_Access_logo.png' height=0.8em class='no-scaled-link inline-icon'>"
