@@ -30,12 +30,12 @@ runs:
         readonly local msg=$(git log -1 --pretty=format:"%s")
         echo "COMMIT_MESSAGE=$msg" >> $GITHUB_ENV
       shell: bash -l {0}
-    
+
     - name: Setup
       uses: ./.github/actions/setup
       with:
         force_env_update: 'false'
-    
+
     # - name: Get changed files
     #   if: ${{ inputs.runall != 'true' }}
     #   id: changes
@@ -59,6 +59,7 @@ runs:
         sudo sh -c "echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections"
         sudo apt-get install msttcorefonts -qq
         rm -f $HOME/.matplotlib/fontList.cache
+      shell: bash -l {0}
 
     - name: Process notebooks
       id: process_notebooks
