@@ -21,6 +21,7 @@
 - chapters:
   - file: tutorials/W1D1_ClimateSystemOverview/chapter_title.md
     sections:
+    - file: tutorials/W1D1_ClimateSystemOverview/student/W1D1_Intro.ipynb
     - file: tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.ipynb
     - file: tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial2.ipynb
     - file: tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial3.ipynb
@@ -30,10 +31,13 @@
     - file: tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial7.ipynb
     - file: tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial8.ipynb
     - file: tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial9.ipynb
+    - file: tutorials/W1D1_ClimateSystemOverview/student/W1D1_Outro.ipynb
     - file: tutorials/W1D1_ClimateSystemOverview/further_reading.md
+    - file: tutorials/W1D1_ClimateSystemOverview/student/W1D1_DaySummary.ipynb
     title: Climate System Overview (W1D1)
   - file: tutorials/Projects_GoodResearchPractices/chapter_title.md
     sections:
+    - file: tutorials/Projects_GoodResearchPractices/student/Projects_Intro.ipynb
     - file: tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial1.ipynb
     - file: tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial2.ipynb
     - file: tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial3.ipynb
@@ -42,22 +46,28 @@
     - file: tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial6.ipynb
     - file: tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial7.ipynb
     - file: tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial8.ipynb
+    - file: tutorials/Projects_GoodResearchPractices/student/Projects_Outro.ipynb
     - file: tutorials/Projects_GoodResearchPractices/further_reading.md
+    - file: tutorials/Projects_GoodResearchPractices/student/Projects_DaySummary.ipynb
     title: Good Research Practices (Projects)
   part: Fundamentals
 - chapters:
   - file: tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/chapter_title.md
     sections:
+    - file: tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Intro.ipynb
     - file: tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial1.ipynb
     - file: tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial2.ipynb
     - file: tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial3.ipynb
     - file: tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial4.ipynb
     - file: tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial5.ipynb
     - file: tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial6.ipynb
+    - file: tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Outro.ipynb
     - file: tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/further_reading.md
+    - file: tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_DaySummary.ipynb
     title: State of the Climate Ocean and Atmosphere Reanalysis (W1D2)
   - file: tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/chapter_title.md
     sections:
+    - file: tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Intro.ipynb
     - file: tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.ipynb
     - file: tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.ipynb
     - file: tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial3.ipynb
@@ -66,10 +76,13 @@
     - file: tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial6.ipynb
     - file: tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial7.ipynb
     - file: tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial8.ipynb
+    - file: tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Outro.ipynb
     - file: tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/further_reading.md
+    - file: tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_DaySummary.ipynb
     title: Remote Sensing Land Ocean and Atmosphere (W1D3)
   - file: tutorials/W1D4_Paleoclimate/chapter_title.md
     sections:
+    - file: tutorials/W1D4_Paleoclimate/student/W1D4_Intro.ipynb
     - file: tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial1.ipynb
     - file: tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial2.ipynb
     - file: tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial3.ipynb
@@ -79,12 +92,14 @@
     - file: tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial7.ipynb
     - file: tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial8.ipynb
     - file: tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial9.ipynb
+    - file: tutorials/W1D4_Paleoclimate/student/W1D4_Outro.ipynb
     - file: tutorials/W1D4_Paleoclimate/further_reading.md
     title: Paleoclimate (W1D4)
   part: Climate Data
 - chapters:
   - file: tutorials/W1D5_ClimateModeling/chapter_title.md
     sections:
+    - file: tutorials/W1D5_ClimateModeling/student/W1D5_Intro.ipynb
     - file: tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial1.ipynb
     - file: tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial2.ipynb
     - file: tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial3.ipynb
@@ -92,30 +107,36 @@
     - file: tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial5.ipynb
     - file: tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial6.ipynb
     - file: tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial7.ipynb
+    - file: tutorials/W1D5_ClimateModeling/student/W1D5_Outro.ipynb
     - file: tutorials/W1D5_ClimateModeling/further_reading.md
     title: Climate Modeling (W1D5)
   - file: tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/chapter_title.md
     sections:
+    - file: tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Intro.ipynb
     - file: tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial1.ipynb
     - file: tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial2.ipynb
     - file: tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial3.ipynb
     - file: tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial4.ipynb
     - file: tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial5.ipynb
     - file: tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial6.ipynb
+    - file: tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Outro.ipynb
     - file: tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/further_reading.md
     title: Future Climate - IPCC I Physical Basis (W2D1)
   - file: tutorials/W2D3_FutureClimate-IPCCII&IIISocio-EconomicBasis/chapter_title.md
     sections:
+    - file: tutorials/W2D3_FutureClimate-IPCCII&IIISocio-EconomicBasis/student/W2D3_Intro.ipynb
     - file: tutorials/W2D3_FutureClimate-IPCCII&IIISocio-EconomicBasis/student/W2D3_Tutorial1.ipynb
     - file: tutorials/W2D3_FutureClimate-IPCCII&IIISocio-EconomicBasis/student/W2D3_Tutorial2.ipynb
     - file: tutorials/W2D3_FutureClimate-IPCCII&IIISocio-EconomicBasis/student/W2D3_Tutorial3.ipynb
     - file: tutorials/W2D3_FutureClimate-IPCCII&IIISocio-EconomicBasis/student/W2D3_Tutorial4.ipynb
+    - file: tutorials/W2D3_FutureClimate-IPCCII&IIISocio-EconomicBasis/student/W2D3_Outro.ipynb
     - file: tutorials/W2D3_FutureClimate-IPCCII&IIISocio-EconomicBasis/further_reading.md
     title: Future Climate - IPCC II & III Socio-Economic Basis (W2D3)
   part: Climate Future
 - chapters:
   - file: tutorials/W2D4_ClimateResponse-Extremes&Variability/chapter_title.md
     sections:
+    - file: tutorials/W2D4_ClimateResponse-Extremes&Variability/student/W2D4_Intro.ipynb
     - file: tutorials/W2D4_ClimateResponse-Extremes&Variability/student/W2D4_Tutorial1.ipynb
     - file: tutorials/W2D4_ClimateResponse-Extremes&Variability/student/W2D4_Tutorial2.ipynb
     - file: tutorials/W2D4_ClimateResponse-Extremes&Variability/student/W2D4_Tutorial3.ipynb
@@ -124,14 +145,17 @@
     - file: tutorials/W2D4_ClimateResponse-Extremes&Variability/student/W2D4_Tutorial6.ipynb
     - file: tutorials/W2D4_ClimateResponse-Extremes&Variability/student/W2D4_Tutorial7.ipynb
     - file: tutorials/W2D4_ClimateResponse-Extremes&Variability/student/W2D4_Tutorial8.ipynb
+    - file: tutorials/W2D4_ClimateResponse-Extremes&Variability/student/W2D4_Outro.ipynb
     - file: tutorials/W2D4_ClimateResponse-Extremes&Variability/further_reading.md
     title: Climate Response - Extremes & Variability (W2D4)
   - file: tutorials/W2D5_ClimateResponse-AdaptationImpact/chapter_title.md
     sections:
+    - file: tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Intro.ipynb
     - file: tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial1.ipynb
     - file: tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.ipynb
     - file: tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.ipynb
     - file: tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial4.ipynb
+    - file: tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Outro.ipynb
     - file: tutorials/W2D5_ClimateResponse-AdaptationImpact/further_reading.md
     title: Climate Response - Adaptation Impact (W2D5)
   part: Climate Response
