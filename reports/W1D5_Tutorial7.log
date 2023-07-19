@@ -26,13 +26,12 @@ Traceback (most recent call last):
     error_on_timeout_execute_reply = await self._async_handle_timeout(timeout, cell)
   File "/home/wesley/miniconda3/envs/climatematch/lib/python3.10/site-packages/nbclient/client.py", line 852, in _async_handle_timeout
     raise CellTimeoutError.error_from_timeout_and_cell(
-nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 60 seconds.
+nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 120 seconds.
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-col = intake.open_esm_datastore(
-    "https://storage.googleapis.com/cmip6/pangeo-cmip6.json"
-)  # open an intake catalog containing the Pangeo CMIP cloud data
-col
+['%matplotlib inline', '', 'fig, ([ax_latent, ax_shortwave], [ax_sensible, ax_longwave]) = plt.subplots(', '    ncols=2, nrows=2, figsize=[12, 6], subplot_kw={"projection": ccrs.Robinson()}', ')']
+...
+['    robust=True,', '    cbar_kwargs={"label": "$W/m^2$"},', ')', 'ax_longwave.coastlines()', 'ax_longwave.set_title("Net Upward Longwave Flux")']
 -------------------
 

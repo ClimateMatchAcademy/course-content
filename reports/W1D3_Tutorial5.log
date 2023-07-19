@@ -26,12 +26,12 @@ Traceback (most recent call last):
     error_on_timeout_execute_reply = await self._async_handle_timeout(timeout, cell)
   File "/home/wesley/miniconda3/envs/climatematch/lib/python3.10/site-packages/nbclient/client.py", line 852, in _async_handle_timeout
     raise CellTimeoutError.error_from_timeout_and_cell(
-nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 60 seconds.
+nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 120 seconds.
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
 ['# connect to the AWS S3 bucket for the GPCP Monthly Precipitation CDR data', 'fs = s3fs.S3FileSystem(anon=True)', '', '# get the list of all data files in the AWS S3 bucket', 'file_pattern = "noaa-cdr-precip-gpcp-monthly-pds/data/*/gpcp_v02r03_monthly_*.nc"']
 ...
-['', '# open all the monthly data files and concatenate them along the time dimension', '# this process will take ~ 1 minute to complete due to the number of data files', 'ds = xr.open_mfdataset(file_ob, combine="nested", concat_dim="time")', 'ds']
+['# comment for colab users only: this could toss an error message for you. ', '# you should still be able to use the dataset with this error just not print ds', '# you can try uncommenting the following line to avoid the error', "# ds.attrs['history']='' # the history attribute have unique chars that cause a crash on Google colab. ", 'ds']
 -------------------
 
