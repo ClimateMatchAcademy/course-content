@@ -1,5 +1,7 @@
 - file: projects/README.md
   title: Introduction
+- file: projects/keynote.ipynb
+  title: Project Day keynote (W2D2)
 - file: projects/docs/project_guidance.md
   title: Daily guide for projects
 - file: projects/docs/datasets_overview.md
