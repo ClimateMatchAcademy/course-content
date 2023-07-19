@@ -562,11 +562,6 @@ const thebe_selector_output = ".output, .cell_output"
      Suggested Further Reading
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_DaySummary.html">
-     Day Summary
-    </a>
-   </li>
   </ul>
  </li>
 </ul>
@@ -636,11 +631,6 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D5_ClimateModeling/further_reading.html">
      Suggested Further Reading
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_DaySummary.html">
-     Day Summary
     </a>
    </li>
   </ul>
@@ -926,11 +916,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../../../projects/README.html">
    Introduction
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../projects/keynote.html">
-   Project Day keynote (W2D2)
   </a>
  </li>
  <li class="toctree-l1">
@@ -1268,13 +1253,6 @@ title="Print to PDF"
       <a class="reference internal nav-link" href="#id1">
        Figure Settings
       </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id2">
-         Figure Settings
-        </a>
-       </li>
-      </ul>
      </li>
     </ul>
    </li>
@@ -1284,16 +1262,9 @@ title="Print to PDF"
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id3">
+      <a class="reference internal nav-link" href="#id2">
        Video 1: Speaker Introduction
       </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id4">
-         Video 1: Speaker Introduction
-        </a>
-       </li>
-      </ul>
      </li>
     </ul>
    </li>
@@ -1385,13 +1356,6 @@ title="Print to PDF"
       <a class="reference internal nav-link" href="#id1">
        Figure Settings
       </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id2">
-         Figure Settings
-        </a>
-       </li>
-      </ul>
      </li>
     </ul>
    </li>
@@ -1401,16 +1365,9 @@ title="Print to PDF"
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id3">
+      <a class="reference internal nav-link" href="#id2">
        Video 1: Speaker Introduction
       </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id4">
-         Video 1: Speaker Introduction
-        </a>
-       </li>
-      </ul>
      </li>
     </ul>
    </li>
@@ -1505,8 +1462,6 @@ title="Print to PDF"
 <h2>Figure Settings<a class="headerlink" href="#figure-settings" title="Permalink to this headline">#</a></h2>
 <div class="section" id="id1">
 <h3>Figure Settings<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
-<div class="section" id="id2">
-<h4>Figure Settings<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h4>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Figure Settings</span>
@@ -1522,13 +1477,10 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
 <div class="section" id="video-1-speaker-introduction">
 <h2>Video 1: Speaker Introduction<a class="headerlink" href="#video-1-speaker-introduction" title="Permalink to this headline">#</a></h2>
-<div class="section" id="id3">
-<h3>Video 1: Speaker Introduction<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
-<div class="section" id="id4">
-<h4>Video 1: Speaker Introduction<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h4>
+<div class="section" id="id2">
+<h3>Video 1: Speaker Introduction<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Video 1: Speaker Introduction</span>
@@ -1564,7 +1516,6 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
 <div class="section" id="section-1">
 <h1><strong>Section 1</strong><a class="headerlink" href="#section-1" title="Permalink to this headline">#</a></h1>
 <p>Let’s inspect the annual maximum sea surface height data and create a plot over time.</p>
@@ -1578,15 +1529,6 @@ title="Print to PDF"
 <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
     <span class="n">pooch_load</span><span class="p">(</span><span class="n">url_WashingtonDCSSH1</span><span class="p">,</span> <span class="n">filename_WashingtonDCSSH1</span><span class="p">),</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span>
 <span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;years&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://osf.io/4zynp/download&#39; to file &#39;/tmp/WashingtonDCSSH1930-2022.csv&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: d1725e1e5c6ccd7561644771c9ad17ab07e553c05b4156a38cb6780aaca36edb
-Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
 </pre></div>
 </div>
 </div>
@@ -1685,7 +1627,7 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;years&#39;, ylabel=&#39;Annual Maximum Sea Surface Height (mm)&#39;&gt;
 </pre></div>
 </div>
-<img alt="../../../_images/W2D4_Tutorial5_18_1.png" src="../../../_images/W2D4_Tutorial5_18_1.png" />
+<img alt="../../../_images/W2D4_Tutorial5_16_1.png" src="../../../_images/W2D4_Tutorial5_16_1.png" />
 </div>
 </div>
 <p>Take a close look at the plot of your recorded data. There appears to be an increasing trend, which can be attributed to the rising sea surface temperatures caused by climate change. In this case, the trend seems to follow a linear pattern. It is important to consider this non-stationarity when analyzing the data.</p>
@@ -1746,7 +1688,7 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Annual Maximum Sea Surface Height (mm)&#39;)
 </pre></div>
 </div>
-<img alt="../../../_images/W2D4_Tutorial5_21_1.png" src="../../../_images/W2D4_Tutorial5_21_1.png" />
+<img alt="../../../_images/W2D4_Tutorial5_19_1.png" src="../../../_images/W2D4_Tutorial5_19_1.png" />
 </div>
 </div>
 <p>Let’s also calculate the moments each climate normal period:</p>
@@ -1879,7 +1821,7 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Density&#39;)
 </pre></div>
 </div>
-<img alt="../../../_images/W2D4_Tutorial5_26_1.png" src="../../../_images/W2D4_Tutorial5_26_1.png" />
+<img alt="../../../_images/W2D4_Tutorial5_24_1.png" src="../../../_images/W2D4_Tutorial5_24_1.png" />
 </div>
 </div>
 <p>Now, let’s examine the changes in the GEV parameters. This analysis will provide valuable insights into how we can incorporate non-stationarity into our model in one of the upcoming tutorials.</p>

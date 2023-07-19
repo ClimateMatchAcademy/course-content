@@ -26,19 +26,17 @@ Traceback (most recent call last):
     error_on_timeout_execute_reply = await self._async_handle_timeout(timeout, cell)
   File "/home/wesley/miniconda3/envs/climatematch/lib/python3.10/site-packages/nbclient/client.py", line 852, in _async_handle_timeout
     raise CellTimeoutError.error_from_timeout_and_cell(
-nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 120 seconds.
+nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 60 seconds.
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-# average every dataset in the tree globally
-dt_gm = dt_with_area.map_over_subtree(global_mean)
+col = intake.open_esm_datastore(
+    "https://storage.googleapis.com/cmip6/pangeo-cmip6.json"
+)  # open an intake catalog containing the Pangeo CMIP cloud data
 
-for experiment in ["historical", "ssp126", "ssp585"]:
-    da = dt_gm["TaiESM1"][experiment].ds.tos
-    da.plot(label=experiment)
-plt.title("Global Mean SST from TaiESM1")
-plt.ylabel("Global Mean SST [$^\circ$C]")
-plt.xlabel("Year")
-plt.legend()
+# pick our five models and three experiments
+# there are many more to test out! Try executing `col.df['source_id'].unique()` to get a list of all available models
+source_ids = ["IPSL-CM6A-LR", "GFDL-ESM4", "ACCESS-CM2", "MPI-ESM1-2-LR", "TaiESM1"]
+experiment_ids = ["historical", "ssp126", "ssp585"]
 -------------------
 

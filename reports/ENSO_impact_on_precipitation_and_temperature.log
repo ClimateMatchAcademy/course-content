@@ -26,12 +26,12 @@ Traceback (most recent call last):
     error_on_timeout_execute_reply = await self._async_handle_timeout(timeout, cell)
   File "/home/wesley/miniconda3/envs/climatematch/lib/python3.10/site-packages/nbclient/client.py", line 852, in _async_handle_timeout
     raise CellTimeoutError.error_from_timeout_and_cell(
-nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 120 seconds.
+nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 60 seconds.
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-['# Ocean surface temprature ', "filename_SST='sst.mnmean.nc'", "url_SST = 'https://downloads.psl.noaa.gov/Datasets/noaa.ersst.v5/sst.mnmean.nc'", '', "do_sst = xr.open_dataset(pooch_load(url_SST,filename_SST), drop_variables=['time_bnds'])"]
+['# functions', '', '%matplotlib inline', '', 'col = intake.open_esm_datastore(']
 ...
-['', '# Air Temperature Anomalies', "filename_tas='air.2x2.1200.mon.anom.comb.nc'", "url_tas='https://downloads.psl.noaa.gov/Datasets/gistemp/combined/1200km/air.2x2.1200.mon.anom.comb.nc'", 'do_tas = xr.open_dataset(pooch_load(url_tas,filename_tas))']
+['    )', '    cat.esmcat.aggregation_control.groupby_attrs = ["source_id", "experiment_id"]', '    dt = cat.to_datatree(**kwargs)', '', '    return dt']
 -------------------
 
