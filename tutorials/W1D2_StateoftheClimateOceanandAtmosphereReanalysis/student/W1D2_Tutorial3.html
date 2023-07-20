@@ -654,30 +654,22 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial1.html">
-     <strong>
-      Tutorial 1: Creating Maps of CMIP6 Earth System Model (ESM) Projections
-     </strong>
+     Tutorial 1: Creating Maps of CMIP6 Earth System Model (ESM) Projections
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial2.html">
-     <strong>
-      Tutorial 2: Time Series, Global Averages, and Scenario Comparison
-     </strong>
+     Tutorial 2: Time Series, Global Averages, and Scenario Comparison
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial3.html">
-     <strong>
-      Tutorial 3: Multi-model Ensembles
-     </strong>
+     Tutorial 3: Multi-model Ensembles
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial4.html">
-     <strong>
-      Tutorial 4: Quantifying Uncertainty in Projections
-     </strong>
+     Tutorial 4: Quantifying Uncertainty in Projections
     </a>
    </li>
    <li class="toctree-l2">
@@ -1620,13 +1612,13 @@ title="Print to PDF"
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "af523ce28b9b42588cf9792a97e2568b"}
+{"version_major": 2, "version_minor": 0, "model_id": "b12691ea49e84f17874dedd4bbab3205"}
 </script></div>
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "78d65410506447f3979a08bfe81b846f"}
+{"version_major": 2, "version_minor": 0, "model_id": "8e05c7c2cbae47999258ccf702e2ec7e"}
 </script></div>
 </div>
 </div>
@@ -1642,8 +1634,8 @@ For this you will load ERA5 wind data from <a class="reference external" href="h
 <h2>Section 1.1: Annual Mean Wind Speed<a class="headerlink" href="#section-1-1-annual-mean-wind-speed" title="Permalink to this headline">#</a></h2>
 <p>You should start investigating this data by examining the global surface winds. These winds are represented as vectors, consisting of a zonal component denoted as <code class="docutils literal notranslate"><span class="pre">u10</span></code> and a meridional component denoted as <code class="docutils literal notranslate"><span class="pre">v10</span></code>.</p>
 <p>Recall from the previous tutorial that the magnitude of the wind vector represents the wind speed you will use later in the tutorial, given by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-77a10df9-5d12-48fb-8b99-f634f02e8dbc">
-<span class="eqno">(2)<a class="headerlink" href="#equation-77a10df9-5d12-48fb-8b99-f634f02e8dbc" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-96bac03a-3cd7-4c6e-8d14-4af95032926a">
+<span class="eqno">(2)<a class="headerlink" href="#equation-96bac03a-3cd7-4c6e-8d14-4af95032926a" title="Permalink to this equation">#</a></span>\[\begin{align}
 ||u|| = \sqrt{u^2 + v^2}
 \end{align}\]</div>
 <p>To examine long-term changes in the wind field you should visualize the zonal wind component <span class="math notranslate nohighlight">\(u\)</span> and the meridional wind component <span class="math notranslate nohighlight">\(v\)</span> with monthly-mean data. With the help of <code class="docutils literal notranslate"><span class="pre">xarray</span></code>, you can derive monthly means from higher-resolution data (such as those used in tutorial 2) using the <code class="docutils literal notranslate"><span class="pre">xr.resample('1M').mean('time')</span></code> function.</p>
