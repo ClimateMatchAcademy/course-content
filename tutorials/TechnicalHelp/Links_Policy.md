@@ -33,3 +33,7 @@ Projects are an integral part of the Neuromatch Academy experience. Students who
 If there are exceptional circumstances that make it difficult to attend the projects portion of the course, students can request to drop out of projects by filling out the project exemption form (). If their request is granted, the student can continue to attend the coursework sections and gain a coursework certificate if eligible (see above), but not participate in the projects work.
 
 If the student participates in projects but misses more than two days due to exceptional circumstances, they can request to get the projects certificate anyway by filling out the attendance exemption form ([https://airtable.com/shr7CB9qLcIVejpUd](https://airtable.com/shr7CB9qLcIVejpUd)) **at least two days prior to the end of course**. Please note these requests may not be granted.
+
+## Accessibility Statement
+
+Climatematch Academy strives to create a sense of community that is accessible to students with disabilities and/or neurodiversities by applying inclusive practices, supporting these students in the learning environment, and advocating for policies that benefit them.
