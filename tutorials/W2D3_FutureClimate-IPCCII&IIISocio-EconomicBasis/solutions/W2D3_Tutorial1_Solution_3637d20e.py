@@ -1,1 +1,0 @@
-display(Image(url="https://osf.io/download/hzrsn/", width=3000, unconfined=True))
