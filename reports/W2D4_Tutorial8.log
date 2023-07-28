@@ -30,12 +30,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-# download file: 'WBGT_day_MPI-ESM1-2-HR_historical_r1i1p1f1_raw_runmean7_yearmax.nc'
-
-filename_WBGT_day = "WBGT_day_MPI-ESM1-2-HR_historical_r1i1p1f1_raw_runmean7_yearmax.nc"
-url_WBGT_day = "https://osf.io/69ms8/download"
-
-wetbulb_hist = xr.open_dataset(pooch_load(url_WBGT_day, filename_WBGT_day)).WBGT
-wetbulb_hist.attrs["units"] = "degC"
+["# SSP1-2.6 - 'WBGT_day_MPI-ESM1-2-HR_ssp126_r1i1p1f1_raw_runmean7_yearmax.nc'", 'filename_SSP126 = "WBGT_day_MPI-ESM1-2-HR_ssp126_r1i1p1f1_raw_runmean7_yearmax.nc"', 'url_SSP126 = "https://osf.io/67b8m/download"', 'wetbulb_126 = xr.open_dataset(pooch_load(url_SSP126, filename_SSP126)).WBGT', 'wetbulb_126.attrs["units"] = "degC"']
+...
+['filename_SSP585 = "WBGT_day_MPI-ESM1-2-HR_ssp585_r1i1p1f1_raw_runmean7_yearmax.nc"', 'url_SSP585 = "https://osf.io/pr456/download"', 'wetbulb_585 = xr.open_dataset(pooch_load(url_SSP585, filename_SSP585)).WBGT', 'wetbulb_585.attrs["units"] = "degC"', 'wetbulb_585 = wetbulb_585.resample(time="1Y").mean()']
 -------------------
 

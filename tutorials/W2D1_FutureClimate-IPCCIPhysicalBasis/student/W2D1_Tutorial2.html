@@ -1474,13 +1474,13 @@ title="Print to PDF"
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "fe4511026d1848ca9aca02378ddc1854"}
+{"version_major": 2, "version_minor": 0, "model_id": "dc846c55855543d89ee1e74776ccbaf7"}
 </script></div>
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "3e194097547c4dcd8ced3dc2f38b6818"}
+{"version_major": 2, "version_minor": 0, "model_id": "e5e43bd1a3474b51b91d3111be69c934"}
 </script></div>
 </div>
 </div>
@@ -1718,13 +1718,13 @@ title="Print to PDF"
 <h1>Section 2: Global Mean Sea Surface Temperature (GMSST)<a class="headerlink" href="#section-2-global-mean-sea-surface-temperature-gmsst" title="Permalink to this headline">#</a></h1>
 <p>The data files above contain spatial maps of the sea surface temperature for every month of each experiment’s time period. For the rest of today’s tutorials, we’re going to focus on the global mean sea surface temperature, rather than maps, as a way to visualize the ocean’s changing temperature at a global scale<span class="math notranslate nohighlight">\(^*\)</span>.</p>
 <p>The global mean of a property can be calculated by integrating that variable over the surface area of Earth covered by the system (ocean, atmosphere etc.) and dividing by the total surface area of that system. For Sea Surface Temperature, <span class="math notranslate nohighlight">\(SST(x,y)\)</span>, the global mean (<span class="math notranslate nohighlight">\(GMSST\)</span>) can be written as an integral over the surface of the ocean (<span class="math notranslate nohighlight">\(S_{ocean}\)</span>):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cf103ef5-40c2-4465-86a5-51373bd832d3">
-<span class="eqno">(18)<a class="headerlink" href="#equation-cf103ef5-40c2-4465-86a5-51373bd832d3" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-75c66129-cfdd-44ab-ae19-ce8ac6af9f97">
+<span class="eqno">(18)<a class="headerlink" href="#equation-75c66129-cfdd-44ab-ae19-ce8ac6af9f97" title="Permalink to this equation">#</a></span>\[\begin{equation}
 GMSST = \frac{\iint_{S_{ocean}}SST(x,y) dxdy}{\iint_{S_{ocean}} dxdy}
 \end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are horizontal coordinates (i.e. longitude and latitude). This formulation works if <span class="math notranslate nohighlight">\(SST(x,y)\)</span> is a <a class="reference external" href="https://en.wikipedia.org/wiki/Continuous_or_discrete_variable">spatially-continuous function</a>, but in a global model we only know the SST of <em>discrete</em> grid cells rather than a <em>continuous</em> SST field. Integrals are only defined for continuous variables, we must instead use a summation over the grid cells (summation is the discrete equivalent of integration):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d99b8f9f-8cea-443f-92f1-58f50431afeb">
-<span class="eqno">(19)<a class="headerlink" href="#equation-d99b8f9f-8cea-443f-92f1-58f50431afeb" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e3352598-8b4e-4b29-8b48-b30186b7824c">
+<span class="eqno">(19)<a class="headerlink" href="#equation-e3352598-8b4e-4b29-8b48-b30186b7824c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 GMSST = \frac{ \sum_{i,j} SST(i,j) A(i,j)}{\sum_{i,j} A(i,j)}
 \end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\((i,j)\)</span> represent the indices of the 2D spatial SST data from a CMIP6 model, and <span class="math notranslate nohighlight">\(A\)</span> denotes the area of each ocean grid cell, which can vary between cells/locations, as you saw in the last tutorial where <em>TaiESM1</em> had irregularly-gridded output. This calculation is essentially a <em>weighted mean</em> of the SST across the model cells, where the weighting accounts for the varying area of cells - that is, larger cells should contribute more the global mean than smaller cells.</p>

@@ -1686,13 +1686,13 @@ title="Print to PDF"
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "33c9f1132e36477fa952cb836c923788"}
+{"version_major": 2, "version_minor": 0, "model_id": "276cd809f7b448ad908170d79e836363"}
 </script></div>
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "46ae9c5974074d35b8bfe2758ea25b43"}
+{"version_major": 2, "version_minor": 0, "model_id": "0d238c8e74824afeb4411af9ed55b200"}
 </script></div>
 </div>
 </div>
@@ -1709,8 +1709,8 @@ For this you will load ERA5 wind data from <a class="reference external" href="h
 <h2>Section 1.1: Annual Mean Wind Speed<a class="headerlink" href="#section-1-1-annual-mean-wind-speed" title="Permalink to this headline">#</a></h2>
 <p>You should start investigating this data by examining the global surface winds. These winds are represented as vectors, consisting of a zonal component denoted as <code class="docutils literal notranslate"><span class="pre">u10</span></code> and a meridional component denoted as <code class="docutils literal notranslate"><span class="pre">v10</span></code>.</p>
 <p>Recall from the previous tutorial that the magnitude of the wind vector represents the wind speed you will use later in the tutorial, given by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e15a3fdd-9ab8-4c2c-8e8f-21aeabf12c19">
-<span class="eqno">(2)<a class="headerlink" href="#equation-e15a3fdd-9ab8-4c2c-8e8f-21aeabf12c19" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ac5fcb55-45d1-4e51-a5a9-c907004f0f7f">
+<span class="eqno">(2)<a class="headerlink" href="#equation-ac5fcb55-45d1-4e51-a5a9-c907004f0f7f" title="Permalink to this equation">#</a></span>\[\begin{align}
 ||u|| = \sqrt{u^2 + v^2}
 \end{align}\]</div>
 <p>To examine long-term changes in the wind field you should visualize the zonal wind component <span class="math notranslate nohighlight">\(u\)</span> and the meridional wind component <span class="math notranslate nohighlight">\(v\)</span> with monthly-mean data. With the help of <code class="docutils literal notranslate"><span class="pre">xarray</span></code>, you can derive monthly means from higher-resolution data (such as those used in tutorial 2) using the <code class="docutils literal notranslate"><span class="pre">xr.resample('1M').mean('time')</span></code> function.</p>
