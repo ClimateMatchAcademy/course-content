@@ -26,6 +26,8 @@ You will have access to computing resources until the application deadline so th
 
 To apply for extended resources, **submit a concise two-page project proposal** by the deadline. You can find the application form here: https://airtable.com/appLHqbcnAQ1EUO47/shrN2tosRAzeZ4Yg0
 
+It includes detailed information about the format and content your proposal should have.
+
 The strongest proposals will:
 
 * directly build on, and be supported by, analyses conducted during the course and the following month; 
