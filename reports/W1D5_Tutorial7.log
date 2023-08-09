@@ -30,9 +30,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-col = intake.open_esm_datastore(
-    "https://storage.googleapis.com/cmip6/pangeo-cmip6.json"
-)  # open an intake catalog containing the Pangeo CMIP cloud data
-col
+['%matplotlib inline', '', 'fig, ([ax_latent, ax_shortwave], [ax_sensible, ax_longwave]) = plt.subplots(', '    ncols=2, nrows=2, figsize=[12, 6], subplot_kw={"projection": ccrs.Robinson()}', ')']
+...
+['    robust=True,', '    cbar_kwargs={"label": "$W/m^2$"},', ')', 'ax_longwave.coastlines()', 'ax_longwave.set_title("Net Upward Longwave Flux")']
 -------------------
 

@@ -30,13 +30,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-col = intake.open_esm_datastore(
-    "https://storage.googleapis.com/cmip6/pangeo-cmip6.json"
-)  # open an intake catalog containing the Pangeo CMIP cloud data
-
-# pick our five models and three experiments
-# there are many more to test out! Try executing `col.df['source_id'].unique()` to get a list of all available models
-source_ids = ["IPSL-CM6A-LR", "GFDL-ESM4", "ACCESS-CM2", "MPI-ESM1-2-LR", "TaiESM1"]
-experiment_ids = ["historical", "ssp126", "ssp585"]
+['fig, ax = plt.subplots()', 'for experiment, color in zip(["historical", "ssp126", "ssp585"], ["C0", "C1", "C2"]):', '    datasets = []', '    for model in dt_gm_anomaly.keys():', '        annual_sst = (']
+...
+['    "Global Mean SST Anomaly from five-member CMIP6 ensemble (base period: 1950 to 1980)"', ')', 'ax.set_ylabel("Global Mean SST Anomaly [$^\\circ$C]")', 'ax.set_xlabel("Year")', 'ax.legend()']
 -------------------
 

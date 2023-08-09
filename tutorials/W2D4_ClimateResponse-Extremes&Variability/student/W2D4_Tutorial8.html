@@ -1549,13 +1549,13 @@ title="Print to PDF"
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "674d7709a9b7417e94a40d455f33492e"}
+{"version_major": 2, "version_minor": 0, "model_id": "ecdb8950998c48ee9f0efd9851c0374c"}
 </script></div>
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "aaa07cf9f2804138849468a06b538a62"}
+{"version_major": 2, "version_minor": 0, "model_id": "d20ba5f86845467c89fe0e1f7c320663"}
 </script></div>
 </div>
 </div>
@@ -1639,216 +1639,8 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://osf.io/pr456/download&#39; to file &#39;/tmp/WBGT_day_MPI-ESM1-2-HR_ssp585_r1i1p1f1_raw_runmean7_yearmax.nc&#39;.
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">18</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="n">filename_SSP585</span> <span class="o">=</span> <span class="s2">&quot;WBGT_day_MPI-ESM1-2-HR_ssp585_r1i1p1f1_raw_runmean7_yearmax.nc&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="n">url_SSP585</span> <span class="o">=</span> <span class="s2">&quot;https://osf.io/pr456/download&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">18</span> <span class="n">wetbulb_585</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">pooch_load</span><span class="p">(</span><span class="n">url_SSP585</span><span class="p">,</span> <span class="n">filename_SSP585</span><span class="p">))</span><span class="o">.</span><span class="n">WBGT</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="n">wetbulb_585</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;units&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;degC&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="n">wetbulb_585</span> <span class="o">=</span> <span class="n">wetbulb_585</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">&quot;1Y&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-
-<span class="nn">Cell In[4], line 11,</span> in <span class="ni">pooch_load</span><span class="nt">(filelocation, filename, processor)</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">shared_location</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">11</span>     <span class="n">file</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span>         <span class="n">filelocation</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span>         <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>         <span class="n">fname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">user_temp_cache</span><span class="p">,</span> <span class="n">filename</span><span class="p">),</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span>         <span class="n">processor</span><span class="o">=</span><span class="n">processor</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="k">return</span> <span class="n">file</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/pooch/core.py:239,</span> in <span class="ni">retrieve</span><span class="nt">(url, known_hash, fname, path, processor, downloader, progressbar)</span>
-<span class="g g-Whitespace">    </span><span class="mi">236</span> <span class="k">if</span> <span class="n">downloader</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">237</span>     <span class="n">downloader</span> <span class="o">=</span> <span class="n">choose_downloader</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">progressbar</span><span class="o">=</span><span class="n">progressbar</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">239</span> <span class="n">stream_download</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">full_path</span><span class="p">,</span> <span class="n">known_hash</span><span class="p">,</span> <span class="n">downloader</span><span class="p">,</span> <span class="n">pooch</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">241</span> <span class="k">if</span> <span class="n">known_hash</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">242</span>     <span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">243</span>         <span class="s2">&quot;SHA256 hash of downloaded file: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">244</span>         <span class="s2">&quot;Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39;&quot;</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">247</span>         <span class="n">file_hash</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">full_path</span><span class="p">)),</span>
-<span class="g g-Whitespace">    </span><span class="mi">248</span>     <span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/pooch/core.py:803,</span> in <span class="ni">stream_download</span><span class="nt">(url, fname, known_hash, downloader, pooch, retry_if_failed)</span>
-<span class="g g-Whitespace">    </span><span class="mi">799</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">800</span>     <span class="c1"># Stream the file to a temporary so that we can safely check its</span>
-<span class="g g-Whitespace">    </span><span class="mi">801</span>     <span class="c1"># hash before overwriting the original.</span>
-<span class="g g-Whitespace">    </span><span class="mi">802</span>     <span class="k">with</span> <span class="n">temporary_file</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="o">.</span><span class="n">parent</span><span class="p">))</span> <span class="k">as</span> <span class="n">tmp</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">803</span>         <span class="n">downloader</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">tmp</span><span class="p">,</span> <span class="n">pooch</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">804</span>         <span class="n">hash_matches</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="n">known_hash</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">805</span>         <span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/pooch/downloaders.py:206,</span> in <span class="ni">HTTPDownloader.__call__</span><span class="nt">(self, url, output_file, pooch, check_only)</span>
-<span class="g g-Whitespace">    </span><span class="mi">204</span>     <span class="n">output_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="s2">&quot;w+b&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">205</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">206</span>     <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">207</span>     <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">208</span>     <span class="n">content</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">iter_content</span><span class="p">(</span><span class="n">chunk_size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">chunk_size</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/requests/api.py:73,</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">62</span> <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">63</span><span class="w">     </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Sends a GET request.</span>
-<span class="g g-Whitespace">     </span><span class="mi">64</span><span class="sd"> </span>
-<span class="g g-Whitespace">     </span><span class="mi">65</span><span class="sd">     :param url: URL for the new :class:`Request` object.</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">     </span><span class="mi">70</span><span class="sd">     :rtype: requests.Response</span>
-<span class="g g-Whitespace">     </span><span class="mi">71</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">73</span>     <span class="k">return</span> <span class="n">request</span><span class="p">(</span><span class="s2">&quot;get&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/requests/api.py:59,</span> in <span class="ni">request</span><span class="nt">(method, url, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="c1"># By using the &#39;with&#39; statement we are sure the session is closed, thus we</span>
-<span class="g g-Whitespace">     </span><span class="mi">56</span> <span class="c1"># avoid leaving sockets open which can trigger a ResourceWarning in some</span>
-<span class="g g-Whitespace">     </span><span class="mi">57</span> <span class="c1"># cases, and look like a memory leak in others.</span>
-<span class="g g-Whitespace">     </span><span class="mi">58</span> <span class="k">with</span> <span class="n">sessions</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">59</span>     <span class="k">return</span> <span class="n">session</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/requests/sessions.py:589,</span> in <span class="ni">Session.request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
-<span class="g g-Whitespace">    </span><span class="mi">584</span> <span class="n">send_kwargs</span> <span class="o">=</span> <span class="p">{</span>
-<span class="g g-Whitespace">    </span><span class="mi">585</span>     <span class="s2">&quot;timeout&quot;</span><span class="p">:</span> <span class="n">timeout</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">586</span>     <span class="s2">&quot;allow_redirects&quot;</span><span class="p">:</span> <span class="n">allow_redirects</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">587</span> <span class="p">}</span>
-<span class="g g-Whitespace">    </span><span class="mi">588</span> <span class="n">send_kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">589</span> <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">prep</span><span class="p">,</span> <span class="o">**</span><span class="n">send_kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">591</span> <span class="k">return</span> <span class="n">resp</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/requests/sessions.py:725,</span> in <span class="ni">Session.send</span><span class="nt">(self, request, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">722</span> <span class="k">if</span> <span class="n">allow_redirects</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">723</span>     <span class="c1"># Redirect resolving generator.</span>
-<span class="g g-Whitespace">    </span><span class="mi">724</span>     <span class="n">gen</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">resolve_redirects</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">725</span>     <span class="n">history</span> <span class="o">=</span> <span class="p">[</span><span class="n">resp</span> <span class="k">for</span> <span class="n">resp</span> <span class="ow">in</span> <span class="n">gen</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">726</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">727</span>     <span class="n">history</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/requests/sessions.py:725,</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
-<span class="g g-Whitespace">    </span><span class="mi">722</span> <span class="k">if</span> <span class="n">allow_redirects</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">723</span>     <span class="c1"># Redirect resolving generator.</span>
-<span class="g g-Whitespace">    </span><span class="mi">724</span>     <span class="n">gen</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">resolve_redirects</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">725</span>     <span class="n">history</span> <span class="o">=</span> <span class="p">[</span><span class="n">resp</span> <span class="k">for</span> <span class="n">resp</span> <span class="ow">in</span> <span class="n">gen</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">726</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">727</span>     <span class="n">history</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/requests/sessions.py:266,</span> in <span class="ni">SessionRedirectMixin.resolve_redirects</span><span class="nt">(self, resp, req, stream, timeout, verify, cert, proxies, yield_requests, **adapter_kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">263</span>     <span class="k">yield</span> <span class="n">req</span>
-<span class="g g-Whitespace">    </span><span class="mi">264</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">266</span>     <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">267</span>         <span class="n">req</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">268</span>         <span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">269</span>         <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">270</span>         <span class="n">verify</span><span class="o">=</span><span class="n">verify</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">271</span>         <span class="n">cert</span><span class="o">=</span><span class="n">cert</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">272</span>         <span class="n">proxies</span><span class="o">=</span><span class="n">proxies</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">273</span>         <span class="n">allow_redirects</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">274</span>         <span class="o">**</span><span class="n">adapter_kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">275</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">277</span>     <span class="n">extract_cookies_to_jar</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cookies</span><span class="p">,</span> <span class="n">prepared_request</span><span class="p">,</span> <span class="n">resp</span><span class="o">.</span><span class="n">raw</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">279</span>     <span class="c1"># extract redirect url, if any, for the next loop</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/requests/sessions.py:703,</span> in <span class="ni">Session.send</span><span class="nt">(self, request, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">700</span> <span class="n">start</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="c1"># Send the request</span>
-<span class="ne">--&gt; </span><span class="mi">703</span> <span class="n">r</span> <span class="o">=</span> <span class="n">adapter</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span> <span class="c1"># Total elapsed time of the request (approximately)</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span> <span class="n">elapsed</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/requests/adapters.py:486,</span> in <span class="ni">HTTPAdapter.send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
-<span class="g g-Whitespace">    </span><span class="mi">483</span>     <span class="n">timeout</span> <span class="o">=</span> <span class="n">TimeoutSauce</span><span class="p">(</span><span class="n">connect</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">485</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">486</span>     <span class="n">resp</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">487</span>         <span class="n">method</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">488</span>         <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">489</span>         <span class="n">body</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">body</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">490</span>         <span class="n">headers</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">491</span>         <span class="n">redirect</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">492</span>         <span class="n">assert_same_host</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">493</span>         <span class="n">preload_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">494</span>         <span class="n">decode_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">495</span>         <span class="n">retries</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_retries</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">496</span>         <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">497</span>         <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">498</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">500</span> <span class="k">except</span> <span class="p">(</span><span class="n">ProtocolError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">501</span>     <span class="k">raise</span> <span class="ne">ConnectionError</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/urllib3/connectionpool.py:703,</span> in <span class="ni">HTTPConnectionPool.urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, **response_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">700</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_prepare_proxy</span><span class="p">(</span><span class="n">conn</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="c1"># Make the request on the httplib connection object.</span>
-<span class="ne">--&gt; </span><span class="mi">703</span> <span class="n">httplib_response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_request</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span>     <span class="n">conn</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span>     <span class="n">method</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span>     <span class="n">url</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">707</span>     <span class="n">timeout</span><span class="o">=</span><span class="n">timeout_obj</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">708</span>     <span class="n">body</span><span class="o">=</span><span class="n">body</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">709</span>     <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">710</span>     <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">711</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">713</span> <span class="c1"># If we&#39;re going to release the connection in ``finally:``, then</span>
-<span class="g g-Whitespace">    </span><span class="mi">714</span> <span class="c1"># the response doesn&#39;t need to know about the connection. Otherwise</span>
-<span class="g g-Whitespace">    </span><span class="mi">715</span> <span class="c1"># it will also try to release it and we&#39;ll have a double-release</span>
-<span class="g g-Whitespace">    </span><span class="mi">716</span> <span class="c1"># mess.</span>
-<span class="g g-Whitespace">    </span><span class="mi">717</span> <span class="n">response_conn</span> <span class="o">=</span> <span class="n">conn</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">release_conn</span> <span class="k">else</span> <span class="kc">None</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/urllib3/connectionpool.py:386,</span> in <span class="ni">HTTPConnectionPool._make_request</span><span class="nt">(self, conn, method, url, timeout, chunked, **httplib_request_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">384</span> <span class="c1"># Trigger any extra validation we need to do.</span>
-<span class="g g-Whitespace">    </span><span class="mi">385</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">386</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_validate_conn</span><span class="p">(</span><span class="n">conn</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">387</span> <span class="k">except</span> <span class="p">(</span><span class="n">SocketTimeout</span><span class="p">,</span> <span class="n">BaseSSLError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">388</span>     <span class="c1"># Py2 raises this as a BaseSSLError, Py3 raises it as socket timeout.</span>
-<span class="g g-Whitespace">    </span><span class="mi">389</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_raise_timeout</span><span class="p">(</span><span class="n">err</span><span class="o">=</span><span class="n">e</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout_value</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">timeout</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/urllib3/connectionpool.py:1042,</span> in <span class="ni">HTTPSConnectionPool._validate_conn</span><span class="nt">(self, conn)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1040</span> <span class="c1"># Force connect early to allow us to validate the connection.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1041</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;sock&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>  <span class="c1"># AppEngine might not have  `.sock`</span>
-<span class="ne">-&gt; </span><span class="mi">1042</span>     <span class="n">conn</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1044</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">conn</span><span class="o">.</span><span class="n">is_verified</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1045</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1046</span>         <span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1047</span>             <span class="s2">&quot;Unverified HTTPS request is being made to host &#39;</span><span class="si">%s</span><span class="s2">&#39;. &quot;</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1052</span>         <span class="n">InsecureRequestWarning</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1053</span>     <span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/urllib3/connection.py:363,</span> in <span class="ni">HTTPSConnection.connect</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">361</span> <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">362</span>     <span class="c1"># Add certificate verification</span>
-<span class="ne">--&gt; </span><span class="mi">363</span>     <span class="bp">self</span><span class="o">.</span><span class="n">sock</span> <span class="o">=</span> <span class="n">conn</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new_conn</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">364</span>     <span class="n">hostname</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">host</span>
-<span class="g g-Whitespace">    </span><span class="mi">365</span>     <span class="n">tls_in_tls</span> <span class="o">=</span> <span class="kc">False</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/urllib3/connection.py:174,</span> in <span class="ni">HTTPConnection._new_conn</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">171</span>     <span class="n">extra_kw</span><span class="p">[</span><span class="s2">&quot;socket_options&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">socket_options</span>
-<span class="g g-Whitespace">    </span><span class="mi">173</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">174</span>     <span class="n">conn</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">create_connection</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">175</span>         <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_dns_host</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">timeout</span><span class="p">,</span> <span class="o">**</span><span class="n">extra_kw</span>
-<span class="g g-Whitespace">    </span><span class="mi">176</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">178</span> <span class="k">except</span> <span class="n">SocketTimeout</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">179</span>     <span class="k">raise</span> <span class="n">ConnectTimeoutError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">180</span>         <span class="bp">self</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">181</span>         <span class="s2">&quot;Connection to </span><span class="si">%s</span><span class="s2"> timed out. (connect timeout=</span><span class="si">%s</span><span class="s2">)&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">182</span>         <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">timeout</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">183</span>     <span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/urllib3/util/connection.py:72,</span> in <span class="ni">create_connection</span><span class="nt">(address, timeout, source_address, socket_options)</span>
-<span class="g g-Whitespace">     </span><span class="mi">67</span> <span class="k">except</span> <span class="ne">UnicodeError</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">68</span>     <span class="k">return</span> <span class="n">six</span><span class="o">.</span><span class="n">raise_from</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">69</span>         <span class="n">LocationParseError</span><span class="p">(</span><span class="sa">u</span><span class="s2">&quot;&#39;</span><span class="si">%s</span><span class="s2">&#39;, label empty or too long&quot;</span> <span class="o">%</span> <span class="n">host</span><span class="p">),</span> <span class="kc">None</span>
-<span class="g g-Whitespace">     </span><span class="mi">70</span>     <span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">72</span> <span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">socket</span><span class="o">.</span><span class="n">getaddrinfo</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">family</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">73</span>     <span class="n">af</span><span class="p">,</span> <span class="n">socktype</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">canonname</span><span class="p">,</span> <span class="n">sa</span> <span class="o">=</span> <span class="n">res</span>
-<span class="g g-Whitespace">     </span><span class="mi">74</span>     <span class="n">sock</span> <span class="o">=</span> <span class="kc">None</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/socket.py:955,</span> in <span class="ni">getaddrinfo</span><span class="nt">(host, port, family, type, proto, flags)</span>
-<span class="g g-Whitespace">    </span><span class="mi">952</span> <span class="c1"># We override this function since we want to translate the numeric family</span>
-<span class="g g-Whitespace">    </span><span class="mi">953</span> <span class="c1"># and socket type values to enum constants.</span>
-<span class="g g-Whitespace">    </span><span class="mi">954</span> <span class="n">addrlist</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="ne">--&gt; </span><span class="mi">955</span> <span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">_socket</span><span class="o">.</span><span class="n">getaddrinfo</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">family</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">flags</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">956</span>     <span class="n">af</span><span class="p">,</span> <span class="n">socktype</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">canonname</span><span class="p">,</span> <span class="n">sa</span> <span class="o">=</span> <span class="n">res</span>
-<span class="g g-Whitespace">    </span><span class="mi">957</span>     <span class="n">addrlist</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">_intenum_converter</span><span class="p">(</span><span class="n">af</span><span class="p">,</span> <span class="n">AddressFamily</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">958</span>                      <span class="n">_intenum_converter</span><span class="p">(</span><span class="n">socktype</span><span class="p">,</span> <span class="n">SocketKind</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">959</span>                      <span class="n">proto</span><span class="p">,</span> <span class="n">canonname</span><span class="p">,</span> <span class="n">sa</span><span class="p">))</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 8aafc51015921ed0cb76c547937db91b2077577ee9f859001d4cfa26c613bc05
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
 </pre></div>
 </div>
 </div>
@@ -1860,6 +1652,555 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body[data-theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;WBGT&#x27; (time: 64, lat: 192, lon: 384)&gt;
+array([[[-2.7235170e+01, -2.7209024e+01, -2.7091408e+01, ...,
+         -2.7226376e+01, -2.7160492e+01, -2.7258596e+01],
+        [-2.5137434e+01, -2.5155724e+01, -2.5227873e+01, ...,
+         -2.5103416e+01, -2.5114450e+01, -2.5129984e+01],
+        [-2.5405684e+01, -2.5478939e+01, -2.5416683e+01, ...,
+         -2.5355572e+01, -2.5436531e+01, -2.5436386e+01],
+        ...,
+        [ 1.5202777e-01,  1.4101627e-01,  1.3330752e-01, ...,
+          1.7247404e-01,  1.6777755e-01,  1.6128926e-01],
+        [ 1.4682470e-01,  1.4339085e-01,  1.3746151e-01, ...,
+          1.5303101e-01,  1.5185688e-01,  1.4891100e-01],
+        [-6.8249358e-03, -7.0434422e-03, -8.7905107e-03, ...,
+         -3.0952338e-03, -4.2250594e-03, -4.9193455e-03]],
+
+       [[-2.6649139e+01, -2.6630531e+01, -2.6634752e+01, ...,
+         -2.6691322e+01, -2.6607746e+01, -2.6625118e+01],
+        [-2.5106850e+01, -2.5126314e+01, -2.5193607e+01, ...,
+         -2.5092865e+01, -2.5098398e+01, -2.5103617e+01],
+        [-2.5217392e+01, -2.5242710e+01, -2.5172596e+01, ...,
+         -2.5080139e+01, -2.5190296e+01, -2.5223970e+01],
+...
+        [ 1.3378739e-01,  1.2870540e-01,  1.2770343e-01, ...,
+          1.3989741e-01,  1.3784374e-01,  1.3685331e-01],
+        [-4.5141011e-02, -4.6595134e-02, -5.1650975e-02, ...,
+         -3.2980740e-02, -3.6983781e-02, -3.9977543e-02],
+        [-1.8091998e-01, -1.8206993e-01, -1.8259056e-01, ...,
+         -1.7845529e-01, -1.7992011e-01, -1.8005356e-01]],
+
+       [[-2.5719893e+01, -2.5728792e+01, -2.5699797e+01, ...,
+         -2.5871269e+01, -2.5829645e+01, -2.5588160e+01],
+        [-2.3168945e+01, -2.3186224e+01, -2.3241858e+01, ...,
+         -2.3076477e+01, -2.3144035e+01, -2.3166027e+01],
+        [-2.2229086e+01, -2.2260471e+01, -2.2476068e+01, ...,
+         -2.2073126e+01, -2.2129398e+01, -2.2191292e+01],
+        ...,
+        [-4.8862319e-02, -6.1266027e-02, -7.4026965e-02, ...,
+         -1.7235180e-02, -2.6744476e-02, -3.6429971e-02],
+        [-1.0998243e-01, -1.1364387e-01, -1.1661023e-01, ...,
+         -9.9768467e-02, -1.0286019e-01, -1.0498482e-01],
+        [-1.9145221e-01, -1.9040416e-01, -1.9016221e-01, ...,
+         -1.9233751e-01, -1.9196975e-01, -1.9151381e-01]]], dtype=float32)
+Coordinates:
+  * lon      (lon) float64 0.0 0.9375 1.875 2.812 ... 356.2 357.2 358.1 359.1
+  * lat      (lat) float64 -89.28 -88.36 -87.42 -86.49 ... 87.42 88.36 89.28
+  * time     (time) datetime64[ns] 1951-12-31 1952-12-31 ... 2014-12-31
+Attributes:
+    long_name:         Wet bulb globe temperature
+    units:             degC
+    CDI_grid_type:     gaussian
+    CDI_grid_num_LPE:  96
+    cell_methods:      time: maximum</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'WBGT'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 64</li><li><span class='xr-has-index'>lat</span>: 192</li><li><span class='xr-has-index'>lon</span>: 384</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-a5220184-514f-4131-abe5-0600337d2639' class='xr-array-in' type='checkbox' checked><label for='section-a5220184-514f-4131-abe5-0600337d2639' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>-27.24 -27.21 -27.09 -27.17 -27.18 ... -0.193 -0.1923 -0.192 -0.1915</span></div><div class='xr-array-data'><pre>array([[[-2.7235170e+01, -2.7209024e+01, -2.7091408e+01, ...,
+         -2.7226376e+01, -2.7160492e+01, -2.7258596e+01],
+        [-2.5137434e+01, -2.5155724e+01, -2.5227873e+01, ...,
+         -2.5103416e+01, -2.5114450e+01, -2.5129984e+01],
+        [-2.5405684e+01, -2.5478939e+01, -2.5416683e+01, ...,
+         -2.5355572e+01, -2.5436531e+01, -2.5436386e+01],
+        ...,
+        [ 1.5202777e-01,  1.4101627e-01,  1.3330752e-01, ...,
+          1.7247404e-01,  1.6777755e-01,  1.6128926e-01],
+        [ 1.4682470e-01,  1.4339085e-01,  1.3746151e-01, ...,
+          1.5303101e-01,  1.5185688e-01,  1.4891100e-01],
+        [-6.8249358e-03, -7.0434422e-03, -8.7905107e-03, ...,
+         -3.0952338e-03, -4.2250594e-03, -4.9193455e-03]],
+
+       [[-2.6649139e+01, -2.6630531e+01, -2.6634752e+01, ...,
+         -2.6691322e+01, -2.6607746e+01, -2.6625118e+01],
+        [-2.5106850e+01, -2.5126314e+01, -2.5193607e+01, ...,
+         -2.5092865e+01, -2.5098398e+01, -2.5103617e+01],
+        [-2.5217392e+01, -2.5242710e+01, -2.5172596e+01, ...,
+         -2.5080139e+01, -2.5190296e+01, -2.5223970e+01],
+...
+        [ 1.3378739e-01,  1.2870540e-01,  1.2770343e-01, ...,
+          1.3989741e-01,  1.3784374e-01,  1.3685331e-01],
+        [-4.5141011e-02, -4.6595134e-02, -5.1650975e-02, ...,
+         -3.2980740e-02, -3.6983781e-02, -3.9977543e-02],
+        [-1.8091998e-01, -1.8206993e-01, -1.8259056e-01, ...,
+         -1.7845529e-01, -1.7992011e-01, -1.8005356e-01]],
+
+       [[-2.5719893e+01, -2.5728792e+01, -2.5699797e+01, ...,
+         -2.5871269e+01, -2.5829645e+01, -2.5588160e+01],
+        [-2.3168945e+01, -2.3186224e+01, -2.3241858e+01, ...,
+         -2.3076477e+01, -2.3144035e+01, -2.3166027e+01],
+        [-2.2229086e+01, -2.2260471e+01, -2.2476068e+01, ...,
+         -2.2073126e+01, -2.2129398e+01, -2.2191292e+01],
+        ...,
+        [-4.8862319e-02, -6.1266027e-02, -7.4026965e-02, ...,
+         -1.7235180e-02, -2.6744476e-02, -3.6429971e-02],
+        [-1.0998243e-01, -1.1364387e-01, -1.1661023e-01, ...,
+         -9.9768467e-02, -1.0286019e-01, -1.0498482e-01],
+        [-1.9145221e-01, -1.9040416e-01, -1.9016221e-01, ...,
+         -1.9233751e-01, -1.9196975e-01, -1.9151381e-01]]], dtype=float32)</pre></div></div></li><li class='xr-section-item'><input id='section-daddfdf9-f32a-488b-a4b0-04671be1102c' class='xr-section-summary-in' type='checkbox'  checked><label for='section-daddfdf9-f32a-488b-a4b0-04671be1102c' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.0 0.9375 1.875 ... 358.1 359.1</div><input id='attrs-9d22b33d-ed25-4a72-bc8f-dbbb462d0312' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-9d22b33d-ed25-4a72-bc8f-dbbb462d0312' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-971b932b-4665-49c0-9016-0e67a4a69881' class='xr-var-data-in' type='checkbox'><label for='data-971b932b-4665-49c0-9016-0e67a4a69881' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>axis :</span></dt><dd>X</dd></dl></div><div class='xr-var-data'><pre>array([  0.    ,   0.9375,   1.875 , ..., 357.1875, 358.125 , 359.0625])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-89.28 -88.36 ... 88.36 89.28</div><input id='attrs-144daab6-7fa7-436a-9498-32e4e0be8824' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-144daab6-7fa7-436a-9498-32e4e0be8824' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b077939b-cde1-43ec-b0b1-2f0ad839a0dc' class='xr-var-data-in' type='checkbox'><label for='data-b077939b-cde1-43ec-b0b1-2f0ad839a0dc' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>axis :</span></dt><dd>Y</dd></dl></div><div class='xr-var-data'><pre>array([-89.284228, -88.357004, -87.424304, -86.490367, -85.55596 , -84.621327,
+       -83.686567, -82.751728, -81.816839, -80.881913, -79.946962, -79.011992,
+       -78.077007, -77.142011, -76.207005, -75.271992, -74.336973, -73.401949,
+       -72.466921, -71.531889, -70.596854, -69.661816, -68.726776, -67.791734,
+       -66.856691, -65.921645, -64.986599, -64.051551, -63.116502, -62.181452,
+       -61.246401, -60.311349, -59.376297, -58.441244, -57.50619 , -56.571136,
+       -55.636081, -54.701026, -53.76597 , -52.830914, -51.895857, -50.960801,
+       -50.025743, -49.090686, -48.155628, -47.22057 , -46.285512, -45.350454,
+       -44.415395, -43.480336, -42.545277, -41.610218, -40.675159, -39.740099,
+       -38.805039, -37.86998 , -36.93492 , -35.99986 , -35.064799, -34.129739,
+       -33.194679, -32.259618, -31.324558, -30.389497, -29.454436, -28.519375,
+       -27.584315, -26.649254, -25.714193, -24.779132, -23.84407 , -22.909009,
+       -21.973948, -21.038887, -20.103825, -19.168764, -18.233703, -17.298641,
+       -16.36358 , -15.428518, -14.493457, -13.558395, -12.623333, -11.688272,
+       -10.75321 ,  -9.818148,  -8.883087,  -7.948025,  -7.012963,  -6.077901,
+        -5.14284 ,  -4.207778,  -3.272716,  -2.337654,  -1.402593,  -0.467531,
+         0.467531,   1.402593,   2.337654,   3.272716,   4.207778,   5.14284 ,
+         6.077901,   7.012963,   7.948025,   8.883087,   9.818148,  10.75321 ,
+        11.688272,  12.623333,  13.558395,  14.493457,  15.428518,  16.36358 ,
+        17.298641,  18.233703,  19.168764,  20.103825,  21.038887,  21.973948,
+        22.909009,  23.84407 ,  24.779132,  25.714193,  26.649254,  27.584315,
+        28.519375,  29.454436,  30.389497,  31.324558,  32.259618,  33.194679,
+        34.129739,  35.064799,  35.99986 ,  36.93492 ,  37.86998 ,  38.805039,
+        39.740099,  40.675159,  41.610218,  42.545277,  43.480336,  44.415395,
+        45.350454,  46.285512,  47.22057 ,  48.155628,  49.090686,  50.025743,
+        50.960801,  51.895857,  52.830914,  53.76597 ,  54.701026,  55.636081,
+        56.571136,  57.50619 ,  58.441244,  59.376297,  60.311349,  61.246401,
+        62.181452,  63.116502,  64.051551,  64.986599,  65.921645,  66.856691,
+        67.791734,  68.726776,  69.661816,  70.596854,  71.531889,  72.466921,
+        73.401949,  74.336973,  75.271992,  76.207005,  77.142011,  78.077007,
+        79.011992,  79.946962,  80.881913,  81.816839,  82.751728,  83.686567,
+        84.621327,  85.55596 ,  86.490367,  87.424304,  88.357004,  89.284228])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>1951-12-31 ... 2014-12-31</div><input id='attrs-fa388ffa-aadb-450f-882e-e12b492a7f2b' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-fa388ffa-aadb-450f-882e-e12b492a7f2b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-53a47013-9430-410e-ad1e-309a9af770ba' class='xr-var-data-in' type='checkbox'><label for='data-53a47013-9430-410e-ad1e-309a9af770ba' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;1951-12-31T00:00:00.000000000&#x27;, &#x27;1952-12-31T00:00:00.000000000&#x27;,
+       &#x27;1953-12-31T00:00:00.000000000&#x27;, &#x27;1954-12-31T00:00:00.000000000&#x27;,
+       &#x27;1955-12-31T00:00:00.000000000&#x27;, &#x27;1956-12-31T00:00:00.000000000&#x27;,
+       &#x27;1957-12-31T00:00:00.000000000&#x27;, &#x27;1958-12-31T00:00:00.000000000&#x27;,
+       &#x27;1959-12-31T00:00:00.000000000&#x27;, &#x27;1960-12-31T00:00:00.000000000&#x27;,
+       &#x27;1961-12-31T00:00:00.000000000&#x27;, &#x27;1962-12-31T00:00:00.000000000&#x27;,
+       &#x27;1963-12-31T00:00:00.000000000&#x27;, &#x27;1964-12-31T00:00:00.000000000&#x27;,
+       &#x27;1965-12-31T00:00:00.000000000&#x27;, &#x27;1966-12-31T00:00:00.000000000&#x27;,
+       &#x27;1967-12-31T00:00:00.000000000&#x27;, &#x27;1968-12-31T00:00:00.000000000&#x27;,
+       &#x27;1969-12-31T00:00:00.000000000&#x27;, &#x27;1970-12-31T00:00:00.000000000&#x27;,
+       &#x27;1971-12-31T00:00:00.000000000&#x27;, &#x27;1972-12-31T00:00:00.000000000&#x27;,
+       &#x27;1973-12-31T00:00:00.000000000&#x27;, &#x27;1974-12-31T00:00:00.000000000&#x27;,
+       &#x27;1975-12-31T00:00:00.000000000&#x27;, &#x27;1976-12-31T00:00:00.000000000&#x27;,
+       &#x27;1977-12-31T00:00:00.000000000&#x27;, &#x27;1978-12-31T00:00:00.000000000&#x27;,
+       &#x27;1979-12-31T00:00:00.000000000&#x27;, &#x27;1980-12-31T00:00:00.000000000&#x27;,
+       &#x27;1981-12-31T00:00:00.000000000&#x27;, &#x27;1982-12-31T00:00:00.000000000&#x27;,
+       &#x27;1983-12-31T00:00:00.000000000&#x27;, &#x27;1984-12-31T00:00:00.000000000&#x27;,
+       &#x27;1985-12-31T00:00:00.000000000&#x27;, &#x27;1986-12-31T00:00:00.000000000&#x27;,
+       &#x27;1987-12-31T00:00:00.000000000&#x27;, &#x27;1988-12-31T00:00:00.000000000&#x27;,
+       &#x27;1989-12-31T00:00:00.000000000&#x27;, &#x27;1990-12-31T00:00:00.000000000&#x27;,
+       &#x27;1991-12-31T00:00:00.000000000&#x27;, &#x27;1992-12-31T00:00:00.000000000&#x27;,
+       &#x27;1993-12-31T00:00:00.000000000&#x27;, &#x27;1994-12-31T00:00:00.000000000&#x27;,
+       &#x27;1995-12-31T00:00:00.000000000&#x27;, &#x27;1996-12-31T00:00:00.000000000&#x27;,
+       &#x27;1997-12-31T00:00:00.000000000&#x27;, &#x27;1998-12-31T00:00:00.000000000&#x27;,
+       &#x27;1999-12-31T00:00:00.000000000&#x27;, &#x27;2000-12-31T00:00:00.000000000&#x27;,
+       &#x27;2001-12-31T00:00:00.000000000&#x27;, &#x27;2002-12-31T00:00:00.000000000&#x27;,
+       &#x27;2003-12-31T00:00:00.000000000&#x27;, &#x27;2004-12-31T00:00:00.000000000&#x27;,
+       &#x27;2005-12-31T00:00:00.000000000&#x27;, &#x27;2006-12-31T00:00:00.000000000&#x27;,
+       &#x27;2007-12-31T00:00:00.000000000&#x27;, &#x27;2008-12-31T00:00:00.000000000&#x27;,
+       &#x27;2009-12-31T00:00:00.000000000&#x27;, &#x27;2010-12-31T00:00:00.000000000&#x27;,
+       &#x27;2011-12-31T00:00:00.000000000&#x27;, &#x27;2012-12-31T00:00:00.000000000&#x27;,
+       &#x27;2013-12-31T00:00:00.000000000&#x27;, &#x27;2014-12-31T00:00:00.000000000&#x27;],
+      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-bc05d35e-f39f-4d75-a7d9-58bc62f56350' class='xr-section-summary-in' type='checkbox'  ><label for='section-bc05d35e-f39f-4d75-a7d9-58bc62f56350' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>lon</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-40701531-432e-4a1a-adb5-40e179f4b3b5' class='xr-index-data-in' type='checkbox'/><label for='index-40701531-432e-4a1a-adb5-40e179f4b3b5' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([     0.0,   0.9375,    1.875,   2.8125,     3.75,   4.6875,    5.625,
+         6.5625,      7.5,   8.4375,
+       ...
+        350.625, 351.5625,    352.5, 353.4375,  354.375, 355.3125,   356.25,
+       357.1875,  358.125, 359.0625],
+      dtype=&#x27;float64&#x27;, name=&#x27;lon&#x27;, length=384))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lat</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-36d3d408-57f0-452d-88cd-126a1a119185' class='xr-index-data-in' type='checkbox'/><label for='index-36d3d408-57f0-452d-88cd-126a1a119185' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([-89.2842275325136, -88.3570035186649, -87.4243037460699,
+       -86.4903667662812, -85.5559604848927, -84.6213271076488,
+       -83.6865668165639, -82.7517284734307, -81.8168387286032,
+       -80.8819133467975,
+       ...
+        80.8819133467975,  81.8168387286032,  82.7517284734307,
+        83.6865668165639,  84.6213271076488,  85.5559604848927,
+        86.4903667662812,  87.4243037460699,  88.3570035186649,
+        89.2842275325136],
+      dtype=&#x27;float64&#x27;, name=&#x27;lat&#x27;, length=192))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-0bbfc38b-52f5-46e8-ab7d-97ff25667591' class='xr-index-data-in' type='checkbox'/><label for='index-0bbfc38b-52f5-46e8-ab7d-97ff25667591' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;1951-12-31&#x27;, &#x27;1952-12-31&#x27;, &#x27;1953-12-31&#x27;, &#x27;1954-12-31&#x27;,
+               &#x27;1955-12-31&#x27;, &#x27;1956-12-31&#x27;, &#x27;1957-12-31&#x27;, &#x27;1958-12-31&#x27;,
+               &#x27;1959-12-31&#x27;, &#x27;1960-12-31&#x27;, &#x27;1961-12-31&#x27;, &#x27;1962-12-31&#x27;,
+               &#x27;1963-12-31&#x27;, &#x27;1964-12-31&#x27;, &#x27;1965-12-31&#x27;, &#x27;1966-12-31&#x27;,
+               &#x27;1967-12-31&#x27;, &#x27;1968-12-31&#x27;, &#x27;1969-12-31&#x27;, &#x27;1970-12-31&#x27;,
+               &#x27;1971-12-31&#x27;, &#x27;1972-12-31&#x27;, &#x27;1973-12-31&#x27;, &#x27;1974-12-31&#x27;,
+               &#x27;1975-12-31&#x27;, &#x27;1976-12-31&#x27;, &#x27;1977-12-31&#x27;, &#x27;1978-12-31&#x27;,
+               &#x27;1979-12-31&#x27;, &#x27;1980-12-31&#x27;, &#x27;1981-12-31&#x27;, &#x27;1982-12-31&#x27;,
+               &#x27;1983-12-31&#x27;, &#x27;1984-12-31&#x27;, &#x27;1985-12-31&#x27;, &#x27;1986-12-31&#x27;,
+               &#x27;1987-12-31&#x27;, &#x27;1988-12-31&#x27;, &#x27;1989-12-31&#x27;, &#x27;1990-12-31&#x27;,
+               &#x27;1991-12-31&#x27;, &#x27;1992-12-31&#x27;, &#x27;1993-12-31&#x27;, &#x27;1994-12-31&#x27;,
+               &#x27;1995-12-31&#x27;, &#x27;1996-12-31&#x27;, &#x27;1997-12-31&#x27;, &#x27;1998-12-31&#x27;,
+               &#x27;1999-12-31&#x27;, &#x27;2000-12-31&#x27;, &#x27;2001-12-31&#x27;, &#x27;2002-12-31&#x27;,
+               &#x27;2003-12-31&#x27;, &#x27;2004-12-31&#x27;, &#x27;2005-12-31&#x27;, &#x27;2006-12-31&#x27;,
+               &#x27;2007-12-31&#x27;, &#x27;2008-12-31&#x27;, &#x27;2009-12-31&#x27;, &#x27;2010-12-31&#x27;,
+               &#x27;2011-12-31&#x27;, &#x27;2012-12-31&#x27;, &#x27;2013-12-31&#x27;, &#x27;2014-12-31&#x27;],
+              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time&#x27;, freq=&#x27;A-DEC&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-b9ad696e-faa8-4dad-8bfd-7af33b3181ab' class='xr-section-summary-in' type='checkbox'  checked><label for='section-b9ad696e-faa8-4dad-8bfd-7af33b3181ab' class='xr-section-summary' >Attributes: <span>(5)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Wet bulb globe temperature</dd><dt><span>units :</span></dt><dd>degC</dd><dt><span>CDI_grid_type :</span></dt><dd>gaussian</dd><dt><span>CDI_grid_num_LPE :</span></dt><dd>96</dd><dt><span>cell_methods :</span></dt><dd>time: maximum</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <p>There is one data point per year on a latitude-longitude grid. Let’s compute the grid spacing in the longitude and latitude directions:</p>
 <div class="cell docutils container">
@@ -1868,10 +2209,20 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9375
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wetbulb_hist</span><span class="o">.</span><span class="n">lat</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="s2">&quot;lat&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9349133773038073
 </pre></div>
 </div>
 </div>
@@ -1908,6 +2259,9 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/W2D4_Tutorial8_29_0.png" src="../../../_images/W2D4_Tutorial8_29_0.png" />
+</div>
 </div>
 <p>Note:</p>
 <ol class="simple">
@@ -1922,6 +2276,17 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 <span class="n">return_levels_hist</span> <span class="o">=</span> <span class="n">gf</span><span class="o">.</span><span class="n">fit_return_levels</span><span class="p">(</span>
     <span class="n">wetbulb_hist_delhi</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">years</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">1.1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">),</span> <span class="n">N_boot</span><span class="o">=</span><span class="mi">100</span>
 <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Location: 3.1e+01, scale: 5.0e-01, shape: 1.6e-01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ranges with alpha=0.050 :
+Location: [30.48 , 30.73]
+Scale: [0.41 , 0.58]
+Shape: [0.00 , 0.33]
 </pre></div>
 </div>
 </div>
@@ -1976,6 +2341,9 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/W2D4_Tutorial8_33_0.png" src="../../../_images/W2D4_Tutorial8_33_0.png" />
+</div>
 </div>
 <p>Let’s calculate the 100-year return level.</p>
 <div class="cell docutils container">
@@ -1984,6 +2352,11 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
     <span class="s2">&quot;100-year return level: </span><span class="si">%.2f</span><span class="s2">&quot;</span>
     <span class="o">%</span> <span class="n">gf</span><span class="o">.</span><span class="n">estimate_return_level_period</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">loc_hist</span><span class="p">,</span> <span class="n">scale_hist</span><span class="p">,</span> <span class="n">shape_hist</span><span class="p">)</span>
 <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100-year return level: 32.23
 </pre></div>
 </div>
 </div>
@@ -1999,6 +2372,17 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
     <span class="n">years</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">1.1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">),</span>
     <span class="n">N_boot</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
 <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Location: 3.2e+01, scale: 4.5e-01, shape: 3.8e-01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ranges with alpha=0.050 :
+Location: [32.00 , 32.39]
+Scale: [0.35 , 0.54]
+Shape: [0.00 , 0.61]
 </pre></div>
 </div>
 </div>
@@ -2058,6 +2442,9 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/W2D4_Tutorial8_38_0.png" src="../../../_images/W2D4_Tutorial8_38_0.png" />
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2065,6 +2452,11 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
     <span class="s2">&quot;100-year return level: </span><span class="si">%.2f</span><span class="s2">&quot;</span>
     <span class="o">%</span> <span class="n">gf</span><span class="o">.</span><span class="n">estimate_return_level_period</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">loc_245</span><span class="p">,</span> <span class="n">scale_245</span><span class="p">,</span> <span class="n">shape_245</span><span class="p">)</span>
 <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100-year return level: 33.16
 </pre></div>
 </div>
 </div>
@@ -2086,6 +2478,24 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Location: 3.2e+01, scale: 5.0e-01, shape: 3.1e-01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ranges with alpha=0.050 :
+Location: [31.26 , 31.91]
+Scale: [0.35 , 0.80]
+Shape: [-0.16 , 1.08]
+Location: 3.3e+01, scale: 1.1e+00, shape: 3.3e-01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ranges with alpha=0.050 :
+Location: [32.98 , 33.83]
+Scale: [0.81 , 1.39]
+Shape: [0.13 , 0.75]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2103,6 +2513,12 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Return Level (degrees C)&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Return Level (degrees C)&#39;)
+</pre></div>
+</div>
+<img alt="../../../_images/W2D4_Tutorial8_42_1.png" src="../../../_images/W2D4_Tutorial8_42_1.png" />
 </div>
 </div>
 </div>
@@ -2134,6 +2550,31 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
     <span class="n">years</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">1.1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">),</span>
     <span class="n">N_boot</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
 <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Location: 3.2e+01, scale: 4.9e-01, shape: 3.6e-01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ranges with alpha=0.050 :
+Location: [31.35 , 31.78]
+Scale: [0.37 , 0.69]
+Shape: [0.00 , 1.09]
+Location: 3.1e+01, scale: 5.5e-01, shape: 2.4e-01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ranges with alpha=0.050 :
+Location: [31.07 , 31.51]
+Scale: [0.41 , 0.66]
+Shape: [0.00 , 0.47]
+Location: 3.1e+01, scale: 4.4e-01, shape: 1.8e-01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ranges with alpha=0.050 :
+Location: [31.36 , 31.65]
+Scale: [0.34 , 0.52]
+Shape: [0.00 , 0.52]
 </pre></div>
 </div>
 </div>
@@ -2218,6 +2659,12 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Maximum 7-day Mean Wet-Bulb Globe Temperature&#39;)
+</pre></div>
+</div>
+<img alt="../../../_images/W2D4_Tutorial8_47_1.png" src="../../../_images/W2D4_Tutorial8_47_1.png" />
+</div>
 </div>
 </div>
 <div class="section" id="section-1-2-time-dependent-return-levels">
@@ -2295,6 +2742,12 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Maximum 7-day Mean Wet-Bulb Globe Temperature&#39;)
+</pre></div>
+</div>
+<img alt="../../../_images/W2D4_Tutorial8_52_1.png" src="../../../_images/W2D4_Tutorial8_52_1.png" />
+</div>
 </div>
 <p>Now we again compute the AIC for the constant and time-dependent models, and compare their performance:</p>
 <div class="cell docutils container">
@@ -2346,6 +2799,49 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>hist</th>
+      <th>ssp126</th>
+      <th>ssp245</th>
+      <th>ssp585</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>constant</th>
+      <td>108.71</td>
+      <td>122.02</td>
+      <td>174.87</td>
+      <td>261.98</td>
+    </tr>
+    <tr>
+      <th>covariate</th>
+      <td>96.58</td>
+      <td>123.99</td>
+      <td>136.84</td>
+      <td>179.08</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>The AIC is lower when using a covariate, suggesting that including the time-dependence into the location parameter improves the quality of the model. The exception is the SSP1-2.6 scenario, which does not perform as well. This is because, unlike the other scenarios and historical period, the wet-bulb globe temperatures stabilize, and this the location parameter is less dependent on time. In this instance, making other parameters depend on time could potentially improve the performance.</p>
 </div>
@@ -2391,6 +2887,141 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 <span class="n">fname_bgt_58</span> <span class="o">=</span> <span class="s2">&quot;wbgt_585_raw_runmean7_gev_2071-2100.nc&quot;</span>
 <span class="n">url_bgt_585</span> <span class="o">=</span> <span class="s2">&quot;https://osf.io/y6edw/download&quot;</span>
 <span class="n">fit_sp_585</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">pooch_load</span><span class="p">(</span><span class="n">url_bgt_585</span><span class="p">,</span> <span class="n">fname_bgt_58</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://osf.io/dakv3/download&#39; to file &#39;/tmp/wbgt_hist_raw_runmean7_gev.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: d81109ded24b8a2f8846364bbcdeca22a187d0b5c5cbe908599f9fa32b1f1152
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://osf.io/ef9pv/download&#39; to file &#39;/tmp/wbgt_126_raw_runmean7_gev_2071-2100.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: b98318842c15c16ee03fb23faca965abf18f78b862857f6109d6a6e073b86301
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://osf.io/j4hfc/download&#39; to file &#39;/tmp/wbgt_245_raw_runmean7_gev_2071-2100.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 1e5cd5ef92336b23ad0c8d51c3cebfc87374d57ce375969d79243aff43c67b2f
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://osf.io/y6edw/download&#39; to file &#39;/tmp/wbgt_585_raw_runmean7_gev_2071-2100.nc&#39;.
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">33</span><span class="p">],</span> <span class="n">line</span> <span class="mi">19</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="n">fname_bgt_58</span> <span class="o">=</span> <span class="s2">&quot;wbgt_585_raw_runmean7_gev_2071-2100.nc&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="n">url_bgt_585</span> <span class="o">=</span> <span class="s2">&quot;https://osf.io/y6edw/download&quot;</span>
+<span class="ne">---&gt; </span><span class="mi">19</span> <span class="n">fit_sp_585</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">pooch_load</span><span class="p">(</span><span class="n">url_bgt_585</span><span class="p">,</span> <span class="n">fname_bgt_58</span><span class="p">))</span>
+
+<span class="nn">Cell In[4], line 11,</span> in <span class="ni">pooch_load</span><span class="nt">(filelocation, filename, processor)</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">shared_location</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">11</span>     <span class="n">file</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span>         <span class="n">filelocation</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span>         <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span>         <span class="n">fname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">user_temp_cache</span><span class="p">,</span> <span class="n">filename</span><span class="p">),</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span>         <span class="n">processor</span><span class="o">=</span><span class="n">processor</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="k">return</span> <span class="n">file</span>
+
+<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/pooch/core.py:239,</span> in <span class="ni">retrieve</span><span class="nt">(url, known_hash, fname, path, processor, downloader, progressbar)</span>
+<span class="g g-Whitespace">    </span><span class="mi">236</span> <span class="k">if</span> <span class="n">downloader</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">237</span>     <span class="n">downloader</span> <span class="o">=</span> <span class="n">choose_downloader</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">progressbar</span><span class="o">=</span><span class="n">progressbar</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">239</span> <span class="n">stream_download</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">full_path</span><span class="p">,</span> <span class="n">known_hash</span><span class="p">,</span> <span class="n">downloader</span><span class="p">,</span> <span class="n">pooch</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">241</span> <span class="k">if</span> <span class="n">known_hash</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">242</span>     <span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">243</span>         <span class="s2">&quot;SHA256 hash of downloaded file: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">244</span>         <span class="s2">&quot;Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39;&quot;</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">247</span>         <span class="n">file_hash</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">full_path</span><span class="p">)),</span>
+<span class="g g-Whitespace">    </span><span class="mi">248</span>     <span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/pooch/core.py:803,</span> in <span class="ni">stream_download</span><span class="nt">(url, fname, known_hash, downloader, pooch, retry_if_failed)</span>
+<span class="g g-Whitespace">    </span><span class="mi">799</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">800</span>     <span class="c1"># Stream the file to a temporary so that we can safely check its</span>
+<span class="g g-Whitespace">    </span><span class="mi">801</span>     <span class="c1"># hash before overwriting the original.</span>
+<span class="g g-Whitespace">    </span><span class="mi">802</span>     <span class="k">with</span> <span class="n">temporary_file</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="o">.</span><span class="n">parent</span><span class="p">))</span> <span class="k">as</span> <span class="n">tmp</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">803</span>         <span class="n">downloader</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">tmp</span><span class="p">,</span> <span class="n">pooch</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">804</span>         <span class="n">hash_matches</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="n">known_hash</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">805</span>         <span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span>
+
+<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/pooch/downloaders.py:226,</span> in <span class="ni">HTTPDownloader.__call__</span><span class="nt">(self, url, output_file, pooch, check_only)</span>
+<span class="g g-Whitespace">    </span><span class="mi">224</span>     <span class="n">progress</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">progressbar</span>
+<span class="g g-Whitespace">    </span><span class="mi">225</span>     <span class="n">progress</span><span class="o">.</span><span class="n">total</span> <span class="o">=</span> <span class="n">total</span>
+<span class="ne">--&gt; </span><span class="mi">226</span> <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">content</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">227</span>     <span class="k">if</span> <span class="n">chunk</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">228</span>         <span class="n">output_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/requests/models.py:816,</span> in <span class="ni">Response.iter_content.&lt;locals&gt;.generate</span><span class="nt">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">814</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">,</span> <span class="s2">&quot;stream&quot;</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">815</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">816</span>         <span class="k">yield from</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="o">.</span><span class="n">stream</span><span class="p">(</span><span class="n">chunk_size</span><span class="p">,</span> <span class="n">decode_content</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">817</span>     <span class="k">except</span> <span class="n">ProtocolError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">818</span>         <span class="k">raise</span> <span class="n">ChunkedEncodingError</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/urllib3/response.py:628,</span> in <span class="ni">HTTPResponse.stream</span><span class="nt">(self, amt, decode_content)</span>
+<span class="g g-Whitespace">    </span><span class="mi">626</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">627</span>     <span class="k">while</span> <span class="ow">not</span> <span class="n">is_fp_closed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_fp</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">628</span>         <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">amt</span><span class="o">=</span><span class="n">amt</span><span class="p">,</span> <span class="n">decode_content</span><span class="o">=</span><span class="n">decode_content</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">630</span>         <span class="k">if</span> <span class="n">data</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">631</span>             <span class="k">yield</span> <span class="n">data</span>
+
+<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/urllib3/response.py:567,</span> in <span class="ni">HTTPResponse.read</span><span class="nt">(self, amt, decode_content, cache_content)</span>
+<span class="g g-Whitespace">    </span><span class="mi">564</span> <span class="n">fp_closed</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_fp</span><span class="p">,</span> <span class="s2">&quot;closed&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">566</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_error_catcher</span><span class="p">():</span>
+<span class="ne">--&gt; </span><span class="mi">567</span>     <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fp_read</span><span class="p">(</span><span class="n">amt</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">fp_closed</span> <span class="k">else</span> <span class="sa">b</span><span class="s2">&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">568</span>     <span class="k">if</span> <span class="n">amt</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">569</span>         <span class="n">flush_decoder</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/urllib3/response.py:533,</span> in <span class="ni">HTTPResponse._fp_read</span><span class="nt">(self, amt)</span>
+<span class="g g-Whitespace">    </span><span class="mi">530</span>     <span class="k">return</span> <span class="n">buffer</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">531</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">532</span>     <span class="c1"># StringIO doesn&#39;t like amt=None</span>
+<span class="ne">--&gt; </span><span class="mi">533</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fp</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">amt</span><span class="p">)</span> <span class="k">if</span> <span class="n">amt</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/http/client.py:466,</span> in <span class="ni">HTTPResponse.read</span><span class="nt">(self, amt)</span>
+<span class="g g-Whitespace">    </span><span class="mi">463</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">amt</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">464</span>     <span class="c1"># clip the read to the &quot;end of response&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">465</span>     <span class="n">amt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span>
+<span class="ne">--&gt; </span><span class="mi">466</span> <span class="n">s</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">amt</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">467</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span> <span class="ow">and</span> <span class="n">amt</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">468</span>     <span class="c1"># Ideally, we would raise IncompleteRead if the content-length</span>
+<span class="g g-Whitespace">    </span><span class="mi">469</span>     <span class="c1"># wasn&#39;t satisfied, but it might break compatibility.</span>
+<span class="g g-Whitespace">    </span><span class="mi">470</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_close_conn</span><span class="p">()</span>
+
+<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/socket.py:705,</span> in <span class="ni">SocketIO.readinto</span><span class="nt">(self, b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">703</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">704</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">705</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sock</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">706</span>     <span class="k">except</span> <span class="n">timeout</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">707</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_timeout_occurred</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/ssl.py:1274,</span> in <span class="ni">SSLSocket.recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1270</span>     <span class="k">if</span> <span class="n">flags</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1271</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1272</span>           <span class="s2">&quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span>
+<span class="g g-Whitespace">   </span><span class="mi">1273</span>           <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1274</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">nbytes</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1275</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1276</span>     <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">nbytes</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/ssl.py:1130,</span> in <span class="ni">SSLSocket.read</span><span class="nt">(self, len, buffer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1128</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1129</span>     <span class="k">if</span> <span class="n">buffer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1130</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1131</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1132</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>

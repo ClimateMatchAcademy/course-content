@@ -30,8 +30,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-["# SSP1-2.6 - 'WBGT_day_MPI-ESM1-2-HR_ssp126_r1i1p1f1_raw_runmean7_yearmax.nc'", 'filename_SSP126 = "WBGT_day_MPI-ESM1-2-HR_ssp126_r1i1p1f1_raw_runmean7_yearmax.nc"', 'url_SSP126 = "https://osf.io/67b8m/download"', 'wetbulb_126 = xr.open_dataset(pooch_load(url_SSP126, filename_SSP126)).WBGT', 'wetbulb_126.attrs["units"] = "degC"']
+['# historical - wbgt_hist_raw_runmean7_gev.nc', 'fname_wbgt_hist = "wbgt_hist_raw_runmean7_gev.nc"', 'url_wbgt_hist = "https://osf.io/dakv3/download"', 'fit_sp_hist = xr.open_dataset(pooch_load(url_wbgt_hist, fname_wbgt_hist))', '']
 ...
-['filename_SSP585 = "WBGT_day_MPI-ESM1-2-HR_ssp585_r1i1p1f1_raw_runmean7_yearmax.nc"', 'url_SSP585 = "https://osf.io/pr456/download"', 'wetbulb_585 = xr.open_dataset(pooch_load(url_SSP585, filename_SSP585)).WBGT', 'wetbulb_585.attrs["units"] = "degC"', 'wetbulb_585 = wetbulb_585.resample(time="1Y").mean()']
+['', '# SSP-585 - wbgt_585_raw_runmean7_gev_2071-2100.nc', 'fname_bgt_58 = "wbgt_585_raw_runmean7_gev_2071-2100.nc"', 'url_bgt_585 = "https://osf.io/y6edw/download"', 'fit_sp_585 = xr.open_dataset(pooch_load(url_bgt_585, fname_bgt_58))']
 -------------------
 
