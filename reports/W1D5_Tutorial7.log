@@ -30,8 +30,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-['%matplotlib inline', '', 'fig, ([ax_latent, ax_shortwave], [ax_sensible, ax_longwave]) = plt.subplots(', '    ncols=2, nrows=2, figsize=[12, 6], subplot_kw={"projection": ccrs.Robinson()}', ')']
+['lat = hist_am_latent_heat_flux.lat[0, :]', '', 'fig, ax = plt.subplots(figsize=(8, 5))', '', 'ax.plot(lat, hist_azm_latent_heat_flux, label="Latent Heat")']
 ...
-['    robust=True,', '    cbar_kwargs={"label": "$W/m^2$"},', ')', 'ax_longwave.coastlines()', 'ax_longwave.set_title("Net Upward Longwave Flux")']
+['ax.plot(lat, hist_azm_net_heat_flux, lw=3, color="k", label="Net")', 'ax.plot(lat, 0 * lat, color="black")', '', 'ax.set_title("Components of Annual Surface Energy Budget (+ up)")', 'ax.legend()']
 -------------------
 

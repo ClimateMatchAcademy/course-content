@@ -1523,7 +1523,7 @@ title="Print to PDF"
 </div><div class="output text_html">
 <div>
   <progress value='4' class='' max='4' style='width:300px; height:20px; vertical-align: middle;'></progress>
-  100.00% [4/4 00:02&lt;00:00]
+  100.00% [4/4 00:01&lt;00:00]
 </div>
 </div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; The keys in the returned dictionary of datasets are constructed as follows:
 	&#39;source_id/experiment_id&#39;
@@ -1577,68 +1577,6 @@ title="Print to PDF"
 </div>
 </div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KeysView(DataTree(&#39;None&#39;, parent=None)
 └── DataTree(&#39;CESM2&#39;)
-    ├── DataTree(&#39;ssp126&#39;)
-    │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 192,
-    │                            x: 288, nbnd: 2)
-    │       Coordinates:
-    │         * y               (y) float64 -90.0 -89.06 -88.12 -87.17 ... 88.12 89.06 90.0
-    │         * x               (x) float64 0.0 1.25 2.5 3.75 ... 355.0 356.2 357.5 358.8
-    │         * time            (time) object 2015-01-15 12:00:00 ... 2100-12-15 12:00:00
-    │           lon_bounds      (x, nbnd, y) float64 dask.array&lt;chunksize=(288, 2, 192), meta=np.ndarray&gt;
-    │           lat_bounds      (y, nbnd, x) float64 dask.array&lt;chunksize=(192, 2, 288), meta=np.ndarray&gt;
-    │           time_bounds     (time, nbnd) object dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
-    │         * nbnd            (nbnd) int64 0 1
-    │           lon             (x, y) float64 360.0 360.0 360.0 360.0 ... 358.8 358.8 358.8
-    │           lat             (x, y) float64 -90.0 -89.06 -88.12 ... 88.12 89.06 90.0
-    │         * member_id       (member_id) object &#39;r4i1p1f1&#39;
-    │         * dcpp_init_year  (dcpp_init_year) float64 nan
-    │       Data variables:
-    │           tas             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 408, 192, 288), meta=np.ndarray&gt;
-    │       Attributes: (12/61)
-    │           Conventions:                      CF-1.7 CMIP-6.2
-    │           activity_id:                      ScenarioMIP
-    │           branch_method:                    standard
-    │           branch_time_in_child:             735110.0
-    │           branch_time_in_parent:            735110.0
-    │           case_id:                          1729
-    │           ...                               ...
-    │           intake_esm_attrs:variable_id:     tas
-    │           intake_esm_attrs:grid_label:      gn
-    │           intake_esm_attrs:zstore:          gs://cmip6/CMIP6/ScenarioMIP/NCAR/CESM2...
-    │           intake_esm_attrs:version:         20200528
-    │           intake_esm_attrs:_data_format_:   zarr
-    │           intake_esm_dataset_key:           CESM2/ssp126
-    ├── DataTree(&#39;ssp585&#39;)
-    │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 192,
-    │                            x: 288, nbnd: 2)
-    │       Coordinates:
-    │         * y               (y) float64 -90.0 -89.06 -88.12 -87.17 ... 88.12 89.06 90.0
-    │         * x               (x) float64 0.0 1.25 2.5 3.75 ... 355.0 356.2 357.5 358.8
-    │         * time            (time) object 2015-01-15 12:00:00 ... 2100-12-15 12:00:00
-    │           lon_bounds      (x, nbnd, y) float64 dask.array&lt;chunksize=(288, 2, 192), meta=np.ndarray&gt;
-    │           lat_bounds      (y, nbnd, x) float64 dask.array&lt;chunksize=(192, 2, 288), meta=np.ndarray&gt;
-    │           time_bounds     (time, nbnd) object dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
-    │         * nbnd            (nbnd) int64 0 1
-    │           lon             (x, y) float64 360.0 360.0 360.0 360.0 ... 358.8 358.8 358.8
-    │           lat             (x, y) float64 -90.0 -89.06 -88.12 ... 88.12 89.06 90.0
-    │         * member_id       (member_id) object &#39;r4i1p1f1&#39;
-    │         * dcpp_init_year  (dcpp_init_year) float64 nan
-    │       Data variables:
-    │           tas             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 408, 192, 288), meta=np.ndarray&gt;
-    │       Attributes: (12/61)
-    │           Conventions:                      CF-1.7 CMIP-6.2
-    │           activity_id:                      ScenarioMIP
-    │           branch_method:                    standard
-    │           branch_time_in_child:             735110.0
-    │           branch_time_in_parent:            735110.0
-    │           case_id:                          1735
-    │           ...                               ...
-    │           intake_esm_attrs:variable_id:     tas
-    │           intake_esm_attrs:grid_label:      gn
-    │           intake_esm_attrs:zstore:          gs://cmip6/CMIP6/ScenarioMIP/NCAR/CESM2...
-    │           intake_esm_attrs:version:         20200528
-    │           intake_esm_attrs:_data_format_:   zarr
-    │           intake_esm_dataset_key:           CESM2/ssp585
     ├── DataTree(&#39;ssp245&#39;)
     │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 192,
     │                            x: 288, nbnd: 2)
@@ -1646,9 +1584,9 @@ title="Print to PDF"
     │         * y               (y) float64 -90.0 -89.06 -88.12 -87.17 ... 88.12 89.06 90.0
     │         * x               (x) float64 0.0 1.25 2.5 3.75 ... 355.0 356.2 357.5 358.8
     │         * time            (time) object 2015-01-15 12:00:00 ... 2100-12-15 12:00:00
-    │           lon_bounds      (x, nbnd, y) float64 dask.array&lt;chunksize=(288, 2, 192), meta=np.ndarray&gt;
     │           lat_bounds      (y, nbnd, x) float64 dask.array&lt;chunksize=(192, 2, 288), meta=np.ndarray&gt;
     │           time_bounds     (time, nbnd) object dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
+    │           lon_bounds      (x, nbnd, y) float64 dask.array&lt;chunksize=(288, 2, 192), meta=np.ndarray&gt;
     │         * nbnd            (nbnd) int64 0 1
     │           lon             (x, y) float64 360.0 360.0 360.0 360.0 ... 358.8 358.8 358.8
     │           lat             (x, y) float64 -90.0 -89.06 -88.12 ... 88.12 89.06 90.0
@@ -1670,37 +1608,99 @@ title="Print to PDF"
     │           intake_esm_attrs:version:         20200528
     │           intake_esm_attrs:_data_format_:   zarr
     │           intake_esm_dataset_key:           CESM2/ssp245
-    └── DataTree(&#39;historical&#39;)
-            Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1980, y: 192,
+    ├── DataTree(&#39;historical&#39;)
+    │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1980, y: 192,
+    │                            x: 288, nbnd: 2)
+    │       Coordinates:
+    │         * y               (y) float64 -90.0 -89.06 -88.12 -87.17 ... 88.12 89.06 90.0
+    │         * x               (x) float64 0.0 1.25 2.5 3.75 ... 355.0 356.2 357.5 358.8
+    │         * time            (time) object 1850-01-15 12:00:00 ... 2014-12-15 12:00:00
+    │           lat_bounds      (y, nbnd, x) float64 dask.array&lt;chunksize=(192, 2, 288), meta=np.ndarray&gt;
+    │           time_bounds     (time, nbnd) object dask.array&lt;chunksize=(1980, 2), meta=np.ndarray&gt;
+    │           lon_bounds      (x, nbnd, y) float64 dask.array&lt;chunksize=(288, 2, 192), meta=np.ndarray&gt;
+    │         * nbnd            (nbnd) int64 0 1
+    │           lon             (x, y) float64 360.0 360.0 360.0 360.0 ... 358.8 358.8 358.8
+    │           lat             (x, y) float64 -90.0 -89.06 -88.12 ... 88.12 89.06 90.0
+    │         * member_id       (member_id) object &#39;r4i1p1f1&#39;
+    │         * dcpp_init_year  (dcpp_init_year) float64 nan
+    │       Data variables:
+    │           tas             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 600, 192, 288), meta=np.ndarray&gt;
+    │       Attributes: (12/61)
+    │           Conventions:                      CF-1.7 CMIP-6.2
+    │           activity_id:                      CMIP
+    │           branch_method:                    standard
+    │           branch_time_in_child:             674885.0
+    │           branch_time_in_parent:            182500.0
+    │           case_id:                          18
+    │           ...                               ...
+    │           intake_esm_attrs:variable_id:     tas
+    │           intake_esm_attrs:grid_label:      gn
+    │           intake_esm_attrs:zstore:          gs://cmip6/CMIP6/CMIP/NCAR/CESM2/histor...
+    │           intake_esm_attrs:version:         20190308
+    │           intake_esm_attrs:_data_format_:   zarr
+    │           intake_esm_dataset_key:           CESM2/historical
+    ├── DataTree(&#39;ssp126&#39;)
+    │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 192,
+    │                            x: 288, nbnd: 2)
+    │       Coordinates:
+    │         * y               (y) float64 -90.0 -89.06 -88.12 -87.17 ... 88.12 89.06 90.0
+    │         * x               (x) float64 0.0 1.25 2.5 3.75 ... 355.0 356.2 357.5 358.8
+    │         * time            (time) object 2015-01-15 12:00:00 ... 2100-12-15 12:00:00
+    │           lat_bounds      (y, nbnd, x) float64 dask.array&lt;chunksize=(192, 2, 288), meta=np.ndarray&gt;
+    │           time_bounds     (time, nbnd) object dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
+    │           lon_bounds      (x, nbnd, y) float64 dask.array&lt;chunksize=(288, 2, 192), meta=np.ndarray&gt;
+    │         * nbnd            (nbnd) int64 0 1
+    │           lon             (x, y) float64 360.0 360.0 360.0 360.0 ... 358.8 358.8 358.8
+    │           lat             (x, y) float64 -90.0 -89.06 -88.12 ... 88.12 89.06 90.0
+    │         * member_id       (member_id) object &#39;r4i1p1f1&#39;
+    │         * dcpp_init_year  (dcpp_init_year) float64 nan
+    │       Data variables:
+    │           tas             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 408, 192, 288), meta=np.ndarray&gt;
+    │       Attributes: (12/61)
+    │           Conventions:                      CF-1.7 CMIP-6.2
+    │           activity_id:                      ScenarioMIP
+    │           branch_method:                    standard
+    │           branch_time_in_child:             735110.0
+    │           branch_time_in_parent:            735110.0
+    │           case_id:                          1729
+    │           ...                               ...
+    │           intake_esm_attrs:variable_id:     tas
+    │           intake_esm_attrs:grid_label:      gn
+    │           intake_esm_attrs:zstore:          gs://cmip6/CMIP6/ScenarioMIP/NCAR/CESM2...
+    │           intake_esm_attrs:version:         20200528
+    │           intake_esm_attrs:_data_format_:   zarr
+    │           intake_esm_dataset_key:           CESM2/ssp126
+    └── DataTree(&#39;ssp585&#39;)
+            Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 192,
                                  x: 288, nbnd: 2)
             Coordinates:
               * y               (y) float64 -90.0 -89.06 -88.12 -87.17 ... 88.12 89.06 90.0
               * x               (x) float64 0.0 1.25 2.5 3.75 ... 355.0 356.2 357.5 358.8
-              * time            (time) object 1850-01-15 12:00:00 ... 2014-12-15 12:00:00
-                lon_bounds      (x, nbnd, y) float64 dask.array&lt;chunksize=(288, 2, 192), meta=np.ndarray&gt;
+              * time            (time) object 2015-01-15 12:00:00 ... 2100-12-15 12:00:00
                 lat_bounds      (y, nbnd, x) float64 dask.array&lt;chunksize=(192, 2, 288), meta=np.ndarray&gt;
-                time_bounds     (time, nbnd) object dask.array&lt;chunksize=(1980, 2), meta=np.ndarray&gt;
+                time_bounds     (time, nbnd) object dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
+                lon_bounds      (x, nbnd, y) float64 dask.array&lt;chunksize=(288, 2, 192), meta=np.ndarray&gt;
               * nbnd            (nbnd) int64 0 1
                 lon             (x, y) float64 360.0 360.0 360.0 360.0 ... 358.8 358.8 358.8
                 lat             (x, y) float64 -90.0 -89.06 -88.12 ... 88.12 89.06 90.0
               * member_id       (member_id) object &#39;r4i1p1f1&#39;
               * dcpp_init_year  (dcpp_init_year) float64 nan
             Data variables:
-                tas             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 600, 192, 288), meta=np.ndarray&gt;
+                tas             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 408, 192, 288), meta=np.ndarray&gt;
             Attributes: (12/61)
                 Conventions:                      CF-1.7 CMIP-6.2
-                activity_id:                      CMIP
+                activity_id:                      ScenarioMIP
                 branch_method:                    standard
-                branch_time_in_child:             674885.0
-                branch_time_in_parent:            182500.0
-                case_id:                          18
+                branch_time_in_child:             735110.0
+                branch_time_in_parent:            735110.0
+                case_id:                          1735
                 ...                               ...
                 intake_esm_attrs:variable_id:     tas
                 intake_esm_attrs:grid_label:      gn
-                intake_esm_attrs:zstore:          gs://cmip6/CMIP6/CMIP/NCAR/CESM2/histor...
-                intake_esm_attrs:version:         20190308
+                intake_esm_attrs:zstore:          gs://cmip6/CMIP6/ScenarioMIP/NCAR/CESM2...
+                intake_esm_attrs:version:         20200528
                 intake_esm_attrs:_data_format_:   zarr
-                intake_esm_dataset_key:           CESM2/historical)
+                intake_esm_dataset_key:           CESM2/ssp585)
 </pre></div>
 </div>
 </div>
@@ -1732,6 +1732,9 @@ title="Print to PDF"
 	&#39;source_id/experiment_id&#39;
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
 <div class="output text_html">
 <style>
     /* Turns off some styling */
@@ -1751,7 +1754,7 @@ title="Print to PDF"
 </div><div class="output text_html">
 <div>
   <progress value='4' class='' max='4' style='width:300px; height:20px; vertical-align: middle;'></progress>
-  100.00% [4/4 00:01&lt;00:00]
+  100.00% [4/4 00:02&lt;00:00]
 </div>
 </div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; The keys in the returned dictionary of datasets are constructed as follows:
 	&#39;source_id/experiment_id&#39;
@@ -1780,74 +1783,6 @@ title="Print to PDF"
 </div>
 </div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KeysView(DataTree(&#39;None&#39;, parent=None)
 └── DataTree(&#39;CESM2&#39;)
-    ├── DataTree(&#39;ssp245&#39;)
-    │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 384,
-    │                            x: 320, vertex: 4, bnds: 2)
-    │       Coordinates: (12/13)
-    │           lat             (y, x) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
-    │           lon             (y, x) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
-    │         * time            (time) object 2015-01-15 13:00:00 ... 2100-12-15 12:00:00
-    │           lon_verticies   (y, x, vertex) float32 dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
-    │           lat_verticies   (y, x, vertex) float32 dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
-    │           time_bounds     (time, bnds) object dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
-    │           ...              ...
-    │         * x               (x) int64 0 1 2 3 4 5 6 7 ... 313 314 315 316 317 318 319
-    │           lon_bounds      (bnds, y, x) float32 dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
-    │           lat_bounds      (bnds, y, x) float32 dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
-    │         * member_id       (member_id) object &#39;r4i1p1f1&#39;
-    │         * dcpp_init_year  (dcpp_init_year) float64 nan
-    │           areacello       (member_id, dcpp_init_year, y, x) float32 dask.array&lt;chunksize=(1, 1, 384, 320), meta=np.ndarray&gt;
-    │       Dimensions without coordinates: vertex, bnds
-    │       Data variables:
-    │           tos             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 199, 384, 320), meta=np.ndarray&gt;
-    │       Attributes: (12/61)
-    │           Conventions:                      CF-1.7 CMIP-6.2
-    │           activity_id:                      ScenarioMIP
-    │           branch_method:                    standard
-    │           branch_time_in_child:             735110.0
-    │           branch_time_in_parent:            735110.0
-    │           case_id:                          1732
-    │           ...                               ...
-    │           intake_esm_attrs:variable_id:     tos
-    │           intake_esm_attrs:grid_label:      gn
-    │           intake_esm_attrs:zstore:          gs://cmip6/CMIP6/ScenarioMIP/NCAR/CESM2...
-    │           intake_esm_attrs:version:         20200528
-    │           intake_esm_attrs:_data_format_:   zarr
-    │           intake_esm_dataset_key:           CESM2/ssp245
-    ├── DataTree(&#39;ssp126&#39;)
-    │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 384,
-    │                            x: 320, vertex: 4, bnds: 2)
-    │       Coordinates: (12/13)
-    │           lat             (y, x) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
-    │           lon             (y, x) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
-    │         * time            (time) object 2015-01-15 13:00:00 ... 2100-12-15 12:00:00
-    │           lon_verticies   (y, x, vertex) float32 dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
-    │           lat_verticies   (y, x, vertex) float32 dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
-    │           time_bounds     (time, bnds) object dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
-    │           ...              ...
-    │         * x               (x) int64 0 1 2 3 4 5 6 7 ... 313 314 315 316 317 318 319
-    │           lon_bounds      (bnds, y, x) float32 dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
-    │           lat_bounds      (bnds, y, x) float32 dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
-    │         * member_id       (member_id) object &#39;r4i1p1f1&#39;
-    │         * dcpp_init_year  (dcpp_init_year) float64 nan
-    │           areacello       (member_id, dcpp_init_year, y, x) float32 dask.array&lt;chunksize=(1, 1, 384, 320), meta=np.ndarray&gt;
-    │       Dimensions without coordinates: vertex, bnds
-    │       Data variables:
-    │           tos             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 199, 384, 320), meta=np.ndarray&gt;
-    │       Attributes: (12/61)
-    │           Conventions:                      CF-1.7 CMIP-6.2
-    │           activity_id:                      ScenarioMIP
-    │           branch_method:                    standard
-    │           branch_time_in_child:             735110.0
-    │           branch_time_in_parent:            735110.0
-    │           case_id:                          1729
-    │           ...                               ...
-    │           intake_esm_attrs:variable_id:     tos
-    │           intake_esm_attrs:grid_label:      gn
-    │           intake_esm_attrs:zstore:          gs://cmip6/CMIP6/ScenarioMIP/NCAR/CESM2...
-    │           intake_esm_attrs:version:         20200528
-    │           intake_esm_attrs:_data_format_:   zarr
-    │           intake_esm_dataset_key:           CESM2/ssp126
     ├── DataTree(&#39;ssp585&#39;)
     │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 384,
     │                            x: 320, vertex: 4, bnds: 2)
@@ -1882,16 +1817,84 @@ title="Print to PDF"
     │           intake_esm_attrs:version:         20200528
     │           intake_esm_attrs:_data_format_:   zarr
     │           intake_esm_dataset_key:           CESM2/ssp585
-    └── DataTree(&#39;historical&#39;)
-            Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1980, y: 384,
+    ├── DataTree(&#39;historical&#39;)
+    │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1980, y: 384,
+    │                            x: 320, vertex: 4, bnds: 2)
+    │       Coordinates: (12/13)
+    │           lat             (y, x) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
+    │           lon             (y, x) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
+    │         * time            (time) object 1850-01-15 12:59:59.999997 ... 2014-12-15 1...
+    │           lon_verticies   (y, x, vertex) float32 dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
+    │           lat_verticies   (y, x, vertex) float32 dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
+    │           time_bounds     (time, bnds) object dask.array&lt;chunksize=(1980, 2), meta=np.ndarray&gt;
+    │           ...              ...
+    │         * x               (x) int64 0 1 2 3 4 5 6 7 ... 313 314 315 316 317 318 319
+    │           lon_bounds      (bnds, y, x) float32 dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
+    │           lat_bounds      (bnds, y, x) float32 dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
+    │         * member_id       (member_id) object &#39;r4i1p1f1&#39;
+    │         * dcpp_init_year  (dcpp_init_year) float64 nan
+    │           areacello       (member_id, dcpp_init_year, y, x) float32 dask.array&lt;chunksize=(1, 1, 384, 320), meta=np.ndarray&gt;
+    │       Dimensions without coordinates: vertex, bnds
+    │       Data variables:
+    │           tos             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 403, 384, 320), meta=np.ndarray&gt;
+    │       Attributes: (12/61)
+    │           Conventions:                      CF-1.7 CMIP-6.2
+    │           activity_id:                      CMIP
+    │           branch_method:                    standard
+    │           branch_time_in_child:             674885.0
+    │           branch_time_in_parent:            182500.0
+    │           case_id:                          18
+    │           ...                               ...
+    │           intake_esm_attrs:variable_id:     tos
+    │           intake_esm_attrs:grid_label:      gn
+    │           intake_esm_attrs:zstore:          gs://cmip6/CMIP6/CMIP/NCAR/CESM2/histor...
+    │           intake_esm_attrs:version:         20190308
+    │           intake_esm_attrs:_data_format_:   zarr
+    │           intake_esm_dataset_key:           CESM2/historical
+    ├── DataTree(&#39;ssp245&#39;)
+    │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 384,
+    │                            x: 320, vertex: 4, bnds: 2)
+    │       Coordinates: (12/13)
+    │           lat             (y, x) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
+    │           lon             (y, x) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
+    │         * time            (time) object 2015-01-15 13:00:00 ... 2100-12-15 12:00:00
+    │           lon_verticies   (y, x, vertex) float32 dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
+    │           lat_verticies   (y, x, vertex) float32 dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
+    │           time_bounds     (time, bnds) object dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
+    │           ...              ...
+    │         * x               (x) int64 0 1 2 3 4 5 6 7 ... 313 314 315 316 317 318 319
+    │           lon_bounds      (bnds, y, x) float32 dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
+    │           lat_bounds      (bnds, y, x) float32 dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
+    │         * member_id       (member_id) object &#39;r4i1p1f1&#39;
+    │         * dcpp_init_year  (dcpp_init_year) float64 nan
+    │           areacello       (member_id, dcpp_init_year, y, x) float32 dask.array&lt;chunksize=(1, 1, 384, 320), meta=np.ndarray&gt;
+    │       Dimensions without coordinates: vertex, bnds
+    │       Data variables:
+    │           tos             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 199, 384, 320), meta=np.ndarray&gt;
+    │       Attributes: (12/61)
+    │           Conventions:                      CF-1.7 CMIP-6.2
+    │           activity_id:                      ScenarioMIP
+    │           branch_method:                    standard
+    │           branch_time_in_child:             735110.0
+    │           branch_time_in_parent:            735110.0
+    │           case_id:                          1732
+    │           ...                               ...
+    │           intake_esm_attrs:variable_id:     tos
+    │           intake_esm_attrs:grid_label:      gn
+    │           intake_esm_attrs:zstore:          gs://cmip6/CMIP6/ScenarioMIP/NCAR/CESM2...
+    │           intake_esm_attrs:version:         20200528
+    │           intake_esm_attrs:_data_format_:   zarr
+    │           intake_esm_dataset_key:           CESM2/ssp245
+    └── DataTree(&#39;ssp126&#39;)
+            Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 384,
                                  x: 320, vertex: 4, bnds: 2)
             Coordinates: (12/13)
                 lat             (y, x) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
                 lon             (y, x) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
-              * time            (time) object 1850-01-15 12:59:59.999997 ... 2014-12-15 1...
+              * time            (time) object 2015-01-15 13:00:00 ... 2100-12-15 12:00:00
                 lon_verticies   (y, x, vertex) float32 dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
                 lat_verticies   (y, x, vertex) float32 dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
-                time_bounds     (time, bnds) object dask.array&lt;chunksize=(1980, 2), meta=np.ndarray&gt;
+                time_bounds     (time, bnds) object dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
                 ...              ...
               * x               (x) int64 0 1 2 3 4 5 6 7 ... 313 314 315 316 317 318 319
                 lon_bounds      (bnds, y, x) float32 dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
@@ -1901,21 +1904,21 @@ title="Print to PDF"
                 areacello       (member_id, dcpp_init_year, y, x) float32 dask.array&lt;chunksize=(1, 1, 384, 320), meta=np.ndarray&gt;
             Dimensions without coordinates: vertex, bnds
             Data variables:
-                tos             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 403, 384, 320), meta=np.ndarray&gt;
+                tos             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 199, 384, 320), meta=np.ndarray&gt;
             Attributes: (12/61)
                 Conventions:                      CF-1.7 CMIP-6.2
-                activity_id:                      CMIP
+                activity_id:                      ScenarioMIP
                 branch_method:                    standard
-                branch_time_in_child:             674885.0
-                branch_time_in_parent:            182500.0
-                case_id:                          18
+                branch_time_in_child:             735110.0
+                branch_time_in_parent:            735110.0
+                case_id:                          1729
                 ...                               ...
                 intake_esm_attrs:variable_id:     tos
                 intake_esm_attrs:grid_label:      gn
-                intake_esm_attrs:zstore:          gs://cmip6/CMIP6/CMIP/NCAR/CESM2/histor...
-                intake_esm_attrs:version:         20190308
+                intake_esm_attrs:zstore:          gs://cmip6/CMIP6/ScenarioMIP/NCAR/CESM2...
+                intake_esm_attrs:version:         20200528
                 intake_esm_attrs:_data_format_:   zarr
-                intake_esm_dataset_key:           CESM2/historical)
+                intake_esm_dataset_key:           CESM2/ssp126)
 </pre></div>
 </div>
 </div>
@@ -1947,125 +1950,11 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://downloads.psl.noaa.gov/Datasets/noaa.ersst.v5/sst.mnmean.nc&#39; to file &#39;/tmp/sst.mnmean.nc&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 2ef307c606670b9e07d7d0f9c1c72988a0876e86c557119a35c2d496d380959f
-Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://downloads.psl.noaa.gov/Datasets/cmap/enh/precip.mon.mean.nc&#39; to file &#39;/tmp/precip.mon.mean.nc&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 0224151adc706cfcf88b6be5739a4d380b821e448da02ff732bb59182941cc5b
-Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
-</pre></div>
-</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://downloads.psl.noaa.gov/Datasets/gistemp/combined/1200km/air.2x2.1200.mon.anom.comb.nc&#39; to file &#39;/tmp/air.2x2.1200.mon.anom.comb.nc&#39;.
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">15</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">filename_tas</span><span class="o">=</span><span class="s1">&#39;air.2x2.1200.mon.anom.comb.nc&#39;</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="n">url_tas</span><span class="o">=</span><span class="s1">&#39;https://downloads.psl.noaa.gov/Datasets/gistemp/combined/1200km/air.2x2.1200.mon.anom.comb.nc&#39;</span>
-<span class="ne">---&gt; </span><span class="mi">15</span> <span class="n">do_tas</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">pooch_load</span><span class="p">(</span><span class="n">url_tas</span><span class="p">,</span><span class="n">filename_tas</span><span class="p">))</span>
-
-<span class="nn">Cell In[4], line 10,</span> in <span class="ni">pooch_load</span><span class="nt">(filelocation, filename, processor)</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="n">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">shared_location</span><span class="p">,</span><span class="n">filename</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">10</span>     <span class="n">file</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">filelocation</span><span class="p">,</span><span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">fname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">user_temp_cache</span><span class="p">,</span><span class="n">filename</span><span class="p">),</span><span class="n">processor</span><span class="o">=</span><span class="n">processor</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="k">return</span> <span class="n">file</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/pooch/core.py:239,</span> in <span class="ni">retrieve</span><span class="nt">(url, known_hash, fname, path, processor, downloader, progressbar)</span>
-<span class="g g-Whitespace">    </span><span class="mi">236</span> <span class="k">if</span> <span class="n">downloader</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">237</span>     <span class="n">downloader</span> <span class="o">=</span> <span class="n">choose_downloader</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">progressbar</span><span class="o">=</span><span class="n">progressbar</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">239</span> <span class="n">stream_download</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">full_path</span><span class="p">,</span> <span class="n">known_hash</span><span class="p">,</span> <span class="n">downloader</span><span class="p">,</span> <span class="n">pooch</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">241</span> <span class="k">if</span> <span class="n">known_hash</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">242</span>     <span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">243</span>         <span class="s2">&quot;SHA256 hash of downloaded file: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">244</span>         <span class="s2">&quot;Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39;&quot;</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">247</span>         <span class="n">file_hash</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">full_path</span><span class="p">)),</span>
-<span class="g g-Whitespace">    </span><span class="mi">248</span>     <span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/pooch/core.py:803,</span> in <span class="ni">stream_download</span><span class="nt">(url, fname, known_hash, downloader, pooch, retry_if_failed)</span>
-<span class="g g-Whitespace">    </span><span class="mi">799</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">800</span>     <span class="c1"># Stream the file to a temporary so that we can safely check its</span>
-<span class="g g-Whitespace">    </span><span class="mi">801</span>     <span class="c1"># hash before overwriting the original.</span>
-<span class="g g-Whitespace">    </span><span class="mi">802</span>     <span class="k">with</span> <span class="n">temporary_file</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="o">.</span><span class="n">parent</span><span class="p">))</span> <span class="k">as</span> <span class="n">tmp</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">803</span>         <span class="n">downloader</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">tmp</span><span class="p">,</span> <span class="n">pooch</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">804</span>         <span class="n">hash_matches</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="n">known_hash</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">805</span>         <span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/pooch/downloaders.py:226,</span> in <span class="ni">HTTPDownloader.__call__</span><span class="nt">(self, url, output_file, pooch, check_only)</span>
-<span class="g g-Whitespace">    </span><span class="mi">224</span>     <span class="n">progress</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">progressbar</span>
-<span class="g g-Whitespace">    </span><span class="mi">225</span>     <span class="n">progress</span><span class="o">.</span><span class="n">total</span> <span class="o">=</span> <span class="n">total</span>
-<span class="ne">--&gt; </span><span class="mi">226</span> <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">content</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">227</span>     <span class="k">if</span> <span class="n">chunk</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">228</span>         <span class="n">output_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/requests/models.py:816,</span> in <span class="ni">Response.iter_content.&lt;locals&gt;.generate</span><span class="nt">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">814</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">,</span> <span class="s2">&quot;stream&quot;</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">815</span>     <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">816</span>         <span class="k">yield from</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="o">.</span><span class="n">stream</span><span class="p">(</span><span class="n">chunk_size</span><span class="p">,</span> <span class="n">decode_content</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">817</span>     <span class="k">except</span> <span class="n">ProtocolError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">818</span>         <span class="k">raise</span> <span class="n">ChunkedEncodingError</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/urllib3/response.py:628,</span> in <span class="ni">HTTPResponse.stream</span><span class="nt">(self, amt, decode_content)</span>
-<span class="g g-Whitespace">    </span><span class="mi">626</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">627</span>     <span class="k">while</span> <span class="ow">not</span> <span class="n">is_fp_closed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_fp</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">628</span>         <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">amt</span><span class="o">=</span><span class="n">amt</span><span class="p">,</span> <span class="n">decode_content</span><span class="o">=</span><span class="n">decode_content</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">630</span>         <span class="k">if</span> <span class="n">data</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">631</span>             <span class="k">yield</span> <span class="n">data</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/urllib3/response.py:567,</span> in <span class="ni">HTTPResponse.read</span><span class="nt">(self, amt, decode_content, cache_content)</span>
-<span class="g g-Whitespace">    </span><span class="mi">564</span> <span class="n">fp_closed</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_fp</span><span class="p">,</span> <span class="s2">&quot;closed&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">566</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_error_catcher</span><span class="p">():</span>
-<span class="ne">--&gt; </span><span class="mi">567</span>     <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fp_read</span><span class="p">(</span><span class="n">amt</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">fp_closed</span> <span class="k">else</span> <span class="sa">b</span><span class="s2">&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">568</span>     <span class="k">if</span> <span class="n">amt</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">569</span>         <span class="n">flush_decoder</span> <span class="o">=</span> <span class="kc">True</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/urllib3/response.py:533,</span> in <span class="ni">HTTPResponse._fp_read</span><span class="nt">(self, amt)</span>
-<span class="g g-Whitespace">    </span><span class="mi">530</span>     <span class="k">return</span> <span class="n">buffer</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">531</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">532</span>     <span class="c1"># StringIO doesn&#39;t like amt=None</span>
-<span class="ne">--&gt; </span><span class="mi">533</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fp</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">amt</span><span class="p">)</span> <span class="k">if</span> <span class="n">amt</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/http/client.py:466,</span> in <span class="ni">HTTPResponse.read</span><span class="nt">(self, amt)</span>
-<span class="g g-Whitespace">    </span><span class="mi">463</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">amt</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">464</span>     <span class="c1"># clip the read to the &quot;end of response&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">465</span>     <span class="n">amt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span>
-<span class="ne">--&gt; </span><span class="mi">466</span> <span class="n">s</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">amt</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">467</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span> <span class="ow">and</span> <span class="n">amt</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">468</span>     <span class="c1"># Ideally, we would raise IncompleteRead if the content-length</span>
-<span class="g g-Whitespace">    </span><span class="mi">469</span>     <span class="c1"># wasn&#39;t satisfied, but it might break compatibility.</span>
-<span class="g g-Whitespace">    </span><span class="mi">470</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_close_conn</span><span class="p">()</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/socket.py:705,</span> in <span class="ni">SocketIO.readinto</span><span class="nt">(self, b)</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span>     <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">705</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sock</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span>     <span class="k">except</span> <span class="n">timeout</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">707</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_timeout_occurred</span> <span class="o">=</span> <span class="kc">True</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/ssl.py:1274,</span> in <span class="ni">SSLSocket.recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1270</span>     <span class="k">if</span> <span class="n">flags</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1271</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1272</span>           <span class="s2">&quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span>
-<span class="g g-Whitespace">   </span><span class="mi">1273</span>           <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1274</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">nbytes</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1275</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1276</span>     <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">nbytes</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/ssl.py:1130,</span> in <span class="ni">SSLSocket.read</span><span class="nt">(self, len, buffer)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1128</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1129</span>     <span class="k">if</span> <span class="n">buffer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1130</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1131</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1132</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 553b6585bcd6cf02f1aca00ccc4fef352252d9e1229333702cd427a94960a21a
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
 </pre></div>
 </div>
 </div>
@@ -2096,6 +1985,12 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;July 2000&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/ENSO_impact_on_precipitation_and_temperature_15_1.png" src="../../_images/ENSO_impact_on_precipitation_and_temperature_15_1.png" />
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2123,6 +2018,12 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.geocollection.GeoQuadMesh at 0x7f35923dde40&gt;
+</pre></div>
+</div>
+<img alt="../../_images/ENSO_impact_on_precipitation_and_temperature_16_1.png" src="../../_images/ENSO_impact_on_precipitation_and_temperature_16_1.png" />
+</div>
 </div>
 </div>
 <div class="section" id="dataset-3-oceanic-nino-index">
@@ -2135,6 +2036,24 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 <span class="n">url_nino</span> <span class="o">=</span> <span class="s2">&quot;https://osf.io/8rwxb/download/&quot;</span>
 <span class="n">oni</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">pooch_load</span><span class="p">(</span><span class="n">url_nino</span><span class="p">,</span><span class="n">filename_nino</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">oni</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://osf.io/8rwxb/download/&#39; to file &#39;/tmp/t6_oceanic-nino-index.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 583ae1ce6f9a990d2535f5c7ef816edd3252990208438c2d84a88025b7a21419
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KeysView(&lt;xarray.Dataset&gt;
+Dimensions:  (time: 499)
+Coordinates:
+  * time     (time) datetime64[ns] 1981-09-01 1981-10-01 ... 2023-03-01
+    month    (time) int32 ...
+Data variables:
+    sst      (time) float32 ...)
 </pre></div>
 </div>
 </div>
