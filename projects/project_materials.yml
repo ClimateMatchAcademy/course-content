@@ -25,7 +25,7 @@
   title: Continuing your project after the course
 - file: projects/docs/past_projects_overview.md
   title: Past projects
-  section:
+  sections:
   - file: projects/past-projects/sea_level_rise.ipynb
     title: Sea Level Rise
   - file: projects/past-projects/ocean_acidification.ipynb
