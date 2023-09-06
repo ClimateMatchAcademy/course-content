@@ -23,3 +23,20 @@
     title: "Changes in Land Cover: Albedo and Carbon Sequestration"
 - file: projects/docs/continuing_your_project_after_the_course.md
   title: Continuing your project after the course
+- file: projects/docs/past_projects_overview.md
+  title: Past projects
+  sections:
+  - file: projects/past-projects/sea_level_rise.ipynb
+    title: Sea Level Rise
+  - file: projects/past-projects/ocean_acidification.ipynb
+    title: Ocean Acidification
+  - file: projects/past-projects/ENSO.ipynb
+    title: The Impact of ENSO on Precipitation and Temperature
+  - file: projects/past-projects/precipitation.ipynb
+    title: Regional Precipitation Variability and Extreme events
+  - file: projects/past-projects/heatwaves.ipynb
+    title: "Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land"
+  - file: projects/past-projects/wildfires.ipynb
+    title: Monitoring and Mapping Wildfires Using Satellite Data
+  - file: projects/past-projects/albedo.ipynb
+    title: "Changes in Land Cover: Albedo and Carbon Sequestration"
