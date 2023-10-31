@@ -44,7 +44,6 @@ You will have 2.5-3 hours each day to work on projects. The goal during the **fi
 Embedded in the project time will also be a set of **professional development activities**: a series of Impact Talks, meetings with mentors, and career panels. 
 
 ### POD INTRODUCTIONS W1D1
-_Monday, 17th July (PM) for everyone_
 
 On W1D1, you will meet your pod 30 minutes before the regular start of the tutorial time for introductory activities. Your pod’s Teaching Assistant will also tell you the project group you have been assigned to and its project topic. In some pods, the two groups will work on the same topic while others might be assigned two different topics depending on student interests. If you wish to work in the other group, discuss it with your Teaching Assistant. 
 
@@ -52,17 +51,11 @@ During the pod introduction on W1D1, your Teaching Assistant will also inform yo
 
 ---
 ### SESSION 1 
-_Monday, 17th July (PM) for groups in timezone slots 2 and 5_
-
-_Tuesday, 18th July (AM) for groups in timezone slots 1, 3, and 4_
 
 Work through the [tutorial on good research practices](https://comptools.climatematch.io/tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial1.html) in your project groups. Your Project Teaching Assistant will come by at some point during this period to introduce themselves and facilitate your progression through the tutorial for 30-45 minutes.
 
 ---
 ### SESSION 2
-_Tuesday, 18th July (PM) for groups in timezone slots 2 and 5_
-
-_Wednesday, 19th July (AM) for groups in timezone slots 1, 3, and 4_
 
 >**Professional Development:** Watch the interview about [Climate Justice](https://comptools.climatematch.io/projects/professional_development/impact_talks.html#climate-justice) and use the provided prompts to discuss the topic within your project group for 15 minutes As agreed during introductions on W1D1, one project group in the pod should do this during the first 30 minutes of the project block, while the other should leave this for the last 30 minutes of the block. Also as decided on W1D1, two students should practice their leadership skills by leading the discussion from the front and from behind.
 
@@ -75,9 +68,6 @@ The remaining 2.5 hours are time to get your hands dirty! Explore one of the pro
 
 ---
 ### SESSION 3
-_Wednesday, 19th July (PM) for groups in timezone slots 2 and 5_
-
-_Thursday, 20th July (AM) for groups in timezone slots 1, 3, and 4_
 
 >**Professional Development:** Watch the interview about, [Equity in Climate and Climate Science](https://comptools.climatematch.io/projects/professional_development/impact_talks.html#equity-in-climate-and-climate-science) and use the provided prompts to discuss the topic within your project group for 15 minutes. As agreed during introductions on W1D1, one project group in the pod should do this during the first 30 minutes of the project block, while the other should leave this for the last 30 minutes of the block. Also as decided on W1D1, two students should practice their leadership skills by leading the discussion from the front and from behind.
 
@@ -94,9 +84,6 @@ The remaining time will be dedicated to brainstorming and reviewing the literatu
 
 ---
 ### SESSION 4
-_Thursday, 20th July (PM) for groups in timezone slots 2 and 5_
-
-_Friday, 21st July (AM) for groups in timezone slots 1, 3, and 4_
 
 By the end of this project session, you should submit your project proposal via **[Airtable link](https://airtable.com/shrQ5CLEla3dDkKbk)**.
 
@@ -120,9 +107,6 @@ The proposal can be a list of bullet points or a coherent paragraph; don’t wor
 
 ---
 ### SESSION 5
-_Friday, 21st July (PM) for groups in timezone slots 2 and 5_
-
-_Monday, 24th July (AM) for groups in timezone slots 1, 3, and 4_
 
 You should now have a sense of the data, and you have probably refined your hypothesis a little.  Writing a proposal will have helped you get a rough idea of what tools you might use to tackle your research question, and what the answer could look like. You will use the remaining project time to implement the analyses you have planned and make progress towards an answer. Your group might not be able to complete their research plan, but don’t get discouraged: answering a research question usually takes months if not years of work and you should consider making meaningful progress towards that goal a great success!
 
@@ -136,9 +120,6 @@ A few pieces of general advice:
 
 ---
 ### SESSION 6
-_Monday, 24th July (PM) for groups in timezone slots 2 and 5_
-
-_Tuesday, 25th July (AM) for groups in timezone slots 1, 3, and 4_
 
 >**Professional Development:** Watch the interview about [Open Climate Science](https://comptools.climatematch.io/projects/professional_development/impact_talks.html#open-climate-science) and use the provided prompts to discuss the topic within your project group for 15 minutes. As agreed during introductions on W1D1, one project group in the pod should do this during the first 30 minutes of the project block, while the other should leave this for the last 30 minutes of the block. Also as decided on W1D1, two students should practice their leadership skills by leading the discussion from the front and from behind.
 
@@ -153,9 +134,6 @@ Continue working on your project!
 
 ---
 ### PROJECT DAY (W2D2)
-_Tuesday, 25th July (AM) for groups in timezone slots 2 and 5_
-
-_Tuesday, 25th July (PM) for groups in timezone slots 1, 3, and 4_
 
 Watch the keynote talk _“Futures from the Frontiers of Climate Science”_ by Dr Paul Behrens.
 
@@ -173,9 +151,6 @@ During the last hour of the tutorial block, there will be a **live** [career pan
 
 ---
 ### SESSION 7
-_Tuesday, 25th July (PM) for groups in timezone slots 2 and 5_
-
-_Wednesday, 26th July (AM) for groups in timezone slots 1, 3, and 4_
 
 Continue working on your project! Make sure to reconvene with your teammates every 1-1.5 hours to discuss your progress. If you are struggling with something, ask others for help right away! Use your Project Teaching Assistant and your pod’s Teaching Assistant as a resource when your group gets stuck. 
 
@@ -183,9 +158,6 @@ On Day 7, the curriculum of the course will start shifting from topics surroundi
 
 ---
 ### SESSION 8
-_Wednesday, 26th July (PM) for groups in timezone slots 2 and 5_
-
-_Thursday, 27th July (AM) for groups in timezone slots 1, 3, and 4_
 
 >**Professional Development:** Watch the interview about [Psychology of the climate crisis and climate science communication](https://comptools.climatematch.io/projects/professional_development/impact_talks.html#psychology-of-the-climate-crisis-and-climate-science-communication) and use the provided prompts to discuss the topic within your project group for 15 minutes. As agreed during introductions on W1D1, one project group in the pod should do this during the first 30 minutes of the project block, while the other should leave this for the last 30 minutes of the block. Also as decided on W1D1, two students should practice their leadership skills by leading the discussion from the front and from behind.
 
@@ -195,9 +167,6 @@ The project submission form you will complete tomorrow also includes a question 
 
 ---
 ### SESSION 9
-_Thursday, 27th July (PM) for groups in timezone slots 2 and 5_
-
-_Friday, 28th July (AM) for groups in timezone slots 1, 3, and 4_
 
 Tie up loose ends and prepare a short slideshow about your project! 
 
@@ -227,7 +196,6 @@ Most groups will not have a result and this is absolutely normal. If this is tru
 
 ---
 ### W2D5: FINAL PRESENTATIONS 
-_Friday, 28th July (PM) for everyone!_
 
 This is the day you present your project to other groups in your megapod. You can invite your Project Teaching Assistant too, but they might not make it if they are busy. Groups will take turns to share their screens. You can use figures and other graphics to highlight specific aspects of your research, but your presentation is meant to be told as a story, and everyone from your group should take their turn in telling a part of that story. Tell us about the different hypotheses you have had at different points and how you refined them using some of the tools you learned during the course.
 
